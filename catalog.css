@@ -1,0 +1,129 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: #202e39;
+	padding: 20px;
+	font-family: Arial;
+}
+h1 {
+	font-size: 50px;
+	word-break: break-all;
+	color: #f8fad2;
+	font-family: "Fredericka the Great", "Georgia";
+}
+h2 {
+	color: #91fdbf;
+}
+h4 {
+	color: #91fdbf;
+}
+p, ul, li {
+	font-family: Georgia, serif;
+	color: #f8fad2;
+}
+a:link {
+  color: #91fdbf;
+}
+a:visited {
+  color: #91fdbf;
+}
+a:hover {
+  color: #b4fdd4;
+}
+#log {
+	width:100%
+}
+#log tr:nth-child(even) {
+  background-color: #253541;
+}
+#log th {
+	color: #f8fad2;
+	padding: 10px;
+	border-bottom: 1px solid #ddd;	
+	background-color: #121a21;
+
+}
+#log tr, td {
+	color: #f8fad2;
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+	text-align: left
+}
+
+
+
+
+
+
+
+
+
+.main {
+	max-width: 1300px;
+	margin: auto;
+}
+.row {
+	margin: 10px -16px;
+}
+.row, .row > .column { /* Add padding BETWEEN each column */
+	padding: 5px;
+}
+.column { /* Create three equal columns that floats next to each other */
+	float: left;
+	width: 25%;
+	display: none; /* Hide all elements by default */
+}
+.row:after { /* Clear floats after rows */ 
+	content: "";
+	display: table;
+	clear: both;
+}
+.content {
+	background-color: #253541;
+	padding: 10px;
+}
+.show { /* The "show" class is added to the filtered elements */
+	display: block;
+}
+
+/* Style the buttons */
+.primary {
+	border: none;
+	outline: none;
+	padding: 12px 16px;
+	background-color: white;
+	cursor: pointer;
+}
+.primary:hover {
+	background-color: #ddd;
+}
+.primary.active {
+	background-color: #f1f5a3;
+	color: f8fad2;
+}
+.secondary {
+	border: none;
+	outline: none;
+	padding: 12px 16px;
+	background-color: white;
+	cursor: pointer;
+}
+.secondary:hover {
+	background-color: #ddd;
+}
+.secondary.active {
+	background-color: #666;
+	color: white;
+}
+
+/* Style the clickable thumbnails */
+img {
+	border: 1px solid #ddd; /* Gray border */
+	border-radius: 4px;  /* Rounded border */
+	padding: 5px; /* Some padding */
+	width: 150px; /* Set a small width */
+}
+img:hover {
+	box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
