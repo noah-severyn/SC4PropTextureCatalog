@@ -1,5 +1,3 @@
-# SC4PropTextureCatalog 1.0.0
-
 ![Header](resources/head.jpg)
 
 Building upon the original the original [Prop & Texture Photo Catalog](https://sc4devotion.com/forums/index.php?board=415.0) started in 2011, this work includes all known dependency packs
@@ -10,5 +8,8 @@ For additional information, or to reference the online version of this Catalog, 
 Find an issue? Have a suggestion for improvement? Drop us a message in the Catalog Thread linked above.
 
 ## Screenshots
-![Image 1](resources/1.png)
-![Image 2](resources/2.jpg)
+![Animated](resources/3.gif)
+<summary>Additional screenshots</summary>
+	![Image 1](resources/1.png)
+	![Image 2](resources/2.jpg)
+</details>
