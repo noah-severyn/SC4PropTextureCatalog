@@ -9,6 +9,7 @@ Find an issue? Have a suggestion for improvement? Drop us a message in the Catal
 
 ## Screenshots
 ![Animated](resources/3.gif)
+<details>
 <summary>Additional screenshots</summary>
 	![Image 1](resources/1.png)
 	![Image 2](resources/2.jpg)
