@@ -4,7 +4,7 @@
 -- Params: 	N/A
 -- Called by: N/A
 -- Comments: N/A
---====================================================================================================================
+-- ===================================================================================================================
 function reader.main (this)   
     local file = io.open("C:/Users/Administrator/OneDrive/SC4 Deps/SC4PropTextureCatalog/working/writetest.txt", "w")
     entryidx = reader:entries_GetHeadPosition()     
@@ -37,7 +37,7 @@ end
 -- 			hexLen ... length to prepend zeros if hex is shorter than specified length (usually 8)
 -- Called by: reader.main
 -- Comments: N/A
---====================================================================================================================
+-- ===================================================================================================================
 function Dec2Hex(dec,hexLen)
     hex = string.rep("0", (hexLen - (string.len(string.format("%x", dec))))) .. string.format("%x", dec)
     return hex
