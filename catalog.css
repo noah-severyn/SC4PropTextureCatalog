@@ -31,6 +31,43 @@ a:visited {
 a:hover {
   color: #b4fdd4;
 }
+
+/* Style the search table thumbnails */
+#ContentTableInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#ContentTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+}
+
+#ContentTable th, #ContentTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+
+#ContentTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+}
+
+#ContentTable tr.header, #ContentTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #f1f1f1;
+}
+
+
+
 #log {
 	width:100%
 }
@@ -51,20 +88,14 @@ a:hover {
 	text-align: left
 }
 
-
-
-
-
-
-
-
-
 .main {
 	max-width: 1300px;
 	margin: auto;
+	
 }
 .row {
 	margin: 10px -16px;
+	display: flex;
 }
 .row, .row > .column { /* Add padding BETWEEN each column */
 	padding: 5px;
@@ -127,3 +158,5 @@ img {
 img:hover {
 	box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
+
+
