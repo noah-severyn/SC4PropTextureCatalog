@@ -13,9 +13,11 @@ h1 {
 	font-family: "Fredericka the Great", "Georgia";
 }
 h2 {
+	font-family: "Fredericka the Great", "Georgia";
 	color: #91fdbf;
 }
 h4 {
+	font-family: "Trebuchet MS";
 	color: #91fdbf;
 }
 p, ul, li {
@@ -34,7 +36,7 @@ a:hover {
 
 /* Style the search table thumbnails */
 #SearchTableByName {
-	background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+	background-image: url('_searchicon.png'); /* Add a search icon to input */
 	background-position: 10px 12px; /* Position the search icon */
 	background-repeat: no-repeat; /* Do not repeat the icon image */
 	width: 25%; /* Full-width */
@@ -43,28 +45,23 @@ a:hover {
 	border: 2px solid #ddd; /* Add a grey border */
 	margin-bottom: 12px; /* Add some space below the input */
 }
-
 #ContentTable {
 	border-collapse: collapse; /* Collapse borders */
-	width: 1000px; /* Full-width */
+	width: 1000px;
 	border: 1px solid #ddd; /* Add a grey border */
 	font-size: 12px; /* Increase font-size */
 	font-family: "Trebuchet MS";
 }
-
 #ContentTable th, #ContentTable td {
 	text-align: left; /* Left-align text */
 	padding: 8px; /* Add padding */
 }
-
 #ContentTable tr {
 	/* Add a bottom border to all table rows */
 	/* border-bottom: 1px solid #ddd; */
 }
-
 #ContentTable tr.header {
-	/* Add a grey background color to the table header and on hover */
-	background-color: #f1f1f1;
+	background-color: #f1f1f1; /* Add a grey background color to the table header and on hover */
 	font-size: 16px; /* Increase font-size */
 }
 #ContentTable tr:hover {
