@@ -156,8 +156,7 @@
 
 <div>
 	<br><br><br>
-	<input type="text" id="SearchTableByName" onkeyup="FilterTableName()" placeholder="Search for prop names...">
-	<input type="text" id="SearchTableByTGI" onkeyup="FilterTableTGI()" placeholder="Search for TGIs... __(DOESNT YET WORK)__">
+	<input type="text" id="SearchTableByName" onkeyup="FilterTableName()" placeholder="Search for ExemplarName or TGI ...">
 	<table id="ContentTable">
 		<tr class="header">
 			<th>Pack</th>
@@ -5184,48 +5183,29 @@
 
 
 //Filter Table ... https://www.w3schools.com/howto/howto_js_filter_table.asp
+//code from: https://stackoverflow.com/questions/51187477/how-to-filter-a-html-table-using-simple-javascript
 function FilterTableName() {
-	var searchBox, searchString, table, tr, td, i, jj, txtValue;
+	var searchBox, searchString, table, tr, td, cell;
 	searchBox = document.getElementById("SearchTableByName");
 	searchString = searchBox.value.toUpperCase();
 	table = document.getElementById("ContentTable");
 	tr = table.getElementsByTagName("tr");
+	for (var rowidx = 1; rowidx < tr.length; rowidx++) {
+		// Hide the row initially.
+		tr[rowidx].style.display = "none";
 
-	// Loop through all table rows, and hide those who don't match the search query
-	for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[2];
-		if (td) {
-		txtValue = td.textContent || td.innerText;
-			if (txtValue.toUpperCase().indexOf(searchString) > -1) {
-				tr[i].style.display = "";
-			} 
-			else {
-				tr[i].style.display = "none";
+		td = tr[rowidx].getElementsByTagName("td");
+		for (var colidx = 0; colidx < td.length; colidx++) {
+			cell = tr[rowidx].getElementsByTagName("td")[colidx];
+			if (cell) {
+				if (cell.innerHTML.toUpperCase().indexOf(searchString) > -1) {
+					tr[rowidx].style.display = "";
+					break;
+				} 
 			}
 		}
 	}
 }
-<!-- function FilterTableTGI() { -->
-	<!-- var searchBox, searchString, table, tr, td, i, jj, txtValue; -->
-	<!-- searchBox = document.getElementById("SearchTableByName"); -->
-	<!-- searchString = searchBox.value.toUpperCase(); -->
-	<!-- table = document.getElementById("ContentTable"); -->
-	<!-- tr = table.getElementsByTagName("tr"); -->
-
-	<!-- // Loop through all table rows, and hide those who don't match the search query -->
-	<!-- for (i = 0; i < tr.length; i++) { -->
-		<!-- td = tr[i].getElementsByTagName("td")[1]; -->
-		<!-- if (td) { -->
-		<!-- txtValue = td.textContent || td.innerText; -->
-			<!-- if (txtValue.toUpperCase().indexOf(searchString) > -1) { -->
-				<!-- tr[i].style.display = ""; -->
-			<!-- }  -->
-			<!-- else { -->
-				<!-- tr[i].style.display = "none"; -->
-			<!-- } -->
-		<!-- } -->
-	<!-- } -->
-<!-- } -->
 </script>
 
 </body>
