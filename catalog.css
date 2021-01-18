@@ -39,15 +39,16 @@ a:hover {
 	background-image: url('_searchicon.png'); /* Add a search icon to input */
 	background-position: 10px 12px; /* Position the search icon */
 	background-repeat: no-repeat; /* Do not repeat the icon image */
-	width: 25%; /* Full-width */
+	width: 35%; /* Full-width */
 	font-size: 16px; /* Increase font-size */
 	padding: 12px 20px 12px 40px; /* Add some padding */
 	border: 2px solid #ddd; /* Add a grey border */
 	margin-bottom: 12px; /* Add some space below the input */
+	font-family: "Trebuchet MS";
 }
 #ContentTable {
 	border-collapse: collapse; /* Collapse borders */
-	width: 1000px;
+	width: 100%;
 	border: 1px solid #ddd; /* Add a grey border */
 	font-size: 12px; /* Increase font-size */
 	font-family: "Trebuchet MS";
@@ -91,7 +92,7 @@ a:hover {
 }
 
 .main {
-	max-width: 1300px;
+	max-width: 1400px;
 	margin: auto;
 	
 }
@@ -124,7 +125,7 @@ a:hover {
 .primary {
 	border: none;
 	outline: none;
-	padding: 12px 16px;
+	padding: 10px 10px;
 	background-color: white;
 	cursor: pointer;
 }
@@ -138,7 +139,7 @@ a:hover {
 .secondary {
 	border: none;
 	outline: none;
-	padding: 12px 16px;
+	padding: 10px 10px;
 	background-color: white;
 	cursor: pointer;
 }
@@ -150,8 +151,8 @@ a:hover {
 	color: white;
 }
 
-/* Style the clickable thumbnails */
-img {
+
+img { /* Style the clickable thumbnails */
 	border: 1px solid #ddd; /* Gray border */
 	border-radius: 4px;  /* Rounded border */
 	padding: 5px; /* Some padding */
@@ -162,3 +163,37 @@ img:hover {
 }
 
 
+
+
+
+
+
+
+
+
+/* https://www.w3schools.com/howto/howto_js_tabs.asp */
+.tab {  /* Style the tab */
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+}
+.tab button { /* Style the buttons that are used to open the tab content */
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+}
+.tab button:hover { /* Change background color of buttons on hover */
+	background-color: #ddd;
+}
+.tab button.active { /* Create an active/current tablink class */
+	background-color: #f1f5a3;
+}
+.tabcontent { /* Style the tab content */
+	display: none;
+	padding: 6px 12px;
+	/* border: 1px solid #ccc; */
+	/* border-top: none; */
+} 
