@@ -38,7 +38,7 @@
 	
 	<div class="tab">
 		<button class="tablinks" onclick="showTab(event, 'PhotoList')">Props or Textures by Category</button>
-		<button class="tablinks" onclick="showTab(event, 'NameList')">Individual Props</button>
+		<button class="tablinks" onclick="showTab(event, 'NameList')">Props or Textures by TGI or Exemplar Name</button>
 	</div>
 
 	<div id="PhotoList" class="tabcontent">
@@ -54,106 +54,98 @@
 			<button class="primary" onclick="filterSelection('Scenery')"> Scenery</button>
 			<button class="primary" onclick="filterSelection('Guides')"> Guides</button>
 		</div>
-			<br>
-			<!-- Level 2 filter buttons are shown/hidden relative to top level selection -->
-			<div id="_TexturesContainer">
-				<button class="secondary" onclick="filterSelection('Textures')"> All Textures</button>
-				<button class="secondary" onclick="filterSelection('_Base')"> Base</button>
-				<button class="secondary" onclick="filterSelection('_Overlay')"> Overlay</button>
-			</div>
-			<div id="_FloraContainer">
-				<button class="secondary" onclick="filterSelection('Flora')"> All Flora</button>
-				<button class="secondary" onclick="filterSelection('_Agricultural')"> Agricultural</button>
-				<button class="secondary" onclick="filterSelection('_Bushes')"> Bushes</button>
-				<button class="secondary" onclick="filterSelection('_Flowers')"> Flowers</button>
-				<button class="secondary" onclick="filterSelection('_Grasses')"> Grasses</button>
-				<button class="secondary" onclick="filterSelection('_Trees')"> Trees</button>
-				<button class="secondary" onclick="filterSelection('_Seasonal')"> Seasonal</button>
-			</div>
-			<div id="_VehiclesContainer">
-				<button class="secondary" onclick="filterSelection('Vehicles')"> All Vehicles</button>
-				<button class="secondary" onclick="filterSelection('_Aircraft')"> Aircraft</button>
-				<button class="secondary" onclick="filterSelection('_Boats')"> Boats</button>
-				<button class="secondary" onclick="filterSelection('_Busses')"> Busses</button>
-				<button class="secondary" onclick="filterSelection('_Cars')"> Cars</button>
-				<button class="secondary" onclick="filterSelection('_Motorcycles')"> Motorcycles</button>
-				<button class="secondary" onclick="filterSelection('_TractorTrailer')"> Tractor + Trailer</button>
-				<button class="secondary" onclick="filterSelection('_Trains')"> Trains</button>
-				<button class="secondary" onclick="filterSelection('_Trucks')"> Trucks</button>
-			</div>
-			<div id="_BuildingsContainer">
-				<button class="secondary" onclick="filterSelection('Buildings')"> All Buildings</button>
-				<button class="secondary" onclick="filterSelection('_Res')"> RES</button>
-				<button class="secondary" onclick="filterSelection('_Com')"> COM</button>
-				<button class="secondary" onclick="filterSelection('_Ind')"> IND</button>
-				<button class="secondary" onclick="filterSelection('_Civic')"> Civic</button>
-				<button class="secondary" onclick="filterSelection('_Low')"> Low Density</button>
-				<button class="secondary" onclick="filterSelection('_Med')"> Med Density</button>
-				<button class="secondary" onclick="filterSelection('_High')"> High Density</button>
-				<button class="secondary" onclick="filterSelection('_W2W')"> W2W</button>
-			</div>
-			<div id="_SceneryContainer">
-				<button class="secondary" onclick="filterSelection('Scenery')"> All Scenery</button>
-				<button class="secondary" onclick="filterSelection('_Industrial')"> Industrial</button>
-				<button class="secondary" onclick="filterSelection('_Recreational')"> Recreational</button>
-				<button class="secondary" onclick="filterSelection('_SmallStructures')"> Small Structures</button>
-				<button class="secondary" onclick="filterSelection('_Signs')"> Signs</button>
-				<button class="secondary" onclick="filterSelection('_WallsFences')"> Walls + Fences</button>
-				<button class="secondary" onclick="filterSelection('_Streetside')"> Streetside</button>
-			</div>
+		<br>
+		<!-- Level 2 filter buttons are shown/hidden relative to top level selection -->
+		<div id="_TexturesContainer">
+			<button class="secondary" onclick="filterSelection('Textures')"> All Textures</button>
+			<button class="secondary" onclick="filterSelection('_Base')"> Base</button>
+			<button class="secondary" onclick="filterSelection('_Overlay')"> Overlay</button>
+		</div>
+		<div id="_FloraContainer">
+			<button class="secondary" onclick="filterSelection('Flora')"> All Flora</button>
+			<button class="secondary" onclick="filterSelection('_Agricultural')"> Agricultural</button>
+			<button class="secondary" onclick="filterSelection('_Bushes')"> Bushes</button>
+			<button class="secondary" onclick="filterSelection('_Flowers')"> Flowers</button>
+			<button class="secondary" onclick="filterSelection('_Grasses')"> Grasses</button>
+			<button class="secondary" onclick="filterSelection('_Trees')"> Trees</button>
+			<button class="secondary" onclick="filterSelection('_Seasonal')"> Seasonal</button>
+		</div>
+		<div id="_VehiclesContainer">
+			<button class="secondary" onclick="filterSelection('Vehicles')"> All Vehicles</button>
+			<button class="secondary" onclick="filterSelection('_Aircraft')"> Aircraft</button>
+			<button class="secondary" onclick="filterSelection('_Boats')"> Boats</button>
+			<button class="secondary" onclick="filterSelection('_Busses')"> Busses</button>
+			<button class="secondary" onclick="filterSelection('_Cars')"> Cars</button>
+			<button class="secondary" onclick="filterSelection('_Motorcycles')"> Motorcycles</button>
+			<button class="secondary" onclick="filterSelection('_TractorTrailer')"> Tractor + Trailer</button>
+			<button class="secondary" onclick="filterSelection('_Trains')"> Trains</button>
+			<button class="secondary" onclick="filterSelection('_Trucks')"> Trucks</button>
+		</div>
+		<div id="_BuildingsContainer">
+			<button class="secondary" onclick="filterSelection('Buildings')"> All Buildings</button>
+			<button class="secondary" onclick="filterSelection('_Res')"> RES</button>
+			<button class="secondary" onclick="filterSelection('_Com')"> COM</button>
+			<button class="secondary" onclick="filterSelection('_Ind')"> IND</button>
+			<button class="secondary" onclick="filterSelection('_Civic')"> Civic</button>
+			<button class="secondary" onclick="filterSelection('_Low')"> Low Density</button>
+			<button class="secondary" onclick="filterSelection('_Med')"> Med Density</button>
+			<button class="secondary" onclick="filterSelection('_High')"> High Density</button>
+			<button class="secondary" onclick="filterSelection('_W2W')"> W2W</button>
+		</div>
+		<div id="_SceneryContainer">
+			<button class="secondary" onclick="filterSelection('Scenery')"> All Scenery</button>
+			<button class="secondary" onclick="filterSelection('_Industrial')"> Industrial</button>
+			<button class="secondary" onclick="filterSelection('_Recreational')"> Recreational</button>
+			<button class="secondary" onclick="filterSelection('_SmallStructures')"> Small Structures</button>
+			<button class="secondary" onclick="filterSelection('_Signs')"> Signs</button>
+			<button class="secondary" onclick="filterSelection('_WallsFences')"> Walls + Fences</button>
+			<button class="secondary" onclick="filterSelection('_Streetside')"> Streetside</button>
+		</div>
 		
-	<!-- 	<div class="row">
-			</div>
+		<div class="row">
 			<div class="column Scenery Vehicles Buildings People  _Cars _TractorTrailer _Agricultural _Flowers _Res _Low _Signs _Streetside _Industrial _Recreational">
 				<div class="content">
 					<a target="_blank" href="output/WMP Mega Props vol. 01 - Misc General Props.png"><img src="output/WMP Mega Props vol. 01 - Misc General Props.png" alt="WMP Mega Props vol. 01 - Misc General Props" style="width:100%"></a>
 					<h4><a target="_blank" href="https://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3970">WMP Mega Props vol. 01 - Misc General Props</a></h4>
-					<p>Lorem ipsum dolor..</p>
 				</div>
 			</div>
 			<div class="column Scenery Vehicles People  _Trucks _TractorTrailer _Industrial _WallsFences">
 				<div class="content">
 					<a target="_blank" href="output/WMP Mega Props vol. 02 - Misc Industrial Props.png"><img src="output/WMP Mega Props vol. 02 - Misc Industrial Props.png" alt="WMP Mega Props vol. 02 - Misc Industrial Props" style="width:100%"></a>
 					<h4><a target="_blank" href="https://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3971">WMP Mega Props vol. 02 - Misc Industrial Props</a></h4>
-					<p>Lorem ipsum dolor..</p>
 				</div>
 			</div>
 			<div class="column Scenery  _Signs _SmallStructures">
 				<div class="content">
 					<a target="_blank" href="output/WMP Mega Props vol. 03 - Port Autority Ferry.png"><img src="output/WMP Mega Props vol. 03 - Port Autority Ferry.png" alt="WMP Mega Props vol. 03 - Port Autority Ferry" style="width:100%"></a>
 					<h4><a target="_blank" href="https://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3972">WMP Mega Props vol. 03 - Port Autority Ferry</a></h4>
-					<p>Lorem ipsum dolor..</p>
 				</div>
 			</div>
 			<div class="column Scenery  _WallsFences _SmallStructures">
 				<div class="content">
 					<a target="_blank" href="output/WMP Mega Props vol. 04 - Port Autority Seawalls.png"><img src="output/WMP Mega Props vol. 04 - Port Autority Seawalls.png" alt="WMP Mega Props vol. 04 - Port Autority Seawalls" style="width:100%"></a>
 					<h4><a target="_blank" href="https://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3973">WMP Mega Props vol. 04 - Port Autority Seawalls</a></h4>
-					<p>Lorem ipsum dolor..</p>
 				</div>
 			</div>
 			<div class="column Scenery  _Industrial">
 				<div class="content">
 					<a target="_blank" href="output/WMP Mega Props vol. 05 - Railway Props.png"><img src="output/WMP Mega Props vol. 05 - Railway Props.png" alt="WMP Mega Props vol. 05 - Railway Props" style="width:100%"></a>
 					<h4><a target="_blank" href="https://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3974">WMP Mega Props vol. 05 - Railway Props</a></h4>
-					<p>Lorem ipsum dolor..</p>
 				</div>
 			</div>
 			<div class="column Textures _Base">
 				<div class="content">
 					<a target="_blank" href="output/WMP Mega Textures v1.02.png"><img src="output/WMP Mega Textures v1.02.png" alt="WMP Mega Textures v1.02" style="width:100%"></a>
 					<h4><a target="_blank" href="https://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=3976">WMP Mega Textures v1.02</a></h4>
-					<p>Lorem ipsum dolor..</p>
 				</div>
 			</div>
 			<div class="column Textures _Overlay">
 				<div class="content">
 					<a target="_blank" href="output/XD Parking Textures.png"><img src="output/XD Parking Textures.png" alt="XD Parking Textures" style="width:100%"></a>
 					<h4><a target="_blank" href="https://sc4devotion.com/csxlex/lex_filedesc.php?lotGET=1490">XD Parking Textures</a></h4>
-					<p>Lorem ipsum dolor..</p>
 				</div>
 			</div>
-		</div> -->
+		</div>
 	</div>
 
 	<div id="NameList" class="tabcontent">
@@ -458,24 +450,20 @@
 	//Toggle Tabs ... https://www.w3schools.com/howto/howto_js_tabs.asp
 	function showTab(evt, tabName) {
 		var i, tabcontent, tablinks;
-
 		// Get all elements with class="tabcontent" and hide them
 		tabcontent = document.getElementsByClassName("tabcontent");
 		for (i = 0; i < tabcontent.length; i++) {
 			tabcontent[i].style.display = "none";
 		}
-
-		// Get all elements with class="tablinks" and remove the class "active"
+		// Get all elements with class="tablinks" and remove the class "activeTab"
 		tablinks = document.getElementsByClassName("tablinks");
 		for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" active", "");
+			tablinks[i].className = tablinks[i].className.replace(" activeTab", "");
 		}
-
-		// Show the current tab, and add an "active" class to the button that opened the tab
+		// Show the current tab, and add an "activeTab" class to the button that opened the tab
 		document.getElementById(tabName).style.display = "block";
-		evt.currentTarget.className += " active";
+		evt.currentTarget.className += " activeTab";
 	} 
-	
 </script>
 
 </body>
