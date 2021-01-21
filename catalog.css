@@ -98,20 +98,20 @@ a:hover {
 }
 .row {
 	margin: 10px -16px;
-	display: flex;
+	/* display: flex; */
 }
 .row, .row > .column { /* Add padding BETWEEN each column */
 	padding: 5px;
 }
-.column { /* Create three equal columns that floats next to each other */
+.column { /* Create equal columns that floats next to each other */
 	float: left;
 	width: 25%;
 	display: none; /* Hide all elements by default */
 }
 .row:after { /* Clear floats after rows */ 
-	content: "";
-	display: table;
-	clear: both;
+	/* content: ""; */
+	/* display: table; */
+	/* clear: both; */
 }
 .content {
 	background-color: #253541;
@@ -125,9 +125,10 @@ a:hover {
 .primary {
 	border: none;
 	outline: none;
-	padding: 10px 10px;
+	padding: 10px 20px;
 	background-color: white;
 	cursor: pointer;
+	font-family: "Trebuchet MS";
 }
 .primary:hover {
 	background-color: #ddd;
@@ -139,7 +140,7 @@ a:hover {
 .secondary {
 	border: none;
 	outline: none;
-	padding: 10px 10px;
+	padding: 10px 15px;
 	background-color: white;
 	cursor: pointer;
 }
@@ -184,11 +185,13 @@ img:hover {
 	outline: none;
 	cursor: pointer;
 	padding: 14px 16px;
+	font-family: "Trebuchet MS";
+	font-size: 16px;
 }
 .tab button:hover { /* Change background color of buttons on hover */
 	background-color: #ddd;
 }
-.tab button.active { /* Create an active/current tablink class */
+.tab button.activeTab { /* Create an active/current tablink class */
 	background-color: #f1f5a3;
 }
 .tabcontent { /* Style the tab content */
