@@ -1,19 +1,10 @@
 -- ===================================================================================================================
-<<<<<<< Updated upstream
--- Name: main
--- Desc: Writes Type, Group, Instance, Exemplar name as comma separated list to text file
--- Params: 	N/A
--- Called by: N/A
--- Comments: N/A
---====================================================================================================================
-=======
 -- Name: 		reader.main
 -- Desc: 		writes Type, Group, Instance, Exemplar name as comma separated list to text file
 -- Params: 		N/A
 -- Called by: 	N/A
 -- Comments: 	N/A
 -- ===================================================================================================================
->>>>>>> Stashed changes
 function reader.main (this)   
     local file = io.open("C:/Users/Administrator/OneDrive/SC4 Deps/SC4PropTextureCatalog/working/exemplarexport.txt", "w")
     entryidx = reader:entries_GetHeadPosition()     
@@ -40,16 +31,7 @@ function reader.main (this)
 end
 
 
--- ===================================================================================================================
-<<<<<<< Updated upstream
--- Name: Dec2Hex
--- Desc: Returns a hex number prepended (if necessary) with zeros up to a specified length
--- Params: 	dec ... decimal number to convert
--- 			hexLen ... length to prepend zeros if hex is shorter than specified length (usually 8)
--- Called by: reader.main
--- Comments: N/A
 --====================================================================================================================
-=======
 -- Name:		Dec2Hex
 -- Desc: 		Returns a hex number prepended (if necessary) with zeros up to a specified length
 -- Params: 		dec ... decimal number to convert
@@ -57,7 +39,6 @@ end
 -- Called by: 	reader.main
 -- Comments: 	N/A
 -- ===================================================================================================================
->>>>>>> Stashed changes
 function Dec2Hex(dec,hexLen)
     hex = string.rep("0", (hexLen - (string.len(string.format("%x", dec))))) .. string.format("%x", dec)
     return hex
