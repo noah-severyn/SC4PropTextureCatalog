@@ -7,7 +7,7 @@
 -- ===================================================================================================================
 function reader.main (this)   
     local file = io.open("C:/Users/Administrator/OneDrive/SC4 Deps/SC4PropTextureCatalog/working/exemplarexport.txt", "w")
-	packName = "_placeholder_"
+	packName = "_____"
     entryidx = reader:entries_GetHeadPosition()
     while entryidx~=0 do
         entry,entryidx = reader:entries_GetNext(entryidx)
@@ -21,7 +21,7 @@ function reader.main (this)
                 valuestr = reader:exprop_GetValueStr(exprop)
 				T,G,I = reader:entry_GetTGI(entry)
                 if (descname == "Exemplar Name") then
-                    file:write(packName,",",Dec2Hex(T,8)," ",Dec2Hex(G,8)," ",Dec2Hex(I,8)," ",valuestr,"\n")
+                    file:write(packName,",",Dec2Hex(T,8)," ",Dec2Hex(G,8)," ",Dec2Hex(I,8),",",valuestr,"\n")
 					break
                 end
             end
