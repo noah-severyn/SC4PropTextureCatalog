@@ -91,21 +91,23 @@ a:hover {
 	font-size: 12px; /* Increase font-size */
 	font-family: "Trebuchet MS";
 }
+#ContentTable tr {
+	/* Add a bottom border to all table rows */
+	/* border-bottom: 1px solid #ddd; */
+	/* display:none */
+}
 #ContentTable th, #ContentTable td {
 	text-align: left; /* Left-align text */
 	padding: 8px; /* Add padding */
 }
-#ContentTable tr {
-	/* Add a bottom border to all table rows */
-	/* border-bottom: 1px solid #ddd; */
+#ContentTable tr:hover {
+	background-color: #121a21;
 }
 #ContentTable tr.header {
 	background-color: #f1f1f1; /* Add a grey background color to the table header and on hover */
 	font-size: 16px; /* Increase font-size */
 }
-#ContentTable tr:hover {
-	background-color: #121a21;
-}
+
 
 
 /* ================================================= */
@@ -160,7 +162,7 @@ a:hover {
 .show { /* The "show" class is added to the filtered elements */
 	display: block;
 }
-.primary { /* Style the buttons */
+.primary { /* Style the primary level buttons */
 	border: none;
 	outline: none;
 	padding: 10px 20px;
@@ -175,7 +177,7 @@ a:hover {
 	background-color: #f1f5a3;
 	color: f8fad2;
 }
-.secondary {
+.secondary { /* Style the secondary level buttons */
 	border: none;
 	outline: none;
 	padding: 10px 15px;
