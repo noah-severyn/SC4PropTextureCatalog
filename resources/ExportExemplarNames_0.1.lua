@@ -7,7 +7,7 @@
 -- ===================================================================================================================
 function reader.main (this)   
     local file = io.open("C:/Users/Administrator/OneDrive/SC4 Deps/SC4PropTextureCatalog/working/exemplarexport.txt", "w")
-	packName = "_____"
+	packName = ""
     entryidx = reader:entries_GetHeadPosition()
     while entryidx~=0 do
         entry,entryidx = reader:entries_GetNext(entryidx)
