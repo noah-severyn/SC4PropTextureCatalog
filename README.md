@@ -12,4 +12,4 @@ Search for props or textures by category:
 ![Animated](resources/1.gif)
 
 Or search for props by TGI or exemplar name:
-![Animated](resources/1.gif)
+![Animated](resources/2.gif)
