@@ -8,10 +8,8 @@ For additional information, or to reference the online version of this Catalog, 
 Find an issue? Have a suggestion for improvement? Drop us a message in the Catalog Thread linked above.
 
 ## Screenshots
-![Animated](resources/3.gif)
-<details>
-<summary>Additional screenshots</summary>
+Search for props or textures by category:
+![Animated](resources/1.gif)
 
-![Image 1](resources/1.png)
-![Image 2](resources/2.jpg)
-</details>
+Or search for props by TGI or exemplar name:
+![Animated](resources/1.gif)
