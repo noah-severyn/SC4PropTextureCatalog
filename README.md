@@ -7,6 +7,10 @@ For additional information, or to reference the online version of this Catalog, 
 
 Find an issue? Have a suggestion for improvement? Drop us a message in the Catalog Thread linked above.
 
+The Catalog is also available for online viewing at Simtropolis. ([link](https://community.simtropolis.com/sc4-prop-and-texture-catalog/index/)). It is accessible from the ST Exchange tab.
+
+![alt text](https://raw.githubusercontent.com/noah-severyn/SC4PropTextureCatalog/main/resources/STbanner.png "Accessible under the ST Exchange tab")
+
 ## Screenshots
 Search for props or textures by category:
 ![Animated](resources/1.gif)
