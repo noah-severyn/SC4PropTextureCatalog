@@ -53,16 +53,29 @@ function w3RemoveClass(element, name) {
 	element.className = arr1.join(" ");
 }
 
-// Loop through the buttons and add the active class to the current/clicked button
+// Loop through primary button container and add the active class to the current/clicked button
 var btnContainer = document.getElementById("btnContainer");
 var btns = btnContainer.getElementsByClassName("primary");
-for (var i = 0; i < btns.length; i++) {
-	btns[i].addEventListener("click", function(){
+for (var idx = 0; idx < btns.length; idx++) {
+	btns[idx].addEventListener("click", function(){
 		var current = document.getElementsByClassName("active");
 		current[0].className = current[0].className.replace(" active", "");
 		this.className += " active";}
 	);
 }
+// Loop through secondary button container and add the active class to the current/clicked button
+let btnContainers = ['_TexturesContainer','_FloraContainer','_VehiclesContainer','_BuildingsContainer','_SceneryContainer']
+btnContainers.forEach((containerName) => {
+	var btnContainer = document.getElementById(containerName);
+	var btns = btnContainer.getElementsByClassName("secondary");
+	for (var i = 0; i < btns.length; i++) {
+		btns[i].addEventListener("click", function(){
+			var current = document.getElementsByClassName("active2");
+			current[0].className = current[0].className.replace(" active2", "");
+			this.className += " active2";}
+		);
+	};
+});
 
 //Show/hide level 2 filters as appropriate
 document.getElementById("_TexturesContainer").style.display = "none";

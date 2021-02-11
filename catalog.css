@@ -96,15 +96,15 @@ a:hover {
 	/* display:none */
 }
 #ContentTable th, #ContentTable td {
-	text-align: left; /* Left-align text */
-	padding: 8px; /* Add padding */
+	text-align: left;
+	padding: 8px;
 }
 #ContentTable tr:hover {
 	background-color: #121a21;
 }
 #ContentTable tr.header {
-	background-color: #f1f1f1; /* Add a grey background color to the table header and on hover */
-	font-size: 16px; /* Increase font-size */
+	background-color: #f1f1f1;
+	font-size: 16px;
 }
 
 
@@ -113,26 +113,25 @@ a:hover {
 /*        Style the sort buttons + pack photos       */
 /*                                                   */
 /* ================================================= */
-#log {
-	width:100%
-}
-#log tr:nth-child(even) {
-  background-color: #253541;
-}
-#log th {
-	color: #f8fad2;
-	padding: 10px;
-	border-bottom: 1px solid #ddd;	
-	background-color: #121a21;
+/* #log { */
+	/* width:100% */
+/* } */
+/* #log tr:nth-child(even) { */
+  /* background-color: #253541; */
+/* } */
+/* #log th { */
+	/* color: #f8fad2; */
+	/* padding: 10px; */
+	/* border-bottom: 1px solid #ddd;	 */
+	/* background-color: #121a21; */
 
-}
-#log tr, td {
-	color: #f8fad2;
-	padding: 10px;
-	border-bottom: 1px solid #ddd;
-	text-align: left
-}
-
+/* } */
+/* #log tr, td { */
+	/* color: #f8fad2; */
+	/* padding: 10px; */
+	/* border-bottom: 1px solid #ddd; */
+	/* text-align: left */
+/* } */
 .main {
 	max-width: 1400px;
 	margin: auto;
@@ -161,7 +160,7 @@ a:hover {
 .show { /* The "show" class is added to the filtered elements */
 	display: block;
 }
-.primary { /* Style the primary level buttons */
+.primary, .secondary { /* Style the primary level buttons */
 	border: none;
 	outline: none;
 	padding: 10px 20px;
@@ -169,26 +168,12 @@ a:hover {
 	cursor: pointer;
 	font-family: "Trebuchet MS";
 }
-.primary:hover {
+.primary:hover, .secondary:hover {
 	background-color: #ddd;
 }
-.primary.active {
+.primary.active, .secondary.active2 {
 	background-color: #f1f5a3;
 	color: f8fad2;
-}
-.secondary { /* Style the secondary level buttons */
-	border: none;
-	outline: none;
-	padding: 10px 15px;
-	background-color: white;
-	cursor: pointer;
-}
-.secondary:hover {
-	background-color: #ddd;
-}
-.secondary.active {
-	background-color: #666;
-	color: white;
 }
 img { /* Style the clickable thumbnails */
 	border: 1px solid #ddd; /* Gray border */
