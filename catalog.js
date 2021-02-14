@@ -68,8 +68,8 @@ let btnContainers = ['_TexturesContainer','_FloraContainer','_VehiclesContainer'
 btnContainers.forEach((containerName) => {
 	var btnContainer = document.getElementById(containerName);
 	var btns = btnContainer.getElementsByClassName("secondary");
-	for (var i = 0; i < btns.length; i++) {
-		btns[i].addEventListener("click", function(){
+	for (var idx = 0; idx < btns.length; idx++) {
+		btns[idx].addEventListener("click", function(){
 			var current = document.getElementsByClassName("active2");
 			current[0].className = current[0].className.replace(" active2", "");
 			this.className += " active2";}
