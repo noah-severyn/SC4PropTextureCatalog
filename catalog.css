@@ -113,25 +113,22 @@ a:hover {
 /*        Style the sort buttons + pack photos       */
 /*                                                   */
 /* ================================================= */
-/* #log { */
-	/* width:100% */
-/* } */
-/* #log tr:nth-child(even) { */
-  /* background-color: #253541; */
-/* } */
-/* #log th { */
-	/* color: #f8fad2; */
-	/* padding: 10px; */
-	/* border-bottom: 1px solid #ddd;	 */
-	/* background-color: #121a21; */
+#log tr:nth-child(even) {
+  background-color: #253541;
+}
+#log th {
+	color: #f8fad2;
+	padding: 10px;
+	border-bottom: 1px solid #ddd;	
+	background-color: #121a21;
 
-/* } */
-/* #log tr, td { */
-	/* color: #f8fad2; */
-	/* padding: 10px; */
-	/* border-bottom: 1px solid #ddd; */
-	/* text-align: left */
-/* } */
+}
+#log tr, td {
+	color: #f8fad2;
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+	text-align: left
+}
 .main {
 	max-width: 1400px;
 	margin: auto;
