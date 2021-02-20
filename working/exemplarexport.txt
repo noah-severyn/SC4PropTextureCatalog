@@ -1,3 +1,0 @@
-ART-teck_V1,6534284a b139d229 933fa2e5,galahri
-ART-teck_V1,6534284a b139d229 533fa291,l'ancra
-ART-teck_V1,6534284a b139d229 d3529455,pyraverre
