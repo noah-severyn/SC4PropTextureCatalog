@@ -1,5 +1,9 @@
 ![Header](resources/head.jpg)
 
+
+[![Latest Release](https://img.shields.io/github/v/release/noah-severyn/SC4PropTextureCatalog)](https://github.com/noah-severyn/SC4PropTextureCatalog/releases/latest)
+[![GitHub All Releases](https://img.shields.io/github/downloads/noah-severyn/SC4PropTextureCatalog/total)](https://github.com/noah-severyn/SC4PropTextureCatalog/releases/latest)
+
 Building upon the original the original [Prop & Texture Photo Catalog](https://sc4devotion.com/forums/index.php?board=415.0) started in 2011, this work includes all known dependency packs
 to date. This catalog was assembled by nos.17 with assistance from STEX Custodian (Tyberius06) and Cyclone Boom.
 
