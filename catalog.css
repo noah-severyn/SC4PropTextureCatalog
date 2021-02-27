@@ -90,14 +90,15 @@ a:hover {
 	font-size: 12px; /* Increase font-size */
 	font-family: "Trebuchet MS";
 }
-#ContentTable tr {
-	/* Add a bottom border to all table rows */
-	/* border-bottom: 1px solid #ddd; */
-	/* display:none */
-}
-#ContentTable th, #ContentTable td {
+#ContentTable th {
 	text-align: left;
 	padding: 8px;
+}
+
+#ContentTable tr, td {
+	padding: 8px;
+	color: #f8fad2;
+	border-bottom: 1px solid #ddd;
 }
 #ContentTable tr:hover {
 	background-color: #121a21;
@@ -105,6 +106,7 @@ a:hover {
 #ContentTable tr.header {
 	background-color: #f1f1f1;
 	font-size: 16px;
+	color: #000;
 }
 
 
@@ -113,22 +115,6 @@ a:hover {
 /*        Style the sort buttons + pack photos       */
 /*                                                   */
 /* ================================================= */
-#log tr:nth-child(even) {
-  background-color: #253541;
-}
-#log th {
-	color: #f8fad2;
-	padding: 10px;
-	border-bottom: 1px solid #ddd;	
-	background-color: #121a21;
-
-}
-#log tr, td {
-	color: #f8fad2;
-	padding: 10px;
-	border-bottom: 1px solid #ddd;
-	text-align: left
-}
 .main {
 	max-width: 1400px;
 	margin: auto;
