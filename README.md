@@ -15,6 +15,9 @@ The Catalog is also available for online viewing at Simtropolis. ([link](https:/
 
 ![alt text](https://raw.githubusercontent.com/noah-severyn/SC4PropTextureCatalog/main/resources/STbanner.png "Accessible under the ST Exchange tab")
 
+## Stats
+Items indexed to date: 44547 Props, 10617 Textures, 450 Packs
+
 ## Screenshots
 Search for props or textures by category:
 ![Animated](resources/1.gif)
