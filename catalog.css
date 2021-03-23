@@ -156,7 +156,6 @@ a:hover {
 }
 .primary.active, .secondary.active2 {
 	background-color: #f1f5a3;
-	color: f8fad2;
 }
 img { /* Style the clickable thumbnails */
 	border: 1px solid #ddd; /* Gray border */
