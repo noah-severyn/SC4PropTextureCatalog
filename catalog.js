@@ -79,9 +79,9 @@ btnContainers.forEach((containerName) => {
 
 //Show/hide level 2 filters as appropriate
 document.getElementById("_TexturesContainer").style.display = "none";
+document.getElementById("_BuildingsContainer").style.display = "none";
 document.getElementById("_FloraContainer").style.display = "none";
 document.getElementById("_VehiclesContainer").style.display = "none";
-document.getElementById("_BuildingsContainer").style.display = "none";
 document.getElementById("_SceneryContainer").style.display = "none";
 function updateLevel2List(lbl) {
 	document.getElementById("_TexturesContainer").style.display = "none";
