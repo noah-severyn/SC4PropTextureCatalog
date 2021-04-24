@@ -282,15 +282,17 @@ function showTab(evt, tabName) {
 
 // ===================================================================================================================
 // Name: 		checkIfChecked
-// Desc: 		Hides/shows elements with class="tabcontent" based on button press
+// Desc: 		Filters selection by "_HD" if the checkbox is checked, filters by "all" if not
 // Params: 		N/A
-// Called by: 	onclick button class="tablinks"
+// Called by: 	onclick checkbox id="HDproptoggle"
 // Comments: 	(1) code from: https://stackoverflow.com/a/9887439
 // ===================================================================================================================
 function checkIfChecked() {
 	if (document.getElementById('HDproptoggle').checked) {
 		alert("checked");
+		filterSelection("_HD");
 	} else {
-		alert("You didn't check it! Let me check it for you.");
+		alert("unchecked");
+		filterSelection("all");
 	}
 }
