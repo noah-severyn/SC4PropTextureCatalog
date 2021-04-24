@@ -253,6 +253,7 @@ function FilterTableName() {
 }
 
 
+
 // ===================================================================================================================
 // Name: 		showTab
 // Desc: 		Hides/shows elements with class="tabcontent" based on button press
@@ -276,4 +277,20 @@ function showTab(evt, tabName) {
 	// Show the current tab, and add an "activeTab" class to the button that opened the tab
 	document.getElementById(tabName).style.display = "block";
 	evt.currentTarget.className += " activeTab";
-} 
+}
+
+
+// ===================================================================================================================
+// Name: 		checkIfChecked
+// Desc: 		Hides/shows elements with class="tabcontent" based on button press
+// Params: 		N/A
+// Called by: 	onclick button class="tablinks"
+// Comments: 	(1) code from: https://stackoverflow.com/a/9887439
+// ===================================================================================================================
+function checkIfChecked() {
+	if (document.getElementById('HDproptoggle').checked) {
+		alert("checked");
+	} else {
+		alert("You didn't check it! Let me check it for you.");
+	}
+}
