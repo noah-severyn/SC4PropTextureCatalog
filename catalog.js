@@ -253,6 +253,7 @@ function FilterTableName() {
 }
 
 
+
 // ===================================================================================================================
 // Name: 		showTab
 // Desc: 		Hides/shows elements with class="tabcontent" based on button press
@@ -276,4 +277,22 @@ function showTab(evt, tabName) {
 	// Show the current tab, and add an "activeTab" class to the button that opened the tab
 	document.getElementById(tabName).style.display = "block";
 	evt.currentTarget.className += " activeTab";
-} 
+}
+
+
+// ===================================================================================================================
+// Name: 		checkIfChecked
+// Desc: 		Filters selection by "_HD" if the checkbox is checked, filters by "all" if not
+// Params: 		N/A
+// Called by: 	onclick checkbox id="HDproptoggle"
+// Comments: 	(1) code from: https://stackoverflow.com/a/9887439
+// ===================================================================================================================
+function checkIfChecked() {
+	if (document.getElementById('HDproptoggle').checked) {
+		alert("checked");
+		filterSelection("_HD");
+	} else {
+		alert("unchecked");
+		filterSelection("all");
+	}
+}
