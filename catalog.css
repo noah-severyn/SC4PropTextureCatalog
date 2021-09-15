@@ -33,6 +33,14 @@ a:visited {
 a:hover {
   color: #b4fdd4;
 }
+.changelog p {
+	padding-left:40px
+}
+.changelog h3 {
+	font-family: Georgia, serif;
+	color: #f8fad2;
+	font-size:1em;
+}
 
 
 
