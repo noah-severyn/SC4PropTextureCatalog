@@ -27,7 +27,7 @@ namespace SC4PropTextureCatalog.Pages {
         /// </summary>
         /// <returns>The database connection</returns>
         public SQLiteConnection InitialiseConnection() {
-            string source = "C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalog\\Data\\Catalog.db";
+            string source = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data\\Catalog.db");
             SQLiteConnectionString options = new SQLiteConnectionString(source, false);
             return new SQLiteConnection(options);
         }
