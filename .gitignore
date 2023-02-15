@@ -21,9 +21,25 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+SC4PropTextureCatalog/[Dd]ebug/
+SC4PropTextureCatalog/[Dd]ebugPublic/
+SC4PropTextureCatalog/[Rr]elease/
+SC4PropTextureCatalog/[Rr]eleases/
+SC4PropTextureCatalog/x64/
+SC4PropTextureCatalog/x86/
+SC4PropTextureCatalog/bld/
+SC4PropTextureCatalog/SC4PropTextureCatalog/bin/
+SC4PropTextureCatalog/bin/
+**/bin/
+/*/bin/
+/*/*/bin/
+/*/*/*/bin/
+/SC4PropTextureCatalog/obj/
+/SC4PropTextureCatalog/log/
 
 # Visual Studio 2015 cache/options directory
 .vs/
+SC4PropTextureCatalog\.vs\
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
@@ -271,3 +287,4 @@ __pycache__/
 working/
 working/*/*
 ~$Index.xlsm
+
