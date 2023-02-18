@@ -33,6 +33,7 @@
             <tr class="header">
                 <th>Pack Name</th>
                 <th>TGI</th>
+                <th>Type</th>
                 <th>Author</th>
                 <th>Exemplar Name</th>
             </tr>
@@ -41,10 +42,11 @@
             @{
                 foreach (IndexModel.Record item in records) {
                     <tr>
-                        <td>@item.Title</td>
+                        <td><a href="@item.Hyperlink">@item.PackName</a></td>
                         <td>@item.TGI</td>
+                        <td>@item.TGIName</td>
                         <td>@item.Author</td>
-                        <td>@item.ExmpName</td>
+                        <td>@item.ExemplarName</td>
                     </tr>
                 }
             }

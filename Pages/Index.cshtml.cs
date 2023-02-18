@@ -16,10 +16,13 @@ namespace SC4PropTextureCatalog.Pages {
         /// </summary>
         [Table("records")]
         public class Record {
-            public string Title { get; set; } = string.Empty;
+            public string PackName { get; set; } = string.Empty;
+            public string PackVersion { get; set; } = string.Empty;
+            public string Hyperlink { get; set; } = string.Empty;
             public string TGI { get; set; } = string.Empty;
+            public string TGIName { get; set; } = string.Empty;
             public string Author { get; set; } = string.Empty;
-            public string ExmpName { get; set; } = string.Empty;
+            public string ExemplarName { get; set; } = string.Empty;
         }
 
         /// <summary>
@@ -43,11 +46,16 @@ namespace SC4PropTextureCatalog.Pages {
                 return new List<Record>();
             }
 
+            /* SELECT PackTable.PackName, TGITable.TGI,TGITypes.TGIName ,PackTable.Author, TGITable.ExemplarName FROM TGITable
+             * LEFT JOIN PackTable ON TGITable.PackID = PackTable.PackID
+             * LEFT JOIN TGITypes ON TGITable.TGIType = TGITypes.TGIType
+             * WHERE PackName LIKE '%fire%' OR TGI LIKE '%fire%' OR Author LIKE '%fire%' OR ExemplarName LIKE '%fire%' 
+             */
             StringBuilder query = new StringBuilder();
-            query.AppendLine("SELECT PackTable.Title, TGITable.TGI, PackTable.Author, TGITable.ExmpName FROM TGITable");
+            query.AppendLine("SELECT PackTable.PackName, PackTable.Hyperlink, TGITable.TGI, TGITable.TGIType, TGITypes.TGIName, PackTable.Author, TGITable.ExemplarName FROM TGITable");
             query.AppendLine("LEFT JOIN PackTable ON TGITable.PackID = PackTable.PackID");
-            query.AppendLine($"WHERE Title LIKE '%{searchtext}%' OR TGI LIKE '%{searchtext}%' OR Author LIKE '%{searchtext}%' OR ExmpName LIKE '%{searchtext}%'");
-
+            query.AppendLine("LEFT JOIN TGITypes ON TGITable.TGIType = TGITypes.TGIType");
+            query.AppendLine($"WHERE PackName LIKE '%{searchtext}%' OR TGI LIKE '%{searchtext}%' OR Author LIKE '%{searchtext}%' OR ExemplarName LIKE '%{searchtext}%'");
             return connection.Query<Record>(query.ToString());
         }
 
