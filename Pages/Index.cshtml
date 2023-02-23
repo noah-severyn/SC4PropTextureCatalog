@@ -4,13 +4,20 @@
     ViewData["Title"] = "Home page";
 
     string? searchtext = null;
+    bool thumbnails = false;
+    int thumbsize = 0;
     List<IndexModel.Record> records = new List<IndexModel.Record>();
 
     if (Request.QueryString.HasValue && Request.Query.ContainsKey("itemcontains")) {
         var connection = Model.InitialiseConnection();
         searchtext = Request.Query["itemcontains"][0];
+        //var temp1 = Request.Query["itemcontains"];
+        //var temp = Request.Query["thumbnails"];
+        thumbnails = Request.Query["thumbnails"].Count != 0;
+        //var temp = Request.Query["size"];
+        int.TryParse(Request.Query["size"][0],out thumbsize);
         records = Model.GetRecords(connection, searchtext);
-        Model.CloseConnection(connection);
+        connection.Close();
     }
 }
 
@@ -19,6 +26,24 @@
     <br />
     <form method="get">
         <input type="text" id="SearchBox" name="itemcontains" placeholder="Search for Pack | TGI | Author | Exemplar Name ..." value="@searchtext">
+
+        <input type="checkbox" id="ThumbnailToggle" name="thumbnails"/>
+        <label for="ThumbnailToggle">Show Thumbnails</label>
+
+        <div>
+            <input type="range" min="32" max="128" step="32" id="ThumbnailSize" name="size" value="96" list="steps" />
+            <label for="ThumbnailSize">Thumbnail Size</label>
+            <datalist id="steps">
+                <option value="32" label="32px"></option>
+                <option value="64" label="64px"></option>
+                <option value="96" label="96px"></option>
+                <option value="128" label="128px"></option>
+            </datalist>
+        </div>
+        
+        <input type="checkbox" id="DarkBackground" name="darkbg" />
+        <label for="DarkBackground">Dark thumbnail background</label>
+
         <input type="Submit" value="Search" />
         <hr />
         @{
@@ -36,6 +61,11 @@
                 <th>TGI</th>
                 <th>Type</th>
                 <th>Author</th>
+                @{
+                    if (thumbnails) {
+                        <th>Thumbnail</th>
+                    }
+                }
                 <th>Exemplar Name</th>
             </tr>
         </thead>
@@ -47,6 +77,11 @@
                         <td>@item.TGI</td>
                         <td>@item.TGIName</td>
                         <td>@item.Author</td>
+                        @{
+                            if (thumbnails) {
+                                <td><img src="~/img/thumbnails/@(item.TGI.Replace("0x", "").Replace(", ", "-")).png" height="@thumbsize" /> </td>
+                            }
+                        }
                         <td>@item.ExemplarName</td>
                     </tr>
                 }

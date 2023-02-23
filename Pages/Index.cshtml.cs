@@ -41,7 +41,7 @@ namespace SC4PropTextureCatalog.Pages {
         /// <param name="connection">SQLiteConnection to use</param>
         /// <param name="searchtext">Text to search for</param>
         /// <returns>A list of matching records</returns>
-        public List<Record> GetRecords(SQLiteConnection connection,string? searchtext) {
+        public List<Record> GetRecords(SQLiteConnection connection, string? searchtext) {
             if (searchtext is null || searchtext.Length < 3) {
                 return new List<Record>();
             }
@@ -59,13 +59,14 @@ namespace SC4PropTextureCatalog.Pages {
             return connection.Query<Record>(query.ToString());
         }
 
-        /// <summary>
-        /// Closes the database connection.
-        /// </summary>
-        /// <param name="connection">Connection to close</param>
-        public void CloseConnection(SQLiteConnection connection) {
-            connection.Close();
+
+        public List<string> GetPacks(List<Record> records) {
+            return records.Select(item => item.PackName).Distinct().OrderBy(name=>name).ToList();
         }
+
+
+
+
 
         public void OnGet() {
 
