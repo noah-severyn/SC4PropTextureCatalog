@@ -1,0 +1,28 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "View Pack Contents";
+
+    List<string> packs = new List<string>();
+    List<IndexModel.Record> records = new List<IndexModel.Record>();
+
+    if (Request.QueryString.HasValue && Request.Query.ContainsKey("itemcontains")) {
+        var connection = Model.InitialiseConnection();
+        packs = Model.GetPacks();
+        connection.Close();
+    }
+}
+
+<div>
+    <datalist id="packs">
+        @{
+            foreach (string pack in packs) {
+                <option value="@pack"></option>
+            }
+        }
+    </datalist>
+
+    <form>
+        <input type="text" id="PackSelection" name="pack" list="packs" />
+    </form>
+</div>
