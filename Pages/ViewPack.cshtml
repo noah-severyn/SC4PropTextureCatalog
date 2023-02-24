@@ -1,28 +1,70 @@
 ﻿@page
-@model IndexModel
+@model ViewPackModel
 @{
     ViewData["Title"] = "View Pack Contents";
-
-    List<string> packs = new List<string>();
-    List<IndexModel.Record> records = new List<IndexModel.Record>();
-
-    if (Request.QueryString.HasValue && Request.Query.ContainsKey("itemcontains")) {
-        var connection = Model.InitialiseConnection();
-        packs = Model.GetPacks();
-        connection.Close();
+    var temp = Request.Query["pack"];
+    if (Request.QueryString.HasValue) {
+        Model.SelectedPackName = Request.Query["pack"][0];
+        Model.SetPackInfo();
     }
+
 }
 
 <div>
-    <datalist id="packs">
-        @{
-            foreach (string pack in packs) {
-                <option value="@pack"></option>
+    <h3>Choose a prop or texture pack to inspect</h3>
+    <br />
+    <div>
+        <datalist id="packs">
+            @{
+                foreach (ViewPackModel.Record pack in Model.ListOfPacks) {
+                    <option value="@pack.PackName"></option>
+                }
             }
-        }
-    </datalist>
+        </datalist>
 
-    <form>
-        <input type="text" id="PackSelection" name="pack" list="packs" />
-    </form>
+        <form>
+            <input type="text" id="PackSelection" name="pack" list="packs" value="@Model.SelectedPackName" placeholder="Choose pack"/>
+            <input type="Submit" value="View Pack" />
+        </form>
+    </div>
+
+    <table id="InfoTable">
+        <thead>
+            <tr class="header">
+                <th>Pack Name</th>
+                <th>Pack Version</th>
+                <th>Author</th>
+                <th>Type</th>
+                <th># Textures</th>
+                <th># Props</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="@Model.SelectedPack.Hyperlink">@Model.SelectedPack.PackName</a></td>
+                <td>@Model.SelectedPack.PackVersion</td>
+                <td>@Model.SelectedPack.Author</td>
+                <td>@Model.SelectedPack.Type</td>
+                <td>@Model.TextureCount</td>
+                <td>@Model.PropCount</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="TextureTable">
+        <tbody>
+            <tr>
+                <td><img src="~/img/thumbnails/7AB50E44-0986135E-F6B4402A.png" height="96px" /> </td>
+                <td><img src="~/img/thumbnails/7AB50E44-0986135E-F6B4402A.png" height="96px" /> </td>
+                <td><img src="~/img/thumbnails/7AB50E44-0986135E-F6B4402A.png" height="96px" /> </td>
+                <td><img src="~/img/thumbnails/7AB50E44-0986135E-F6B4402A.png" height="96px" /> </td>
+                <td><img src="~/img/thumbnails/7AB50E44-0986135E-F6B4402A.png" height="96px" /> </td>
+                <td><img src="~/img/thumbnails/7AB50E44-0986135E-F6B4402A.png" height="96px" /> </td>
+            </tr>
+        
+        </tbody>
+    </table>
+
+    <table id="PropTable">
+    </table>
 </div>

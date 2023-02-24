@@ -5,11 +5,6 @@ using SQLite;
 
 namespace SC4PropTextureCatalog.Pages {
     public class IndexModel : PageModel {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger) {
-            _logger = logger;
-        }
 
         /// <summary>
         /// An item returned as a result of a query to the Catalog database.
@@ -45,12 +40,12 @@ namespace SC4PropTextureCatalog.Pages {
             if (searchtext is null || searchtext.Length < 3) {
                 return new List<Record>();
             }
+            searchtext = searchtext.Replace("'", "''");
 
             /* SELECT PackTable.PackName, TGITable.TGI,TGITypes.TGIName ,PackTable.Author, TGITable.ExemplarName FROM TGITable
              * LEFT JOIN PackTable ON TGITable.PackID = PackTable.PackID
              * LEFT JOIN TGITypes ON TGITable.TGIType = TGITypes.TGIType
-             * WHERE PackName LIKE '%fire%' OR TGI LIKE '%fire%' OR Author LIKE '%fire%' OR ExemplarName LIKE '%fire%' 
-             */
+             * WHERE PackName LIKE '%fire%' OR TGI LIKE '%fire%' OR Author LIKE '%fire%' OR ExemplarName LIKE '%fire%' */
             StringBuilder query = new StringBuilder();
             query.AppendLine("SELECT PackTable.PackName, PackTable.Hyperlink, TGITable.TGI, TGITable.TGIType, TGITypes.TGIName, PackTable.Author, TGITable.ExemplarName FROM TGITable");
             query.AppendLine("LEFT JOIN PackTable ON TGITable.PackID = PackTable.PackID");
@@ -58,15 +53,6 @@ namespace SC4PropTextureCatalog.Pages {
             query.AppendLine($"WHERE PackName LIKE '%{searchtext}%' OR TGI LIKE '%{searchtext}%' OR Author LIKE '%{searchtext}%' OR ExemplarName LIKE '%{searchtext}%'");
             return connection.Query<Record>(query.ToString());
         }
-
-
-        public List<string> GetPacks(List<Record> records) {
-            return records.Select(item => item.PackName).Distinct().OrderBy(name=>name).ToList();
-        }
-
-
-
-
 
         public void OnGet() {
 
