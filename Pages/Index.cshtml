@@ -15,14 +15,14 @@
 
 <div>
     <h3>Search props or textures by Pack, TGI, Author, or Exemplar Name</h3>
-    <br />
+    <p>(Currently only textures are supported. Props/Buildings/Flora to follow.)</p>
     <form method="get">
         <input id="SearchBox" type="text" name="itemcontains" placeholder="Search for Pack | TGI | Author | Exemplar Name ..." value="@Model.SearchText">
 
         <input id="ThumbnailToggle" type="checkbox" name="thumbnails" checked="@Model.ShowThumbs" onclick="ShowHideSizeRange()" />
         <label for="ThumbnailToggle">Show Thumbnails</label>
 
-        <div id="ThumbSizeGroup">
+        <div id="ThumbSizeGroup" style="display:none">
             <input id="ThumbnailSize" type="range" min="32" max="128" step="32" name="size" value="@Model.ThumbSize" list="Sizes" />
             <label for="ThumbnailSize">Thumbnail Size</label>
             <datalist id="Sizes">
@@ -43,8 +43,7 @@
     }
     <hr />
 
-    <input id="BackgroundToggle" type="checkbox" onclick="ToggleDarkThumbnailBg()" />
-    <label for="BackgroundToggle">Dark thumbnail background</label>
+    
 
     <table id="ContentTable">
         <thead>
@@ -55,7 +54,11 @@
                 <th>Author</th>
                 @{
                     if (Model.ShowThumbs) {
-                        <th>Thumbnail</th>
+                        <th>Thumbnail
+                            <br>
+                            <input id="BackgroundToggle" type="checkbox" onclick="ToggleDarkThumbnailBg()" />
+                            <label for="BackgroundToggle">Dark BG</label>
+                        </th>
                     }
                 }
                 <th>Exemplar Name</th>
@@ -71,7 +74,7 @@
                         <td>@item.Author</td>
                         @{
                             if (Model.ShowThumbs) {
-                                <td><img src="~/img/thumbnails/@(item.TGI.Replace("0x", "").Replace(", ", "-")).png" height="@Model.ThumbSize" /> </td>
+                                <td><img src="~/img/thumbnails/@(item.TGI.Replace("0x", "").Replace(", ", "-")).png" height="@Model.ThumbSize"/> </td>
                             }
                         }
                         <td>@item.ExemplarName</td>

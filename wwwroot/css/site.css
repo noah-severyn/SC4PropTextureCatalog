@@ -1,4 +1,5 @@
 html {
+	font-family: "Trebuchet MS";
 	font-size: 14px;
 	position: relative;
 	min-height: 100%;
@@ -32,8 +33,7 @@ option {
 	background-color: #202e39;
 }
 
-summary {
-	/*Same style as H1*/
+summary { /*Same style as H1*/
 	font-size: 2.5rem;
 	margin-top: 0;
 	margin-bottom: 0.5rem;
@@ -41,22 +41,31 @@ summary {
 	line-height: 1.2;
 }
 
-
+/*
+	================================================
+	Styles for Index Page
+	================================================
+*/
 #ContentTable {
-	border-collapse: collapse; /* Collapse borders */
+	border-collapse: collapse;
 	width: 100%;
-	border: 1px solid #ddd; /* Add a grey border */
-	font-size: 12px; /* Increase font-size */
-	font-family: "Trebuchet MS";
+	border: 1px solid #ddd;
+	font-size: 12px;
 	text-align: left;
 }
 
 	#ContentTable th {
 		padding: 8px;
+		background-color: #e6e6e6;
+		font-size: 16px;
+		color: #000;
+		position: -webkit-sticky; /* Safari */
+		position: sticky;
+		top: 0;
 	}
 
 	#ContentTable tr, td {
-		padding: 8px;
+		padding: 6px;
 		color: #121a21;
 		border-bottom: 1px solid #ddd;
 	}
@@ -65,41 +74,26 @@ summary {
 			background-color: #f8fad2;
 		}
 
-		#ContentTable tr.header {
-			background-color: #f1f1f1;
-			font-size: 16px;
-			color: #000;
-		}
-
 #SearchBox {
 	width: 30%;
 }
 
-#ContentTable {
-	border-collapse: collapse; /* Collapse borders */
-	width: 100%;
-	border: 1px solid #ddd; /* Add a grey border */
-	font-size: 12px; /* Increase font-size */
-	font-family: "Trebuchet MS";
-	text-align: left;
+/*
+	================================================
+	Styles for ViewPack Page
+	================================================
+*/
+#InfoTable {
+	text-align: center;
+	margin: 10px 0px;
 }
-
-#ContentTable th {
-	padding: 8px;
-}
-
-#ContentTable tr, td {
-	padding: 8px;
-	color: #121a21;
-	border-bottom: 1px solid #ddd;
-}
-
-	#ContentTable tr:hover {
-		background-color: #f8fad2;
-	}
-
-	#ContentTable tr.header {
-		background-color: #f1f1f1;
+	#InfoTable th {
+		padding: 8px;
+		background-color: #e6e6e6;
 		font-size: 16px;
 		color: #000;
+	}
+
+	#InfoTable td {
+		padding: 08px;
 	}

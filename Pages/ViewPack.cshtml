@@ -12,7 +12,7 @@
 
 <div>
     <h3>Choose a prop or texture pack to inspect</h3>
-    <br />
+    <p>(Currently only textures are supported. Props/Buildings/Flora to follow.)</p>
     <div>
         <datalist id="packs">
             @{
@@ -53,7 +53,7 @@
 
     <hr />
     <input id="BackgroundToggle" type="checkbox" onclick="ToggleDarkThumbnailBg()" />
-    <label for="BackgroundToggle">Dark thumbnail background</label>
+    <label for="BackgroundToggle">Dark background</label>
     <hr />
     <table id="TextureTable">
         @{
@@ -66,7 +66,7 @@
                                 //@(TGIName = Model.TGIRecords[row + col].TGI.Replace("0x", "").Replace(", ", "-"); )
                                 //@(TGIIID = Model.TGIRecords[row + col].TGI.Substring(Model.TGIRecords[row + col].TGI.Length-8); )
                                 //<td><img src="~/img/thumbnails/@(TGIName).png" height="96px" /><p>@(TGIIID)</p></td>
-                                <td><img src="~/img/thumbnails/@(Model.TGIRecords[row + col].TGI.Replace("0x", "").Replace(", ", "-")).png" height="96px" /><p>@(Model.TGIRecords[row + col].TGI.Substring(Model.TGIRecords[row + col].TGI.Length - 8))</p></td>
+                                <td><img src="~/img/thumbnails/@(Model.TGIRecords[row*10 + col].TGI.Replace("0x", "").Replace(", ", "-")).png" height="96px" /><p>@(Model.TGIRecords[row + col].TGI.Substring(Model.TGIRecords[row + col].TGI.Length - 8))</p></td>
                             }
                         }
                     </tr>
