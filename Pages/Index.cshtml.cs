@@ -6,11 +6,16 @@ using SQLite;
 namespace SC4PropTextureCatalog.Pages {
     public class IndexModel : PageModel {
 
+        public string? SearchText;
+        public bool ShowThumbs;
+        public int ThumbSize;
+        public List<CatalogRecord> ListOfRecords = new List<CatalogRecord>();
+
         /// <summary>
         /// An item returned as a result of a query to the Catalog database.
         /// </summary>
-        [Table("records")]
-        public class Record {
+        [Table("Records")]
+        public class CatalogRecord {
             public string PackName { get; set; } = string.Empty;
             public string PackVersion { get; set; } = string.Empty;
             public string Hyperlink { get; set; } = string.Empty;
@@ -31,16 +36,17 @@ namespace SC4PropTextureCatalog.Pages {
         }
 
         /// <summary>
-        /// Returns a list of each item where a value in any column matches the search text.
+        /// Fetches a list of each item where a value in any column matches the search text.
         /// </summary>
         /// <param name="connection">SQLiteConnection to use</param>
         /// <param name="searchtext">Text to search for</param>
-        /// <returns>A list of matching records</returns>
-        public List<Record> GetRecords(SQLiteConnection connection, string? searchtext) {
-            if (searchtext is null || searchtext.Length < 3) {
-                return new List<Record>();
+        public void SetRecords() {
+            string? search = SearchText;
+            if (search is null || search.Length < 3) {
+                ListOfRecords = new List<CatalogRecord>();
             }
-            searchtext = searchtext.Replace("'", "''");
+            SQLiteConnection connection = InitialiseConnection();
+            search = search.Replace("'", "''");
 
             /* SELECT PackTable.PackName, TGITable.TGI,TGITypes.TGIName ,PackTable.Author, TGITable.ExemplarName FROM TGITable
              * LEFT JOIN PackTable ON TGITable.PackID = PackTable.PackID
@@ -50,12 +56,14 @@ namespace SC4PropTextureCatalog.Pages {
             query.AppendLine("SELECT PackTable.PackName, PackTable.Hyperlink, TGITable.TGI, TGITable.TGIType, TGITypes.TGIName, PackTable.Author, TGITable.ExemplarName FROM TGITable");
             query.AppendLine("LEFT JOIN PackTable ON TGITable.PackID = PackTable.PackID");
             query.AppendLine("LEFT JOIN TGITypes ON TGITable.TGIType = TGITypes.TGIType");
-            query.AppendLine($"WHERE PackName LIKE '%{searchtext}%' OR TGI LIKE '%{searchtext}%' OR Author LIKE '%{searchtext}%' OR ExemplarName LIKE '%{searchtext}%'");
-            return connection.Query<Record>(query.ToString());
+            query.AppendLine($"WHERE PackName LIKE '%{search}%' OR TGI LIKE '%{search}%' OR Author LIKE '%{search}%' OR ExemplarName LIKE '%{search}%'");
+            ListOfRecords =  connection.Query<CatalogRecord>(query.ToString());
+            connection.Close();
         }
 
         public void OnGet() {
 
         }
+        
     }
 }

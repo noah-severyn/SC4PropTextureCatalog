@@ -3,21 +3,13 @@
 @{
     ViewData["Title"] = "Home page";
 
-    string? searchtext = null;
-    bool thumbnails = false;
-    int thumbsize = 0;
-    List<IndexModel.Record> records = new List<IndexModel.Record>();
-
     if (Request.QueryString.HasValue && Request.Query.ContainsKey("itemcontains")) {
-        var connection = Model.InitialiseConnection();
-        searchtext = Request.Query["itemcontains"][0];
-        //var temp1 = Request.Query["itemcontains"];
-        //var temp = Request.Query["thumbnails"];
-        thumbnails = Request.Query["thumbnails"].Count != 0;
-        //var temp = Request.Query["size"];
-        int.TryParse(Request.Query["size"][0],out thumbsize);
-        records = Model.GetRecords(connection, searchtext);
-        connection.Close();
+        Model.SearchText = Request.Query["itemcontains"][0];
+        Model.ShowThumbs = Request.Query["thumbnails"].Count != 0;
+        if (Model.ShowThumbs) {
+            int.TryParse(Request.Query["size"][0], out Model.ThumbSize);
+        }
+        Model.SetRecords();
     }
 }
 
@@ -25,35 +17,35 @@
     <h3>Search props or textures by Pack, TGI, Author, or Exemplar Name</h3>
     <br />
     <form method="get">
-        <input type="text" id="SearchBox" name="itemcontains" placeholder="Search for Pack | TGI | Author | Exemplar Name ..." value="@searchtext">
+        <input id="SearchBox" type="text" name="itemcontains" placeholder="Search for Pack | TGI | Author | Exemplar Name ..." value="@Model.SearchText">
 
-        <input type="checkbox" id="ThumbnailToggle" name="thumbnails"/>
+        <input id="ThumbnailToggle" type="checkbox" name="thumbnails" checked="@Model.ShowThumbs" onclick="ShowHideSizeRange()" />
         <label for="ThumbnailToggle">Show Thumbnails</label>
 
-        <div>
-            <input type="range" min="32" max="128" step="32" id="ThumbnailSize" name="size" value="96" list="steps" />
+        <div id="ThumbSizeGroup">
+            <input id="ThumbnailSize" type="range" min="32" max="128" step="32" name="size" value="@Model.ThumbSize" list="Sizes" />
             <label for="ThumbnailSize">Thumbnail Size</label>
-            <datalist id="steps">
+            <datalist id="Sizes">
                 <option value="32" label="32px"></option>
                 <option value="64" label="64px"></option>
                 <option value="96" label="96px"></option>
                 <option value="128" label="128px"></option>
             </datalist>
         </div>
-        
-        <input type="checkbox" id="DarkBackground" name="darkbg" />
-        <label for="DarkBackground">Dark thumbnail background</label>
-
         <input type="Submit" value="Search" />
-        <hr />
-        @{
-            if (searchtext is not null) {
-                <p>Query "@searchtext" returned @(records.Count) results.</p>
-            }
-        }
     </form>
-
     <hr />
+
+    @{
+        if (Model.SearchText is not null) {
+            <p>Query "@Model.SearchText" returned @(Model.ListOfRecords.Count) results.</p>
+        }
+    }
+    <hr />
+
+    <input id="BackgroundToggle" type="checkbox" onclick="ToggleDarkThumbnailBg()" />
+    <label for="BackgroundToggle">Dark thumbnail background</label>
+
     <table id="ContentTable">
         <thead>
             <tr class="header">
@@ -62,7 +54,7 @@
                 <th>Type</th>
                 <th>Author</th>
                 @{
-                    if (thumbnails) {
+                    if (Model.ShowThumbs) {
                         <th>Thumbnail</th>
                     }
                 }
@@ -71,15 +63,15 @@
         </thead>
         <tbody>
             @{
-                foreach (IndexModel.Record item in records) {
+                foreach (IndexModel.CatalogRecord item in Model.ListOfRecords) {
                     <tr>
                         <td><a href="@item.Hyperlink">@item.PackName</a></td>
                         <td>@item.TGI</td>
                         <td>@item.TGIName</td>
                         <td>@item.Author</td>
                         @{
-                            if (thumbnails) {
-                                <td><img src="~/img/thumbnails/@(item.TGI.Replace("0x", "").Replace(", ", "-")).png" height="@thumbsize" /> </td>
+                            if (Model.ShowThumbs) {
+                                <td><img src="~/img/thumbnails/@(item.TGI.Replace("0x", "").Replace(", ", "-")).png" height="@Model.ThumbSize" /> </td>
                             }
                         }
                         <td>@item.ExemplarName</td>

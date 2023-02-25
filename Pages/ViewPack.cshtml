@@ -2,12 +2,12 @@
 @model ViewPackModel
 @{
     ViewData["Title"] = "View Pack Contents";
-    var temp = Request.Query["pack"];
+    //string TGIName = null;
+    //string TGIIID = null;
     if (Request.QueryString.HasValue) {
         Model.SelectedPackName = Request.Query["pack"][0];
         Model.SetPackInfo();
     }
-
 }
 
 <div>
@@ -23,7 +23,7 @@
         </datalist>
 
         <form>
-            <input type="text" id="PackSelection" name="pack" list="packs" value="@Model.SelectedPackName" placeholder="Choose pack"/>
+            <input type="text" id="PackSelection" name="pack" list="packs" value="@Model.SelectedPackName" placeholder="Choose pack" />
             <input type="Submit" value="View Pack" />
         </form>
     </div>
@@ -51,17 +51,30 @@
         </tbody>
     </table>
 
+    <hr />
+    <input id="BackgroundToggle" type="checkbox" onclick="ToggleDarkThumbnailBg()" />
+    <label for="BackgroundToggle">Dark thumbnail background</label>
+    <hr />
     <table id="TextureTable">
+        @{
+            if (Model.TextureCount > 0) {
+
+                for (int row = 0; row < Model.TextureCount / 10; row++) {
+                    <tr>
+                        @{
+                            for (int col = 0; col < 9; col++) {
+                                //@(TGIName = Model.TGIRecords[row + col].TGI.Replace("0x", "").Replace(", ", "-"); )
+                                //@(TGIIID = Model.TGIRecords[row + col].TGI.Substring(Model.TGIRecords[row + col].TGI.Length-8); )
+                                //<td><img src="~/img/thumbnails/@(TGIName).png" height="96px" /><p>@(TGIIID)</p></td>
+                                <td><img src="~/img/thumbnails/@(Model.TGIRecords[row + col].TGI.Replace("0x", "").Replace(", ", "-")).png" height="96px" /><p>@(Model.TGIRecords[row + col].TGI.Substring(Model.TGIRecords[row + col].TGI.Length - 8))</p></td>
+                            }
+                        }
+                    </tr>
+                }
+            }
+
+        }
         <tbody>
-            <tr>
-                <td><img src="~/img/thumbnails/7AB50E44-0986135E-F6B4402A.png" height="96px" /> </td>
-                <td><img src="~/img/thumbnails/7AB50E44-0986135E-F6B4402A.png" height="96px" /> </td>
-                <td><img src="~/img/thumbnails/7AB50E44-0986135E-F6B4402A.png" height="96px" /> </td>
-                <td><img src="~/img/thumbnails/7AB50E44-0986135E-F6B4402A.png" height="96px" /> </td>
-                <td><img src="~/img/thumbnails/7AB50E44-0986135E-F6B4402A.png" height="96px" /> </td>
-                <td><img src="~/img/thumbnails/7AB50E44-0986135E-F6B4402A.png" height="96px" /> </td>
-            </tr>
-        
         </tbody>
     </table>
 
