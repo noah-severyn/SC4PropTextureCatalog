@@ -74,7 +74,7 @@
                         <td>@item.Author</td>
                         @{
                             if (Model.ShowThumbs) {
-                                <td><img src="~/img/thumbnails/@(item.TGI.Replace("0x", "").Replace(", ", "-")).png" height="@Model.ThumbSize"/> </td>
+                                <td><img src="~/img/thumbnails/@(item.TGI.Replace("0x", "").Replace(", ", "-")).png" height="@Model.ThumbSize" loading="lazy"/> </td>
                             }
                         }
                         <td>@item.ExemplarName</td>

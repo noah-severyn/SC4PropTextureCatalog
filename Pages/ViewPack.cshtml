@@ -2,8 +2,6 @@
 @model ViewPackModel
 @{
     ViewData["Title"] = "View Pack Contents";
-    //string TGIName = null;
-    //string TGIIID = null;
     if (Request.QueryString.HasValue) {
         Model.SelectedPackName = Request.Query["pack"][0];
         Model.SetPackInfo();
@@ -23,7 +21,7 @@
         </datalist>
 
         <form>
-            <input type="text" id="PackSelection" name="pack" list="packs" value="@Model.SelectedPackName" placeholder="Choose pack" />
+            <input type="text" id="PackSelection" name="pack" list="packs" value="@Model.SelectedPackName" placeholder="Choose pack" size="35" />
             <input type="Submit" value="View Pack" />
         </form>
     </div>
@@ -55,26 +53,28 @@
     <input id="BackgroundToggle" type="checkbox" onclick="ToggleDarkThumbnailBg()" />
     <label for="BackgroundToggle">Dark background</label>
     <hr />
-    <table id="TextureTable">
-        @{
-            if (Model.TextureCount > 0) {
 
-                for (int row = 0; row < Model.TextureCount / 10; row++) {
-                    <tr>
-                        @{
-                            for (int col = 0; col < 9; col++) {
-                                //@(TGIName = Model.TGIRecords[row + col].TGI.Replace("0x", "").Replace(", ", "-"); )
-                                //@(TGIIID = Model.TGIRecords[row + col].TGI.Substring(Model.TGIRecords[row + col].TGI.Length-8); )
-                                //<td><img src="~/img/thumbnails/@(TGIName).png" height="96px" /><p>@(TGIIID)</p></td>
-                                <td><img src="~/img/thumbnails/@(Model.TGIRecords[row*10 + col].TGI.Replace("0x", "").Replace(", ", "-")).png" height="96px" /><p>@(Model.TGIRecords[row + col].TGI.Substring(Model.TGIRecords[row + col].TGI.Length - 8))</p></td>
+    <table id="TextureTable">
+        <tbody>
+            @{
+                if (Model.TextureCount > 0) {
+                    for (int row = 0; row < Math.Ceiling(((double) Model.TextureCount) / 10); row++) {
+                        <tr>
+                            @{
+                                for (int col = 0; col < 12; col++) {
+                                    try {
+                                        <td>
+                                            <img src="~/img/thumbnails/@(Model.TGIRecords[row*10 + col].TGI.Replace("0x", "").Replace(", ", "-")).png" height="64px" loading="lazy" />
+                                            <p>@(Model.TGIRecords[row * 10 + col].TGI.Substring(Model.TGIRecords[row * 10 + col].TGI.Length - 8))</p>
+                                        </td>
+                                    }
+                                    catch (ArgumentOutOfRangeException) { } //Account for last row where there will be < 12 columns
+                                }
                             }
-                        }
-                    </tr>
+                        </tr>
+                    }
                 }
             }
-
-        }
-        <tbody>
         </tbody>
     </table>
 
