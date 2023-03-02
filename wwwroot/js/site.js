@@ -4,7 +4,6 @@
 // Write your JavaScript code.
 
 function ShowHideSizeRange() {
-	
 	var thumbSizeGroup = document.getElementById("ThumbSizeGroup");
 	if (document.getElementById("ThumbnailToggle").checked) {
 		thumbSizeGroup.style.display = "block";
