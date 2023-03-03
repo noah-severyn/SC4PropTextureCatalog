@@ -1,5 +1,8 @@
 html {
+	font-family: "Trebuchet MS";
 	font-size: 14px;
+	position: relative;
+	min-height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -12,40 +15,25 @@ html {
 	box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-	position: relative;
-	min-height: 100%;
-}
-
 body {
 	margin-bottom: 60px;
 }
 
-html {
-	font-size: 14px;
+
+datalist {
+	display: flex;
+	justify-content: space-between;
+	width: 200px;
+}
+option {
+	padding: 0;
 }
 
-@media (min-width: 768px) {
-	html {
-		font-size: 16px;
-	}
+.DarkThumbnail {
+	background-color: #202e39;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-	box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-	position: relative;
-	min-height: 100%;
-}
-
-body {
-	margin-bottom: 60px;
-}
-
-summary {
-	/*Same style as H1*/
+summary { /*Same style as H1*/
 	font-size: 2.5rem;
 	margin-top: 0;
 	margin-bottom: 0.5rem;
@@ -53,22 +41,37 @@ summary {
 	line-height: 1.2;
 }
 
+div .sticky {
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+}
 
+/*
+	================================================
+	Styles for Index/Home Page
+	================================================
+*/
 #ContentTable {
-	border-collapse: collapse; /* Collapse borders */
+	border-collapse: collapse;
 	width: 100%;
-	border: 1px solid #ddd; /* Add a grey border */
-	font-size: 12px; /* Increase font-size */
-	font-family: "Trebuchet MS";
+	border: 1px solid #ddd;
+	font-size: 12px;
 	text-align: left;
 }
 
 	#ContentTable th {
 		padding: 8px;
+		background-color: #e6e6e6;
+		font-size: 16px;
+		color: #000;
+		position: -webkit-sticky; /* Safari */
+		position: sticky;
+		top: 0;
 	}
 
 	#ContentTable tr, td {
-		padding: 8px;
+		padding: 6px;
 		color: #121a21;
 		border-bottom: 1px solid #ddd;
 	}
@@ -77,41 +80,26 @@ summary {
 			background-color: #f8fad2;
 		}
 
-		#ContentTable tr.header {
-			background-color: #f1f1f1;
-			font-size: 16px;
-			color: #000;
-		}
 
-#SearchBox {
-	width: 30%;
-}
-
-#ContentTable {
-	border-collapse: collapse; /* Collapse borders */
+/*
+	================================================
+	Styles for ViewPack Page
+	================================================
+*/
+#InfoTable {
+	text-align: center;
+	margin: 10px 0px;
+	background-color: white;
 	width: 100%;
-	border: 1px solid #ddd; /* Add a grey border */
-	font-size: 12px; /* Increase font-size */
-	font-family: "Trebuchet MS";
-	text-align: left;
 }
-
-#ContentTable th {
-	padding: 8px;
-}
-
-#ContentTable tr, td {
-	padding: 8px;
-	color: #121a21;
-	border-bottom: 1px solid #ddd;
-}
-
-	#ContentTable tr:hover {
-		background-color: #f8fad2;
-	}
-
-	#ContentTable tr.header {
-		background-color: #f1f1f1;
+	#InfoTable th {
+		padding: 8px;
+		background-color: #e6e6e6;
 		font-size: 16px;
 		color: #000;
+	}
+
+	#InfoTable td {
+		padding: 08px;
+		background-color: white;
 	}
