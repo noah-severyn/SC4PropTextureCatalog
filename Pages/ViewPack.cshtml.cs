@@ -10,7 +10,8 @@ namespace SC4PropTextureCatalog.Pages {
         public string? SelectedPackName = null;
         public PackTableRecord SelectedPack = new PackTableRecord();
 
-        public List<TGI_Record> TGIRecords = new List<TGI_Record>();
+        public List<TGI_Record> TextureRecords = new List<TGI_Record>();
+        public List<TGI_Record> PropRecords = new List<TGI_Record>();
         public int TextureCount = 0;
         public int PropCount = 0;
 
@@ -89,10 +90,15 @@ namespace SC4PropTextureCatalog.Pages {
             query.Clear();
             query.AppendLine("SELECT TGITable.TGI, TGITable.TGIType from TGITable");
             query.AppendLine("LEFT JOIN PackTable ON TGITable.PackID = PackTable.PackID");
+            query.AppendLine($"WHERE PackName = '{packname}' and TGIType = 1");
+            PropRecords = connection.Query<TGI_Record>(query.ToString());
+            PropCount = PropRecords.Count();
+            query.Clear();
+            query.AppendLine("SELECT TGITable.TGI, TGITable.TGIType from TGITable");
+            query.AppendLine("LEFT JOIN PackTable ON TGITable.PackID = PackTable.PackID");
             query.AppendLine($"WHERE PackName = '{packname}' and TGIType = 2");
-            TGIRecords = connection.Query<TGI_Record>(query.ToString());
-            PropCount = (from tgi in TGIRecords where tgi.TGIType == 1 select tgi).Count();
-            TextureCount = (from tgi in TGIRecords where tgi.TGIType == 2 select tgi).Count();
+            TextureRecords = connection.Query<TGI_Record>(query.ToString());
+            TextureCount = TextureRecords.Count();            
             connection.Close();
         }
 

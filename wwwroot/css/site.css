@@ -41,9 +41,15 @@ summary { /*Same style as H1*/
 	line-height: 1.2;
 }
 
+div .sticky {
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+}
+
 /*
 	================================================
-	Styles for Index Page
+	Styles for Index/Home Page
 	================================================
 */
 #ContentTable {
@@ -74,9 +80,6 @@ summary { /*Same style as H1*/
 			background-color: #f8fad2;
 		}
 
-#SearchBox {
-	width: 30%;
-}
 
 /*
 	================================================
@@ -86,6 +89,8 @@ summary { /*Same style as H1*/
 #InfoTable {
 	text-align: center;
 	margin: 10px 0px;
+	background-color: white;
+	width: 100%;
 }
 	#InfoTable th {
 		padding: 8px;
@@ -96,4 +101,5 @@ summary { /*Same style as H1*/
 
 	#InfoTable td {
 		padding: 08px;
+		background-color: white;
 	}

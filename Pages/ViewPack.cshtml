@@ -10,7 +10,7 @@
 
 <div>
     <h3>Choose a prop or texture pack to inspect</h3>
-    <p>(Currently only textures are supported. Props/Buildings/Flora to follow.)</p>
+    <p style="color:darkblue">(Currently only thumbnails for textures are supported. Props/Buildings/Flora to follow.)</p>
     <div>
         <datalist id="packs">
             @{
@@ -21,37 +21,44 @@
         </datalist>
 
         <form>
-            <input type="text" id="PackSelection" name="pack" list="packs" value="@Model.SelectedPackName" placeholder="Choose pack" size="35" />
+            <input type="text" id="PackSelection" name="pack" list="packs" value="@Model.SelectedPackName" placeholder="Choose a Pack" size="35" />
             <input type="Submit" value="View Pack" />
         </form>
     </div>
 
-    <table id="InfoTable">
-        <thead>
-            <tr class="header">
-                <th>Pack Name</th>
-                <th>Pack Version</th>
-                <th>Author</th>
-                <th>Type</th>
-                <th># Textures</th>
-                <th># Props</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><a href="@Model.SelectedPack.Hyperlink">@Model.SelectedPack.PackName</a></td>
-                <td>@Model.SelectedPack.PackVersion</td>
-                <td>@Model.SelectedPack.Author</td>
-                <td>@Model.SelectedPack.Type</td>
-                <td>@Model.TextureCount</td>
-                <td>@Model.PropCount</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <hr />
-    <input id="BackgroundToggle" type="checkbox" onclick="ToggleDarkThumbnailBg()" />
-    <label for="BackgroundToggle">Dark background</label>
+    <div class="sticky">
+        <table id="InfoTable">
+            <thead>
+                <tr class="header">
+                    <th>Pack Name</th>
+                    <th>Pack Version</th>
+                    <th>Author</th>
+                    <th>Type</th>
+                    <th># Textures</th>
+                    <th># Props</th>
+                    <th># Flora</th>
+                    <th># Models</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="@Model.SelectedPack.Hyperlink">@Model.SelectedPack.PackName</a></td>
+                    <td>@Model.SelectedPack.PackVersion</td>
+                    <td>@Model.SelectedPack.Author</td>
+                    <td>@Model.SelectedPack.Type</td>
+                    <td>@Model.TextureCount</td>
+                    <td>@Model.PropCount</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input id="BackgroundToggle" type="checkbox" onclick="ToggleDarkThumbnailBg()" />
+                        <label for="BackgroundToggle">Dark background</label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <hr />
 
     <table id="TextureTable">
@@ -64,8 +71,8 @@
                                 for (int col = 0; col < 12; col++) {
                                     try {
                                         <td>
-                                            <img src="~/img/thumbnails/@(Model.TGIRecords[row*10 + col].TGI.Replace("0x", "").Replace(", ", "-")).png" height="64px" loading="lazy" />
-                                            <p>@(Model.TGIRecords[row * 10 + col].TGI.Substring(Model.TGIRecords[row * 10 + col].TGI.Length - 8))</p>
+                                            <img src="~/img/thumbnails/@(Model.TextureRecords[row*10 + col].TGI.Replace("0x", "").Replace(", ", "-")).png" height="64px" loading="lazy" />
+                                            <p>@(Model.TextureRecords[row * 10 + col].TGI.Substring(Model.TextureRecords[row * 10 + col].TGI.Length - 8))</p>
                                         </td>
                                     }
                                     catch (ArgumentOutOfRangeException) { } //Account for last row where there will be < 12 columns

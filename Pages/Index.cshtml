@@ -15,9 +15,9 @@
 
 <div>
     <h3>Search props or textures by Pack, TGI, Author, or Exemplar Name</h3>
-    <p>(Currently only textures are supported. Props/Buildings/Flora to follow.)</p>
+    <p style="color:darkblue">(Currently only thumbnails for textures are supported. Props/Buildings/Flora to follow.)</p>
     <form method="get">
-        <input id="SearchBox" type="text" name="itemcontains" placeholder="Search for Pack | TGI | Author | Exemplar Name ..." value="@Model.SearchText">
+        <input id="SearchBox" type="text" name="itemcontains" placeholder="Search for Pack | TGI | Author | Exemplar Name ..." value="@Model.SearchText" size="37">
 
         <input id="ThumbnailToggle" type="checkbox" name="thumbnails" checked="@Model.ShowThumbs" onclick="ShowHideSizeRange()" />
         <label for="ThumbnailToggle">Show Thumbnails</label>
