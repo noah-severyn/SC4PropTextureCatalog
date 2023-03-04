@@ -15,7 +15,9 @@
 
 <div>
     <h3>Search props or textures by Pack, TGI, Author, or Exemplar Name</h3>
-    <p style="color:darkblue">(Currently only thumbnails for textures are supported. Props/Buildings/Flora to follow.)</p>
+    <p style="color:darkblue">Currently only thumbnails for textures are supported. Props/Buildings/Flora to follow.</p>
+    <p style="color:darkblue">Thumbnail coverage: <meter id="ThumbnailCoverage" max="1" low=".33" high=".7" optimum="1" value="@(Model.ThumbnailCoverage)"></meter> @(Model.ThumbnailCoverage.ToString("P1"))</p>
+    
     <form method="get">
         <input id="SearchBox" type="text" name="itemcontains" placeholder="Search for Pack | TGI | Author | Exemplar Name ..." value="@Model.SearchText" size="37">
 

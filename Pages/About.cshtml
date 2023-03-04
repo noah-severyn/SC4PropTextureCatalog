@@ -7,12 +7,19 @@
 <p>Building upon the original the original <a target="_blank" href="https://sc4devotion.com/forums/index.php?board=415.0">Prop & Texture Photo Catalog</a> started in 2011, this work includes all known dependency packs to date. This catalog was assembled and is maintained by <a href="https://community.simtropolis.com/profile/455740-nos17/">nos.17</a> with assistance from STEX Custodian (Tyberius06), Cyclone Boom, and CorinaMarie.</p>
 <p>I hope this tool will prove invaluable for many content creators (and especially lotters) who are looking for more and better content to incorporate into their work. Looking for a motorcycle to add to your lot? Filter only prop packs that contain vehicles and/or motorcycles. Looking for seasonal trees? Look through all packs that contain seasonal trees until you can find the right ones for you? Want to use all HD? Scour all packs that contain High Definition props to find the ones you want.</p>
 <p>Found a bug? Am I missing a prop or texture pack? Have an idea for additional sorting/filtering categories? Is there a better way to make the Catalog more interactive or useful? I would very much like to hear from you! Drop me a message or visit the <a href="https://community.simtropolis.com/forums/topic/758501-simcity-4-prop-and-texture-catalogue-by-stex-custodian/">SimCity 4 Prop and Texture Catalog</a> thread. Alternatively, if you are familiar with GitHub, open an issue there.</p>
-<p>The source code for this project is hosted in a Github repository <a href="https://github.com/noah-severyn/SC4PropTextureCatalog">here</a>. The legacy version can still be donwloaded <a href="https://github.com/noah-severyn/SC4PropTextureCatalog/releases/tag/2.2.2">here</a>.</p>
+<p>The source code for this project is hosted in a Github repository <a href="https://github.com/noah-severyn/SC4PropTextureCatalog">here</a>. The legacy version can still be downloaded <a href="https://github.com/noah-severyn/SC4PropTextureCatalog/releases/tag/2.2.2">here</a>.</p>
 
 <h2>How to use:</h2>
 <ul>
     <li>To search for items by TGI, Exemplar Name, or Author, or Pack Name, use the <b>Home</b> page and enter 3 or more characters in the search box.</li>
     <li>To view a thumbnail listing of an entire pack, use the <b>View a Pack</b> page and select a pack from the drop down.</li>
+</ul>
+
+<h2>Stats</h2>
+<ul>
+    <li>Packs Indexed: @(Model.CountPacks.ToString("N0"))</li>
+    <li>TGIs Indexed: @(Model.CountTGIs.ToString("N0"))</li>
+    <li>Thumbnail Coverage: <meter id="ThumbnailCoverage" max="1" low=".33" high=".7" optimum="1" value="@(Model.ThumbnailCoverage)"></meter> @(Model.ThumbnailCoverage.ToString("P1")) (@(Model.CountThumbnails.ToString("N0"))/@(Model.CountTGIs.ToString("N0")))</li>
 </ul>
 
 

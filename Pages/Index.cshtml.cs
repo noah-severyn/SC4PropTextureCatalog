@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Security.Cryptography.X509Certificates;
+using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SQLite;
@@ -10,6 +11,7 @@ namespace SC4PropTextureCatalog.Pages {
         public bool ShowThumbs;
         public int ThumbSize;
         public List<CatalogRecord> ListOfRecords = new List<CatalogRecord>();
+        public double ThumbnailCoverage;
 
         /// <summary>
         /// An item returned as a result of a query to the Catalog database.
@@ -25,6 +27,10 @@ namespace SC4PropTextureCatalog.Pages {
             public string ExemplarName { get; set; } = string.Empty;
         }
 
+        private class QueryCount {
+            public int Count { get; set; }
+        }
+
         /// <summary>
         /// Creates a connection to the Catalog database.
         /// </summary>
@@ -38,8 +44,6 @@ namespace SC4PropTextureCatalog.Pages {
         /// <summary>
         /// Fetches a list of each item where a value in any column matches the search text.
         /// </summary>
-        /// <param name="connection">SQLiteConnection to use</param>
-        /// <param name="searchtext">Text to search for</param>
         public void SetRecords() {
             string? search = SearchText;
             if (search is null || search.Length < 3) {
@@ -62,7 +66,11 @@ namespace SC4PropTextureCatalog.Pages {
         }
 
         public void OnGet() {
-
+            SQLiteConnection connection = InitialiseConnection();
+            int countTGIs = connection.Query<QueryCount>("SELECT TGI FROM TGITable").Count;
+            int countThumbs = Directory.EnumerateFiles("wwwroot\\img\\thumbnails").Count();
+            ThumbnailCoverage = ((double) countThumbs) / countTGIs;
+            connection.Close();
         }
         
     }
