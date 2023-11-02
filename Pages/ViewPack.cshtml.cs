@@ -43,7 +43,7 @@ namespace SC4PropTextureCatalog.Pages {
         /// Creates a connection to the Catalog database.
         /// </summary>
         /// <returns>The database connection</returns>
-        public SQLiteConnection InitialiseConnection() {
+        private static SQLiteConnection InitialiseConnection() {
             string source = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data\\Catalog.db");
             SQLiteConnectionString options = new SQLiteConnectionString(source, false);
             return new SQLiteConnection(options);

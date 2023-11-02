@@ -25,13 +25,12 @@
         <label for="ThumbnailToggle">Show Thumbnails</label>
 
         <div id="ThumbSizeGroup" style="display:none">
-            <input id="ThumbnailSize" type="range" min="32" max="128" step="32" name="size" value="@Model.ThumbSize" list="Sizes" />
+            <input id="ThumbnailSize" type="range" min="32" max="96" step="32" name="size" value="@Model.ThumbSize" list="Sizes" />
             <label for="ThumbnailSize">Thumbnail Size</label>
             <datalist id="Sizes">
                 <option value="32" label="32px"></option>
                 <option value="64" label="64px"></option>
                 <option value="96" label="96px"></option>
-                <option value="128" label="128px"></option>
             </datalist>
         </div>
         <input type="Submit" value="Search" />

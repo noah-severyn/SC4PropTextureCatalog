@@ -1,0 +1,50 @@
+﻿@page
+@model SC4PropTextureCatalog.Pages.PluginPacksModel
+@{
+    ViewData["Title"] = "View Pack Contents";
+    if (Request.QueryString.HasValue) {
+        Model.SearchID = Request.Query["searchid"][0];
+        Model.GetPluginPack();
+    }
+}
+
+
+<div>
+    <h3>Search for a Plugin Pack ID</h3>
+    <p>Search for a Plugin Pack ID in hexadecimal or decimal format against a database of known values to help determine which lot the unknown ID is from. Note that this database is not yet complete, so if your query returns no results the plugin has not yet been scanned.</p>
+    <p>This database is courtesy of catty-cb, who originally compiled the data in her <a href="https://community.simtropolis.com/forums/topic/75264-plugin-pack-id-indexes/">Plugin Pack ID Indexes</a>. If you found this useful, please send her a thank you!</p>
+    <p>To date, @Model.PluginPackCount.ToString("N0") items have been indexed in this database. I aim to add to this over time.</p>
+
+    <div>
+        <form>
+            <input type="text" id="PluginPackSelection" name="searchid" value="@Model.SearchID" placeholder="Search Plugin Pack ID" size="35" />
+            <input type="Submit" value="Search" />
+        </form>
+    </div>
+    <hr />
+
+    @if (Model.PluginPack.DECID != 0) {
+        <table style="font-size:16px; width: 100%;">
+            <thead style="padding:10px">
+                <tr class="header">
+                    <th>Hex ID</th>
+                    <th>Dec ID</th>
+                    <th>File Name</th>
+                    <th>Thumbnail</th>
+                </tr>
+            </thead>
+            <tbody style="padding:10px">
+                @{
+                    <tr>
+                        <td>@Model.PluginPack.HEXID</td>
+                        <td>@Model.PluginPack.DECID</td>
+                        <td>@Model.PluginPack.FileName</td>
+                        <td><img src="~/img/lot_thumbnails/@(Model.PluginPack.HEXID).jpg" /></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    } else if (Model.PluginPack.FileName == "#####") {
+        <p>No results found for this query.</p>
+    }
+</div>
