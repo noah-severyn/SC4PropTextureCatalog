@@ -15,6 +15,11 @@ The easiest way is to use is to visit the [website](https://sc4proptexturecatalo
 It can also be accessed directly from the ST Exchange banner at Simtropolis.
 ![ST Banner](wwwroot/img/STbanner.png)
 
+- To search for items by TGI, Exemplar Name, or Author, or Pack Name, use the **Home** page and enter 3 or more characters in the search box.
+- To view a thumbnail listing of an entire pack, use the **View a Pack** page and select a pack from the drop down.
+- To search for a Plugin Pack ID, use the **Plugin Pack** page to search for the item. Hexacedimal and decimal numbers are supported for searching.
+
+
 You can download the legacy 2.x.x version with compiled photos of each pack [here](https://github.com/noah-severyn/SC4PropTextureCatalog/releases/tag/2.2.2). Due to the dramatic increase in TGIs and dependency packs tracked in this newer version, I have discontinued the images of each prop pack. Adding thumbnail photos of each TGI is on the roadmap, which will ultimately replace that functionality included in the legacy version.
 
 If you'd like to do your own analysis against the dataset, use the database directly. The DB is hosted in the [Data folder](https://github.com/noah-severyn/SC4PropTextureCatalog/tree/main/Data) in this repo . Use a database browser (I recommend [DB Browser for SQLite](https://sqlitebrowser.org/)) and run your own custom SQL queries.
