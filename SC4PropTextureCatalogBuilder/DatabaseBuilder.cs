@@ -121,14 +121,20 @@ namespace SC4PropTextureCatalog {
             _db.Insert(new TGICategory { TGIType = 4, TGIName = "Flora" });
             _db.Insert(new TGICategory { TGIType = 10, TGIName = "Cohort" });
 
-            string folderToScan = "C:\\Users\\Administrator\\OneDrive\\SC4 Deps\\new";
-            List<string> folders = Directory.EnumerateDirectories(folderToScan).ToList();
+            string baseFolder = "C:\\Users\\Administrator\\OneDrive\\SC4 Deps\\new";
+            List<string> folders = Directory.EnumerateDirectories(baseFolder).ToList();
             StringBuilder log = new StringBuilder("FileName,Type,Group,Instance,TGIType,TGISubtype,Message");
             int pkgIdx = 0;
 
-            foreach (string pkg in folders) {
-                List<string> files = Directory.EnumerateFiles(pkg).ToList();
-                foreach (string file in files) {
+            foreach (string folder in folders) {
+                string folderName = Path.GetFileName(folder);
+                List<string> filesInFolder = Directory.EnumerateFiles(folder).ToList();
+                _db.Insert(new PackageItem {
+                    PkgId = pkgIdx,
+                    PkgName = folderName
+                });
+
+                foreach (string file in filesInFolder) {
                     Debug.WriteLine(file);
                     if (!DBPFUtil.IsValidDBPF(file)) {
                         continue;
@@ -136,17 +142,12 @@ namespace SC4PropTextureCatalog {
 
                     DBPFFile dbpf = new DBPFFile(file);
                     log.AppendLine(dbpf.GetIssueLog());
-                    string filename = Path.GetFileNameWithoutExtension(file);
-                    _db.Insert(new PackageItem {
-                        PkgId = pkgIdx,
-                        PkgName = filename
-                    });
 
 
                     foreach (DBPFEntry entry in dbpf.GetEntries()) {
                         //Add Base/Overlay textures (look at the least significant 4 bits and only add if it is 0, 5, or A: AND the Instance by 0b1111 (0xF) and examine the modulus result)
                         if (entry.MatchesEntryType(DBPFTGI.FSH_BASE_OVERLAY) && ((entry.TGI.InstanceID & 0xF) % 5) == 0) {
-                            AddTGI(filename, entry.TGI.ToString().Substring(0, 34), 2, null);
+                            AddTGI(folderName, entry.TGI.ToString().Substring(0, 34), 2, null);
                         }
 
 
@@ -158,14 +159,14 @@ namespace SC4PropTextureCatalog {
 
                             DBPFProperty.ExemplarType exmpType = exmp.GetExemplarType();
                             if (exmpType == DBPFProperty.ExemplarType.UnknownType) {
-                                log.AppendLine($"{filename}, {exmp.TGI.ToString().Replace(" ", "")},missing property: ExemplarType");
+                                log.AppendLine($"{folderName}, {exmp.TGI.ToString().Replace(" ", "")},missing property: ExemplarType");
                                 exmpType = 0;
                             }
 
                             DBPFProperty prop = exmp.GetProperty("ExemplarName");
                             string exmpName;
                             if (prop is null) {
-                                log.AppendLine($"{filename}, {exmp.TGI.ToString().Replace(" ", "")},missing property: ExemplarName");
+                                log.AppendLine($"{folderName}, {exmp.TGI.ToString().Replace(" ", "")},missing property: ExemplarName");
                                 exmpName = "";
                             } else {
                                 exmpName = exmpName = (string) prop.GetData();
@@ -173,16 +174,16 @@ namespace SC4PropTextureCatalog {
 
                             switch (exmpType) {
                                 case DBPFProperty.ExemplarType.UnknownType:
-                                    AddTGI(filename, exmp.TGI.ToString().Substring(0, 34), null, exmpName);
+                                    AddTGI(folderName, exmp.TGI.ToString().Substring(0, 34), null, exmpName);
                                     break;
                                 case DBPFProperty.ExemplarType.Building:
-                                    AddTGI(filename, exmp.TGI.ToString().Substring(0, 34), 0, exmpName);
+                                    AddTGI(folderName, exmp.TGI.ToString().Substring(0, 34), 0, exmpName);
                                     break;
                                 case DBPFProperty.ExemplarType.Prop:
-                                    AddTGI(filename, exmp.TGI.ToString().Substring(0, 34), 1, exmpName);
+                                    AddTGI(folderName, exmp.TGI.ToString().Substring(0, 34), 1, exmpName);
                                     break;
                                 case DBPFProperty.ExemplarType.FloraFauna:
-                                    AddTGI(filename, exmp.TGI.ToString().Substring(0, 34), 4, exmpName);
+                                    AddTGI(folderName, exmp.TGI.ToString().Substring(0, 34), 4, exmpName);
                                     break;
                                 default:
                                     break;
@@ -204,7 +205,7 @@ namespace SC4PropTextureCatalog {
                                 exmpName = "??";
                             }
                             
-                            AddTGI(filename, family.ToString().Substring(0, 34), 10, exmpName);
+                            AddTGI(folderName, family.ToString().Substring(0, 34), 10, exmpName);
                         }
                     }
                 }
