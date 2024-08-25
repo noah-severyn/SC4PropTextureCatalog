@@ -153,7 +153,7 @@ namespace SC4PropTextureCatalog {
                         //Add Exemplars
                         else if (entry.MatchesEntryType(DBPFTGI.EXEMPLAR)) {
                             DBPFEntryEXMP exmp = (DBPFEntryEXMP) entry;
-                            entry.Decode();
+                            exmp.Decode();
                             if (exmp.ListOfProperties.Count == 0) continue;
 
                             DBPFProperty.ExemplarType exmpType = exmp.GetExemplarType();
