@@ -286,5 +286,8 @@ __pycache__/
 
 working/
 working/*/*
-~$Index.xlsm
+*.xlsm
+*.db
+*.csv
+*.xlsx
 
