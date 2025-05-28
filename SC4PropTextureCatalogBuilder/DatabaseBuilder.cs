@@ -6,68 +6,114 @@ using SQLite;
 using System.IO;
 using csDBPF;
 
-namespace SC4PropTextureCatalog {
+namespace SC4PropTextureCatalogBuilder {
     /// <summary>
-    /// An item in the TGITable, which tracks which TGIs are in which dependency pack. 
+    /// An item in the TGI table, which tracks which TGIs are in which dependency pack. 
     /// </summary>s
-    [Table("TGITable")]
-    public class TGIItem {
-        [PrimaryKey, AutoIncrement]
-        [Column("TGIID")]
-        public int ID { get; set; }
+    [Table("TGIs")]
+    public class TGIItem(int exchId, int assetId, string file, string tgi, int type, string? exmpName) {
+        /// <summary>
+        /// Identifer of the exchange this item is uploaded to.
+        /// </summary>
+        [Column("ExchangeId")]
+        public int ExchangeId { get; set; } = exchId;
 
-        [Column("PkgId")]
-        public int PkgId { get; set; }
+        /// <summary>
+        /// Identifier of this item on the exchange.
+        /// </summary>
+        [Column("AssetId")]
+        public int AssetId { get; set; } = assetId;
 
+        /// <summary>
+        /// Name of the file within this package that contains this TGI
+        /// </summary>
+        [Column("File")]
+        public string File { get; set; } = file;
+
+        /// <summary>
+        /// Fully qualified TGI
+        /// </summary>
         [Column("TGI")]
-        public string TGI { get; set; }
+        public string TGI { get; set; } = tgi;
 
-        [Column("TGIType")]
-        public int? TGIType { get; set; }
+        /// <summary>
+        /// One of the <see cref="TgiType"/> enumerations.
+        /// </summary>
+        [Column("Type")]
+        public int? Type { get; set; } = type;
 
-        [Column("ExemplarName")]
-        public string ExemplarName { get; set; }
-
-        //[Column("Thumbnail")]
-        //public byte[] Thumbnail { get; set; }
+        /// <summary>
+        /// Name of this exemplar, if applicable.
+        /// </summary>
+        [Column("Name")]
+        public string? Name { get; set; } = exmpName;
 
         public override string ToString() {
-            return $"{ID}: {PkgId}, {TGI}, {TGIType}, {ExemplarName}";
+            return $"{TGI}: {AssetId}, {Type}, {Name}";
         }
     }
 
     /// <summary>
-    /// An item in the PackTable, which tracks information about each dependency package (aka download or file or path).
+    /// An item in the Asset table. An asset referrs to a download or file, and is akin to a sc4pac asset.
     /// </summary>
-    [Table("PackageTable")]
-    public class PackageItem {
-        [PrimaryKey, AutoIncrement]
-        [Column("PkgId")]
-        public int PkgId { get; set; }
+    [Table("Assets")]
+    public class AssetItem(int exchId, int assetId, string? version = null, string? stexUrl = null, string? sc4eUrl = null, string? pacUrl = null, string? author = null, int? primaryCat = null, int? secondaryCat = null) {
+        /// <summary>
+        /// Identifer of the exchange this item is uploaded to.
+        /// </summary>
+        [Column("ExchangeId")]
+        public int ExchangeId { get; set; } = exchId;
 
-        [Column("PkgName")]
-        public string PkgName { get; set; }
+        /// <summary>
+        /// Identifier of this item on the exchange.
+        /// </summary>
+        [Column("AssetId")]
+        public int AssetId { get; set; } = assetId;
 
-        [Column("PackVersion")]
-        public string PkgVersion { get; set; }
+        /// <summary>
+        /// Version of this asset on the exchange.
+        /// </summary>
+        [Column("Version")]
+        public string? Version { get; set; } = version;
 
-        [Column("Hyperlink")]
-        public string Hyperlink { get; set; }
+        /// <summary>
+        /// STEX URL, if applicable.
+        /// </summary>
+        [Column("StexUrl")]
+        public string? StexUrl { get; set; } = stexUrl;
 
+        /// <summary>
+        /// SC4Evermore URL, if applicable.
+        /// </summary>
+        [Column("Sc4eUrl")]
+        public string? Sc4eUrl { get; set; } = sc4eUrl;
+
+        /// <summary>
+        /// sc4pac URL, if applicable.
+        /// </summary>
+        [Column("PacUrl")]
+        public string? PacUrl { get; set; } = pacUrl;
+
+        /// <summary>
+        /// Author of this asset pack
+        /// </summary>
         [Column("Author")]
-        public string Author { get; set; }
+        public string? Author { get; set; } = author;
 
-        [Column("Type")]
-        public string Type { get; set; }
-
+        /// <summary>
+        /// Describes the contents of this asset as one or more of: Textures, Buildings, Flora, Fauna, People, Vehicles, Scenery, Helpers, Effects, Other, etc.
+        /// </summary>
         [Column("PrimaryCat")]
-        public string PrimaryCat { get; set; }
+        public int? PrimaryCat { get; set; } = primaryCat;
 
+        /// <summary>
+        /// Further categorizes each of the primary categories into subcategories
+        /// </summary>
         [Column("SecondaryCat")]
-        public string SecondaryCat { get; set; }
+        public int? SecondaryCat { get; set; } = secondaryCat;
 
         public override string ToString() {
-            return $"{PkgId}: {PkgName}, (v{PkgVersion}) by {Author}. Type:{Type}, Primary:{PrimaryCat}, Secondary:{SecondaryCat}";
+            return $"Id:{ExchangeId}-{AssetId}, Version:{Version}, Author:{Author}, Primary:{PrimaryCat}, Secondary:{SecondaryCat}";
         }
     }
 
@@ -75,16 +121,16 @@ namespace SC4PropTextureCatalog {
     /// Dimension/lookup table of TGI types (building, prop, texture, flora, cohort).
     /// </summary>
     [Table("TGITypes")]
-    public class TGICategory {
+    public class TGICategory(int type, string name) {
         [PrimaryKey]
-        [Column("TGIType")]
-        public int TGIType { get; set; }
+        [Column("Type")]
+        public int Type { get; set; } = type;
 
-        [Column("TGIName")]
-        public string TGIName { get; set; }
+        [Column("Name")]
+        public string Name { get; set; } = name;
 
         public override string ToString() {
-            return $"{TGIType}: {TGIName}";
+            return $"{Type}: {Name}";
         }
     }
 
@@ -94,186 +140,161 @@ namespace SC4PropTextureCatalog {
     /// Create and operate on the Prop Texture Catalog database.
     /// </summary>
     public class DatabaseBuilder {
-        private SQLiteConnection _db;
-
-        public DatabaseBuilder() {
-            string dbPath = "C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalogBuilder\\data\\Catalog.db";
-            if (File.Exists(dbPath)) {
-                File.Delete(dbPath);
-            }
-
-            //Open a new StreamWriter to create a file then immediately close - writing is handled by the SQLite functions
-            File.CreateText(dbPath).Dispose();
-            _db = new SQLiteConnection(dbPath);
-        }
+        private readonly SQLiteConnection _db;
 
         /// <summary>
-        /// Build a SQLite DB of props and lot textures from the list of files.
+        /// Create a new SQLite database with the necessary tables and dimensional fields.
         /// </summary>
-        public void BuildDB() {
-            //Initialize database tables and schema
-            _db.CreateTable<TGIItem>();
-            _db.CreateTable<PackageItem>();
-            _db.CreateTable<TGICategory>();
-            _db.Insert(new TGICategory { TGIType = 0, TGIName = "Building" });
-            _db.Insert(new TGICategory { TGIType = 1, TGIName = "Prop" });
-            _db.Insert(new TGICategory { TGIType = 2, TGIName = "Texture" });
-            _db.Insert(new TGICategory { TGIType = 4, TGIName = "Flora" });
-            _db.Insert(new TGICategory { TGIType = 10, TGIName = "Cohort" });
+        /// <param name="dbPath">Path to save the database file to, including the file name.</param>
+        /// <param name="create">Whether to create a new db structure or the structure already exists (opening a previously made db)</param>
+        public DatabaseBuilder(string dbPath, bool create) {
+            _db = new SQLiteConnection(dbPath);
+            if (create) {
+                _db.CreateTable<TGIItem>();
+                _db.CreateTable<AssetItem>();
+                _db.CreateTable<TGICategory>();
+                _db.Insert(new TGICategory(0, "Building"));
+                _db.Insert(new TGICategory(1, "Prop"));
+                _db.Insert(new TGICategory(2, "Texture"));
+                _db.Insert(new TGICategory(4, "Flora"));
+                _db.Insert(new TGICategory(10, "Cohort"));
+            }
+        }
 
-            string baseFolder = "C:\\Users\\Administrator\\OneDrive\\SC4 Deps\\new";
-            List<string> folders = Directory.EnumerateDirectories(baseFolder).ToList();
-            StringBuilder log = new StringBuilder("FileName,Type,Group,Instance,TGIType,TGISubtype,Message");
-            int pkgIdx = 0;
 
-            foreach (string folder in folders) {
-                string folderName = Path.GetFileName(folder);
-                List<string> filesInFolder = Directory.EnumerateFiles(folder).ToList();
-                _db.Insert(new PackageItem {
-                    PkgId = pkgIdx,
-                    PkgName = folderName
-                });
+        /// <summary>
+        /// Parse all DBPF files in a folder and return the found TGIs along with errors, if any.
+        /// </summary>
+        /// <param name="exchangeId">Id of the exchange this item is found on</param>
+        /// <param name="folderPath">Folder path to scan</param>
+        /// <returns></returns>
+        public (List<TGIItem>, List<DBPFError>) ParseFolder(int exchangeId, int assetId, string folderPath) {
+            string extractFolder = Path.Combine(folderPath, "extract");
+            
+            List<DBPFError> errors = [];
+            List<TGIItem> items = [];
 
-                foreach (string file in filesInFolder) {
-                    Debug.WriteLine(file);
-                    if (!DBPFUtil.IsValidDBPF(file)) {
-                        continue;
+            var assets = Directory.EnumerateFiles(folderPath).Where(f => !f.EndsWith("checked"));
+            if (!Directory.Exists(extractFolder)) {
+                foreach (string file in assets) {
+                    ExtractFile(file, extractFolder);
+                }
+            }
+
+            var dbpfs = DBPFUtil.FilterDBPFFiles(Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories));
+            foreach (string file in dbpfs) {
+                FileStream fs = WaitForFile(file, FileMode.Open);
+                DBPFFile dbpf = new DBPFFile(fs);
+
+                var targetEntries = dbpf.ListOfEntries.Where(e => e.MatchesEntryType(DBPFTGI.FSH_BASE_OVERLAY) || e.MatchesEntryType(DBPFTGI.EXEMPLAR) || e.MatchesEntryType(DBPFTGI.COHORT));
+
+                foreach (DBPFEntry entry in targetEntries) {
+                    //Add Base/Overlay textures (look at the least significant 4 bits and only add if it is 0, 5, or A: AND the Instance by 0b1111 (0xF) and examine the modulus result)
+                    if (entry.MatchesEntryType(DBPFTGI.FSH_BASE_OVERLAY) && ((entry.TGI.InstanceID & 0xF) % 5) == 0) {
+                        items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 2, null));
                     }
 
-                    DBPFFile dbpf = new DBPFFile(file);
-                    log.AppendLine(dbpf.GetIssueLog());
+                    //Add Exemplars
+                    else if (entry.MatchesEntryType(DBPFTGI.EXEMPLAR)) {
+                        DBPFEntryEXMP exmp = (DBPFEntryEXMP) entry;
+                        exmp.Decode();
+                        if (exmp.ListOfProperties.Count == 0) continue;
 
-
-                    foreach (DBPFEntry entry in dbpf.GetEntries()) {
-                        //Add Base/Overlay textures (look at the least significant 4 bits and only add if it is 0, 5, or A: AND the Instance by 0b1111 (0xF) and examine the modulus result)
-                        if (entry.MatchesEntryType(DBPFTGI.FSH_BASE_OVERLAY) && ((entry.TGI.InstanceID & 0xF) % 5) == 0) {
-                            AddTGI(folderName, entry.TGI.ToString().Substring(0, 34), 2, null);
+                        DBPFProperty.ExemplarType exmpType = exmp.GetExemplarType();
+                        if (exmpType == DBPFProperty.ExemplarType.UnknownType) {
+                            errors.Add(new DBPFError(file, exmp.TGI, "missing property: ExemplarType"));
+                            exmpType = 0;
+                        } else if (exmpType == DBPFProperty.ExemplarType.LotConfiguration) {
+                            continue;
                         }
 
-
-                        //Add Exemplars
-                        else if (entry.MatchesEntryType(DBPFTGI.EXEMPLAR)) {
-                            DBPFEntryEXMP exmp = (DBPFEntryEXMP) entry;
-                            exmp.Decode();
-                            if (exmp.ListOfProperties.Count == 0) continue;
-
-                            DBPFProperty.ExemplarType exmpType = exmp.GetExemplarType();
-                            if (exmpType == DBPFProperty.ExemplarType.UnknownType) {
-                                log.AppendLine($"{folderName}, {exmp.TGI.ToString().Replace(" ", "")},missing property: ExemplarType");
-                                exmpType = 0;
-                            }
-
-                            DBPFProperty prop = exmp.GetProperty("ExemplarName");
-                            string exmpName;
-                            if (prop is null) {
-                                log.AppendLine($"{folderName}, {exmp.TGI.ToString().Replace(" ", "")},missing property: ExemplarName");
-                                exmpName = "";
-                            } else {
-                                exmpName = exmpName = (string) prop.GetData();
-                            }
-
-                            switch (exmpType) {
-                                case DBPFProperty.ExemplarType.UnknownType:
-                                    AddTGI(folderName, exmp.TGI.ToString().Substring(0, 34), null, exmpName);
-                                    break;
-                                case DBPFProperty.ExemplarType.Building:
-                                    AddTGI(folderName, exmp.TGI.ToString().Substring(0, 34), 0, exmpName);
-                                    break;
-                                case DBPFProperty.ExemplarType.Prop:
-                                    AddTGI(folderName, exmp.TGI.ToString().Substring(0, 34), 1, exmpName);
-                                    break;
-                                case DBPFProperty.ExemplarType.FloraFauna:
-                                    AddTGI(folderName, exmp.TGI.ToString().Substring(0, 34), 4, exmpName);
-                                    break;
-                                default:
-                                    break;
-                            }
+                        DBPFProperty prop = exmp.GetProperty("ExemplarName");
+                        string exmpName;
+                        if (prop is null) {
+                            errors.Add(new DBPFError(file, exmp.TGI, "missing property: ExemplarName"));
+                            exmpName = "";
+                        } else {
+                            exmpName = exmpName = (string) prop.GetData();
                         }
 
-
-                        //Add Cohorts (note the building/prop family of the cohort is always 0x10000000 less than the Cohort's Index)
-                        else if (entry.MatchesEntryType(DBPFTGI.COHORT)) {
-                            DBPFEntryEXMP exmp = (DBPFEntryEXMP) entry;
-                            TGI family = new TGI(entry.TGI.TypeID, entry.TGI.GroupID, entry.TGI.InstanceID - 0x10000000);
-                            exmp.Decode();
-                            if (exmp.ListOfProperties.Count == 0) continue;
-                            string exmpName;
-                            try {
-                                exmpName = (string) exmp.GetProperty("ExemplarName").GetData();
-                            }
-                            catch (Exception) {
-                                exmpName = "??";
-                            }
-                            
-                            AddTGI(folderName, family.ToString().Substring(0, 34), 10, exmpName);
+                        switch (exmpType) {
+                            case DBPFProperty.ExemplarType.Building:
+                                items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 0, exmpName));
+                                break;
+                            case DBPFProperty.ExemplarType.Prop:
+                                items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 1, exmpName));
+                                break;
+                            case DBPFProperty.ExemplarType.FloraFauna:
+                                items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 4, exmpName));
+                                break;
+                            default:
+                                items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), -1, exmpName));
+                                break;
                         }
+                    }
+
+
+                    //Add Cohorts (note the building/prop family of the cohort is always 0x10000000 less than the Cohort's Index)
+                    else if (entry.MatchesEntryType(DBPFTGI.COHORT)) {
+                        DBPFEntryEXMP exmp = (DBPFEntryEXMP) entry;
+                        TGI family = new TGI(entry.TGI.TypeID, entry.TGI.GroupID, entry.TGI.InstanceID - 0x10000000);
+                        exmp.Decode();
+                        if (exmp.ListOfProperties.Count == 0) continue;
+                        string exmpName;
+                        try {
+                            exmpName = (string) exmp.GetProperty("ExemplarName").GetData();
+                        }
+                        catch (Exception) {
+                            exmpName = "??";
+                        }
+
+                        items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 10, exmpName));
                     }
                 }
-
-                pkgIdx++;
             }
-
-            File.WriteAllText("C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalogBuilder\\data\\log.csv", log.ToString());
-        }
-
-
-
-
-        /// <summary>
-        /// Add a TGI item to the database.
-        /// </summary>
-        /// <param name="pkgName">Name of dependency package the TGI is contained in</param>
-        /// <param name="tgi">String representation of the TGI in the format 0x00000000, 0x00000000, 0x00000000 </param>
-        /// <param name="tgitype">Type of TGI: Building=0, Prop=1, Texture=2, Flora=4, Cohort=10</param>
-        /// <param name="exmpName">Name of the exemplar; null if the TGI is a texture</param>
-        /// <remarks>The path in TGITable is stored as a reference to the full path in PathTable. This dramatically reduces file size as the long path string only needs to be stored once.</remarks>
-        private void AddTGI(string pkgName, string tgi, int? tgitype, string exmpName) {
-            //check if we already have a matching PkgId, create new PackItem if not, otherwise use found PkgId
-            int packID = GetPkgId(pkgName);
-            if (packID <= 0) {
-
-                PackageItem newPack = new PackageItem {
-                    PkgName = pkgName
-                };
-                _db.Insert(newPack);
-                packID = newPack.PkgId;
-            }
-
-            //once we know our PkgId then add the new TGI with that PkgId
-            TGIItem newTGI = new TGIItem {
-                PkgId = packID,
-                TGI = tgi,
-                TGIType = tgitype,
-                ExemplarName = exmpName
-                //Thumbnail = GetThumbnail(tgi)
-            };
-            _db.Insert(newTGI);
+            Directory.Delete(extractFolder, true);
+            return (items, errors);
         }
 
 
 
         /// <summary>
-        /// Lookup and return the PathID for the provided PathName.
+        /// Adds a series of TGIs to the database.
         /// </summary>
-        /// <param name="pkgName">Pack name (file name) to lookup</param>
-        /// <returns>PathID if name is found; -1 if item is not found or if multiple matches were found</returns>
-        /// <remarks>PathItems table should always have unique items, so we might have an issue if the return is more than one item.</remarks>
-        private int GetPkgId(string pkgName) {
-            string searchName = pkgName.Replace("'", "''");
-            List<PackageItem> result = _db.Query<PackageItem>($"SELECT * FROM PackageTable WHERE PkgName = '{searchName}'");
+        /// <param name="items">List of TGIItem objects to add</param>
+        public void AddTGIs(List<TGIItem> items) {
+            if (!AssetExists(items[0].ExchangeId, items[0].AssetId)) {
+                _db.Insert(new AssetItem(items[0].ExchangeId, items[0].AssetId));
+            }
 
-            if (result.Count == 1) {
-                return result[0].PkgId;
-            } else {
-                return -1;
+            foreach (TGIItem item in items) {
+                _db.Insert(item);
             }
         }
 
 
 
-        private bool DoesTGIExist(string tgi) {
-            List<TGIItem> result = _db.Query<TGIItem>($"SELECT * FROM TGITable WHERE TGI = '{tgi}'");
-            return result.Count == 0;
+        /// <summary>
+        /// Return whether this asset exists in the Assets table
+        /// </summary>
+        /// <param name="exchangeId">Id of the exchange</param>
+        /// <param name="assetId">Id of the asset</param>
+        /// <returns>TRUE if the asset exists; FALSE otherwise</returns>
+        public bool AssetExists(int exchangeId, int assetId) {
+            int count = _db.ExecuteScalar<int>($"SELECT count(*) FROM Assets WHERE ExchangeId = '{exchangeId}' AND AssetId = '{assetId}'");
+            return count != 0;
+        }
+
+
+
+        /// <summary>
+        /// Return whether this package exists in the TGIs table
+        /// </summary>
+        /// <param name="tgi">TGI to find</param>
+        /// <returns>TRUE if the TGI exists; FALSE otherwise</returns>
+        private bool TGIExists(string tgi) {
+            int count = _db.ExecuteScalar<int>($"SELECT count(*) FROM TGIs WHERE TGI = '{tgi}'");
+            return count != 0;
         }
 
 
@@ -290,7 +311,40 @@ namespace SC4PropTextureCatalog {
             } catch {
                 return new byte[0];
             }
-            
+        }
+
+
+        
+        private static FileStream WaitForFile(string fullPath, FileMode mode) {
+            //https://stackoverflow.com/a/3677960/10802255
+            for (int numTries = 0; numTries < 10; numTries++) {
+                FileStream fs = null;
+                try {
+                    fs = new FileStream(fullPath, mode);
+                    return fs;
+                }
+                catch (IOException) {
+                    if (fs != null) {
+                        fs.Dispose();
+                    }
+                    Thread.Sleep(200);
+                }
+            }
+            return null;
+        }
+
+        private static void ExtractFile(string archivePath, string toFolder) {
+            ProcessStartInfo psi = new ProcessStartInfo {
+                FileName = "C:\\Program Files\\7-Zip\\7z.exe",
+                Arguments = $"x \"{archivePath}\" -o\"{toFolder}\" -y",
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+
+            using Process process = Process.Start(psi);
+            process.WaitForExit();
+            process.Dispose();
         }
     }
 }

@@ -284,8 +284,7 @@ __pycache__/
 # tools/
 
 
-working/
-working/*/*
+
 *.xlsm
 *.db
 *.csv
