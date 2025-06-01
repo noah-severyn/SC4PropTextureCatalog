@@ -153,6 +153,7 @@ namespace SC4PropTextureCatalogBuilder {
                 _db.CreateTable<TGIItem>();
                 _db.CreateTable<AssetItem>();
                 _db.CreateTable<TGICategory>();
+                _db.Insert(new TGICategory(-1, "Unknown"));
                 _db.Insert(new TGICategory(0, "Building"));
                 _db.Insert(new TGICategory(1, "Prop"));
                 _db.Insert(new TGICategory(2, "Texture"));
@@ -169,7 +170,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// <param name="folderPath">Folder path to scan</param>
         /// <returns></returns>
         public (List<TGIItem>, List<DBPFError>) ParseFolder(int exchangeId, int assetId, string folderPath) {
-            string extractFolder = Path.Combine(folderPath, "extract");
+            string extractFolder = Path.Combine(folderPath, "ex");
             
             List<DBPFError> errors = [];
             List<TGIItem> items = [];
@@ -177,13 +178,27 @@ namespace SC4PropTextureCatalogBuilder {
             var assets = Directory.EnumerateFiles(folderPath).Where(f => !f.EndsWith("checked"));
             if (!Directory.Exists(extractFolder)) {
                 foreach (string file in assets) {
-                    ExtractFile(file, extractFolder);
+                    ExtractZipFile(file, extractFolder);
                 }
             }
 
-            var dbpfs = DBPFUtil.FilterDBPFFiles(Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories));
+            var extractFiles = Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories);
+
+            foreach (string file in extractFiles) {
+                if (Path.GetExtension(file) == ".exe") {
+                    ExtractInstaller(file, extractFolder);
+                }
+            }
+
+            extractFiles = Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories);
+            var dbpfs = GetUniqueFilenamesAcrossFolders(extractFiles).FilterDBPFFiles();
             foreach (string file in dbpfs) {
                 FileStream fs = WaitForFile(file, FileMode.Open);
+                if (fs == null) {
+                    errors.Add(new DBPFError(Path.GetFileName(file), DBPFTGI.BLANKTGI, "Opening file failed"));
+                    Console.WriteLine("Could not open " + file);
+                    continue;
+                }
                 DBPFFile dbpf = new DBPFFile(fs);
 
                 var targetEntries = dbpf.ListOfEntries.Where(e => e.MatchesEntryType(DBPFTGI.FSH_BASE_OVERLAY) || e.MatchesEntryType(DBPFTGI.EXEMPLAR) || e.MatchesEntryType(DBPFTGI.COHORT));
@@ -201,11 +216,13 @@ namespace SC4PropTextureCatalogBuilder {
                         if (exmp.ListOfProperties.Count == 0) continue;
 
                         DBPFProperty.ExemplarType exmpType = exmp.GetExemplarType();
-                        if (exmpType == DBPFProperty.ExemplarType.UnknownType) {
-                            errors.Add(new DBPFError(file, exmp.TGI, "missing property: ExemplarType"));
-                            exmpType = 0;
-                        } else if (exmpType == DBPFProperty.ExemplarType.LotConfiguration) {
+                        if (exmpType == DBPFProperty.ExemplarType.LotConfiguration) {
                             continue;
+                        } else if (exmpType == DBPFProperty.ExemplarType.Error) {
+                            errors.Add(new DBPFError(file, exmp.TGI, "missing property: ExemplarType"));
+                            if (exmp.HasProperty("Demand Satisfied")) {
+                                exmpType = DBPFProperty.ExemplarType.Building;
+                            }
                         }
 
                         DBPFProperty prop = exmp.GetProperty("ExemplarName");
@@ -241,28 +258,48 @@ namespace SC4PropTextureCatalogBuilder {
                         exmp.Decode();
                         if (exmp.ListOfProperties.Count == 0) continue;
                         string exmpName;
-                        try {
-                            exmpName = (string) exmp.GetProperty("ExemplarName").GetData();
-                        }
-                        catch (Exception) {
+                        var prop = exmp.GetProperty("ExemplarName");
+                        if (prop == null) {
                             exmpName = "??";
+                        } else {
+                            exmpName = (string) prop.GetData();
                         }
 
                         items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 10, exmpName));
                     }
                 }
             }
-            Directory.Delete(extractFolder, true);
+            try {
+                Directory.Delete(extractFolder, true);
+            }
+            catch {
+                Console.WriteLine("Could not delete " + extractFolder);
+            }
+            
             return (items, errors);
         }
 
 
+        public List<string> GetUniqueFilenamesAcrossFolders(IEnumerable<string> filePaths) {
+            Dictionary<string, string> uniques = [];
+            foreach (string file in filePaths) {
+                string fileName = Path.GetFileName(file);
+                if (!uniques.ContainsKey(fileName)) {
+                    uniques.Add(fileName, file);
+                }
+            }
+            return uniques.Values.ToList();
+        }
 
         /// <summary>
         /// Adds a series of TGIs to the database.
         /// </summary>
         /// <param name="items">List of TGIItem objects to add</param>
         public void AddTGIs(List<TGIItem> items) {
+            if (items.Count == 0) {
+                return; 
+            }
+
             if (!AssetExists(items[0].ExchangeId, items[0].AssetId)) {
                 _db.Insert(new AssetItem(items[0].ExchangeId, items[0].AssetId));
             }
@@ -323,7 +360,7 @@ namespace SC4PropTextureCatalogBuilder {
                     fs = new FileStream(fullPath, mode);
                     return fs;
                 }
-                catch (IOException) {
+                catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException) {
                     if (fs != null) {
                         fs.Dispose();
                     }
@@ -333,7 +370,12 @@ namespace SC4PropTextureCatalogBuilder {
             return null;
         }
 
-        private static void ExtractFile(string archivePath, string toFolder) {
+        /// <summary>
+        /// Extract a 7zip archive file
+        /// </summary>
+        /// <param name="archivePath">File to extract</param>
+        /// <param name="toFolder">Output folder </param>
+        private static void ExtractZipFile(string archivePath, string toFolder) {
             ProcessStartInfo psi = new ProcessStartInfo {
                 FileName = "C:\\Program Files\\7-Zip\\7z.exe",
                 Arguments = $"x \"{archivePath}\" -o\"{toFolder}\" -y",
@@ -342,9 +384,41 @@ namespace SC4PropTextureCatalogBuilder {
                 CreateNoWindow = true
             };
 
-            using Process process = Process.Start(psi);
-            process.WaitForExit();
-            process.Dispose();
+            using Process? process = Process.Start(psi);
+            process?.WaitForExit();
+            process?.Dispose();
+        }
+
+        /// <summary>
+        /// Extract a Clickteam installer with cicdec
+        /// </summary>
+        /// <param name="archivePath">File to extract</param>
+        /// <remarks>By default, cicdec extracts to a new subfolder with the same name as the file. This is preferred, because it eliminates the risk of multiple extractions producing files that would overwrite each other (multiple installers contain file(s) with the same name). If this is the case, the cicdec cli requires requires user input for how to proceed. No commandline args are provided to skip this input. However, extracting to a subfolder *may* cause a hidden path too long error and cicdec will hang. Prefer extracting to a subfolder to reduce file name collision risks, and extract to the root folder as a fallback if the path is too long</remarks>
+        private static void ExtractInstaller(string archivePath, string extractFolder) {
+            string args;
+            if (Path.Combine(archivePath, Path.GetFileName(archivePath)).Length >= 248) {
+                foreach (string file in Directory.EnumerateFiles(extractFolder)) {
+                    if (Path.GetExtension(file) != ".exe") {
+                        File.Delete(file);
+                    }
+                }
+                args = $"cicdec.exe \"{archivePath}\" \"{extractFolder}\"";
+            }
+            else {
+                args = $"cicdec.exe \"{archivePath}\"";
+            }
+
+            ProcessStartInfo psi = new ProcessStartInfo {
+                FileName = "C:\\Program Files (x86)\\SC4 Utilities\\cicdec\\cicdec.exe",
+                Arguments = args,
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+
+            using Process? process = Process.Start(psi);
+            process?.WaitForExit();
+            process?.Dispose();
         }
     }
 }
