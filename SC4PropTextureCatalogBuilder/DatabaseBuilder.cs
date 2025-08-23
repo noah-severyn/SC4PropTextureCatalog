@@ -175,21 +175,10 @@ namespace SC4PropTextureCatalogBuilder {
             List<DBPFError> errors = [];
             List<TGIItem> items = [];
 
-            var assets = Directory.EnumerateFiles(folderPath).Where(f => !f.EndsWith("checked"));
-            if (!Directory.Exists(extractFolder)) {
-                foreach (string file in assets) {
-                    ExtractZipFile(file, extractFolder);
-                }
-            }
+            
+            //var extractFiles = Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories);
 
-            var extractFiles = Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories);
-
-            foreach (string file in extractFiles) {
-                if (Path.GetExtension(file) == ".exe") {
-                    ExtractInstaller(file, extractFolder);
-                }
-            }
-
+            
             extractFiles = Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories);
             var dbpfs = GetUniqueFilenamesAcrossFolders(extractFiles).FilterDBPFFiles();
             foreach (string file in dbpfs) {
@@ -243,9 +232,6 @@ namespace SC4PropTextureCatalogBuilder {
                                 break;
                             case DBPFProperty.ExemplarType.FloraFauna:
                                 items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 4, exmpName));
-                                break;
-                            default:
-                                items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), -1, exmpName));
                                 break;
                         }
                     }
@@ -348,77 +334,6 @@ namespace SC4PropTextureCatalogBuilder {
             } catch {
                 return new byte[0];
             }
-        }
-
-
-        
-        private static FileStream WaitForFile(string fullPath, FileMode mode) {
-            //https://stackoverflow.com/a/3677960/10802255
-            for (int numTries = 0; numTries < 10; numTries++) {
-                FileStream fs = null;
-                try {
-                    fs = new FileStream(fullPath, mode);
-                    return fs;
-                }
-                catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException) {
-                    if (fs != null) {
-                        fs.Dispose();
-                    }
-                    Thread.Sleep(200);
-                }
-            }
-            return null;
-        }
-
-        /// <summary>
-        /// Extract a 7zip archive file
-        /// </summary>
-        /// <param name="archivePath">File to extract</param>
-        /// <param name="toFolder">Output folder </param>
-        private static void ExtractZipFile(string archivePath, string toFolder) {
-            ProcessStartInfo psi = new ProcessStartInfo {
-                FileName = "C:\\Program Files\\7-Zip\\7z.exe",
-                Arguments = $"x \"{archivePath}\" -o\"{toFolder}\" -y",
-                RedirectStandardOutput = true,
-                UseShellExecute = false,
-                CreateNoWindow = true
-            };
-
-            using Process? process = Process.Start(psi);
-            process?.WaitForExit();
-            process?.Dispose();
-        }
-
-        /// <summary>
-        /// Extract a Clickteam installer with cicdec
-        /// </summary>
-        /// <param name="archivePath">File to extract</param>
-        /// <remarks>By default, cicdec extracts to a new subfolder with the same name as the file. This is preferred, because it eliminates the risk of multiple extractions producing files that would overwrite each other (multiple installers contain file(s) with the same name). If this is the case, the cicdec cli requires requires user input for how to proceed. No commandline args are provided to skip this input. However, extracting to a subfolder *may* cause a hidden path too long error and cicdec will hang. Prefer extracting to a subfolder to reduce file name collision risks, and extract to the root folder as a fallback if the path is too long</remarks>
-        private static void ExtractInstaller(string archivePath, string extractFolder) {
-            string args;
-            if (Path.Combine(archivePath, Path.GetFileName(archivePath)).Length >= 248) {
-                foreach (string file in Directory.EnumerateFiles(extractFolder)) {
-                    if (Path.GetExtension(file) != ".exe") {
-                        File.Delete(file);
-                    }
-                }
-                args = $"cicdec.exe \"{archivePath}\" \"{extractFolder}\"";
-            }
-            else {
-                args = $"cicdec.exe \"{archivePath}\"";
-            }
-
-            ProcessStartInfo psi = new ProcessStartInfo {
-                FileName = "C:\\Program Files (x86)\\SC4 Utilities\\cicdec\\cicdec.exe",
-                Arguments = args,
-                RedirectStandardOutput = true,
-                UseShellExecute = false,
-                CreateNoWindow = true
-            };
-
-            using Process? process = Process.Start(psi);
-            process?.WaitForExit();
-            process?.Dispose();
         }
     }
 }
