@@ -164,26 +164,25 @@ namespace SC4PropTextureCatalogBuilder {
 
 
         /// <summary>
-        /// Parse all DBPF files in a folder and return the found TGIs along with errors, if any.
+        /// Parse all DBPF files in a folder and add found TGIs to the database.
         /// </summary>
-        /// <param name="exchangeId">Id of the exchange this item is found on</param>
         /// <param name="folderPath">Folder path to scan</param>
-        /// <returns></returns>
-        public (List<TGIItem>, List<DBPFError>) ParseFolder(int exchangeId, int assetId, string folderPath) {
-            string extractFolder = Path.Combine(folderPath, "ex");
-            
-            List<DBPFError> errors = [];
-            List<TGIItem> items = [];
+        /// <param name="exchangeId">Id of the exchange this item is found on</param>
+        /// <param name="assetId">Id of the asset</param>
+        /// <returns>A list of any errors encountered</returns>
+        public List<DBPFError> ParseFolder(string folderPath, int exchangeId, int assetId) {
+            var errors = new List<DBPFError>();
+            var items = new List<TGIItem>();
+            var files = Directory.EnumerateFiles(folderPath, "*", SearchOption.AllDirectories);
 
-            
-            //var extractFiles = Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories);
+            var dbpfFiles = files.GetUniqueFilenamesAcrossFolders().FilterDBPFFiles();
+            foreach (string file in dbpfFiles) {
+                FileStream fs;
+                try {
+                    fs = new FileStream(file, FileMode.Open);
+                }
+                catch (Exception) {
 
-            
-            extractFiles = Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories);
-            var dbpfs = GetUniqueFilenamesAcrossFolders(extractFiles).FilterDBPFFiles();
-            foreach (string file in dbpfs) {
-                FileStream fs = WaitForFile(file, FileMode.Open);
-                if (fs == null) {
                     errors.Add(new DBPFError(Path.GetFileName(file), DBPFTGI.BLANKTGI, "Opening file failed"));
                     Console.WriteLine("Could not open " + file);
                     continue;
@@ -255,33 +254,18 @@ namespace SC4PropTextureCatalogBuilder {
                     }
                 }
             }
-            try {
-                Directory.Delete(extractFolder, true);
-            }
-            catch {
-                Console.WriteLine("Could not delete " + extractFolder);
-            }
-            
-            return (items, errors);
+
+            AddTGIs(items);
+            return errors;
         }
 
 
-        public List<string> GetUniqueFilenamesAcrossFolders(IEnumerable<string> filePaths) {
-            Dictionary<string, string> uniques = [];
-            foreach (string file in filePaths) {
-                string fileName = Path.GetFileName(file);
-                if (!uniques.ContainsKey(fileName)) {
-                    uniques.Add(fileName, file);
-                }
-            }
-            return uniques.Values.ToList();
-        }
 
         /// <summary>
         /// Adds a series of TGIs to the database.
         /// </summary>
         /// <param name="items">List of TGIItem objects to add</param>
-        public void AddTGIs(List<TGIItem> items) {
+        private void AddTGIs(List<TGIItem> items) {
             if (items.Count == 0) {
                 return; 
             }

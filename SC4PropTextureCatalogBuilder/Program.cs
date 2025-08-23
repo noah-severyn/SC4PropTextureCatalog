@@ -1,9 +1,10 @@
-﻿using SC4PropTextureCatalogBuilder;
+﻿using csDBPF;
+using SC4PropTextureCatalogBuilder;
 using System.Diagnostics;
 using System.Linq;
 
 // ===================================================================================================================================================
-var createDb = true;
+var createDb = false;
 byte exchangeId = 1;
 // ===================================================================================================================================================
 const string sc4pacRoot = "C:\\Users\\Administrator\\AppData\\Local\\io.github.memo33\\sc4pac\\cache\\coursier\\";
@@ -49,29 +50,27 @@ foreach (string folder in folders) {
 
 
 
-
+//Parse each item in this folder and populate the database
 string dbPath;
 if (createDb) {
     dbPath = $"C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalogBuilder\\data\\Catalog-{DateTime.Now.ToString("MM-dd-HH-mm-ss")}.db";
 } else {
-    dbPath = "C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalogBuilder\\data\\Catalog-06-01-15-12-41.db";
-    dbPath = "C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalogBuilder\\data\\Catalog-06-01-17-25-17.db";
+    dbPath = new DirectoryInfo("C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalogBuilder\\data").GetFiles().OrderByDescending(f => f.LastWriteTime).First().FullName;
 }
 
 DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb);
 
-foreach (string folder in Directory.EnumerateDirectories(rootFolder)) {
-foreach (string folder in Directory.EnumerateDirectories(exchanges[exchangeId])) {
+var errors = new List<DBPFError>();
+foreach (string folder in Directory.EnumerateDirectories("P:\\sc4pac-cache\\https\\community.simtropolis.com\\files\\file")) {
     int startIdx = folder.LastIndexOf('\\');
     _ = int.TryParse(folder.AsSpan(startIdx + 1, folder.IndexOf('-', startIdx) - startIdx - 1), out int assetId);
 
-    //Add TGIs to the database
     if (!db.AssetExists(exchangeId, assetId)) {
         Console.WriteLine(assetId);
-        (var tgis, var errors) = db.ParseFolder(exchangeId, assetId, folder);
-        db.AddTGIs(tgis);
+        errors = db.ParseFolder(folder, exchangeId, assetId);
     }
 }
+Console.WriteLine(errors.Count);
 
 
 /// <summary>
