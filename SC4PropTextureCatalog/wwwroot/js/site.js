@@ -4,16 +4,31 @@
 // Write your JavaScript code.
 
 function ShowHideSizeRange() {
-	var thumbSizeGroup = document.getElementById("ThumbSizeGroup");
+	const bgGroup = document.getElementById("BackgroundGroup");
+	const sizeElem = document.getElementById('ThumbnailSize');
 	if (document.getElementById("ThumbnailToggle").checked) {
-		thumbSizeGroup.style.display = "block";
+		bgGroup.style.display = "block";
+		sizeElem.style.display = "block";
 	} else {
-		thumbSizeGroup.style.display = "none";
+		bgGroup.style.display = "none";
+		sizeElem.style.display = "none";
+	}
+}
+
+function ToggleThumbnails() {
+
+}
+
+function ChangeThumbnailSize() {
+	const imgs = document.getElementsByTagName('img');
+	const height = document.getElementById('ThumbnailSize').value;
+	for (var elem of imgs) {
+		elem.style.height = height + 'px';
 	}
 }
 
 function ToggleDarkThumbnailBg() {
-	var imgs = document.getElementsByTagName("img");
+	const imgs = document.getElementsByTagName("img");
 	if (document.getElementById("BackgroundToggle").checked) {
 		for (var elem of imgs) {
 			elem.classList.add("DarkThumbnail");
