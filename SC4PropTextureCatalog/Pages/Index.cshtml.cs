@@ -3,6 +3,7 @@ using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SQLite;
+using System.IO;
 
 namespace SC4PropTextureCatalog.Pages {
     public class IndexModel : PageModel {
@@ -18,13 +19,18 @@ namespace SC4PropTextureCatalog.Pages {
         /// </summary>
         [Table("Records")]
         public class CatalogRecord {
-            public string PackName { get; set; } = string.Empty;
-            public string PackVersion { get; set; } = string.Empty;
-            public string Hyperlink { get; set; } = string.Empty;
+            public string AssetId { get; set; } = string.Empty;
+            //public string AssetVersion { get; set; } = string.Empty;
+            //public string AssetLink { get; set; } = string.Empty;
             public string TGI { get; set; } = string.Empty;
-            public string TGIName { get; set; } = string.Empty;
-            public string Author { get; set; } = string.Empty;
-            public string ExemplarName { get; set; } = string.Empty;
+            public string File { get; set; } = string.Empty;
+            public string TGIType { get; set; } = string.Empty;
+            //public string Author { get; set; } = string.Empty;
+            public string Name { get; set; } = string.Empty;
+            /// <summary>
+            /// Image path if it exists; Empty otherwise
+            /// </summary>
+            public string ImgSrc { get; set; } = string.Empty; 
         }
 
         private class QueryCount {
@@ -52,22 +58,26 @@ namespace SC4PropTextureCatalog.Pages {
             SQLiteConnection connection = InitialiseConnection();
             search = search.Replace("'", "''");
 
-            /* SELECT PackTable.PackName, TGITable.TGI,TGITypes.TGIName ,PackTable.Author, TGITable.ExemplarName FROM TGITable
-             * LEFT JOIN PackTable ON TGITable.PackID = PackTable.PackID
-             * LEFT JOIN TGITypes ON TGITable.TGIType = TGITypes.TGIType
-             * WHERE PackName LIKE '%fire%' OR TGI LIKE '%fire%' OR Author LIKE '%fire%' OR ExemplarName LIKE '%fire%' */
             StringBuilder query = new StringBuilder();
-            query.AppendLine("SELECT PackTable.PackName, PackTable.Hyperlink, TGITable.TGI, TGITable.TGIType, TGITypes.TGIName, PackTable.Author, TGITable.ExemplarName FROM TGITable");
-            query.AppendLine("LEFT JOIN PackTable ON TGITable.PackID = PackTable.PackID");
-            query.AppendLine("LEFT JOIN TGITypes ON TGITable.TGIType = TGITypes.TGIType");
-            query.AppendLine($"WHERE PackName LIKE '%{search}%' OR TGI LIKE '%{search}%' OR Author LIKE '%{search}%' OR ExemplarName LIKE '%{search}%'");
+            query.AppendLine("SELECT TGIs.AssetId, TGIs.File, TGIs.TGI, TGIs.Type, TGITypes.Name TGIType, TGIs.Name FROM TGIs");
+            //query.AppendLine("LEFT JOIN Assets ON TGIs.AssetId = Assets.AssetId");
+            query.AppendLine("LEFT JOIN TGITypes ON TGIs.Type = TGITypes.Type");
+            query.AppendLine($"WHERE TGIs.AssetId LIKE '%{search}%' OR TGIs.File LIKE '%{search}%' OR TGIs.TGI LIKE '%{search}%' OR TGIs.Name LIKE '%{search}%'");
             ListOfRecords =  connection.Query<CatalogRecord>(query.ToString());
             connection.Close();
+
+            //~/img/thumbnails/@(item.TGI.Replace("0x", "").Replace(", ", "-")).png
+            foreach (var item in ListOfRecords) {
+                string newPath = "~/img/thumbnails/" + item.TGI.Replace("0x", "").Replace(", ", "-") + ".png";
+                if (System.IO.File.Exists(newPath)) {
+                    item.ImgSrc = newPath;
+                }
+            }
         }
 
         public void OnGet() {
             SQLiteConnection connection = InitialiseConnection();
-            int countTGIs = connection.Query<QueryCount>("SELECT TGI FROM TGITable").Count;
+            int countTGIs = connection.Query<QueryCount>("SELECT TGI FROM TGIs").Count;
             int countThumbs = Directory.EnumerateFiles("wwwroot\\img\\thumbnails").Count();
             ThumbnailCoverage = ((double) countThumbs) / countTGIs;
             connection.Close();

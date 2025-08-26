@@ -25,8 +25,8 @@ namespace SC4PropTextureCatalog.Pages {
 
         public void OnGet() {
             SQLiteConnection connection = InitialiseConnection();
-            CountTGIs = connection.Query<QueryCount>("SELECT TGI FROM TGITable").Count;
-            CountPacks = connection.Query<QueryCount>("SELECT PackName FROM PackTable").Count;
+            CountTGIs = connection.Query<QueryCount>("SELECT TGI FROM TGIs").Count;
+            CountPacks = connection.Query<QueryCount>("SELECT DISTINCT ExchangeId, AssetId FROM Assets").Count;
             CountThumbnails = Directory.EnumerateFiles("wwwroot\\img\\thumbnails").Count();
             ThumbnailCoverage = ((double) CountThumbnails) / CountTGIs;
             connection.Close();

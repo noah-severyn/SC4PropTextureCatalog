@@ -14,28 +14,41 @@
 }
 
 <div>
-    <h3>Search props or textures by Pack, TGI, Author, or Exemplar Name</h3>
+    <h1>Search for props, textures, buildings, or flora by Pack, TGI, Author, or Exemplar Name</h1>
     <p style="color:darkblue">Currently only thumbnails for textures are supported. Props/Buildings/Flora to follow.</p>
-    <p style="color:darkblue">Thumbnail coverage: <meter id="ThumbnailCoverage" max="1" low=".33" high=".7" optimum="1" value="@(Model.ThumbnailCoverage)"></meter> @(Model.ThumbnailCoverage.ToString("P1"))</p>
-    
-    <form method="get">
-        <input id="SearchBox" type="text" name="itemcontains" placeholder="Search for Pack | TGI | Author | Exemplar Name ..." value="@Model.SearchText" size="37">
+    <label style="color:darkblue" for="ThumbnailCoverage">Thumbnail coverage: @(Model.ThumbnailCoverage.ToString("P1"))</label>
+    <progress id = "ThumbnailCoverage" max = "1" value = "@(Model.ThumbnailCoverage)"></progress>
 
-        <input id="ThumbnailToggle" type="checkbox" name="thumbnails" checked="@Model.ShowThumbs" onclick="ShowHideSizeRange()" />
-        <label for="ThumbnailToggle">Show Thumbnails</label>
 
-        <div id="ThumbSizeGroup" style="display:none">
-            <input id="ThumbnailSize" type="range" min="32" max="96" step="32" name="size" value="@Model.ThumbSize" list="Sizes" />
-            <label for="ThumbnailSize">Thumbnail Size</label>
-            <datalist id="Sizes">
-                <option value="32" label="32px"></option>
-                <option value="64" label="64px"></option>
-                <option value="96" label="96px"></option>
-            </datalist>
-        </div>
+    <form method="get" role="search">
+        <input id="SearchBox" type="search" name="itemcontains" placeholder="Search for Pack | TGI | Author | Exemplar Name ..." value="@Model.SearchText">
+        <select id="TGITypeSelect" aria-label="Choose TGI Type" style="width:200px">
+            <option value="all" selected>All TGI Types</option>
+            <option value="0">Buildings</option>
+            <option value="1">Props</option>
+            <option value="2">Textures</option>
+            <option value="4">Flora</option>
+            <option value="10">Cohorts</option>
+        </select>
         <input type="Submit" value="Search" />
     </form>
-    <hr />
+
+    <fieldset class="grid" style="width:60%">
+        <div>
+            <input id="ThumbnailToggle" type="checkbox" role="switch" onclick="ShowHideSizeRange()" />
+            <label for="ThumbnailToggle">Show Thumbnails</label>
+        </div>
+        <div id="BackgroundGroup">
+            <input id="BackgroundToggle" type="checkbox" role="switch" onclick="ToggleDarkThumbnailBg()" />
+            <label id="BackgroundToggleLabel" for="BackgroundToggle">Dark Background</label>
+        </div>
+
+        <select id="ThumbnailSize" aria-label="Thumbnail Size" onchange="ChangeThumbnailSize()">
+            <option value="32">32 px</option>
+            <option value="64" selected>64 px</option>
+            <option value="96">96 px</option>
+        </select>
+    </fieldset>
 
     @{
         if (Model.SearchText is not null) {
@@ -44,7 +57,7 @@
     }
     <hr />
 
-    
+
 
     <table id="ContentTable">
         <thead>
@@ -53,15 +66,6 @@
                 <th>TGI</th>
                 <th>Type</th>
                 <th>Author</th>
-                @{
-                    if (Model.ShowThumbs) {
-                        <th>Thumbnail
-                            <br>
-                            <input id="BackgroundToggle" type="checkbox" onclick="ToggleDarkThumbnailBg()" />
-                            <label for="BackgroundToggle">Dark BG</label>
-                        </th>
-                    }
-                }
                 <th>Exemplar Name</th>
             </tr>
         </thead>
@@ -69,16 +73,18 @@
             @{
                 foreach (IndexModel.CatalogRecord item in Model.ListOfRecords) {
                     <tr>
-                        <td><a href="@item.Hyperlink">@item.PackName</a></td>
+                        <td><a href="#">@item.File</a></td>
                         <td>@item.TGI</td>
-                        <td>@item.TGIName</td>
-                        <td>@item.Author</td>
-                        @{
-                            if (Model.ShowThumbs) {
-                                <td><img src="~/img/thumbnails/@(item.TGI.Replace("0x", "").Replace(", ", "-")).png" height="@Model.ThumbSize" loading="lazy"/> </td>
+                        <td>@item.TGIType</td>
+                        <td>@{
+                                System.IO.File.Exists("~/img/thumbnails/" + item.TGI.Replace("0x", "").Replace(", ", "-") + ".png");
+                                    // <img src="@(item.ImgSrc)" height="64px" loading="lazy" />
+                                    
+                                
                             }
-                        }
-                        <td>@item.ExemplarName</td>
+                           
+                        </td>
+                        <td>@item.Name</td>
                     </tr>
                 }
             }
