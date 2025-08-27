@@ -1,0 +1,151 @@
+.DarkThumbnail {
+	background-color: #202e39;
+}
+
+a {
+  color: #0077cc;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+  border-top: 1px solid #e5e5e5;
+}
+
+
+/*
+	================================================
+	Styles for Index/Home Page
+	================================================
+*/
+#ContentTable {
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px solid #ddd;
+	font-size: 12px;
+	text-align: left;
+}
+
+	#ContentTable th {
+		padding: 8px;
+		background-color: #e6e6e6;
+		font-size: 16px;
+		color: #000;
+		position: -webkit-sticky; /* Safari */
+		position: sticky;
+		top: 0;
+	}
+
+	#ContentTable tr, td {
+		padding: 6px;
+		color: #121a21;
+		border-bottom: 1px solid #ddd;
+	}
+
+		#ContentTable tr:hover {
+			background-color: #f8fad2;
+		}
+
+
+/*
+	================================================
+	Styles for ViewPack Page
+	================================================
+*/
+#InfoTable {
+	text-align: center;
+	margin: 10px 0px;
+	background-color: white;
+	width: 100%;
+}
+	#InfoTable th {
+		padding: 8px;
+		background-color: #e6e6e6;
+		font-size: 16px;
+		color: #000;
+	}
+
+	#InfoTable td {
+		padding: 08px;
+		background-color: white;
+	}
+
+
+/*
+	================================================
+	Resize Pico CSS elements
+	================================================
+*/
+:root {
+	--pico-font-family-sans-serif: Inter, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--pico-font-family-emoji);
+	--pico-font-size: 100%;
+	/* Original: 100% */
+	--pico-line-height: 1.5;
+	/* Original: 1.5 */
+	--pico-form-element-spacing-vertical: 0.75rem;
+	/* Original: 1rem */
+	--pico-form-element-spacing-horizontal: 1.0rem;
+	/* Original: 1.25rem */
+	--pico-border-radius: 0.25rem;
+	/* Original: 0.25rem */
+}
+
+@media (min-width: 576px) {
+	:root {
+		--pico-font-size: 100%;
+		/* Original: 106.25% */
+	}
+}
+
+@media (min-width: 768px) {
+	:root {
+		--pico-font-size: 100%;
+		/* Original: 112.5% */
+	}
+}
+
+@media (min-width: 1024px) {
+	:root {
+		--pico-font-size: 100%;
+		/* Original: 118.75% */
+	}
+}
+
+@media (min-width: 1280px) {
+	:root {
+		--pico-font-size: 100%;
+		/* Original: 125% */
+	}
+}
+
+@media (min-width: 1536px) {
+	:root {
+		--pico-font-size: 100%;
+		/* Original: 131.25% */
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	--pico-font-weight: 600;
+	/* Original: 700 */
+}
+
+article {
+	border: 1px solid var(--pico-muted-border-color);
+	/* Original doesn't have a border */
+	border-radius: calc(var(--pico-border-radius) * 2);
+	/* Original: var(--pico-border-radius) */
+}
+
+	article > footer {
+		border-radius: calc(var(--pico-border-radius) * 2);
+		/* Original: var(--pico-border-radius) */
+	}
