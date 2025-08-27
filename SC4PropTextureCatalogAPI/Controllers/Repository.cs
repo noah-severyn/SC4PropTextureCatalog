@@ -5,9 +5,11 @@ using System.Text;
 namespace SC4PropTextureCatalogAPI.Controllers {
     public interface IItemRepository {
         
-        Task<TGI> GetByIdAsync(int assetId);
+        Task<CatalogItems> GetByIdAsync(int assetId);
 
-        Task<List<TGI>> GetSearchResultsAsync(string search);
+        Task<List<CatalogItems>> GetSearchResultsAsync(string search);
+
+        Task<List<CatalogItems>> GetByInstanceAsync(string instance);
 
     }
 
@@ -15,24 +17,27 @@ namespace SC4PropTextureCatalogAPI.Controllers {
         private readonly SQLiteAsyncConnection _db = db;
 
 
-
-        //public Task<TGI> GetByIdAsync(int assetId) =>
-        //    _db.FindAsync<TGI>(assetId).ContinueWith(t => t.Result);
-        public async Task<TGI> GetByIdAsync(int assetId) {
-            var results = await _db.QueryAsync<TGI>("select * from TGIs where AssetId = " + assetId);
+        public async Task<CatalogItems> GetByIdAsync(int assetId) {
+            var results = await _db.QueryAsync<CatalogItems>("select * from CatalogItems where AssetId = " + assetId);
             return results.FirstOrDefault();
-            //return _db.FindAsync<TGI>(assetId).ContinueWith(t => t.Result);
-
         }
 
-        public async Task<List<TGI>> GetSearchResultsAsync(string search) {
-            string query = "SELECT TGIs.AssetId, TGIs.File, TGIs.TGI, TGIs.Type, TGITypes.Name TGIType, TGIs.Name FROM TGIs\n";
-            query += "LEFT JOIN TGITypes ON TGIs.Type = TGITypes.Type\n";
-            query += $"WHERE TGIs.AssetId LIKE '%{search}%' OR TGIs.File LIKE '%{search}%' OR TGIs.TGI LIKE '%{search}%' OR TGIs.Name LIKE '%{search}%'";
+        public async Task<List<CatalogItems>> GetSearchResultsAsync(string search) {
+            string query = "SELECT CatalogItems.AssetId, CatalogItems.File, CatalogItems.TGI, CatalogItems.Type, TGITypes.Name TGIType, CatalogItems.Name FROM CatalogItems\n";
+            query += "LEFT JOIN TGITypes ON CatalogItems.Type = TGITypes.Type\n";
+            query += $"WHERE CatalogItems.AssetId LIKE '%{search}%' OR CatalogItems.File LIKE '%{search}%' OR CatalogItems.TGI LIKE '%{search}%' OR CatalogItems.Name LIKE '%{search}%'";
 
-            var results = await _db.QueryAsync<TGI>(query.ToString());
+            var results = await _db.QueryAsync<CatalogItems>(query.ToString());
             return results;
         }
-            
+
+        public async Task<List<CatalogItems>> GetByInstanceAsync(string instance) {
+            string query = "SELECT CatalogItems.AssetId, CatalogItems.File, substr(CatalogItems.TGI, -8) Instance, CatalogItems.TGI, CatalogItems.Type, TGITypes.Name TGIType, CatalogItems.Name FROM CatalogItems\n";
+            query += "LEFT JOIN TGITypes ON CatalogItems.Type = TGITypes.Type\n";
+            query += $"WHERE Instance LIKE '%{instance}%'";
+            var results = await _db.QueryAsync<CatalogItems>(query.ToString());
+            return results;
+        }
+
     }
 }

@@ -1,8 +1,8 @@
 ﻿using SQLite;
 
 namespace SC4PropTextureCatalogAPI.Models {
-    [Table("TGIs")]
-    public class TGI {
+    [Table("CatalogItems")]
+    public class CatalogItems {
 
         [NotNull]
         public int ExchangeId { get; set; }
@@ -11,7 +11,7 @@ namespace SC4PropTextureCatalogAPI.Models {
         [NotNull]
         public string File { get; set; } = string.Empty;
         [NotNull]
-        public string TGIString { get; set; } = string.Empty;
+        public string TGI { get; set; } = string.Empty;
         public int TGIType { get; set; }
         public string Name { get; set; } = string.Empty;
     }
