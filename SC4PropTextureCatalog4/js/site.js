@@ -1,9 +1,6 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿ToggleThumbnailControlVisibility();
 
-// Write your JavaScript code.
-
-function ShowHideSizeRange() {
+function ToggleThumbnailControlVisibility() {
 	const bgGroup = document.getElementById("BackgroundGroup");
 	const sizeElem = document.getElementById('ThumbnailSize');
 	if (document.getElementById("ThumbnailToggle").checked) {
@@ -38,4 +35,8 @@ function ToggleDarkThumbnailBg() {
 			elem.classList.remove("DarkThumbnail");
 		}
 	}
+}
+
+function Search(searchText) {
+
 }

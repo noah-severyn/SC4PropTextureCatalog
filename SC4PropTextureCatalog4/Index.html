@@ -9,25 +9,22 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="container">
             <ul>
-                <li><a href="/Index.html">SC4PropTextureCatalog</a></li>
+                <li class="logo">SC4PropTextureCatalog</li>
+                <li><a href="/Index.html">Home</a></li>
                 <li><a href="/ViewPack.html">View a Pack</a></li>
-                <li><a href="/PluginPacks.html">Plugin Pack IDs</a></li>
                 <li><a href="/About.html">About</a></li>
             </ul>
         </nav>
     </header>
 
     <main role="main" class="container">
-        <h1>Search for props, textures, buildings, or flora by Pack, TGI, Author, or Exemplar Name</h1>
+        <h3>Search for props, textures, buildings, or flora by Pack, TGI, Author, or Exemplar Name</h3>
         <p style="color:darkblue">Currently only thumbnails for textures are supported. Props/Buildings/Flora to follow.</p>
-        <label style="color:darkblue" for="ThumbnailCoverage">Thumbnail coverage: <span id="ThumbnailCoverageResult">##%</span></label>
-        <progress id = "ThumbnailCoverage" max = "1" value = "0.5"></progress>
-
 
         <form method="get" role="search">
-            <input id="SearchBox" type="search" name="itemcontains" placeholder="Search for Pack | TGI | Author | Exemplar Name ...">
+            <input id="SearchBox" type="search" placeholder="Search for Pack | TGI | Author | Exemplar Name ...">
             <!-- <select id="TGITypeSelect" aria-label="Choose TGI Type" style="width:200px">
                 <option value="all" selected>All TGI Types</option>
                 <option value="0">Buildings</option>
@@ -49,15 +46,15 @@
 
         <fieldset class="grid" style="width:60%">
             <div>
-                <input id="ThumbnailToggle" type="checkbox" role="switch" onclick="ShowHideSizeRange()" />
+                <input id="ThumbnailToggle" type="checkbox" role="switch" />
                 <label for="ThumbnailToggle">Show Thumbnails</label>
             </div>
             <div id="BackgroundGroup">
-                <input id="BackgroundToggle" type="checkbox" role="switch" onclick="ToggleDarkThumbnailBg()" />
+                <input id="BackgroundToggle" type="checkbox" role="switch" />
                 <label id="BackgroundToggleLabel" for="BackgroundToggle">Dark Background</label>
             </div>
 
-            <select id="ThumbnailSize" aria-label="Thumbnail Size" onchange="ChangeThumbnailSize()">
+            <select id="ThumbnailSize" aria-label="Thumbnail Size">
                 <option value="32">32 px</option>
                 <option value="64" selected>64 px</option>
                 <option value="96">96 px</option>
@@ -65,14 +62,15 @@
         </fieldset>
 
         
-        <hr />
-        <p>Query "<span id="QuerySearchText">___</span>" returned <span id="QuerySearchCount">###</span> results.</p>
+        
+        <p>Query "<span id="QuerySearchText">___</span>" returned <span id="QueryResultsCount">###</span> results.</p>
         <hr />
 
-        <table id="ContentTable">
+        <!-- <table id="ContentTable"> -->
+        <table>
             <thead>
                 <tr class="header">
-                    <th>Pack Name</th>
+                    <th>Package Name</th>
                     <th>TGI</th>
                     <th>Type</th>
                     <th>Author</th>
@@ -106,5 +104,6 @@
 
     
     <script src="js/site.js"></script>
+    <script src="js/site-events.js"></script>
 </body>
 </html>

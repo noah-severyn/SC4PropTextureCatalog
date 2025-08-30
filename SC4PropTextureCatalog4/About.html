@@ -1,101 +1,134 @@
-﻿@page
-@model SC4PropTextureCatalog.Pages.AboutModel
-@{
-}
-<h1>About</h1>
-<p>The current version 3.x+ was rebuilt completely from the ground up using a SQLite database, which was a necessity with the ever-growing index of items.</p>
-<p>Building upon the original the original <a target="_blank" href="https://sc4devotion.com/forums/index.php?board=415.0">Prop & Texture Photo Catalog</a> started in 2011, this work includes all known dependency packs to date. This catalog was assembled and is maintained by <a href="https://community.simtropolis.com/profile/455740-nos17/">nos.17</a> with assistance from STEX Custodian (Tyberius06), Cyclone Boom, and CorinaMarie.</p>
-<p>I hope this tool will prove invaluable for many content creators (and especially lotters) who are looking for more and better content to incorporate into their work. Looking for a motorcycle to add to your lot? Filter only prop packs that contain vehicles and/or motorcycles. Looking for seasonal trees? Look through all packs that contain seasonal trees until you can find the right ones for you? Want to use all HD? Scour all packs that contain High Definition props to find the ones you want.</p>
-<p>Found a bug? Am I missing a prop or texture pack? Have an idea for additional sorting/filtering categories? Is there a better way to make the Catalog more interactive or useful? I would very much like to hear from you! Drop me a message or visit the <a href="https://community.simtropolis.com/forums/topic/758501-simcity-4-prop-and-texture-catalogue-by-stex-custodian/">SimCity 4 Prop and Texture Catalog</a> thread. Alternatively, if you are familiar with GitHub, open an issue there.</p>
-<p>The source code for this project is hosted in a Github repository <a href="https://github.com/noah-severyn/SC4PropTextureCatalog">here</a>. The legacy version can still be downloaded <a href="https://github.com/noah-severyn/SC4PropTextureCatalog/releases/tag/2.2.2">here</a>.</p>
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
 
-<h2>How to use:</h2>
-<ul>
-    <li>To search for items by TGI, Exemplar Name, or Author, or Pack Name, use the <b>Home</b> page and enter 3 or more characters in the search box.</li>
-    <li>To view a thumbnail listing of an entire pack, use the <b>View a Pack</b> page and select a pack from the drop down.</li>
-    <li>To search for a Plugin Pack ID, use the <b>Plugin Pack</b> page to search for the item. Hexacedimal and decimal numbers are supported for searching.</li>
-</ul>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SC4 Prop Texture Catalog</title>
+    <link rel="stylesheet" href="css/pico.css" />
+    <link rel="stylesheet" href="css/site.css" />
+</head>
 
-<h2>Stats</h2>
-<ul>
-    <li>Packs Indexed: @(Model.CountPacks.ToString("N0"))</li>
-    <li>TGIs Indexed: @(Model.CountTGIs.ToString("N0"))</li>
-    <li>Thumbnail Coverage: <meter id="ThumbnailCoverage" max="1" low=".33" high=".7" optimum="1" value="@(Model.ThumbnailCoverage)"></meter> @(Model.ThumbnailCoverage.ToString("P1")) (@(Model.CountThumbnails.ToString("N0"))/@(Model.CountTGIs.ToString("N0")))</li>
-</ul>
+<body>
+    <header>
+        <nav class="container">
+            <ul>
+                <li class="logo">SC4PropTextureCatalog</li>
+                <li><a href="/Index.html">Home</a></li>
+                <li><a href="/ViewPack.html">View a Pack</a></li>
+                <li><a href="/About.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main" class="container">
+        <h3>About</h3>
+        <p>This project was originally inspired by the original <a target="_blank" href="https://sc4devotion.com/forums/index.php?board=415.0">Prop & Texture Photo Catalog</a> started in 2011, and aims to index all known TGIs and plugin packs for SimCity 4, especially all known dependency packs. This project also builds upon the <a href="https://community.simtropolis.com/forums/topic/75264-plugin-pack-id-indexes/">Plugin Pack ID Index</a> list by catty-cb, assembled by her in 2018. This iteration of the catalog is assembled and is maintained by <a href="https://community.simtropolis.com/profile/455740-nos17/">nos.17</a>. Assistance has additionally been provided from STEX Custodian (Tyberius06), Cyclone Boom, and CorinaMarie.</p>
+        <p>I hope this tool will prove invaluable for many content creators (especially lotters) who are looking for more and better content to incorporate into their work. Looking for a motorcycle to add to your lot? Filter only prop packs that contain vehicles and/or motorcycles. Looking for seasonal trees? Look through all packs that contain seasonal trees until you can find the right ones for you? Want to use all HD? Scour all packs that contain High Definition props to find the ones you want.</p>
+        <p>Found a bug? Am I missing a prop or texture pack? Have an idea for additional sorting/filtering categories? Is there a better way to make the Catalog more interactive or useful? I would very much like to hear from you! Drop me a message or visit the <a href="https://community.simtropolis.com/forums/topic/758501-simcity-4-prop-and-texture-catalogue-by-stex-custodian/">SimCity 4 Prop and Texture Catalog</a> thread or open an issue in Github.</p>
+        <p>The source code for this project is hosted in a Github repository <a href="https://github.com/noah-severyn/SC4PropTextureCatalog">here</a>. The legacy version can still be downloaded <a href="https://github.com/noah-severyn/SC4PropTextureCatalog/releases/tag/2.2.2">here</a>.</p>
 
-
-<div class="main changelog">
-    <hr>
-    <details>
-        <summary><h2>Changelog</h2></summary>
-
-        <h4>v3.2 (Oct 2023)</h4>
+        <h3>How to use:</h3>
         <ul>
-            <li>Added 13 new packs.</li>
-            <li>Reduced max size of thumbnails to 96px to reduce bandwidth.</li>
-            <li>Added database and lookup page for Catty's Plugin Pack ID data.</li>
+            <li>Use the <b>Home</b> page to search for items by file name, TGI, exemplar name, author, package name, or a combination of these. Queries require 3 or more characters.</li>
+            <li>Use the <b>View a Pack</b> page to view the details and thumbnails for a single package.
         </ul>
+
+        <h3>Stats</h3>
+        <ul>
+            <li>Packages indexed: <span id="PackageCount">###</span></li>
+            <li>TGIs Indexed: <span id="TgiCount">###</span></li>
+            <li>Thumbnail Coverage: <meter id="ThumbnailCoverage" max="1" low=".33" high=".7" optimum="1" style="width:200px"></meter> <span id="ThumbnailCoveragePct">##% (###/###)</span></li>
+        </ul>
+
+
         <hr>
+        <details>
+            <summary>
+                <h3>Changelog</h3>
+            </summary>
 
-        <h4>v3.1 (Mar 2023)</h4>
-        <ul>
-            <li>Added thumbnail previews for all textures.</li>
-            <li>Added 5 new packs and fixed download links (thanks gwada971!).</li>
-        </ul>
-        <hr>
+            <h4>v4.0 (Oct 2025)</h4>
+            <ul>
+                <li>Complete rewrite of the site backend to utilize packages, TGIs, and metadata from sc4pac.</li>
+                <li>Introduction of a public queryable API for use in other tools and applications.</li>
+                <li>Redesign of the website.</li>
+            </ul>
+            <hr>
 
-        <h4>v3.0 (Feb 2023)</h4>
-        <ul>
-            <li>Completely new implementation using a SQLite database and ASP.NET/web UI. The result is dramatically improved performance when filtering the table.</li>
-            <li>211 new packs added, for a total of 670+ packs and 81k TGIs indexed.</li>
-        </ul>
-        <hr>
+            <h4>v3.2 (Oct 2023)</h4>
+            <ul>
+                <li>Added 13 new packs.</li>
+                <li>Reduced max size of thumbnails to 96px to reduce bandwidth.</li>
+                <li>Added database and lookup page for Catty's Plugin Pack ID data.</li>
+            </ul>
+            <hr>
 
-        <h4>v2.2.2 (16 Oct 2021)</h4>
-        <ul>
-            <li>Updated Grfe_Urbanpack to version B</li>
-            <li>Added Grfe_hedge_3m_Ortho + Diag, Jayo-Props, cogeo's LogisticsPack, Mntoes-Prop pack1, PC Mega Props 2, SG_Models_IM2</li>
-            <li>Added texture TGIs to TGI search list</li>
-        </ul>
-        <hr>
+            <h4>v3.1 (Mar 2023)</h4>
+            <ul>
+                <li>Added thumbnail previews for all textures.</li>
+                <li>Added 5 new packs and fixed download links (thanks gwada971!).</li>
+            </ul>
+            <hr>
 
-        <h4>v2.2.1 (14 Sept 2021)</h4>
-        <ul>
-            <li>Laid groundwork for HD prop toggle</li>
-            <li>Added the following prop + texture packs: A_1P_WindIndustry_ComponentLogistics2, A_1P_beach_set2_props, A_1P_beach_set3_props, BCH Props1, BSC - VIP girafe carpack vol. 1 & 2 remastered, Davide1983it - Trabant601, KK Timed Prop Pack v1-Gizmo, KK_ja-att Restricted Sign Props, Outdoor Set V1, Outdoor Set V2, Playground set, Raymond_VintageCar_Props, SM2 Mega Prop Pack Vol5, TCC - Diagonal Jetways (Singtel),Tatra 603 - Wartburg 353, and cloqloparking.</li>
-        </ul>
-        <hr>
+            <h4>v3.0 (Feb 2023)</h4>
+            <ul>
+                <li>Completely new implementation using a SQLite database and ASP.NET/web UI. The result is dramatically improved performance when filtering the table.</li>
+                <li>211 new packs added, for a total of 670+ packs and 81k TGIs indexed.</li>
+            </ul>
+            <hr>
 
-        <h4>v2.2.0 (21 Mar 2021)</h4>
-        <ul>
-            <li>Added Author column to SearchTable</li>
-            <li>Added multiple prop + texture packs by Fantozzi, gizmo28, Mary Maurine Mayo, RebaLynnTS, Oidaas, AP, and more.</li>
-        </ul>
-        <hr>
+            <h4>v2.2.2 (16 Oct 2021)</h4>
+            <ul>
+                <li>Updated Grfe_Urbanpack to version B</li>
+                <li>Added Grfe_hedge_3m_Ortho + Diag, Jayo-Props, cogeo's LogisticsPack, Mntoes-Prop pack1, PC Mega Props 2, SG_Models_IM2</li>
+                <li>Added texture TGIs to TGI search list</li>
+            </ul>
+            <hr>
 
-        <h4>v2.1.1 (26 Feb 2021)</h4>
-        <ul>
-            <li>Minor release with some tweaks for hosting at Simtropolis. If you have 2.0.0 there's no need to download again.</li>
-        </ul>
-        <hr>
+            <h4>v2.2.1 (14 Sept 2021)</h4>
+            <ul>
+                <li>Laid groundwork for HD prop toggle</li>
+                <li>Added the following prop + texture packs: A_1P_WindIndustry_ComponentLogistics2, A_1P_beach_set2_props, A_1P_beach_set3_props, BCH Props1, BSC - VIP girafe carpack vol. 1 & 2 remastered, Davide1983it - Trabant601, KK Timed Prop Pack v1-Gizmo, KK_ja-att Restricted Sign Props, Outdoor Set V1, Outdoor Set V2, Playground set, Raymond_VintageCar_Props, SM2 Mega Prop Pack Vol5, TCC - Diagonal Jetways (Singtel),Tatra 603 - Wartburg 353, and cloqloparking.</li>
+            </ul>
+            <hr>
 
-        <h4>v2.1.0 (24 Feb 2021)</h4>
-        <ul>
-            <li>Numerous inconsistencies in file names addressed</li>
-            <li>Added girafe flora props, AP sim workers, and misc other missing packs</li>
-            <li>Added texture TGIs to searchable list</li>
-        </ul>
-        <hr>
+            <h4>v2.2.0 (21 Mar 2021)</h4>
+            <ul>
+                <li>Added Author column to SearchTable</li>
+                <li>Added multiple prop + texture packs by Fantozzi, gizmo28, Mary Maurine Mayo, RebaLynnTS, Oidaas, AP, and more.</li>
+            </ul>
+            <hr>
 
-        <h4>v2.0.0 (06 Feb 2021)</h4>
-        <ul>
-            <li>Added functionality to search by TGI or name; fixed missing/broken images; improvements to code for optimization</li>
-        </ul>
-        <hr>
+            <h4>v2.1.1 (26 Feb 2021)</h4>
+            <ul>
+                <li>Minor release with some tweaks for hosting at Simtropolis. If you have 2.0.0 there's no need to download again.</li>
+            </ul>
+            <hr>
 
-        <h4>v1.0.0 (03 Jan 2021)</h4>
-        <ul>
-            <li>Initial Release</li>
-        </ul>
-    </details>
-</div>
+            <h4>v2.1.0 (24 Feb 2021)</h4>
+            <ul>
+                <li>Numerous inconsistencies in file names addressed</li>
+                <li>Added girafe flora props, AP sim workers, and misc other missing packs</li>
+                <li>Added texture TGIs to searchable list</li>
+            </ul>
+            <hr>
+
+            <h4>v2.0.0 (06 Feb 2021)</h4>
+            <ul>
+                <li>Added functionality to search by TGI or name; fixed missing/broken images; improvements to code for optimization</li>
+            </ul>
+            <hr>
+
+            <h4>v1.0.0 (03 Jan 2021)</h4>
+            <ul>
+                <li>Initial Release</li>
+            </ul>
+        </details>
+    </main>
+    <footer>
+        <div class="container">
+            &copy; 2025 · SC4PropTextureCatalog · <a href="https://community.simtropolis.com/profile/455740-nos17/">nos.17</a> · <a href="Privacy.html">Privacy</a>
+        </div>
+    </footer>
+</body>
+</html>

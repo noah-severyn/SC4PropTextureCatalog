@@ -15,6 +15,22 @@ footer {
   border-top: 1px solid #e5e5e5;
 }
 
+header {
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+header li {
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+header li a {
+	font-size:  1.1rem;
+	font-weight:normal;
+	color: #595959;
+	padding: 0px 10px;
+}
+
 
 /*
 	================================================
