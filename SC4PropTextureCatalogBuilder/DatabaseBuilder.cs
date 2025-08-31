@@ -10,8 +10,8 @@ namespace SC4PropTextureCatalogBuilder {
     /// <summary>
     /// An item in the TGI table, which tracks which TGIs are in which dependency pack. 
     /// </summary>s
-    [Table("TGIs")]
-    public class TGIItem(int exchId, int assetId, string file, string tgi, int type, string? exmpName) {
+    [Table("CatalogItems")]
+    public class CatalogItem(int exchId, int assetId, string file, string tgi, int type, string? exmpName) {
         /// <summary>
         /// Identifer of the exchange this item is uploaded to.
         /// </summary>
@@ -150,7 +150,7 @@ namespace SC4PropTextureCatalogBuilder {
         public DatabaseBuilder(string dbPath, bool create) {
             _db = new SQLiteConnection(dbPath);
             if (create) {
-                _db.CreateTable<TGIItem>();
+                _db.CreateTable<CatalogItem>();
                 _db.CreateTable<AssetItem>();
                 _db.CreateTable<TGICategory>();
                 _db.Insert(new TGICategory(-1, "Unknown"));
@@ -172,7 +172,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// <returns>A list of any errors encountered</returns>
         public List<DBPFError> ParseFolder(string folderPath, int exchangeId, int assetId) {
             var errors = new List<DBPFError>();
-            var items = new List<TGIItem>();
+            var items = new List<CatalogItem>();
             var files = Directory.EnumerateFiles(folderPath, "*", SearchOption.AllDirectories);
 
             var dbpfFiles = files.GetUniqueFilenamesAcrossFolders().FilterDBPFFiles();
@@ -194,7 +194,7 @@ namespace SC4PropTextureCatalogBuilder {
                 foreach (DBPFEntry entry in targetEntries) {
                     //Add Base/Overlay textures (look at the least significant 4 bits and only add if it is 0, 5, or A: AND the Instance by 0b1111 (0xF) and examine the modulus result)
                     if (entry.MatchesEntryType(DBPFTGI.FSH_BASE_OVERLAY) && ((entry.TGI.InstanceID & 0xF) % 5) == 0) {
-                        items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 2, null));
+                        items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 2, null));
                     }
 
                     //Add Exemplars
@@ -224,13 +224,13 @@ namespace SC4PropTextureCatalogBuilder {
 
                         switch (exmpType) {
                             case DBPFProperty.ExemplarType.Building:
-                                items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 0, exmpName));
+                                items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 0, exmpName));
                                 break;
                             case DBPFProperty.ExemplarType.Prop:
-                                items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 1, exmpName));
+                                items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 1, exmpName));
                                 break;
                             case DBPFProperty.ExemplarType.FloraFauna:
-                                items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 4, exmpName));
+                                items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 4, exmpName));
                                 break;
                         }
                     }
@@ -250,7 +250,7 @@ namespace SC4PropTextureCatalogBuilder {
                             exmpName = (string) prop.GetData();
                         }
 
-                        items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 10, exmpName));
+                        items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 10, exmpName));
                     }
                 }
             }
@@ -265,7 +265,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// Adds a series of TGIs to the database.
         /// </summary>
         /// <param name="items">List of TGIItem objects to add</param>
-        private void AddTGIs(List<TGIItem> items) {
+        private void AddTGIs(List<CatalogItem> items) {
             if (items.Count == 0) {
                 return; 
             }
@@ -274,7 +274,7 @@ namespace SC4PropTextureCatalogBuilder {
                 _db.Insert(new AssetItem(items[0].ExchangeId, items[0].AssetId));
             }
 
-            foreach (TGIItem item in items) {
+            foreach (CatalogItem item in items) {
                 _db.Insert(item);
             }
         }
