@@ -1,0 +1,65 @@
+<div id="container"></div>
+
+<script>
+	const container = document.getElementById('container');
+
+	// Example: create placeholders for N chunks
+	const CHUNK_COUNT = 20000;
+	for (let i = 0; i < CHUNK_COUNT; i++) {
+		const placeholder = document.createElement('div');
+		placeholder.className = 'chunk-placeholder';
+		placeholder.dataset.index = i;           // identify chunk
+		placeholder.style.minHeight = '300px';  // visual space so user can scroll
+		placeholder.textContent = 'Loading placeholder ' + i;
+		container.appendChild(placeholder);
+	}
+
+	// Function that builds/appends the real chunk content
+	function loadChunk(index, placeholder) {
+		// Build content in a DocumentFragment to minimize reflows
+		const frag = document.createDocumentFragment();
+
+		// Example content generation (replace with your HTML chunk generation)
+		const wrapper = document.createElement('div');
+		wrapper.className = 'chunk';
+		wrapper.innerHTML = `<h3>Chunk ${index}</h3><p>Content for chunk ${index}</p>`;
+		frag.appendChild(wrapper);
+
+		// Replace placeholder with actual content
+		placeholder.replaceWith(frag);
+	}
+
+	// Observer callback: schedule load when placeholder enters viewport
+	const onIntersect = (entries, obs) => {
+		for (const entry of entries) {
+			if (!entry.isIntersecting) continue;
+
+			const placeholder = entry.target;
+			const index = Number(placeholder.dataset.index);
+
+			// Stop observing this placeholder
+			obs.unobserve(placeholder);
+
+			// Prefer requestIdleCallback to do DOM work when browser is idle
+			if ('requestIdleCallback' in window) {
+				requestIdleCallback(
+					() => loadChunk(index, placeholder),
+					{ timeout: 2000 } // fallback to run within 2s if idle never occurs
+				);
+			} else {
+				// Fallback: use setTimeout to yield to the event loop
+				setTimeout(() => loadChunk(index, placeholder), 0);
+			}
+		}
+	};
+
+	// Create the IntersectionObserver
+	const observer = new IntersectionObserver(onIntersect, {
+		root: null,           // viewport
+		rootMargin: '200px',  // start loading a bit before it hits the bottom
+		threshold: 0.01
+	});
+
+	// Start observing placeholders
+	document.querySelectorAll('.chunk-placeholder').forEach(el => observer.observe(el));
+</script>
