@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STEX Package Completion</title>
+    <link rel="stylesheet" href="css/pico.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/activity-chart.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <ul>
+                <li class="logo">SC4PropTextureCatalog</li>
+                <li><a href="/Index.html">Home</a></li>
+                <li><a href="/ViewPack.html">View a Pack</a></li>
+                <li><a href="/CompletionStex.html">STEX Status</a></li>
+                <li><a href="/About.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main  role="main" class="container">
+        <h1>STEX Package Completion Tracker</h1>
+        <p>This page tracks the STEX packages tracked in this catalog. Because the contents of this catalog mirrors that of sc4pac, it can also be used to judge the inclusion of packages in sc4pac too. Each square is one STEX upload. Filled ids have been completed and are indexed. Deleted, hidden, or otherwise non-functioning STEX ids are not yet factored into this chart.</p>
+        <progress id="stex-progress" ></progress>
+        <p id="stex-progress-label" style="text-align: center;">### / ### (##%) uploads indexed</p>
+        <div id="activity-chart"></div>
+
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/activity-chart.js"></script>
+</body>
+
+</html>
