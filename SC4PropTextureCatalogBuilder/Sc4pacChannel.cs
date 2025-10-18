@@ -14,9 +14,19 @@ namespace SC4PropTextureCatalogBuilder {
         SC4Evermore
     }
 
-    public struct ChannelPaths(string yamlPath, string jsonPath) {
+    public struct ChannelPaths(string yamlPath, string jsonPath, string trackerPath) {
         public string YamlPath = yamlPath;
         public string JsonPath = jsonPath;
+        /// <summary>
+        /// Local project path for the Catalog website tracker visual.
+        /// </summary>
+        public string TrackerPath = trackerPath;
+    }
+
+    public struct ChartData(int id, string name, string url) {
+        public int Id { get; set; } = id;
+        public string Name { get; set; } = name;
+        public string Url { get; set; } = url;
     }
 
     /// <summary>
@@ -92,7 +102,56 @@ namespace SC4PropTextureCatalogBuilder {
                 } 
             }
 
+            DumpUrls(packages, assets, channels, options);
             return (packages, assets);
+        }
+
+        /// <summary>
+        /// Dump the urls found in packages and assets for use in the Catalog progress tracker visual.
+        /// </summary>
+        private static void DumpUrls(List<JsonPackage> packages, List<JsonAsset> assets, Dictionary<string, ChannelPaths> channels, ChannelOptions co) {
+            List<ChartData> data = [];
+
+            foreach (JsonPackage pkg in packages) {
+                if (pkg.Info.Websites.Count > 0) {
+                    foreach (string url in pkg.Info.Websites) {
+                        data.Add(ParseUrl(url));
+                    }
+                } else {
+                    data.Add(ParseUrl(pkg.Info.Website));
+                }
+            }
+
+            foreach (JsonAsset ast in assets) {
+                data.Add(ParseUrl(ast.Url));
+            }
+
+            var json = JsonSerializer.Serialize(data);
+            switch (co) {
+                case ChannelOptions.None:
+                    return;
+                case ChannelOptions.All:
+                    foreach (var key in channels.Keys) {
+                        File.WriteAllText(channels[key].TrackerPath, json);
+                    }
+                    break;
+                default:
+                    var name = co.ToString().ToLower();
+                    File.WriteAllText(channels[name].TrackerPath, json);
+                    break;
+            }
+        }
+
+        private static ChartData ParseUrl(string url) {
+            if (url.Contains("simtropolis")) {
+                string name = url.Split("file/")[1].Replace("/", "");
+                int.TryParse(name.Split('-')[0], out int id);
+                return new ChartData(id, name, url);
+            } else if (url.Contains("sc4evermore")) {
+                return new ChartData();
+            } else {
+                return new ChartData();
+            }
         }
     }
 
@@ -120,6 +179,7 @@ namespace SC4PropTextureCatalogBuilder {
         public string Summary { get; set; } = string.Empty;
         public string Author { get; set; } = string.Empty;
         public List<string> Images { get; set; } = [];
+        public string Website { get; set; } = string.Empty;
         public List<string> Websites { get; set; } = [];
     }
 }
