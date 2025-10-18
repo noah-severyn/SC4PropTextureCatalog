@@ -4,10 +4,6 @@ using System.Diagnostics;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using YamlDotNet;
-using YamlDotNet.Core.Tokens;
-using YamlDotNet.Serialization;
-using YamlDotNet.Serialization.NamingConventions;
 
 namespace SC4PropTextureCatalogBuilder {
     public enum ChannelOptions {
@@ -30,10 +26,8 @@ namespace SC4PropTextureCatalogBuilder {
 
 
         /// <summary>
-        /// Build sc4pac channel(s) converting the YAML files to JSON.
+        /// Build sc4pac channel(s) converting the YAML files to JSON. JSON is significantly easier to parse in C# than YAML.
         /// </summary>
-        /// <param name="channels"></param>
-        /// <param name="options">The channel(s) to build</param>
         internal static void BuildChannels(Dictionary<string, ChannelPaths> channels, ChannelOptions options) {
             switch (options) {
                 case ChannelOptions.None:
@@ -45,15 +39,13 @@ namespace SC4PropTextureCatalogBuilder {
                     break;
                 default:
                     var name = options.ToString().ToLower();
-                    Build(channels[name].YamlPath, channels[name].YamlPath);
+                    Build(channels[name].YamlPath, channels[name].JsonPath);
                     break;
             }
         }
         /// <summary>
         /// Build a sc4pac channel.
         /// </summary>
-        /// <param name="yamlPath">Input directory with YAML files</param>
-        /// <param name="outputPath">Output directory for JSON files</param>
         private static void Build(string yamlPath, string outputPath) {
             FileMgt.ExecuteCommand("cmd.exe", $"/C sc4pac channel build --output \"{outputPath.Replace("\\", "/")}\" \"{yamlPath.Replace("\\", "/")}\"");
         }
@@ -62,11 +54,11 @@ namespace SC4PropTextureCatalogBuilder {
         /// <summary>
         /// Parse the JSON files created from a sc4pac <c>channel build</c> operation.
         /// </summary>
-        /// <param name="channelFolder">Folder containing the files to parse</param>
         /// <returns>A list of packages found</returns>
-        internal static List<JsonPackage> ParseChannelJson(Dictionary<string, ChannelPaths> channels, ChannelOptions options) {
+        internal static (List<JsonPackage>, List<JsonAsset>) ParseChannelJson(Dictionary<string, ChannelPaths> channels, ChannelOptions options) {
             string json;
             List<JsonPackage> packages = [];
+            List<JsonAsset> assets = [];
             var opt = new JsonSerializerOptions {
                 PropertyNameCaseInsensitive = true
             };
@@ -76,7 +68,7 @@ namespace SC4PropTextureCatalogBuilder {
 
             switch (options) {
                 case ChannelOptions.None:
-                    return [];
+                    return ([], []);
                 case ChannelOptions.All:
                     foreach (var key in channels.Keys) {
                         channelFolder = Path.Combine(channels[key].JsonPath, "metadata");
@@ -93,56 +85,20 @@ namespace SC4PropTextureCatalogBuilder {
 
             foreach (string path in paths) {
                 json = File.ReadAllText(path);
-                packages.Add(JsonSerializer.Deserialize<JsonPackage>(json, opt));
+                if (path.Contains("sc4pacAsset")) {
+                    assets.Add(JsonSerializer.Deserialize<JsonAsset>(json, opt));
+                } else {
+                    packages.Add(JsonSerializer.Deserialize<JsonPackage>(json, opt));
+                } 
             }
 
-            return packages;
+            return (packages, assets);
         }
-
-        internal static List<YamlAsset> ParseChannelYaml(Dictionary<string, ChannelPaths> channels, ChannelOptions options) {
-            string yaml;
-            List<YamlAsset> assets = [];
-            var ds = new DeserializerBuilder().WithNamingConvention(CamelCaseNamingConvention.Instance).IgnoreUnmatchedProperties().Build();
-
-            List<string> paths = [];
-
-            switch (options) {
-                case ChannelOptions.None:
-                    return [];
-                case ChannelOptions.All:
-                    foreach (var key in channels.Keys) {
-                        paths.AddRange(Directory.EnumerateFiles(channels[key].YamlPath, "*.yaml", SearchOption.AllDirectories));
-                    }
-                    break;
-                default:
-                    var name = options.ToString().ToLower();
-                    paths.AddRange(Directory.EnumerateFiles(channels[name].YamlPath, "*.yaml", SearchOption.AllDirectories));
-                    break;
-            }
-
-
-            foreach (string path in paths) {
-                yaml = File.ReadAllText(path);
-                var parser = new YamlDotNet.Core.Parser(new StringReader(yaml));
-                while (parser.MoveNext()) {
-                    try {
-                        var doc = ds.Deserialize<YamlAsset>(yaml);
-                        if (doc != null) {
-                            assets.Add(doc);
-                        }
-                    }
-                    catch (Exception ex) {
-                        Console.WriteLine($"Skipping invalid document: {ex.Message}");
-                    }
-                }
-            }
-
-            return assets;
-        }
-
     }
 
-    public class YamlAsset {
+    public class JsonAsset {
+        [JsonPropertyName("$type")]
+        public string Type { get; set; } = string.Empty;
         public string AssetId { get; set; } = string.Empty;
         public string Version { get; set; } = string.Empty;
         public string LastModified { get; set; } = string.Empty;

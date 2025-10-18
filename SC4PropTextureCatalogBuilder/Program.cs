@@ -6,8 +6,8 @@ using System.Linq;
 // ===================================================================================================================================================
 var createDb = false;
 byte exchangeId = 1;
-ChannelOptions buildOpt = ChannelOptions.Default; //Which channels to build YMAL → JSON
-ChannelOptions parseOpt = ChannelOptions.Default; //Which channels to parse JSON → database
+ChannelOptions buildOpt = ChannelOptions.Simtropolis; //Which channels to build YMAL → JSON
+ChannelOptions parseOpt = ChannelOptions.Simtropolis; //Which channels to parse JSON → database
 // ===================================================================================================================================================
 const string sc4pacCachePath = "C:\\Users\\Administrator\\AppData\\Local\\io.github.memo33\\sc4pac\\cache\\coursier";
 const string extractLocation = "P:\\sc4pac-cache";
@@ -34,12 +34,12 @@ channels.Add("sc4evermore", new ChannelPaths("C:\\source\\repos\\sc4e-channel\\s
 FileMgt.ExtractAndMoveFiles(sc4pacCachePath, extractLocation);
 
 //Optionally build the channels and then parse their JSON metadata
-//Sc4pacChannel.BuildChannels(channels, buildOpt);
-var assets = Sc4pacChannel.ParseChannelYaml(channels, parseOpt);
+Sc4pacChannel.BuildChannels(channels, buildOpt);
+(var assets, var packages) = Sc4pacChannel.ParseChannelJson(channels, parseOpt);
 
 
 //Parse each item from the backup location and populate the database
-//DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb);
+DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb);
 //db.BuildTGITable(parseOpt);
 //db.BuildPackageTable(packages);
 
