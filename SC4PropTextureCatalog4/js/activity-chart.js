@@ -47,7 +47,7 @@ function loadChunk(index, placeholder) {
 		if (item !== undefined) {
 			square.style.backgroundColor = '#507a99';
 			square.setAttribute('data-tooltip', item.name);
-			square.setAttribute('onclick', "window.open('https://community.simtropolis.com/files/file/" + item.name + "', '_blank')");
+			square.setAttribute('onclick', "window.open('" + item.url + "', '_blank')");
 		}
 		else {
 			square.setAttribute('data-tooltip', itemId);
