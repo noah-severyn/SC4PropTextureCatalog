@@ -170,8 +170,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// <summary>
         /// Build the TGI table from all extracted files, skipping any assets that already exist.
         /// </summary>
-        /// <param name="filesPath"></param>
-        public List<DBPFError> BuildTGITable(string filesPath) {
+        public List<DBPFError> BuildTGITable(string filesPath, List<JsonAsset> assets) {
             List<DBPFError> errors = [];
             foreach (string folder in Directory.EnumerateDirectories(filesPath, "*", SearchOption.AllDirectories)) {
                 var files = Directory.EnumerateFiles(folder);
@@ -183,7 +182,7 @@ namespace SC4PropTextureCatalogBuilder {
 
                 if (!AssetExists(exchangeId, assetId)) {
                     Console.WriteLine(exchangeId + "-" + assetId);
-                    errors = ParseFolder(folder, exchangeId, assetId);
+                    errors = ParseFolder(folder, exchangeId, assetId, assets);
                 }
             }
             return errors;
@@ -191,6 +190,7 @@ namespace SC4PropTextureCatalogBuilder {
 
         private static int GetAssetId(string pathOrUrl) {
             string id = string.Empty;
+            pathOrUrl = pathOrUrl.Replace("/", "\\"); //So this works with web and file path urls
             try {
                 if (pathOrUrl.Contains("simtropolis")) {
                     //P:\sc4pac-cache\https\community.simtropolis.com\files\file\45-bigbus-station\%3Fdo%3Ddownload%26r%3D22305\
@@ -236,7 +236,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// <param name="exchangeId">Id of the exchange this item is found on</param>
         /// <param name="assetId">Id of the asset</param>
         /// <returns>A list of any errors encountered</returns>
-        private List<DBPFError> ParseFolder(string folderPath, int exchangeId, int assetId) {
+        private List<DBPFError> ParseFolder(string folderPath, int exchangeId, int assetId, List<JsonAsset> assets) {
             var errors = new List<DBPFError>();
             var items = new List<CatalogItem>();
             var files = Directory.EnumerateFiles(folderPath, "*", SearchOption.AllDirectories);
@@ -351,6 +351,15 @@ namespace SC4PropTextureCatalogBuilder {
             return errors;
         }
 
+        public void FillAssetTable(List<JsonAsset> assets) {
+            foreach (var asset in assets) {
+                int exchId = GetExchangeId(asset.Url);
+                int assetId = GetAssetId(asset.Url);
+
+                string cleanedUrl = new Uri(asset.Url).GetLeftPart(UriPartial.Path); //Strip query params from the Url
+                _db.Execute($"UPDATE Assets SET Version = \"{asset.Version}\", LastModified = \"{asset.LastModified}\", Url = \"{cleanedUrl}\" WHERE ExchangeId = {exchId} AND AssetId = {assetId}");
+            }
+        }
 
 
         /// <summary>

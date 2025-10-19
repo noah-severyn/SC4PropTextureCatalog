@@ -120,7 +120,8 @@ namespace SC4PropTextureCatalogBuilder {
                 data.Add(ParseUrl(ast.Url));
             }
 
-            var json = JsonSerializer.Serialize(data);
+            var opts = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+            var json = JsonSerializer.Serialize(data, opts);
             switch (co) {
                 case ChannelOptions.None:
                     return;
@@ -138,9 +139,14 @@ namespace SC4PropTextureCatalogBuilder {
 
         private static ChartData ParseUrl(string url) {
             if (url.Contains("simtropolis")) {
-                string name = url.Split("file/")[1].Replace("/", "");
-                int.TryParse(name.Split('-')[0], out int id);
-                return new ChartData(id, name, url);
+                try {
+                    string name = url.Split("file/")[1].Replace("/", "");
+                    int.TryParse(name.Split('-')[0], out int id);
+                    return new ChartData(id, name, url);
+                }
+                catch (IndexOutOfRangeException) {
+                    return new ChartData();
+                }
             } else if (url.Contains("sc4evermore")) {
                 return new ChartData();
             } else {
