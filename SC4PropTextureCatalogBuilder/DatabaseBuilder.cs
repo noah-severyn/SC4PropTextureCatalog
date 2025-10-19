@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Diagnostics;
-using SQLite;
-using System.IO;
 using csDBPF;
+using SQLite;
 
 namespace SC4PropTextureCatalogBuilder {
     /// <summary>
@@ -30,6 +26,9 @@ namespace SC4PropTextureCatalogBuilder {
         [Column("Category")]
         public int? Category { get; set; } = type;
 
+        /// <summary>
+        /// Item name, if applicable. Typically an exemplar name.
+        /// </summary>
         [Column("Name")]
         public string? Name { get; set; } = exmpName;
 
@@ -38,68 +37,83 @@ namespace SC4PropTextureCatalogBuilder {
         }
     }
 
+    ///// <summary>
+    ///// An item in the Asset table. An asset referrs to a download or file, and is akin to a sc4pac asset.
+    ///// </summary>
+    //[Table("Packages")]
+    //public class PackageItem(int exchId, int assetId, string? group = null, string? name = null, string? version = null, List<string>? websites = null, string? author = null, int? primaryCat = null, int? secondaryCat = null) {
+    //    [Column("ExchangeId")]
+    //    [NotNull]
+    //    public int ExchangeId { get; set; } = exchId;
+        
+    //    [Column("AssetId")]
+    //    [NotNull]
+    //    public int AssetId { get; set; } = assetId;
+
+    //    /// <summary>
+    //    /// sc4pac package identifier in the format <c>group:name</c>.
+    //    /// </summary>
+    //    [Column("Package")]
+    //    public string?  Package { get; set; } = $"{group}:{name}";
+
+    //    [Column("Version")]
+    //    public string? Version { get; set; } = version;
+
+    //    /// <summary>
+    //    /// Semicolon separated list of one or more urls
+    //    /// </summary>
+    //    [Column("Websites")]
+    //    public string Websites { get; set; } = string.Join(';', websites ?? []);
+
+    //    [Column("Author")]
+    //    public string? Author { get; set; } = author;
+
+    //    /// <summary>
+    //    /// Describes the contents of this asset as one or more of: Textures, Buildings, Flora, Fauna, People, Vehicles, Scenery, Helpers, Effects, Other, etc.
+    //    /// </summary>
+    //    [Column("PrimaryCat")]
+    //    public int? PrimaryCats { get; set; } = primaryCat;
+
+    //    /// <summary>
+    //    /// Further categorizes each of the primary categories into subcategories
+    //    /// </summary>
+    //    [Column("SecondaryCat")]
+    //    public int? SecondaryCats { get; set; } = secondaryCat;
+
+    //    public override string ToString() {
+    //        return $"Id:{ExchangeId}-{AssetId}, Package:{Package}, Version:{Version}, Author:{Author}, Primary:{PrimaryCats}, Secondary:{SecondaryCats}";
+    //    }
+    //}
+
     /// <summary>
     /// An item in the Asset table. An asset referrs to a download or file, and is akin to a sc4pac asset.
     /// </summary>
-    [Table("Packages")]
-    public class PackageItem(int exchId, int assetId, string? group = null, string? name = null, string? version = null, List<string>? websites = null, string? author = null, int? primaryCat = null, int? secondaryCat = null) {
-        [Column("ExchangeId")]
+    [Table("Assets")]
+    public class AssetItem(int exchId, int assetId) {
         [NotNull]
         public int ExchangeId { get; set; } = exchId;
-        
-        [Column("AssetId")]
         [NotNull]
         public int AssetId { get; set; } = assetId;
-
-        /// <summary>
-        /// sc4pac package identifier in the format <c>group:name</c>.
-        /// </summary>
-        [Column("Package")]
-        public string?  Package { get; set; } = $"{group}:{name}";
-
-        [Column("Version")]
-        public string? Version { get; set; } = version;
-
-        /// <summary>
-        /// Semicolon separated list of one or more urls
-        /// </summary>
-        [Column("Websites")]
-        public string Websites { get; set; } = string.Join(';', websites ?? []);
-
-        [Column("Author")]
-        public string? Author { get; set; } = author;
-
-        /// <summary>
-        /// Describes the contents of this asset as one or more of: Textures, Buildings, Flora, Fauna, People, Vehicles, Scenery, Helpers, Effects, Other, etc.
-        /// </summary>
-        [Column("PrimaryCat")]
-        public int? PrimaryCats { get; set; } = primaryCat;
-
-        /// <summary>
-        /// Further categorizes each of the primary categories into subcategories
-        /// </summary>
-        [Column("SecondaryCat")]
-        public int? SecondaryCats { get; set; } = secondaryCat;
-
-        public override string ToString() {
-            return $"Id:{ExchangeId}-{AssetId}, Package:{Package}, Version:{Version}, Author:{Author}, Primary:{PrimaryCats}, Secondary:{SecondaryCats}";
-        }
+        public string Version { get; set; } = string.Empty;
+        public string LastModified { get; set; } = string.Empty;
+        public string Url { get; set; } = string.Empty;
     }
 
+
     /// <summary>
-    /// Dimension/lookup table of TGI types (building, prop, texture, flora, cohort, etc.).
+    /// Dimension/lookup table of TGI types (building, prop, texture, flora, cohort, etc.). These values are nominally based off Rep 0 of the LotConfigPropertyLotObject property, with a few extra values added in for the purposes of tracking in this database.
     /// </summary>
-    [Table("TGITypes")]
+    [Table("TGICategories")]
     public class TGICategory(int type, string name) {
         [PrimaryKey]
-        [Column("Type")]
-        public int Type { get; set; } = type;
+        [Column("Category")]
+        public int Category { get; set; } = type;
 
         [Column("Name")]
         public string Name { get; set; } = name;
 
         public override string ToString() {
-            return $"{Type}: {Name}";
+            return $"{Category}: {Name}";
         }
     }
 
@@ -120,7 +134,7 @@ namespace SC4PropTextureCatalogBuilder {
             _db = new SQLiteConnection(dbPath);
             if (create) {
                 _db.CreateTable<CatalogItem>();
-                _db.CreateTable<PackageItem>();
+                _db.CreateTable<AssetItem>();
                 _db.CreateTable<TGICategory>();
                 _db.Insert(new TGICategory(-1, "Unknown"));
                 _db.Insert(new TGICategory(0, "Building"));
@@ -128,55 +142,85 @@ namespace SC4PropTextureCatalogBuilder {
                 _db.Insert(new TGICategory(2, "Texture"));
                 _db.Insert(new TGICategory(4, "Flora"));
                 _db.Insert(new TGICategory(10, "Cohort"));
+                _db.Insert(new TGICategory(11, "LTEXT"));
+                _db.Insert(new TGICategory(12, "Lua"));
+                _db.Insert(new TGICategory(13, "UI"));
             }
         }
 
 
-        public void BuildPackageTable(List<JsonPackage> packages) {
-            List<PackageItem> items = [];
-            int exchangeId;
-            foreach (var pkg in packages) {
-                exchangeId = GetExchangeId(pkg.Info.Websites[0]);
-                items.Add(new PackageItem(exchangeId, 0, pkg.Group, pkg.Name, pkg.Version, pkg.Info.Websites, pkg.Info.Author));
-            }
-
-            if (items.Count == 0) {
-                return;
-            }
-            foreach (PackageItem item in items) {
-                _db.Insert(item);
-            }
-        }
-
-
-
-
-        //public void BuildTGITable(string filesPath) {
-        //    int exchangeId = GetExchangeId(filesPath);
-
-        //    var errors = new List<DBPFError>();
-        //    foreach (string folder in Directory.EnumerateDirectories(filesPath)) {
-                
-                
-
-        //        if (!AssetExists(exchangeId, assetId)) {
-        //            Console.WriteLine(assetId);
-        //            errors = ParseFolder(folder, exchangeId, assetId);
-        //        }
+        //public void BuildPackageTable(List<JsonPackage> packages) {
+        //    List<PackageItem> items = [];
+        //    int exchangeId;
+        //    foreach (var pkg in packages) {
+        //        exchangeId = GetExchangeId(pkg.Info.Websites[0]);
+        //        items.Add(new PackageItem(exchangeId, 0, pkg.Group, pkg.Name, pkg.Version, pkg.Info.Websites, pkg.Info.Author));
         //    }
-        //    Console.WriteLine(errors.Count);
+
+        //    if (items.Count == 0) {
+        //        return;
+        //    }
+        //    foreach (PackageItem item in items) {
+        //        _db.Insert(item);
+        //    }
         //}
 
-        //public int GetAssetId(string  ) {
-        //    int startIdx = folder.LastIndexOf('\\');
-        //    _ = int.TryParse(folder.AsSpan(startIdx + 1, folder.IndexOf('-', startIdx) - startIdx - 1), out int assetId);
-        //}
+
+
+        /// <summary>
+        /// Build the TGI table from all extracted files, skipping any assets that already exist.
+        /// </summary>
+        /// <param name="filesPath"></param>
+        public List<DBPFError> BuildTGITable(string filesPath) {
+            List<DBPFError> errors = [];
+            foreach (string folder in Directory.EnumerateDirectories(filesPath, "*", SearchOption.AllDirectories)) {
+                var files = Directory.EnumerateFiles(folder);
+                if (!files.Any(f => f.IsDBPF())) { continue; }
+                    
+                
+                int exchangeId = GetExchangeId(folder);
+                int assetId = GetAssetId(folder);
+
+                if (!AssetExists(exchangeId, assetId)) {
+                    Console.WriteLine(exchangeId + "-" + assetId);
+                    errors = ParseFolder(folder, exchangeId, assetId);
+                }
+            }
+            return errors;
+        }
+
+        private static int GetAssetId(string pathOrUrl) {
+            string id = string.Empty;
+            try {
+                if (pathOrUrl.Contains("simtropolis")) {
+                    //P:\sc4pac-cache\https\community.simtropolis.com\files\file\45-bigbus-station\%3Fdo%3Ddownload%26r%3D22305\
+                    //P:\sc4pac-cache\https\community.simtropolis.com\library\maxis\\sc4\buildings\Maxis_Buildings.zip\63 Building ← No available id
+                    id = pathOrUrl.Split("file\\")[1].Split("-")[0];
+                } else if (pathOrUrl.Contains("sc4evermore")) {
+                    //P:\sc4pac-cache\https\www.sc4evermore.com\index.php\downloads%3Ftask%3Ddownload.send%26id%3D1%3Asc4d-lex-legacy-hkabt-dependencies-pack
+                    id = pathOrUrl.Split("id%3D")[1].Split("%3A")[0];
+                } else if (pathOrUrl.Contains("toutsimcities")) {
+                    //P:\sc4pac-cache\https\www.toutsimcities.com\downloads\start\1780\TSC\Namspopof
+                    id = pathOrUrl.Split("start\\")[1].Split("\\")[0];
+                } else if (pathOrUrl.Contains("hide-inoki")) {
+                    //P:\sc4pac-cache\http\hide-inoki.com\bbs\archives\files\1391.zip\NekoPropSet03
+                    //P:\sc4pac-cache\http\hide-inoki.com\works\sc4\has_dependencies.zip ← No available id
+                    id = pathOrUrl.Split("files\\")[1].Split(".")[0];
+                }
+            }
+            catch (IndexOutOfRangeException) {
+                id = "0";
+            }
+            
+            _ = int.TryParse(id, out int assetId);
+            return assetId;
+        }
 
         private static int GetExchangeId(string pathOrUrl) {
             if (pathOrUrl.Contains("simtropolis")) {
                 return 1;
             } else if (pathOrUrl.Contains("sc4evermore")) {
-                return 1;
+                return 2;
             } else if (pathOrUrl.Contains("toutsimcities")) {
                 return 3;
             } else if (pathOrUrl.Contains("hide-inoki")) {
@@ -197,9 +241,9 @@ namespace SC4PropTextureCatalogBuilder {
             var items = new List<CatalogItem>();
             var files = Directory.EnumerateFiles(folderPath, "*", SearchOption.AllDirectories);
 
-            var dbpfFiles = files.GetUniqueFilenamesAcrossFolders().FilterDBPFFiles();
+            var dbpfFiles = files.FilterDBPFFiles().GetUniqueFilenamesAcrossFolders();
+            FileStream fs;
             foreach (string file in dbpfFiles) {
-                FileStream fs;
                 try {
                     fs = new FileStream(file, FileMode.Open);
                 }
@@ -211,7 +255,7 @@ namespace SC4PropTextureCatalogBuilder {
                 }
                 DBPFFile dbpf = new DBPFFile(fs);
 
-                var targetEntries = dbpf.ListOfEntries.Where(e => e.MatchesEntryType(DBPFTGI.FSH_BASE_OVERLAY) || e.MatchesEntryType(DBPFTGI.EXEMPLAR) || e.MatchesEntryType(DBPFTGI.COHORT));
+                var targetEntries = dbpf.ListOfEntries.Where(e => e.MatchesAnyEntryType(DBPFTGI.FSH_BASE_OVERLAY, DBPFTGI.EXEMPLAR, DBPFTGI.COHORT, DBPFTGI.LTEXT, DBPFTGI.LUA, DBPFTGI.LUA_GEN, DBPFTGI.UI));
 
                 foreach (DBPFEntry entry in targetEntries) {
                     //Add Base/Overlay textures (look at the least significant 4 bits and only add if it is 0, 5, or A: AND the Instance by 0b1111 (0xF) and examine the modulus result)
@@ -274,6 +318,21 @@ namespace SC4PropTextureCatalogBuilder {
 
                         items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 10, exmpName));
                     }
+
+                    //Add LTEXTs
+                    else if (entry.MatchesEntryType(DBPFTGI.LTEXT)) {
+                        items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 11, null));
+                    }
+
+                    //Add LUAs
+                    else if (entry.MatchesAnyEntryType(DBPFTGI.LUA, DBPFTGI.LUA_GEN)) {
+                        items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 12, null));
+                    }
+
+                    //Add UIs
+                    else if (entry.MatchesEntryType(DBPFTGI.UI)) {
+                        items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 13, null));
+                    }
                 }
             }
 
@@ -283,7 +342,7 @@ namespace SC4PropTextureCatalogBuilder {
 
             if (!AssetExists(items[0].ExchangeId, items[0].AssetId)) {
                 //At this time, we do not know the group, name or version of this asset as these come from the sc4pac JSON data
-                _db.Insert(new PackageItem(items[0].ExchangeId, items[0].AssetId));
+                _db.Insert(new AssetItem(items[0].ExchangeId, items[0].AssetId));
             }
 
             foreach (CatalogItem item in items) {

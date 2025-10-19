@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace SC4PropTextureCatalogBuilder {
@@ -42,7 +41,7 @@ namespace SC4PropTextureCatalogBuilder {
         }
 
         /// <summary>
-        /// Extract the files from sc4pac cache and move them to the new storage location.
+        /// Moves each exchange asset from the sc4pac cache and movse them to the new storage location, and extracts files in the new location from zips and cicdec installers. Each item is checked first if it has already been extracted before repeating.
         /// </summary>
         /// <remarks>
         /// I previously had issues with extracting/reading/deleting the files in place with files being locked up. Plus the long path of the cache folder caused some file path errors. This approach avoids both, and also prevents both having to re-extract each time this is run and from polluting the sc4pac cache area.

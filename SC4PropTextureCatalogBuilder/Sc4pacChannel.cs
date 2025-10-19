@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -36,7 +33,7 @@ namespace SC4PropTextureCatalogBuilder {
 
 
         /// <summary>
-        /// Build sc4pac channel(s) converting the YAML files to JSON. JSON is significantly easier to parse in C# than YAML.
+        /// Build sc4pac channel(s) with the sc4pac <c>channel build</c> command, converting the YAML metadata files to JSON for easier parsing.
         /// </summary>
         internal static void BuildChannels(Dictionary<string, ChannelPaths> channels, ChannelOptions options) {
             switch (options) {
@@ -53,18 +50,15 @@ namespace SC4PropTextureCatalogBuilder {
                     break;
             }
         }
-        /// <summary>
-        /// Build a sc4pac channel.
-        /// </summary>
         private static void Build(string yamlPath, string outputPath) {
             FileMgt.ExecuteCommand("cmd.exe", $"/C sc4pac channel build --output \"{outputPath.Replace("\\", "/")}\" \"{yamlPath.Replace("\\", "/")}\"");
         }
 
 
         /// <summary>
-        /// Parse the JSON files created from a sc4pac <c>channel build</c> operation.
+        /// Parse the channel JSON files to a list of packages and assets.
         /// </summary>
-        /// <returns>A list of packages found</returns>
+        /// <returns>A list of <see cref="JsonPackage"/> and a list of <see cref="JsonAsset"/> found</returns>
         internal static (List<JsonPackage>, List<JsonAsset>) ParseChannelJson(Dictionary<string, ChannelPaths> channels, ChannelOptions options) {
             string json;
             List<JsonPackage> packages = [];

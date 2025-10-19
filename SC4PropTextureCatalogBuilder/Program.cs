@@ -1,11 +1,7 @@
-﻿using csDBPF;
-using SC4PropTextureCatalogBuilder;
-using System.Diagnostics;
-using System.Linq;
+﻿using SC4PropTextureCatalogBuilder;
 
 // ===================================================================================================================================================
-var createDb = false;
-byte exchangeId = 1;
+bool createDb = false;
 ChannelOptions buildOpt = ChannelOptions.None; //Which channels to build YMAL → JSON
 ChannelOptions parseOpt = ChannelOptions.Simtropolis; //Which channels to parse JSON → database
 // ===================================================================================================================================================
@@ -30,16 +26,13 @@ channels.Add("simtropolis", new ChannelPaths("C:\\source\\repos\\simtropolis-cha
 channels.Add("sc4evermore", new ChannelPaths("C:\\source\\repos\\sc4e-channel\\src\\yaml", "C:\\Users\\Administrator\\sc4pac-sc4evermore-channel\\json", "C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalog4\\data\\sc4e-data.json"));
 // ===================================================================================================================================================
 
-//Extract each exchange asset from all zips and cicdec installers first and move to the backup location. Checks if the item has already been extracted before repeating.
-FileMgt.ExtractAndMoveFiles(sc4pacCachePath, extractLocation);
 
-//Optionally build the channels and then parse their JSON metadata
-Sc4pacChannel.BuildChannels(channels, buildOpt);
+//FileMgt.ExtractAndMoveFiles(sc4pacCachePath, extractLocation);
+//Sc4pacChannel.BuildChannels(channels, buildOpt);
 (var packages, var assets) = Sc4pacChannel.ParseChannelJson(channels, parseOpt);
 
 
-//Parse each item from the backup location and populate the database
 DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb);
-//db.BuildTGITable(parseOpt);
+db.BuildTGITable(extractLocation);
 //db.BuildPackageTable(packages);
 

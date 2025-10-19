@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace SC4PropTextureCatalogBuilder {
     public static class Extensions {
@@ -10,13 +6,14 @@ namespace SC4PropTextureCatalogBuilder {
             return parameters.Any(parameter => stringToCheck.Contains(parameter));
         }
 
+        /// <summary>
+        /// Returns a list of distinct file names, even if they may be stored in differing folders
+        /// </summary>
         public static List<string> GetUniqueFilenamesAcrossFolders(this IEnumerable<string> filePaths) {
             Dictionary<string, string> uniques = [];
             foreach (string file in filePaths) {
                 string fileName = Path.GetFileName(file);
-                if (!uniques.ContainsKey(fileName)) {
-                    uniques.Add(fileName, file);
-                }
+                uniques.TryAdd(fileName, file);
             }
             return uniques.Values.ToList();
         }
