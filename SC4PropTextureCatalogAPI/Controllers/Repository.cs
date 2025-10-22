@@ -23,8 +23,8 @@ namespace SC4PropTextureCatalogAPI.Controllers {
         }
 
         public async Task<List<CatalogItems>> GetSearchResultsAsync(string search) {
-            string query = "SELECT CatalogItems.AssetId, CatalogItems.File, CatalogItems.TGI, CatalogItems.Type, TGITypes.Name TGIType, CatalogItems.Name FROM CatalogItems\n";
-            query += "LEFT JOIN TGITypes ON CatalogItems.Type = TGITypes.Type\n";
+            string query = "SELECT CatalogItems.AssetId, CatalogItems.File, CatalogItems.TGI, TGICategories.Name Category, CatalogItems.Name FROM CatalogItems\n";
+            query += "LEFT JOIN TGICategories ON CatalogItems.Category = TGICategories.Category\n";
             query += $"WHERE CatalogItems.AssetId LIKE '%{search}%' OR CatalogItems.File LIKE '%{search}%' OR CatalogItems.TGI LIKE '%{search}%' OR CatalogItems.Name LIKE '%{search}%'";
 
             var results = await _db.QueryAsync<CatalogItems>(query.ToString());
@@ -32,8 +32,8 @@ namespace SC4PropTextureCatalogAPI.Controllers {
         }
 
         public async Task<List<CatalogItems>> GetByInstanceAsync(string instance) {
-            string query = "SELECT CatalogItems.AssetId, CatalogItems.File, substr(CatalogItems.TGI, -8) Instance, CatalogItems.TGI, CatalogItems.Type, TGITypes.Name TGIType, CatalogItems.Name FROM CatalogItems\n";
-            query += "LEFT JOIN TGITypes ON CatalogItems.Type = TGITypes.Type\n";
+            string query = "SELECT CatalogItems.AssetId, CatalogItems.File, substr(CatalogItems.TGI, -8) Instance, CatalogItems.TGI, TGICategories.Name Category, CatalogItems.Name FROM CatalogItems\n";
+            query += "LEFT JOIN TGICategories ON CatalogItems.Category = TGICategories.Category\n";
             query += $"WHERE Instance LIKE '%{instance}%'";
             var results = await _db.QueryAsync<CatalogItems>(query.ToString());
             return results;

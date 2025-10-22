@@ -12,7 +12,7 @@ namespace SC4PropTextureCatalogAPI.Models {
         public string File { get; set; } = string.Empty;
         [NotNull]
         public string TGI { get; set; } = string.Empty;
-        public int TGIType { get; set; }
+        public string Category { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
     }
 
