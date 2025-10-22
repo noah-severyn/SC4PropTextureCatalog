@@ -10,6 +10,7 @@ header {
   width: 100%;
   border-bottom: 1px solid #e5e5e5;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  line-height: 1em;
 }
 header li {
 	font-size: 1.5rem;

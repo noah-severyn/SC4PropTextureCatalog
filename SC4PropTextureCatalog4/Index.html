@@ -24,7 +24,7 @@
         <h3>Search for props, textures, buildings, or flora by Pack, TGI, Author, or Exemplar Name</h3>
         <p style="color:darkblue">Currently only thumbnails for textures are supported. Props/Buildings/Flora to follow.</p>
 
-        <form method="get" role="search">
+        <form method="get" role="search" id="SearchForm">
             <input id="SearchBox" type="search" placeholder="Search for Pack | TGI | Author | Exemplar Name ...">
             <!-- <select id="TGITypeSelect" aria-label="Choose TGI Type" style="width:200px">
                 <option value="all" selected>All TGI Types</option>
@@ -62,42 +62,29 @@
             </select>
         </fieldset>
 
-        
-        
-        <p>Query "<span id="QuerySearchText">___</span>" returned <span id="QueryResultsCount">###</span> results.</p>
+
+
+        <p id="QueryResultSummary">Query "<span id="QuerySearchText"></span>" returned <span id="QueryResultCount"></span> results.</p>
         <hr />
 
-        <!-- <table id="ContentTable"> -->
-        <table>
+        <table id="QueryResultTable">
             <thead>
                 <tr class="header">
                     <th>Package Name</th>
+                    <th>File</th>
                     <th>TGI</th>
-                    <th>Type</th>
+                    <th>Category</th>
                     <th>Author</th>
                     <th>Exemplar Name</th>
                 </tr>
             </thead>
-            <tbody>
-                @{
-                    foreach (IndexModel.CatalogRecord item in Model.ListOfRecords) {
-                        <tr>
-                            <td><a href="#">@item.File</a></td>
-                            <td>@item.TGI</td>
-                            <td>@item.TGIType</td>
-                            <td>System.IO.File.Exists("~/img/thumbnails/" + item.TGI.Replace("0x", "").Replace(", ", "-") + ".png");
-                                // <img src="@(item.ImgSrc)" height="64px" loading="lazy" />
-                            </td>
-                            <td>@item.Name</td>
-                        </tr>
-                    }
-                }
-            </tbody>
+            <tbody id="QueryResultBody"></tbody>
         </table>
     </main>
 
-    
+
     <script src="js/site.js"></script>
+    <script src="js/site-search.js"></script>
     <script src="js/site-events.js"></script>
 </body>
 </html>
