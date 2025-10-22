@@ -1,0 +1,1095 @@
+[
+    {
+        "id": 22744,
+        "cid": 16,
+        "uid": 237910,
+        "author": "GlobexCo",
+        "category": "CXL Mods & Tools",
+        "title": "Cities XL sandbox mode",
+        "release": "0.1",
+        "submitted": "2009-10-27T08:31:30Z",
+        "updated": "2009-10-27T08:31:30Z",
+        "sizeTotal": "1.45 kB",
+        "files": [
+            {
+                "id": 49291,
+                "name": "design.zip",
+                "size": "1.45 kB"
+            }
+        ],
+        "aliasEntry": "cities-xl-sandbox-mode",
+        "aliasAuthor": "globexco",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/22744-cities-xl-sandbox-mode\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 22745,
+        "cid": 16,
+        "uid": 237910,
+        "author": "GlobexCo",
+        "category": "CXL Mods & Tools",
+        "title": "Cities XL terrain\/map mod",
+        "release": "1.0",
+        "submitted": "2009-10-27T15:58:00Z",
+        "updated": "2009-10-27T15:58:00Z",
+        "sizeTotal": "2.38 kB",
+        "files": [
+            {
+                "id": 49293,
+                "name": "TERRAINmd01.zip",
+                "size": "2.38 kB"
+            }
+        ],
+        "aliasEntry": "cities-xl-terrainmap-mod",
+        "aliasAuthor": "globexco",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/22745-cities-xl-terrainmap-mod\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 24123,
+        "cid": 16,
+        "uid": 183192,
+        "author": "MandelSoft",
+        "category": "CXL Mods & Tools",
+        "title": "Maarten's Light Replacement Mod (LRM) for CitiesXL - Version 1",
+        "release": "1.1",
+        "submitted": "2010-06-13T12:51:56Z",
+        "updated": "2010-06-13T12:51:56Z",
+        "sizeTotal": "330.22 kB",
+        "files": [
+            {
+                "id": 51221,
+                "name": "MRTNRLN_CitiesXL_LRM_V1.1.zip",
+                "size": "330.22 kB"
+            }
+        ],
+        "aliasEntry": "maartens-light-replacement-mod-lrm-for-citiesxl-version-1",
+        "aliasAuthor": "mandelsoft",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/24123-maartens-light-replacement-mod-lrm-for-citiesxl-version-1\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 24231,
+        "cid": 16,
+        "uid": 93952,
+        "author": "kiwispanker",
+        "category": "CXL Mods & Tools",
+        "title": "CXL Unlocker Mod v.2.0 Addon patch",
+        "release": "2",
+        "submitted": "2010-06-24T02:31:12Z",
+        "updated": "2010-06-24T02:31:12Z",
+        "sizeTotal": "134.89 kB",
+        "files": [
+            {
+                "id": 51383,
+                "name": "z_unlocker_v2_addon_kiwi_UPDATE_1.zip",
+                "size": "134.89 kB"
+            }
+        ],
+        "aliasEntry": "cxl-unlocker-mod-v20-addon-patch",
+        "aliasAuthor": "kiwispanker",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/24231-cxl-unlocker-mod-v20-addon-patch\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 24259,
+        "cid": 16,
+        "uid": 93952,
+        "author": "kiwispanker",
+        "category": "CXL Mods & Tools",
+        "title": "Cities XL - Christmas Road Addon",
+        "release": "1.0",
+        "submitted": "2010-06-27T07:53:34Z",
+        "updated": "2010-06-27T07:53:34Z",
+        "sizeTotal": "304.11 kB",
+        "files": [
+            {
+                "id": 51417,
+                "name": "z_christmas_roads_kiwi.zip",
+                "size": "304.11 kB"
+            }
+        ],
+        "aliasEntry": "cities-xl-christmas-road-addon",
+        "aliasAuthor": "kiwispanker",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/24259-cities-xl-christmas-road-addon\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 24618,
+        "cid": 16,
+        "uid": 237910,
+        "author": "GlobexCo",
+        "category": "CXL Mods & Tools",
+        "title": "Super-High Graphic Settings",
+        "release": "1.0",
+        "submitted": "2010-08-12T11:52:26Z",
+        "updated": "2010-08-12T11:52:26Z",
+        "sizeTotal": "1017 bytes",
+        "files": [
+            {
+                "id": 51977,
+                "name": "mod_GlobexCo_SuperHighSettings.zip",
+                "size": "1017 bytes"
+            }
+        ],
+        "aliasEntry": "super-high-graphic-settings",
+        "aliasAuthor": "globexco",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/24618-super-high-graphic-settings\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 24635,
+        "cid": 16,
+        "uid": 334830,
+        "author": "Sniper296",
+        "category": "CXL Mods & Tools",
+        "title": "No more boxes (cars)",
+        "release": "1.0",
+        "submitted": "2010-08-16T20:06:37Z",
+        "updated": "2010-08-16T20:06:37Z",
+        "sizeTotal": "3.81 kB",
+        "files": [
+            {
+                "id": 52001,
+                "name": "CXL_NoCarBoxes_S296_V1.zip",
+                "size": "3.81 kB"
+            }
+        ],
+        "aliasEntry": "no-more-boxes-cars",
+        "aliasAuthor": "sniper296",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/24635-no-more-boxes-cars\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 24638,
+        "cid": 16,
+        "uid": 334830,
+        "author": "Sniper296",
+        "category": "CXL Mods & Tools",
+        "title": "New York MTA Bus",
+        "release": "1.0",
+        "submitted": "2010-08-17T14:55:11Z",
+        "updated": "2010-08-17T14:55:11Z",
+        "sizeTotal": "455.62 kB",
+        "files": [
+            {
+                "id": 52007,
+                "name": "CXL_NewYorkMTABus_S296_V1.zip",
+                "size": "455.62 kB"
+            }
+        ],
+        "aliasEntry": "new-york-mta-bus",
+        "aliasAuthor": "sniper296",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/24638-new-york-mta-bus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 24642,
+        "cid": 16,
+        "uid": 334830,
+        "author": "Sniper296",
+        "category": "CXL Mods & Tools",
+        "title": "Los Angeles County Metro Rapid Bus",
+        "release": "0.9",
+        "submitted": "2010-08-18T08:41:16Z",
+        "updated": "2010-08-18T08:41:16Z",
+        "sizeTotal": "449.08 kB",
+        "files": [
+            {
+                "id": 52013,
+                "name": "CXL_Los AngelesMetroRapidBus_S29.zip",
+                "size": "449.08 kB"
+            }
+        ],
+        "aliasEntry": "los-angeles-county-metro-rapid-bus",
+        "aliasAuthor": "sniper296",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/24642-los-angeles-county-metro-rapid-bus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 24723,
+        "cid": 16,
+        "uid": 237910,
+        "author": "GlobexCo",
+        "category": "CXL Mods & Tools",
+        "title": "CXL Unlocker v3",
+        "release": "3",
+        "submitted": "2010-08-24T04:52:44Z",
+        "updated": "2010-08-24T04:52:44Z",
+        "sizeTotal": "3.28 MB",
+        "files": [
+            {
+                "id": 52119,
+                "name": "UnlockerMod_v3.zip",
+                "size": "3.28 MB"
+            }
+        ],
+        "aliasEntry": "cxl-unlocker-v3",
+        "aliasAuthor": "globexco",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/24723-cxl-unlocker-v3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25062,
+        "cid": 16,
+        "uid": 191654,
+        "author": "City Planner",
+        "category": "CXL Mods & Tools",
+        "title": "Cities XL 2011 Large Loans",
+        "release": "1.0",
+        "submitted": "2010-10-14T20:51:12Z",
+        "updated": "2010-10-14T20:51:12Z",
+        "sizeTotal": "1.28 kB",
+        "files": [
+            {
+                "id": 52597,
+                "name": "largeloan.zip",
+                "size": "1.28 kB"
+            }
+        ],
+        "aliasEntry": "cities-xl-2011-large-loans",
+        "aliasAuthor": "city-planner",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25062-cities-xl-2011-large-loans\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25089,
+        "cid": 16,
+        "uid": 178614,
+        "author": "pharmist",
+        "category": "CXL Mods & Tools",
+        "title": "Extra Terraforming Options CXL 2009",
+        "release": "1.05",
+        "submitted": "2010-10-18T09:34:42Z",
+        "updated": "2010-10-18T09:34:42Z",
+        "sizeTotal": "113.38 kB",
+        "files": [
+            {
+                "id": 52647,
+                "name": "mod_pharmist_xtra_terraform_opti.zip",
+                "size": "113.38 kB"
+            }
+        ],
+        "aliasEntry": "extra-terraforming-options-cxl-2009",
+        "aliasAuthor": "pharmist",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25089-extra-terraforming-options-cxl-2009\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25115,
+        "cid": 16,
+        "uid": 205982,
+        "author": "Skimbo",
+        "category": "CXL Mods & Tools",
+        "title": "CXL Trainpatch V.2",
+        "release": "2",
+        "submitted": "2010-10-23T06:59:31Z",
+        "updated": "2010-10-23T06:59:31Z",
+        "sizeTotal": "8.70 kB",
+        "files": [
+            {
+                "id": 52695,
+                "name": "Metro",
+                "size": "8.70 kB"
+            }
+        ],
+        "aliasEntry": "cxl-trainpatch-v2",
+        "aliasAuthor": "skimbo",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25115-cxl-trainpatch-v2\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25122,
+        "cid": 16,
+        "uid": 334830,
+        "author": "Sniper296",
+        "category": "CXL Mods & Tools",
+        "title": "Connexxion Bus",
+        "release": "1.0",
+        "submitted": "2010-10-24T11:59:01Z",
+        "updated": "2010-10-24T11:59:01Z",
+        "sizeTotal": "464.03 kB",
+        "files": [
+            {
+                "id": 52709,
+                "name": "CXL_ConnexxionBus_S296_V1.zip",
+                "size": "464.03 kB"
+            }
+        ],
+        "aliasEntry": "connexxion-bus",
+        "aliasAuthor": "sniper296",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25122-connexxion-bus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25143,
+        "cid": 16,
+        "uid": 334830,
+        "author": "Sniper296",
+        "category": "CXL Mods & Tools",
+        "title": "Connexxion Minibus",
+        "release": "1.0",
+        "submitted": "2010-10-26T14:41:56Z",
+        "updated": "2010-10-26T14:41:56Z",
+        "sizeTotal": "439.61 kB",
+        "files": [
+            {
+                "id": 52745,
+                "name": "CXL_ConnexxionMinibus_S296_V1.zip",
+                "size": "439.61 kB"
+            }
+        ],
+        "aliasEntry": "connexxion-minibus",
+        "aliasAuthor": "sniper296",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25143-connexxion-minibus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25186,
+        "cid": 16,
+        "uid": 178614,
+        "author": "pharmist",
+        "category": "CXL Mods & Tools",
+        "title": "Extra Terraforming Options CXL 2011",
+        "release": "1.0",
+        "submitted": "2010-11-01T12:48:16Z",
+        "updated": "2010-11-01T12:48:16Z",
+        "sizeTotal": "64.96 kB",
+        "files": [
+            {
+                "id": 52805,
+                "name": "Extra Terraform Options CXL2011 .zip",
+                "size": "64.96 kB"
+            }
+        ],
+        "aliasEntry": "extra-terraforming-options-cxl-2011",
+        "aliasAuthor": "pharmist",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25186-extra-terraforming-options-cxl-2011\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25199,
+        "cid": 16,
+        "uid": 205982,
+        "author": "Skimbo",
+        "category": "CXL Mods & Tools",
+        "title": "New large metro train (CXL2011)",
+        "release": "1.0",
+        "submitted": "2010-11-02T20:06:34Z",
+        "updated": "2010-11-02T20:06:34Z",
+        "sizeTotal": "553.77 kB",
+        "files": [
+            {
+                "id": 52819,
+                "name": "Newlargemetrotrain.zip",
+                "size": "553.77 kB"
+            }
+        ],
+        "aliasEntry": "new-large-metro-train-cxl2011",
+        "aliasAuthor": "skimbo",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25199-new-large-metro-train-cxl2011\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25266,
+        "cid": 16,
+        "uid": 40504,
+        "author": "BigBib",
+        "category": "CXL Mods & Tools",
+        "title": "Right hand drive single deck UK Bus",
+        "release": "1.0",
+        "submitted": "2010-11-15T06:11:05Z",
+        "updated": "2010-11-15T06:11:05Z",
+        "sizeTotal": "411.79 kB",
+        "files": [
+            {
+                "id": 52945,
+                "name": "RHD_UK_Bus.zip",
+                "size": "411.79 kB"
+            }
+        ],
+        "aliasEntry": "right-hand-drive-single-deck-uk-bus",
+        "aliasAuthor": "bigbib",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25266-right-hand-drive-single-deck-uk-bus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25286,
+        "cid": 16,
+        "uid": 40504,
+        "author": "BigBib",
+        "category": "CXL Mods & Tools",
+        "title": "Right Hand Drive UK Mini Bus",
+        "release": "1.0",
+        "submitted": "2010-11-17T03:54:58Z",
+        "updated": "2010-11-17T03:54:58Z",
+        "sizeTotal": "430.99 kB",
+        "files": [
+            {
+                "id": 52971,
+                "name": "RHD_UK_SmallBus.zip",
+                "size": "430.99 kB"
+            }
+        ],
+        "aliasEntry": "right-hand-drive-uk-mini-bus",
+        "aliasAuthor": "bigbib",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25286-right-hand-drive-uk-mini-bus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25291,
+        "cid": 16,
+        "uid": 205982,
+        "author": "Skimbo",
+        "category": "CXL Mods & Tools",
+        "title": "Vancouver MTP",
+        "release": "1.0",
+        "submitted": "2010-11-17T16:45:56Z",
+        "updated": "2010-11-17T16:45:56Z",
+        "sizeTotal": "1.61 MB",
+        "files": [
+            {
+                "id": 52979,
+                "name": "VancouverMTP(bySkimbo).zip",
+                "size": "1.61 MB"
+            }
+        ],
+        "aliasEntry": "vancouver-mtp",
+        "aliasAuthor": "skimbo",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25291-vancouver-mtp\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25331,
+        "cid": 16,
+        "uid": 205982,
+        "author": "Skimbo",
+        "category": "CXL Mods & Tools",
+        "title": "CXL Doubledecker Pack",
+        "release": "1.0",
+        "submitted": "2010-11-21T10:41:18Z",
+        "updated": "2010-11-21T10:41:18Z",
+        "sizeTotal": "4.82 MB",
+        "files": [
+            {
+                "id": 53041,
+                "name": "DoubledeckerAddonMod(BySkimbo)v1.zip",
+                "size": "4.82 MB"
+            }
+        ],
+        "aliasEntry": "cxl-doubledecker-pack",
+        "aliasAuthor": "skimbo",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25331-cxl-doubledecker-pack\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25341,
+        "cid": 16,
+        "uid": 349375,
+        "author": "jeff10",
+        "category": "CXL Mods & Tools",
+        "title": "Conifers Mod",
+        "release": "1.0",
+        "submitted": "2010-11-22T13:05:37Z",
+        "updated": "2010-11-22T13:05:37Z",
+        "sizeTotal": "1.88 MB",
+        "files": [
+            {
+                "id": 53059,
+                "name": "YY_mod_coniferes_2011.zip",
+                "size": "1.88 MB"
+            }
+        ],
+        "aliasEntry": "conifers-mod",
+        "aliasAuthor": "jeff10",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25341-conifers-mod\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25353,
+        "cid": 16,
+        "uid": 349375,
+        "author": "jeff10",
+        "category": "CXL Mods & Tools",
+        "title": "Deciduous trees Mod",
+        "release": "1.0",
+        "submitted": "2010-11-24T16:19:42Z",
+        "updated": "2010-11-24T16:19:42Z",
+        "sizeTotal": "6.71 MB",
+        "files": [
+            {
+                "id": 53079,
+                "name": "YY_mod_arbres_caduques_2011.zip",
+                "size": "6.71 MB"
+            }
+        ],
+        "aliasEntry": "deciduous-trees-mod",
+        "aliasAuthor": "jeff10",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25353-deciduous-trees-mod\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25377,
+        "cid": 16,
+        "uid": 353213,
+        "author": "Skimbo(STEX)",
+        "category": "CXL Mods & Tools",
+        "title": "Brisbane Transportation Pack (CitiesXL2011) V2.0",
+        "release": "2",
+        "submitted": "2010-11-28T08:16:24Z",
+        "updated": "2010-11-28T08:16:24Z",
+        "sizeTotal": "1.93 MB",
+        "files": [
+            {
+                "id": 53117,
+                "name": "BrisbaneSkins(BySkimbo).zip",
+                "size": "1.93 MB"
+            }
+        ],
+        "aliasEntry": "brisbane-transportation-pack-citiesxl2011-v20",
+        "aliasAuthor": "skimbo(stex)",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25377-brisbane-transportation-pack-citiesxl2011-v20\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25386,
+        "cid": 16,
+        "uid": 353213,
+        "author": "Skimbo(STEX)",
+        "category": "CXL Mods & Tools",
+        "title": "Hamburg MTP (CXL2011)",
+        "release": "1.0",
+        "submitted": "2010-11-29T13:47:53Z",
+        "updated": "2010-11-29T13:47:53Z",
+        "sizeTotal": "2.29 MB",
+        "files": [
+            {
+                "id": 53133,
+                "name": "Hamburg.zip",
+                "size": "2.29 MB"
+            }
+        ],
+        "aliasEntry": "hamburg-mtp-cxl2011",
+        "aliasAuthor": "skimbo(stex)",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25386-hamburg-mtp-cxl2011\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25389,
+        "cid": 16,
+        "uid": 349375,
+        "author": "jeff10",
+        "category": "CXL Mods & Tools",
+        "title": "Exotic trees Mod",
+        "release": "1.0",
+        "submitted": "2010-11-30T12:21:52Z",
+        "updated": "2010-11-30T12:21:52Z",
+        "sizeTotal": "6.32 MB",
+        "files": [
+            {
+                "id": 53137,
+                "name": "YY_mod_arbres_exotiques_2011.zip",
+                "size": "6.32 MB"
+            }
+        ],
+        "aliasEntry": "exotic-trees-mod",
+        "aliasAuthor": "jeff10",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25389-exotic-trees-mod\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25398,
+        "cid": 16,
+        "uid": 237910,
+        "author": "GlobexCo",
+        "category": "CXL Mods & Tools",
+        "title": "CXL Unlocker Mod v4",
+        "release": "4.05",
+        "submitted": "2010-12-01T09:30:21Z",
+        "updated": "2010-12-01T09:30:21Z",
+        "sizeTotal": "851.62 kB",
+        "files": [
+            {
+                "id": 53153,
+                "name": "UnlockerMod_v4.zip",
+                "size": "851.62 kB"
+            }
+        ],
+        "aliasEntry": "cxl-unlocker-mod-v4",
+        "aliasAuthor": "globexco",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25398-cxl-unlocker-mod-v4\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25419,
+        "cid": 16,
+        "uid": 205982,
+        "author": "Skimbo",
+        "category": "CXL Mods & Tools",
+        "title": "Heuliez GX317 (CXL2011)",
+        "release": "1.0",
+        "submitted": "2010-12-04T14:37:20Z",
+        "updated": "2010-12-04T14:37:20Z",
+        "sizeTotal": "1.17 MB",
+        "files": [
+            {
+                "id": 53191,
+                "name": "HeuliezGX317(BySkimbo).zip",
+                "size": "1.17 MB"
+            }
+        ],
+        "aliasEntry": "heuliez-gx317-cxl2011",
+        "aliasAuthor": "skimbo",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25419-heuliez-gx317-cxl2011\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25495,
+        "cid": 16,
+        "uid": 349375,
+        "author": "jeff10",
+        "category": "CXL Mods & Tools",
+        "title": "Shrubs and bushes",
+        "release": "1.0",
+        "submitted": "2010-12-19T09:49:56Z",
+        "updated": "2010-12-19T09:49:56Z",
+        "sizeTotal": "4.86 MB",
+        "files": [
+            {
+                "id": 53319,
+                "name": "YY_Mod_arbustes_2011.zip",
+                "size": "4.86 MB"
+            }
+        ],
+        "aliasEntry": "shrubs-and-bushes",
+        "aliasAuthor": "jeff10",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25495-shrubs-and-bushes\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25741,
+        "cid": 16,
+        "uid": 322110,
+        "author": "-Alex24-",
+        "category": "CXL Mods & Tools",
+        "title": "PlopAir updated",
+        "release": "1.6",
+        "submitted": "2011-01-22T10:06:58Z",
+        "updated": "2011-01-22T10:06:58Z",
+        "sizeTotal": "72.87 kB",
+        "files": [
+            {
+                "id": 53713,
+                "name": "Plopair1.zip",
+                "size": "72.87 kB"
+            }
+        ],
+        "aliasEntry": "plopair-updated",
+        "aliasAuthor": "-alex24-",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25741-plopair-updated\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25750,
+        "cid": 16,
+        "uid": 205982,
+        "author": "Skimbo",
+        "category": "CXL Mods & Tools",
+        "title": "Seattle transportation Pack (CXL2011)",
+        "release": "1.0",
+        "submitted": "2011-01-23T05:22:52Z",
+        "updated": "2011-01-23T05:22:52Z",
+        "sizeTotal": "5.75 MB",
+        "files": [
+            {
+                "id": 53727,
+                "name": "SeattleVehicles(BySkimbo).zip",
+                "size": "5.75 MB"
+            }
+        ],
+        "aliasEntry": "seattle-transportation-pack-cxl2011",
+        "aliasAuthor": "skimbo",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25750-seattle-transportation-pack-cxl2011\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25819,
+        "cid": 16,
+        "uid": 183192,
+        "author": "MandelSoft",
+        "category": "CXL Mods & Tools",
+        "title": "Maarten's New USA Road Set (for CitiesXL 2011)",
+        "release": "1.3",
+        "submitted": "2011-02-04T06:22:33Z",
+        "updated": "2011-02-04T06:22:33Z",
+        "sizeTotal": "7.78 MB",
+        "files": [
+            {
+                "id": 53829,
+                "name": "MRTNRLN_NewUSA_Roads_CXL111.zip",
+                "size": "7.78 MB"
+            }
+        ],
+        "aliasEntry": "maartens-new-usa-road-set-for-citiesxl-2011",
+        "aliasAuthor": "mandelsoft",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25819-maartens-new-usa-road-set-for-citiesxl-2011\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 25885,
+        "cid": 16,
+        "uid": 237910,
+        "author": "GlobexCo",
+        "category": "CXL Mods & Tools",
+        "title": "Airport Pack",
+        "release": "1.0",
+        "submitted": "2011-02-15T17:17:37Z",
+        "updated": "2011-02-15T17:17:37Z",
+        "sizeTotal": "20.83 MB",
+        "files": [
+            {
+                "id": 53915,
+                "name": "zz_AirportPack1.zip",
+                "size": "20.83 MB"
+            }
+        ],
+        "aliasEntry": "airport-pack",
+        "aliasAuthor": "globexco",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/25885-airport-pack\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 26289,
+        "cid": 16,
+        "uid": 349375,
+        "author": "jeff10",
+        "category": "CXL Mods & Tools",
+        "title": "Spring trees Mod",
+        "release": "1.0",
+        "submitted": "2011-05-30T12:19:03Z",
+        "updated": "2011-05-30T12:19:03Z",
+        "sizeTotal": "7.43 MB",
+        "files": [
+            {
+                "id": 93451,
+                "name": "YY_arbres_printemps.zip",
+                "size": "7.43 MB"
+            }
+        ],
+        "aliasEntry": "spring-trees-mod",
+        "aliasAuthor": "jeff10",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/26289-spring-trees-mod\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 26481,
+        "cid": 16,
+        "uid": 349375,
+        "author": "jeff10",
+        "category": "CXL Mods & Tools",
+        "title": "Forests Mod",
+        "release": "1.0",
+        "submitted": "2011-07-11T08:56:04Z",
+        "updated": "2011-07-11T08:56:04Z",
+        "sizeTotal": "2.29 MB",
+        "files": [
+            {
+                "id": 93718,
+                "name": "YY_foret.zip",
+                "size": "2.29 MB"
+            }
+        ],
+        "aliasEntry": "forests-mod",
+        "aliasAuthor": "jeff10",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/26481-forests-mod\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 26925,
+        "cid": 16,
+        "uid": 443014,
+        "author": "daniwes",
+        "category": "CXL Mods & Tools",
+        "title": "WASD camera movement",
+        "release": "1.1",
+        "submitted": "2011-10-29T17:27:04Z",
+        "updated": "2011-10-29T17:28:09Z",
+        "sizeTotal": "376.09 kB",
+        "files": [
+            {
+                "id": 93747,
+                "name": "CitiesXLkeyswap.zip",
+                "size": "376.09 kB"
+            }
+        ],
+        "aliasEntry": "wasd-camera-movement",
+        "aliasAuthor": "daniwes",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/26925-wasd-camera-movement\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 27613,
+        "cid": 16,
+        "uid": 496930,
+        "author": "Moraelin",
+        "category": "CXL Mods & Tools",
+        "title": "Better Heavy Industry",
+        "release": "1.0",
+        "submitted": "2012-05-14T10:17:07Z",
+        "updated": "2012-05-14T10:17:07Z",
+        "sizeTotal": "9.21 kB",
+        "files": [
+            {
+                "id": 100755,
+                "name": "mod_better_heavy_industry.zip",
+                "size": "9.21 kB"
+            }
+        ],
+        "aliasEntry": "better-heavy-industry",
+        "aliasAuthor": "moraelin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/27613-better-heavy-industry\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 27742,
+        "cid": 16,
+        "uid": 239723,
+        "author": "pcwhiz24",
+        "category": "CXL Mods & Tools",
+        "title": "[CitiesXL] Realistic Night Lighting Mod",
+        "release": "1.0",
+        "submitted": "2012-06-20T18:49:00Z",
+        "updated": "2012-06-20T18:49:00Z",
+        "sizeTotal": "2.93 kB",
+        "files": [
+            {
+                "id": 102495,
+                "name": "ZZZZ_Realistic_Night_Street_Lights.zip",
+                "size": "2.93 kB"
+            }
+        ],
+        "aliasEntry": "citiesxl-realistic-night-lighting-mod",
+        "aliasAuthor": "pcwhiz24",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/27742-citiesxl-realistic-night-lighting-mod\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31135,
+        "cid": 16,
+        "uid": 444606,
+        "author": "NurelFayed",
+        "category": "CXL Mods & Tools",
+        "title": "Sudirman Plaza Jakarta",
+        "release": "1.1",
+        "submitted": "2016-06-27T00:21:20Z",
+        "updated": "2016-06-27T00:21:20Z",
+        "sizeTotal": "1.08 MB",
+        "files": [
+            {
+                "id": 162276,
+                "name": "XXL_Fayeddd_SudirmanPlaza_v1.0.patch",
+                "size": "1.08 MB"
+            }
+        ],
+        "aliasEntry": "sudirman-plaza-jakarta",
+        "aliasAuthor": "nurelfayed",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31135-sudirman-plaza-jakarta\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31426,
+        "cid": 16,
+        "uid": 724715,
+        "author": "NICK97",
+        "category": "CXL Mods & Tools",
+        "title": "Pier Imports For XXL",
+        "release": "1.2.0",
+        "submitted": "2017-01-07T00:29:54Z",
+        "updated": "2019-03-02T19:35:43Z",
+        "sizeTotal": "159.53 kB",
+        "files": [
+            {
+                "id": 174855,
+                "name": "XLN_XXL_NICK97_PierImports_v1.2.0.patch",
+                "size": "159.53 kB"
+            },
+            {
+                "id": 174856,
+                "link": "https:\/\/www.cities-mods.com\/xlex\/peir-1-imports-for-xxl.30\/",
+                "size": null
+            }
+        ],
+        "aliasEntry": "pier-imports-for-xxl",
+        "aliasAuthor": "nick97",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31426-pier-imports-for-xxl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31511,
+        "cid": 16,
+        "uid": 724715,
+        "author": "NICK97",
+        "category": "CXL Mods & Tools",
+        "title": "Jensen Young For XL",
+        "release": "1.0",
+        "submitted": "2017-03-13T00:07:08Z",
+        "updated": "2019-03-02T19:38:11Z",
+        "sizeTotal": "1.28 MB",
+        "files": [
+            {
+                "id": 174860,
+                "name": "JensenYoung_v1.0.zip",
+                "size": "1.28 MB"
+            },
+            {
+                "id": 174861,
+                "link": "https:\/\/www.cities-mods.com\/xlex\/jensen-young-for-xl.87\/",
+                "size": null
+            }
+        ],
+        "aliasEntry": "jensen-young-for-xl",
+        "aliasAuthor": "nick97",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31511-jensen-young-for-xl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31512,
+        "cid": 16,
+        "uid": 724715,
+        "author": "NICK97",
+        "category": "CXL Mods & Tools",
+        "title": "Beach Imports For XL",
+        "release": "1.0",
+        "submitted": "2017-03-13T00:10:20Z",
+        "updated": "2019-03-02T19:39:50Z",
+        "sizeTotal": "1.14 MB",
+        "files": [
+            {
+                "id": 174872,
+                "name": "BeachImports_v1.0.zip",
+                "size": "1.14 MB"
+            },
+            {
+                "id": 174873,
+                "link": "https:\/\/www.cities-mods.com\/xlex\/beach-imports-for-xl.86\/",
+                "size": null
+            }
+        ],
+        "aliasEntry": "beach-imports-for-xl",
+        "aliasAuthor": "nick97",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31512-beach-imports-for-xl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31580,
+        "cid": 16,
+        "uid": 724715,
+        "author": "NICK97",
+        "category": "CXL Mods & Tools",
+        "title": "Stop Sign Replacement For XL\/XXL",
+        "release": "1.0",
+        "submitted": "2017-04-22T18:44:01Z",
+        "updated": "2019-03-02T19:33:16Z",
+        "sizeTotal": "57.23 kB",
+        "files": [
+            {
+                "id": 174844,
+                "name": "XLN_XXL_NICK97_StopSignReplace_v1.0.patch",
+                "size": "57.23 kB"
+            },
+            {
+                "id": 174845,
+                "link": "https:\/\/www.cities-mods.com\/xlex\/stop-sign-replacement-for-xxl.92\/",
+                "size": null
+            }
+        ],
+        "aliasEntry": "stop-sign-replacement-for-xlxxl",
+        "aliasAuthor": "nick97",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31580-stop-sign-replacement-for-xlxxl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31581,
+        "cid": 16,
+        "uid": 724715,
+        "author": "NICK97",
+        "category": "CXL Mods & Tools",
+        "title": "Dunkin Donuts For XXL",
+        "release": "1.0",
+        "submitted": "2017-04-22T18:52:43Z",
+        "updated": "2019-03-02T19:30:56Z",
+        "sizeTotal": "1.14 MB",
+        "files": [
+            {
+                "id": 174838,
+                "name": "XLN_XXL_NICK97_DunkinDonuts_v1.1.patch",
+                "size": "1.14 MB"
+            },
+            {
+                "id": 174839,
+                "link": "https:\/\/www.cities-mods.com\/xlex\/dunkin-donuts-for-xxl.38\/",
+                "size": null
+            }
+        ],
+        "aliasEntry": "dunkin-donuts-for-xxl",
+        "aliasAuthor": "nick97",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31581-dunkin-donuts-for-xxl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31609,
+        "cid": 16,
+        "uid": 724715,
+        "author": "NICK97",
+        "category": "CXL Mods & Tools",
+        "title": "Verizon Wireless For XXL",
+        "release": "1.0",
+        "submitted": "2017-05-11T20:44:27Z",
+        "updated": "2019-03-02T19:28:52Z",
+        "sizeTotal": "1.12 MB",
+        "files": [
+            {
+                "id": 174830,
+                "name": "XLN_XXL_NICK97_VerizonWireless_v1.0.patch",
+                "size": "1.12 MB"
+            },
+            {
+                "id": 174831,
+                "link": "https:\/\/www.cities-mods.com\/xlex\/verizon-wireless-for-xxl.98\/",
+                "size": null
+            }
+        ],
+        "aliasEntry": "verizon-wireless-for-xxl",
+        "aliasAuthor": "nick97",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31609-verizon-wireless-for-xxl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31610,
+        "cid": 16,
+        "uid": 724715,
+        "author": "NICK97",
+        "category": "CXL Mods & Tools",
+        "title": "Whistler Sliding Centre For XXL",
+        "release": "1.0",
+        "submitted": "2017-05-11T20:47:59Z",
+        "updated": "2018-12-26T21:48:47Z",
+        "sizeTotal": "1.84 MB",
+        "files": [
+            {
+                "id": 174094,
+                "name": "XLN_XXL_NICK97_WhistlerSlidingCentre_v1.0.patch",
+                "size": "1.84 MB"
+            },
+            {
+                "id": 174095,
+                "link": "https:\/\/www.cities-mods.com\/xlex\/whistler-sliding-centre-for-xxl.99\/",
+                "size": null
+            }
+        ],
+        "aliasEntry": "whistler-sliding-centre-for-xxl",
+        "aliasAuthor": "nick97",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31610-whistler-sliding-centre-for-xxl\/",
+        "===========": "=========================================="
+    }
+]

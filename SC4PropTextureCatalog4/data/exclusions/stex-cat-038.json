@@ -1,0 +1,119 @@
+[
+    {
+        "id": 30660,
+        "cid": 38,
+        "uid": 11505,
+        "author": "Mr_Maison",
+        "category": "CSL Vehicle Assets",
+        "title": "NYC R22 TRAIN SET",
+        "release": "1.0",
+        "submitted": "2015-07-12T03:33:43Z",
+        "updated": "2015-07-12T03:40:53Z",
+        "sizeTotal": "3.81 MB",
+        "files": [
+            {
+                "id": 158254,
+                "name": "NYC_R22_Brooklyn_Shuttle.rar",
+                "size": "1.05 MB"
+            },
+            {
+                "id": 158255,
+                "name": "NYC_R22_Cities_Skylines_Edition.rar",
+                "size": "1.06 MB"
+            },
+            {
+                "id": 158256,
+                "name": "NYC_R22_RedBird.rar",
+                "size": "970.06 kB"
+            },
+            {
+                "id": 158257,
+                "name": "NYC_R22_White_Shuttle.rar",
+                "size": "765.73 kB"
+            }
+        ],
+        "aliasEntry": "nyc-r22-train-set",
+        "aliasAuthor": "mr_maison",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30660-nyc-r22-train-set\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30725,
+        "cid": 38,
+        "uid": 702109,
+        "author": "Shroomblaze",
+        "category": "CSL Vehicle Assets",
+        "title": "Union Pacific Cargo Train",
+        "release": "1.0",
+        "submitted": "2015-08-10T12:47:00Z",
+        "updated": "2015-08-10T12:47:00Z",
+        "sizeTotal": "13.26 MB",
+        "files": [
+            {
+                "id": 158669,
+                "name": "Union_Pacific_Cargo_Train.crp",
+                "size": "13.26 MB"
+            }
+        ],
+        "aliasEntry": "union-pacific-cargo-train",
+        "aliasAuthor": "shroomblaze",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30725-union-pacific-cargo-train\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30799,
+        "cid": 38,
+        "uid": 725676,
+        "author": "aldywaani",
+        "category": "CSL Vehicle Assets",
+        "title": "Large Bus",
+        "release": "1.0",
+        "submitted": "2015-09-24T07:48:38Z",
+        "updated": "2015-09-24T07:48:38Z",
+        "sizeTotal": "4.24 MB",
+        "files": [
+            {
+                "id": 159351,
+                "name": "LargeBus.crp",
+                "size": "792.88 kB"
+            },
+            {
+                "id": 159352,
+                "name": "asset_tooltip.png",
+                "size": "126.01 kB"
+            },
+            {
+                "id": 159353,
+                "name": "Screenshot_6.png",
+                "size": "3.35 MB"
+            }
+        ],
+        "aliasEntry": "large-bus",
+        "aliasAuthor": "aldywaani",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30799-large-bus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31167,
+        "cid": 38,
+        "uid": 742477,
+        "author": "Dr.jiong",
+        "category": "CSL Vehicle Assets",
+        "title": "Department of Motor Vechicles",
+        "release": "1.5.0-f4",
+        "submitted": "2016-07-11T15:15:11Z",
+        "updated": "2016-07-16T15:42:45Z",
+        "sizeTotal": "1.48 MB",
+        "files": [
+            {
+                "id": 162472,
+                "name": "Department of Motor Vehicles.zip",
+                "size": "1.48 MB"
+            }
+        ],
+        "aliasEntry": "department-of-motor-vechicles",
+        "aliasAuthor": "dr.jiong",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31167-department-of-motor-vechicles\/",
+        "===========": "=========================================="
+    }
+]

@@ -1,0 +1,4453 @@
+[
+    {
+        "id": 30185,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Mountain Streams",
+        "release": "1.0",
+        "submitted": "2015-03-11T07:31:29Z",
+        "updated": "2015-03-11T07:31:29Z",
+        "sizeTotal": "6.55 MB",
+        "files": [
+            {
+                "id": 149028,
+                "name": "Mountain StreamsEng.rar",
+                "size": "3.30 MB"
+            },
+            {
+                "id": 149029,
+                "name": "Mountain StreamsRus.rar",
+                "size": "3.25 MB"
+            }
+        ],
+        "aliasEntry": "mountain-streams",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30185-mountain-streams\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30186,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Beach",
+        "release": "1.0",
+        "submitted": "2015-03-11T14:22:45Z",
+        "updated": "2015-03-11T14:22:45Z",
+        "sizeTotal": "6.75 MB",
+        "files": [
+            {
+                "id": 149033,
+                "name": "BeachEng.rar",
+                "size": "3.37 MB"
+            },
+            {
+                "id": 149034,
+                "name": "BeachRus.rar",
+                "size": "3.37 MB"
+            }
+        ],
+        "aliasEntry": "beach",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30186-beach\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30187,
+        "cid": 30,
+        "uid": 544819,
+        "author": "andreikait",
+        "category": "CSL Maps",
+        "title": "Delta Titan",
+        "release": "1.0",
+        "submitted": "2015-03-11T14:23:53Z",
+        "updated": "2015-03-11T14:23:53Z",
+        "files": [
+            {
+                "id": 149037,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=405750275",
+                "size": null
+            }
+        ],
+        "aliasEntry": "delta-titan",
+        "aliasAuthor": "andreikait",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30187-delta-titan\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30189,
+        "cid": 30,
+        "uid": 543514,
+        "author": "AvidCSMapmaker",
+        "category": "CSL Maps",
+        "title": "Mainland Southeast Asia",
+        "release": "1.0",
+        "submitted": "2015-03-11T15:35:05Z",
+        "updated": "2015-03-11T15:35:05Z",
+        "sizeTotal": "3.73 MB",
+        "files": [
+            {
+                "id": 149051,
+                "name": "Mainland Southeast Asia.zip",
+                "size": "3.73 MB"
+            }
+        ],
+        "aliasEntry": "mainland-southeast-asia",
+        "aliasAuthor": "avidcsmapmaker",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30189-mainland-southeast-asia\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30191,
+        "cid": 30,
+        "uid": 543514,
+        "author": "AvidCSMapmaker",
+        "category": "CSL Maps",
+        "title": "Korea",
+        "release": "1.0",
+        "submitted": "2015-03-12T01:33:46Z",
+        "updated": "2015-03-12T01:33:46Z",
+        "sizeTotal": "4.14 MB",
+        "files": [
+            {
+                "id": 149068,
+                "name": "Korea.zip",
+                "size": "4.14 MB"
+            }
+        ],
+        "aliasEntry": "korea",
+        "aliasAuthor": "avidcsmapmaker",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30191-korea\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30192,
+        "cid": 30,
+        "uid": 543514,
+        "author": "AvidCSMapmaker",
+        "category": "CSL Maps",
+        "title": "British Isles",
+        "release": "1.0",
+        "submitted": "2015-03-12T04:12:05Z",
+        "updated": "2015-03-12T04:12:05Z",
+        "sizeTotal": "3.63 MB",
+        "files": [
+            {
+                "id": 149071,
+                "name": "British Isles.zip",
+                "size": "3.63 MB"
+            }
+        ],
+        "aliasEntry": "british-isles",
+        "aliasAuthor": "avidcsmapmaker",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30192-british-isles\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30193,
+        "cid": 30,
+        "uid": 543514,
+        "author": "AvidCSMapmaker",
+        "category": "CSL Maps",
+        "title": "New England (New York)",
+        "release": "1.0",
+        "submitted": "2015-03-12T04:34:18Z",
+        "updated": "2015-03-12T04:34:18Z",
+        "sizeTotal": "3.82 MB",
+        "files": [
+            {
+                "id": 149073,
+                "name": "New England.zip",
+                "size": "3.82 MB"
+            }
+        ],
+        "aliasEntry": "new-england-new-york",
+        "aliasAuthor": "avidcsmapmaker",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30193-new-england-new-york\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30197,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Desert",
+        "release": "1.0",
+        "submitted": "2015-03-13T09:47:49Z",
+        "updated": "2015-03-13T09:47:49Z",
+        "sizeTotal": "2.42 MB",
+        "files": [
+            {
+                "id": 149099,
+                "name": "DesertEng.rar",
+                "size": "1.21 MB"
+            },
+            {
+                "id": 149100,
+                "name": "DesertRus.rar",
+                "size": "1.21 MB"
+            }
+        ],
+        "aliasEntry": "desert",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30197-desert\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30198,
+        "cid": 30,
+        "uid": 548578,
+        "author": "Grockefeller",
+        "category": "CSL Maps",
+        "title": "Los Santos from GTA V",
+        "release": "1.0",
+        "submitted": "2015-03-13T10:38:19Z",
+        "updated": "2015-03-13T10:43:20Z",
+        "sizeTotal": "8.14 MB",
+        "files": [
+            {
+                "id": 149700,
+                "link": "https:\/\/dl.dropboxusercontent.com\/u\/57811977\/Los%20Santos%20-%20GTA%20V.zip",
+                "size": "8.14 MB"
+            }
+        ],
+        "aliasEntry": "los-santos-from-gta-v",
+        "aliasAuthor": "grockefeller",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30198-los-santos-from-gta-v\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30199,
+        "cid": 30,
+        "uid": 548578,
+        "author": "Grockefeller",
+        "category": "CSL Maps",
+        "title": "Southern San Andreas Map ( GTA V )",
+        "release": "1.0",
+        "submitted": "2015-03-13T10:41:29Z",
+        "updated": "2015-03-13T10:41:29Z",
+        "files": [
+            {
+                "id": 149114,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=406345859",
+                "size": null
+            }
+        ],
+        "aliasEntry": "southern-san-andreas-map-gta-v",
+        "aliasAuthor": "grockefeller",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30199-southern-san-andreas-map-gta-v\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30205,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Island Askold (\u041e\u0441\u0442\u0440\u043e\u0432 \u0410\u0441\u043a\u043e\u043b\u044c\u0434)",
+        "release": "1.0",
+        "submitted": "2015-03-14T09:50:55Z",
+        "updated": "2015-03-14T09:50:55Z",
+        "sizeTotal": "7.17 MB",
+        "files": [
+            {
+                "id": 149256,
+                "name": "AskoldEng.rar",
+                "size": "3.58 MB"
+            },
+            {
+                "id": 149257,
+                "name": "AskoldRus.rar",
+                "size": "3.58 MB"
+            }
+        ],
+        "aliasEntry": "island-askold-\u043e\u0441\u0442\u0440\u043e\u0432-\u0430\u0441\u043a\u043e\u043b\u044c\u0434",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30205-island-askold-\u043e\u0441\u0442\u0440\u043e\u0432-\u0430\u0441\u043a\u043e\u043b\u044c\u0434\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30219,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Ideal",
+        "release": "1.0",
+        "submitted": "2015-03-15T05:39:10Z",
+        "updated": "2015-03-15T05:39:10Z",
+        "sizeTotal": "3.16 MB",
+        "files": [
+            {
+                "id": 149250,
+                "name": "IdealEng.rar",
+                "size": "1.58 MB"
+            },
+            {
+                "id": 149251,
+                "name": "IdealRus.rar",
+                "size": "1.58 MB"
+            }
+        ],
+        "aliasEntry": "ideal",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30219-ideal\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30224,
+        "cid": 30,
+        "uid": 228699,
+        "author": "titaniom",
+        "category": "CSL Maps",
+        "title": "NEW YORK MAP",
+        "release": "1.0",
+        "submitted": "2015-03-15T13:00:07Z",
+        "updated": "2015-03-15T13:00:07Z",
+        "files": [
+            {
+                "id": 149308,
+                "link": "http:\/\/www.filedropper.com\/newyork_3",
+                "size": null
+            }
+        ],
+        "aliasEntry": "new-york-map",
+        "aliasAuthor": "titaniom",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30224-new-york-map\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30226,
+        "cid": 30,
+        "uid": 11565,
+        "author": "JaWood",
+        "category": "CSL Maps",
+        "title": "Mountain Valley",
+        "release": "1.0",
+        "submitted": "2015-03-15T15:17:49Z",
+        "updated": "2015-03-15T15:17:49Z",
+        "sizeTotal": "3.28 MB",
+        "files": [
+            {
+                "id": 149523,
+                "name": "Mountain Valley.zip",
+                "size": "3.28 MB"
+            }
+        ],
+        "aliasEntry": "mountain-valley",
+        "aliasAuthor": "jawood",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30226-mountain-valley\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30229,
+        "cid": 30,
+        "uid": 641775,
+        "author": "Andrewillemse",
+        "category": "CSL Maps",
+        "title": "TinyHope",
+        "release": "1.5",
+        "submitted": "2015-03-15T17:44:56Z",
+        "updated": "2015-03-16T00:19:09Z",
+        "sizeTotal": "5.03 MB",
+        "files": [
+            {
+                "id": 149890,
+                "name": "TinyHope%20V1.5.rar",
+                "size": "5.03 MB"
+            }
+        ],
+        "aliasEntry": "tinyhope",
+        "aliasAuthor": "andrewillemse",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30229-tinyhope\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30232,
+        "cid": 30,
+        "uid": 700356,
+        "author": "EasyGhost",
+        "category": "CSL Maps",
+        "title": "Tihany region",
+        "release": "1.0",
+        "submitted": "2015-03-15T23:40:59Z",
+        "updated": "2015-03-15T23:40:59Z",
+        "sizeTotal": "3.60 MB",
+        "files": [
+            {
+                "id": 149382,
+                "name": "Balaton.rar",
+                "size": "3.60 MB"
+            }
+        ],
+        "aliasEntry": "tihany-region",
+        "aliasAuthor": "easyghost",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30232-tihany-region\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30233,
+        "cid": 30,
+        "uid": 570870,
+        "author": "DigitalMaster37",
+        "category": "CSL Maps",
+        "title": "WGC_Crystal Peaks City",
+        "release": "1.0",
+        "submitted": "2015-03-16T01:15:19Z",
+        "updated": "2015-03-16T01:15:19Z",
+        "sizeTotal": "11.61 MB",
+        "files": [
+            {
+                "id": 149462,
+                "name": "Crystal Peaks City.rar",
+                "size": "11.61 MB"
+            }
+        ],
+        "aliasEntry": "wgc_crystal-peaks-city",
+        "aliasAuthor": "digitalmaster37",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30233-wgc_crystal-peaks-city\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30235,
+        "cid": 30,
+        "uid": 26389,
+        "author": "Kayo",
+        "category": "CSL Maps",
+        "title": "Swiss Alpes customize",
+        "release": "1.0",
+        "submitted": "2015-03-16T15:07:58Z",
+        "updated": "2015-03-16T15:07:58Z",
+        "sizeTotal": "3.63 MB",
+        "files": [
+            {
+                "id": 149528,
+                "name": "Swiss Alpes customize.zip",
+                "size": "3.63 MB"
+            }
+        ],
+        "aliasEntry": "swiss-alpes-customize",
+        "aliasAuthor": "kayo",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30235-swiss-alpes-customize\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30244,
+        "cid": 30,
+        "uid": 700356,
+        "author": "EasyGhost",
+        "category": "CSL Maps",
+        "title": "Budapest",
+        "release": "1.0",
+        "submitted": "2015-03-16T19:50:53Z",
+        "updated": "2015-03-16T19:50:53Z",
+        "sizeTotal": "2.66 MB",
+        "files": [
+            {
+                "id": 149555,
+                "name": "Budapest.rar",
+                "size": "2.66 MB"
+            }
+        ],
+        "aliasEntry": "budapest",
+        "aliasAuthor": "easyghost",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30244-budapest\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30250,
+        "cid": 30,
+        "uid": 537445,
+        "author": "SNOWSKIJUNKY",
+        "category": "CSL Maps",
+        "title": "Magnos Map",
+        "release": "1.0",
+        "submitted": "2015-03-17T03:06:25Z",
+        "updated": "2015-03-17T03:06:25Z",
+        "sizeTotal": "4.02 MB",
+        "files": [
+            {
+                "id": 149606,
+                "name": "Magnos.zip",
+                "size": "4.02 MB"
+            }
+        ],
+        "aliasEntry": "magnos-map",
+        "aliasAuthor": "snowskijunky",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30250-magnos-map\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30254,
+        "cid": 30,
+        "uid": 381244,
+        "author": "neocromicon",
+        "category": "CSL Maps",
+        "title": "F\u00f6hr - Westerland",
+        "release": "1.0",
+        "submitted": "2015-03-18T00:38:23Z",
+        "updated": "2015-03-18T00:38:23Z",
+        "sizeTotal": "4.55 MB",
+        "files": [
+            {
+                "id": 149712,
+                "name": "F\u00f6hr.zip",
+                "size": "4.55 MB"
+            }
+        ],
+        "aliasEntry": "f\u00f6hr-westerland",
+        "aliasAuthor": "neocromicon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30254-f\u00f6hr-westerland\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30257,
+        "cid": 30,
+        "uid": 283187,
+        "author": "Paulobergonci",
+        "category": "CSL Maps",
+        "title": "MP - Rio de Janeiro",
+        "release": "1.0",
+        "submitted": "2015-03-18T02:55:23Z",
+        "updated": "2015-03-18T02:55:23Z",
+        "sizeTotal": "4.20 MB",
+        "files": [
+            {
+                "id": 149786,
+                "name": "Rio de Janeiro.rar",
+                "size": "4.20 MB"
+            }
+        ],
+        "aliasEntry": "mp-rio-de-janeiro",
+        "aliasAuthor": "paulobergonci",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30257-mp-rio-de-janeiro\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30259,
+        "cid": 30,
+        "uid": 26389,
+        "author": "Kayo",
+        "category": "CSL Maps",
+        "title": "Fjord City",
+        "release": "1.0",
+        "submitted": "2015-03-18T14:03:29Z",
+        "updated": "2015-03-18T14:03:29Z",
+        "sizeTotal": "6.20 MB",
+        "files": [
+            {
+                "id": 149827,
+                "name": "Fjord City 2.rar",
+                "size": "6.20 MB"
+            }
+        ],
+        "aliasEntry": "fjord-city",
+        "aliasAuthor": "kayo",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30259-fjord-city\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30261,
+        "cid": 30,
+        "uid": 283187,
+        "author": "Paulobergonci",
+        "category": "CSL Maps",
+        "title": "MP - Porto Alegre",
+        "release": "1.0",
+        "submitted": "2015-03-18T21:53:07Z",
+        "updated": "2015-03-18T21:53:07Z",
+        "sizeTotal": "3.84 MB",
+        "files": [
+            {
+                "id": 149858,
+                "name": "Porto Alegre.rar",
+                "size": "3.84 MB"
+            }
+        ],
+        "aliasEntry": "mp-porto-alegre",
+        "aliasAuthor": "paulobergonci",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30261-mp-porto-alegre\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30266,
+        "cid": 30,
+        "uid": 653028,
+        "author": "tourist585",
+        "category": "CSL Maps",
+        "title": "Pandorum",
+        "release": "1.0",
+        "submitted": "2015-03-19T17:13:14Z",
+        "updated": "2015-03-19T17:13:14Z",
+        "sizeTotal": "3.04 MB",
+        "files": [
+            {
+                "id": 149892,
+                "name": "Pandorum.rar",
+                "size": "3.04 MB"
+            }
+        ],
+        "aliasEntry": "pandorum",
+        "aliasAuthor": "tourist585",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30266-pandorum\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30270,
+        "cid": 30,
+        "uid": 700835,
+        "author": "2mad2play",
+        "category": "CSL Maps",
+        "title": "Lofoten Islands",
+        "release": "1.0",
+        "submitted": "2015-03-19T23:44:41Z",
+        "updated": "2015-03-19T23:44:41Z",
+        "sizeTotal": "3.74 MB",
+        "files": [
+            {
+                "id": 150020,
+                "name": "Lofoten Islands.rar",
+                "size": "3.74 MB"
+            }
+        ],
+        "aliasEntry": "lofoten-islands",
+        "aliasAuthor": "2mad2play",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30270-lofoten-islands\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30280,
+        "cid": 30,
+        "uid": 501475,
+        "author": "valvegas1",
+        "category": "CSL Maps",
+        "title": "O'ahu, Hawaii",
+        "release": "1.0",
+        "submitted": "2015-03-21T23:08:01Z",
+        "updated": "2015-03-28T18:51:55Z",
+        "sizeTotal": "4.19 MB",
+        "files": [
+            {
+                "id": 151653,
+                "name": "O'ahu.zip",
+                "size": "4.19 MB"
+            }
+        ],
+        "aliasEntry": "oahu-hawaii",
+        "aliasAuthor": "valvegas1",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30280-oahu-hawaii\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30281,
+        "cid": 30,
+        "uid": 701143,
+        "author": "RodrigoCunha",
+        "category": "CSL Maps",
+        "title": "Rio_de_Janeiro_22km.zip",
+        "release": "1.3",
+        "submitted": "2015-03-22T02:16:15Z",
+        "updated": "2021-12-28T02:58:34Z",
+        "sizeTotal": "8.93 MB",
+        "files": [
+            {
+                "id": 191000,
+                "name": "Rio_de_Janeiro_22km.zip",
+                "size": "4.99 MB"
+            },
+            {
+                "id": 191001,
+                "name": "Rio de Janeiro_22km_1.3.zip",
+                "size": "3.95 MB"
+            }
+        ],
+        "aliasEntry": "rio_de_janeiro_22kmzip",
+        "aliasAuthor": "rodrigocunha",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30281-rio_de_janeiro_22kmzip\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30285,
+        "cid": 30,
+        "uid": 378316,
+        "author": "phamduysc",
+        "category": "CSL Maps",
+        "title": "Thainguyen area, Vietnam",
+        "release": "1.0",
+        "submitted": "2015-03-22T10:23:10Z",
+        "updated": "2015-03-22T10:23:10Z",
+        "sizeTotal": "3.28 MB",
+        "files": [
+            {
+                "id": 150309,
+                "name": "Thainguyen v1.rar",
+                "size": "3.28 MB"
+            }
+        ],
+        "aliasEntry": "thainguyen-area-vietnam",
+        "aliasAuthor": "phamduysc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30285-thainguyen-area-vietnam\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30287,
+        "cid": 30,
+        "uid": 701219,
+        "author": "Lazy_Leopard",
+        "category": "CSL Maps",
+        "title": "Mernwoods",
+        "release": "1.0",
+        "submitted": "2015-03-22T16:00:16Z",
+        "updated": "2015-03-22T16:00:16Z",
+        "sizeTotal": "3.02 MB",
+        "files": [
+            {
+                "id": 150328,
+                "name": "Mernwood.zip",
+                "size": "3.02 MB"
+            }
+        ],
+        "aliasEntry": "mernwoods",
+        "aliasAuthor": "lazy_leopard",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30287-mernwoods\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30288,
+        "cid": 30,
+        "uid": 679478,
+        "author": "Den.D",
+        "category": "CSL Maps",
+        "title": "Carriacou",
+        "release": "1.0",
+        "submitted": "2015-03-22T21:15:29Z",
+        "updated": "2015-03-22T21:15:29Z",
+        "sizeTotal": "4.02 MB",
+        "files": [
+            {
+                "id": 150520,
+                "name": "Carriacou.zip",
+                "size": "4.02 MB"
+            }
+        ],
+        "aliasEntry": "carriacou",
+        "aliasAuthor": "den.d",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30288-carriacou\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30292,
+        "cid": 30,
+        "uid": 395374,
+        "author": "jose L Ortiz",
+        "category": "CSL Maps",
+        "title": "New York",
+        "release": "1.0",
+        "submitted": "2015-03-23T02:58:42Z",
+        "updated": "2015-03-23T02:58:42Z",
+        "sizeTotal": "2.73 MB",
+        "files": [
+            {
+                "id": 150429,
+                "name": "New York.crp.zip",
+                "size": "2.73 MB"
+            }
+        ],
+        "aliasEntry": "new-york",
+        "aliasAuthor": "jose-l-ortiz",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30292-new-york\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30293,
+        "cid": 30,
+        "uid": 395374,
+        "author": "jose L Ortiz",
+        "category": "CSL Maps",
+        "title": "Culebra",
+        "release": "1.0",
+        "submitted": "2015-03-23T03:14:59Z",
+        "updated": "2015-03-23T03:14:59Z",
+        "sizeTotal": "5.22 MB",
+        "files": [
+            {
+                "id": 150423,
+                "name": "Culebra.crp.zip",
+                "size": "4.00 MB"
+            },
+            {
+                "id": 150424,
+                "name": "Maps alias.zip",
+                "size": "1.22 MB"
+            }
+        ],
+        "aliasEntry": "culebra",
+        "aliasAuthor": "jose-l-ortiz",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30293-culebra\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30294,
+        "cid": 30,
+        "uid": 395374,
+        "author": "jose L Ortiz",
+        "category": "CSL Maps",
+        "title": "New Haven",
+        "release": "1.0",
+        "submitted": "2015-03-23T03:30:42Z",
+        "updated": "2015-03-29T12:38:02Z",
+        "sizeTotal": "4.46 MB",
+        "files": [
+            {
+                "id": 151870,
+                "name": "Maps alias.zip",
+                "size": "1.22 MB"
+            },
+            {
+                "id": 151871,
+                "name": "New Haven v1.2.crp.zip",
+                "size": "3.24 MB"
+            }
+        ],
+        "aliasEntry": "new-haven",
+        "aliasAuthor": "jose-l-ortiz",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30294-new-haven\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30295,
+        "cid": 30,
+        "uid": 33566,
+        "author": "kingofsimcity",
+        "category": "CSL Maps",
+        "title": "Aniakchak Bay",
+        "release": "1.01",
+        "submitted": "2015-03-23T04:31:10Z",
+        "updated": "2015-03-23T04:31:10Z",
+        "sizeTotal": "3.17 MB",
+        "files": [
+            {
+                "id": 150453,
+                "name": "KOSC_Boreal_AniakchakBay.zip",
+                "size": "3.17 MB"
+            }
+        ],
+        "aliasEntry": "aniakchak-bay",
+        "aliasAuthor": "kingofsimcity",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30295-aniakchak-bay\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30298,
+        "cid": 30,
+        "uid": 378316,
+        "author": "phamduysc",
+        "category": "CSL Maps",
+        "title": "Halong Bay, Vietnam (Descending dragon Bay)",
+        "release": "1.0",
+        "submitted": "2015-03-23T16:34:12Z",
+        "updated": "2015-03-23T16:34:12Z",
+        "sizeTotal": "3.98 MB",
+        "files": [
+            {
+                "id": 150522,
+                "name": "Halong.rar",
+                "size": "3.98 MB"
+            }
+        ],
+        "aliasEntry": "halong-bay-vietnam-descending-dragon-bay",
+        "aliasAuthor": "phamduysc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30298-halong-bay-vietnam-descending-dragon-bay\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30301,
+        "cid": 30,
+        "uid": 653028,
+        "author": "tourist585",
+        "category": "CSL Maps",
+        "title": "Lacoste Park",
+        "release": "1.0",
+        "submitted": "2015-03-23T21:56:12Z",
+        "updated": "2015-03-23T21:56:12Z",
+        "sizeTotal": "3.84 MB",
+        "files": [
+            {
+                "id": 150551,
+                "name": "Lacoste Park.rar",
+                "size": "3.84 MB"
+            }
+        ],
+        "aliasEntry": "lacoste-park",
+        "aliasAuthor": "tourist585",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30301-lacoste-park\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30303,
+        "cid": 30,
+        "uid": 395374,
+        "author": "jose L Ortiz",
+        "category": "CSL Maps",
+        "title": "Bellingham, Washington",
+        "release": "1.0",
+        "submitted": "2015-03-24T02:54:39Z",
+        "updated": "2015-03-24T02:54:39Z",
+        "sizeTotal": "3.14 MB",
+        "files": [
+            {
+                "id": 150592,
+                "name": "Bellingham Washington.crp.zip",
+                "size": "3.14 MB"
+            }
+        ],
+        "aliasEntry": "bellingham-washington",
+        "aliasAuthor": "jose-l-ortiz",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30303-bellingham-washington\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30305,
+        "cid": 30,
+        "uid": 679478,
+        "author": "Den.D",
+        "category": "CSL Maps",
+        "title": "Paradox map",
+        "release": "1.2",
+        "submitted": "2015-03-24T06:36:00Z",
+        "updated": "2015-03-24T06:36:00Z",
+        "sizeTotal": "3.59 MB",
+        "files": [
+            {
+                "id": 153481,
+                "name": "Paradox_map.zip",
+                "size": "3.59 MB"
+            }
+        ],
+        "aliasEntry": "paradox-map",
+        "aliasAuthor": "den.d",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30305-paradox-map\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30306,
+        "cid": 30,
+        "uid": 701219,
+        "author": "Lazy_Leopard",
+        "category": "CSL Maps",
+        "title": "Berglund Mountains",
+        "release": "1.0",
+        "submitted": "2015-03-24T10:39:57Z",
+        "updated": "2015-03-24T10:53:10Z",
+        "sizeTotal": "3.45 MB",
+        "files": [
+            {
+                "id": 150879,
+                "name": "Berglund Mountains v1.1.rar",
+                "size": "3.45 MB"
+            }
+        ],
+        "aliasEntry": "berglund-mountains",
+        "aliasAuthor": "lazy_leopard",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30306-berglund-mountains\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30327,
+        "cid": 30,
+        "uid": 671395,
+        "author": "Misanthrope",
+        "category": "CSL Maps",
+        "title": "Isla Nublar",
+        "release": "1.0",
+        "submitted": "2015-03-26T00:15:46Z",
+        "updated": "2015-03-26T00:15:46Z",
+        "sizeTotal": "5.55 MB",
+        "files": [
+            {
+                "id": 151153,
+                "name": "Isla_Nublar.zip",
+                "size": "5.55 MB"
+            }
+        ],
+        "aliasEntry": "isla-nublar",
+        "aliasAuthor": "misanthrope",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30327-isla-nublar\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30329,
+        "cid": 30,
+        "uid": 701585,
+        "author": "4nd_bf",
+        "category": "CSL Maps",
+        "title": "Santos - Brazil",
+        "release": "1.2",
+        "submitted": "2015-03-26T02:00:35Z",
+        "updated": "2015-03-26T15:24:57Z",
+        "sizeTotal": "3.10 MB",
+        "files": [
+            {
+                "id": 157449,
+                "name": "Santos_Map_CS.zip",
+                "size": "3.10 MB"
+            }
+        ],
+        "aliasEntry": "santos-brazil",
+        "aliasAuthor": "4nd_bf",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30329-santos-brazil\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30340,
+        "cid": 30,
+        "uid": 671395,
+        "author": "Misanthrope",
+        "category": "CSL Maps",
+        "title": "Nine Lives",
+        "release": "1.1",
+        "submitted": "2015-03-28T17:13:55Z",
+        "updated": "2015-03-28T19:31:29Z",
+        "sizeTotal": "4.68 MB",
+        "files": [
+            {
+                "id": 151693,
+                "name": "Nine Lives_1.1.rar",
+                "size": "4.68 MB"
+            }
+        ],
+        "aliasEntry": "nine-lives",
+        "aliasAuthor": "misanthrope",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30340-nine-lives\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30341,
+        "cid": 30,
+        "uid": 283187,
+        "author": "Paulobergonci",
+        "category": "CSL Maps",
+        "title": "MP - Paraty",
+        "release": "1.0",
+        "submitted": "2015-03-28T18:01:38Z",
+        "updated": "2015-03-28T18:01:38Z",
+        "sizeTotal": "4.25 MB",
+        "files": [
+            {
+                "id": 151612,
+                "name": "Paraty.rar",
+                "size": "4.25 MB"
+            }
+        ],
+        "aliasEntry": "mp-paraty",
+        "aliasAuthor": "paulobergonci",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30341-mp-paraty\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30345,
+        "cid": 30,
+        "uid": 501475,
+        "author": "valvegas1",
+        "category": "CSL Maps",
+        "title": "West Maui, Hawaii",
+        "release": "1.0",
+        "submitted": "2015-03-28T21:13:44Z",
+        "updated": "2015-03-28T21:13:44Z",
+        "sizeTotal": "3.71 MB",
+        "files": [
+            {
+                "id": 151723,
+                "name": "West Maui, Hawaii.zip",
+                "size": "3.71 MB"
+            }
+        ],
+        "aliasEntry": "west-maui-hawaii",
+        "aliasAuthor": "valvegas1",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30345-west-maui-hawaii\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30351,
+        "cid": 30,
+        "uid": 395374,
+        "author": "jose L Ortiz",
+        "category": "CSL Maps",
+        "title": "Kaua\u02bbi",
+        "release": "1.0",
+        "submitted": "2015-03-29T13:09:52Z",
+        "updated": "2015-04-16T01:16:02Z",
+        "sizeTotal": "4.88 MB",
+        "files": [
+            {
+                "id": 154049,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=412379636",
+                "size": null
+            },
+            {
+                "id": 154050,
+                "name": "Maps alias.zip",
+                "size": "1.22 MB"
+            },
+            {
+                "id": 154051,
+                "name": "auai.crp.zip",
+                "size": "3.66 MB"
+            }
+        ],
+        "aliasEntry": "kaua\u02bbi",
+        "aliasAuthor": "jose-l-ortiz",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30351-kaua\u02bbi\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30359,
+        "cid": 30,
+        "uid": 700891,
+        "author": "Sazhx17",
+        "category": "CSL Maps",
+        "title": "The Tropical Thunder",
+        "release": "1.00",
+        "submitted": "2015-03-30T17:34:39Z",
+        "updated": "2015-03-30T17:34:39Z",
+        "sizeTotal": "4.25 MB",
+        "files": [
+            {
+                "id": 152061,
+                "name": "The Tropical Thunder.rar",
+                "size": "4.25 MB"
+            }
+        ],
+        "aliasEntry": "the-tropical-thunder",
+        "aliasAuthor": "sazhx17",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30359-the-tropical-thunder\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30363,
+        "cid": 30,
+        "uid": 702109,
+        "author": "Shroomblaze",
+        "category": "CSL Maps",
+        "title": "Sea Turtle Falls",
+        "release": "1.0",
+        "submitted": "2015-03-30T23:17:03Z",
+        "updated": "2015-03-30T23:17:03Z",
+        "sizeTotal": "4.40 MB",
+        "files": [
+            {
+                "id": 152217,
+                "name": "Sea Turtle Falls.zip",
+                "size": "4.40 MB"
+            }
+        ],
+        "aliasEntry": "sea-turtle-falls",
+        "aliasAuthor": "shroomblaze",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30363-sea-turtle-falls\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30380,
+        "cid": 30,
+        "uid": 701653,
+        "author": "KrakenCandy",
+        "category": "CSL Maps",
+        "title": "Kraken River",
+        "release": "1.0",
+        "submitted": "2015-04-01T12:36:36Z",
+        "updated": "2015-04-01T12:36:36Z",
+        "sizeTotal": "4.81 MB",
+        "files": [
+            {
+                "id": 152359,
+                "name": "Kraken River.rar",
+                "size": "4.81 MB"
+            }
+        ],
+        "aliasEntry": "kraken-river",
+        "aliasAuthor": "krakencandy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30380-kraken-river\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30391,
+        "cid": 30,
+        "uid": 12,
+        "author": "Screwballl",
+        "category": "CSL Maps",
+        "title": "Fort Walton",
+        "release": "1.0",
+        "submitted": "2015-04-03T21:57:37Z",
+        "updated": "2015-04-03T21:57:37Z",
+        "sizeTotal": "3.18 MB",
+        "files": [
+            {
+                "id": 152700,
+                "name": "Ft Walton.zip",
+                "size": "3.18 MB"
+            }
+        ],
+        "aliasEntry": "fort-walton",
+        "aliasAuthor": "screwballl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30391-fort-walton\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30392,
+        "cid": 30,
+        "uid": 12,
+        "author": "Screwballl",
+        "category": "CSL Maps",
+        "title": "Rapid City",
+        "release": "1.0",
+        "submitted": "2015-04-03T22:07:18Z",
+        "updated": "2015-04-03T22:07:18Z",
+        "sizeTotal": "2.94 MB",
+        "files": [
+            {
+                "id": 152702,
+                "name": "Rapid City.zip",
+                "size": "2.94 MB"
+            }
+        ],
+        "aliasEntry": "rapid-city",
+        "aliasAuthor": "screwballl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30392-rapid-city\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30393,
+        "cid": 30,
+        "uid": 12,
+        "author": "Screwballl",
+        "category": "CSL Maps",
+        "title": "Mobile Alabama",
+        "release": "1.0",
+        "submitted": "2015-04-03T23:42:50Z",
+        "updated": "2015-04-03T23:42:50Z",
+        "sizeTotal": "2.62 MB",
+        "files": [
+            {
+                "id": 152704,
+                "name": "MobileAL.zip",
+                "size": "2.62 MB"
+            }
+        ],
+        "aliasEntry": "mobile-alabama",
+        "aliasAuthor": "screwballl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30393-mobile-alabama\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30395,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Vladivostok",
+        "release": "1.0",
+        "submitted": "2015-04-04T09:32:57Z",
+        "updated": "2015-05-04T13:30:45Z",
+        "sizeTotal": "4.04 MB",
+        "files": [
+            {
+                "id": 155955,
+                "name": "Vladivostok.zip",
+                "size": "4.04 MB"
+            }
+        ],
+        "aliasEntry": "vladivostok",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30395-vladivostok\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30396,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Anadyr",
+        "release": "1.0",
+        "submitted": "2015-04-04T12:24:47Z",
+        "updated": "2015-04-04T12:24:47Z",
+        "sizeTotal": "6.83 MB",
+        "files": [
+            {
+                "id": 155031,
+                "name": "AnadyrEng.rar",
+                "size": "3.42 MB"
+            },
+            {
+                "id": 155032,
+                "name": "AnadyrRus.rar",
+                "size": "3.42 MB"
+            }
+        ],
+        "aliasEntry": "anadyr",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30396-anadyr\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30397,
+        "cid": 30,
+        "uid": 554897,
+        "author": "Hexcubed",
+        "category": "CSL Maps",
+        "title": "White Mountains",
+        "release": "1.0",
+        "submitted": "2015-04-05T06:15:37Z",
+        "updated": "2015-04-05T06:15:37Z",
+        "sizeTotal": "3.27 MB",
+        "files": [
+            {
+                "id": 152774,
+                "name": "White Mountains.zip",
+                "size": "3.27 MB"
+            }
+        ],
+        "aliasEntry": "white-mountains",
+        "aliasAuthor": "hexcubed",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30397-white-mountains\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30400,
+        "cid": 30,
+        "uid": 702765,
+        "author": "Kovlad",
+        "category": "CSL Maps",
+        "title": "Blue Lagoon",
+        "release": "1.1",
+        "submitted": "2015-04-05T21:14:27Z",
+        "updated": "2015-04-05T21:14:27Z",
+        "sizeTotal": "3.10 MB",
+        "files": [
+            {
+                "id": 153030,
+                "name": "Lagoon.zip",
+                "size": "3.10 MB"
+            }
+        ],
+        "aliasEntry": "blue-lagoon",
+        "aliasAuthor": "kovlad",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30400-blue-lagoon\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30401,
+        "cid": 30,
+        "uid": 612598,
+        "author": "89James89",
+        "category": "CSL Maps",
+        "title": "Mountianous Coastline Map 001",
+        "release": "1.0",
+        "submitted": "2015-04-05T21:47:51Z",
+        "updated": "2015-04-05T21:47:51Z",
+        "sizeTotal": "3.92 MB",
+        "files": [
+            {
+                "id": 153038,
+                "name": "Mountianous Coastline map 001.zip",
+                "size": "3.92 MB"
+            }
+        ],
+        "aliasEntry": "mountianous-coastline-map-001",
+        "aliasAuthor": "89james89",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30401-mountianous-coastline-map-001\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30403,
+        "cid": 30,
+        "uid": 300934,
+        "author": "eufl",
+        "category": "CSL Maps",
+        "title": "Valley And Hills",
+        "release": "1.0",
+        "submitted": "2015-04-06T01:03:40Z",
+        "updated": "2015-04-06T01:03:40Z",
+        "sizeTotal": "2.20 MB",
+        "files": [
+            {
+                "id": 153063,
+                "name": "Valley And Hills.rar",
+                "size": "2.20 MB"
+            }
+        ],
+        "aliasEntry": "valley-and-hills",
+        "aliasAuthor": "eufl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30403-valley-and-hills\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30404,
+        "cid": 30,
+        "uid": 702774,
+        "author": "Darkz_",
+        "category": "CSL Maps",
+        "title": "Unalaska Islands",
+        "release": "1.0",
+        "submitted": "2015-04-06T01:08:15Z",
+        "updated": "2015-04-06T01:08:15Z",
+        "sizeTotal": "3.56 MB",
+        "files": [
+            {
+                "id": 153069,
+                "name": "Unalaska Islands.zip",
+                "size": "3.56 MB"
+            }
+        ],
+        "aliasEntry": "unalaska-islands",
+        "aliasAuthor": "darkz_",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30404-unalaska-islands\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30412,
+        "cid": 30,
+        "uid": 417120,
+        "author": "Titanicbuff",
+        "category": "CSL Maps",
+        "title": "Jackson Hills",
+        "release": "1.0",
+        "submitted": "2015-04-06T16:17:21Z",
+        "updated": "2015-04-06T16:17:21Z",
+        "sizeTotal": "2.16 MB",
+        "files": [
+            {
+                "id": 153147,
+                "name": "Jackson Hills.zip",
+                "size": "2.16 MB"
+            }
+        ],
+        "aliasEntry": "jackson-hills",
+        "aliasAuthor": "titanicbuff",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30412-jackson-hills\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30415,
+        "cid": 30,
+        "uid": 554897,
+        "author": "Hexcubed",
+        "category": "CSL Maps",
+        "title": "Serpent Peninsula",
+        "release": "1.0",
+        "submitted": "2015-04-07T02:19:49Z",
+        "updated": "2015-04-07T02:19:49Z",
+        "sizeTotal": "3.94 MB",
+        "files": [
+            {
+                "id": 153184,
+                "name": "Serpent Peninsula.zip",
+                "size": "3.94 MB"
+            }
+        ],
+        "aliasEntry": "serpent-peninsula",
+        "aliasAuthor": "hexcubed",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30415-serpent-peninsula\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30418,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Tola-dola",
+        "release": "1.0",
+        "submitted": "2015-04-07T11:05:37Z",
+        "updated": "2015-04-07T11:05:37Z",
+        "sizeTotal": "3.30 MB",
+        "files": [
+            {
+                "id": 153295,
+                "name": "Toladola.rar",
+                "size": "3.30 MB"
+            }
+        ],
+        "aliasEntry": "tola-dola",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30418-tola-dola\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30419,
+        "cid": 30,
+        "uid": 612598,
+        "author": "89James89",
+        "category": "CSL Maps",
+        "title": "Boreal Plain requested map 002",
+        "release": "1.0",
+        "submitted": "2015-04-07T13:09:43Z",
+        "updated": "2015-04-07T13:09:43Z",
+        "sizeTotal": "2.98 MB",
+        "files": [
+            {
+                "id": 153271,
+                "name": "requested map boreal plains 002.zip",
+                "size": "2.98 MB"
+            }
+        ],
+        "aliasEntry": "boreal-plain-requested-map-002",
+        "aliasAuthor": "89james89",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30419-boreal-plain-requested-map-002\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30420,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Zavyalov Island",
+        "release": "1.0",
+        "submitted": "2015-04-07T13:45:46Z",
+        "updated": "2015-04-07T13:45:46Z",
+        "sizeTotal": "3.69 MB",
+        "files": [
+            {
+                "id": 153290,
+                "name": "Zavyalov Island.rar",
+                "size": "3.69 MB"
+            }
+        ],
+        "aliasEntry": "zavyalov-island",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30420-zavyalov-island\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30422,
+        "cid": 30,
+        "uid": 117933,
+        "author": "TheGoogleNinja",
+        "category": "CSL Maps",
+        "title": "Crater Lake",
+        "release": "1.0",
+        "submitted": "2015-04-08T05:39:57Z",
+        "updated": "2015-04-08T05:39:57Z",
+        "sizeTotal": "3.46 MB",
+        "files": [
+            {
+                "id": 153333,
+                "name": "Crater Lake.zip",
+                "size": "3.46 MB"
+            }
+        ],
+        "aliasEntry": "crater-lake",
+        "aliasAuthor": "thegoogleninja",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30422-crater-lake\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30423,
+        "cid": 30,
+        "uid": 685798,
+        "author": "_Michael",
+        "category": "CSL Maps",
+        "title": "Hamalton Hills",
+        "release": "1.0",
+        "submitted": "2015-04-08T09:37:56Z",
+        "updated": "2015-04-08T09:37:56Z",
+        "sizeTotal": "2.64 MB",
+        "files": [
+            {
+                "id": 153344,
+                "name": "Hamalton Hills.zip",
+                "size": "2.64 MB"
+            }
+        ],
+        "aliasEntry": "hamalton-hills",
+        "aliasAuthor": "_michael",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30423-hamalton-hills\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30426,
+        "cid": 30,
+        "uid": 703061,
+        "author": "Boudinou",
+        "category": "CSL Maps",
+        "title": "FloopyLands",
+        "release": "1.0",
+        "submitted": "2015-04-08T18:27:53Z",
+        "updated": "2015-04-08T18:27:53Z",
+        "sizeTotal": "3.84 MB",
+        "files": [
+            {
+                "id": 153389,
+                "name": "FloopyLands.zip",
+                "size": "3.84 MB"
+            }
+        ],
+        "aliasEntry": "floopylands",
+        "aliasAuthor": "boudinou",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30426-floopylands\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30431,
+        "cid": 30,
+        "uid": 702765,
+        "author": "Kovlad",
+        "category": "CSL Maps",
+        "title": "Blue Lagoon 2.0",
+        "release": "2.0",
+        "submitted": "2015-04-10T19:37:28Z",
+        "updated": "2015-04-10T19:37:28Z",
+        "sizeTotal": "3.09 MB",
+        "files": [
+            {
+                "id": 153486,
+                "name": "Blue_lagoon2.zip",
+                "size": "3.09 MB"
+            }
+        ],
+        "aliasEntry": "blue-lagoon-20",
+        "aliasAuthor": "kovlad",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30431-blue-lagoon-20\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30436,
+        "cid": 30,
+        "uid": 612598,
+        "author": "89James89",
+        "category": "CSL Maps",
+        "title": "Requested Tropical Coastline, Map 003",
+        "release": "1.0",
+        "submitted": "2015-04-12T10:16:14Z",
+        "updated": "2015-04-12T10:16:14Z",
+        "sizeTotal": "2.43 MB",
+        "files": [
+            {
+                "id": 153747,
+                "name": "Requested Tropical Coastline 003.zip",
+                "size": "2.43 MB"
+            }
+        ],
+        "aliasEntry": "requested-tropical-coastline-map-003",
+        "aliasAuthor": "89james89",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30436-requested-tropical-coastline-map-003\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30441,
+        "cid": 30,
+        "uid": 117933,
+        "author": "TheGoogleNinja",
+        "category": "CSL Maps",
+        "title": "Illusion Islands",
+        "release": "1.0",
+        "submitted": "2015-04-13T01:37:53Z",
+        "updated": "2015-04-13T01:37:53Z",
+        "sizeTotal": "3.95 MB",
+        "files": [
+            {
+                "id": 153840,
+                "name": "Illusion Islands.zip",
+                "size": "3.95 MB"
+            }
+        ],
+        "aliasEntry": "illusion-islands",
+        "aliasAuthor": "thegoogleninja",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30441-illusion-islands\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30454,
+        "cid": 30,
+        "uid": 12,
+        "author": "Screwballl",
+        "category": "CSL Maps",
+        "title": "Devils Tower WY",
+        "release": "1.0",
+        "submitted": "2015-04-17T18:21:54Z",
+        "updated": "2015-04-17T18:21:54Z",
+        "sizeTotal": "4.11 MB",
+        "files": [
+            {
+                "id": 154104,
+                "name": "DevilsTower.zip",
+                "size": "4.11 MB"
+            }
+        ],
+        "aliasEntry": "devils-tower-wy",
+        "aliasAuthor": "screwballl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30454-devils-tower-wy\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30455,
+        "cid": 30,
+        "uid": 12,
+        "author": "Screwballl",
+        "category": "CSL Maps",
+        "title": "Knoxville",
+        "release": "1.0",
+        "submitted": "2015-04-17T22:49:46Z",
+        "updated": "2015-04-17T22:49:46Z",
+        "sizeTotal": "4.69 MB",
+        "files": [
+            {
+                "id": 154106,
+                "name": "KnoxvilleTN.zip",
+                "size": "4.69 MB"
+            }
+        ],
+        "aliasEntry": "knoxville",
+        "aliasAuthor": "screwballl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30455-knoxville\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30456,
+        "cid": 30,
+        "uid": 700891,
+        "author": "Sazhx17",
+        "category": "CSL Maps",
+        "title": "Lakepoint Plains",
+        "release": "1.0",
+        "submitted": "2015-04-18T04:22:12Z",
+        "updated": "2015-04-18T04:22:12Z",
+        "sizeTotal": "3.38 MB",
+        "files": [
+            {
+                "id": 154114,
+                "name": "Lakepoint Plains.rar",
+                "size": "3.38 MB"
+            }
+        ],
+        "aliasEntry": "lakepoint-plains",
+        "aliasAuthor": "sazhx17",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30456-lakepoint-plains\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30458,
+        "cid": 30,
+        "uid": 703957,
+        "author": "BlackStar1963",
+        "category": "CSL Maps",
+        "title": "Game of Thrones",
+        "release": "1.2",
+        "submitted": "2015-04-18T21:26:51Z",
+        "updated": "2015-04-20T13:45:19Z",
+        "sizeTotal": "12.30 MB",
+        "files": [
+            {
+                "id": 154169,
+                "name": "Game Of Throns v1.1.rar",
+                "size": "4.10 MB"
+            },
+            {
+                "id": 154170,
+                "name": "Game Of Throns.rar",
+                "size": "4.00 MB"
+            },
+            {
+                "id": 154171,
+                "name": "Game Of Throns v1.2.rar",
+                "size": "4.19 MB"
+            }
+        ],
+        "aliasEntry": "game-of-thrones",
+        "aliasAuthor": "blackstar1963",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30458-game-of-thrones\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30459,
+        "cid": 30,
+        "uid": 612598,
+        "author": "89James89",
+        "category": "CSL Maps",
+        "title": "Requested English Countryside Map 004",
+        "release": "3",
+        "submitted": "2015-04-20T15:03:29Z",
+        "updated": "2015-04-20T15:03:29Z",
+        "sizeTotal": "2.32 MB",
+        "files": [
+            {
+                "id": 154257,
+                "name": "requested english countryside.zip",
+                "size": "2.32 MB"
+            }
+        ],
+        "aliasEntry": "requested-english-countryside-map-004",
+        "aliasAuthor": "89james89",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30459-requested-english-countryside-map-004\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30462,
+        "cid": 30,
+        "uid": 34454,
+        "author": "laloin",
+        "category": "CSL Maps",
+        "title": "Cancun, Mexico",
+        "release": "1.0",
+        "submitted": "2015-04-22T21:31:48Z",
+        "updated": "2015-04-22T21:31:48Z",
+        "sizeTotal": "3.58 MB",
+        "files": [
+            {
+                "id": 154301,
+                "name": "Cancun.zip",
+                "size": "3.58 MB"
+            }
+        ],
+        "aliasEntry": "cancun-mexico",
+        "aliasAuthor": "laloin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30462-cancun-mexico\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30463,
+        "cid": 30,
+        "uid": 34454,
+        "author": "laloin",
+        "category": "CSL Maps",
+        "title": "Safron",
+        "release": "1.0",
+        "submitted": "2015-04-22T21:45:49Z",
+        "updated": "2015-04-22T21:45:49Z",
+        "sizeTotal": "3.24 MB",
+        "files": [
+            {
+                "id": 154306,
+                "name": "Safron.zip",
+                "size": "3.24 MB"
+            }
+        ],
+        "aliasEntry": "safron",
+        "aliasAuthor": "laloin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30463-safron\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30464,
+        "cid": 30,
+        "uid": 34454,
+        "author": "laloin",
+        "category": "CSL Maps",
+        "title": "Hong Kong",
+        "release": "1.0",
+        "submitted": "2015-04-22T21:50:41Z",
+        "updated": "2015-04-22T21:50:41Z",
+        "sizeTotal": "3.59 MB",
+        "files": [
+            {
+                "id": 154312,
+                "name": "Hong Kong.zip",
+                "size": "3.59 MB"
+            }
+        ],
+        "aliasEntry": "hong-kong",
+        "aliasAuthor": "laloin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30464-hong-kong\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30465,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Dunay and island Putyatin",
+        "release": "1.0",
+        "submitted": "2015-04-23T10:16:00Z",
+        "updated": "2015-04-23T10:16:00Z",
+        "sizeTotal": "4.10 MB",
+        "files": [
+            {
+                "id": 154349,
+                "name": "Dunay and island Putyatin.rar",
+                "size": "4.10 MB"
+            }
+        ],
+        "aliasEntry": "dunay-and-island-putyatin",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30465-dunay-and-island-putyatin\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30466,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Dry Lake",
+        "release": "1.0",
+        "submitted": "2015-04-23T10:38:14Z",
+        "updated": "2015-04-23T10:38:14Z",
+        "sizeTotal": "2.54 MB",
+        "files": [
+            {
+                "id": 154361,
+                "name": "Dry Lake.rar",
+                "size": "2.54 MB"
+            }
+        ],
+        "aliasEntry": "dry-lake",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30466-dry-lake\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30468,
+        "cid": 30,
+        "uid": 283752,
+        "author": "usha",
+        "category": "CSL Maps",
+        "title": "Cartagena (Spain) Map",
+        "release": "1.0",
+        "submitted": "2015-04-23T14:25:03Z",
+        "updated": "2015-04-23T14:25:03Z",
+        "sizeTotal": "3.13 MB",
+        "files": [
+            {
+                "id": 154369,
+                "name": "cartagenaMap.rar",
+                "size": "3.13 MB"
+            }
+        ],
+        "aliasEntry": "cartagena-spain-map",
+        "aliasAuthor": "usha",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30468-cartagena-spain-map\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30469,
+        "cid": 30,
+        "uid": 283752,
+        "author": "usha",
+        "category": "CSL Maps",
+        "title": "Ma\u00f3 Region (Menorca, Balearic Islands of Spain) Map",
+        "release": "1.0",
+        "submitted": "2015-04-23T14:41:27Z",
+        "updated": "2015-04-23T14:41:27Z",
+        "sizeTotal": "4.15 MB",
+        "files": [
+            {
+                "id": 154372,
+                "name": "MahonMap.rar",
+                "size": "4.15 MB"
+            }
+        ],
+        "aliasEntry": "ma\u00f3-region-menorca-balearic-islands-of-spain-map",
+        "aliasAuthor": "usha",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30469-ma\u00f3-region-menorca-balearic-islands-of-spain-map\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30472,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Archipelago",
+        "release": "1.0",
+        "submitted": "2015-04-24T11:38:02Z",
+        "updated": "2015-04-24T11:38:02Z",
+        "sizeTotal": "4.74 MB",
+        "files": [
+            {
+                "id": 154458,
+                "name": "Archipelago.rar",
+                "size": "4.74 MB"
+            }
+        ],
+        "aliasEntry": "archipelago",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30472-archipelago\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30482,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "North paradise",
+        "release": "1.0",
+        "submitted": "2015-04-26T11:08:18Z",
+        "updated": "2015-04-26T11:08:18Z",
+        "sizeTotal": "3.85 MB",
+        "files": [
+            {
+                "id": 154724,
+                "name": "North paradise.rar",
+                "size": "3.85 MB"
+            }
+        ],
+        "aliasEntry": "north-paradise",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30482-north-paradise\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30489,
+        "cid": 30,
+        "uid": 612598,
+        "author": "89James89",
+        "category": "CSL Maps",
+        "title": "Real World Map 001 Florence, Canon City, CO",
+        "release": "1.0",
+        "submitted": "2015-04-27T15:35:15Z",
+        "updated": "2015-04-27T15:35:15Z",
+        "sizeTotal": "2.88 MB",
+        "files": [
+            {
+                "id": 154801,
+                "name": "florence Canon CO requested map.zip",
+                "size": "2.88 MB"
+            }
+        ],
+        "aliasEntry": "real-world-map-001-florence-canon-city-co",
+        "aliasAuthor": "89james89",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30489-real-world-map-001-florence-canon-city-co\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30495,
+        "cid": 30,
+        "uid": 621481,
+        "author": "alegomin",
+        "category": "CSL Maps",
+        "title": "Paradise Coast",
+        "release": "2.0",
+        "submitted": "2015-04-28T15:57:51Z",
+        "updated": "2015-04-28T15:57:51Z",
+        "sizeTotal": "3.43 MB",
+        "files": [
+            {
+                "id": 154847,
+                "name": "ParadiseCoast.rar",
+                "size": "3.43 MB"
+            }
+        ],
+        "aliasEntry": "paradise-coast",
+        "aliasAuthor": "alegomin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30495-paradise-coast\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30496,
+        "cid": 30,
+        "uid": 653934,
+        "author": "Nico Robin",
+        "category": "CSL Maps",
+        "title": "Bastion",
+        "release": "1.0",
+        "submitted": "2015-04-28T16:16:46Z",
+        "updated": "2015-04-28T16:16:46Z",
+        "sizeTotal": "2.85 MB",
+        "files": [
+            {
+                "id": 154849,
+                "name": "Bastion (Alea).zip",
+                "size": "2.85 MB"
+            }
+        ],
+        "aliasEntry": "bastion",
+        "aliasAuthor": "nico-robin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30496-bastion\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30497,
+        "cid": 30,
+        "uid": 61428,
+        "author": "sithboy",
+        "category": "CSL Maps",
+        "title": "Floodplains",
+        "release": "1.0",
+        "submitted": "2015-04-30T11:49:42Z",
+        "updated": "2015-04-30T11:49:42Z",
+        "sizeTotal": "1.88 MB",
+        "files": [
+            {
+                "id": 154871,
+                "name": "Floodplains.zip",
+                "size": "1.88 MB"
+            }
+        ],
+        "aliasEntry": "floodplains",
+        "aliasAuthor": "sithboy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30497-floodplains\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30498,
+        "cid": 30,
+        "uid": 61428,
+        "author": "sithboy",
+        "category": "CSL Maps",
+        "title": "Spotlands",
+        "release": "1.0",
+        "submitted": "2015-04-30T12:03:08Z",
+        "updated": "2015-04-30T12:03:08Z",
+        "sizeTotal": "3.31 MB",
+        "files": [
+            {
+                "id": 154869,
+                "name": "Spotland.zip",
+                "size": "3.31 MB"
+            }
+        ],
+        "aliasEntry": "spotlands",
+        "aliasAuthor": "sithboy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30498-spotlands\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30506,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Severo-Kurilsk",
+        "release": "1.0",
+        "submitted": "2015-05-03T10:34:21Z",
+        "updated": "2015-05-03T10:34:21Z",
+        "sizeTotal": "3.15 MB",
+        "files": [
+            {
+                "id": 155024,
+                "name": "severokurilsk.rar",
+                "size": "3.15 MB"
+            }
+        ],
+        "aliasEntry": "severo-kurilsk",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30506-severo-kurilsk\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30509,
+        "cid": 30,
+        "uid": 61428,
+        "author": "sithboy",
+        "category": "CSL Maps",
+        "title": "The Cauldron",
+        "release": "1.0",
+        "submitted": "2015-05-03T20:37:36Z",
+        "updated": "2015-05-03T20:37:36Z",
+        "sizeTotal": "2.40 MB",
+        "files": [
+            {
+                "id": 154971,
+                "name": "The_Cauldron.zip",
+                "size": "2.40 MB"
+            }
+        ],
+        "aliasEntry": "the-cauldron",
+        "aliasAuthor": "sithboy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30509-the-cauldron\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30510,
+        "cid": 30,
+        "uid": 216263,
+        "author": "K\u00f6ld",
+        "category": "CSL Maps",
+        "title": "Crater Lake",
+        "release": "1.2",
+        "submitted": "2015-05-04T01:17:21Z",
+        "updated": "2015-05-09T04:09:17Z",
+        "sizeTotal": "9.85 MB",
+        "files": [
+            {
+                "id": 155463,
+                "name": "Crater Lake.rar",
+                "size": "3.19 MB"
+            },
+            {
+                "id": 155464,
+                "name": "Crater Lake 1.1.rar",
+                "size": "3.27 MB"
+            },
+            {
+                "id": 155465,
+                "name": "Crater Lake 1.2.rar",
+                "size": "3.38 MB"
+            }
+        ],
+        "aliasEntry": "crater-lake",
+        "aliasAuthor": "k\u00f6ld",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30510-crater-lake\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30514,
+        "cid": 30,
+        "uid": 11505,
+        "author": "Mr_Maison",
+        "category": "CSL Maps",
+        "title": "Denns River Falls",
+        "release": "1.0",
+        "submitted": "2015-05-05T04:53:33Z",
+        "updated": "2015-05-05T04:53:33Z",
+        "sizeTotal": "2.81 MB",
+        "files": [
+            {
+                "id": 155077,
+                "name": "Denns River Falls.rar",
+                "size": "2.81 MB"
+            }
+        ],
+        "aliasEntry": "denns-river-falls",
+        "aliasAuthor": "mr_maison",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30514-denns-river-falls\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30515,
+        "cid": 30,
+        "uid": 705380,
+        "author": "Chenits",
+        "category": "CSL Maps",
+        "title": "The Key Island",
+        "release": "1.0",
+        "submitted": "2015-05-05T13:40:42Z",
+        "updated": "2015-05-05T13:40:42Z",
+        "sizeTotal": "4.61 MB",
+        "files": [
+            {
+                "id": 155084,
+                "name": "The Key Island.rar",
+                "size": "4.61 MB"
+            }
+        ],
+        "aliasEntry": "the-key-island",
+        "aliasAuthor": "chenits",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30515-the-key-island\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30516,
+        "cid": 30,
+        "uid": 612598,
+        "author": "89James89",
+        "category": "CSL Maps",
+        "title": "Real World map 002 Cristobal De Las Casas",
+        "release": "1.0",
+        "submitted": "2015-05-05T15:58:47Z",
+        "updated": "2015-05-05T15:58:47Z",
+        "sizeTotal": "3.30 MB",
+        "files": [
+            {
+                "id": 155123,
+                "name": "cristobal de las casas requested.zip",
+                "size": "3.30 MB"
+            }
+        ],
+        "aliasEntry": "real-world-map-002-cristobal-de-las-casas",
+        "aliasAuthor": "89james89",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30516-real-world-map-002-cristobal-de-las-casas\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30517,
+        "cid": 30,
+        "uid": 671395,
+        "author": "Misanthrope",
+        "category": "CSL Maps",
+        "title": "Banoi Island",
+        "release": "1.0",
+        "submitted": "2015-05-05T20:24:31Z",
+        "updated": "2015-05-05T20:24:31Z",
+        "sizeTotal": "4.69 MB",
+        "files": [
+            {
+                "id": 155114,
+                "name": "Banoi Island.rar",
+                "size": "4.69 MB"
+            }
+        ],
+        "aliasEntry": "banoi-island",
+        "aliasAuthor": "misanthrope",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30517-banoi-island\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30520,
+        "cid": 30,
+        "uid": 705380,
+        "author": "Chenits",
+        "category": "CSL Maps",
+        "title": "The Island",
+        "release": "1.0",
+        "submitted": "2015-05-06T14:52:40Z",
+        "updated": "2015-05-06T14:52:40Z",
+        "sizeTotal": "4.10 MB",
+        "files": [
+            {
+                "id": 155150,
+                "name": "The Island.rar",
+                "size": "4.10 MB"
+            }
+        ],
+        "aliasEntry": "the-island",
+        "aliasAuthor": "chenits",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30520-the-island\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30524,
+        "cid": 30,
+        "uid": 216263,
+        "author": "K\u00f6ld",
+        "category": "CSL Maps",
+        "title": "Fury Island",
+        "release": "1.1",
+        "submitted": "2015-05-08T14:02:17Z",
+        "updated": "2015-05-09T03:57:12Z",
+        "sizeTotal": "4.67 MB",
+        "files": [
+            {
+                "id": 155489,
+                "name": "Fury Island .rar",
+                "size": "4.67 MB"
+            }
+        ],
+        "aliasEntry": "fury-island",
+        "aliasAuthor": "k\u00f6ld",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30524-fury-island\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30526,
+        "cid": 30,
+        "uid": 705791,
+        "author": "FenX2015",
+        "category": "CSL Maps",
+        "title": "Storm Delta",
+        "release": "1.0",
+        "submitted": "2015-05-10T14:09:49Z",
+        "updated": "2015-05-10T14:09:49Z",
+        "sizeTotal": "3.89 MB",
+        "files": [
+            {
+                "id": 155505,
+                "name": "Storm Delta.zip",
+                "size": "3.89 MB"
+            }
+        ],
+        "aliasEntry": "storm-delta",
+        "aliasAuthor": "fenx2015",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30526-storm-delta\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30530,
+        "cid": 30,
+        "uid": 216263,
+        "author": "K\u00f6ld",
+        "category": "CSL Maps",
+        "title": "Cinder Mountain Valley",
+        "release": "1.0",
+        "submitted": "2015-05-12T22:28:16Z",
+        "updated": "2015-05-12T22:28:16Z",
+        "sizeTotal": "3.71 MB",
+        "files": [
+            {
+                "id": 155645,
+                "name": "Cinder Mountain Valley 1.0.rar",
+                "size": "3.71 MB"
+            }
+        ],
+        "aliasEntry": "cinder-mountain-valley",
+        "aliasAuthor": "k\u00f6ld",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30530-cinder-mountain-valley\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30537,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Ketoy",
+        "release": "1.0",
+        "submitted": "2015-05-15T12:55:05Z",
+        "updated": "2015-05-15T12:55:05Z",
+        "sizeTotal": "4.96 MB",
+        "files": [
+            {
+                "id": 155930,
+                "name": "Ketoy.zip",
+                "size": "4.96 MB"
+            }
+        ],
+        "aliasEntry": "ketoy",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30537-ketoy\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30546,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Magadan",
+        "release": "1.0",
+        "submitted": "2015-05-18T01:59:32Z",
+        "updated": "2015-05-18T01:59:32Z",
+        "sizeTotal": "3.21 MB",
+        "files": [
+            {
+                "id": 155936,
+                "name": "Magadan.zip",
+                "size": "3.21 MB"
+            }
+        ],
+        "aliasEntry": "magadan",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30546-magadan\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30550,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "NorthEast Shikotan",
+        "release": "1.0",
+        "submitted": "2015-05-19T07:38:32Z",
+        "updated": "2015-05-19T07:38:32Z",
+        "sizeTotal": "3.76 MB",
+        "files": [
+            {
+                "id": 156093,
+                "name": "NorthEast Shikotan.zip",
+                "size": "3.76 MB"
+            }
+        ],
+        "aliasEntry": "northeast-shikotan",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30550-northeast-shikotan\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30555,
+        "cid": 30,
+        "uid": 216263,
+        "author": "K\u00f6ld",
+        "category": "CSL Maps",
+        "title": "Devilspine Canyon",
+        "release": "1.0",
+        "submitted": "2015-05-20T20:16:22Z",
+        "updated": "2015-05-20T20:16:22Z",
+        "sizeTotal": "4.82 MB",
+        "files": [
+            {
+                "id": 156847,
+                "name": "Devilspine Canyon 1.0.rar",
+                "size": "3.67 MB"
+            },
+            {
+                "id": 156848,
+                "name": "Conifer Tree Mods.rar",
+                "size": "1.16 MB"
+            }
+        ],
+        "aliasEntry": "devilspine-canyon",
+        "aliasAuthor": "k\u00f6ld",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30555-devilspine-canyon\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30563,
+        "cid": 30,
+        "uid": 612598,
+        "author": "89James89",
+        "category": "CSL Maps",
+        "title": "Requested Mountainous Island Map 005",
+        "release": "1.0",
+        "submitted": "2015-05-28T08:36:04Z",
+        "updated": "2015-05-28T08:36:04Z",
+        "sizeTotal": "4.24 MB",
+        "files": [
+            {
+                "id": 156633,
+                "name": "Requested Mountian Island 005.zip",
+                "size": "4.24 MB"
+            }
+        ],
+        "aliasEntry": "requested-mountainous-island-map-005",
+        "aliasAuthor": "89james89",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30563-requested-mountainous-island-map-005\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30567,
+        "cid": 30,
+        "uid": 216263,
+        "author": "K\u00f6ld",
+        "category": "CSL Maps",
+        "title": "Raven Bay",
+        "release": "1.3",
+        "submitted": "2015-05-29T06:23:33Z",
+        "updated": "2015-10-01T22:07:52Z",
+        "sizeTotal": "17.01 MB",
+        "files": [
+            {
+                "id": 159456,
+                "name": "3ed0d95bb006de28805a559e861e4c35-raven-bay-10.ipb",
+                "size": "4.24 MB"
+            },
+            {
+                "id": 159457,
+                "name": "8652b6dd4a4ccc6df03b38911907c3fe-raven-bay-11.ipb",
+                "size": "4.24 MB"
+            },
+            {
+                "id": 159458,
+                "name": "b8e060287c80c20a749c37d7143a444f-raven-bay12.ipb",
+                "size": "4.26 MB"
+            },
+            {
+                "id": 159459,
+                "name": "Raven_Bay_1.3.rar",
+                "size": "4.27 MB"
+            }
+        ],
+        "aliasEntry": "raven-bay",
+        "aliasAuthor": "k\u00f6ld",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30567-raven-bay\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30569,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Petropavlovsk-Kamchatsky",
+        "release": "1.0",
+        "submitted": "2015-05-30T08:42:59Z",
+        "updated": "2015-05-30T08:42:59Z",
+        "sizeTotal": "3.18 MB",
+        "files": [
+            {
+                "id": 156941,
+                "name": "petropavlovskkamchatsky.zip",
+                "size": "3.18 MB"
+            }
+        ],
+        "aliasEntry": "petropavlovsk-kamchatsky",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30569-petropavlovsk-kamchatsky\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30570,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Matua",
+        "release": "1.0",
+        "submitted": "2015-05-30T15:01:11Z",
+        "updated": "2015-05-30T15:01:11Z",
+        "sizeTotal": "2.01 MB",
+        "files": [
+            {
+                "id": 156951,
+                "name": "Matua.zip",
+                "size": "2.01 MB"
+            }
+        ],
+        "aliasEntry": "matua",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30570-matua\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30576,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Entrantoria",
+        "release": "1.0",
+        "submitted": "2015-06-06T18:32:34Z",
+        "updated": "2015-06-06T18:32:34Z",
+        "sizeTotal": "3.50 MB",
+        "files": [
+            {
+                "id": 157325,
+                "name": "Etrantoria.zip",
+                "size": "3.50 MB"
+            }
+        ],
+        "aliasEntry": "entrantoria",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30576-entrantoria\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30582,
+        "cid": 30,
+        "uid": 529362,
+        "author": "kaltam",
+        "category": "CSL Maps",
+        "title": "Ma\u0142opolska POLAND MAP",
+        "release": "1.0",
+        "submitted": "2015-06-08T19:28:48Z",
+        "updated": "2015-06-08T19:28:48Z",
+        "files": [
+            {
+                "id": 157429,
+                "link": "http:\/\/www45.zippyshare.com\/v\/S2FE62fU\/file.html",
+                "size": null
+            }
+        ],
+        "aliasEntry": "ma\u0142opolska-poland-map",
+        "aliasAuthor": "kaltam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30582-ma\u0142opolska-poland-map\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30583,
+        "cid": 30,
+        "uid": 702688,
+        "author": "Rayed",
+        "category": "CSL Maps",
+        "title": "Ottawa, Canada",
+        "release": "1.0",
+        "submitted": "2015-06-08T23:16:14Z",
+        "updated": "2015-06-08T23:16:14Z",
+        "sizeTotal": "10.71 MB",
+        "files": [
+            {
+                "id": 157496,
+                "name": "Map of Ottawa.rar",
+                "size": "10.71 MB"
+            }
+        ],
+        "aliasEntry": "ottawa-canada",
+        "aliasAuthor": "rayed",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30583-ottawa-canada\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30584,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Yuzhno-Kurilsk",
+        "release": "1.0",
+        "submitted": "2015-06-09T03:50:35Z",
+        "updated": "2015-06-09T03:50:35Z",
+        "sizeTotal": "3.70 MB",
+        "files": [
+            {
+                "id": 157481,
+                "name": "YuzhnoKurilsk.zip",
+                "size": "3.70 MB"
+            }
+        ],
+        "aliasEntry": "yuzhno-kurilsk",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30584-yuzhno-kurilsk\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30586,
+        "cid": 30,
+        "uid": 216263,
+        "author": "K\u00f6ld",
+        "category": "CSL Maps",
+        "title": "Nightingale Pass",
+        "release": "1.0",
+        "submitted": "2015-06-17T23:13:22Z",
+        "updated": "2015-06-17T23:13:22Z",
+        "sizeTotal": "3.30 MB",
+        "files": [
+            {
+                "id": 157505,
+                "name": "Nightingale_Pass_1.0.rar",
+                "size": "3.30 MB"
+            }
+        ],
+        "aliasEntry": "nightingale-pass",
+        "aliasAuthor": "k\u00f6ld",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30586-nightingale-pass\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30589,
+        "cid": 30,
+        "uid": 704758,
+        "author": "mirandaespinoza",
+        "category": "CSL Maps",
+        "title": "Costa Rica Map",
+        "release": "1.0",
+        "submitted": "2015-06-18T23:05:12Z",
+        "updated": "2016-02-13T20:06:21Z",
+        "sizeTotal": "4.54 MB",
+        "files": [
+            {
+                "id": 160699,
+                "name": "Costa Rica.rar",
+                "size": "4.54 MB"
+            }
+        ],
+        "aliasEntry": "costa-rica-map",
+        "aliasAuthor": "mirandaespinoza",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30589-costa-rica-map\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30593,
+        "cid": 30,
+        "uid": 529362,
+        "author": "kaltam",
+        "category": "CSL Maps",
+        "title": "Wybrze\u017ce Polskie",
+        "release": "1.1.0b",
+        "submitted": "2015-06-19T19:54:18Z",
+        "updated": "2015-06-19T19:54:18Z",
+        "sizeTotal": "3.70 MB",
+        "files": [
+            {
+                "id": 157609,
+                "name": "558471b192207_Wybrzee.crp",
+                "size": "3.70 MB"
+            }
+        ],
+        "aliasEntry": "wybrze\u017ce-polskie",
+        "aliasAuthor": "kaltam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30593-wybrze\u017ce-polskie\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30594,
+        "cid": 30,
+        "uid": 612598,
+        "author": "89James89",
+        "category": "CSL Maps",
+        "title": "South West Rock, Australia",
+        "release": "1.0",
+        "submitted": "2015-06-20T08:26:28Z",
+        "updated": "2015-06-20T08:26:28Z",
+        "sizeTotal": "4.81 MB",
+        "files": [
+            {
+                "id": 157611,
+                "name": "5585229d47a5b_Real_World_Map_003_SW_Rocks_Aus.crp",
+                "size": "4.81 MB"
+            }
+        ],
+        "aliasEntry": "south-west-rock-australia",
+        "aliasAuthor": "89james89",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30594-south-west-rock-australia\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30595,
+        "cid": 30,
+        "uid": 709020,
+        "author": "SHKSID",
+        "category": "CSL Maps",
+        "title": "Mumbai",
+        "release": "1.0",
+        "submitted": "2015-06-20T09:36:58Z",
+        "updated": "2015-06-20T09:36:58Z",
+        "sizeTotal": "3.15 MB",
+        "files": [
+            {
+                "id": 157614,
+                "name": "Mumbai.rar",
+                "size": "3.15 MB"
+            }
+        ],
+        "aliasEntry": "mumbai",
+        "aliasAuthor": "shksid",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30595-mumbai\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30597,
+        "cid": 30,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Maps",
+        "title": "Fields of Barley",
+        "release": "1.0",
+        "submitted": "2015-06-20T11:07:18Z",
+        "updated": "2015-06-20T11:07:18Z",
+        "sizeTotal": "3.49 MB",
+        "files": [
+            {
+                "id": 157632,
+                "name": "Fields_of_Barley.rar",
+                "size": "3.49 MB"
+            }
+        ],
+        "aliasEntry": "fields-of-barley",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30597-fields-of-barley\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30606,
+        "cid": 30,
+        "uid": 709020,
+        "author": "SHKSID",
+        "category": "CSL Maps",
+        "title": "Dubai.crp",
+        "release": "1.0",
+        "submitted": "2015-06-20T18:03:05Z",
+        "updated": "2015-06-20T18:03:05Z",
+        "sizeTotal": "4.68 MB",
+        "files": [
+            {
+                "id": 157714,
+                "name": "Dubai.crp",
+                "size": "4.68 MB"
+            }
+        ],
+        "aliasEntry": "dubaicrp",
+        "aliasAuthor": "shksid",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30606-dubaicrp\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30618,
+        "cid": 30,
+        "uid": 709084,
+        "author": "Jonne90",
+        "category": "CSL Maps",
+        "title": "Australia",
+        "release": "1.1.0",
+        "submitted": "2015-06-23T08:40:25Z",
+        "updated": "2015-06-23T09:01:46Z",
+        "sizeTotal": "3.78 MB",
+        "files": [
+            {
+                "id": 157857,
+                "name": "Australia_-_By_Jonne90.rar",
+                "size": "3.78 MB"
+            }
+        ],
+        "aliasEntry": "australia",
+        "aliasAuthor": "jonne90",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30618-australia\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30622,
+        "cid": 30,
+        "uid": 568363,
+        "author": "intristin2",
+        "category": "CSL Maps",
+        "title": "Flatlands",
+        "release": "1.0.2",
+        "submitted": "2015-06-24T01:15:42Z",
+        "updated": "2015-06-24T01:15:42Z",
+        "sizeTotal": "3.96 MB",
+        "files": [
+            {
+                "id": 157873,
+                "name": "Flatlands.crp",
+                "size": "3.96 MB"
+            }
+        ],
+        "aliasEntry": "flatlands",
+        "aliasAuthor": "intristin2",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30622-flatlands\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30623,
+        "cid": 30,
+        "uid": 216263,
+        "author": "K\u00f6ld",
+        "category": "CSL Maps",
+        "title": "Crescendo Cove",
+        "release": "1.1.0",
+        "submitted": "2015-06-24T03:09:23Z",
+        "updated": "2015-06-28T20:30:08Z",
+        "sizeTotal": "8.48 MB",
+        "files": [
+            {
+                "id": 157938,
+                "name": "Crescendo_Cove1.0.rar",
+                "size": "4.24 MB"
+            },
+            {
+                "id": 157939,
+                "name": "Crescendo_Cove_1.1.rar",
+                "size": "4.25 MB"
+            }
+        ],
+        "aliasEntry": "crescendo-cove",
+        "aliasAuthor": "k\u00f6ld",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30623-crescendo-cove\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30626,
+        "cid": 30,
+        "uid": 709020,
+        "author": "SHKSID",
+        "category": "CSL Maps",
+        "title": "Istanbul - Turkey",
+        "release": "1.0",
+        "submitted": "2015-06-25T20:29:24Z",
+        "updated": "2015-06-25T20:29:24Z",
+        "sizeTotal": "4.86 MB",
+        "files": [
+            {
+                "id": 157909,
+                "name": "IST.crp",
+                "size": "4.86 MB"
+            }
+        ],
+        "aliasEntry": "istanbul-turkey",
+        "aliasAuthor": "shksid",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30626-istanbul-turkey\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30630,
+        "cid": 30,
+        "uid": 612598,
+        "author": "89James89",
+        "category": "CSL Maps",
+        "title": "Requested Valley Island Map 006",
+        "release": "1.0",
+        "submitted": "2015-06-29T12:53:16Z",
+        "updated": "2015-06-29T12:53:16Z",
+        "sizeTotal": "4.59 MB",
+        "files": [
+            {
+                "id": 157956,
+                "name": "Requested_Valley_Island_Map_006.crp",
+                "size": "4.59 MB"
+            }
+        ],
+        "aliasEntry": "requested-valley-island-map-006",
+        "aliasAuthor": "89james89",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30630-requested-valley-island-map-006\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30631,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Kurilsk",
+        "release": "1.0",
+        "submitted": "2015-06-29T13:30:25Z",
+        "updated": "2015-06-29T13:30:25Z",
+        "sizeTotal": "3.25 MB",
+        "files": [
+            {
+                "id": 157959,
+                "name": "Kurilsk.zip",
+                "size": "3.25 MB"
+            }
+        ],
+        "aliasEntry": "kurilsk",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30631-kurilsk\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30634,
+        "cid": 30,
+        "uid": 710236,
+        "author": "ApexDriver",
+        "category": "CSL Maps",
+        "title": "Square Island",
+        "release": "1.0.0 (A)",
+        "submitted": "2015-07-01T10:43:35Z",
+        "updated": "2015-07-01T10:43:35Z",
+        "sizeTotal": "1.20 MB",
+        "files": [
+            {
+                "id": 157986,
+                "name": "SquareIsland.crp",
+                "size": "1.20 MB"
+            }
+        ],
+        "aliasEntry": "square-island",
+        "aliasAuthor": "apexdriver",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30634-square-island\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30639,
+        "cid": 30,
+        "uid": 179631,
+        "author": "SAVAGExPHOENIX",
+        "category": "CSL Maps",
+        "title": "Gracemeria",
+        "release": "1.0",
+        "submitted": "2015-07-01T21:53:25Z",
+        "updated": "2015-07-01T21:53:25Z",
+        "sizeTotal": "3.25 MB",
+        "files": [
+            {
+                "id": 158238,
+                "name": "Gracemeria.zip",
+                "size": "3.25 MB"
+            }
+        ],
+        "aliasEntry": "gracemeria",
+        "aliasAuthor": "savagexphoenix",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30639-gracemeria\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30650,
+        "cid": 30,
+        "uid": 529362,
+        "author": "kaltam",
+        "category": "CSL Maps",
+        "title": "Valley Poland",
+        "release": "1.1.0b",
+        "submitted": "2015-07-09T08:10:18Z",
+        "updated": "2015-07-09T08:10:18Z",
+        "sizeTotal": "3.15 MB",
+        "files": [
+            {
+                "id": 158113,
+                "name": "Valley_Poland.crp",
+                "size": "3.15 MB"
+            }
+        ],
+        "aliasEntry": "valley-poland",
+        "aliasAuthor": "kaltam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30650-valley-poland\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30658,
+        "cid": 30,
+        "uid": 225636,
+        "author": "pieuponieu",
+        "category": "CSL Maps",
+        "title": "Lake Geneva - Temperate",
+        "release": "1.0",
+        "submitted": "2015-07-11T15:53:00Z",
+        "updated": "2015-07-11T15:53:00Z",
+        "sizeTotal": "4.45 MB",
+        "files": [
+            {
+                "id": 158226,
+                "name": "Lake_Geneva.crp",
+                "size": "4.45 MB"
+            }
+        ],
+        "aliasEntry": "lake-geneva-temperate",
+        "aliasAuthor": "pieuponieu",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30658-lake-geneva-temperate\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30672,
+        "cid": 30,
+        "uid": 417120,
+        "author": "Titanicbuff",
+        "category": "CSL Maps",
+        "title": "Ocean Valley",
+        "release": "1.2",
+        "submitted": "2015-07-13T02:09:30Z",
+        "updated": "2015-07-13T03:48:00Z",
+        "sizeTotal": "1.74 MB",
+        "files": [
+            {
+                "id": 158331,
+                "name": "Ocean_Valley.zip",
+                "size": "1.74 MB"
+            }
+        ],
+        "aliasEntry": "ocean-valley",
+        "aliasAuthor": "titanicbuff",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30672-ocean-valley\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30677,
+        "cid": 30,
+        "uid": 612598,
+        "author": "89James89",
+        "category": "CSL Maps",
+        "title": "Real World Map 004, Brooms Head AUS",
+        "release": "1.0",
+        "submitted": "2015-07-15T22:16:51Z",
+        "updated": "2015-07-15T22:16:51Z",
+        "sizeTotal": "3.38 MB",
+        "files": [
+            {
+                "id": 158364,
+                "name": "Real_World_Map_004_Brooms_Hd_Aus.zip",
+                "size": "3.38 MB"
+            }
+        ],
+        "aliasEntry": "real-world-map-004-brooms-head-aus",
+        "aliasAuthor": "89james89",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30677-real-world-map-004-brooms-head-aus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30685,
+        "cid": 30,
+        "uid": 225636,
+        "author": "pieuponieu",
+        "category": "CSL Maps",
+        "title": "Louisville KY - Temperate",
+        "release": "1.0",
+        "submitted": "2015-07-18T16:32:31Z",
+        "updated": "2015-07-21T23:05:14Z",
+        "sizeTotal": "4.19 MB",
+        "files": [
+            {
+                "id": 158405,
+                "name": "Louisville_KY.crp",
+                "size": "4.19 MB"
+            }
+        ],
+        "aliasEntry": "louisville-ky-temperate",
+        "aliasAuthor": "pieuponieu",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30685-louisville-ky-temperate\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30686,
+        "cid": 30,
+        "uid": 529362,
+        "author": "kaltam",
+        "category": "CSL Maps",
+        "title": "Dolina Bobru Poland Map",
+        "release": "1.0.1b",
+        "submitted": "2015-07-18T19:52:18Z",
+        "updated": "2015-07-18T19:52:18Z",
+        "sizeTotal": "3.36 MB",
+        "files": [
+            {
+                "id": 158385,
+                "name": "Dolina_Bobru.crp",
+                "size": "3.36 MB"
+            }
+        ],
+        "aliasEntry": "dolina-bobru-poland-map",
+        "aliasAuthor": "kaltam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30686-dolina-bobru-poland-map\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30693,
+        "cid": 30,
+        "uid": 380160,
+        "author": "Makar",
+        "category": "CSL Maps",
+        "title": "Novorossiysk, Russia",
+        "release": "1.0",
+        "submitted": "2015-07-23T04:12:03Z",
+        "updated": "2015-07-23T04:12:03Z",
+        "sizeTotal": "4.74 MB",
+        "files": [
+            {
+                "id": 158455,
+                "name": "Novorossiysk.crp",
+                "size": "4.74 MB"
+            }
+        ],
+        "aliasEntry": "novorossiysk-russia",
+        "aliasAuthor": "makar",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30693-novorossiysk-russia\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30695,
+        "cid": 30,
+        "uid": 380160,
+        "author": "Makar",
+        "category": "CSL Maps",
+        "title": "Sevastopol, Russia \/ Ukraine",
+        "release": "1.0",
+        "submitted": "2015-07-23T04:33:29Z",
+        "updated": "2015-07-23T04:33:29Z",
+        "sizeTotal": "7.11 MB",
+        "files": [
+            {
+                "id": 158470,
+                "name": "Sevastopol.crp",
+                "size": "7.11 MB"
+            }
+        ],
+        "aliasEntry": "sevastopol-russia-ukraine",
+        "aliasAuthor": "makar",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30695-sevastopol-russia-ukraine\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30696,
+        "cid": 30,
+        "uid": 380160,
+        "author": "Makar",
+        "category": "CSL Maps",
+        "title": "Vladivostok, Russia",
+        "release": "1.0.1",
+        "submitted": "2015-07-23T04:41:47Z",
+        "updated": "2015-07-23T04:41:47Z",
+        "sizeTotal": "7.59 MB",
+        "files": [
+            {
+                "id": 158476,
+                "name": "vl.crp",
+                "size": "7.59 MB"
+            }
+        ],
+        "aliasEntry": "vladivostok-russia",
+        "aliasAuthor": "makar",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30696-vladivostok-russia\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30699,
+        "cid": 30,
+        "uid": 516240,
+        "author": "brabant84",
+        "category": "CSL Maps",
+        "title": "Three rivers map",
+        "release": "1.0",
+        "submitted": "2015-07-24T18:00:35Z",
+        "updated": "2015-07-24T18:00:35Z",
+        "sizeTotal": "3.32 MB",
+        "files": [
+            {
+                "id": 158509,
+                "name": "River_Plateau_with_ship.crp",
+                "size": "3.32 MB"
+            }
+        ],
+        "aliasEntry": "three-rivers-map",
+        "aliasAuthor": "brabant84",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30699-three-rivers-map\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30700,
+        "cid": 30,
+        "uid": 225636,
+        "author": "pieuponieu",
+        "category": "CSL Maps",
+        "title": "Cartagena, Colombia - European",
+        "release": "1.0",
+        "submitted": "2015-07-25T14:50:45Z",
+        "updated": "2015-07-25T14:50:45Z",
+        "sizeTotal": "5.17 MB",
+        "files": [
+            {
+                "id": 158518,
+                "name": "Cartagena.crp",
+                "size": "5.17 MB"
+            }
+        ],
+        "aliasEntry": "cartagena-colombia-european",
+        "aliasAuthor": "pieuponieu",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30700-cartagena-colombia-european\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30703,
+        "cid": 30,
+        "uid": 612598,
+        "author": "89James89",
+        "category": "CSL Maps",
+        "title": "Real World Map 005 Daytona Beach, USA",
+        "release": "1.0",
+        "submitted": "2015-07-28T22:01:14Z",
+        "updated": "2015-07-28T22:01:14Z",
+        "sizeTotal": "3.18 MB",
+        "files": [
+            {
+                "id": 158535,
+                "name": "Real_World_Map_005_Daytona_Beach.zip",
+                "size": "3.18 MB"
+            }
+        ],
+        "aliasEntry": "real-world-map-005-daytona-beach-usa",
+        "aliasAuthor": "89james89",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30703-real-world-map-005-daytona-beach-usa\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30721,
+        "cid": 30,
+        "uid": 612598,
+        "author": "89James89",
+        "category": "CSL Maps",
+        "title": "Real World Map 006 Forster, Aus",
+        "release": "1.0",
+        "submitted": "2015-08-05T19:40:23Z",
+        "updated": "2015-08-05T19:40:23Z",
+        "sizeTotal": "4.13 MB",
+        "files": [
+            {
+                "id": 158614,
+                "name": "Real_World_Map_006_Forster_Aus.zip",
+                "size": "4.13 MB"
+            }
+        ],
+        "aliasEntry": "real-world-map-006-forster-aus",
+        "aliasAuthor": "89james89",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30721-real-world-map-006-forster-aus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30723,
+        "cid": 30,
+        "uid": 722234,
+        "author": "LobeDethfaurt",
+        "category": "CSL Maps",
+        "title": "Reclamation Island",
+        "release": "1.0",
+        "submitted": "2015-08-08T06:23:33Z",
+        "updated": "2015-08-08T06:23:33Z",
+        "sizeTotal": "6.23 MB",
+        "files": [
+            {
+                "id": 158621,
+                "name": "Reclamation_Island.crp",
+                "size": "6.23 MB"
+            }
+        ],
+        "aliasEntry": "reclamation-island",
+        "aliasAuthor": "lobedethfaurt",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30723-reclamation-island\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30724,
+        "cid": 30,
+        "uid": 225636,
+        "author": "pieuponieu",
+        "category": "CSL Maps",
+        "title": "San Juan PR - Tropical",
+        "release": "1.0",
+        "submitted": "2015-08-09T05:04:42Z",
+        "updated": "2015-08-09T05:04:42Z",
+        "sizeTotal": "5.08 MB",
+        "files": [
+            {
+                "id": 158633,
+                "name": "San_Juan.crp",
+                "size": "5.08 MB"
+            }
+        ],
+        "aliasEntry": "san-juan-pr-tropical",
+        "aliasAuthor": "pieuponieu",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30724-san-juan-pr-tropical\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30726,
+        "cid": 30,
+        "uid": 612598,
+        "author": "89James89",
+        "category": "CSL Maps",
+        "title": "Real World Map 007 Chattanooga, USA",
+        "release": "1.0",
+        "submitted": "2015-08-13T22:17:56Z",
+        "updated": "2015-08-13T22:17:56Z",
+        "sizeTotal": "3.08 MB",
+        "files": [
+            {
+                "id": 158684,
+                "name": "Real_World_Map_007_Chattanooga.zip",
+                "size": "3.08 MB"
+            }
+        ],
+        "aliasEntry": "real-world-map-007-chattanooga-usa",
+        "aliasAuthor": "89james89",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30726-real-world-map-007-chattanooga-usa\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30730,
+        "cid": 30,
+        "uid": 657225,
+        "author": "SimKidd",
+        "category": "CSL Maps",
+        "title": "Palm Jumeirah Island",
+        "release": "1.0",
+        "submitted": "2015-08-17T00:09:04Z",
+        "updated": "2015-08-17T00:09:04Z",
+        "sizeTotal": "4.96 MB",
+        "files": [
+            {
+                "id": 158830,
+                "name": "Palm_Island_Dubai.zip",
+                "size": "4.96 MB"
+            }
+        ],
+        "aliasEntry": "palm-jumeirah-island",
+        "aliasAuthor": "simkidd",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30730-palm-jumeirah-island\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30731,
+        "cid": 30,
+        "uid": 701585,
+        "author": "4nd_bf",
+        "category": "CSL Maps",
+        "title": "Blue River",
+        "release": "1.0",
+        "submitted": "2015-08-17T02:54:31Z",
+        "updated": "2015-08-17T02:54:31Z",
+        "sizeTotal": "3.25 MB",
+        "files": [
+            {
+                "id": 158832,
+                "name": "Blue_River-CS.rar",
+                "size": "3.25 MB"
+            }
+        ],
+        "aliasEntry": "blue-river",
+        "aliasAuthor": "4nd_bf",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30731-blue-river\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30734,
+        "cid": 30,
+        "uid": 612598,
+        "author": "89James89",
+        "category": "CSL Maps",
+        "title": "Real World Map 008 Salida, CO, USA",
+        "release": "1.0",
+        "submitted": "2015-08-18T19:28:38Z",
+        "updated": "2015-08-18T19:28:38Z",
+        "sizeTotal": "2.88 MB",
+        "files": [
+            {
+                "id": 158865,
+                "name": "Real_World_Map_008_Salida_Co.zip",
+                "size": "2.88 MB"
+            }
+        ],
+        "aliasEntry": "real-world-map-008-salida-co-usa",
+        "aliasAuthor": "89james89",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30734-real-world-map-008-salida-co-usa\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30742,
+        "cid": 30,
+        "uid": 723096,
+        "author": "hotpalms43",
+        "category": "CSL Maps",
+        "title": "Jurassic Islands",
+        "release": "1.0",
+        "submitted": "2015-08-20T00:04:38Z",
+        "updated": "2015-08-20T00:04:38Z",
+        "sizeTotal": "5.07 MB",
+        "files": [
+            {
+                "id": 158893,
+                "name": "Jurrassic_Mountains_2.crp",
+                "size": "5.07 MB"
+            }
+        ],
+        "aliasEntry": "jurassic-islands",
+        "aliasAuthor": "hotpalms43",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30742-jurassic-islands\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30743,
+        "cid": 30,
+        "uid": 225636,
+        "author": "pieuponieu",
+        "category": "CSL Maps",
+        "title": "Serenity Valley - Boreal",
+        "release": "1.0",
+        "submitted": "2015-08-20T04:35:29Z",
+        "updated": "2015-08-20T04:39:04Z",
+        "sizeTotal": "4.02 MB",
+        "files": [
+            {
+                "id": 158915,
+                "name": "Serenity_Valley.crp",
+                "size": "4.02 MB"
+            }
+        ],
+        "aliasEntry": "serenity-valley-boreal",
+        "aliasAuthor": "pieuponieu",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30743-serenity-valley-boreal\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30752,
+        "cid": 30,
+        "uid": 225636,
+        "author": "pieuponieu",
+        "category": "CSL Maps",
+        "title": "Cebu City - Tropical",
+        "release": "1.0",
+        "submitted": "2015-08-25T03:58:25Z",
+        "updated": "2015-08-25T12:11:02Z",
+        "sizeTotal": "5.76 MB",
+        "files": [
+            {
+                "id": 159037,
+                "name": "Cebu_City.crp",
+                "size": "5.76 MB"
+            }
+        ],
+        "aliasEntry": "cebu-city-tropical",
+        "aliasAuthor": "pieuponieu",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30752-cebu-city-tropical\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30760,
+        "cid": 30,
+        "uid": 225636,
+        "author": "pieuponieu",
+        "category": "CSL Maps",
+        "title": "Astoria OR - Boreal",
+        "release": "1.0",
+        "submitted": "2015-08-31T01:42:58Z",
+        "updated": "2015-08-31T01:42:58Z",
+        "sizeTotal": "5.83 MB",
+        "files": [
+            {
+                "id": 159102,
+                "name": "Astoria_OR.crp",
+                "size": "5.83 MB"
+            }
+        ],
+        "aliasEntry": "astoria-or-boreal",
+        "aliasAuthor": "pieuponieu",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30760-astoria-or-boreal\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30766,
+        "cid": 30,
+        "uid": 225636,
+        "author": "pieuponieu",
+        "category": "CSL Maps",
+        "title": "Hobart Tasmania - Boreal",
+        "release": "1.0",
+        "submitted": "2015-09-03T03:02:32Z",
+        "updated": "2015-09-03T03:02:32Z",
+        "sizeTotal": "4.63 MB",
+        "files": [
+            {
+                "id": 159140,
+                "name": "Hobart_Tasmania.crp",
+                "size": "4.63 MB"
+            }
+        ],
+        "aliasEntry": "hobart-tasmania-boreal",
+        "aliasAuthor": "pieuponieu",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30766-hobart-tasmania-boreal\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30794,
+        "cid": 30,
+        "uid": 705791,
+        "author": "FenX2015",
+        "category": "CSL Maps",
+        "title": "Yuzhnouralsk Urban District",
+        "release": "1.0",
+        "submitted": "2015-09-19T17:44:11Z",
+        "updated": "2015-09-19T21:37:15Z",
+        "sizeTotal": "1.95 MB",
+        "files": [
+            {
+                "id": 159325,
+                "name": "Yuzhnouralsk_Urban_District.rar",
+                "size": "1.95 MB"
+            }
+        ],
+        "aliasEntry": "yuzhnouralsk-urban-district",
+        "aliasAuthor": "fenx2015",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30794-yuzhnouralsk-urban-district\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30795,
+        "cid": 30,
+        "uid": 705791,
+        "author": "FenX2015",
+        "category": "CSL Maps",
+        "title": "Crater",
+        "release": "1.0",
+        "submitted": "2015-09-19T21:52:10Z",
+        "updated": "2015-09-19T21:52:10Z",
+        "sizeTotal": "3.85 MB",
+        "files": [
+            {
+                "id": 159332,
+                "name": "Crator.rar",
+                "size": "3.85 MB"
+            }
+        ],
+        "aliasEntry": "crater",
+        "aliasAuthor": "fenx2015",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30795-crater\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30801,
+        "cid": 30,
+        "uid": 581,
+        "author": "CWLGAMER01",
+        "category": "CSL Maps",
+        "title": "Charlotte, North Carolina",
+        "release": "0.1",
+        "submitted": "2015-09-27T14:48:50Z",
+        "updated": "2015-09-27T14:48:50Z",
+        "sizeTotal": "4.45 MB",
+        "files": [
+            {
+                "id": 159377,
+                "name": "Charlotte.crp",
+                "size": "4.45 MB"
+            }
+        ],
+        "aliasEntry": "charlotte-north-carolina",
+        "aliasAuthor": "cwlgamer01",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30801-charlotte-north-carolina\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30819,
+        "cid": 30,
+        "uid": 88088,
+        "author": "Mechalic",
+        "category": "CSL Maps",
+        "title": "Salem",
+        "release": "1.0",
+        "submitted": "2015-10-17T06:38:10Z",
+        "updated": "2015-10-17T06:38:10Z",
+        "sizeTotal": "6.50 MB",
+        "files": [
+            {
+                "id": 159612,
+                "name": "Salem.crp",
+                "size": "6.50 MB"
+            }
+        ],
+        "aliasEntry": "salem",
+        "aliasAuthor": "mechalic",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30819-salem\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30834,
+        "cid": 30,
+        "uid": 705791,
+        "author": "FenX2015",
+        "category": "CSL Maps",
+        "title": "Gard Delta",
+        "release": "1.0",
+        "submitted": "2015-11-04T21:48:37Z",
+        "updated": "2015-11-04T21:48:37Z",
+        "sizeTotal": "3.27 MB",
+        "files": [
+            {
+                "id": 159710,
+                "name": "Gard_Delta.rar",
+                "size": "3.27 MB"
+            }
+        ],
+        "aliasEntry": "gard-delta",
+        "aliasAuthor": "fenx2015",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30834-gard-delta\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30906,
+        "cid": 30,
+        "uid": 533336,
+        "author": "kegsmr",
+        "category": "CSL Maps",
+        "title": "Innsbruck, Austria",
+        "release": "1.0",
+        "submitted": "2016-01-04T01:00:31Z",
+        "updated": "2016-01-04T01:00:31Z",
+        "sizeTotal": "3.93 MB",
+        "files": [
+            {
+                "id": 160230,
+                "name": "Innsbruck.rar",
+                "size": "3.93 MB"
+            }
+        ],
+        "aliasEntry": "innsbruck-austria",
+        "aliasAuthor": "kegsmr",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30906-innsbruck-austria\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30937,
+        "cid": 30,
+        "uid": 733643,
+        "author": "SaturnSerenity",
+        "category": "CSL Maps",
+        "title": "Forgotten Vale Cities Skylines Map",
+        "release": "1.0",
+        "submitted": "2016-02-05T02:30:25Z",
+        "updated": "2016-02-05T02:41:34Z",
+        "sizeTotal": "3.95 MB",
+        "files": [
+            {
+                "id": 160597,
+                "name": "Forgotten Vale.crp",
+                "size": "3.95 MB"
+            }
+        ],
+        "aliasEntry": "forgotten-vale-cities-skylines-map",
+        "aliasAuthor": "saturnserenity",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30937-forgotten-vale-cities-skylines-map\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30965,
+        "cid": 30,
+        "uid": 417120,
+        "author": "Titanicbuff",
+        "category": "CSL Maps",
+        "title": "Ash City",
+        "release": "1.0",
+        "submitted": "2016-02-23T02:57:45Z",
+        "updated": "2016-02-23T02:57:45Z",
+        "sizeTotal": "3.58 MB",
+        "files": [
+            {
+                "id": 160860,
+                "name": "Ash City.crp",
+                "size": "3.58 MB"
+            }
+        ],
+        "aliasEntry": "ash-city",
+        "aliasAuthor": "titanicbuff",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30965-ash-city\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30989,
+        "cid": 30,
+        "uid": 671395,
+        "author": "Misanthrope",
+        "category": "CSL Maps",
+        "title": "Frostbite",
+        "release": "1.0",
+        "submitted": "2016-03-09T12:35:00Z",
+        "updated": "2016-03-09T12:35:00Z",
+        "sizeTotal": "2.75 MB",
+        "files": [
+            {
+                "id": 161012,
+                "name": "Frostbite.zip",
+                "size": "2.75 MB"
+            }
+        ],
+        "aliasEntry": "frostbite",
+        "aliasAuthor": "misanthrope",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30989-frostbite\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31005,
+        "cid": 30,
+        "uid": 705791,
+        "author": "FenX2015",
+        "category": "CSL Maps",
+        "title": "Lowflod Bay",
+        "release": "1.0",
+        "submitted": "2016-03-27T18:15:31Z",
+        "updated": "2016-03-27T18:15:31Z",
+        "sizeTotal": "4.10 MB",
+        "files": [
+            {
+                "id": 161149,
+                "name": "Lowflod Bay.rar",
+                "size": "4.10 MB"
+            }
+        ],
+        "aliasEntry": "lowflod-bay",
+        "aliasAuthor": "fenx2015",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31005-lowflod-bay\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31033,
+        "cid": 30,
+        "uid": 738604,
+        "author": "2001kraft",
+        "category": "CSL Maps",
+        "title": "Jan Mayen Island",
+        "release": "1.0",
+        "submitted": "2016-04-16T21:45:43Z",
+        "updated": "2016-04-16T21:45:43Z",
+        "sizeTotal": "4.77 MB",
+        "files": [
+            {
+                "id": 161422,
+                "name": "Jan Mayen Island.crp",
+                "size": "4.77 MB"
+            }
+        ],
+        "aliasEntry": "jan-mayen-island",
+        "aliasAuthor": "2001kraft",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31033-jan-mayen-island\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31034,
+        "cid": 30,
+        "uid": 738604,
+        "author": "2001kraft",
+        "category": "CSL Maps",
+        "title": "Maio, Cape Verde",
+        "release": "1.0",
+        "submitted": "2016-04-17T23:27:29Z",
+        "updated": "2016-04-17T23:27:29Z",
+        "sizeTotal": "4.56 MB",
+        "files": [
+            {
+                "id": 161459,
+                "name": "Maio, Cape Verde.crp",
+                "size": "4.56 MB"
+            }
+        ],
+        "aliasEntry": "maio-cape-verde",
+        "aliasAuthor": "2001kraft",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31034-maio-cape-verde\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31035,
+        "cid": 30,
+        "uid": 738604,
+        "author": "2001kraft",
+        "category": "CSL Maps",
+        "title": "La Gomera, Canary Islands, Spain",
+        "release": "1.2",
+        "submitted": "2016-04-17T23:58:47Z",
+        "updated": "2016-04-17T23:58:47Z",
+        "sizeTotal": "4.81 MB",
+        "files": [
+            {
+                "id": 161464,
+                "name": "La Gomera, Canary Islands.crp",
+                "size": "4.81 MB"
+            }
+        ],
+        "aliasEntry": "la-gomera-canary-islands-spain",
+        "aliasAuthor": "2001kraft",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31035-la-gomera-canary-islands-spain\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31114,
+        "cid": 30,
+        "uid": 740559,
+        "author": "StratosphereTHAI",
+        "category": "CSL Maps",
+        "title": "Stratus Island",
+        "release": "1.0.1",
+        "submitted": "2016-06-05T12:06:27Z",
+        "updated": "2016-09-15T09:47:08Z",
+        "sizeTotal": "4.86 MB",
+        "files": [
+            {
+                "id": 163170,
+                "name": "Stratus Island 1.0.1.crp",
+                "size": "4.86 MB"
+            }
+        ],
+        "aliasEntry": "stratus-island",
+        "aliasAuthor": "stratospherethai",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31114-stratus-island\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31122,
+        "cid": 30,
+        "uid": 738604,
+        "author": "2001kraft",
+        "category": "CSL Maps",
+        "title": "Isla Mari\u00e1 Magdalena",
+        "release": "1.0",
+        "submitted": "2016-06-13T20:04:13Z",
+        "updated": "2016-06-13T20:04:13Z",
+        "sizeTotal": "4.76 MB",
+        "files": [
+            {
+                "id": 162118,
+                "name": "Isla Maria Magdalena.crp",
+                "size": "4.76 MB"
+            }
+        ],
+        "aliasEntry": "isla-mari\u00e1-magdalena",
+        "aliasAuthor": "2001kraft",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31122-isla-mari\u00e1-magdalena\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31124,
+        "cid": 30,
+        "uid": 738604,
+        "author": "2001kraft",
+        "category": "CSL Maps",
+        "title": "Las Kardes, CA, USA",
+        "release": "1.0",
+        "submitted": "2016-06-13T22:05:48Z",
+        "updated": "2016-06-13T22:05:48Z",
+        "sizeTotal": "4.48 MB",
+        "files": [
+            {
+                "id": 162135,
+                "name": "Las Kardes Island, CA, USA.crp",
+                "size": "4.48 MB"
+            }
+        ],
+        "aliasEntry": "las-kardes-ca-usa",
+        "aliasAuthor": "2001kraft",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31124-las-kardes-ca-usa\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31164,
+        "cid": 30,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Maps",
+        "title": "Randgen map \u21161",
+        "release": "1.0",
+        "submitted": "2016-07-10T00:50:15Z",
+        "updated": "2016-07-10T00:50:15Z",
+        "sizeTotal": "6.68 MB",
+        "files": [
+            {
+                "id": 162413,
+                "name": "Randgen_map_1.zip",
+                "size": "6.68 MB"
+            }
+        ],
+        "aliasEntry": "randgen-map-\u21161",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31164-randgen-map-\u21161\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31176,
+        "cid": 30,
+        "uid": 742684,
+        "author": "I Am D'dawg",
+        "category": "CSL Maps",
+        "title": "Indians Landing",
+        "release": "1.0",
+        "submitted": "2016-07-18T22:11:48Z",
+        "updated": "2016-07-18T22:11:48Z",
+        "sizeTotal": "3.71 MB",
+        "files": [
+            {
+                "id": 162495,
+                "name": "Indians Landing.crp",
+                "size": "3.71 MB"
+            }
+        ],
+        "aliasEntry": "indians-landing",
+        "aliasAuthor": "i-am-d'dawg",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31176-indians-landing\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31201,
+        "cid": 30,
+        "uid": 738604,
+        "author": "2001kraft",
+        "category": "CSL Maps",
+        "title": "Laramie, Wyoming Theme",
+        "release": "1.0",
+        "submitted": "2016-07-25T02:08:32Z",
+        "updated": "2016-07-25T02:08:32Z",
+        "sizeTotal": "5.28 MB",
+        "files": [
+            {
+                "id": 162599,
+                "name": "Laramie, Wyoming.crp",
+                "size": "5.28 MB"
+            }
+        ],
+        "aliasEntry": "laramie-wyoming-theme",
+        "aliasAuthor": "2001kraft",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31201-laramie-wyoming-theme\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31202,
+        "cid": 30,
+        "uid": 738604,
+        "author": "2001kraft",
+        "category": "CSL Maps",
+        "title": "Hunts Road I-80, Laramie, WY",
+        "release": "1.5.0",
+        "submitted": "2016-07-25T04:05:29Z",
+        "updated": "2016-07-25T04:08:12Z",
+        "sizeTotal": "2.21 MB",
+        "files": [
+            {
+                "id": 162615,
+                "name": "I-80 Hunts Road, Laramie, WY.crp",
+                "size": "2.21 MB"
+            }
+        ],
+        "aliasEntry": "hunts-road-i-80-laramie-wy",
+        "aliasAuthor": "2001kraft",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31202-hunts-road-i-80-laramie-wy\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31338,
+        "cid": 30,
+        "uid": 746040,
+        "author": "averagecrackfiend",
+        "category": "CSL Maps",
+        "title": "Coastal Delta",
+        "release": "1.0",
+        "submitted": "2016-10-27T12:17:38Z",
+        "updated": "2016-10-27T12:17:38Z",
+        "sizeTotal": "4.49 MB",
+        "files": [
+            {
+                "id": 163586,
+                "name": "Coastal Delta.crp",
+                "size": "4.49 MB"
+            }
+        ],
+        "aliasEntry": "coastal-delta",
+        "aliasAuthor": "averagecrackfiend",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31338-coastal-delta\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31646,
+        "cid": 30,
+        "uid": 751071,
+        "author": "Blu",
+        "category": "CSL Maps",
+        "title": "Neverland",
+        "release": "1.0",
+        "submitted": "2017-05-21T00:35:05Z",
+        "updated": "2017-05-21T00:35:05Z",
+        "sizeTotal": "5.26 MB",
+        "files": [
+            {
+                "id": 165892,
+                "name": "Neverland.crp",
+                "size": "5.26 MB"
+            }
+        ],
+        "aliasEntry": "neverland",
+        "aliasAuthor": "blu",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31646-neverland\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31911,
+        "cid": 30,
+        "uid": 753248,
+        "author": "Hiporcat",
+        "category": "CSL Maps",
+        "title": "Seaside, Oregon",
+        "release": "1.0.1",
+        "submitted": "2017-08-22T01:45:46Z",
+        "updated": "2017-08-26T20:05:55Z",
+        "sizeTotal": "5.06 MB",
+        "files": [
+            {
+                "id": 168190,
+                "name": "Seaside OR.crp",
+                "size": "5.06 MB"
+            }
+        ],
+        "aliasEntry": "seaside-oregon",
+        "aliasAuthor": "hiporcat",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31911-seaside-oregon\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31916,
+        "cid": 30,
+        "uid": 753248,
+        "author": "Hiporcat",
+        "category": "CSL Maps",
+        "title": "Cape Disappointment, Washington",
+        "release": "1.0.1",
+        "submitted": "2017-08-24T22:03:25Z",
+        "updated": "2017-08-26T20:04:36Z",
+        "sizeTotal": "5.41 MB",
+        "files": [
+            {
+                "id": 168168,
+                "name": "Cape Disappointment WA.crp",
+                "size": "5.41 MB"
+            }
+        ],
+        "aliasEntry": "cape-disappointment-washington",
+        "aliasAuthor": "hiporcat",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31916-cape-disappointment-washington\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32067,
+        "cid": 30,
+        "uid": 493414,
+        "author": "Jose26x",
+        "category": "CSL Maps",
+        "title": "Skyline Island",
+        "release": "0.2",
+        "submitted": "2018-01-15T16:46:59Z",
+        "updated": "2018-01-15T16:46:59Z",
+        "files": [
+            {
+                "id": 169607,
+                "link": "https:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=745920156",
+                "size": null
+            }
+        ],
+        "aliasEntry": "skyline-island",
+        "aliasAuthor": "jose26x",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32067-skyline-island\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32085,
+        "cid": 30,
+        "uid": 493414,
+        "author": "Jose26x",
+        "category": "CSL Maps",
+        "title": "New Boreal Map",
+        "release": "1.0",
+        "submitted": "2018-01-27T17:43:08Z",
+        "updated": "2018-01-27T17:43:08Z",
+        "files": [
+            {
+                "id": 169780,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=1282340751",
+                "size": null
+            }
+        ],
+        "aliasEntry": "new-boreal-map",
+        "aliasAuthor": "jose26x",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32085-new-boreal-map\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32274,
+        "cid": 30,
+        "uid": 764580,
+        "author": "Kanne",
+        "category": "CSL Maps",
+        "title": "Sant Topia",
+        "release": "1.0.5",
+        "submitted": "2018-05-30T18:42:34Z",
+        "updated": "2018-05-30T18:42:34Z",
+        "sizeTotal": "4.90 MB",
+        "files": [
+            {
+                "id": 170944,
+                "name": "Sant Topia  FINAL.crp",
+                "size": "4.90 MB"
+            }
+        ],
+        "aliasEntry": "sant-topia",
+        "aliasAuthor": "kanne",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32274-sant-topia\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32301,
+        "cid": 30,
+        "uid": 764580,
+        "author": "Kanne",
+        "category": "CSL Maps",
+        "title": "Yhiemine Walley",
+        "release": "1.0",
+        "submitted": "2018-06-10T08:13:23Z",
+        "updated": "2018-06-10T08:13:23Z",
+        "sizeTotal": "4.61 MB",
+        "files": [
+            {
+                "id": 171097,
+                "name": "YhiemineWalley.crp",
+                "size": "4.61 MB"
+            }
+        ],
+        "aliasEntry": "yhiemine-walley",
+        "aliasAuthor": "kanne",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32301-yhiemine-walley\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32388,
+        "cid": 30,
+        "uid": 766292,
+        "author": "Didi Scores",
+        "category": "CSL Maps",
+        "title": "Alba Romania",
+        "release": "1.0",
+        "submitted": "2018-08-02T22:16:37Z",
+        "updated": "2018-08-02T22:16:37Z",
+        "sizeTotal": "4.76 MB",
+        "files": [
+            {
+                "id": 171750,
+                "name": "Alba.crp",
+                "size": "4.76 MB"
+            }
+        ],
+        "aliasEntry": "alba-romania",
+        "aliasAuthor": "didi-scores",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32388-alba-romania\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32630,
+        "cid": 30,
+        "uid": 769165,
+        "author": "ayatollah",
+        "category": "CSL Maps",
+        "title": "Walled Island",
+        "release": "1.5",
+        "submitted": "2018-11-26T22:49:12Z",
+        "updated": "2018-11-27T23:07:13Z",
+        "sizeTotal": "10.88 MB",
+        "files": [
+            {
+                "id": 173666,
+                "name": "WalledIsland.crp",
+                "size": "5.41 MB"
+            },
+            {
+                "id": 173667,
+                "name": "WalledIsland.crp",
+                "size": "5.47 MB"
+            }
+        ],
+        "aliasEntry": "walled-island",
+        "aliasAuthor": "ayatollah",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32630-walled-island\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32672,
+        "cid": 30,
+        "uid": 769165,
+        "author": "ayatollah",
+        "category": "CSL Maps",
+        "title": "RockyIsles",
+        "release": "1.0",
+        "submitted": "2018-12-18T22:27:47Z",
+        "updated": "2018-12-18T22:27:47Z",
+        "sizeTotal": "5.51 MB",
+        "files": [
+            {
+                "id": 173988,
+                "name": "RockyIsles.crp",
+                "size": "5.51 MB"
+            }
+        ],
+        "aliasEntry": "rockyisles",
+        "aliasAuthor": "ayatollah",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32672-rockyisles\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32729,
+        "cid": 30,
+        "uid": 769165,
+        "author": "ayatollah",
+        "category": "CSL Maps",
+        "title": "The Plateau",
+        "release": "1.5",
+        "submitted": "2019-01-29T21:14:02Z",
+        "updated": "2019-02-27T15:04:22Z",
+        "sizeTotal": "12.22 MB",
+        "files": [
+            {
+                "id": 174810,
+                "name": "Plateau.crp",
+                "size": "6.07 MB"
+            },
+            {
+                "id": 174811,
+                "name": "Plateau.crp",
+                "size": "6.16 MB"
+            }
+        ],
+        "aliasEntry": "the-plateau",
+        "aliasAuthor": "ayatollah",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32729-the-plateau\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32775,
+        "cid": 30,
+        "uid": 769165,
+        "author": "ayatollah",
+        "category": "CSL Maps",
+        "title": "Long Valley",
+        "release": "1.0",
+        "submitted": "2019-02-27T14:00:09Z",
+        "updated": "2019-02-27T14:00:09Z",
+        "sizeTotal": "4.59 MB",
+        "files": [
+            {
+                "id": 174805,
+                "name": "Long Valley.crp",
+                "size": "4.59 MB"
+            }
+        ],
+        "aliasEntry": "long-valley",
+        "aliasAuthor": "ayatollah",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32775-long-valley\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33302,
+        "cid": 30,
+        "uid": 782338,
+        "author": "candycrunch",
+        "category": "CSL Maps",
+        "title": "Vimalaya",
+        "release": "1.0.0",
+        "submitted": "2019-12-01T15:50:40Z",
+        "updated": "2019-12-01T15:50:40Z",
+        "sizeTotal": "5.85 MB",
+        "files": [
+            {
+                "id": 178780,
+                "name": "Vimalaya.zip",
+                "size": "5.85 MB"
+            }
+        ],
+        "aliasEntry": "vimalaya",
+        "aliasAuthor": "candycrunch",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33302-vimalaya\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33738,
+        "cid": 30,
+        "uid": 790087,
+        "author": "thageneral81",
+        "category": "CSL Maps",
+        "title": "Tusket Falls",
+        "release": "1.0.0",
+        "submitted": "2020-08-04T14:09:21Z",
+        "updated": "2020-08-04T14:09:21Z",
+        "sizeTotal": "5.21 MB",
+        "files": [
+            {
+                "id": 182257,
+                "name": "Tusket Falls .crp",
+                "size": "5.21 MB"
+            }
+        ],
+        "aliasEntry": "tusket-falls",
+        "aliasAuthor": "thageneral81",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33738-tusket-falls\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33966,
+        "cid": 30,
+        "uid": 772581,
+        "author": "Harry's_Place",
+        "category": "CSL Maps",
+        "title": "ASTORIA BAY - a canvas for a detailer (my 1st map)",
+        "release": "1.0.0",
+        "submitted": "2020-11-18T00:41:03Z",
+        "updated": "2020-11-18T00:41:03Z",
+        "sizeTotal": "3.41 MB",
+        "files": [
+            {
+                "id": 183953,
+                "name": "ASTORIA BAY.crp",
+                "size": "3.41 MB"
+            }
+        ],
+        "aliasEntry": "astoria-bay-a-canvas-for-a-detailer-my-1st-map",
+        "aliasAuthor": "harry's_place",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33966-astoria-bay-a-canvas-for-a-detailer-my-1st-map\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34170,
+        "cid": 30,
+        "uid": 381214,
+        "author": "marlmarl",
+        "category": "CSL Maps",
+        "title": "Cheezbit",
+        "release": "1.0.0",
+        "submitted": "2021-02-23T15:29:13Z",
+        "updated": "2021-02-23T15:29:13Z",
+        "sizeTotal": "5.62 MB",
+        "files": [
+            {
+                "id": 185548,
+                "name": "Cheezbit.crp",
+                "size": "5.62 MB"
+            }
+        ],
+        "aliasEntry": "cheezbit",
+        "aliasAuthor": "marlmarl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34170-cheezbit\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35276,
+        "cid": 30,
+        "uid": 804041,
+        "author": "Mister_Vintage",
+        "category": "CSL Maps",
+        "title": "Cathlamet V 1.0",
+        "release": "1.0.0",
+        "submitted": "2022-08-20T17:57:22Z",
+        "updated": "2022-08-20T17:57:22Z",
+        "sizeTotal": "3.33 MB",
+        "files": [
+            {
+                "id": 195147,
+                "name": "CATHLAMET V 1%002E0.crp",
+                "size": "3.33 MB"
+            }
+        ],
+        "aliasEntry": "cathlamet-v-10",
+        "aliasAuthor": "mister_vintage",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35276-cathlamet-v-10\/",
+        "===========": "=========================================="
+    }
+]

@@ -1,0 +1,872 @@
+[
+    {
+        "id": 14492,
+        "cid": 117,
+        "uid": 86690,
+        "author": "Hamish",
+        "category": "Ready Made Regions",
+        "title": "Monthly Challenge File",
+        "release": "1.0",
+        "submitted": "2005-12-27T15:38:52Z",
+        "updated": "2005-12-27T15:38:52Z",
+        "sizeTotal": "5.69 MB",
+        "files": [
+            {
+                "id": 147529,
+                "name": "Monthly Challenge February 2015.rar",
+                "size": "5.69 MB"
+            }
+        ],
+        "aliasEntry": "monthly-challenge-file",
+        "aliasAuthor": "hamish",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/14492-monthly-challenge-file\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32241,
+        "cid": 117,
+        "uid": 132423,
+        "author": "ColinM",
+        "category": "Ready Made Regions",
+        "title": "Suleburg",
+        "release": "2.0.0",
+        "submitted": "2018-05-05T04:21:32Z",
+        "updated": "2018-05-07T21:32:58Z",
+        "sizeTotal": "27.03 MB",
+        "files": [
+            {
+                "id": 170763,
+                "name": "Suleburg.zip",
+                "size": "27.03 MB"
+            }
+        ],
+        "aliasEntry": "suleburg",
+        "aliasAuthor": "colinm",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32241-suleburg\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32644,
+        "cid": 117,
+        "uid": 771522,
+        "author": "X\u00e1rdo\u046f",
+        "category": "Ready Made Regions",
+        "title": "Leningrad Oblast",
+        "release": "1.0",
+        "submitted": "2018-12-04T18:17:28Z",
+        "updated": "2018-12-04T18:17:28Z",
+        "sizeTotal": "78.47 MB",
+        "files": [
+            {
+                "id": 173773,
+                "name": "SC4_Leningradskj reg.rar",
+                "size": "78.47 MB"
+            }
+        ],
+        "aliasEntry": "leningrad-oblast",
+        "aliasAuthor": "x\u00e1rdo\u046f",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32644-leningrad-oblast\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32700,
+        "cid": 117,
+        "uid": 737259,
+        "author": "CorinaMarie",
+        "category": "Ready Made Regions",
+        "title": "Cori's Castle - Complete Region",
+        "release": "1.0",
+        "submitted": "2019-01-06T08:42:04Z",
+        "updated": "2019-01-06T08:42:04Z",
+        "sizeTotal": "33.97 MB",
+        "files": [
+            {
+                "id": 174163,
+                "name": "Cori's Castle.zip",
+                "size": "33.96 MB"
+            },
+            {
+                "id": 174164,
+                "name": "Alamo Cost Minus $50,940 For Cori's Castle.dat",
+                "size": "10.98 kB"
+            }
+        ],
+        "aliasEntry": "coris-castle-complete-region",
+        "aliasAuthor": "corinamarie",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32700-coris-castle-complete-region\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33025,
+        "cid": 117,
+        "uid": 157989,
+        "author": "catty-cb",
+        "category": "Ready Made Regions",
+        "title": "Maxisland Region by Wren Weburg",
+        "release": "1.0",
+        "submitted": "2019-07-16T11:54:27Z",
+        "updated": "2019-07-16T11:54:27Z",
+        "sizeTotal": "71.00 MB",
+        "files": [
+            {
+                "id": 176735,
+                "name": "Maxisland.zip",
+                "size": "71.00 MB"
+            }
+        ],
+        "aliasEntry": "maxisland-region-by-wren-weburg",
+        "aliasAuthor": "catty-cb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33025-maxisland-region-by-wren-weburg\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33263,
+        "cid": 117,
+        "uid": 278313,
+        "author": "Indiana Joe",
+        "category": "Ready Made Regions",
+        "title": "The Bay -- NAM \"starter region\" with pre-built highways",
+        "release": "1.2",
+        "submitted": "2019-10-28T16:18:44Z",
+        "updated": "2020-09-27T20:06:24Z",
+        "sizeTotal": "3.32 MB",
+        "files": [
+            {
+                "id": 182780,
+                "name": "The Bay 1.2 (unzip folder).zip",
+                "size": "3.32 MB"
+            }
+        ],
+        "aliasEntry": "the-bay-nam-starter-region-with-pre-built-highways",
+        "aliasAuthor": "indiana-joe",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33263-the-bay-nam-starter-region-with-pre-built-highways\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33504,
+        "cid": 117,
+        "uid": 630109,
+        "author": "Fletch_BC",
+        "category": "Ready Made Regions",
+        "title": "[Lost Atlantys] **V2** [SANDBOX]",
+        "release": "1.0.0",
+        "submitted": "2020-03-20T22:34:41Z",
+        "updated": "2020-03-20T22:34:41Z",
+        "sizeTotal": "36.13 MB",
+        "files": [
+            {
+                "id": 180130,
+                "name": "Lost Atlantys2.zip",
+                "size": "36.13 MB"
+            }
+        ],
+        "aliasEntry": "lost-atlantys-v2-sandbox",
+        "aliasAuthor": "fletch_bc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33504-lost-atlantys-v2-sandbox\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33509,
+        "cid": 117,
+        "uid": 781569,
+        "author": "TheEstGuy",
+        "category": "Ready Made Regions",
+        "title": "Bananaland",
+        "release": "1.0.1",
+        "submitted": "2020-03-21T12:14:50Z",
+        "updated": "2021-09-01T15:43:02Z",
+        "sizeTotal": "73.81 MB",
+        "files": [
+            {
+                "id": 189870,
+                "name": "Banaanimaa.zip",
+                "size": "73.81 MB"
+            }
+        ],
+        "aliasEntry": "bananaland",
+        "aliasAuthor": "theestguy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33509-bananaland\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33680,
+        "cid": 117,
+        "uid": 789837,
+        "author": "Chaos Theory",
+        "category": "Ready Made Regions",
+        "title": "Montreal map (realistic with shape)",
+        "release": "1.0.0",
+        "submitted": "2020-07-01T20:05:33Z",
+        "updated": "2020-07-01T20:05:33Z",
+        "sizeTotal": "42.48 MB",
+        "files": [
+            {
+                "id": 181895,
+                "name": "Montr\u00e9al.zip",
+                "size": "42.48 MB"
+            }
+        ],
+        "aliasEntry": "montreal-map-realistic-with-shape",
+        "aliasAuthor": "chaos-theory",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33680-montreal-map-realistic-with-shape\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33839,
+        "cid": 117,
+        "uid": 278313,
+        "author": "Indiana Joe",
+        "category": "Ready Made Regions",
+        "title": "Humacao: Pre-Transited NAM Region",
+        "release": "1.0.0",
+        "submitted": "2020-09-26T20:08:32Z",
+        "updated": "2020-09-26T20:53:49Z",
+        "sizeTotal": "40.83 MB",
+        "files": [
+            {
+                "id": 182751,
+                "name": "Humacao NAM Region (Right-click and unzip).zip",
+                "size": "40.83 MB"
+            }
+        ],
+        "aliasEntry": "humacao-pre-transited-nam-region",
+        "aliasAuthor": "indiana-joe",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33839-humacao-pre-transited-nam-region\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33902,
+        "cid": 117,
+        "uid": 792382,
+        "author": "ytroxin",
+        "category": "Ready Made Regions",
+        "title": "Lima",
+        "release": "1.0.0",
+        "submitted": "2020-10-23T03:03:49Z",
+        "updated": "2020-10-23T12:34:50Z",
+        "sizeTotal": "94.00 MB",
+        "files": [
+            {
+                "id": 183246,
+                "name": "Lima.rar",
+                "size": "94.00 MB"
+            }
+        ],
+        "aliasEntry": "lima",
+        "aliasAuthor": "ytroxin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33902-lima\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33924,
+        "cid": 117,
+        "uid": 737259,
+        "author": "CorinaMarie",
+        "category": "Ready Made Regions",
+        "title": "Timbuktu Too (Complete Region)",
+        "release": "1.0.3",
+        "submitted": "2020-10-31T16:56:06Z",
+        "updated": "2022-05-27T06:11:01Z",
+        "sizeTotal": "67.34 MB",
+        "files": [
+            {
+                "id": 194344,
+                "name": "Timbuktu Too - With the Three Maxis Cities Started.zip",
+                "size": "21.27 MB"
+            },
+            {
+                "id": 194345,
+                "name": "Timbuktu Too - All City Tiles Empty Terrain.zip",
+                "size": "17.02 MB"
+            },
+            {
+                "id": 194346,
+                "name": "Timbuktu Too - 4x4 Large Tiles Empty Terrain.zip",
+                "size": "11.24 MB"
+            },
+            {
+                "id": 194347,
+                "name": "Timbuktu Too - Hybrid Layout (3 Maxis Cities & Some Large Tiles).zip",
+                "size": "17.80 MB"
+            }
+        ],
+        "aliasEntry": "timbuktu-too-complete-region",
+        "aliasAuthor": "corinamarie",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33924-timbuktu-too-complete-region\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34296,
+        "cid": 117,
+        "uid": 797846,
+        "author": "Neski",
+        "category": "Ready Made Regions",
+        "title": "Republic of Neski",
+        "release": "1.0.0",
+        "submitted": "2021-03-18T21:12:17Z",
+        "updated": "2021-03-18T21:12:17Z",
+        "sizeTotal": "29.82 MB",
+        "files": [
+            {
+                "id": 186438,
+                "name": "Neski.zip",
+                "size": "29.82 MB"
+            }
+        ],
+        "aliasEntry": "republic-of-neski",
+        "aliasAuthor": "neski",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34296-republic-of-neski\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34454,
+        "cid": 117,
+        "uid": 728533,
+        "author": "SIM-ple Jack",
+        "category": "Ready Made Regions",
+        "title": "Filler Farms-East",
+        "release": "1.0.0",
+        "submitted": "2021-05-16T15:41:25Z",
+        "updated": "2021-05-16T15:41:25Z",
+        "sizeTotal": "3.18 MB",
+        "files": [
+            {
+                "id": 188037,
+                "name": "Farms East.rar",
+                "size": "3.18 MB"
+            }
+        ],
+        "aliasEntry": "filler-farms-east",
+        "aliasAuthor": "sim-ple-jack",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34454-filler-farms-east\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34455,
+        "cid": 117,
+        "uid": 728533,
+        "author": "SIM-ple Jack",
+        "category": "Ready Made Regions",
+        "title": "Filler Farms-North",
+        "release": "1.0.0",
+        "submitted": "2021-05-16T15:41:42Z",
+        "updated": "2021-05-16T15:41:42Z",
+        "sizeTotal": "3.07 MB",
+        "files": [
+            {
+                "id": 188038,
+                "name": "Farms North.rar",
+                "size": "3.07 MB"
+            }
+        ],
+        "aliasEntry": "filler-farms-north",
+        "aliasAuthor": "sim-ple-jack",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34455-filler-farms-north\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34456,
+        "cid": 117,
+        "uid": 728533,
+        "author": "SIM-ple Jack",
+        "category": "Ready Made Regions",
+        "title": "Filler Farms-South",
+        "release": "1.0.0",
+        "submitted": "2021-05-16T15:41:57Z",
+        "updated": "2021-05-16T15:41:57Z",
+        "sizeTotal": "3.11 MB",
+        "files": [
+            {
+                "id": 188039,
+                "name": "Farms South.rar",
+                "size": "3.11 MB"
+            }
+        ],
+        "aliasEntry": "filler-farms-south",
+        "aliasAuthor": "sim-ple-jack",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34456-filler-farms-south\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34457,
+        "cid": 117,
+        "uid": 728533,
+        "author": "SIM-ple Jack",
+        "category": "Ready Made Regions",
+        "title": "Filler Farms-West",
+        "release": "1.0.0",
+        "submitted": "2021-05-16T15:42:14Z",
+        "updated": "2021-05-16T15:42:14Z",
+        "sizeTotal": "3.11 MB",
+        "files": [
+            {
+                "id": 188040,
+                "name": "Farms West.rar",
+                "size": "3.11 MB"
+            }
+        ],
+        "aliasEntry": "filler-farms-west",
+        "aliasAuthor": "sim-ple-jack",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34457-filler-farms-west\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34642,
+        "cid": 117,
+        "uid": 728533,
+        "author": "SIM-ple Jack",
+        "category": "Ready Made Regions",
+        "title": "Filler Industry for Region Maps",
+        "release": "1.0.0",
+        "submitted": "2021-08-12T20:22:43Z",
+        "updated": "2021-08-12T20:22:43Z",
+        "sizeTotal": "7.43 MB",
+        "files": [
+            {
+                "id": 189682,
+                "name": "Bonus Ponds.rar",
+                "size": "1.08 MB"
+            },
+            {
+                "id": 189683,
+                "name": "North.rar",
+                "size": "1.57 MB"
+            },
+            {
+                "id": 189684,
+                "name": "East.rar",
+                "size": "1.62 MB"
+            },
+            {
+                "id": 189685,
+                "name": "South.rar",
+                "size": "1.55 MB"
+            },
+            {
+                "id": 189686,
+                "name": "West.rar",
+                "size": "1.61 MB"
+            }
+        ],
+        "aliasEntry": "filler-industry-for-region-maps",
+        "aliasAuthor": "sim-ple-jack",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34642-filler-industry-for-region-maps\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34670,
+        "cid": 117,
+        "uid": 781569,
+        "author": "TheEstGuy",
+        "category": "Ready Made Regions",
+        "title": "BananaLand V2 Improved and Expanded",
+        "release": "1.0.0",
+        "submitted": "2021-09-01T19:45:43Z",
+        "updated": "2021-09-01T19:45:43Z",
+        "sizeTotal": "136.83 MB",
+        "files": [
+            {
+                "id": 189879,
+                "name": "Bananaland-V2.zip",
+                "size": "136.83 MB"
+            }
+        ],
+        "aliasEntry": "bananaland-v2-improved-and-expanded",
+        "aliasAuthor": "theestguy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34670-bananaland-v2-improved-and-expanded\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34861,
+        "cid": 117,
+        "uid": 781569,
+        "author": "TheEstGuy",
+        "category": "Ready Made Regions",
+        "title": "Northero Region",
+        "release": "1.0.0",
+        "submitted": "2022-02-16T16:12:22Z",
+        "updated": "2022-02-16T16:16:47Z",
+        "sizeTotal": "38.66 MB",
+        "files": [
+            {
+                "id": 191407,
+                "name": "Northero Region.zip",
+                "size": "38.66 MB"
+            }
+        ],
+        "aliasEntry": "northero-region",
+        "aliasAuthor": "theestguy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34861-northero-region\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34878,
+        "cid": 117,
+        "uid": 806620,
+        "author": "Patafrulo",
+        "category": "Ready Made Regions",
+        "title": "Turtalus Region",
+        "release": "1.0.0",
+        "submitted": "2022-03-01T04:41:46Z",
+        "updated": "2022-03-01T04:41:46Z",
+        "sizeTotal": "37.60 MB",
+        "files": [
+            {
+                "id": 192414,
+                "name": "Turtalus Region.zip",
+                "size": "37.60 MB"
+            }
+        ],
+        "aliasEntry": "turtalus-region",
+        "aliasAuthor": "patafrulo",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34878-turtalus-region\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35100,
+        "cid": 117,
+        "uid": 737259,
+        "author": "CorinaMarie",
+        "category": "Ready Made Regions",
+        "title": "New York (Maxis) Complete Region as 4 x 4 Large City Tiles",
+        "release": "1.0",
+        "submitted": "2022-04-17T19:35:25Z",
+        "updated": "2022-04-17T19:35:25Z",
+        "sizeTotal": "10.38 MB",
+        "files": [
+            {
+                "id": 193333,
+                "name": "New York (4 x 4).zip",
+                "size": "10.38 MB"
+            }
+        ],
+        "aliasEntry": "new-york-maxis-complete-region-as-4-x-4-large-city-tiles",
+        "aliasAuthor": "corinamarie",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35100-new-york-maxis-complete-region-as-4-x-4-large-city-tiles\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35194,
+        "cid": 117,
+        "uid": 533355,
+        "author": "Cyclone Boom",
+        "category": "Ready Made Regions",
+        "title": "Berlin (Maxis) Complete Region - Large Tiles",
+        "release": "1.0",
+        "submitted": "2022-05-26T20:40:51Z",
+        "updated": "2022-05-26T20:40:51Z",
+        "sizeTotal": "26.06 MB",
+        "files": [
+            {
+                "id": 194338,
+                "name": "Berlin - Option A (All Large)_v1.0.zip",
+                "size": "11.27 MB"
+            },
+            {
+                "id": 194339,
+                "name": "Berlin - Option B (Developed + Large)_v1.0.zip",
+                "size": "14.78 MB"
+            }
+        ],
+        "aliasEntry": "berlin-maxis-complete-region-large-tiles",
+        "aliasAuthor": "cyclone-boom",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35194-berlin-maxis-complete-region-large-tiles\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35196,
+        "cid": 117,
+        "uid": 533355,
+        "author": "Cyclone Boom",
+        "category": "Ready Made Regions",
+        "title": "Fairview (Maxis) Complete Region - Large Tiles",
+        "release": "1.0",
+        "submitted": "2022-06-03T20:50:51Z",
+        "updated": "2022-06-03T20:50:51Z",
+        "sizeTotal": "2.91 MB",
+        "files": [
+            {
+                "id": 194370,
+                "name": "Fairview (All Large)_v1.0.zip",
+                "size": "2.91 MB"
+            }
+        ],
+        "aliasEntry": "fairview-maxis-complete-region-large-tiles",
+        "aliasAuthor": "cyclone-boom",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35196-fairview-maxis-complete-region-large-tiles\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35197,
+        "cid": 117,
+        "uid": 533355,
+        "author": "Cyclone Boom",
+        "category": "Ready Made Regions",
+        "title": "Kanto Tokai (Maxis) Complete Region - Large Tiles",
+        "release": "1.0",
+        "submitted": "2022-06-03T21:05:20Z",
+        "updated": "2022-06-03T21:05:20Z",
+        "sizeTotal": "6.62 MB",
+        "files": [
+            {
+                "id": 194373,
+                "name": "Kanto Tokai (All Large)_v1.0.zip",
+                "size": "6.62 MB"
+            }
+        ],
+        "aliasEntry": "kanto-tokai-maxis-complete-region-large-tiles",
+        "aliasAuthor": "cyclone-boom",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35197-kanto-tokai-maxis-complete-region-large-tiles\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35198,
+        "cid": 117,
+        "uid": 533355,
+        "author": "Cyclone Boom",
+        "category": "Ready Made Regions",
+        "title": "London (Maxis) Complete Region - Large Tiles",
+        "release": "1.0",
+        "submitted": "2022-06-03T21:11:01Z",
+        "updated": "2022-06-03T21:11:01Z",
+        "sizeTotal": "23.43 MB",
+        "files": [
+            {
+                "id": 194376,
+                "name": "London - Option A (All Large)_v1.0.zip",
+                "size": "10.63 MB"
+            },
+            {
+                "id": 194377,
+                "name": "London - Option B (Developed + Large)_v1.0.zip",
+                "size": "12.80 MB"
+            }
+        ],
+        "aliasEntry": "london-maxis-complete-region-large-tiles",
+        "aliasAuthor": "cyclone-boom",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35198-london-maxis-complete-region-large-tiles\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35199,
+        "cid": 117,
+        "uid": 533355,
+        "author": "Cyclone Boom",
+        "category": "Ready Made Regions",
+        "title": "San Francisco (Maxis) Complete Region - Large Tiles",
+        "release": "1.0",
+        "submitted": "2022-06-03T21:17:37Z",
+        "updated": "2022-06-03T21:17:37Z",
+        "sizeTotal": "23.08 MB",
+        "files": [
+            {
+                "id": 194382,
+                "name": "San Francisco - Option A (Upscaled All Large)_v1.0.zip",
+                "size": "10.84 MB"
+            },
+            {
+                "id": 194383,
+                "name": "San Francisco - Option B (New Layout)_v1.0.zip",
+                "size": "12.23 MB"
+            }
+        ],
+        "aliasEntry": "san-francisco-maxis-complete-region-large-tiles",
+        "aliasAuthor": "cyclone-boom",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35199-san-francisco-maxis-complete-region-large-tiles\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35360,
+        "cid": 117,
+        "uid": 812586,
+        "author": "bhmantan",
+        "category": "Ready Made Regions",
+        "title": "Japan Mountain in Autumn (Single Tile on New York Region)",
+        "release": "1.0.0",
+        "submitted": "2022-12-15T21:00:03Z",
+        "updated": "2022-12-18T17:48:07Z",
+        "sizeTotal": "4.49 MB",
+        "files": [
+            {
+                "id": 195870,
+                "name": "City - Riau.zip",
+                "size": "4.49 MB"
+            }
+        ],
+        "aliasEntry": "japan-mountain-in-autumn-single-tile-on-new-york-region",
+        "aliasAuthor": "bhmantan",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35360-japan-mountain-in-autumn-single-tile-on-new-york-region\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35552,
+        "cid": 117,
+        "uid": 802867,
+        "author": "Iznogood63",
+        "category": "Ready Made Regions",
+        "title": "Citys with transport layout",
+        "release": "2.0.0",
+        "submitted": "2023-06-18T13:29:49Z",
+        "updated": "2023-07-10T11:32:31Z",
+        "sizeTotal": "13.31 MB",
+        "files": [
+            {
+                "id": 197318,
+                "name": "Citys.rar",
+                "size": "6.07 MB"
+            },
+            {
+                "id": 197319,
+                "name": "City - CM2.rar",
+                "size": "729.45 kB"
+            },
+            {
+                "id": 197320,
+                "name": "New Citys.rar",
+                "size": "6.53 MB"
+            }
+        ],
+        "aliasEntry": "citys-with-transport-layout",
+        "aliasAuthor": "iznogood63",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35552-citys-with-transport-layout\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36229,
+        "cid": 117,
+        "uid": 515530,
+        "author": "kSlank",
+        "category": "Ready Made Regions",
+        "title": "Starter City",
+        "release": "1",
+        "submitted": "2024-05-03T11:07:02Z",
+        "updated": "2024-05-03T11:07:02Z",
+        "sizeTotal": "725.72 kB",
+        "files": [
+            {
+                "id": 201117,
+                "name": "Starter City.zip",
+                "size": "725.72 kB"
+            }
+        ],
+        "aliasEntry": "starter-city",
+        "aliasAuthor": "kslank",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36229-starter-city\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36597,
+        "cid": 117,
+        "uid": 402017,
+        "author": "EffTheGrid",
+        "category": "Ready Made Regions",
+        "title": "Manhattan region - with partial street grid",
+        "release": "1.0.0",
+        "submitted": "2024-12-14T20:45:43Z",
+        "updated": "2024-12-14T20:45:43Z",
+        "sizeTotal": "19.62 MB",
+        "files": [
+            {
+                "id": 204680,
+                "name": "Manhattan v1.zip",
+                "size": "19.62 MB"
+            }
+        ],
+        "aliasEntry": "manhattan-region-with-partial-street-grid",
+        "aliasAuthor": "effthegrid",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36597-manhattan-region-with-partial-street-grid\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36687,
+        "cid": 117,
+        "uid": 830328,
+        "author": "Play_4_Fun",
+        "category": "Ready Made Regions",
+        "title": "Hamburg by Play_4_Fun",
+        "release": "1.0.0",
+        "submitted": "2025-02-03T05:48:55Z",
+        "updated": "2025-02-03T05:48:55Z",
+        "sizeTotal": "16.97 MB",
+        "files": [
+            {
+                "id": 205539,
+                "name": "Hamburg.rar",
+                "size": "16.97 MB"
+            }
+        ],
+        "aliasEntry": "hamburg-by-play_4_fun",
+        "aliasAuthor": "play_4_fun",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36687-hamburg-by-play_4_fun\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36701,
+        "cid": 117,
+        "uid": 814167,
+        "author": "Jessica Lee",
+        "category": "Ready Made Regions",
+        "title": "Arkatanya#3",
+        "release": "1.0.0",
+        "submitted": "2025-02-09T00:01:38Z",
+        "updated": "2025-02-09T00:01:38Z",
+        "sizeTotal": "44.50 MB",
+        "files": [
+            {
+                "id": 205699,
+                "name": "Silverbend Prairie.zip",
+                "size": "44.50 MB"
+            }
+        ],
+        "aliasEntry": "arkatanya3",
+        "aliasAuthor": "jessica-lee",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36701-arkatanya3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36927,
+        "cid": 117,
+        "uid": 814167,
+        "author": "Jessica Lee",
+        "category": "Ready Made Regions",
+        "title": "New Arkatanya",
+        "release": "1.1.2",
+        "submitted": "2025-07-04T05:39:36Z",
+        "updated": "2025-07-04T05:39:36Z",
+        "sizeTotal": "41.64 MB",
+        "files": [
+            {
+                "id": 208291,
+                "name": "Arkatanya.7z",
+                "size": "41.64 MB"
+            }
+        ],
+        "aliasEntry": "new-arkatanya",
+        "aliasAuthor": "jessica-lee",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36927-new-arkatanya\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36985,
+        "cid": 117,
+        "uid": 834357,
+        "author": "starry_night_",
+        "category": "Ready Made Regions",
+        "title": "Terrainia",
+        "release": "1.0.0",
+        "submitted": "2025-08-17T22:14:48Z",
+        "updated": "2025-08-24T18:44:55Z",
+        "sizeTotal": "23.66 MB",
+        "files": [
+            {
+                "id": 208985,
+                "name": "Terrainia.zip",
+                "size": "23.66 MB"
+            }
+        ],
+        "aliasEntry": "terrainia",
+        "aliasAuthor": "starry_night_",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36985-terrainia\/",
+        "===========": "=========================================="
+    }
+]

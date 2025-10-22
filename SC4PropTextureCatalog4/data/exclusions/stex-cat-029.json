@@ -1,0 +1,260 @@
+[
+    {
+        "id": 30283,
+        "cid": 29,
+        "uid": 701152,
+        "author": "Waverunner",
+        "category": "CSL Programs & Tools",
+        "title": "Visual Studio Modding Template Extension",
+        "release": "1.0.2",
+        "submitted": "2015-03-22T04:32:39Z",
+        "updated": "2015-03-22T14:24:30Z",
+        "sizeTotal": "190.53 kB",
+        "files": [
+            {
+                "id": 150377,
+                "name": "SkylineModdingExtension_1_0_2.zip",
+                "size": "190.53 kB"
+            }
+        ],
+        "aliasEntry": "visual-studio-modding-template-extension",
+        "aliasAuthor": "waverunner",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30283-visual-studio-modding-template-extension\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30302,
+        "cid": 29,
+        "uid": 661058,
+        "author": "Panther6308",
+        "category": "CSL Programs & Tools",
+        "title": "Cities Skylines How to Traffic v2 by drushkey",
+        "release": "2",
+        "submitted": "2015-03-24T01:59:17Z",
+        "updated": "2015-03-24T01:59:17Z",
+        "sizeTotal": "9.20 MB",
+        "files": [
+            {
+                "id": 150590,
+                "name": "Cities Skylines-HOW TO TRAFFIC_v2_by_drushkey.zip",
+                "size": "9.20 MB"
+            }
+        ],
+        "aliasEntry": "cities-skylines-how-to-traffic-v2-by-drushkey",
+        "aliasAuthor": "panther6308",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30302-cities-skylines-how-to-traffic-v2-by-drushkey\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30365,
+        "cid": 29,
+        "uid": 395374,
+        "author": "jose L Ortiz",
+        "category": "CSL Programs & Tools",
+        "title": "Volcano brush",
+        "release": "1.0",
+        "submitted": "2015-03-31T04:17:33Z",
+        "updated": "2015-03-31T04:17:33Z",
+        "sizeTotal": "1.22 MB",
+        "files": [
+            {
+                "id": 152232,
+                "name": "Brushes alias.zip",
+                "size": "1.22 MB"
+            },
+            {
+                "id": 152233,
+                "name": "Volcano  brush  .zip",
+                "size": "3.18 kB"
+            }
+        ],
+        "aliasEntry": "volcano-brush",
+        "aliasAuthor": "jose-l-ortiz",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30365-volcano-brush\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31123,
+        "cid": 29,
+        "uid": 738604,
+        "author": "2001kraft",
+        "category": "CSL Programs & Tools",
+        "title": "2001kraft's Attempt at a Desert Theme",
+        "release": "1.0",
+        "submitted": "2016-06-13T20:28:26Z",
+        "updated": "2016-06-13T20:28:26Z",
+        "sizeTotal": "1.03 MB",
+        "files": [
+            {
+                "id": 162125,
+                "name": "Desert.crp",
+                "size": "1.03 MB"
+            }
+        ],
+        "aliasEntry": "2001krafts-attempt-at-a-desert-theme",
+        "aliasAuthor": "2001kraft",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31123-2001krafts-attempt-at-a-desert-theme\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31360,
+        "cid": 29,
+        "uid": 20730,
+        "author": "Badi_Dea",
+        "category": "CSL Programs & Tools",
+        "title": "SimtropOils Pipeline model",
+        "release": "1.0",
+        "submitted": "2016-11-12T07:05:07Z",
+        "updated": "2016-11-12T07:05:07Z",
+        "sizeTotal": "3.29 MB",
+        "files": [
+            {
+                "id": 163804,
+                "name": "Asset_Pipeline.zip",
+                "size": "3.29 MB"
+            }
+        ],
+        "aliasEntry": "simtropoils-pipeline-model",
+        "aliasAuthor": "badi_dea",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31360-simtropoils-pipeline-model\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31755,
+        "cid": 29,
+        "uid": 678517,
+        "author": "boformer",
+        "category": "CSL Programs & Tools",
+        "title": "Modding Tutorial 2: Road Tree Replacer (Source Code)",
+        "release": "1.0",
+        "submitted": "2017-06-10T23:46:27Z",
+        "updated": "2017-06-10T23:46:27Z",
+        "sizeTotal": "5.72 kB",
+        "files": [
+            {
+                "id": 166571,
+                "name": "RoadTreeReplacer.zip",
+                "size": "5.72 kB"
+            }
+        ],
+        "aliasEntry": "modding-tutorial-2-road-tree-replacer-source-code",
+        "aliasAuthor": "boformer",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31755-modding-tutorial-2-road-tree-replacer-source-code\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31758,
+        "cid": 29,
+        "uid": 678517,
+        "author": "boformer",
+        "category": "CSL Programs & Tools",
+        "title": "Modding Tutorial 3: Show Limits (Source Code)",
+        "release": "1.0",
+        "submitted": "2017-06-11T20:40:57Z",
+        "updated": "2017-06-11T20:40:57Z",
+        "sizeTotal": "3.71 kB",
+        "files": [
+            {
+                "id": 166588,
+                "name": "ShowLimits.zip",
+                "size": "3.71 kB"
+            }
+        ],
+        "aliasEntry": "modding-tutorial-3-show-limits-source-code",
+        "aliasAuthor": "boformer",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31758-modding-tutorial-3-show-limits-source-code\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31760,
+        "cid": 29,
+        "uid": 678517,
+        "author": "boformer",
+        "category": "CSL Programs & Tools",
+        "title": "Modding Tutorial 4: Make Historical (Source Code)",
+        "release": "1.0",
+        "submitted": "2017-06-14T00:49:51Z",
+        "updated": "2017-06-14T00:49:51Z",
+        "sizeTotal": "7.48 kB",
+        "files": [
+            {
+                "id": 166610,
+                "name": "MakeHistorical.zip",
+                "size": "7.48 kB"
+            }
+        ],
+        "aliasEntry": "modding-tutorial-4-make-historical-source-code",
+        "aliasAuthor": "boformer",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31760-modding-tutorial-4-make-historical-source-code\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32151,
+        "cid": 29,
+        "uid": 20730,
+        "author": "Badi_Dea",
+        "category": "CSL Programs & Tools",
+        "title": "Parking Lot Roads - Source files",
+        "release": "1.0",
+        "submitted": "2018-02-26T03:34:34Z",
+        "updated": "2018-02-26T03:34:34Z",
+        "sizeTotal": "30.64 MB",
+        "files": [
+            {
+                "id": 170260,
+                "name": "ParkingLotRoads.zip",
+                "size": "30.64 MB"
+            }
+        ],
+        "aliasEntry": "parking-lot-roads-source-files",
+        "aliasAuthor": "badi_dea",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32151-parking-lot-roads-source-files\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32751,
+        "cid": 29,
+        "uid": 678517,
+        "author": "boformer",
+        "category": "CSL Programs & Tools",
+        "title": "Custom Animation Loader: Tutorial Files",
+        "release": "1.0.2",
+        "submitted": "2019-02-14T18:40:42Z",
+        "updated": "2019-02-15T14:47:57Z",
+        "sizeTotal": "3.77 MB",
+        "files": [
+            {
+                "id": 174654,
+                "name": "bouncing_box.zip",
+                "size": "3.77 MB"
+            }
+        ],
+        "aliasEntry": "custom-animation-loader-tutorial-files",
+        "aliasAuthor": "boformer",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32751-custom-animation-loader-tutorial-files\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34742,
+        "cid": 29,
+        "uid": 790769,
+        "author": "Superleaf1995",
+        "category": "CSL Programs & Tools",
+        "title": "CRP File Viewer",
+        "release": "1.0.0",
+        "submitted": "2021-11-14T03:06:55Z",
+        "updated": "2021-11-14T03:06:55Z",
+        "sizeTotal": "61.00 kB",
+        "files": [
+            {
+                "id": 190505,
+                "name": "CsSavefileExplorer.exe",
+                "size": "61.00 kB"
+            }
+        ],
+        "aliasEntry": "crp-file-viewer",
+        "aliasAuthor": "superleaf1995",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34742-crp-file-viewer\/",
+        "===========": "=========================================="
+    }
+]

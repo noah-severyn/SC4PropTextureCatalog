@@ -1,0 +1,2296 @@
+[
+    {
+        "id": 31602,
+        "cid": 43,
+        "uid": 191918,
+        "author": "huzman",
+        "category": "SC3K Cities & Maps",
+        "title": "Old Cities",
+        "release": "1.0",
+        "submitted": "2017-05-06T15:31:33Z",
+        "updated": "2017-05-11T02:20:48Z",
+        "sizeTotal": "2.38 MB",
+        "files": [
+            {
+                "id": 165675,
+                "name": "Atlanta, GA.sct",
+                "size": "296.43 kB"
+            },
+            {
+                "id": 165676,
+                "name": "Detroit, MI.sct",
+                "size": "296.63 kB"
+            },
+            {
+                "id": 165677,
+                "name": "New York, NY.sct",
+                "size": "259.43 kB"
+            },
+            {
+                "id": 165678,
+                "name": "Philadelphia, PA.sct",
+                "size": "283.63 kB"
+            },
+            {
+                "id": 165679,
+                "name": "San Diego, CA.sct",
+                "size": "244.22 kB"
+            },
+            {
+                "id": 165680,
+                "name": "San Francisco, CA.sct",
+                "size": "252.17 kB"
+            },
+            {
+                "id": 165681,
+                "name": "Seattle, WA.sct",
+                "size": "263.48 kB"
+            },
+            {
+                "id": 165682,
+                "name": "St. Louis, MO.sct",
+                "size": "280.43 kB"
+            },
+            {
+                "id": 165683,
+                "name": "Washington, DC.sct",
+                "size": "256.58 kB"
+            }
+        ],
+        "aliasEntry": "old-cities",
+        "aliasAuthor": "huzman",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31602-old-cities\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31605,
+        "cid": 43,
+        "uid": 735754,
+        "author": "SecretMbr_735754",
+        "category": "SC3K Cities & Maps",
+        "title": "SimCity 3000 Unlimited 'Trainer' City File Map",
+        "release": "2.0.2",
+        "submitted": "2017-05-10T05:56:33Z",
+        "updated": "2017-06-12T14:11:50Z",
+        "sizeTotal": "563.38 kB",
+        "files": [
+            {
+                "id": 166597,
+                "name": "SC3U Trainer City Files V2.zip",
+                "size": "563.38 kB"
+            }
+        ],
+        "aliasEntry": "simcity-3000-unlimited-trainer-city-file-map",
+        "aliasAuthor": "secretmbr_735754",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31605-simcity-3000-unlimited-trainer-city-file-map\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31739,
+        "cid": 43,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SC3K Cities & Maps",
+        "title": "Ryuto City, TARALOM",
+        "release": "4.0.0",
+        "submitted": "2017-06-05T19:56:50Z",
+        "updated": "2017-06-05T19:56:50Z",
+        "sizeTotal": "800.03 kB",
+        "files": [
+            {
+                "id": 166483,
+                "name": "Ryuto City, TARALOM.sc3",
+                "size": "800.03 kB"
+            }
+        ],
+        "aliasEntry": "ryuto-city-taralom",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31739-ryuto-city-taralom\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31772,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Magnasanti.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-15T18:44:49Z",
+        "updated": "2017-06-15T18:44:49Z",
+        "sizeTotal": "474.39 kB",
+        "files": [
+            {
+                "id": 166681,
+                "name": "Magnasanti.sc3",
+                "size": "474.39 kB"
+            }
+        ],
+        "aliasEntry": "magnasantisc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31772-magnasantisc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31773,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Imperamatrix.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-15T19:05:12Z",
+        "updated": "2017-06-15T19:05:12Z",
+        "sizeTotal": "490.73 kB",
+        "files": [
+            {
+                "id": 166686,
+                "name": "Imperamatrix.sc3",
+                "size": "490.73 kB"
+            }
+        ],
+        "aliasEntry": "imperamatrixsc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31773-imperamatrixsc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31774,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Sharapolis.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-15T19:22:24Z",
+        "updated": "2017-06-15T19:22:24Z",
+        "sizeTotal": "569.65 kB",
+        "files": [
+            {
+                "id": 166691,
+                "name": "Sharapolis.sc3",
+                "size": "569.65 kB"
+            }
+        ],
+        "aliasEntry": "sharapolissc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31774-sharapolissc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31775,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Connection Test 6.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-15T19:30:51Z",
+        "updated": "2017-06-15T19:30:51Z",
+        "sizeTotal": "234.76 kB",
+        "files": [
+            {
+                "id": 166696,
+                "name": "Connection Test 6.sc3",
+                "size": "234.76 kB"
+            }
+        ],
+        "aliasEntry": "connection-test-6sc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31775-connection-test-6sc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31776,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Tunnel Test 2.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-15T19:48:44Z",
+        "updated": "2017-06-15T19:48:44Z",
+        "sizeTotal": "413.09 kB",
+        "files": [
+            {
+                "id": 166699,
+                "name": "Tunnel Test2.sc3",
+                "size": "413.09 kB"
+            }
+        ],
+        "aliasEntry": "tunnel-test-2sc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31776-tunnel-test-2sc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31777,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Zerotaxus.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-15T19:54:16Z",
+        "updated": "2017-06-15T19:54:16Z",
+        "sizeTotal": "208.88 kB",
+        "files": [
+            {
+                "id": 166704,
+                "name": "Zerotaxus.sc3",
+                "size": "208.88 kB"
+            }
+        ],
+        "aliasEntry": "zerotaxussc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31777-zerotaxussc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31778,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Les Simerables.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-15T20:08:37Z",
+        "updated": "2017-06-15T20:08:37Z",
+        "sizeTotal": "640.35 kB",
+        "files": [
+            {
+                "id": 166709,
+                "name": "Les Simerables.sc3",
+                "size": "640.35 kB"
+            }
+        ],
+        "aliasEntry": "les-simerablessc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31778-les-simerablessc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31779,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "4141193.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-15T20:32:44Z",
+        "updated": "2017-06-15T20:32:44Z",
+        "sizeTotal": "766.71 kB",
+        "files": [
+            {
+                "id": 166713,
+                "name": "4141193.sc3",
+                "size": "766.71 kB"
+            }
+        ],
+        "aliasEntry": "4141193sc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31779-4141193sc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31780,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Armadasanti.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-15T20:57:58Z",
+        "updated": "2017-06-15T20:57:58Z",
+        "sizeTotal": "534.72 kB",
+        "files": [
+            {
+                "id": 166716,
+                "name": "Armadasanti.sc3",
+                "size": "534.72 kB"
+            }
+        ],
+        "aliasEntry": "armadasantisc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31780-armadasantisc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31781,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Parasanti.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-15T21:14:41Z",
+        "updated": "2017-06-15T21:14:41Z",
+        "sizeTotal": "472.20 kB",
+        "files": [
+            {
+                "id": 166720,
+                "name": "Parasanti.sc3",
+                "size": "472.20 kB"
+            }
+        ],
+        "aliasEntry": "parasantisc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31781-parasantisc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31782,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Big_City.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-15T21:25:40Z",
+        "updated": "2017-06-15T21:25:40Z",
+        "sizeTotal": "264.52 kB",
+        "files": [
+            {
+                "id": 166725,
+                "name": "Big_City.sc3",
+                "size": "264.52 kB"
+            }
+        ],
+        "aliasEntry": "big_citysc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31782-big_citysc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31783,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Aquaia 5.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-15T23:38:53Z",
+        "updated": "2017-06-15T23:38:53Z",
+        "sizeTotal": "405.49 kB",
+        "files": [
+            {
+                "id": 166727,
+                "name": "Aquaia 5.sc3",
+                "size": "405.49 kB"
+            }
+        ],
+        "aliasEntry": "aquaia-5sc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31783-aquaia-5sc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31784,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Prematrix.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-15T23:47:04Z",
+        "updated": "2017-06-15T23:47:04Z",
+        "sizeTotal": "636.95 kB",
+        "files": [
+            {
+                "id": 166739,
+                "name": "Prematrix.sc3",
+                "size": "636.95 kB"
+            }
+        ],
+        "aliasEntry": "prematrixsc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31784-prematrixsc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31785,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Unimatrix.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-15T23:56:38Z",
+        "updated": "2017-06-15T23:56:38Z",
+        "sizeTotal": "572.25 kB",
+        "files": [
+            {
+                "id": 166749,
+                "name": "Unimatrix.sc3",
+                "size": "572.25 kB"
+            }
+        ],
+        "aliasEntry": "unimatrixsc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31785-unimatrixsc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31786,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Suprematrix.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-16T00:05:19Z",
+        "updated": "2017-06-16T00:05:19Z",
+        "sizeTotal": "782.42 kB",
+        "files": [
+            {
+                "id": 166754,
+                "name": "Suprematrix.sc3",
+                "size": "782.42 kB"
+            }
+        ],
+        "aliasEntry": "suprematrixsc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31786-suprematrixsc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31787,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Hedrapolidon.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-16T00:15:05Z",
+        "updated": "2017-06-16T00:15:05Z",
+        "sizeTotal": "606.40 kB",
+        "files": [
+            {
+                "id": 166776,
+                "name": "Hedrapolidon.sc3",
+                "size": "606.40 kB"
+            }
+        ],
+        "aliasEntry": "hedrapolidonsc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31787-hedrapolidonsc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31788,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Parasanti X.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-16T00:27:49Z",
+        "updated": "2017-06-16T00:27:49Z",
+        "sizeTotal": "467.52 kB",
+        "files": [
+            {
+                "id": 166780,
+                "name": "Parasanti X.sc3",
+                "size": "467.52 kB"
+            }
+        ],
+        "aliasEntry": "parasanti-xsc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31788-parasanti-xsc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31792,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Collabria.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-16T16:29:25Z",
+        "updated": "2017-06-16T16:29:25Z",
+        "sizeTotal": "607.50 kB",
+        "files": [
+            {
+                "id": 166813,
+                "name": "Collabria.sc3",
+                "size": "607.50 kB"
+            }
+        ],
+        "aliasEntry": "collabriasc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31792-collabriasc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31807,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Argolon.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-23T14:27:02Z",
+        "updated": "2017-06-23T14:27:02Z",
+        "sizeTotal": "691.38 kB",
+        "files": [
+            {
+                "id": 167189,
+                "name": "Argolon II.sc3",
+                "size": "691.38 kB"
+            }
+        ],
+        "aliasEntry": "argolonsc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31807-argolonsc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31808,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Arlington.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-23T14:29:28Z",
+        "updated": "2017-06-23T14:29:28Z",
+        "sizeTotal": "757.93 kB",
+        "files": [
+            {
+                "id": 167193,
+                "name": "Arlington.sc3",
+                "size": "757.93 kB"
+            }
+        ],
+        "aliasEntry": "arlingtonsc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31808-arlingtonsc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31809,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Atlantis.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-23T14:32:13Z",
+        "updated": "2017-06-23T14:32:13Z",
+        "sizeTotal": "522.69 kB",
+        "files": [
+            {
+                "id": 167197,
+                "name": "Atlantis.sc3",
+                "size": "522.69 kB"
+            }
+        ],
+        "aliasEntry": "atlantissc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31809-atlantissc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31810,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "BMW.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-23T14:37:30Z",
+        "updated": "2017-06-23T14:37:30Z",
+        "sizeTotal": "646.35 kB",
+        "files": [
+            {
+                "id": 167201,
+                "name": "BMW.sc3",
+                "size": "646.35 kB"
+            }
+        ],
+        "aliasEntry": "bmwsc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31810-bmwsc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31811,
+        "cid": 43,
+        "uid": 5167,
+        "author": "McMurray02",
+        "category": "SC3K Cities & Maps",
+        "title": "Caitalpolis.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-23T14:40:58Z",
+        "updated": "2017-06-23T14:40:58Z",
+        "sizeTotal": "553.51 kB",
+        "files": [
+            {
+                "id": 167205,
+                "name": "Caitalpolis.sc3",
+                "size": "553.51 kB"
+            }
+        ],
+        "aliasEntry": "caitalpolissc3",
+        "aliasAuthor": "mcmurray02",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31811-caitalpolissc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31812,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Bom Bom City.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-23T14:45:46Z",
+        "updated": "2017-06-23T14:45:46Z",
+        "sizeTotal": "607.32 kB",
+        "files": [
+            {
+                "id": 167209,
+                "name": "Bom Bom City.sc3",
+                "size": "607.32 kB"
+            }
+        ],
+        "aliasEntry": "bom-bom-citysc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31812-bom-bom-citysc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31813,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Canadrea.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-23T14:49:36Z",
+        "updated": "2017-06-23T14:49:36Z",
+        "sizeTotal": "699.88 kB",
+        "files": [
+            {
+                "id": 167213,
+                "name": "Canadrea.sc3",
+                "size": "699.88 kB"
+            }
+        ],
+        "aliasEntry": "canadreasc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31813-canadreasc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31814,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Cumberland.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-23T14:53:24Z",
+        "updated": "2017-06-23T14:53:24Z",
+        "sizeTotal": "129.35 kB",
+        "files": [
+            {
+                "id": 167217,
+                "name": "Cumberland.sc3",
+                "size": "129.35 kB"
+            }
+        ],
+        "aliasEntry": "cumberlandsc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31814-cumberlandsc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31815,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Ermandale.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-23T14:55:56Z",
+        "updated": "2017-06-23T14:55:56Z",
+        "sizeTotal": "681.10 kB",
+        "files": [
+            {
+                "id": 167221,
+                "name": "Ermandale.sc3",
+                "size": "681.10 kB"
+            }
+        ],
+        "aliasEntry": "ermandalesc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31815-ermandalesc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31816,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Celebration.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-23T14:57:43Z",
+        "updated": "2017-06-23T14:57:43Z",
+        "sizeTotal": "738.08 kB",
+        "files": [
+            {
+                "id": 167225,
+                "name": "Final City5.sc3",
+                "size": "738.08 kB"
+            }
+        ],
+        "aliasEntry": "celebrationsc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31816-celebrationsc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31817,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Intropia.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-23T15:01:08Z",
+        "updated": "2017-06-23T15:01:08Z",
+        "sizeTotal": "712.59 kB",
+        "files": [
+            {
+                "id": 167229,
+                "name": "Intropia.sc3",
+                "size": "712.59 kB"
+            }
+        ],
+        "aliasEntry": "intropiasc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31817-intropiasc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31818,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Metropolis Ultimate Blue.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-23T15:07:17Z",
+        "updated": "2017-06-23T15:07:17Z",
+        "sizeTotal": "752.78 kB",
+        "files": [
+            {
+                "id": 167234,
+                "name": "Metropolis_Ultimate_Blue_XFW154.sc3",
+                "size": "752.78 kB"
+            }
+        ],
+        "aliasEntry": "metropolis-ultimate-bluesc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31818-metropolis-ultimate-bluesc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31819,
+        "cid": 43,
+        "uid": 5167,
+        "author": "McMurray02",
+        "category": "SC3K Cities & Maps",
+        "title": "Rosettia.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-23T15:09:42Z",
+        "updated": "2017-06-23T15:09:42Z",
+        "sizeTotal": "640.07 kB",
+        "files": [
+            {
+                "id": 167238,
+                "name": "Rosettia.sc3",
+                "size": "640.07 kB"
+            }
+        ],
+        "aliasEntry": "rosettiasc3",
+        "aliasAuthor": "mcmurray02",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31819-rosettiasc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31820,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Satan City.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-23T15:13:34Z",
+        "updated": "2017-06-23T15:13:34Z",
+        "sizeTotal": "586.72 kB",
+        "files": [
+            {
+                "id": 167242,
+                "name": "Satan_City_X52.sc3",
+                "size": "586.72 kB"
+            }
+        ],
+        "aliasEntry": "satan-citysc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31820-satan-citysc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31821,
+        "cid": 43,
+        "uid": 751602,
+        "author": "doon",
+        "category": "SC3K Cities & Maps",
+        "title": "Setegria.sc3",
+        "release": "1.0",
+        "submitted": "2017-06-23T16:31:10Z",
+        "updated": "2017-06-23T16:31:10Z",
+        "sizeTotal": "524.25 kB",
+        "files": [
+            {
+                "id": 167246,
+                "name": "Setsimt.sc3",
+                "size": "524.25 kB"
+            }
+        ],
+        "aliasEntry": "setegriasc3",
+        "aliasAuthor": "doon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31821-setegriasc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31851,
+        "cid": 43,
+        "uid": 752451,
+        "author": "SimCityHawk",
+        "category": "SC3K Cities & Maps",
+        "title": "Copenhagen.sc3",
+        "release": "1.0",
+        "submitted": "2017-07-18T12:13:31Z",
+        "updated": "2017-07-25T12:19:01Z",
+        "sizeTotal": "845.06 kB",
+        "files": [
+            {
+                "id": 167738,
+                "name": "Copenhagen.sc3",
+                "size": "845.06 kB"
+            }
+        ],
+        "aliasEntry": "copenhagensc3",
+        "aliasAuthor": "simcityhawk",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31851-copenhagensc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31852,
+        "cid": 43,
+        "uid": 752451,
+        "author": "SimCityHawk",
+        "category": "SC3K Cities & Maps",
+        "title": "El Paso & Ciudad Ju\u00e1rez.sc3",
+        "release": "1.0",
+        "submitted": "2017-07-18T12:13:32Z",
+        "updated": "2017-07-25T12:17:17Z",
+        "sizeTotal": "783.00 kB",
+        "files": [
+            {
+                "id": 167733,
+                "name": "El Paso, TX  Ciduad Juarez, MX.sc3",
+                "size": "783.00 kB"
+            }
+        ],
+        "aliasEntry": "el-paso-ciudad-ju\u00e1rezsc3",
+        "aliasAuthor": "simcityhawk",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31852-el-paso-ciudad-ju\u00e1rezsc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31853,
+        "cid": 43,
+        "uid": 752451,
+        "author": "SimCityHawk",
+        "category": "SC3K Cities & Maps",
+        "title": "Reykjavik.sc3",
+        "release": "1.0",
+        "submitted": "2017-07-18T12:13:34Z",
+        "updated": "2017-07-25T12:15:57Z",
+        "sizeTotal": "482.73 kB",
+        "files": [
+            {
+                "id": 167731,
+                "name": "Reykjavik.sc3",
+                "size": "482.73 kB"
+            }
+        ],
+        "aliasEntry": "reykjaviksc3",
+        "aliasAuthor": "simcityhawk",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31853-reykjaviksc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31854,
+        "cid": 43,
+        "uid": 752451,
+        "author": "SimCityHawk",
+        "category": "SC3K Cities & Maps",
+        "title": "Rotterdam & The Hague.sc3",
+        "release": "1.0",
+        "submitted": "2017-07-18T12:13:35Z",
+        "updated": "2017-07-25T12:14:11Z",
+        "sizeTotal": "774.21 kB",
+        "files": [
+            {
+                "id": 167726,
+                "name": "Rotterdam & Den Hague.sc3",
+                "size": "774.21 kB"
+            }
+        ],
+        "aliasEntry": "rotterdam-the-haguesc3",
+        "aliasAuthor": "simcityhawk",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31854-rotterdam-the-haguesc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31855,
+        "cid": 43,
+        "uid": 752451,
+        "author": "SimCityHawk",
+        "category": "SC3K Cities & Maps",
+        "title": "Stockholm.sc3",
+        "release": "1.0",
+        "submitted": "2017-07-18T12:13:37Z",
+        "updated": "2017-07-25T12:12:29Z",
+        "sizeTotal": "724.32 kB",
+        "files": [
+            {
+                "id": 167723,
+                "name": "Stockholm.sc3",
+                "size": "724.32 kB"
+            }
+        ],
+        "aliasEntry": "stockholmsc3",
+        "aliasAuthor": "simcityhawk",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31855-stockholmsc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31856,
+        "cid": 43,
+        "uid": 752451,
+        "author": "SimCityHawk",
+        "category": "SC3K Cities & Maps",
+        "title": "Vladivostock.sc3",
+        "release": "1.0",
+        "submitted": "2017-07-18T12:13:40Z",
+        "updated": "2017-07-25T12:09:06Z",
+        "sizeTotal": "538.38 kB",
+        "files": [
+            {
+                "id": 167719,
+                "name": "Vladivostock.sc3",
+                "size": "538.38 kB"
+            }
+        ],
+        "aliasEntry": "vladivostocksc3",
+        "aliasAuthor": "simcityhawk",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31856-vladivostocksc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31857,
+        "cid": 43,
+        "uid": 752451,
+        "author": "SimCityHawk",
+        "category": "SC3K Cities & Maps",
+        "title": "Aarhus.sc3",
+        "release": "1.0",
+        "submitted": "2017-07-18T12:13:42Z",
+        "updated": "2017-07-25T12:06:54Z",
+        "sizeTotal": "584.01 kB",
+        "files": [
+            {
+                "id": 167717,
+                "name": "Aarhus.sc3",
+                "size": "584.01 kB"
+            }
+        ],
+        "aliasEntry": "aarhussc3",
+        "aliasAuthor": "simcityhawk",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31857-aarhussc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31858,
+        "cid": 43,
+        "uid": 752451,
+        "author": "SimCityHawk",
+        "category": "SC3K Cities & Maps",
+        "title": "Las Vegas.sc3",
+        "release": "1.0",
+        "submitted": "2017-07-18T12:25:49Z",
+        "updated": "2017-07-25T12:04:38Z",
+        "sizeTotal": "770.84 kB",
+        "files": [
+            {
+                "id": 167713,
+                "name": "Las Vegas.sc3",
+                "size": "770.84 kB"
+            }
+        ],
+        "aliasEntry": "las-vegassc3",
+        "aliasAuthor": "simcityhawk",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31858-las-vegassc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31859,
+        "cid": 43,
+        "uid": 752451,
+        "author": "SimCityHawk",
+        "category": "SC3K Cities & Maps",
+        "title": "London.sc3",
+        "release": "1.0",
+        "submitted": "2017-07-18T12:25:53Z",
+        "updated": "2017-07-25T12:02:31Z",
+        "sizeTotal": "870.24 kB",
+        "files": [
+            {
+                "id": 167709,
+                "name": "London.sc3",
+                "size": "870.24 kB"
+            }
+        ],
+        "aliasEntry": "londonsc3",
+        "aliasAuthor": "simcityhawk",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31859-londonsc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31878,
+        "cid": 43,
+        "uid": 752451,
+        "author": "SimCityHawk",
+        "category": "SC3K Cities & Maps",
+        "title": "Los Angeles.sc3",
+        "release": "1.0",
+        "submitted": "2017-07-25T12:27:20Z",
+        "updated": "2017-07-25T12:27:20Z",
+        "sizeTotal": "795.44 kB",
+        "files": [
+            {
+                "id": 167740,
+                "name": "Los Angeles.sc3",
+                "size": "795.44 kB"
+            }
+        ],
+        "aliasEntry": "los-angelessc3",
+        "aliasAuthor": "simcityhawk",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31878-los-angelessc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31958,
+        "cid": 43,
+        "uid": 755326,
+        "author": "Sylfan",
+        "category": "SC3K Cities & Maps",
+        "title": "Sylville.sc3",
+        "release": "1.0",
+        "submitted": "2017-10-10T13:07:57Z",
+        "updated": "2017-10-10T13:07:57Z",
+        "files": [
+            {
+                "id": 168798,
+                "name": "Sylville.sc3",
+                "size": "694.88 kB"
+            }
+        ],
+        "aliasEntry": "sylvillesc3",
+        "aliasAuthor": "sylfan",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31958-sylvillesc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32070,
+        "cid": 43,
+        "uid": 759562,
+        "author": "Dudley162",
+        "category": "SC3K Cities & Maps",
+        "title": "Greatville.sc3",
+        "release": "1.0",
+        "submitted": "2018-01-18T16:50:38Z",
+        "updated": "2018-01-18T16:50:38Z",
+        "sizeTotal": "706.40 kB",
+        "files": [
+            {
+                "id": 169643,
+                "name": "Greatville.sc3",
+                "size": "706.40 kB"
+            }
+        ],
+        "aliasEntry": "greatvillesc3",
+        "aliasAuthor": "dudley162",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32070-greatvillesc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32144,
+        "cid": 43,
+        "uid": 759562,
+        "author": "Dudley162",
+        "category": "SC3K Cities & Maps",
+        "title": "New Dynamo City.sc3",
+        "release": "1.0",
+        "submitted": "2018-02-23T20:26:18Z",
+        "updated": "2018-02-23T20:26:18Z",
+        "sizeTotal": "578.92 kB",
+        "files": [
+            {
+                "id": 170233,
+                "name": "New Dynamo City.sc3",
+                "size": "578.92 kB"
+            }
+        ],
+        "aliasEntry": "new-dynamo-citysc3",
+        "aliasAuthor": "dudley162",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32144-new-dynamo-citysc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32287,
+        "cid": 43,
+        "uid": 669128,
+        "author": "baxtry12",
+        "category": "SC3K Cities & Maps",
+        "title": "Nov\u00fd Li\u0161kov",
+        "release": "1.0",
+        "submitted": "2018-06-04T08:15:10Z",
+        "updated": "2018-06-04T08:15:10Z",
+        "sizeTotal": "752.51 kB",
+        "files": [
+            {
+                "id": 171010,
+                "name": "Nov\u00fd Li\u0161kov.sc3",
+                "size": "752.51 kB"
+            }
+        ],
+        "aliasEntry": "nov\u00fd-li\u0161kov",
+        "aliasAuthor": "baxtry12",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32287-nov\u00fd-li\u0161kov\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32883,
+        "cid": 43,
+        "uid": 665840,
+        "author": "former_member 665840",
+        "category": "SC3K Cities & Maps",
+        "title": "Abashiri-Esque",
+        "release": "0.9.0",
+        "submitted": "2019-04-26T01:12:46Z",
+        "updated": "2019-04-26T01:12:46Z",
+        "files": [
+            {
+                "id": 175660,
+                "name": "abashiri_test.sct",
+                "size": "375.19 kB"
+            }
+        ],
+        "aliasEntry": "abashiri-esque",
+        "aliasAuthor": "former_member-665840",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32883-abashiri-esque\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33199,
+        "cid": 43,
+        "uid": 755285,
+        "author": "Vector95",
+        "category": "SC3K Cities & Maps",
+        "title": "Sydney CBD, Australia",
+        "release": "2.0.949",
+        "submitted": "2019-09-30T01:53:27Z",
+        "updated": "2019-09-30T01:53:27Z",
+        "sizeTotal": "694.40 kB",
+        "files": [
+            {
+                "id": 178069,
+                "name": "Sydney.sc3",
+                "size": "694.40 kB"
+            }
+        ],
+        "aliasEntry": "sydney-cbd-australia",
+        "aliasAuthor": "vector95",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33199-sydney-cbd-australia\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33204,
+        "cid": 43,
+        "uid": 755285,
+        "author": "Vector95",
+        "category": "SC3K Cities & Maps",
+        "title": "Melbourne, Victoria",
+        "release": "1.0.0",
+        "submitted": "2019-10-01T20:00:17Z",
+        "updated": "2019-10-01T20:00:17Z",
+        "sizeTotal": "729.15 kB",
+        "files": [
+            {
+                "id": 178102,
+                "name": "Melbourne.sc3",
+                "size": "729.15 kB"
+            }
+        ],
+        "aliasEntry": "melbourne-victoria",
+        "aliasAuthor": "vector95",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33204-melbourne-victoria\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33205,
+        "cid": 43,
+        "uid": 755285,
+        "author": "Vector95",
+        "category": "SC3K Cities & Maps",
+        "title": "Hong Kong",
+        "release": "2.0.0",
+        "submitted": "2019-10-01T20:26:10Z",
+        "updated": "2020-08-11T21:50:06Z",
+        "sizeTotal": "1.07 MB",
+        "files": [
+            {
+                "id": 182363,
+                "name": "HK1.sc3",
+                "size": "522.53 kB"
+            },
+            {
+                "id": 182364,
+                "name": "Hong Kong (v3).sc3",
+                "size": "573.86 kB"
+            }
+        ],
+        "aliasEntry": "hong-kong",
+        "aliasAuthor": "vector95",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33205-hong-kong\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33206,
+        "cid": 43,
+        "uid": 755285,
+        "author": "Vector95",
+        "category": "SC3K Cities & Maps",
+        "title": "Bonn, Germany",
+        "release": "1.0.0",
+        "submitted": "2019-10-01T20:56:47Z",
+        "updated": "2019-10-01T20:56:47Z",
+        "sizeTotal": "432.63 kB",
+        "files": [
+            {
+                "id": 178109,
+                "name": "Bonn, Gemany.sc3",
+                "size": "432.63 kB"
+            }
+        ],
+        "aliasEntry": "bonn-germany",
+        "aliasAuthor": "vector95",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33206-bonn-germany\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33400,
+        "cid": 43,
+        "uid": 248268,
+        "author": "trar",
+        "category": "SC3K Cities & Maps",
+        "title": "Alco Bay",
+        "release": "1.0.0",
+        "submitted": "2020-01-20T00:50:17Z",
+        "updated": "2020-01-20T00:50:17Z",
+        "sizeTotal": "718.50 kB",
+        "files": [
+            {
+                "id": 179623,
+                "name": "Alco Bay.sc3",
+                "size": "718.50 kB"
+            }
+        ],
+        "aliasEntry": "alco-bay",
+        "aliasAuthor": "trar",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33400-alco-bay\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33401,
+        "cid": 43,
+        "uid": 248268,
+        "author": "trar",
+        "category": "SC3K Cities & Maps",
+        "title": "Jeronimo",
+        "release": "1.0.0",
+        "submitted": "2020-01-20T01:11:51Z",
+        "updated": "2020-01-20T01:11:51Z",
+        "sizeTotal": "377.59 kB",
+        "files": [
+            {
+                "id": 179628,
+                "name": "Jeronimo.sc3",
+                "size": "377.59 kB"
+            }
+        ],
+        "aliasEntry": "jeronimo",
+        "aliasAuthor": "trar",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33401-jeronimo\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33402,
+        "cid": 43,
+        "uid": 248268,
+        "author": "trar",
+        "category": "SC3K Cities & Maps",
+        "title": "Defacto Island",
+        "release": "1.0.0",
+        "submitted": "2020-01-20T01:15:35Z",
+        "updated": "2020-01-20T01:15:35Z",
+        "sizeTotal": "73.54 kB",
+        "files": [
+            {
+                "id": 179633,
+                "name": "Defacto Island.sc3",
+                "size": "73.54 kB"
+            }
+        ],
+        "aliasEntry": "defacto-island",
+        "aliasAuthor": "trar",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33402-defacto-island\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33403,
+        "cid": 43,
+        "uid": 248268,
+        "author": "trar",
+        "category": "SC3K Cities & Maps",
+        "title": "Serta",
+        "release": "1.0.0",
+        "submitted": "2020-01-20T01:19:11Z",
+        "updated": "2020-01-20T01:19:11Z",
+        "sizeTotal": "356.09 kB",
+        "files": [
+            {
+                "id": 179638,
+                "name": "Serta.sc3",
+                "size": "356.09 kB"
+            }
+        ],
+        "aliasEntry": "serta",
+        "aliasAuthor": "trar",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33403-serta\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33553,
+        "cid": 43,
+        "uid": 786277,
+        "author": "istp549",
+        "category": "SC3K Cities & Maps",
+        "title": "Turulung",
+        "release": "1.0.2",
+        "submitted": "2020-04-17T22:01:50Z",
+        "updated": "2020-04-18T04:00:15Z",
+        "sizeTotal": "751.73 kB",
+        "files": [
+            {
+                "id": 180676,
+                "name": "Turulung.sc3",
+                "size": "751.73 kB"
+            }
+        ],
+        "aliasEntry": "turulung",
+        "aliasAuthor": "istp549",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33553-turulung\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33758,
+        "cid": 43,
+        "uid": 755285,
+        "author": "Vector95",
+        "category": "SC3K Cities & Maps",
+        "title": "Hong Kong (Version 2.0)",
+        "release": "1.0.0",
+        "submitted": "2020-08-11T11:24:19Z",
+        "updated": "2020-08-11T11:24:19Z",
+        "sizeTotal": "573.86 kB",
+        "files": [
+            {
+                "id": 182358,
+                "name": "Hong Kong (v3).sc3",
+                "size": "573.86 kB"
+            }
+        ],
+        "aliasEntry": "hong-kong-version-20",
+        "aliasAuthor": "vector95",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33758-hong-kong-version-20\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33767,
+        "cid": 43,
+        "uid": 786277,
+        "author": "istp549",
+        "category": "SC3K Cities & Maps",
+        "title": "Taunton",
+        "release": "1.0.0",
+        "submitted": "2020-08-16T18:19:47Z",
+        "updated": "2020-08-16T18:19:47Z",
+        "sizeTotal": "673.59 kB",
+        "files": [
+            {
+                "id": 182392,
+                "name": "Taunton-VIII.sc3",
+                "size": "673.59 kB"
+            }
+        ],
+        "aliasEntry": "taunton",
+        "aliasAuthor": "istp549",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33767-taunton\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33768,
+        "cid": 43,
+        "uid": 786277,
+        "author": "istp549",
+        "category": "SC3K Cities & Maps",
+        "title": "Hilliville",
+        "release": "1.0.0",
+        "submitted": "2020-08-16T18:21:28Z",
+        "updated": "2020-08-16T18:21:28Z",
+        "sizeTotal": "421.20 kB",
+        "files": [
+            {
+                "id": 182394,
+                "name": "Hilliville.sc3",
+                "size": "421.20 kB"
+            }
+        ],
+        "aliasEntry": "hilliville",
+        "aliasAuthor": "istp549",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33768-hilliville\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33769,
+        "cid": 43,
+        "uid": 786277,
+        "author": "istp549",
+        "category": "SC3K Cities & Maps",
+        "title": "i didn't name this one",
+        "release": "1.0.0",
+        "submitted": "2020-08-16T18:24:52Z",
+        "updated": "2020-08-16T18:24:52Z",
+        "sizeTotal": "702.98 kB",
+        "files": [
+            {
+                "id": 182396,
+                "name": "fghfghfgh.sc3",
+                "size": "702.98 kB"
+            }
+        ],
+        "aliasEntry": "i-didnt-name-this-one",
+        "aliasAuthor": "istp549",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33769-i-didnt-name-this-one\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33770,
+        "cid": 43,
+        "uid": 786277,
+        "author": "istp549",
+        "category": "SC3K Cities & Maps",
+        "title": "Heynesville",
+        "release": "1.0.0",
+        "submitted": "2020-08-16T18:56:08Z",
+        "updated": "2020-08-16T18:56:08Z",
+        "sizeTotal": "748.81 kB",
+        "files": [
+            {
+                "id": 182400,
+                "name": "Heynesville.sc3",
+                "size": "748.81 kB"
+            }
+        ],
+        "aliasEntry": "heynesville",
+        "aliasAuthor": "istp549",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33770-heynesville\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33778,
+        "cid": 43,
+        "uid": 755285,
+        "author": "Vector95",
+        "category": "SC3K Cities & Maps",
+        "title": "Hong Kong (Revamped)",
+        "release": "1.0.0",
+        "submitted": "2020-08-21T15:08:00Z",
+        "updated": "2020-08-21T15:08:00Z",
+        "sizeTotal": "576.43 kB",
+        "files": [
+            {
+                "id": 182446,
+                "name": "New Hong Kong.sc3",
+                "size": "576.43 kB"
+            }
+        ],
+        "aliasEntry": "hong-kong-revamped",
+        "aliasAuthor": "vector95",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33778-hong-kong-revamped\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33790,
+        "cid": 43,
+        "uid": 755285,
+        "author": "Vector95",
+        "category": "SC3K Cities & Maps",
+        "title": "Moscow, Russia (\u041c\u043e\u0441\u043a\u0432\u0430, \u0420\u043e\u0441\u0441\u0438\u044f)",
+        "release": "1.0.0",
+        "submitted": "2020-08-26T15:41:43Z",
+        "updated": "2020-08-26T15:41:43Z",
+        "sizeTotal": "776.57 kB",
+        "files": [
+            {
+                "id": 182492,
+                "name": "Moscow, Russia.sc3",
+                "size": "776.57 kB"
+            }
+        ],
+        "aliasEntry": "moscow-russia-\u043c\u043e\u0441\u043a\u0432\u0430-\u0440\u043e\u0441\u0441\u0438\u044f",
+        "aliasAuthor": "vector95",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33790-moscow-russia-\u043c\u043e\u0441\u043a\u0432\u0430-\u0440\u043e\u0441\u0441\u0438\u044f\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33795,
+        "cid": 43,
+        "uid": 755285,
+        "author": "Vector95",
+        "category": "SC3K Cities & Maps",
+        "title": "Los Angeles, California",
+        "release": "1.0.0",
+        "submitted": "2020-08-28T14:55:48Z",
+        "updated": "2020-08-28T14:55:48Z",
+        "sizeTotal": "692.60 kB",
+        "files": [
+            {
+                "id": 182514,
+                "name": "Los Angeles, CA.sc3",
+                "size": "692.60 kB"
+            }
+        ],
+        "aliasEntry": "los-angeles-california",
+        "aliasAuthor": "vector95",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33795-los-angeles-california\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33807,
+        "cid": 43,
+        "uid": 755285,
+        "author": "Vector95",
+        "category": "SC3K Cities & Maps",
+        "title": "Los Angeles, California (v2 & final version)",
+        "release": "2.0.0",
+        "submitted": "2020-09-02T06:41:05Z",
+        "updated": "2020-09-04T15:52:51Z",
+        "sizeTotal": "1.39 MB",
+        "files": [
+            {
+                "id": 182615,
+                "name": "Los Angeles, CA.sc3",
+                "size": "709.88 kB"
+            },
+            {
+                "id": 182616,
+                "name": "Los Angeles, CA (v2).sc3",
+                "size": "710.49 kB"
+            }
+        ],
+        "aliasEntry": "los-angeles-california-v2-final-version",
+        "aliasAuthor": "vector95",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33807-los-angeles-california-v2-final-version\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33808,
+        "cid": 43,
+        "uid": 755285,
+        "author": "Vector95",
+        "category": "SC3K Cities & Maps",
+        "title": "San Francisco, CA",
+        "release": "1.0.0",
+        "submitted": "2020-09-02T06:44:25Z",
+        "updated": "2020-09-02T06:44:25Z",
+        "sizeTotal": "569.41 kB",
+        "files": [
+            {
+                "id": 182573,
+                "name": "San Francisco, CA.sc3",
+                "size": "569.41 kB"
+            }
+        ],
+        "aliasEntry": "san-francisco-ca",
+        "aliasAuthor": "vector95",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33808-san-francisco-ca\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33814,
+        "cid": 43,
+        "uid": 755285,
+        "author": "Vector95",
+        "category": "SC3K Cities & Maps",
+        "title": "Washington.sc3",
+        "release": "1.0.0",
+        "submitted": "2020-09-04T16:24:29Z",
+        "updated": "2020-09-04T16:24:29Z",
+        "sizeTotal": "1.63 MB",
+        "files": [
+            {
+                "id": 182618,
+                "name": "Washington, DC.sc3",
+                "size": "834.94 kB"
+            },
+            {
+                "id": 182619,
+                "name": "Washington, DC.sc3",
+                "size": "834.94 kB"
+            }
+        ],
+        "aliasEntry": "washingtonsc3",
+        "aliasAuthor": "vector95",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33814-washingtonsc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33816,
+        "cid": 43,
+        "uid": 755285,
+        "author": "Vector95",
+        "category": "SC3K Cities & Maps",
+        "title": "New York, NY.sc3",
+        "release": "2.0.0",
+        "submitted": "2020-09-04T17:01:23Z",
+        "updated": "2020-09-05T04:58:15Z",
+        "sizeTotal": "1.31 MB",
+        "files": [
+            {
+                "id": 182624,
+                "name": "New York, NY.sc3",
+                "size": "670.85 kB"
+            },
+            {
+                "id": 182625,
+                "name": "New York, NY(v2).sc3",
+                "size": "670.85 kB"
+            }
+        ],
+        "aliasEntry": "new-york-nysc3",
+        "aliasAuthor": "vector95",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33816-new-york-nysc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33866,
+        "cid": 43,
+        "uid": 792612,
+        "author": "VetinarisClerk",
+        "category": "SC3K Cities & Maps",
+        "title": "AnkhMorpork.sc3",
+        "release": "1.0.0",
+        "submitted": "2020-10-12T11:49:35Z",
+        "updated": "2020-11-05T10:09:17Z",
+        "sizeTotal": "749.69 kB",
+        "files": [
+            {
+                "id": 183571,
+                "name": "AnkhMorpork.sc3",
+                "size": "749.69 kB"
+            }
+        ],
+        "aliasEntry": "ankhmorporksc3",
+        "aliasAuthor": "vetinarisclerk",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33866-ankhmorporksc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33913,
+        "cid": 43,
+        "uid": 792612,
+        "author": "VetinarisClerk",
+        "category": "SC3K Cities & Maps",
+        "title": "Split, Croatia",
+        "release": "2.0.0",
+        "submitted": "2020-10-25T19:29:51Z",
+        "updated": "2020-10-28T11:01:18Z",
+        "sizeTotal": "243.41 kB",
+        "files": [
+            {
+                "id": 183357,
+                "name": "SplitCroatiaTerrain.sc3",
+                "size": "243.41 kB"
+            }
+        ],
+        "aliasEntry": "split-croatia",
+        "aliasAuthor": "vetinarisclerk",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33913-split-croatia\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33923,
+        "cid": 43,
+        "uid": 792612,
+        "author": "VetinarisClerk",
+        "category": "SC3K Cities & Maps",
+        "title": "Split, Croatia 2050",
+        "release": "1.0.0",
+        "submitted": "2020-10-30T15:35:31Z",
+        "updated": "2020-10-30T15:35:31Z",
+        "sizeTotal": "1.52 MB",
+        "files": [
+            {
+                "id": 183395,
+                "name": "SplitCroatia2050.sc3",
+                "size": "549.87 kB"
+            },
+            {
+                "id": 183396,
+                "name": "DalmatianBuildingSet.zip",
+                "size": "1,008.21 kB"
+            }
+        ],
+        "aliasEntry": "split-croatia-2050",
+        "aliasAuthor": "vetinarisclerk",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33923-split-croatia-2050\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34573,
+        "cid": 43,
+        "uid": 785629,
+        "author": "Captain Adam",
+        "category": "SC3K Cities & Maps",
+        "title": "Hukura",
+        "release": "1.0.0",
+        "submitted": "2021-07-06T14:40:30Z",
+        "updated": "2021-07-06T14:40:30Z",
+        "sizeTotal": "773.65 kB",
+        "files": [
+            {
+                "id": 189194,
+                "name": "Hukura.sc3",
+                "size": "773.65 kB"
+            }
+        ],
+        "aliasEntry": "hukura",
+        "aliasAuthor": "captain-adam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34573-hukura\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34829,
+        "cid": 43,
+        "uid": 737259,
+        "author": "CorinaMarie",
+        "category": "SC3K Cities & Maps",
+        "title": "Shamrock.sct",
+        "release": "1.0.0",
+        "submitted": "2022-01-06T20:21:51Z",
+        "updated": "2022-01-06T20:21:51Z",
+        "sizeTotal": "242.65 kB",
+        "files": [
+            {
+                "id": 191145,
+                "name": "Shamrock.sct",
+                "size": "242.65 kB"
+            }
+        ],
+        "aliasEntry": "shamrocksct",
+        "aliasAuthor": "corinamarie",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34829-shamrocksct\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34830,
+        "cid": 43,
+        "uid": 737259,
+        "author": "CorinaMarie",
+        "category": "SC3K Cities & Maps",
+        "title": "Twin_Cities--MN.sct",
+        "release": "1.0.0",
+        "submitted": "2022-01-06T20:23:44Z",
+        "updated": "2022-01-06T20:23:44Z",
+        "sizeTotal": "284.86 kB",
+        "files": [
+            {
+                "id": 191147,
+                "name": "Twin_Cities--MN.sct",
+                "size": "284.86 kB"
+            }
+        ],
+        "aliasEntry": "twin_cities-mnsct",
+        "aliasAuthor": "corinamarie",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34830-twin_cities-mnsct\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35203,
+        "cid": 43,
+        "uid": 148997,
+        "author": "The Thinker",
+        "category": "SC3K Cities & Maps",
+        "title": "City of Twaddleborough",
+        "release": "1.0.0",
+        "submitted": "2022-06-13T19:21:43Z",
+        "updated": "2022-06-13T19:21:43Z",
+        "sizeTotal": "827.46 kB",
+        "files": [
+            {
+                "id": 194424,
+                "name": "Twaddleborough.zip",
+                "size": "827.46 kB"
+            }
+        ],
+        "aliasEntry": "city-of-twaddleborough",
+        "aliasAuthor": "the-thinker",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35203-city-of-twaddleborough\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35222,
+        "cid": 43,
+        "uid": 810312,
+        "author": "Relax75",
+        "category": "SC3K Cities & Maps",
+        "title": "New Paris.sc3",
+        "release": "1.0.0",
+        "submitted": "2022-07-05T13:29:32Z",
+        "updated": "2022-07-05T13:29:32Z",
+        "sizeTotal": "794.88 kB",
+        "files": [
+            {
+                "id": 194675,
+                "name": "New Paris.sc3",
+                "size": "794.88 kB"
+            }
+        ],
+        "aliasEntry": "new-parissc3",
+        "aliasAuthor": "relax75",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35222-new-parissc3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35287,
+        "cid": 43,
+        "uid": 811780,
+        "author": "Rom1_Mtl",
+        "category": "SC3K Cities & Maps",
+        "title": "City_A1",
+        "release": "1.0.0",
+        "submitted": "2022-09-03T16:33:46Z",
+        "updated": "2022-09-03T16:33:46Z",
+        "sizeTotal": "787.31 kB",
+        "files": [
+            {
+                "id": 195214,
+                "name": "City_A1.sc3",
+                "size": "787.31 kB"
+            }
+        ],
+        "aliasEntry": "city_a1",
+        "aliasAuthor": "rom1_mtl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35287-city_a1\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35288,
+        "cid": 43,
+        "uid": 811780,
+        "author": "Rom1_Mtl",
+        "category": "SC3K Cities & Maps",
+        "title": "City_A2",
+        "release": "1.0.0",
+        "submitted": "2022-09-03T16:37:51Z",
+        "updated": "2022-09-03T16:37:51Z",
+        "sizeTotal": "779.17 kB",
+        "files": [
+            {
+                "id": 195216,
+                "name": "City_A2.sc3",
+                "size": "779.17 kB"
+            }
+        ],
+        "aliasEntry": "city_a2",
+        "aliasAuthor": "rom1_mtl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35288-city_a2\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35289,
+        "cid": 43,
+        "uid": 811780,
+        "author": "Rom1_Mtl",
+        "category": "SC3K Cities & Maps",
+        "title": "City_A3",
+        "release": "1.0.0",
+        "submitted": "2022-09-03T16:42:22Z",
+        "updated": "2022-09-03T16:42:22Z",
+        "sizeTotal": "761.59 kB",
+        "files": [
+            {
+                "id": 195218,
+                "name": "City_A3.sc3",
+                "size": "761.59 kB"
+            }
+        ],
+        "aliasEntry": "city_a3",
+        "aliasAuthor": "rom1_mtl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35289-city_a3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36143,
+        "cid": 43,
+        "uid": 526127,
+        "author": "GrumpyKing",
+        "category": "SC3K Cities & Maps",
+        "title": "Bankruption",
+        "release": "1.0.0",
+        "submitted": "2024-02-25T13:53:56Z",
+        "updated": "2024-02-25T13:53:56Z",
+        "sizeTotal": "47.51 kB",
+        "files": [
+            {
+                "id": 200455,
+                "name": "Bankruption.sc3",
+                "size": "47.51 kB"
+            }
+        ],
+        "aliasEntry": "bankruption",
+        "aliasAuthor": "grumpyking",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36143-bankruption\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36288,
+        "cid": 43,
+        "uid": 789103,
+        "author": "asasnat",
+        "category": "SC3K Cities & Maps",
+        "title": "Parksville",
+        "release": "1",
+        "submitted": "2024-06-05T19:50:14Z",
+        "updated": "2024-06-05T19:50:14Z",
+        "sizeTotal": "443.57 kB",
+        "files": [
+            {
+                "id": 201592,
+                "name": "Parksville.sc3",
+                "size": "443.57 kB"
+            }
+        ],
+        "aliasEntry": "parksville",
+        "aliasAuthor": "asasnat",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36288-parksville\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36555,
+        "cid": 43,
+        "uid": 811780,
+        "author": "Rom1_Mtl",
+        "category": "SC3K Cities & Maps",
+        "title": "Mountain City",
+        "release": "1.0.0",
+        "submitted": "2024-11-16T11:15:49Z",
+        "updated": "2024-11-16T11:15:49Z",
+        "sizeTotal": "749.30 kB",
+        "files": [
+            {
+                "id": 204419,
+                "name": "Mountain City1.sc3",
+                "size": "749.30 kB"
+            }
+        ],
+        "aliasEntry": "mountain-city",
+        "aliasAuthor": "rom1_mtl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36555-mountain-city\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36556,
+        "cid": 43,
+        "uid": 811780,
+        "author": "Rom1_Mtl",
+        "category": "SC3K Cities & Maps",
+        "title": "River City",
+        "release": "1.0.0",
+        "submitted": "2024-11-16T11:45:45Z",
+        "updated": "2024-11-16T11:45:45Z",
+        "sizeTotal": "761.10 kB",
+        "files": [
+            {
+                "id": 204421,
+                "name": "River City.sc3",
+                "size": "761.10 kB"
+            }
+        ],
+        "aliasEntry": "river-city",
+        "aliasAuthor": "rom1_mtl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36556-river-city\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36557,
+        "cid": 43,
+        "uid": 811780,
+        "author": "Rom1_Mtl",
+        "category": "SC3K Cities & Maps",
+        "title": "State capital City",
+        "release": "1.0.0",
+        "submitted": "2024-11-16T11:47:47Z",
+        "updated": "2024-11-16T11:47:47Z",
+        "sizeTotal": "732.71 kB",
+        "files": [
+            {
+                "id": 204423,
+                "name": "State Capital City .sc3",
+                "size": "732.71 kB"
+            }
+        ],
+        "aliasEntry": "state-capital-city",
+        "aliasAuthor": "rom1_mtl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36557-state-capital-city\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36558,
+        "cid": 43,
+        "uid": 811780,
+        "author": "Rom1_Mtl",
+        "category": "SC3K Cities & Maps",
+        "title": "Port City",
+        "release": "1.0.0",
+        "submitted": "2024-11-16T11:49:22Z",
+        "updated": "2024-11-16T11:49:22Z",
+        "sizeTotal": "710.94 kB",
+        "files": [
+            {
+                "id": 204425,
+                "name": "Port City.sc3",
+                "size": "710.94 kB"
+            }
+        ],
+        "aliasEntry": "port-city",
+        "aliasAuthor": "rom1_mtl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36558-port-city\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36559,
+        "cid": 43,
+        "uid": 811780,
+        "author": "Rom1_Mtl",
+        "category": "SC3K Cities & Maps",
+        "title": "Islands City",
+        "release": "1.0.0",
+        "submitted": "2024-11-16T11:51:29Z",
+        "updated": "2024-11-16T11:51:29Z",
+        "sizeTotal": "738.94 kB",
+        "files": [
+            {
+                "id": 204427,
+                "name": "Islands City.sc3",
+                "size": "738.94 kB"
+            }
+        ],
+        "aliasEntry": "islands-city",
+        "aliasAuthor": "rom1_mtl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36559-islands-city\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36560,
+        "cid": 43,
+        "uid": 811780,
+        "author": "Rom1_Mtl",
+        "category": "SC3K Cities & Maps",
+        "title": "Green City",
+        "release": "1.0.0",
+        "submitted": "2024-11-16T11:53:51Z",
+        "updated": "2024-11-16T11:53:51Z",
+        "sizeTotal": "612.23 kB",
+        "files": [
+            {
+                "id": 204429,
+                "name": "Green City 1 .sc3",
+                "size": "612.23 kB"
+            }
+        ],
+        "aliasEntry": "green-city",
+        "aliasAuthor": "rom1_mtl",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36560-green-city\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36659,
+        "cid": 43,
+        "uid": 824080,
+        "author": "alloy_sama",
+        "category": "SC3K Cities & Maps",
+        "title": "Dubai",
+        "release": "1.0.0",
+        "submitted": "2025-01-11T18:14:59Z",
+        "updated": "2025-01-11T18:14:59Z",
+        "sizeTotal": "186.94 kB",
+        "files": [
+            {
+                "id": 205228,
+                "name": "Dubai.sc3",
+                "size": "186.94 kB"
+            }
+        ],
+        "aliasEntry": "dubai",
+        "aliasAuthor": "alloy_sama",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36659-dubai\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36662,
+        "cid": 43,
+        "uid": 824080,
+        "author": "alloy_sama",
+        "category": "SC3K Cities & Maps",
+        "title": "Oil City, Pennsylvania",
+        "release": "1.0.0",
+        "submitted": "2025-01-12T02:37:54Z",
+        "updated": "2025-01-12T02:37:54Z",
+        "sizeTotal": "196.89 kB",
+        "files": [
+            {
+                "id": 205240,
+                "name": "Oil City.sc3",
+                "size": "196.89 kB"
+            }
+        ],
+        "aliasEntry": "oil-city-pennsylvania",
+        "aliasAuthor": "alloy_sama",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36662-oil-city-pennsylvania\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36675,
+        "cid": 43,
+        "uid": 730559,
+        "author": "icantthinkofaname",
+        "category": "SC3K Cities & Maps",
+        "title": "Scyene",
+        "release": "1.0.0",
+        "submitted": "2025-01-18T22:31:58Z",
+        "updated": "2025-01-18T22:31:58Z",
+        "sizeTotal": "606.98 kB",
+        "files": [
+            {
+                "id": 205351,
+                "name": "Scyene.sc3",
+                "size": "606.98 kB"
+            }
+        ],
+        "aliasEntry": "scyene",
+        "aliasAuthor": "icantthinkofaname",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36675-scyene\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36676,
+        "cid": 43,
+        "uid": 824080,
+        "author": "alloy_sama",
+        "category": "SC3K Cities & Maps",
+        "title": "Westbend",
+        "release": "1.0.0",
+        "submitted": "2025-01-20T06:06:38Z",
+        "updated": "2025-01-20T06:06:38Z",
+        "sizeTotal": "344.27 kB",
+        "files": [
+            {
+                "id": 205384,
+                "name": "Westbend.sc3",
+                "size": "344.27 kB"
+            }
+        ],
+        "aliasEntry": "westbend",
+        "aliasAuthor": "alloy_sama",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36676-westbend\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36677,
+        "cid": 43,
+        "uid": 824080,
+        "author": "alloy_sama",
+        "category": "SC3K Cities & Maps",
+        "title": "Reisimachtig",
+        "release": "1.0.0",
+        "submitted": "2025-01-21T11:00:19Z",
+        "updated": "2025-01-21T11:00:19Z",
+        "sizeTotal": "220.94 kB",
+        "files": [
+            {
+                "id": 205397,
+                "name": "Reisimachtig.sc3",
+                "size": "220.94 kB"
+            }
+        ],
+        "aliasEntry": "reisimachtig",
+        "aliasAuthor": "alloy_sama",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36677-reisimachtig\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36942,
+        "cid": 43,
+        "uid": 785629,
+        "author": "Captain Adam",
+        "category": "SC3K Cities & Maps",
+        "title": "Riverfront",
+        "release": "1.0.0",
+        "submitted": "2025-07-19T07:54:20Z",
+        "updated": "2025-07-19T07:54:20Z",
+        "sizeTotal": "864.75 kB",
+        "files": [
+            {
+                "id": 208436,
+                "name": "Riverfront.sc3",
+                "size": "864.75 kB"
+            }
+        ],
+        "aliasEntry": "riverfront",
+        "aliasAuthor": "captain-adam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36942-riverfront\/",
+        "===========": "=========================================="
+    }
+]

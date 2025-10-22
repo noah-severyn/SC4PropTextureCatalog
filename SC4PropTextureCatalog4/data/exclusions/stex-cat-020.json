@@ -1,0 +1,216 @@
+[
+    {
+        "id": 29542,
+        "cid": 20,
+        "uid": 665796,
+        "author": "Asilksworld",
+        "category": "SC13 Programs & Tools",
+        "title": "Asilk's Mod Manager (AMM)",
+        "release": "1.1",
+        "submitted": "2014-05-04T17:16:58Z",
+        "updated": "2014-05-27T12:37:02Z",
+        "sizeTotal": "1.94 MB",
+        "files": [
+            {
+                "id": 136097,
+                "name": "Asilk'sModManager 1_0_0.zip",
+                "size": "18.73 kB"
+            },
+            {
+                "id": 136098,
+                "name": "Asilk'sModManager 1_0_2.zip",
+                "size": "230.45 kB"
+            },
+            {
+                "id": 136099,
+                "name": "Asilk'sModManager 1_0_3.zip",
+                "size": "231.15 kB"
+            },
+            {
+                "id": 136100,
+                "name": "Asilk'sModManager 1_0_5.zip",
+                "size": "307.99 kB"
+            },
+            {
+                "id": 136101,
+                "name": "Asilk'sModManager 1_0_7.zip",
+                "size": "384.95 kB"
+            },
+            {
+                "id": 136102,
+                "name": "Asilk'sModManager 1_0_8.zip",
+                "size": "385.24 kB"
+            },
+            {
+                "id": 136103,
+                "name": "Asilk'sModManager 1_1_0.zip",
+                "size": "426.79 kB"
+            }
+        ],
+        "aliasEntry": "asilks-mod-manager-amm",
+        "aliasAuthor": "asilksworld",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29542-asilks-mod-manager-amm\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29670,
+        "cid": 20,
+        "uid": 657450,
+        "author": "UguuDoki",
+        "category": "SC13 Programs & Tools",
+        "title": "SimCity 2013 Mods Switch",
+        "release": "2.2.4",
+        "submitted": "2014-06-21T04:42:39Z",
+        "updated": "2014-06-21T04:42:39Z",
+        "sizeTotal": "292.75 kB",
+        "files": [
+            {
+                "id": 140453,
+                "name": "sc13ms224.zip",
+                "size": "292.75 kB"
+            }
+        ],
+        "aliasEntry": "simcity-2013-mods-switch",
+        "aliasAuthor": "uguudoki",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29670-simcity-2013-mods-switch\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29697,
+        "cid": 20,
+        "uid": 657450,
+        "author": "UguuDoki",
+        "category": "SC13 Programs & Tools",
+        "title": "SimCity 2013 Mods Switch",
+        "release": "1.0",
+        "submitted": "2014-06-30T17:24:44Z",
+        "updated": "2014-06-30T17:24:44Z",
+        "sizeTotal": "351.71 kB",
+        "files": [
+            {
+                "id": 140779,
+                "name": "sc13ms235.zip",
+                "size": "351.71 kB"
+            }
+        ],
+        "aliasEntry": "simcity-2013-mods-switch",
+        "aliasAuthor": "uguudoki",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29697-simcity-2013-mods-switch\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29989,
+        "cid": 20,
+        "uid": 649977,
+        "author": "TheCraftKid",
+        "category": "SC13 Programs & Tools",
+        "title": "Orion's Belt Modpack | Bigger Cities Made Easy!",
+        "release": "2.3.0",
+        "submitted": "2014-11-11T20:51:50Z",
+        "updated": "2014-11-11T20:51:50Z",
+        "sizeTotal": "56.22 MB",
+        "files": [
+            {
+                "id": 147822,
+                "name": "Orion's Belt - v2.3.0 - February 8, 2015.zip",
+                "size": "56.22 MB"
+            }
+        ],
+        "aliasEntry": "orions-belt-modpack-bigger-cities-made-easy",
+        "aliasAuthor": "thecraftkid",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29989-orions-belt-modpack-bigger-cities-made-easy\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29999,
+        "cid": 20,
+        "uid": 646323,
+        "author": "Danny50205",
+        "category": "SC13 Programs & Tools",
+        "title": "SimCityPak",
+        "release": "4.0",
+        "submitted": "2014-11-14T09:10:12Z",
+        "updated": "2014-11-14T09:10:12Z",
+        "sizeTotal": "3.95 MB",
+        "files": [
+            {
+                "id": 144725,
+                "name": "SimCityPak_0_4_0_0.rar",
+                "size": "3.95 MB"
+            }
+        ],
+        "aliasEntry": "simcitypak",
+        "aliasAuthor": "danny50205",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29999-simcitypak\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30000,
+        "cid": 20,
+        "uid": 646323,
+        "author": "Danny50205",
+        "category": "SC13 Programs & Tools",
+        "title": "Simcity 3ds max script tools for buildings",
+        "release": "1.0",
+        "submitted": "2014-11-14T19:48:51Z",
+        "updated": "2014-11-14T19:48:51Z",
+        "sizeTotal": "2.38 MB",
+        "files": [
+            {
+                "id": 144727,
+                "name": "3ds MAXScript and Guide.rar",
+                "size": "2.38 MB"
+            }
+        ],
+        "aliasEntry": "simcity-3ds-max-script-tools-for-buildings",
+        "aliasAuthor": "danny50205",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30000-simcity-3ds-max-script-tools-for-buildings\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30053,
+        "cid": 20,
+        "uid": 689869,
+        "author": "SUGCTeam",
+        "category": "SC13 Programs & Tools",
+        "title": "SUGCPack",
+        "release": "1.0",
+        "submitted": "2014-12-17T21:15:53Z",
+        "updated": "2014-12-17T21:15:53Z",
+        "sizeTotal": "54.30 MB",
+        "files": [
+            {
+                "id": 147748,
+                "name": "SUGCPack1.0.rar",
+                "size": "54.30 MB"
+            }
+        ],
+        "aliasEntry": "sugcpack",
+        "aliasAuthor": "sugcteam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30053-sugcpack\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30152,
+        "cid": 20,
+        "uid": 689869,
+        "author": "SUGCTeam",
+        "category": "SC13 Programs & Tools",
+        "title": "SUGC Simcity Modder's Guide",
+        "release": "1.01",
+        "submitted": "2015-02-20T05:40:31Z",
+        "updated": "2015-02-20T05:40:31Z",
+        "sizeTotal": "31.68 MB",
+        "files": [
+            {
+                "id": 148290,
+                "name": "SUGC Simcity Modder's guide_version 1.01.zip",
+                "size": "31.68 MB"
+            }
+        ],
+        "aliasEntry": "sugc-simcity-modders-guide",
+        "aliasAuthor": "sugcteam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30152-sugc-simcity-modders-guide\/",
+        "===========": "=========================================="
+    }
+]

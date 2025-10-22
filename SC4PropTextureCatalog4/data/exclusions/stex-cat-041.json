@@ -1,0 +1,4499 @@
+[
+    {
+        "id": 27605,
+        "cid": 41,
+        "uid": 388299,
+        "author": "I. Lostalim",
+        "category": "SimCity 3000 Files",
+        "title": "SimCity 3000 Texture Pack",
+        "release": "1.0",
+        "submitted": "2012-05-12T04:29:33Z",
+        "updated": "2012-05-12T04:29:33Z",
+        "sizeTotal": "1.87 MB",
+        "files": [
+            {
+                "id": 100669,
+                "name": "SimCity 3000 TexturePack.zip",
+                "size": "1.87 MB"
+            }
+        ],
+        "aliasEntry": "simcity-3000-texture-pack",
+        "aliasAuthor": "i.-lostalim",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/27605-simcity-3000-texture-pack\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 27612,
+        "cid": 41,
+        "uid": 388299,
+        "author": "I. Lostalim",
+        "category": "SimCity 3000 Files",
+        "title": "SimCity 3000 Base Textures",
+        "release": "1.0",
+        "submitted": "2012-05-13T16:20:32Z",
+        "updated": "2012-05-13T16:20:32Z",
+        "sizeTotal": "1.27 MB",
+        "files": [
+            {
+                "id": 100742,
+                "name": "SC3_BaseTextures.zip",
+                "size": "1.27 MB"
+            }
+        ],
+        "aliasEntry": "simcity-3000-base-textures",
+        "aliasAuthor": "i.-lostalim",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/27612-simcity-3000-base-textures\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31269,
+        "cid": 41,
+        "uid": 744271,
+        "author": "Dollar Tower$",
+        "category": "SimCity 3000 Files",
+        "title": "SimCity 3000 WTC addon",
+        "release": "1.0",
+        "submitted": "2016-08-26T14:31:55Z",
+        "updated": "2016-08-26T14:31:55Z",
+        "sizeTotal": "117.53 kB",
+        "files": [
+            {
+                "id": 163021,
+                "name": "World Trade Center C.bld",
+                "size": "64.22 kB"
+            },
+            {
+                "id": 163022,
+                "name": "World Trade Center G.bld",
+                "size": "53.31 kB"
+            }
+        ],
+        "aliasEntry": "simcity-3000-wtc-addon",
+        "aliasAuthor": "dollar-tower$",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31269-simcity-3000-wtc-addon\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31270,
+        "cid": 41,
+        "uid": 744271,
+        "author": "Dollar Tower$",
+        "category": "SimCity 3000 Files",
+        "title": "SimCity 3000 tower pack",
+        "release": "1.0",
+        "submitted": "2016-08-26T18:51:08Z",
+        "updated": "2016-08-26T18:51:08Z",
+        "sizeTotal": "173.31 kB",
+        "files": [
+            {
+                "id": 163024,
+                "name": "One Billionaire.bld",
+                "size": "95.41 kB"
+            },
+            {
+                "id": 163025,
+                "name": "One Millionaire.bld",
+                "size": "77.90 kB"
+            }
+        ],
+        "aliasEntry": "simcity-3000-tower-pack",
+        "aliasAuthor": "dollar-tower$",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31270-simcity-3000-tower-pack\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31271,
+        "cid": 41,
+        "uid": 744271,
+        "author": "Dollar Tower$",
+        "category": "SimCity 3000 Files",
+        "title": "SimCity 3000 Bell Building",
+        "release": "1.0",
+        "submitted": "2016-08-26T19:09:25Z",
+        "updated": "2016-08-26T19:09:25Z",
+        "sizeTotal": "51.19 kB",
+        "files": [
+            {
+                "id": 163028,
+                "name": "Bell Building.bld",
+                "size": "51.19 kB"
+            }
+        ],
+        "aliasEntry": "simcity-3000-bell-building",
+        "aliasAuthor": "dollar-tower$",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31271-simcity-3000-bell-building\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31301,
+        "cid": 41,
+        "uid": 744271,
+        "author": "Dollar Tower$",
+        "category": "SimCity 3000 Files",
+        "title": "SimCity 3000 Fryzian Tower",
+        "release": "1.0",
+        "submitted": "2016-09-25T16:24:13Z",
+        "updated": "2016-09-25T16:24:13Z",
+        "sizeTotal": "104.15 kB",
+        "files": [
+            {
+                "id": 163279,
+                "name": "Fryzian Tower.bld",
+                "size": "104.15 kB"
+            }
+        ],
+        "aliasEntry": "simcity-3000-fryzian-tower",
+        "aliasAuthor": "dollar-tower$",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31301-simcity-3000-fryzian-tower\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31574,
+        "cid": 41,
+        "uid": 744271,
+        "author": "Dollar Tower$",
+        "category": "SimCity 3000 Files",
+        "title": "SimCity 3000 IKEA",
+        "release": "1.0",
+        "submitted": "2017-04-17T09:10:08Z",
+        "updated": "2017-04-17T09:10:08Z",
+        "sizeTotal": "74.99 kB",
+        "files": [
+            {
+                "id": 165406,
+                "name": "Ikea.bld",
+                "size": "74.99 kB"
+            }
+        ],
+        "aliasEntry": "simcity-3000-ikea",
+        "aliasAuthor": "dollar-tower$",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31574-simcity-3000-ikea\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31607,
+        "cid": 41,
+        "uid": 696099,
+        "author": "BugeyedDragon",
+        "category": "SimCity 3000 Files",
+        "title": "SimCity 3000 1x1 RCI Pak",
+        "release": "1.0",
+        "submitted": "2017-05-11T04:14:32Z",
+        "updated": "2017-05-11T04:14:32Z",
+        "sizeTotal": "109.21 kB",
+        "files": [
+            {
+                "id": 165694,
+                "name": "RCI Pak.zip",
+                "size": "109.21 kB"
+            }
+        ],
+        "aliasEntry": "simcity-3000-1x1-rci-pak",
+        "aliasAuthor": "bugeyeddragon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31607-simcity-3000-1x1-rci-pak\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31617,
+        "cid": 41,
+        "uid": 696099,
+        "author": "BugeyedDragon",
+        "category": "SimCity 3000 Files",
+        "title": "Fisca Busta Casino",
+        "release": "1.0",
+        "submitted": "2017-05-13T03:10:32Z",
+        "updated": "2017-05-13T03:10:32Z",
+        "sizeTotal": "62.25 kB",
+        "files": [
+            {
+                "id": 165754,
+                "name": "Fisca Busta Casino (BD).zip",
+                "size": "62.25 kB"
+            }
+        ],
+        "aliasEntry": "fisca-busta-casino",
+        "aliasAuthor": "bugeyeddragon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31617-fisca-busta-casino\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31623,
+        "cid": 41,
+        "uid": 737259,
+        "author": "CorinaMarie",
+        "category": "SimCity 3000 Files",
+        "title": "A1 Clongowes Castle",
+        "release": "1.0",
+        "submitted": "2017-05-16T22:12:28Z",
+        "updated": "2017-05-16T22:12:28Z",
+        "sizeTotal": "79.19 kB",
+        "files": [
+            {
+                "id": 165782,
+                "name": "A1_Clongowes_Castle.bld",
+                "size": "79.19 kB"
+            }
+        ],
+        "aliasEntry": "a1-clongowes-castle",
+        "aliasAuthor": "corinamarie",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31623-a1-clongowes-castle\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31642,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "Gemrise Plaza",
+        "release": "1.0",
+        "submitted": "2017-05-20T16:47:20Z",
+        "updated": "2017-05-20T16:47:20Z",
+        "sizeTotal": "229.13 kB",
+        "files": [
+            {
+                "id": 165867,
+                "name": "Gemrise Plaza.bld",
+                "size": "229.13 kB"
+            }
+        ],
+        "aliasEntry": "gemrise-plaza",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31642-gemrise-plaza\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31643,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "Shining Star Mall",
+        "release": "1.0",
+        "submitted": "2017-05-20T19:34:26Z",
+        "updated": "2017-05-20T19:34:26Z",
+        "sizeTotal": "84.94 kB",
+        "files": [
+            {
+                "id": 165869,
+                "name": "Shining Star Mall.bld",
+                "size": "84.94 kB"
+            }
+        ],
+        "aliasEntry": "shining-star-mall",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31643-shining-star-mall\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31644,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "Infinity Insurance",
+        "release": "1.0",
+        "submitted": "2017-05-20T23:08:46Z",
+        "updated": "2017-05-20T23:08:46Z",
+        "sizeTotal": "216.83 kB",
+        "files": [
+            {
+                "id": 165884,
+                "name": "Infinity Insurance.bld",
+                "size": "216.83 kB"
+            }
+        ],
+        "aliasEntry": "infinity-insurance",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31644-infinity-insurance\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31648,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "Luigi City Mall",
+        "release": "1.0",
+        "submitted": "2017-05-21T15:33:17Z",
+        "updated": "2017-05-21T15:33:17Z",
+        "sizeTotal": "276.47 kB",
+        "files": [
+            {
+                "id": 165903,
+                "name": "Luigi City Mall.bld",
+                "size": "276.47 kB"
+            }
+        ],
+        "aliasEntry": "luigi-city-mall",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31648-luigi-city-mall\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31649,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "John Green Plaza",
+        "release": "1.0",
+        "submitted": "2017-05-21T19:50:17Z",
+        "updated": "2017-05-21T19:50:17Z",
+        "sizeTotal": "127.61 kB",
+        "files": [
+            {
+                "id": 165908,
+                "name": "John Green Plaza.bld",
+                "size": "127.61 kB"
+            }
+        ],
+        "aliasEntry": "john-green-plaza",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31649-john-green-plaza\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31651,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "Purple Dragon Building",
+        "release": "1.0",
+        "submitted": "2017-05-21T22:37:27Z",
+        "updated": "2017-05-21T22:37:27Z",
+        "sizeTotal": "69.30 kB",
+        "files": [
+            {
+                "id": 165916,
+                "name": "Purple Dragon Building.bld",
+                "size": "69.30 kB"
+            }
+        ],
+        "aliasEntry": "purple-dragon-building",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31651-purple-dragon-building\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31657,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "Red Rose Tower",
+        "release": "1.0",
+        "submitted": "2017-05-25T01:03:06Z",
+        "updated": "2017-05-25T01:03:06Z",
+        "sizeTotal": "101.30 kB",
+        "files": [
+            {
+                "id": 165986,
+                "name": "Red Rose Tower.bld",
+                "size": "101.30 kB"
+            }
+        ],
+        "aliasEntry": "red-rose-tower",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31657-red-rose-tower\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31675,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "5th Star Hotel",
+        "release": "1.0",
+        "submitted": "2017-06-01T04:31:48Z",
+        "updated": "2017-06-01T04:31:48Z",
+        "sizeTotal": "66.00 kB",
+        "files": [
+            {
+                "id": 166166,
+                "name": "5th Star Hotel.bld",
+                "size": "66.00 kB"
+            }
+        ],
+        "aliasEntry": "5th-star-hotel",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31675-5th-star-hotel\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31677,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "Golden Coast Apartments",
+        "release": "1.0",
+        "submitted": "2017-06-01T16:22:39Z",
+        "updated": "2017-06-01T16:22:39Z",
+        "sizeTotal": "94.70 kB",
+        "files": [
+            {
+                "id": 166172,
+                "name": "Golden Coast Apartments.bld",
+                "size": "94.70 kB"
+            }
+        ],
+        "aliasEntry": "golden-coast-apartments",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31677-golden-coast-apartments\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31680,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "Starview Highrise",
+        "release": "1.0",
+        "submitted": "2017-06-01T20:26:04Z",
+        "updated": "2017-06-01T20:26:04Z",
+        "sizeTotal": "127.88 kB",
+        "files": [
+            {
+                "id": 166206,
+                "name": "Starview Highrise.bld",
+                "size": "127.88 kB"
+            }
+        ],
+        "aliasEntry": "starview-highrise",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31680-starview-highrise\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31681,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "Bell Building",
+        "release": "1.0",
+        "submitted": "2017-06-01T22:51:25Z",
+        "updated": "2017-06-01T22:51:25Z",
+        "sizeTotal": "58.09 kB",
+        "files": [
+            {
+                "id": 166208,
+                "name": "Bell Building.bld",
+                "size": "58.09 kB"
+            }
+        ],
+        "aliasEntry": "bell-building",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31681-bell-building\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31691,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "Times Square, New Years Eve 2000",
+        "release": "1.0",
+        "submitted": "2017-06-02T03:35:20Z",
+        "updated": "2017-06-02T03:35:20Z",
+        "sizeTotal": "2.16 MB",
+        "files": [
+            {
+                "id": 166240,
+                "name": "Times Square, New Years Eve.bld",
+                "size": "2.16 MB"
+            }
+        ],
+        "aliasEntry": "times-square-new-years-eve-2000",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31691-times-square-new-years-eve-2000\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31734,
+        "cid": 41,
+        "uid": 749615,
+        "author": "Propfam",
+        "category": "SimCity 3000 Files",
+        "title": "SimCity 3000 Unlimited Fractal Terrain Generator",
+        "release": "1.0",
+        "submitted": "2017-06-04T05:22:03Z",
+        "updated": "2017-06-04T05:22:03Z",
+        "sizeTotal": "283.42 kB",
+        "files": [
+            {
+                "id": 166421,
+                "name": "SC3K_TerrGen.zip",
+                "size": "283.42 kB"
+            }
+        ],
+        "aliasEntry": "simcity-3000-unlimited-fractal-terrain-generator",
+        "aliasAuthor": "propfam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31734-simcity-3000-unlimited-fractal-terrain-generator\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31749,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "First Interstate World Tower",
+        "release": "1.0",
+        "submitted": "2017-06-09T01:00:43Z",
+        "updated": "2017-06-09T01:19:58Z",
+        "sizeTotal": "928.62 kB",
+        "files": [
+            {
+                "id": 166545,
+                "name": "First Interstate World Tower.zip",
+                "size": "928.62 kB"
+            }
+        ],
+        "aliasEntry": "first-interstate-world-tower",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31749-first-interstate-world-tower\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31752,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "Custom Landmark\/\/ Central Star Tower",
+        "release": "2.0.0",
+        "submitted": "2017-06-10T04:01:14Z",
+        "updated": "2017-06-10T04:01:14Z",
+        "sizeTotal": "417.80 kB",
+        "files": [
+            {
+                "id": 166560,
+                "name": "Central Star Tower.zip",
+                "size": "417.80 kB"
+            }
+        ],
+        "aliasEntry": "custom-landmark-central-star-tower",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31752-custom-landmark-central-star-tower\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31754,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "Custom Landmark\/\/ Electron Tower",
+        "release": "1.0",
+        "submitted": "2017-06-10T21:21:43Z",
+        "updated": "2017-06-10T21:21:43Z",
+        "sizeTotal": "663.82 kB",
+        "files": [
+            {
+                "id": 166567,
+                "name": "Electron Tower.zip",
+                "size": "663.82 kB"
+            }
+        ],
+        "aliasEntry": "custom-landmark-electron-tower",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31754-custom-landmark-electron-tower\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31762,
+        "cid": 41,
+        "uid": 151319,
+        "author": "Cool_Z",
+        "category": "SimCity 3000 Files",
+        "title": "Half Chase Building",
+        "release": "1.0",
+        "submitted": "2017-06-14T17:40:06Z",
+        "updated": "2017-06-14T17:40:06Z",
+        "sizeTotal": "459.07 kB",
+        "files": [
+            {
+                "id": 166615,
+                "name": "Zed68 - Half Chase Building.zip",
+                "size": "459.07 kB"
+            }
+        ],
+        "aliasEntry": "half-chase-building",
+        "aliasAuthor": "cool_z",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31762-half-chase-building\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31764,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "Custom Landmark\/\/ Violet Tower",
+        "release": "1.0",
+        "submitted": "2017-06-15T00:03:56Z",
+        "updated": "2017-06-15T00:03:56Z",
+        "sizeTotal": "78.08 kB",
+        "files": [
+            {
+                "id": 166636,
+                "name": "Violet Tower.zip",
+                "size": "78.08 kB"
+            }
+        ],
+        "aliasEntry": "custom-landmark-violet-tower",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31764-custom-landmark-violet-tower\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31789,
+        "cid": 41,
+        "uid": 364367,
+        "author": "pclark06",
+        "category": "SimCity 3000 Files",
+        "title": "PC SC3K Commercial Buildings 1",
+        "release": "1.0",
+        "submitted": "2017-06-16T02:01:35Z",
+        "updated": "2017-06-16T13:36:35Z",
+        "sizeTotal": "1.79 MB",
+        "files": [
+            {
+                "id": 166800,
+                "name": "PC SC3 Buildings 1.zip",
+                "size": "1.79 MB"
+            }
+        ],
+        "aliasEntry": "pc-sc3k-commercial-buildings-1",
+        "aliasAuthor": "pclark06",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31789-pc-sc3k-commercial-buildings-1\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31797,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "Brooklyn Appartments",
+        "release": "1.0",
+        "submitted": "2017-06-19T21:14:38Z",
+        "updated": "2017-06-19T21:14:38Z",
+        "sizeTotal": "76.05 kB",
+        "files": [
+            {
+                "id": 166928,
+                "name": "Brooklyn Apartments.bld",
+                "size": "76.05 kB"
+            }
+        ],
+        "aliasEntry": "brooklyn-appartments",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31797-brooklyn-appartments\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31798,
+        "cid": 41,
+        "uid": 751062,
+        "author": "Yohane Architects",
+        "category": "SimCity 3000 Files",
+        "title": "Luigi Highrise",
+        "release": "1.0",
+        "submitted": "2017-06-19T21:22:18Z",
+        "updated": "2017-06-19T21:22:18Z",
+        "sizeTotal": "61.73 kB",
+        "files": [
+            {
+                "id": 166930,
+                "name": "Luigi Highrise.bld",
+                "size": "61.73 kB"
+            }
+        ],
+        "aliasEntry": "luigi-highrise",
+        "aliasAuthor": "yohane-architects",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31798-luigi-highrise\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31830,
+        "cid": 41,
+        "uid": 364367,
+        "author": "pclark06",
+        "category": "SimCity 3000 Files",
+        "title": "PC SC3K Buildings 2",
+        "release": "1.0",
+        "submitted": "2017-07-01T03:39:22Z",
+        "updated": "2017-07-01T03:39:22Z",
+        "sizeTotal": "848.91 kB",
+        "files": [
+            {
+                "id": 167408,
+                "name": "Phil SC3 Buildings 2.zip",
+                "size": "848.91 kB"
+            }
+        ],
+        "aliasEntry": "pc-sc3k-buildings-2",
+        "aliasAuthor": "pclark06",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31830-pc-sc3k-buildings-2\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31894,
+        "cid": 41,
+        "uid": 665840,
+        "author": "former_member 665840",
+        "category": "SimCity 3000 Files",
+        "title": "SunnySide 60",
+        "release": "1.0",
+        "submitted": "2017-08-06T05:41:19Z",
+        "updated": "2017-08-06T05:41:19Z",
+        "files": [
+            {
+                "id": 167853,
+                "name": "SunnySide 60.bld",
+                "size": "302.84 kB"
+            }
+        ],
+        "aliasEntry": "sunnyside-60",
+        "aliasAuthor": "former_member-665840",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31894-sunnyside-60\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31895,
+        "cid": 41,
+        "uid": 665840,
+        "author": "former_member 665840",
+        "category": "SimCity 3000 Files",
+        "title": "Cymru Centre",
+        "release": "1.0",
+        "submitted": "2017-08-06T05:43:59Z",
+        "updated": "2017-08-06T05:43:59Z",
+        "files": [
+            {
+                "id": 167858,
+                "name": "Cymru Centre.bld",
+                "size": "410.23 kB"
+            }
+        ],
+        "aliasEntry": "cymru-centre",
+        "aliasAuthor": "former_member-665840",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31895-cymru-centre\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32237,
+        "cid": 41,
+        "uid": 665840,
+        "author": "former_member 665840",
+        "category": "SimCity 3000 Files",
+        "title": "Contemporary Library",
+        "release": "1.0",
+        "submitted": "2018-04-30T21:32:07Z",
+        "updated": "2018-04-30T21:32:07Z",
+        "files": [
+            {
+                "id": 170706,
+                "name": "Library.bld",
+                "size": "161.78 kB"
+            }
+        ],
+        "aliasEntry": "contemporary-library",
+        "aliasAuthor": "former_member-665840",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32237-contemporary-library\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32238,
+        "cid": 41,
+        "uid": 665840,
+        "author": "former_member 665840",
+        "category": "SimCity 3000 Files",
+        "title": "Advanced Research Center",
+        "release": "1.0",
+        "submitted": "2018-04-30T21:41:11Z",
+        "updated": "2018-04-30T21:41:11Z",
+        "files": [
+            {
+                "id": 170711,
+                "name": "Advanced Research Center.bld",
+                "size": "277.48 kB"
+            }
+        ],
+        "aliasEntry": "advanced-research-center",
+        "aliasAuthor": "former_member-665840",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32238-advanced-research-center\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33337,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "PWC Auckland & Marina Mandarin Singapore",
+        "release": "1.0.0",
+        "submitted": "2019-12-18T21:42:51Z",
+        "updated": "2019-12-23T01:35:36Z",
+        "sizeTotal": "220.20 kB",
+        "files": [
+            {
+                "id": 179305,
+                "name": "PWC Auckland.bld",
+                "size": "105.64 kB"
+            },
+            {
+                "id": 179306,
+                "name": "Marina Mandarin.bld",
+                "size": "114.56 kB"
+            }
+        ],
+        "aliasEntry": "pwc-auckland-marina-mandarin-singapore",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33337-pwc-auckland-marina-mandarin-singapore\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33338,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "Bahrain Financial Harbor Building",
+        "release": "1.0.0",
+        "submitted": "2019-12-18T21:50:02Z",
+        "updated": "2019-12-23T01:33:47Z",
+        "sizeTotal": "170.48 kB",
+        "files": [
+            {
+                "id": 179302,
+                "name": "Bahrain Financial Harbour 2.bld",
+                "size": "170.48 kB"
+            }
+        ],
+        "aliasEntry": "bahrain-financial-harbor-building",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33338-bahrain-financial-harbor-building\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33339,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "Doubletree Guest Suites, Houston, TX",
+        "release": "1.0.0",
+        "submitted": "2019-12-18T21:53:33Z",
+        "updated": "2019-12-23T01:38:10Z",
+        "sizeTotal": "134.74 kB",
+        "files": [
+            {
+                "id": 179311,
+                "name": "DoubleTree Guest Suites.bld",
+                "size": "134.74 kB"
+            }
+        ],
+        "aliasEntry": "doubletree-guest-suites-houston-tx",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33339-doubletree-guest-suites-houston-tx\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33340,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "Hill Valley Clock Tower",
+        "release": "1.0.0",
+        "submitted": "2019-12-18T21:56:05Z",
+        "updated": "2019-12-23T01:41:46Z",
+        "sizeTotal": "78.14 kB",
+        "files": [
+            {
+                "id": 179314,
+                "name": "Hill Valley Clock Tower.bld",
+                "size": "78.14 kB"
+            }
+        ],
+        "aliasEntry": "hill-valley-clock-tower",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33340-hill-valley-clock-tower\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33341,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "Childrens Hospital from Nice, France",
+        "release": "1.0.0",
+        "submitted": "2019-12-18T21:59:13Z",
+        "updated": "2019-12-23T01:44:10Z",
+        "sizeTotal": "104.62 kB",
+        "files": [
+            {
+                "id": 179320,
+                "name": "Hopital Lenval.bld",
+                "size": "104.62 kB"
+            }
+        ],
+        "aliasEntry": "childrens-hospital-from-nice-france",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33341-childrens-hospital-from-nice-france\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33342,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "The H\u00f4tel de Paris of Monte-Carlo, MC",
+        "release": "1.0.0",
+        "submitted": "2019-12-18T22:01:39Z",
+        "updated": "2019-12-23T01:46:13Z",
+        "sizeTotal": "105.91 kB",
+        "files": [
+            {
+                "id": 179323,
+                "name": "Hotel de Paris.bld",
+                "size": "105.91 kB"
+            }
+        ],
+        "aliasEntry": "the-h\u00f4tel-de-paris-of-monte-carlo-mc",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33342-the-h\u00f4tel-de-paris-of-monte-carlo-mc\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33343,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "La Mansion del Rio, San Antonio, TX",
+        "release": "1.0.0",
+        "submitted": "2019-12-18T22:03:53Z",
+        "updated": "2019-12-23T01:51:10Z",
+        "sizeTotal": "127.31 kB",
+        "files": [
+            {
+                "id": 179326,
+                "name": "La Mansion del Rio.bld",
+                "size": "127.31 kB"
+            }
+        ],
+        "aliasEntry": "la-mansion-del-rio-san-antonio-tx",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33343-la-mansion-del-rio-san-antonio-tx\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33350,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "TWA Terminal, JFK Airport, New York, NY",
+        "release": "1.0.0",
+        "submitted": "2019-12-22T19:59:43Z",
+        "updated": "2019-12-23T01:56:34Z",
+        "sizeTotal": "141.02 kB",
+        "files": [
+            {
+                "id": 179329,
+                "name": "TWA Terminal.bld",
+                "size": "141.02 kB"
+            }
+        ],
+        "aliasEntry": "twa-terminal-jfk-airport-new-york-ny",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33350-twa-terminal-jfk-airport-new-york-ny\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33353,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "Hilton Hawaiian Village, Honolulu, HI",
+        "release": "1.0.0",
+        "submitted": "2019-12-23T23:00:03Z",
+        "updated": "2019-12-23T23:00:03Z",
+        "sizeTotal": "111.59 kB",
+        "files": [
+            {
+                "id": 179340,
+                "name": "Hilton Hawaiian Village.bld",
+                "size": "111.59 kB"
+            }
+        ],
+        "aliasEntry": "hilton-hawaiian-village-honolulu-hi",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33353-hilton-hawaiian-village-honolulu-hi\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33384,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "International Airport Terminal",
+        "release": "1.0.0",
+        "submitted": "2020-01-12T23:24:27Z",
+        "updated": "2020-01-12T23:24:27Z",
+        "sizeTotal": "124.33 kB",
+        "files": [
+            {
+                "id": 179549,
+                "name": "International Airport Terminal.bld",
+                "size": "124.33 kB"
+            }
+        ],
+        "aliasEntry": "international-airport-terminal",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33384-international-airport-terminal\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33406,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "New Otani Hotel, Osaka, Japan",
+        "release": "1.0.0",
+        "submitted": "2020-01-23T23:32:05Z",
+        "updated": "2020-01-23T23:32:05Z",
+        "sizeTotal": "98.19 kB",
+        "files": [
+            {
+                "id": 179649,
+                "name": "New Otani Osaka.bld",
+                "size": "98.19 kB"
+            }
+        ],
+        "aliasEntry": "new-otani-hotel-osaka-japan",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33406-new-otani-hotel-osaka-japan\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33408,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "Convention Center, S\u00e3o Paolo, Brazil",
+        "release": "1.0.0",
+        "submitted": "2020-01-25T14:17:25Z",
+        "updated": "2020-01-25T14:17:25Z",
+        "sizeTotal": "125.34 kB",
+        "files": [
+            {
+                "id": 179659,
+                "name": "Convention Centre.bld",
+                "size": "125.34 kB"
+            }
+        ],
+        "aliasEntry": "convention-center-s\u00e3o-paolo-brazil",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33408-convention-center-s\u00e3o-paolo-brazil\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33592,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "Pau'ahi Tower, Honolulu, HI",
+        "release": "1.0.0",
+        "submitted": "2020-05-10T10:02:21Z",
+        "updated": "2020-05-10T10:14:52Z",
+        "sizeTotal": "125.49 kB",
+        "files": [
+            {
+                "id": 180931,
+                "name": "Pau'ahi Tower.bld",
+                "size": "125.49 kB"
+            }
+        ],
+        "aliasEntry": "pauahi-tower-honolulu-hi",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33592-pauahi-tower-honolulu-hi\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33607,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "The Mercer, Geelong, Australia",
+        "release": "1.0.0",
+        "submitted": "2020-05-19T09:13:05Z",
+        "updated": "2020-05-19T09:13:05Z",
+        "sizeTotal": "181.11 kB",
+        "files": [
+            {
+                "id": 181017,
+                "name": "The Mercer.bld",
+                "size": "181.11 kB"
+            }
+        ],
+        "aliasEntry": "the-mercer-geelong-australia",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33607-the-mercer-geelong-australia\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33612,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "Beverly Wilshire Hotel, Beverly Hills, California, USA",
+        "release": "1.0.0",
+        "submitted": "2020-05-21T00:57:45Z",
+        "updated": "2020-05-21T01:27:55Z",
+        "sizeTotal": "144.18 kB",
+        "files": [
+            {
+                "id": 181077,
+                "name": "Beverly Wilshire Hotel.bld",
+                "size": "144.18 kB"
+            }
+        ],
+        "aliasEntry": "beverly-wilshire-hotel-beverly-hills-california-usa",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33612-beverly-wilshire-hotel-beverly-hills-california-usa\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33634,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "Dubai Marine Tower, Dubai, UAE",
+        "release": "1.0.0",
+        "submitted": "2020-06-03T16:04:52Z",
+        "updated": "2020-06-03T16:04:52Z",
+        "sizeTotal": "120.83 kB",
+        "files": [
+            {
+                "id": 181300,
+                "name": "Dubai Marine Tower.bld",
+                "size": "120.83 kB"
+            }
+        ],
+        "aliasEntry": "dubai-marine-tower-dubai-uae",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33634-dubai-marine-tower-dubai-uae\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33771,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "Copacabana Palace, Rio de Janeiro, Brazil",
+        "release": "1.0.0",
+        "submitted": "2020-08-16T20:45:30Z",
+        "updated": "2020-08-16T20:45:30Z",
+        "sizeTotal": "188.57 kB",
+        "files": [
+            {
+                "id": 182415,
+                "name": "Copacabana Palace.zip",
+                "size": "188.57 kB"
+            }
+        ],
+        "aliasEntry": "copacabana-palace-rio-de-janeiro-brazil",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33771-copacabana-palace-rio-de-janeiro-brazil\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33919,
+        "cid": 41,
+        "uid": 792612,
+        "author": "VetinarisClerk",
+        "category": "SimCity 3000 Files",
+        "title": "Dalmatian Building Set",
+        "release": "1.0.0",
+        "submitted": "2020-10-29T18:42:48Z",
+        "updated": "2020-10-29T18:42:48Z",
+        "sizeTotal": "1,008.21 kB",
+        "files": [
+            {
+                "id": 183374,
+                "name": "DalmatianBuildingSet.zip",
+                "size": "1,008.21 kB"
+            }
+        ],
+        "aliasEntry": "dalmatian-building-set",
+        "aliasAuthor": "vetinarisclerk",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33919-dalmatian-building-set\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34605,
+        "cid": 41,
+        "uid": 785629,
+        "author": "Captain Adam",
+        "category": "SimCity 3000 Files",
+        "title": "Captain Adam Building Pack 1",
+        "release": "1.0.0",
+        "submitted": "2021-07-23T16:48:45Z",
+        "updated": "2021-07-23T16:48:45Z",
+        "sizeTotal": "415.99 kB",
+        "files": [
+            {
+                "id": 189382,
+                "name": "Captain Adam Building Pack 1.zip",
+                "size": "415.99 kB"
+            }
+        ],
+        "aliasEntry": "captain-adam-building-pack-1",
+        "aliasAuthor": "captain-adam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34605-captain-adam-building-pack-1\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 34622,
+        "cid": 41,
+        "uid": 782706,
+        "author": "astonmc",
+        "category": "SimCity 3000 Files",
+        "title": "Casino of Monte-Carlo, Monaco",
+        "release": "1.0.0",
+        "submitted": "2021-07-31T12:45:49Z",
+        "updated": "2021-07-31T12:45:49Z",
+        "sizeTotal": "162.00 kB",
+        "files": [
+            {
+                "id": 189481,
+                "name": "Casino of Monte-Carlo.bld",
+                "size": "162.00 kB"
+            }
+        ],
+        "aliasEntry": "casino-of-monte-carlo-monaco",
+        "aliasAuthor": "astonmc",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/34622-casino-of-monte-carlo-monaco\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35214,
+        "cid": 41,
+        "uid": 275973,
+        "author": "JiuLing",
+        "category": "SimCity 3000 Files",
+        "title": "Chinese Apartment Building in 2000s 1",
+        "release": "1.0.0",
+        "submitted": "2022-06-24T17:35:32Z",
+        "updated": "2022-06-24T17:35:32Z",
+        "sizeTotal": "117.79 kB",
+        "files": [
+            {
+                "id": 194559,
+                "name": "Chinese apartments in 2000s 1.bld",
+                "size": "117.79 kB"
+            }
+        ],
+        "aliasEntry": "chinese-apartment-building-in-2000s-1",
+        "aliasAuthor": "jiuling",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35214-chinese-apartment-building-in-2000s-1\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35250,
+        "cid": 41,
+        "uid": 792875,
+        "author": "MagicSpear",
+        "category": "SimCity 3000 Files",
+        "title": "Fake Ambient Occlusion Details",
+        "release": "0.2.0",
+        "submitted": "2022-08-03T22:06:14Z",
+        "updated": "2022-08-10T13:33:12Z",
+        "sizeTotal": "63.73 kB",
+        "files": [
+            {
+                "id": 195016,
+                "name": "FakeAmbientOcclusion.zip",
+                "size": "24.19 kB"
+            },
+            {
+                "id": 195017,
+                "name": "FakeAmbientOcclusion.7z",
+                "size": "5.15 kB"
+            },
+            {
+                "id": 195018,
+                "name": "FakeAmbientOcclusion.psd",
+                "size": "34.39 kB"
+            }
+        ],
+        "aliasEntry": "fake-ambient-occlusion-details",
+        "aliasAuthor": "magicspear",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35250-fake-ambient-occlusion-details\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35262,
+        "cid": 41,
+        "uid": 792875,
+        "author": "MagicSpear",
+        "category": "SimCity 3000 Files",
+        "title": "Tilted Tower",
+        "release": "1.0.0",
+        "submitted": "2022-08-10T14:31:31Z",
+        "updated": "2022-08-10T14:31:31Z",
+        "sizeTotal": "1.11 MB",
+        "files": [
+            {
+                "id": 195022,
+                "name": "TiltedTower.zip",
+                "size": "696.02 kB"
+            },
+            {
+                "id": 195023,
+                "name": "TiltedTower.7z",
+                "size": "439.17 kB"
+            }
+        ],
+        "aliasEntry": "tilted-tower",
+        "aliasAuthor": "magicspear",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35262-tilted-tower\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35263,
+        "cid": 41,
+        "uid": 792875,
+        "author": "MagicSpear",
+        "category": "SimCity 3000 Files",
+        "title": "Gruppe Lassetter",
+        "release": "1.0.0",
+        "submitted": "2022-08-10T14:40:10Z",
+        "updated": "2022-08-10T14:40:10Z",
+        "sizeTotal": "1.56 MB",
+        "files": [
+            {
+                "id": 195028,
+                "name": "GruppeLassetter.zip",
+                "size": "1,017.77 kB"
+            },
+            {
+                "id": 195029,
+                "name": "GruppeLassetter.7z",
+                "size": "575.16 kB"
+            }
+        ],
+        "aliasEntry": "gruppe-lassetter",
+        "aliasAuthor": "magicspear",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35263-gruppe-lassetter\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35799,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "All Saints",
+        "release": "1.0.0O",
+        "submitted": "2023-12-13T07:07:44Z",
+        "updated": "2023-12-13T07:07:44Z",
+        "sizeTotal": "61.91 kB",
+        "files": [
+            {
+                "id": 198627,
+                "name": "All Saints.bld",
+                "size": "61.91 kB"
+            }
+        ],
+        "aliasEntry": "all-saints",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35799-all-saints\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35800,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Tie Rack Store",
+        "release": "1.0.0O",
+        "submitted": "2023-12-13T07:12:28Z",
+        "updated": "2023-12-13T07:12:28Z",
+        "sizeTotal": "54.06 kB",
+        "files": [
+            {
+                "id": 198629,
+                "name": "Tie Rack.bld",
+                "size": "54.06 kB"
+            }
+        ],
+        "aliasEntry": "tie-rack-store",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35800-tie-rack-store\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35801,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "F W Woolworth",
+        "release": "1.0.0",
+        "submitted": "2023-12-13T07:19:33Z",
+        "updated": "2023-12-13T07:19:33Z",
+        "sizeTotal": "53.48 kB",
+        "files": [
+            {
+                "id": 198631,
+                "name": "Woolworths.bld",
+                "size": "53.48 kB"
+            }
+        ],
+        "aliasEntry": "f-w-woolworth",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35801-f-w-woolworth\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35802,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Revolution Pizza and Bistro",
+        "release": "1.0.0",
+        "submitted": "2023-12-13T07:30:13Z",
+        "updated": "2023-12-13T07:30:13Z",
+        "sizeTotal": "50.73 kB",
+        "files": [
+            {
+                "id": 198633,
+                "name": "Revolution Bistro and Pizza.bld",
+                "size": "50.73 kB"
+            }
+        ],
+        "aliasEntry": "revolution-pizza-and-bistro",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35802-revolution-pizza-and-bistro\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35803,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Foxton Estate Agents",
+        "release": "1.0.0",
+        "submitted": "2023-12-13T11:32:20Z",
+        "updated": "2023-12-13T11:32:20Z",
+        "sizeTotal": "52.67 kB",
+        "files": [
+            {
+                "id": 198635,
+                "name": "Foxtons Estate Agents.bld",
+                "size": "52.67 kB"
+            }
+        ],
+        "aliasEntry": "foxton-estate-agents",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35803-foxton-estate-agents\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35804,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Dunn & Co and Martin's The Newsagents",
+        "release": "1.0.0",
+        "submitted": "2023-12-14T00:03:38Z",
+        "updated": "2023-12-14T00:03:38Z",
+        "sizeTotal": "75.04 kB",
+        "files": [
+            {
+                "id": 198637,
+                "name": "Dunn & Co and Martin's The Newsagents.bld",
+                "size": "75.04 kB"
+            }
+        ],
+        "aliasEntry": "dunn-co-and-martins-the-newsagents",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35804-dunn-co-and-martins-the-newsagents\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35805,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Sketchley\/Supasnaps",
+        "release": "1.0.0",
+        "submitted": "2023-12-14T04:54:32Z",
+        "updated": "2023-12-14T04:54:32Z",
+        "sizeTotal": "57.08 kB",
+        "files": [
+            {
+                "id": 198640,
+                "name": "Sketchleys & Supasnaps.bld",
+                "size": "57.08 kB"
+            }
+        ],
+        "aliasEntry": "sketchleysupasnaps",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35805-sketchleysupasnaps\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35806,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Ladbrooke Grove Taxicabs and Laundrette",
+        "release": "1.0.0",
+        "submitted": "2023-12-14T06:30:50Z",
+        "updated": "2023-12-14T06:30:50Z",
+        "sizeTotal": "58.82 kB",
+        "files": [
+            {
+                "id": 198642,
+                "name": "Ladbrooke Grove Taxicabs and Laundrette.bld",
+                "size": "58.82 kB"
+            }
+        ],
+        "aliasEntry": "ladbrooke-grove-taxicabs-and-laundrette",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35806-ladbrooke-grove-taxicabs-and-laundrette\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35809,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Rymans the Stationers",
+        "release": "1.0.0",
+        "submitted": "2023-12-14T23:14:33Z",
+        "updated": "2023-12-14T23:14:33Z",
+        "sizeTotal": "48.54 kB",
+        "files": [
+            {
+                "id": 198655,
+                "name": "Rymans.bld",
+                "size": "48.54 kB"
+            }
+        ],
+        "aliasEntry": "rymans-the-stationers",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35809-rymans-the-stationers\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35810,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Turner Wallcoverings",
+        "release": "1.0.0",
+        "submitted": "2023-12-15T02:55:03Z",
+        "updated": "2023-12-15T02:55:03Z",
+        "sizeTotal": "84.05 kB",
+        "files": [
+            {
+                "id": 198657,
+                "name": "Turner Wallcoverings.bld",
+                "size": "84.05 kB"
+            }
+        ],
+        "aliasEntry": "turner-wallcoverings",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35810-turner-wallcoverings\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35811,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Piazza Al Fresco Cafe",
+        "release": "1.0.0",
+        "submitted": "2023-12-15T05:47:35Z",
+        "updated": "2023-12-15T05:47:35Z",
+        "sizeTotal": "40.53 kB",
+        "files": [
+            {
+                "id": 198660,
+                "name": "Piazza Al Fresco Cafe.bld",
+                "size": "40.53 kB"
+            }
+        ],
+        "aliasEntry": "piazza-al-fresco-cafe",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35811-piazza-al-fresco-cafe\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35812,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "The Wellington Pub and Chaudhary The Green Grocers",
+        "release": "1.0.0",
+        "submitted": "2023-12-15T08:27:49Z",
+        "updated": "2023-12-15T08:27:49Z",
+        "sizeTotal": "55.19 kB",
+        "files": [
+            {
+                "id": 198663,
+                "name": "The Wellington Pub and Choudhary The Green Grocers.bld",
+                "size": "55.19 kB"
+            }
+        ],
+        "aliasEntry": "the-wellington-pub-and-chaudhary-the-green-grocers",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35812-the-wellington-pub-and-chaudhary-the-green-grocers\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35822,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Oddbins and Our Price Records",
+        "release": "1.0.0",
+        "submitted": "2023-12-15T22:28:15Z",
+        "updated": "2023-12-15T22:28:15Z",
+        "sizeTotal": "53.75 kB",
+        "files": [
+            {
+                "id": 198704,
+                "name": "Oddbins and Our Price Records.bld",
+                "size": "53.75 kB"
+            }
+        ],
+        "aliasEntry": "oddbins-and-our-price-records",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35822-oddbins-and-our-price-records\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35826,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Chrispies Chippie and the Marsden Building Society",
+        "release": "1.0.0",
+        "submitted": "2023-12-16T02:11:03Z",
+        "updated": "2023-12-16T02:11:03Z",
+        "sizeTotal": "45.78 kB",
+        "files": [
+            {
+                "id": 198718,
+                "name": "Chrispies Chippie and Marsden Building Society.bld",
+                "size": "45.78 kB"
+            }
+        ],
+        "aliasEntry": "chrispies-chippie-and-the-marsden-building-society",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35826-chrispies-chippie-and-the-marsden-building-society\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35829,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Dewhursts the Master Butchers and Angies Fashion",
+        "release": "1.0.0",
+        "submitted": "2023-12-16T04:31:15Z",
+        "updated": "2023-12-16T04:31:15Z",
+        "sizeTotal": "57.74 kB",
+        "files": [
+            {
+                "id": 198731,
+                "name": "Dewhurst the Master Butchers and Angie's Fashion.bld",
+                "size": "57.74 kB"
+            }
+        ],
+        "aliasEntry": "dewhursts-the-master-butchers-and-angies-fashion",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35829-dewhursts-the-master-butchers-and-angies-fashion\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35845,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Stella Artois Brewery",
+        "release": "2.0.0",
+        "submitted": "2023-12-18T09:43:52Z",
+        "updated": "2023-12-18T09:43:52Z",
+        "sizeTotal": "108.84 kB",
+        "files": [
+            {
+                "id": 198783,
+                "name": "Stella Artois Brewery (vers 2.0).bld",
+                "size": "108.84 kB"
+            }
+        ],
+        "aliasEntry": "stella-artois-brewery",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35845-stella-artois-brewery\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35846,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Royal Bank of Canada",
+        "release": "1.0.0",
+        "submitted": "2023-12-18T20:43:52Z",
+        "updated": "2023-12-18T20:43:52Z",
+        "sizeTotal": "43.16 kB",
+        "files": [
+            {
+                "id": 198787,
+                "name": "Royal Bank Of Canada.bld",
+                "size": "43.16 kB"
+            }
+        ],
+        "aliasEntry": "royal-bank-of-canada",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35846-royal-bank-of-canada\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35850,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Banque Nationale De Canada",
+        "release": "1.0.0",
+        "submitted": "2023-12-19T02:39:16Z",
+        "updated": "2023-12-19T02:39:16Z",
+        "sizeTotal": "47.51 kB",
+        "files": [
+            {
+                "id": 198812,
+                "name": "Banque Nationale de Canada.bld",
+                "size": "47.51 kB"
+            }
+        ],
+        "aliasEntry": "banque-nationale-de-canada",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35850-banque-nationale-de-canada\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35870,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Renaissance Variety",
+        "release": "1.0.0",
+        "submitted": "2023-12-21T00:59:22Z",
+        "updated": "2023-12-21T00:59:22Z",
+        "sizeTotal": "79.13 kB",
+        "files": [
+            {
+                "id": 198855,
+                "name": "Renaissance Variety.bld",
+                "size": "79.13 kB"
+            }
+        ],
+        "aliasEntry": "renaissance-variety",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35870-renaissance-variety\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35873,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Cora Restaurant",
+        "release": "1.0.0",
+        "submitted": "2023-12-22T03:22:50Z",
+        "updated": "2023-12-22T03:22:50Z",
+        "sizeTotal": "49.51 kB",
+        "files": [
+            {
+                "id": 198865,
+                "name": "Cora Restaurant.bld",
+                "size": "49.51 kB"
+            }
+        ],
+        "aliasEntry": "cora-restaurant",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35873-cora-restaurant\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35880,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Littlewoods and HMV",
+        "release": "1.0.0",
+        "submitted": "2023-12-23T04:23:20Z",
+        "updated": "2023-12-23T04:23:20Z",
+        "sizeTotal": "52.83 kB",
+        "files": [
+            {
+                "id": 198885,
+                "name": "Littlewoods and HMV.bld",
+                "size": "52.83 kB"
+            }
+        ],
+        "aliasEntry": "littlewoods-and-hmv",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35880-littlewoods-and-hmv\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35883,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Commodore Cinema",
+        "release": "1.0.0",
+        "submitted": "2023-12-24T08:12:31Z",
+        "updated": "2023-12-24T08:12:31Z",
+        "sizeTotal": "80.06 kB",
+        "files": [
+            {
+                "id": 198896,
+                "name": "Commodore Cinema.bld",
+                "size": "80.06 kB"
+            }
+        ],
+        "aliasEntry": "commodore-cinema",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35883-commodore-cinema\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35890,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Blockbusters and FADS",
+        "release": "1.0.0",
+        "submitted": "2023-12-25T06:37:33Z",
+        "updated": "2023-12-25T06:37:33Z",
+        "sizeTotal": "62.61 kB",
+        "files": [
+            {
+                "id": 198927,
+                "name": "Blockbusters and FADS.bld",
+                "size": "62.61 kB"
+            }
+        ],
+        "aliasEntry": "blockbusters-and-fads",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35890-blockbusters-and-fads\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35893,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Black Books and Nifty Gifty",
+        "release": "1.0.0",
+        "submitted": "2023-12-25T19:25:53Z",
+        "updated": "2023-12-25T19:25:53Z",
+        "sizeTotal": "61.87 kB",
+        "files": [
+            {
+                "id": 198947,
+                "name": "Black Books and Nifty Gifty.bld",
+                "size": "61.87 kB"
+            }
+        ],
+        "aliasEntry": "black-books-and-nifty-gifty",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35893-black-books-and-nifty-gifty\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35903,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Familiprix",
+        "release": "1.0.0",
+        "submitted": "2023-12-30T06:53:03Z",
+        "updated": "2023-12-30T06:53:03Z",
+        "sizeTotal": "45.58 kB",
+        "files": [
+            {
+                "id": 199018,
+                "name": "Familiprix.bld",
+                "size": "45.58 kB"
+            }
+        ],
+        "aliasEntry": "familiprix",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35903-familiprix\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35904,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Cafe Parisiene",
+        "release": "1.0.0",
+        "submitted": "2023-12-30T10:18:13Z",
+        "updated": "2023-12-30T10:18:13Z",
+        "sizeTotal": "54.41 kB",
+        "files": [
+            {
+                "id": 199021,
+                "name": "Cafe Parisiene.bld",
+                "size": "54.41 kB"
+            }
+        ],
+        "aliasEntry": "cafe-parisiene",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35904-cafe-parisiene\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35905,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Cafe Parisiene",
+        "release": "2.0.0",
+        "submitted": "2023-12-30T10:38:50Z",
+        "updated": "2023-12-30T10:38:50Z",
+        "sizeTotal": "55.03 kB",
+        "files": [
+            {
+                "id": 199024,
+                "name": "Cafe Parisiene.bld",
+                "size": "55.03 kB"
+            }
+        ],
+        "aliasEntry": "cafe-parisiene",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35905-cafe-parisiene\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35913,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Mangia Tutto and a local Conservative Association",
+        "release": "1.0.0",
+        "submitted": "2023-12-31T12:46:38Z",
+        "updated": "2023-12-31T12:46:38Z",
+        "sizeTotal": "58.70 kB",
+        "files": [
+            {
+                "id": 199041,
+                "name": "Mangia Tutto Patisserie and the local Conservative.bld",
+                "size": "58.70 kB"
+            }
+        ],
+        "aliasEntry": "mangia-tutto-and-a-local-conservative-association",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35913-mangia-tutto-and-a-local-conservative-association\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35916,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Filofax and TM Lewin",
+        "release": "1.0.0",
+        "submitted": "2024-01-01T11:24:15Z",
+        "updated": "2024-01-01T11:24:15Z",
+        "sizeTotal": "65.68 kB",
+        "files": [
+            {
+                "id": 199050,
+                "name": "Filofax and TM Lewin.bld",
+                "size": "65.68 kB"
+            }
+        ],
+        "aliasEntry": "filofax-and-tm-lewin",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35916-filofax-and-tm-lewin\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35918,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Garden with outside toilet & shed",
+        "release": "1.0.0",
+        "submitted": "2024-01-02T09:58:44Z",
+        "updated": "2024-01-02T09:58:44Z",
+        "sizeTotal": "60.35 kB",
+        "files": [
+            {
+                "id": 199058,
+                "name": "Garden with outside toilet & shed.bld",
+                "size": "60.35 kB"
+            }
+        ],
+        "aliasEntry": "garden-with-outside-toilet-shed",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35918-garden-with-outside-toilet-shed\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35921,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Crosstown Traffic and Birdman Music",
+        "release": "1.0.0",
+        "submitted": "2024-01-04T02:01:33Z",
+        "updated": "2024-01-04T02:01:33Z",
+        "sizeTotal": "52.08 kB",
+        "files": [
+            {
+                "id": 199068,
+                "name": "Crosstown Traffic and Birdman Music.bld",
+                "size": "52.08 kB"
+            }
+        ],
+        "aliasEntry": "crosstown-traffic-and-birdman-music",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35921-crosstown-traffic-and-birdman-music\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35924,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Fancy Dress Store and Watchmakers",
+        "release": "1.0.0",
+        "submitted": "2024-01-05T00:18:58Z",
+        "updated": "2024-01-05T00:18:58Z",
+        "sizeTotal": "52.58 kB",
+        "files": [
+            {
+                "id": 199082,
+                "name": "Fancy Dress Store and Watchmakers.bld",
+                "size": "52.58 kB"
+            }
+        ],
+        "aliasEntry": "fancy-dress-store-and-watchmakers",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35924-fancy-dress-store-and-watchmakers\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35931,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Tinseltown Christmas+Marie Antoinette",
+        "release": "1.0.0",
+        "submitted": "2024-01-08T04:39:46Z",
+        "updated": "2024-01-08T04:39:46Z",
+        "sizeTotal": "44.34 kB",
+        "files": [
+            {
+                "id": 199109,
+                "name": "Tinseltown Christmas + Marie Antoinette.bld",
+                "size": "44.34 kB"
+            }
+        ],
+        "aliasEntry": "tinseltown-christmasmarie-antoinette",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35931-tinseltown-christmasmarie-antoinette\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 35944,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Internet Cafe Karaoke",
+        "release": "1.0.0",
+        "submitted": "2024-01-09T20:53:29Z",
+        "updated": "2024-01-09T20:53:29Z",
+        "sizeTotal": "50.37 kB",
+        "files": [
+            {
+                "id": 199160,
+                "name": "Internet Cafe Karaoke.bld",
+                "size": "50.37 kB"
+            }
+        ],
+        "aliasEntry": "internet-cafe-karaoke",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/35944-internet-cafe-karaoke\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36033,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Radio Rentals and Lunn Poly",
+        "release": "1.0.0",
+        "submitted": "2024-01-15T00:37:01Z",
+        "updated": "2024-01-15T00:37:01Z",
+        "sizeTotal": "54.37 kB",
+        "files": [
+            {
+                "id": 199375,
+                "name": "Radio Rentals and Lunn Poly.bld",
+                "size": "54.37 kB"
+            }
+        ],
+        "aliasEntry": "radio-rentals-and-lunn-poly",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36033-radio-rentals-and-lunn-poly\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36038,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Tom's Rhinoplasty",
+        "release": "1.0.0",
+        "submitted": "2024-01-17T05:14:55Z",
+        "updated": "2024-01-17T05:14:55Z",
+        "sizeTotal": "51.54 kB",
+        "files": [
+            {
+                "id": 199414,
+                "name": "Tom's Rhinoplasty.bld",
+                "size": "51.54 kB"
+            }
+        ],
+        "aliasEntry": "toms-rhinoplasty",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36038-toms-rhinoplasty\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36084,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Upstairs Downstairs Cookware and MDP Tools",
+        "release": "1.0.0",
+        "submitted": "2024-02-02T06:17:53Z",
+        "updated": "2024-02-02T06:17:53Z",
+        "sizeTotal": "97.16 kB",
+        "files": [
+            {
+                "id": 199660,
+                "name": "Upstairs Downstairs Cookware.bld",
+                "size": "97.16 kB"
+            }
+        ],
+        "aliasEntry": "upstairs-downstairs-cookware-and-mdp-tools",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36084-upstairs-downstairs-cookware-and-mdp-tools\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36085,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Dusty's Home",
+        "release": "1.0.0",
+        "submitted": "2024-02-02T15:15:59Z",
+        "updated": "2024-02-02T15:15:59Z",
+        "sizeTotal": "77.97 kB",
+        "files": [
+            {
+                "id": 199664,
+                "name": "Dusty's Home.bld",
+                "size": "77.97 kB"
+            }
+        ],
+        "aliasEntry": "dustys-home",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36085-dustys-home\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36092,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Arkwrights",
+        "release": "1.0.0",
+        "submitted": "2024-02-03T21:21:45Z",
+        "updated": "2024-02-03T21:21:45Z",
+        "sizeTotal": "65.37 kB",
+        "files": [
+            {
+                "id": 199694,
+                "name": "Arkwrights.bld",
+                "size": "65.37 kB"
+            }
+        ],
+        "aliasEntry": "arkwrights",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36092-arkwrights\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36096,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "First Edition Antiquarian Bookshop",
+        "release": "1.0.0",
+        "submitted": "2024-02-04T13:35:16Z",
+        "updated": "2024-02-04T13:35:16Z",
+        "sizeTotal": "67.13 kB",
+        "files": [
+            {
+                "id": 199748,
+                "name": "First Edition Antiquarian Bookshop.bld",
+                "size": "67.13 kB"
+            }
+        ],
+        "aliasEntry": "first-edition-antiquarian-bookshop",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36096-first-edition-antiquarian-bookshop\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36097,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "T Jones Saddlers",
+        "release": "2.0.0",
+        "submitted": "2024-02-04T18:04:22Z",
+        "updated": "2024-02-04T18:30:28Z",
+        "sizeTotal": "54.06 kB",
+        "files": [
+            {
+                "id": 199760,
+                "name": "T Jones Saddlers.bld",
+                "size": "54.06 kB"
+            }
+        ],
+        "aliasEntry": "t-jones-saddlers",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36097-t-jones-saddlers\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36106,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Cake Creators",
+        "release": "1.0.0",
+        "submitted": "2024-02-08T06:41:59Z",
+        "updated": "2024-02-08T06:41:59Z",
+        "sizeTotal": "51.86 kB",
+        "files": [
+            {
+                "id": 199955,
+                "name": "Cake Creators.bld",
+                "size": "51.86 kB"
+            }
+        ],
+        "aliasEntry": "cake-creators",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36106-cake-creators\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36116,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Little Brown Jug Inn",
+        "release": "1.0.0",
+        "submitted": "2024-02-11T06:13:10Z",
+        "updated": "2024-02-11T06:13:10Z",
+        "sizeTotal": "99.17 kB",
+        "files": [
+            {
+                "id": 200084,
+                "name": "Little Brown Jug Inn.bld",
+                "size": "99.17 kB"
+            }
+        ],
+        "aliasEntry": "little-brown-jug-inn",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36116-little-brown-jug-inn\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36119,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Duke Of York pub",
+        "release": "1.0.0",
+        "submitted": "2024-02-12T20:28:52Z",
+        "updated": "2024-02-12T20:28:52Z",
+        "sizeTotal": "63.66 kB",
+        "files": [
+            {
+                "id": 200100,
+                "name": "Duke Of York Pub.bld",
+                "size": "63.66 kB"
+            }
+        ],
+        "aliasEntry": "duke-of-york-pub",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36119-duke-of-york-pub\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36124,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Matelas Dauphin and Videotron",
+        "release": "1.0.0",
+        "submitted": "2024-02-16T01:18:12Z",
+        "updated": "2024-02-16T01:18:12Z",
+        "sizeTotal": "90.60 kB",
+        "files": [
+            {
+                "id": 200126,
+                "name": "Matelas Dauphin and Videotron.bld",
+                "size": "90.60 kB"
+            }
+        ],
+        "aliasEntry": "matelas-dauphin-and-videotron",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36124-matelas-dauphin-and-videotron\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36127,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Rose Cottage",
+        "release": "1.0.0",
+        "submitted": "2024-02-17T01:48:59Z",
+        "updated": "2024-02-17T01:48:59Z",
+        "sizeTotal": "45.27 kB",
+        "files": [
+            {
+                "id": 200225,
+                "name": "Rose Cottage.bld",
+                "size": "45.27 kB"
+            }
+        ],
+        "aliasEntry": "rose-cottage",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36127-rose-cottage\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36141,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Gray Art Glass",
+        "release": "1.0.0",
+        "submitted": "2024-02-24T20:16:24Z",
+        "updated": "2024-02-24T20:16:24Z",
+        "sizeTotal": "53.26 kB",
+        "files": [
+            {
+                "id": 200448,
+                "name": "Gray Art Glass.bld",
+                "size": "53.26 kB"
+            }
+        ],
+        "aliasEntry": "gray-art-glass",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36141-gray-art-glass\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36144,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Gray Art Glass et al",
+        "release": "1.0.0",
+        "submitted": "2024-02-25T17:40:58Z",
+        "updated": "2024-02-25T17:40:58Z",
+        "sizeTotal": "65.28 kB",
+        "files": [
+            {
+                "id": 200458,
+                "name": "Gray Art Glass et al.bld",
+                "size": "65.28 kB"
+            }
+        ],
+        "aliasEntry": "gray-art-glass-et-al",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36144-gray-art-glass-et-al\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36150,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Homeless Encampment",
+        "release": "1.0.0",
+        "submitted": "2024-02-29T02:28:58Z",
+        "updated": "2024-02-29T02:28:58Z",
+        "sizeTotal": "53.92 kB",
+        "files": [
+            {
+                "id": 200573,
+                "name": "Homeless Encampment.bld",
+                "size": "53.92 kB"
+            }
+        ],
+        "aliasEntry": "homeless-encampment",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36150-homeless-encampment\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36151,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Alloy Foundry",
+        "release": "1.0.0",
+        "submitted": "2024-03-01T16:11:57Z",
+        "updated": "2024-03-01T16:11:57Z",
+        "sizeTotal": "52.78 kB",
+        "files": [
+            {
+                "id": 200578,
+                "name": "Alloy Foundry.bld",
+                "size": "52.78 kB"
+            }
+        ],
+        "aliasEntry": "alloy-foundry",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36151-alloy-foundry\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36155,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Shoemaster & La Belle Couture Clinique",
+        "release": "1.0.0",
+        "submitted": "2024-03-02T04:16:00Z",
+        "updated": "2024-03-02T04:16:00Z",
+        "sizeTotal": "67.24 kB",
+        "files": [
+            {
+                "id": 200599,
+                "name": "Shoemaster & La Belle Couture Clinique.bld",
+                "size": "67.24 kB"
+            }
+        ],
+        "aliasEntry": "shoemaster-la-belle-couture-clinique",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36155-shoemaster-la-belle-couture-clinique\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36157,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Thomas Cook, Blue Cross & Fatface",
+        "release": "1.0.0",
+        "submitted": "2024-03-03T06:44:42Z",
+        "updated": "2024-03-03T06:44:42Z",
+        "sizeTotal": "63.47 kB",
+        "files": [
+            {
+                "id": 200612,
+                "name": "Thomas Cook, Blue Cross & Fatface.bld",
+                "size": "63.47 kB"
+            }
+        ],
+        "aliasEntry": "thomas-cook-blue-cross-fatface",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36157-thomas-cook-blue-cross-fatface\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36158,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Methodist Chapel at Yarm",
+        "release": "1.0.0",
+        "submitted": "2024-03-05T00:07:50Z",
+        "updated": "2024-03-05T00:07:50Z",
+        "sizeTotal": "50.54 kB",
+        "files": [
+            {
+                "id": 200616,
+                "name": "Methodist Chapel at Yarm.bld",
+                "size": "50.54 kB"
+            }
+        ],
+        "aliasEntry": "methodist-chapel-at-yarm",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36158-methodist-chapel-at-yarm\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36162,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Horden Terraced Houses",
+        "release": "1.0.0",
+        "submitted": "2024-03-06T21:19:13Z",
+        "updated": "2024-03-06T21:19:13Z",
+        "sizeTotal": "62.45 kB",
+        "files": [
+            {
+                "id": 200627,
+                "name": "Horden Terraced Houses.bld",
+                "size": "62.45 kB"
+            }
+        ],
+        "aliasEntry": "horden-terraced-houses",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36162-horden-terraced-houses\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36166,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Furniture Repair Workshop",
+        "release": "1.0.0",
+        "submitted": "2024-03-08T17:30:17Z",
+        "updated": "2024-03-08T17:30:17Z",
+        "sizeTotal": "62.08 kB",
+        "files": [
+            {
+                "id": 200640,
+                "name": "Furniture Repair Workshop.bld",
+                "size": "62.08 kB"
+            }
+        ],
+        "aliasEntry": "furniture-repair-workshop",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36166-furniture-repair-workshop\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36184,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Bio-Horticulture Meristeme Garden Centre",
+        "release": "1.0.0",
+        "submitted": "2024-03-28T03:01:02Z",
+        "updated": "2024-03-28T03:01:02Z",
+        "sizeTotal": "174.40 kB",
+        "files": [
+            {
+                "id": 200754,
+                "name": "Bio-Horticulture Meristeme Garden Centre.bld",
+                "size": "174.40 kB"
+            }
+        ],
+        "aliasEntry": "bio-horticulture-meristeme-garden-centre",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36184-bio-horticulture-meristeme-garden-centre\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36186,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "1751 Eardley Road",
+        "release": "1.0.0",
+        "submitted": "2024-03-29T12:49:50Z",
+        "updated": "2024-03-29T12:49:50Z",
+        "sizeTotal": "69.08 kB",
+        "files": [
+            {
+                "id": 200771,
+                "name": "1751 Eardley Road.bld",
+                "size": "69.08 kB"
+            }
+        ],
+        "aliasEntry": "1751-eardley-road",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36186-1751-eardley-road\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36193,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Herb's Truck Plaza of Van Kleek Hill",
+        "release": "1.0.0",
+        "submitted": "2024-04-03T21:56:01Z",
+        "updated": "2024-04-03T21:56:01Z",
+        "sizeTotal": "90.74 kB",
+        "files": [
+            {
+                "id": 200825,
+                "name": "Herb's Truck Plaza of Van Kleek Hill.bld",
+                "size": "90.74 kB"
+            }
+        ],
+        "aliasEntry": "herbs-truck-plaza-of-van-kleek-hill",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36193-herbs-truck-plaza-of-van-kleek-hill\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36196,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Hedge Maze",
+        "release": "1.0.0",
+        "submitted": "2024-04-04T19:22:48Z",
+        "updated": "2024-04-04T19:22:48Z",
+        "sizeTotal": "59.59 kB",
+        "files": [
+            {
+                "id": 200835,
+                "name": "Hedge Maze.bld",
+                "size": "59.59 kB"
+            }
+        ],
+        "aliasEntry": "hedge-maze",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36196-hedge-maze\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36200,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Kabak - An Amish garden shed manufacturer",
+        "release": "1.0.0",
+        "submitted": "2024-04-09T20:29:25Z",
+        "updated": "2024-04-09T20:29:25Z",
+        "sizeTotal": "70.53 kB",
+        "files": [
+            {
+                "id": 200862,
+                "name": "Kabak.bld",
+                "size": "70.53 kB"
+            }
+        ],
+        "aliasEntry": "kabak-an-amish-garden-shed-manufacturer",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36200-kabak-an-amish-garden-shed-manufacturer\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36252,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "1975 Quebec 303",
+        "release": "1.0.0",
+        "submitted": "2024-05-17T22:15:55Z",
+        "updated": "2024-05-17T22:15:55Z",
+        "sizeTotal": "77.97 kB",
+        "files": [
+            {
+                "id": 201363,
+                "name": "1975 Quebec 303.bld",
+                "size": "77.97 kB"
+            }
+        ],
+        "aliasEntry": "1975-quebec-303",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36252-1975-quebec-303\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36261,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Debosselage Tubman Auto Body",
+        "release": "1.0.0",
+        "submitted": "2024-05-23T21:56:33Z",
+        "updated": "2024-05-23T21:56:33Z",
+        "sizeTotal": "82.76 kB",
+        "files": [
+            {
+                "id": 201448,
+                "name": "Debosselage Tubman Auto Body.bld",
+                "size": "82.76 kB"
+            }
+        ],
+        "aliasEntry": "debosselage-tubman-auto-body",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36261-debosselage-tubman-auto-body\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36265,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Loudmouth Design and Print",
+        "release": "1.0.0",
+        "submitted": "2024-05-25T19:28:17Z",
+        "updated": "2024-05-25T19:28:17Z",
+        "sizeTotal": "48.23 kB",
+        "files": [
+            {
+                "id": 201472,
+                "name": "Loudmouth Printshop.bld",
+                "size": "48.23 kB"
+            }
+        ],
+        "aliasEntry": "loudmouth-design-and-print",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36265-loudmouth-design-and-print\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36266,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Bicycle Repair Shop",
+        "release": "1.0.0",
+        "submitted": "2024-05-26T08:50:07Z",
+        "updated": "2024-05-26T08:50:07Z",
+        "sizeTotal": "64.35 kB",
+        "files": [
+            {
+                "id": 201474,
+                "name": "Atelier Sportif Aylmer.bld",
+                "size": "64.35 kB"
+            }
+        ],
+        "aliasEntry": "bicycle-repair-shop",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36266-bicycle-repair-shop\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36275,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Ye Olde Reindeer Inn",
+        "release": "1.0.0",
+        "submitted": "2024-06-02T02:58:50Z",
+        "updated": "2024-06-02T02:58:50Z",
+        "sizeTotal": "61.63 kB",
+        "files": [
+            {
+                "id": 201537,
+                "name": "Ye Old Reindeer.bld",
+                "size": "61.63 kB"
+            }
+        ],
+        "aliasEntry": "ye-olde-reindeer-inn",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36275-ye-olde-reindeer-inn\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36294,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Oxford and Cambridge Pub",
+        "release": "1.0.0",
+        "submitted": "2024-06-08T13:52:33Z",
+        "updated": "2024-06-08T13:52:33Z",
+        "sizeTotal": "59.47 kB",
+        "files": [
+            {
+                "id": 201639,
+                "name": "Oxford and Cambridge Pub.bld",
+                "size": "59.47 kB"
+            }
+        ],
+        "aliasEntry": "oxford-and-cambridge-pub",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36294-oxford-and-cambridge-pub\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36295,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "English Country Garden with folly, pond and orchard (Other)",
+        "release": "1.0.0",
+        "submitted": "2024-06-09T00:09:16Z",
+        "updated": "2024-06-09T00:09:16Z",
+        "sizeTotal": "88.11 kB",
+        "files": [
+            {
+                "id": 201654,
+                "name": "English Country Garden.bld",
+                "size": "88.11 kB"
+            }
+        ],
+        "aliasEntry": "english-country-garden-with-folly-pond-and-orchard-other",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36295-english-country-garden-with-folly-pond-and-orchard-other\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36296,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "English Country Garden with folly, pond and orchard (Residential)",
+        "release": "1.0.0",
+        "submitted": "2024-06-09T00:15:35Z",
+        "updated": "2024-06-09T20:40:20Z",
+        "sizeTotal": "88.13 kB",
+        "files": [
+            {
+                "id": 201668,
+                "name": "English Country Garden (Residential).bld",
+                "size": "88.13 kB"
+            }
+        ],
+        "aliasEntry": "english-country-garden-with-folly-pond-and-orchard-residential",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36296-english-country-garden-with-folly-pond-and-orchard-residential\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36333,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Local Telephone Exchange",
+        "release": "1.0.0",
+        "submitted": "2024-07-11T01:55:05Z",
+        "updated": "2024-07-11T01:55:05Z",
+        "sizeTotal": "46.67 kB",
+        "files": [
+            {
+                "id": 201930,
+                "name": "Local Telephone Exchange.bld",
+                "size": "46.67 kB"
+            }
+        ],
+        "aliasEntry": "local-telephone-exchange",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36333-local-telephone-exchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36336,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Electrical Substation",
+        "release": "1.0.0",
+        "submitted": "2024-07-12T05:59:31Z",
+        "updated": "2024-07-12T05:59:31Z",
+        "sizeTotal": "41.32 kB",
+        "files": [
+            {
+                "id": 201952,
+                "name": "Electrical Substation.bld",
+                "size": "41.32 kB"
+            }
+        ],
+        "aliasEntry": "electrical-substation",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36336-electrical-substation\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36337,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Public Toilets",
+        "release": "1.0.0",
+        "submitted": "2024-07-12T19:16:11Z",
+        "updated": "2024-07-12T19:16:11Z",
+        "sizeTotal": "50.10 kB",
+        "files": [
+            {
+                "id": 201956,
+                "name": "Public Toilets.bld",
+                "size": "50.10 kB"
+            }
+        ],
+        "aliasEntry": "public-toilets",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36337-public-toilets\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36338,
+        "cid": 41,
+        "uid": 246111,
+        "author": "Null 45",
+        "category": "SimCity 3000 Files",
+        "title": "SimCity 3000 Extra Cheats DLL Plugin",
+        "release": "1.0.0",
+        "submitted": "2024-07-13T06:52:46Z",
+        "updated": "2024-07-13T06:52:46Z",
+        "sizeTotal": "14.19 kB",
+        "files": [
+            {
+                "id": 201960,
+                "name": "SC3KExtraCheats.zip",
+                "size": "14.19 kB"
+            }
+        ],
+        "aliasEntry": "simcity-3000-extra-cheats-dll-plugin",
+        "aliasAuthor": "null-45",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36338-simcity-3000-extra-cheats-dll-plugin\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36356,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Depanneur Du Pontiac",
+        "release": "1.0.0",
+        "submitted": "2024-07-31T15:02:11Z",
+        "updated": "2024-07-31T15:02:11Z",
+        "sizeTotal": "79.92 kB",
+        "files": [
+            {
+                "id": 202153,
+                "name": "Depanneur Du Pontiac.bld",
+                "size": "79.92 kB"
+            }
+        ],
+        "aliasEntry": "depanneur-du-pontiac",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36356-depanneur-du-pontiac\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36403,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Boulevard Wilfred Lavigne",
+        "release": "1.0.0",
+        "submitted": "2024-08-21T03:17:26Z",
+        "updated": "2024-08-21T03:22:38Z",
+        "sizeTotal": "80.33 kB",
+        "files": [
+            {
+                "id": 202654,
+                "name": "Boulevard Wilfred Lavigne.bld",
+                "size": "80.33 kB"
+            }
+        ],
+        "aliasEntry": "boulevard-wilfred-lavigne",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36403-boulevard-wilfred-lavigne\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36404,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Beaute Epilation and Chiropractors of Degelais",
+        "release": "1.0.0",
+        "submitted": "2024-08-21T18:52:52Z",
+        "updated": "2024-08-21T18:52:52Z",
+        "sizeTotal": "38.88 kB",
+        "files": [
+            {
+                "id": 202658,
+                "name": "Beaute Epilation et Chiropractique De Degelais.bld",
+                "size": "38.88 kB"
+            }
+        ],
+        "aliasEntry": "beaute-epilation-and-chiropractors-of-degelais",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36404-beaute-epilation-and-chiropractors-of-degelais\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36406,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "The Alpaca House",
+        "release": "1.0.0",
+        "submitted": "2024-08-22T14:52:42Z",
+        "updated": "2024-08-22T14:52:42Z",
+        "sizeTotal": "79.34 kB",
+        "files": [
+            {
+                "id": 202664,
+                "name": "The Alpaca House.bld",
+                "size": "79.34 kB"
+            }
+        ],
+        "aliasEntry": "the-alpaca-house",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36406-the-alpaca-house\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36429,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Maple Syrup Bottling Plant",
+        "release": "1.0.0",
+        "submitted": "2024-09-06T04:42:08Z",
+        "updated": "2024-09-06T04:42:08Z",
+        "sizeTotal": "78.59 kB",
+        "files": [
+            {
+                "id": 203186,
+                "name": "Maple Syrup Bottling Plant.bld",
+                "size": "78.59 kB"
+            }
+        ],
+        "aliasEntry": "maple-syrup-bottling-plant",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36429-maple-syrup-bottling-plant\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36512,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Little Smoky Gas Bar",
+        "release": "1.0.0",
+        "submitted": "2024-10-19T01:50:58Z",
+        "updated": "2024-10-19T01:50:58Z",
+        "sizeTotal": "54.05 kB",
+        "files": [
+            {
+                "id": 203951,
+                "name": "Little Smoky Gas Bar.bld",
+                "size": "54.05 kB"
+            }
+        ],
+        "aliasEntry": "little-smoky-gas-bar",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36512-little-smoky-gas-bar\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36589,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "St Joseph Street North",
+        "release": "1.0.0",
+        "submitted": "2024-12-06T07:47:39Z",
+        "updated": "2024-12-06T07:47:39Z",
+        "sizeTotal": "63.30 kB",
+        "files": [
+            {
+                "id": 204611,
+                "name": "113 St Joseph Street North.bld",
+                "size": "63.30 kB"
+            }
+        ],
+        "aliasEntry": "st-joseph-street-north",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36589-st-joseph-street-north\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36590,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Tool and Die Shop",
+        "release": "1.0.0",
+        "submitted": "2024-12-06T19:56:26Z",
+        "updated": "2024-12-06T19:56:26Z",
+        "sizeTotal": "67.38 kB",
+        "files": [
+            {
+                "id": 204615,
+                "name": "Tool & Die Shop.bld",
+                "size": "67.38 kB"
+            }
+        ],
+        "aliasEntry": "tool-and-die-shop",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36590-tool-and-die-shop\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36594,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Alexander's",
+        "release": "1.0.0",
+        "submitted": "2024-12-13T00:18:11Z",
+        "updated": "2024-12-13T00:18:11Z",
+        "sizeTotal": "53.52 kB",
+        "files": [
+            {
+                "id": 204653,
+                "name": "Alexanders.bld",
+                "size": "53.52 kB"
+            }
+        ],
+        "aliasEntry": "alexanders",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36594-alexanders\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36658,
+        "cid": 41,
+        "uid": 148997,
+        "author": "The Thinker",
+        "category": "SimCity 3000 Files",
+        "title": "The Shattermore Novelty Lights Company Inc. Ltd. \u2122",
+        "release": "1.0.0",
+        "submitted": "2025-01-09T20:32:31Z",
+        "updated": "2025-01-09T20:32:31Z",
+        "sizeTotal": "123.41 kB",
+        "files": [
+            {
+                "id": 205204,
+                "name": "Shattermore Novelty Lights.bld",
+                "size": "123.41 kB"
+            }
+        ],
+        "aliasEntry": "the-shattermore-novelty-lights-company-inc-ltd",
+        "aliasAuthor": "the-thinker",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36658-the-shattermore-novelty-lights-company-inc-ltd\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36661,
+        "cid": 41,
+        "uid": 60544,
+        "author": "brancra",
+        "category": "SimCity 3000 Files",
+        "title": "The Forsyth Bulding",
+        "release": "1.0.0",
+        "submitted": "2025-01-11T23:27:12Z",
+        "updated": "2025-01-11T23:27:12Z",
+        "sizeTotal": "90.85 kB",
+        "files": [
+            {
+                "id": 205238,
+                "name": "The Forsyth Building.bld",
+                "size": "90.85 kB"
+            }
+        ],
+        "aliasEntry": "the-forsyth-bulding",
+        "aliasAuthor": "brancra",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36661-the-forsyth-bulding\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36709,
+        "cid": 41,
+        "uid": 73432,
+        "author": "Dutchdragon",
+        "category": "SimCity 3000 Files",
+        "title": "Comic City",
+        "release": "1.0.0",
+        "submitted": "2025-02-11T22:05:20Z",
+        "updated": "2025-02-11T22:05:20Z",
+        "sizeTotal": "755.18 kB",
+        "files": [
+            {
+                "id": 205775,
+                "name": "Comic City.sc3",
+                "size": "755.18 kB"
+            }
+        ],
+        "aliasEntry": "comic-city",
+        "aliasAuthor": "dutchdragon",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36709-comic-city\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36727,
+        "cid": 41,
+        "uid": 829862,
+        "author": "Tyrannodokuro",
+        "category": "SimCity 3000 Files",
+        "title": "Ed Edd n' Eddy - Candy Store",
+        "release": "1.0.1",
+        "submitted": "2025-02-18T16:10:05Z",
+        "updated": "2025-02-20T21:52:15Z",
+        "sizeTotal": "41.75 kB",
+        "files": [
+            {
+                "id": 206096,
+                "name": "Peach Creek Candy Store.bld",
+                "size": "41.75 kB"
+            }
+        ],
+        "aliasEntry": "ed-edd-n-eddy-candy-store",
+        "aliasAuthor": "tyrannodokuro",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36727-ed-edd-n-eddy-candy-store\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36729,
+        "cid": 41,
+        "uid": 764091,
+        "author": "Gernot66",
+        "category": "SimCity 3000 Files",
+        "title": "Riegelhaus1",
+        "release": "1.0.0",
+        "submitted": "2025-02-20T10:18:32Z",
+        "updated": "2025-02-20T10:18:32Z",
+        "sizeTotal": "105.13 kB",
+        "files": [
+            {
+                "id": 206081,
+                "name": "Riegelhaus1.bld",
+                "size": "105.13 kB"
+            }
+        ],
+        "aliasEntry": "riegelhaus1",
+        "aliasAuthor": "gernot66",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36729-riegelhaus1\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36730,
+        "cid": 41,
+        "uid": 764091,
+        "author": "Gernot66",
+        "category": "SimCity 3000 Files",
+        "title": "Big Brother",
+        "release": "1.0.0",
+        "submitted": "2025-02-20T10:31:51Z",
+        "updated": "2025-02-20T10:31:51Z",
+        "sizeTotal": "1.33 MB",
+        "files": [
+            {
+                "id": 206083,
+                "name": "YourSoft_Big_Brother.zip",
+                "size": "1.33 MB"
+            }
+        ],
+        "aliasEntry": "big-brother",
+        "aliasAuthor": "gernot66",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36730-big-brother\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36735,
+        "cid": 41,
+        "uid": 829862,
+        "author": "Tyrannodokuro",
+        "category": "SimCity 3000 Files",
+        "title": "Krystal Restaurant",
+        "release": "1.0.0",
+        "submitted": "2025-02-21T23:49:49Z",
+        "updated": "2025-02-21T23:49:49Z",
+        "sizeTotal": "48.95 kB",
+        "files": [
+            {
+                "id": 206125,
+                "name": "Krystal.bld",
+                "size": "48.95 kB"
+            }
+        ],
+        "aliasEntry": "krystal-restaurant",
+        "aliasAuthor": "tyrannodokuro",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36735-krystal-restaurant\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36736,
+        "cid": 41,
+        "uid": 275973,
+        "author": "JiuLing",
+        "category": "SimCity 3000 Files",
+        "title": "Contemporary Style Office Skyscraper 1",
+        "release": "1.0.0",
+        "submitted": "2025-02-22T20:51:35Z",
+        "updated": "2025-02-22T20:51:35Z",
+        "sizeTotal": "434.26 kB",
+        "files": [
+            {
+                "id": 206128,
+                "name": "Contemporary Style Office Skyscraper 1.bld",
+                "size": "434.26 kB"
+            }
+        ],
+        "aliasEntry": "contemporary-style-office-skyscraper-1",
+        "aliasAuthor": "jiuling",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36736-contemporary-style-office-skyscraper-1\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36737,
+        "cid": 41,
+        "uid": 275973,
+        "author": "JiuLing",
+        "category": "SimCity 3000 Files",
+        "title": "Modern Office Building (ICBC Building)",
+        "release": "1.0.0",
+        "submitted": "2025-02-23T14:44:58Z",
+        "updated": "2025-02-23T14:44:58Z",
+        "sizeTotal": "223.64 kB",
+        "files": [
+            {
+                "id": 206144,
+                "name": "Modern Midrise Office 2 ICBC Building.bld",
+                "size": "223.64 kB"
+            }
+        ],
+        "aliasEntry": "modern-office-building-icbc-building",
+        "aliasAuthor": "jiuling",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36737-modern-office-building-icbc-building\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36750,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "58 to 62 Blandford Street",
+        "release": "1.0.0",
+        "submitted": "2025-03-05T21:49:07Z",
+        "updated": "2025-03-05T21:49:07Z",
+        "sizeTotal": "65.25 kB",
+        "files": [
+            {
+                "id": 206278,
+                "name": "58 to 62 Blandford Street.bld",
+                "size": "65.25 kB"
+            }
+        ],
+        "aliasEntry": "58-to-62-blandford-street",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36750-58-to-62-blandford-street\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36753,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "The Ginger Pig",
+        "release": "1.0.0",
+        "submitted": "2025-03-06T14:09:40Z",
+        "updated": "2025-03-06T14:09:40Z",
+        "sizeTotal": "51.38 kB",
+        "files": [
+            {
+                "id": 206305,
+                "name": "The Ginger Pig.bld",
+                "size": "51.38 kB"
+            }
+        ],
+        "aliasEntry": "the-ginger-pig",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36753-the-ginger-pig\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36756,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Sevenoaks Hardware Centre",
+        "release": "1.0.0",
+        "submitted": "2025-03-07T08:17:59Z",
+        "updated": "2025-03-07T08:17:59Z",
+        "sizeTotal": "71.74 kB",
+        "files": [
+            {
+                "id": 206318,
+                "name": "Sevenoaks Hardware Centre.bld",
+                "size": "71.74 kB"
+            }
+        ],
+        "aliasEntry": "sevenoaks-hardware-centre",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36756-sevenoaks-hardware-centre\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36758,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "The Abingdon Pub",
+        "release": "1.0.0",
+        "submitted": "2025-03-08T12:28:24Z",
+        "updated": "2025-03-08T12:28:24Z",
+        "sizeTotal": "56.22 kB",
+        "files": [
+            {
+                "id": 206333,
+                "name": "The Abingdon Pub.bld",
+                "size": "56.22 kB"
+            }
+        ],
+        "aliasEntry": "the-abingdon-pub",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36758-the-abingdon-pub\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36761,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "The Royal Duke",
+        "release": "1.0.0",
+        "submitted": "2025-03-09T14:28:30Z",
+        "updated": "2025-03-09T14:28:30Z",
+        "sizeTotal": "65.32 kB",
+        "files": [
+            {
+                "id": 206368,
+                "name": "The Royal Duke.bld",
+                "size": "65.32 kB"
+            }
+        ],
+        "aliasEntry": "the-royal-duke",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36761-the-royal-duke\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36763,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Coach & Horses",
+        "release": "1.0.0",
+        "submitted": "2025-03-11T08:24:27Z",
+        "updated": "2025-03-11T08:24:27Z",
+        "sizeTotal": "44.45 kB",
+        "files": [
+            {
+                "id": 206411,
+                "name": "Coach and Horses.bld",
+                "size": "44.45 kB"
+            }
+        ],
+        "aliasEntry": "coach-horses",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36763-coach-horses\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36764,
+        "cid": 41,
+        "uid": 764091,
+        "author": "Gernot66",
+        "category": "SimCity 3000 Files",
+        "title": "60 SC3URK Buildings 20250311",
+        "release": "1.0.0",
+        "submitted": "2025-03-11T17:20:04Z",
+        "updated": "2025-03-11T17:20:04Z",
+        "sizeTotal": "52.22 MB",
+        "files": [
+            {
+                "id": 206413,
+                "name": "60blds_20250311.zip",
+                "size": "52.22 MB"
+            }
+        ],
+        "aliasEntry": "60-sc3urk-buildings-20250311",
+        "aliasAuthor": "gernot66",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36764-60-sc3urk-buildings-20250311\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36767,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Buckingham Place",
+        "release": "1.0.1",
+        "submitted": "2025-03-12T19:48:36Z",
+        "updated": "2025-03-15T23:01:30Z",
+        "sizeTotal": "55.27 kB",
+        "files": [
+            {
+                "id": 206503,
+                "name": "Buckinghasm Place.bld",
+                "size": "55.27 kB"
+            }
+        ],
+        "aliasEntry": "buckingham-place",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36767-buckingham-place\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36772,
+        "cid": 41,
+        "uid": 764091,
+        "author": "Gernot66",
+        "category": "SimCity 3000 Files",
+        "title": "Vehicles 1",
+        "release": "1.2.1",
+        "submitted": "2025-03-14T16:44:12Z",
+        "updated": "2025-04-14T15:53:47Z",
+        "sizeTotal": "1.71 MB",
+        "files": [
+            {
+                "id": 206949,
+                "name": "4_vehicles_20250314.zip",
+                "size": "147.78 kB"
+            },
+            {
+                "id": 206950,
+                "name": "vehicles01_2025315.zip",
+                "size": "538.07 kB"
+            },
+            {
+                "id": 206951,
+                "name": "vehicles1_20250320.zip",
+                "size": "288.45 kB"
+            },
+            {
+                "id": 206952,
+                "name": "vehicles1_20250409.zip",
+                "size": "775.58 kB"
+            }
+        ],
+        "aliasEntry": "vehicles-1",
+        "aliasAuthor": "gernot66",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36772-vehicles-1\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36776,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "The Lash Fairy Collective",
+        "release": "1.0.0",
+        "submitted": "2025-03-16T10:59:26Z",
+        "updated": "2025-03-16T10:59:26Z",
+        "sizeTotal": "58.12 kB",
+        "files": [
+            {
+                "id": 206507,
+                "name": "Lash Fairy Collective.bld",
+                "size": "58.12 kB"
+            }
+        ],
+        "aliasEntry": "the-lash-fairy-collective",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36776-the-lash-fairy-collective\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36781,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "The White Swan",
+        "release": "1.0.0",
+        "submitted": "2025-03-19T21:27:40Z",
+        "updated": "2025-03-19T21:27:40Z",
+        "sizeTotal": "54.98 kB",
+        "files": [
+            {
+                "id": 206552,
+                "name": "The White Swan.bld",
+                "size": "54.98 kB"
+            }
+        ],
+        "aliasEntry": "the-white-swan",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36781-the-white-swan\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36782,
+        "cid": 41,
+        "uid": 764091,
+        "author": "Gernot66",
+        "category": "SimCity 3000 Files",
+        "title": "Utility Vehicles",
+        "release": "1.1.0",
+        "submitted": "2025-03-20T14:30:50Z",
+        "updated": "2025-04-14T16:22:42Z",
+        "sizeTotal": "1.21 MB",
+        "files": [
+            {
+                "id": 206957,
+                "name": "utility_vehicles1_20250320.zip",
+                "size": "404.59 kB"
+            },
+            {
+                "id": 206958,
+                "name": "utility_vehicles1_20250409.zip",
+                "size": "834.77 kB"
+            }
+        ],
+        "aliasEntry": "utility-vehicles",
+        "aliasAuthor": "gernot66",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36782-utility-vehicles\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36783,
+        "cid": 41,
+        "uid": 764091,
+        "author": "Gernot66",
+        "category": "SimCity 3000 Files",
+        "title": "Sports Cars",
+        "release": "1.1.0",
+        "submitted": "2025-03-20T14:55:25Z",
+        "updated": "2025-04-14T16:02:29Z",
+        "sizeTotal": "1.06 MB",
+        "files": [
+            {
+                "id": 206954,
+                "name": "sport_cars1_20250320.zip",
+                "size": "260.20 kB"
+            },
+            {
+                "id": 206955,
+                "name": "sport_cars_20250413.zip",
+                "size": "825.62 kB"
+            }
+        ],
+        "aliasEntry": "sports-cars",
+        "aliasAuthor": "gernot66",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36783-sports-cars\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36785,
+        "cid": 41,
+        "uid": 764091,
+        "author": "Gernot66",
+        "category": "SimCity 3000 Files",
+        "title": "Chevy Van (8 variations)",
+        "release": "1.0.1",
+        "submitted": "2025-03-20T15:09:21Z",
+        "updated": "2025-04-14T16:25:06Z",
+        "sizeTotal": "756.39 kB",
+        "files": [
+            {
+                "id": 206960,
+                "name": "van1_20250320.zip",
+                "size": "343.24 kB"
+            },
+            {
+                "id": 206961,
+                "name": "van_20250409.zip",
+                "size": "413.15 kB"
+            }
+        ],
+        "aliasEntry": "chevy-van-8-variations",
+        "aliasAuthor": "gernot66",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36785-chevy-van-8-variations\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36786,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Alien Mothership over the heath",
+        "release": "1.0.0",
+        "submitted": "2025-03-20T22:58:15Z",
+        "updated": "2025-03-20T22:58:15Z",
+        "sizeTotal": "57.62 kB",
+        "files": [
+            {
+                "id": 206581,
+                "name": "Alien Mothership over the heath.bld",
+                "size": "57.62 kB"
+            }
+        ],
+        "aliasEntry": "alien-mothership-over-the-heath",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36786-alien-mothership-over-the-heath\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36787,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Zeppelin over woodlands",
+        "release": "1.0.0",
+        "submitted": "2025-03-21T21:42:09Z",
+        "updated": "2025-03-21T21:42:09Z",
+        "sizeTotal": "71.08 kB",
+        "files": [
+            {
+                "id": 206583,
+                "name": "Zeppelin over woodlands.bld",
+                "size": "71.08 kB"
+            }
+        ],
+        "aliasEntry": "zeppelin-over-woodlands",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36787-zeppelin-over-woodlands\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36789,
+        "cid": 41,
+        "uid": 764091,
+        "author": "Gernot66",
+        "category": "SimCity 3000 Files",
+        "title": "Pond - Gas Pump - Shuttle",
+        "release": "1.0.0",
+        "submitted": "2025-03-22T10:22:42Z",
+        "updated": "2025-03-22T10:22:42Z",
+        "sizeTotal": "361.70 kB",
+        "files": [
+            {
+                "id": 206601,
+                "name": "pond_gaspump_shuttle.zip",
+                "size": "361.70 kB"
+            }
+        ],
+        "aliasEntry": "pond-gas-pump-shuttle",
+        "aliasAuthor": "gernot66",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36789-pond-gas-pump-shuttle\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36794,
+        "cid": 41,
+        "uid": 764091,
+        "author": "Gernot66",
+        "category": "SimCity 3000 Files",
+        "title": "Board 1 (template and examples)",
+        "release": "1.1.0",
+        "submitted": "2025-03-25T15:58:08Z",
+        "updated": "2025-03-28T17:28:41Z",
+        "sizeTotal": "2.90 MB",
+        "files": [
+            {
+                "id": 206663,
+                "name": "board1_20250325.zip",
+                "size": "287.91 kB"
+            },
+            {
+                "id": 206664,
+                "name": "boards_20250328.zip",
+                "size": "2.62 MB"
+            }
+        ],
+        "aliasEntry": "board-1-template-and-examples",
+        "aliasAuthor": "gernot66",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36794-board-1-template-and-examples\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36801,
+        "cid": 41,
+        "uid": 764091,
+        "author": "Gernot66",
+        "category": "SimCity 3000 Files",
+        "title": "Fire Escape",
+        "release": "1.0.0",
+        "submitted": "2025-03-31T12:11:53Z",
+        "updated": "2025-03-31T12:11:53Z",
+        "sizeTotal": "703.58 kB",
+        "files": [
+            {
+                "id": 206690,
+                "name": "fireescape_20250330.zip",
+                "size": "703.58 kB"
+            }
+        ],
+        "aliasEntry": "fire-escape",
+        "aliasAuthor": "gernot66",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36801-fire-escape\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36809,
+        "cid": 41,
+        "uid": 764091,
+        "author": "Gernot66",
+        "category": "SimCity 3000 Files",
+        "title": "Grabbag (props details, ea maxis custom)",
+        "release": "1.0.0",
+        "submitted": "2025-04-02T16:35:42Z",
+        "updated": "2025-04-02T16:35:42Z",
+        "sizeTotal": "2.56 MB",
+        "files": [
+            {
+                "id": 206752,
+                "name": "grabbag_20250502.zip",
+                "size": "2.56 MB"
+            }
+        ],
+        "aliasEntry": "grabbag-props-details-ea-maxis-custom",
+        "aliasAuthor": "gernot66",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36809-grabbag-props-details-ea-maxis-custom\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36810,
+        "cid": 41,
+        "uid": 764091,
+        "author": "Gernot66",
+        "category": "SimCity 3000 Files",
+        "title": "Rooftop 1 (chimneys, air condition)",
+        "release": "1.0.0",
+        "submitted": "2025-04-03T16:00:19Z",
+        "updated": "2025-04-03T16:00:19Z",
+        "sizeTotal": "531.15 kB",
+        "files": [
+            {
+                "id": 206789,
+                "name": "rooftop1_20250403.zip",
+                "size": "531.15 kB"
+            }
+        ],
+        "aliasEntry": "rooftop-1-chimneys-air-condition",
+        "aliasAuthor": "gernot66",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36810-rooftop-1-chimneys-air-condition\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36823,
+        "cid": 41,
+        "uid": 764091,
+        "author": "Gernot66",
+        "category": "SimCity 3000 Files",
+        "title": "Vehicles Streets of SimCity",
+        "release": "1.0.0",
+        "submitted": "2025-04-14T16:38:25Z",
+        "updated": "2025-04-14T16:38:25Z",
+        "sizeTotal": "954.99 kB",
+        "files": [
+            {
+                "id": 206963,
+                "name": "vehicles_streets_of_simcity_20250411.zip",
+                "size": "954.99 kB"
+            }
+        ],
+        "aliasEntry": "vehicles-streets-of-simcity",
+        "aliasAuthor": "gernot66",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36823-vehicles-streets-of-simcity\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36826,
+        "cid": 41,
+        "uid": 764091,
+        "author": "Gernot66",
+        "category": "SimCity 3000 Files",
+        "title": "Landmarks & Custom SFX",
+        "release": "1.0.0",
+        "submitted": "2025-04-15T16:37:23Z",
+        "updated": "2025-04-15T16:37:23Z",
+        "sizeTotal": "4.53 MB",
+        "files": [
+            {
+                "id": 206974,
+                "name": "Landmarks_CustomSFX.zip",
+                "size": "4.53 MB"
+            }
+        ],
+        "aliasEntry": "landmarks-custom-sfx",
+        "aliasAuthor": "gernot66",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36826-landmarks-custom-sfx\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36910,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Cafe Dough, Olivia's Boutique Bistro, Anytime Fitness",
+        "release": "1.0.0",
+        "submitted": "2025-06-20T20:25:38Z",
+        "updated": "2025-06-20T20:25:38Z",
+        "sizeTotal": "70.95 kB",
+        "files": [
+            {
+                "id": 208098,
+                "name": "Cafe Dough-Olivia Boutique Bistro-Anytime Fitness.bld",
+                "size": "70.95 kB"
+            }
+        ],
+        "aliasEntry": "cafe-dough-olivias-boutique-bistro-anytime-fitness",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36910-cafe-dough-olivias-boutique-bistro-anytime-fitness\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36911,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Victorian Warehouse",
+        "release": "1.0.0",
+        "submitted": "2025-06-21T15:35:35Z",
+        "updated": "2025-06-21T15:35:35Z",
+        "sizeTotal": "58.62 kB",
+        "files": [
+            {
+                "id": 208108,
+                "name": "Victorian Warehouse.bld",
+                "size": "58.62 kB"
+            }
+        ],
+        "aliasEntry": "victorian-warehouse",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36911-victorian-warehouse\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36913,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Dalton & Sinclair Textiles",
+        "release": "1.0.0",
+        "submitted": "2025-06-22T18:07:29Z",
+        "updated": "2025-06-22T18:07:29Z",
+        "sizeTotal": "57.99 kB",
+        "files": [
+            {
+                "id": 208131,
+                "name": "Dalton & Sinclair Textiles.bld",
+                "size": "57.99 kB"
+            }
+        ],
+        "aliasEntry": "dalton-sinclair-textiles",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36913-dalton-sinclair-textiles\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36920,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Pontiac Ice",
+        "release": "1.0.0",
+        "submitted": "2025-06-29T05:11:02Z",
+        "updated": "2025-06-29T05:11:02Z",
+        "sizeTotal": "62.97 kB",
+        "files": [
+            {
+                "id": 208182,
+                "name": "Pontiac Ice.bld",
+                "size": "62.97 kB"
+            }
+        ],
+        "aliasEntry": "pontiac-ice",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36920-pontiac-ice\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36930,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Aston Martin Lagonda",
+        "release": "1.0.0",
+        "submitted": "2025-07-07T17:17:44Z",
+        "updated": "2025-07-07T17:17:44Z",
+        "sizeTotal": "58.28 kB",
+        "files": [
+            {
+                "id": 208317,
+                "name": "Aston Martin Lagonda.bld",
+                "size": "58.28 kB"
+            }
+        ],
+        "aliasEntry": "aston-martin-lagonda",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36930-aston-martin-lagonda\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36933,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "Hermes of Paris",
+        "release": "1.0.0",
+        "submitted": "2025-07-12T15:28:41Z",
+        "updated": "2025-07-12T15:28:41Z",
+        "sizeTotal": "86.16 kB",
+        "files": [
+            {
+                "id": 208401,
+                "name": "Hermes of Paris.bld",
+                "size": "86.16 kB"
+            }
+        ],
+        "aliasEntry": "hermes-of-paris",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36933-hermes-of-paris\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 36938,
+        "cid": 41,
+        "uid": 820990,
+        "author": "Quelquechosedautre",
+        "category": "SimCity 3000 Files",
+        "title": "The House On Frontenac Street",
+        "release": "1.0.0",
+        "submitted": "2025-07-16T21:41:29Z",
+        "updated": "2025-07-16T21:41:29Z",
+        "sizeTotal": "52.28 kB",
+        "files": [
+            {
+                "id": 208424,
+                "name": "The House on Frontenac Street.bld",
+                "size": "52.28 kB"
+            }
+        ],
+        "aliasEntry": "the-house-on-frontenac-street",
+        "aliasAuthor": "quelquechosedautre",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/36938-the-house-on-frontenac-street\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 37039,
+        "cid": 41,
+        "uid": 785629,
+        "author": "Captain Adam",
+        "category": "SimCity 3000 Files",
+        "title": "Captain Adam Building Pack 2",
+        "release": "1.0.0",
+        "submitted": "2025-10-02T22:05:27Z",
+        "updated": "2025-10-02T22:05:27Z",
+        "sizeTotal": "380.18 kB",
+        "files": [
+            {
+                "id": 209525,
+                "name": "Pack 2.zip",
+                "size": "380.18 kB"
+            }
+        ],
+        "aliasEntry": "captain-adam-building-pack-2",
+        "aliasAuthor": "captain-adam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/37039-captain-adam-building-pack-2\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 37041,
+        "cid": 41,
+        "uid": 785629,
+        "author": "Captain Adam",
+        "category": "SimCity 3000 Files",
+        "title": "516 Corner Street",
+        "release": "1.0.0",
+        "submitted": "2025-10-04T14:20:35Z",
+        "updated": "2025-10-04T14:20:35Z",
+        "sizeTotal": "124.23 kB",
+        "files": [
+            {
+                "id": 209553,
+                "name": "516 Corner Street.bld",
+                "size": "124.23 kB"
+            }
+        ],
+        "aliasEntry": "516-corner-street",
+        "aliasAuthor": "captain-adam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/37041-516-corner-street\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 37042,
+        "cid": 41,
+        "uid": 785629,
+        "author": "Captain Adam",
+        "category": "SimCity 3000 Files",
+        "title": "Royal Plaza 34",
+        "release": "1.0.0",
+        "submitted": "2025-10-04T14:24:49Z",
+        "updated": "2025-10-04T14:24:49Z",
+        "sizeTotal": "63.82 kB",
+        "files": [
+            {
+                "id": 209556,
+                "name": "Royal Plaza 34.bld",
+                "size": "63.82 kB"
+            }
+        ],
+        "aliasEntry": "royal-plaza-34",
+        "aliasAuthor": "captain-adam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/37042-royal-plaza-34\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 37044,
+        "cid": 41,
+        "uid": 785629,
+        "author": "Captain Adam",
+        "category": "SimCity 3000 Files",
+        "title": "Van Dealership",
+        "release": "1.0.0",
+        "submitted": "2025-10-05T11:14:45Z",
+        "updated": "2025-10-05T11:14:45Z",
+        "sizeTotal": "612.45 kB",
+        "files": [
+            {
+                "id": 209561,
+                "name": "Van Dealership.bld",
+                "size": "612.45 kB"
+            }
+        ],
+        "aliasEntry": "van-dealership",
+        "aliasAuthor": "captain-adam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/37044-van-dealership\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 37049,
+        "cid": 41,
+        "uid": 785629,
+        "author": "Captain Adam",
+        "category": "SimCity 3000 Files",
+        "title": "KDDI Otemachi Building",
+        "release": "1.0.1",
+        "submitted": "2025-10-05T15:38:33Z",
+        "updated": "2025-10-05T16:00:23Z",
+        "sizeTotal": "316.37 kB",
+        "files": [
+            {
+                "id": 209589,
+                "name": "KDDI Otemachi Building.bld",
+                "size": "160.20 kB"
+            },
+            {
+                "id": 209590,
+                "name": "KDDI Otemachi Building (2nd Version).bld",
+                "size": "156.17 kB"
+            }
+        ],
+        "aliasEntry": "kddi-otemachi-building",
+        "aliasAuthor": "captain-adam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/37049-kddi-otemachi-building\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 37051,
+        "cid": 41,
+        "uid": 785629,
+        "author": "Captain Adam",
+        "category": "SimCity 3000 Files",
+        "title": "Madras Corporation Building (Tokyo)",
+        "release": "1.0.1",
+        "submitted": "2025-10-09T12:13:09Z",
+        "updated": "2025-10-12T15:04:56Z",
+        "sizeTotal": "450.00 kB",
+        "files": [
+            {
+                "id": 209632,
+                "name": "Madras Corp Tokyo.bld",
+                "size": "205.32 kB"
+            },
+            {
+                "id": 209633,
+                "name": "Madras Corp Tokyo.bld",
+                "size": "244.68 kB"
+            }
+        ],
+        "aliasEntry": "madras-corporation-building-tokyo",
+        "aliasAuthor": "captain-adam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/37051-madras-corporation-building-tokyo\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 37052,
+        "cid": 41,
+        "uid": 785629,
+        "author": "Captain Adam",
+        "category": "SimCity 3000 Files",
+        "title": "Internet Provider Building",
+        "release": "1.0.0",
+        "submitted": "2025-10-09T12:21:47Z",
+        "updated": "2025-10-09T12:21:47Z",
+        "sizeTotal": "68.87 kB",
+        "files": [
+            {
+                "id": 209608,
+                "name": "Internet Provider Building.bld",
+                "size": "68.87 kB"
+            }
+        ],
+        "aliasEntry": "internet-provider-building",
+        "aliasAuthor": "captain-adam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/37052-internet-provider-building\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 37054,
+        "cid": 41,
+        "uid": 785629,
+        "author": "Captain Adam",
+        "category": "SimCity 3000 Files",
+        "title": "Meiji Building",
+        "release": "1.0.1",
+        "submitted": "2025-10-14T16:28:46Z",
+        "updated": "2025-10-14T18:03:28Z",
+        "sizeTotal": "217.40 kB",
+        "files": [
+            {
+                "id": 209642,
+                "name": "Meiji Building.bld",
+                "size": "101.64 kB"
+            },
+            {
+                "id": 209643,
+                "name": "Meiji Building.bld",
+                "size": "115.76 kB"
+            }
+        ],
+        "aliasEntry": "meiji-building",
+        "aliasAuthor": "captain-adam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/37054-meiji-building\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 37055,
+        "cid": 41,
+        "uid": 785629,
+        "author": "Captain Adam",
+        "category": "SimCity 3000 Files",
+        "title": "Yasui Shoten",
+        "release": "1.0.0",
+        "submitted": "2025-10-14T18:28:48Z",
+        "updated": "2025-10-14T18:28:48Z",
+        "sizeTotal": "103.22 kB",
+        "files": [
+            {
+                "id": 209646,
+                "name": "Japense Mixed 1.bld",
+                "size": "103.22 kB"
+            }
+        ],
+        "aliasEntry": "yasui-shoten",
+        "aliasAuthor": "captain-adam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/37055-yasui-shoten\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 37058,
+        "cid": 41,
+        "uid": 785629,
+        "author": "Captain Adam",
+        "category": "SimCity 3000 Files",
+        "title": "Harajuku Sophia Building",
+        "release": "1.0.0",
+        "submitted": "2025-10-16T14:56:02Z",
+        "updated": "2025-10-16T14:56:02Z",
+        "sizeTotal": "366.11 kB",
+        "files": [
+            {
+                "id": 209660,
+                "name": "Harajuku Sophia Building.bld",
+                "size": "366.11 kB"
+            }
+        ],
+        "aliasEntry": "harajuku-sophia-building",
+        "aliasAuthor": "captain-adam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/37058-harajuku-sophia-building\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 37060,
+        "cid": 41,
+        "uid": 785629,
+        "author": "Captain Adam",
+        "category": "SimCity 3000 Files",
+        "title": "Akihabara OS Building",
+        "release": "1.0.0",
+        "submitted": "2025-10-17T15:44:41Z",
+        "updated": "2025-10-17T15:44:41Z",
+        "sizeTotal": "383.75 kB",
+        "files": [
+            {
+                "id": 209670,
+                "name": "Akihabara OS Building.bld",
+                "size": "383.75 kB"
+            }
+        ],
+        "aliasEntry": "akihabara-os-building",
+        "aliasAuthor": "captain-adam",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/37060-akihabara-os-building\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 37063,
+        "cid": 41,
+        "uid": 235805,
+        "author": "Terring",
+        "category": "SimCity 3000 Files",
+        "title": "Terring's Terrible SC3K parks",
+        "release": "1.0.0",
+        "submitted": "2025-10-19T17:26:41Z",
+        "updated": "2025-10-19T17:26:41Z",
+        "sizeTotal": "175.58 kB",
+        "files": [
+            {
+                "id": 209701,
+                "name": "SC3K Parks.zip",
+                "size": "175.58 kB"
+            }
+        ],
+        "aliasEntry": "terrings-terrible-sc3k-parks",
+        "aliasAuthor": "terring",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/37063-terrings-terrible-sc3k-parks\/",
+        "===========": "=========================================="
+    }
+]

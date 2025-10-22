@@ -1,0 +1,92 @@
+[
+    {
+        "id": 24559,
+        "cid": 12,
+        "uid": 237910,
+        "author": "GlobexCo",
+        "category": "CXL Lots",
+        "title": "CXL - Ploppable boats - Update",
+        "release": "2",
+        "submitted": "2010-08-02T15:50:24Z",
+        "updated": "2010-08-02T15:50:24Z",
+        "sizeTotal": "9.44 MB",
+        "files": [
+            {
+                "id": 51899,
+                "name": "mod_GlobexCo_boats_v2.zip",
+                "size": "9.44 MB"
+            }
+        ],
+        "aliasEntry": "cxl-ploppable-boats-update",
+        "aliasAuthor": "globexco",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/24559-cxl-ploppable-boats-update\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30784,
+        "cid": 12,
+        "uid": 724715,
+        "author": "NICK97",
+        "category": "CXL Lots",
+        "title": "YTV Studio For XL",
+        "release": "1.0",
+        "submitted": "2015-09-11T17:12:37Z",
+        "updated": "2015-09-11T17:12:37Z",
+        "sizeTotal": "2.88 MB",
+        "files": [
+            {
+                "id": 159278,
+                "name": "YTV_Studio_For_XL.rar",
+                "size": "2.88 MB"
+            }
+        ],
+        "aliasEntry": "ytv-studio-for-xl",
+        "aliasAuthor": "nick97",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30784-ytv-studio-for-xl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31093,
+        "cid": 12,
+        "uid": 724715,
+        "author": "NICK97",
+        "category": "CXL Lots",
+        "title": "Verizon Wireless For XL",
+        "release": "1.0",
+        "submitted": "2016-05-19T17:26:21Z",
+        "updated": "2016-05-19T17:26:21Z",
+        "files": [
+            {
+                "id": 161842,
+                "link": "https:\/\/556775309408234646.weebly.com\/store\/p236\/at%26t_Wireless_For_XL.html",
+                "size": null
+            }
+        ],
+        "aliasEntry": "verizon-wireless-for-xl",
+        "aliasAuthor": "nick97",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31093-verizon-wireless-for-xl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31837,
+        "cid": 12,
+        "uid": 724715,
+        "author": "NICK97",
+        "category": "CXL Lots",
+        "title": "Dollar Tree For XXL",
+        "release": "1.0",
+        "submitted": "2017-07-07T21:37:15Z",
+        "updated": "2017-07-07T21:37:15Z",
+        "files": [
+            {
+                "id": 167460,
+                "link": "http:\/\/www.citiesxlmods.com\/Downloads\/dollar-tree-for-xxl.122\/",
+                "size": null
+            }
+        ],
+        "aliasEntry": "dollar-tree-for-xxl",
+        "aliasAuthor": "nick97",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31837-dollar-tree-for-xxl\/",
+        "===========": "=========================================="
+    }
+]

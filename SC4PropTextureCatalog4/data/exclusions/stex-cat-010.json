@@ -1,0 +1,226 @@
+[
+    {
+        "id": 30564,
+        "cid": 10,
+        "uid": 625742,
+        "author": "Bolandnick",
+        "category": "CXL 3d Models",
+        "title": "Cities XL 2012 Launcher",
+        "release": "1.0",
+        "submitted": "2015-05-28T17:17:07Z",
+        "updated": "2015-10-01T20:31:19Z",
+        "sizeTotal": "2.33 MB",
+        "files": [
+            {
+                "id": 159417,
+                "name": "065d434dd9b39571a16662d829ea21ce-cxl2012---launcher.ipb",
+                "size": "2.33 MB"
+            }
+        ],
+        "aliasEntry": "cities-xl-2012-launcher",
+        "aliasAuthor": "bolandnick",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30564-cities-xl-2012-launcher\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30783,
+        "cid": 10,
+        "uid": 724715,
+        "author": "NICK97",
+        "category": "CXL 3d Models",
+        "title": "CTV News For XXL",
+        "release": "1.1",
+        "submitted": "2015-09-11T17:01:40Z",
+        "updated": "2020-12-08T22:35:39Z",
+        "files": [
+            {
+                "id": 184095,
+                "link": "https:\/\/cities-mods.com\/xlex\/ctv-studio-for-xxl.23\/",
+                "size": null
+            }
+        ],
+        "aliasEntry": "ctv-news-for-xxl",
+        "aliasAuthor": "nick97",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30783-ctv-news-for-xxl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31094,
+        "cid": 10,
+        "uid": 625742,
+        "author": "Bolandnick",
+        "category": "CXL 3d Models",
+        "title": "London Drugs For XL",
+        "release": "1.0",
+        "submitted": "2016-05-19T19:35:07Z",
+        "updated": "2016-05-19T19:35:07Z",
+        "files": [
+            {
+                "id": 161845,
+                "link": "https:\/\/556775309408234646.weebly.com\/store\/p211\/London_Drugs_For_XL.html",
+                "size": null
+            }
+        ],
+        "aliasEntry": "london-drugs-for-xl",
+        "aliasAuthor": "bolandnick",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31094-london-drugs-for-xl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31095,
+        "cid": 10,
+        "uid": 625742,
+        "author": "Bolandnick",
+        "category": "CXL 3d Models",
+        "title": "O'Relly Auto Parts For XL",
+        "release": "1.0",
+        "submitted": "2016-05-19T19:39:41Z",
+        "updated": "2016-05-19T19:39:41Z",
+        "files": [
+            {
+                "id": 161850,
+                "link": "https:\/\/556775309408234646.weebly.com\/store\/p156\/O'Reilly_Auto_Parts_For_XL.html",
+                "size": null
+            }
+        ],
+        "aliasEntry": "orelly-auto-parts-for-xl",
+        "aliasAuthor": "bolandnick",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31095-orelly-auto-parts-for-xl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31103,
+        "cid": 10,
+        "uid": 625742,
+        "author": "Bolandnick",
+        "category": "CXL 3d Models",
+        "title": "Dulux Paint For XL",
+        "release": "1.0",
+        "submitted": "2016-05-27T19:06:44Z",
+        "updated": "2016-05-27T19:06:44Z",
+        "sizeTotal": "340.25 kB",
+        "files": [
+            {
+                "id": 161887,
+                "name": "XLN_NICK97_Retail_Dulux_Paint_v1.0.pak",
+                "size": "340.25 kB"
+            }
+        ],
+        "aliasEntry": "dulux-paint-for-xl",
+        "aliasAuthor": "bolandnick",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31103-dulux-paint-for-xl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31104,
+        "cid": 10,
+        "uid": 625742,
+        "author": "Bolandnick",
+        "category": "CXL 3d Models",
+        "title": "Family Dollar For XL",
+        "release": "1.2",
+        "submitted": "2016-05-27T19:11:13Z",
+        "updated": "2016-05-27T19:11:13Z",
+        "sizeTotal": "341.59 kB",
+        "files": [
+            {
+                "id": 161893,
+                "name": "XLN_NICK97_Retail_Family_Dollar_v1.2.pak",
+                "size": "341.59 kB"
+            }
+        ],
+        "aliasEntry": "family-dollar-for-xl",
+        "aliasAuthor": "bolandnick",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31104-family-dollar-for-xl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31105,
+        "cid": 10,
+        "uid": 625742,
+        "author": "Bolandnick",
+        "category": "CXL 3d Models",
+        "title": "Sport Check For XL",
+        "release": "1.0",
+        "submitted": "2016-05-27T19:13:43Z",
+        "updated": "2016-05-27T19:13:43Z",
+        "sizeTotal": "158.03 kB",
+        "files": [
+            {
+                "id": 161898,
+                "name": "XLN_NICK97_Retail_Sport_Check_v1.0.pak",
+                "size": "158.03 kB"
+            }
+        ],
+        "aliasEntry": "sport-check-for-xl",
+        "aliasAuthor": "bolandnick",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31105-sport-check-for-xl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31133,
+        "cid": 10,
+        "uid": 724715,
+        "author": "NICK97",
+        "category": "CXL 3d Models",
+        "title": "Sprint For XL",
+        "release": "1.0",
+        "submitted": "2016-06-26T20:26:55Z",
+        "updated": "2016-06-26T20:26:55Z",
+        "files": [
+            {
+                "id": 162271,
+                "link": "https:\/\/556775309408234646.weebly.com\/store\/p246\/Sprint_For_XL.html",
+                "size": null
+            }
+        ],
+        "aliasEntry": "sprint-for-xl",
+        "aliasAuthor": "nick97",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31133-sprint-for-xl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31134,
+        "cid": 10,
+        "uid": 724715,
+        "author": "NICK97",
+        "category": "CXL 3d Models",
+        "title": "Toy 'R' Us For XXL",
+        "release": "1.0.2",
+        "submitted": "2016-06-26T20:32:16Z",
+        "updated": "2020-12-08T22:47:29Z",
+        "files": [
+            {
+                "id": 184110,
+                "link": "https:\/\/cities-mods.com\/xlex\/toy-r-us-for-xxl.123\/",
+                "size": null
+            }
+        ],
+        "aliasEntry": "toy-r-us-for-xxl",
+        "aliasAuthor": "nick97",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31134-toy-r-us-for-xxl\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31140,
+        "cid": 10,
+        "uid": 724715,
+        "author": "NICK97",
+        "category": "CXL 3d Models",
+        "title": "Staples For XL",
+        "release": "1.2",
+        "submitted": "2016-06-28T16:36:40Z",
+        "updated": "2016-08-12T18:22:21Z",
+        "files": [
+            {
+                "id": 162843,
+                "link": "http:\/\/xlmods.weebly.com\/store\/p267\/Staples_For_XL.html",
+                "size": null
+            }
+        ],
+        "aliasEntry": "staples-for-xl",
+        "aliasAuthor": "nick97",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31140-staples-for-xl\/",
+        "===========": "=========================================="
+    }
+]

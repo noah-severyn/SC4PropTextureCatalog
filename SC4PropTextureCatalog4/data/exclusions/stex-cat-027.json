@@ -1,0 +1,2798 @@
+[
+    {
+        "id": 30188,
+        "cid": 27,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Roads & Traffic",
+        "title": "Ring Roads",
+        "release": "1.0",
+        "submitted": "2015-03-11T14:55:58Z",
+        "updated": "2015-03-11T14:55:58Z",
+        "sizeTotal": "1.69 MB",
+        "files": [
+            {
+                "id": 149047,
+                "name": "Ring Transport Green ENGLISH.rar",
+                "size": "867.58 kB"
+            },
+            {
+                "id": 149048,
+                "name": "Ring Transport Green RUSSIAN.rar",
+                "size": "867.61 kB"
+            }
+        ],
+        "aliasEntry": "ring-roads",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30188-ring-roads\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30200,
+        "cid": 27,
+        "uid": 665504,
+        "author": "Letuancz",
+        "category": "CSL Roads & Traffic",
+        "title": "VN-02",
+        "release": "1.0",
+        "submitted": "2015-03-13T14:07:44Z",
+        "updated": "2015-03-13T14:07:44Z",
+        "sizeTotal": "459.24 kB",
+        "files": [
+            {
+                "id": 149126,
+                "name": "VN2.zip",
+                "size": "459.24 kB"
+            }
+        ],
+        "aliasEntry": "vn-02",
+        "aliasAuthor": "letuancz",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30200-vn-02\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30217,
+        "cid": 27,
+        "uid": 417120,
+        "author": "Titanicbuff",
+        "category": "CSL Roads & Traffic",
+        "title": "Wire Swichover",
+        "release": "1.0",
+        "submitted": "2015-03-15T01:55:18Z",
+        "updated": "2015-03-15T01:55:18Z",
+        "sizeTotal": "725.31 kB",
+        "files": [
+            {
+                "id": 149238,
+                "name": "Wire Switchover.zip",
+                "size": "725.31 kB"
+            }
+        ],
+        "aliasEntry": "wire-swichover",
+        "aliasAuthor": "titanicbuff",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30217-wire-swichover\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30220,
+        "cid": 27,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Roads & Traffic",
+        "title": "Ring Road Under The Highway",
+        "release": "1.0",
+        "submitted": "2015-03-15T07:02:42Z",
+        "updated": "2015-03-15T07:02:42Z",
+        "sizeTotal": "964.47 kB",
+        "files": [
+            {
+                "id": 149263,
+                "name": "BigRingUnderHingwayRus.rar",
+                "size": "472.85 kB"
+            },
+            {
+                "id": 149264,
+                "name": "BigRingUnderHingwayEng.rar",
+                "size": "491.63 kB"
+            }
+        ],
+        "aliasEntry": "ring-road-under-the-highway",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30220-ring-road-under-the-highway\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30221,
+        "cid": 27,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Roads & Traffic",
+        "title": "Ring Road Under The Highway 2",
+        "release": "1.0",
+        "submitted": "2015-03-15T08:54:58Z",
+        "updated": "2015-03-15T08:54:58Z",
+        "sizeTotal": "899.67 kB",
+        "files": [
+            {
+                "id": 149269,
+                "name": "RRutH2Eng.rar",
+                "size": "449.79 kB"
+            },
+            {
+                "id": 149270,
+                "name": "RRutH2Rus.rar",
+                "size": "449.88 kB"
+            }
+        ],
+        "aliasEntry": "ring-road-under-the-highway-2",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30221-ring-road-under-the-highway-2\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30222,
+        "cid": 27,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Roads & Traffic",
+        "title": "Exit from the highway",
+        "release": "1.0",
+        "submitted": "2015-03-15T10:04:32Z",
+        "updated": "2015-03-15T10:04:32Z",
+        "sizeTotal": "951.92 kB",
+        "files": [
+            {
+                "id": 149290,
+                "name": "Exit from the highway english.rar",
+                "size": "475.91 kB"
+            },
+            {
+                "id": 149291,
+                "name": "Exit from the highway russian.rar",
+                "size": "476.01 kB"
+            }
+        ],
+        "aliasEntry": "exit-from-the-highway",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30222-exit-from-the-highway\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30223,
+        "cid": 27,
+        "uid": 566556,
+        "author": "Putin",
+        "category": "CSL Roads & Traffic",
+        "title": "Entry and exit from the highway",
+        "release": "1.0",
+        "submitted": "2015-03-15T12:12:03Z",
+        "updated": "2015-03-15T12:12:03Z",
+        "sizeTotal": "972.92 kB",
+        "files": [
+            {
+                "id": 149302,
+                "name": "EEHReng.rar",
+                "size": "486.40 kB"
+            },
+            {
+                "id": 149303,
+                "name": "EEHRrus.rar",
+                "size": "486.52 kB"
+            }
+        ],
+        "aliasEntry": "entry-and-exit-from-the-highway",
+        "aliasAuthor": "putin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30223-entry-and-exit-from-the-highway\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30225,
+        "cid": 27,
+        "uid": 417120,
+        "author": "Titanicbuff",
+        "category": "CSL Roads & Traffic",
+        "title": "Y-Interchange",
+        "release": "1.0",
+        "submitted": "2015-03-15T15:03:42Z",
+        "updated": "2015-03-15T15:03:42Z",
+        "sizeTotal": "354.31 kB",
+        "files": [
+            {
+                "id": 149310,
+                "name": "TB-Yinterchange.zip",
+                "size": "354.31 kB"
+            }
+        ],
+        "aliasEntry": "y-interchange",
+        "aliasAuthor": "titanicbuff",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30225-y-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30228,
+        "cid": 27,
+        "uid": 700109,
+        "author": "rildin",
+        "category": "CSL Roads & Traffic",
+        "title": "trumpet interchange.zip",
+        "release": "1.0",
+        "submitted": "2015-03-15T16:02:50Z",
+        "updated": "2015-03-15T16:02:50Z",
+        "sizeTotal": "418.99 kB",
+        "files": [
+            {
+                "id": 149344,
+                "name": "Trumpet Interchange.zip",
+                "size": "418.99 kB"
+            }
+        ],
+        "aliasEntry": "trumpet-interchangezip",
+        "aliasAuthor": "rildin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30228-trumpet-interchangezip\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30230,
+        "cid": 27,
+        "uid": 393188,
+        "author": "Sims firehouse",
+        "category": "CSL Roads & Traffic",
+        "title": "SPUI - Single Point Urban Interchange",
+        "release": "5.3.1",
+        "submitted": "2015-03-15T19:38:42Z",
+        "updated": "2015-03-30T14:49:18Z",
+        "sizeTotal": "1.57 MB",
+        "files": [
+            {
+                "id": 153215,
+                "name": "SPUI-v5.3.zip",
+                "size": "1.57 MB"
+            }
+        ],
+        "aliasEntry": "spui-single-point-urban-interchange",
+        "aliasAuthor": "sims-firehouse",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30230-spui-single-point-urban-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30231,
+        "cid": 27,
+        "uid": 570870,
+        "author": "DigitalMaster37",
+        "category": "CSL Roads & Traffic",
+        "title": "WEB_Roundabouts & Intersections",
+        "release": "1.01",
+        "submitted": "2015-03-15T23:09:17Z",
+        "updated": "2015-03-16T00:30:48Z",
+        "sizeTotal": "4.32 MB",
+        "files": [
+            {
+                "id": 149573,
+                "name": "WEB_IntersectionFiles.rar",
+                "size": "2.16 MB"
+            },
+            {
+                "id": 149574,
+                "name": "WEB_Intersection &amp; Roundabouts.rar",
+                "size": "2.16 MB"
+            }
+        ],
+        "aliasEntry": "web_roundabouts-intersections",
+        "aliasAuthor": "digitalmaster37",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30231-web_roundabouts-intersections\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30240,
+        "cid": 27,
+        "uid": 700461,
+        "author": "DeepSpace2",
+        "category": "CSL Roads & Traffic",
+        "title": "City Roundabout",
+        "release": "1.0",
+        "submitted": "2015-03-16T17:48:43Z",
+        "updated": "2015-03-16T17:48:43Z",
+        "sizeTotal": "434.27 kB",
+        "files": [
+            {
+                "id": 149545,
+                "name": "City Roundabout no crosswalks.zip",
+                "size": "434.27 kB"
+            }
+        ],
+        "aliasEntry": "city-roundabout",
+        "aliasAuthor": "deepspace2",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30240-city-roundabout\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30247,
+        "cid": 27,
+        "uid": 417120,
+        "author": "Titanicbuff",
+        "category": "CSL Roads & Traffic",
+        "title": "TB T-Interchange",
+        "release": "1.0",
+        "submitted": "2015-03-16T23:36:01Z",
+        "updated": "2015-03-16T23:36:01Z",
+        "sizeTotal": "388.80 kB",
+        "files": [
+            {
+                "id": 149583,
+                "name": "T-interchange.zip",
+                "size": "388.80 kB"
+            }
+        ],
+        "aliasEntry": "tb-t-interchange",
+        "aliasAuthor": "titanicbuff",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30247-tb-t-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30251,
+        "cid": 27,
+        "uid": 570870,
+        "author": "DigitalMaster37",
+        "category": "CSL Roads & Traffic",
+        "title": "Crazy_Intersections_Set_1",
+        "release": "1.1",
+        "submitted": "2015-03-17T04:34:56Z",
+        "updated": "2015-03-17T04:34:56Z",
+        "sizeTotal": "8.16 MB",
+        "files": [
+            {
+                "id": 149715,
+                "name": "Crazy_Intersections_Set_1.rar",
+                "size": "3.64 MB"
+            },
+            {
+                "id": 149716,
+                "name": "Crazy_Intersections_Set_1_Updated.rar",
+                "size": "4.51 MB"
+            }
+        ],
+        "aliasEntry": "crazy_intersections_set_1",
+        "aliasAuthor": "digitalmaster37",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30251-crazy_intersections_set_1\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30255,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "Cloverleaf Interchange with Local-Express Lanes - TPB CSLIA Vol 1.",
+        "release": "1.0",
+        "submitted": "2015-03-18T01:51:51Z",
+        "updated": "2015-03-18T01:51:51Z",
+        "sizeTotal": "5.07 kB",
+        "files": [
+            {
+                "id": 149947,
+                "name": "TPB CSLIA - LE Cloverleaf v1.zip",
+                "size": "5.07 kB"
+            }
+        ],
+        "aliasEntry": "cloverleaf-interchange-with-local-express-lanes-tpb-cslia-vol-1",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30255-cloverleaf-interchange-with-local-express-lanes-tpb-cslia-vol-1\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30267,
+        "cid": 27,
+        "uid": 393188,
+        "author": "Sims firehouse",
+        "category": "CSL Roads & Traffic",
+        "title": "Modular Cloverleaf Interchange with C\/D Lanes",
+        "release": "1.0",
+        "submitted": "2015-03-19T18:09:58Z",
+        "updated": "2015-03-19T18:09:58Z",
+        "sizeTotal": "1.58 MB",
+        "files": [
+            {
+                "id": 149913,
+                "name": "Modular Cloverleaf with CD Lanes.zip",
+                "size": "1.58 MB"
+            }
+        ],
+        "aliasEntry": "modular-cloverleaf-interchange-with-cd-lanes",
+        "aliasAuthor": "sims-firehouse",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30267-modular-cloverleaf-interchange-with-cd-lanes\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30269,
+        "cid": 27,
+        "uid": 417120,
+        "author": "Titanicbuff",
+        "category": "CSL Roads & Traffic",
+        "title": "T Road Interchange",
+        "release": "1.0",
+        "submitted": "2015-03-19T20:01:23Z",
+        "updated": "2015-03-19T20:01:23Z",
+        "sizeTotal": "657.81 kB",
+        "files": [
+            {
+                "id": 149920,
+                "name": "T Road interchange.zip",
+                "size": "657.81 kB"
+            }
+        ],
+        "aliasEntry": "t-road-interchange",
+        "aliasAuthor": "titanicbuff",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30269-t-road-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30271,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "3 Ramp Highway Split Puzzle Pieces",
+        "release": "1.0",
+        "submitted": "2015-03-20T02:30:31Z",
+        "updated": "2015-03-20T02:30:31Z",
+        "sizeTotal": "1.04 MB",
+        "files": [
+            {
+                "id": 149960,
+                "name": "TPB CSLIA_PP_Fork.zip",
+                "size": "1.04 MB"
+            }
+        ],
+        "aliasEntry": "3-ramp-highway-split-puzzle-pieces",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30271-3-ramp-highway-split-puzzle-pieces\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30274,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "Urban Directional Y Interchange - TPB CSLIA Vol 2",
+        "release": "1.0",
+        "submitted": "2015-03-20T09:26:38Z",
+        "updated": "2015-03-20T09:26:38Z",
+        "sizeTotal": "703.75 kB",
+        "files": [
+            {
+                "id": 151490,
+                "link": "http:\/\/goo.gl\/8Lg4w1",
+                "size": null
+            },
+            {
+                "id": 151491,
+                "name": "TPB CSLIA -  Urban Y-Stack v1.zip",
+                "size": "703.75 kB"
+            }
+        ],
+        "aliasEntry": "urban-directional-y-interchange-tpb-cslia-vol-2",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30274-urban-directional-y-interchange-tpb-cslia-vol-2\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30279,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "Directional T Interchange (3 Versions) - TPB CSLIA Vol 3",
+        "release": "1.0",
+        "submitted": "2015-03-21T22:25:22Z",
+        "updated": "2015-03-21T22:25:22Z",
+        "sizeTotal": "1.32 MB",
+        "files": [
+            {
+                "id": 151477,
+                "link": "http:\/\/goo.gl\/rSrF4M",
+                "size": null
+            },
+            {
+                "id": 151478,
+                "link": "http:\/\/goo.gl\/0tJ7GC",
+                "size": null
+            },
+            {
+                "id": 151479,
+                "name": "TPB CSLIA - Directional T v1.zip",
+                "size": "1.32 MB"
+            }
+        ],
+        "aliasEntry": "directional-t-interchange-3-versions-tpb-cslia-vol-3",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30279-directional-t-interchange-3-versions-tpb-cslia-vol-3\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30284,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "Semi-directional T Interchange - TPB CSLIA Vol 4",
+        "release": "1.0",
+        "submitted": "2015-03-22T09:15:11Z",
+        "updated": "2015-03-22T09:15:11Z",
+        "sizeTotal": "641.61 kB",
+        "files": [
+            {
+                "id": 151445,
+                "link": "http:\/\/goo.gl\/EySHb2",
+                "size": null
+            },
+            {
+                "id": 151446,
+                "name": "TPB CSLIA - SemiDirect T v1 .zip",
+                "size": "641.61 kB"
+            }
+        ],
+        "aliasEntry": "semi-directional-t-interchange-tpb-cslia-vol-4",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30284-semi-directional-t-interchange-tpb-cslia-vol-4\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30290,
+        "cid": 27,
+        "uid": 701248,
+        "author": "Nixon123c",
+        "category": "CSL Roads & Traffic",
+        "title": "Big roundabout",
+        "release": "1.0",
+        "submitted": "2015-03-22T21:51:12Z",
+        "updated": "2015-03-22T21:51:12Z",
+        "sizeTotal": "475.05 kB",
+        "files": [
+            {
+                "id": 150366,
+                "name": "Big roundabout.zip",
+                "size": "475.05 kB"
+            }
+        ],
+        "aliasEntry": "big-roundabout",
+        "aliasAuthor": "nixon123c",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30290-big-roundabout\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30291,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "Diverging Diamond Interchange (3 versions) - TPB CSLIA Vol 5",
+        "release": "1.0",
+        "submitted": "2015-03-23T02:34:10Z",
+        "updated": "2015-03-23T02:34:10Z",
+        "sizeTotal": "1.52 MB",
+        "files": [
+            {
+                "id": 151468,
+                "link": "http:\/\/goo.gl\/muBCL0",
+                "size": null
+            },
+            {
+                "id": 151469,
+                "name": "TPB CSLIA - DDI v1.zip",
+                "size": "1.52 MB"
+            }
+        ],
+        "aliasEntry": "diverging-diamond-interchange-3-versions-tpb-cslia-vol-5",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30291-diverging-diamond-interchange-3-versions-tpb-cslia-vol-5\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30296,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "3-Level Roundabout Interchange - TPB CSLIA Vol 6",
+        "release": "2",
+        "submitted": "2015-03-23T10:21:03Z",
+        "updated": "2015-03-23T10:21:03Z",
+        "sizeTotal": "953.43 kB",
+        "files": [
+            {
+                "id": 151425,
+                "link": "http:\/\/goo.gl\/6FvbpX",
+                "size": null
+            },
+            {
+                "id": 151426,
+                "name": "TPB CSLIA - Roundabout Interchange v1.zip",
+                "size": "533.33 kB"
+            },
+            {
+                "id": 151427,
+                "name": "TPB CSLIA - Roundabout Interchange v2.zip",
+                "size": "420.10 kB"
+            }
+        ],
+        "aliasEntry": "3-level-roundabout-interchange-tpb-cslia-vol-6",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30296-3-level-roundabout-interchange-tpb-cslia-vol-6\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30299,
+        "cid": 27,
+        "uid": 393188,
+        "author": "Sims firehouse",
+        "category": "CSL Roads & Traffic",
+        "title": "Oblique 4-Way Cloverleaf-Windmill Junctions",
+        "release": "0.4",
+        "submitted": "2015-03-23T19:18:42Z",
+        "updated": "2015-03-23T19:18:42Z",
+        "sizeTotal": "1.92 MB",
+        "files": [
+            {
+                "id": 150926,
+                "name": "ObliqueCloverMills.zip",
+                "size": "1.92 MB"
+            }
+        ],
+        "aliasEntry": "oblique-4-way-cloverleaf-windmill-junctions",
+        "aliasAuthor": "sims-firehouse",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30299-oblique-4-way-cloverleaf-windmill-junctions\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30300,
+        "cid": 27,
+        "uid": 395374,
+        "author": "jose L Ortiz",
+        "category": "CSL Roads & Traffic",
+        "title": "Diverging Diamond Interchange (DDI)",
+        "release": "1.0",
+        "submitted": "2015-03-23T19:19:14Z",
+        "updated": "2015-03-23T19:19:14Z",
+        "sizeTotal": "408.76 kB",
+        "files": [
+            {
+                "id": 150558,
+                "name": "Diverging Diamond  Interchange .crp.zip",
+                "size": "408.76 kB"
+            }
+        ],
+        "aliasEntry": "diverging-diamond-interchange-ddi",
+        "aliasAuthor": "jose-l-ortiz",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30300-diverging-diamond-interchange-ddi\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30304,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "Circular Town Modular",
+        "release": "1.0",
+        "submitted": "2015-03-24T03:44:06Z",
+        "updated": "2015-03-24T03:44:06Z",
+        "sizeTotal": "1,022.96 kB",
+        "files": [
+            {
+                "id": 151454,
+                "link": "http:\/\/goo.gl\/yc9v0a",
+                "size": null
+            },
+            {
+                "id": 151455,
+                "name": "TPB CSLUD - RRM1 v1.zip",
+                "size": "1,022.96 kB"
+            }
+        ],
+        "aliasEntry": "circular-town-modular",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30304-circular-town-modular\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30313,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "The Turtle - Highway Exit Traffic Management System",
+        "release": "1.0",
+        "submitted": "2015-03-25T09:46:52Z",
+        "updated": "2015-03-25T09:46:52Z",
+        "sizeTotal": "408.94 kB",
+        "files": [
+            {
+                "id": 152314,
+                "link": "http:\/\/goo.gl\/5q9wy2",
+                "size": null
+            },
+            {
+                "id": 152315,
+                "name": "TPB CSLIA - The Turtle v1.zip",
+                "size": "408.94 kB"
+            }
+        ],
+        "aliasEntry": "the-turtle-highway-exit-traffic-management-system",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30313-the-turtle-highway-exit-traffic-management-system\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30330,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "Culs-de-Sac",
+        "release": "1.0",
+        "submitted": "2015-03-26T04:36:33Z",
+        "updated": "2015-03-26T04:36:33Z",
+        "sizeTotal": "1.17 MB",
+        "files": [
+            {
+                "id": 151506,
+                "link": "http:\/\/goo.gl\/SW5xWu",
+                "size": null
+            },
+            {
+                "id": 151507,
+                "link": "http:\/\/goo.gl\/SW5xWu",
+                "size": null
+            },
+            {
+                "id": 151508,
+                "link": "http:\/\/goo.gl\/Ynd6VQ",
+                "size": null
+            },
+            {
+                "id": 151509,
+                "link": "http:\/\/goo.gl\/Ynd6VQ",
+                "size": null
+            },
+            {
+                "id": 151510,
+                "name": "TPB - Culs-de-sac v1.zip",
+                "size": "1.17 MB"
+            },
+            {
+                "id": 151511,
+                "name": "TPB - Culs-de-sac v1.zip",
+                "size": "1.17 MB"
+            }
+        ],
+        "aliasEntry": "culs-de-sac",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30330-culs-de-sac\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30337,
+        "cid": 27,
+        "uid": 701248,
+        "author": "Nixon123c",
+        "category": "CSL Roads & Traffic",
+        "title": "Bus terminal v1",
+        "release": "1.0",
+        "submitted": "2015-03-26T21:40:55Z",
+        "updated": "2015-03-26T21:40:55Z",
+        "sizeTotal": "456.54 kB",
+        "files": [
+            {
+                "id": 151350,
+                "name": "Bus terminal.zip",
+                "size": "456.54 kB"
+            }
+        ],
+        "aliasEntry": "bus-terminal-v1",
+        "aliasAuthor": "nixon123c",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30337-bus-terminal-v1\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30338,
+        "cid": 27,
+        "uid": 701248,
+        "author": "Nixon123c",
+        "category": "CSL Roads & Traffic",
+        "title": "Highway industry connector",
+        "release": "1.0",
+        "submitted": "2015-03-26T22:01:55Z",
+        "updated": "2015-03-26T22:01:55Z",
+        "sizeTotal": "2.06 MB",
+        "files": [
+            {
+                "id": 151352,
+                "name": "Highway industry conector.zip",
+                "size": "833.92 kB"
+            },
+            {
+                "id": 151353,
+                "name": "Highway industry conector + Autobahnkreuzung .zip",
+                "size": "1.25 MB"
+            }
+        ],
+        "aliasEntry": "highway-industry-connector",
+        "aliasAuthor": "nixon123c",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30338-highway-industry-connector\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30342,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "Circular Town Modular v2",
+        "release": "1.0",
+        "submitted": "2015-03-28T18:39:16Z",
+        "updated": "2015-03-28T18:39:16Z",
+        "sizeTotal": "427.92 kB",
+        "files": [
+            {
+                "id": 151697,
+                "link": "http:\/\/goo.gl\/X1sVfN",
+                "size": null
+            },
+            {
+                "id": 151698,
+                "name": "TPB Circular Town Modular v2.zip",
+                "size": "427.92 kB"
+            }
+        ],
+        "aliasEntry": "circular-town-modular-v2",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30342-circular-town-modular-v2\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30346,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "Two-way Network Splitters (2 Versions) - TPB's Bullets",
+        "release": "1.0",
+        "submitted": "2015-03-29T00:59:23Z",
+        "updated": "2015-03-29T00:59:23Z",
+        "sizeTotal": "854.67 kB",
+        "files": [
+            {
+                "id": 151764,
+                "link": "http:\/\/goo.gl\/87F4l3",
+                "size": null
+            },
+            {
+                "id": 151765,
+                "link": "http:\/\/goo.gl\/JQQNzC",
+                "size": null
+            },
+            {
+                "id": 151766,
+                "name": "TPB Bullets - Two-way Network Splitters.zip",
+                "size": "854.67 kB"
+            }
+        ],
+        "aliasEntry": "two-way-network-splitters-2-versions-tpbs-bullets",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30346-two-way-network-splitters-2-versions-tpbs-bullets\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30347,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "Three-way Network Splitters (4 Versions) - TPB's Bullets",
+        "release": "1.0",
+        "submitted": "2015-03-29T01:38:14Z",
+        "updated": "2015-03-29T01:38:14Z",
+        "sizeTotal": "1.67 MB",
+        "files": [
+            {
+                "id": 151758,
+                "link": "http:\/\/goo.gl\/xjc5VJ",
+                "size": null
+            },
+            {
+                "id": 151759,
+                "link": "http:\/\/goo.gl\/Ory0dO",
+                "size": null
+            },
+            {
+                "id": 151760,
+                "link": "http:\/\/goo.gl\/gwd3Nd",
+                "size": null
+            },
+            {
+                "id": 151761,
+                "link": "http:\/\/goo.gl\/c6SckB",
+                "size": null
+            },
+            {
+                "id": 151762,
+                "name": "TPB Bullets -Three-way Network Splitters.zip",
+                "size": "1.67 MB"
+            }
+        ],
+        "aliasEntry": "three-way-network-splitters-4-versions-tpbs-bullets",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30347-three-way-network-splitters-4-versions-tpbs-bullets\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30355,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "Rail-road T Intersection (2 Versions)",
+        "release": "2.0",
+        "submitted": "2015-03-29T19:49:54Z",
+        "updated": "2015-03-29T19:49:54Z",
+        "sizeTotal": "810.52 kB",
+        "files": [
+            {
+                "id": 152016,
+                "link": "http:\/\/goo.gl\/FsEq65",
+                "size": null
+            },
+            {
+                "id": 152017,
+                "link": "http:\/\/goo.gl\/YsIGmb",
+                "size": null
+            },
+            {
+                "id": 152018,
+                "name": "TPB Rail-Road T Intersection.zip",
+                "size": "414.26 kB"
+            },
+            {
+                "id": 152019,
+                "name": "TPB Wide-Radius Rail-Road T.zip",
+                "size": "396.27 kB"
+            }
+        ],
+        "aliasEntry": "rail-road-t-intersection-2-versions",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30355-rail-road-t-intersection-2-versions\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30356,
+        "cid": 27,
+        "uid": 417120,
+        "author": "Titanicbuff",
+        "category": "CSL Roads & Traffic",
+        "title": "TBSwitchover",
+        "release": "1.0",
+        "submitted": "2015-03-30T07:29:00Z",
+        "updated": "2015-03-30T07:29:00Z",
+        "sizeTotal": "438.15 kB",
+        "files": [
+            {
+                "id": 151982,
+                "name": "TBSwitchover.zip",
+                "size": "438.15 kB"
+            }
+        ],
+        "aliasEntry": "tbswitchover",
+        "aliasAuthor": "titanicbuff",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30356-tbswitchover\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30358,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "Train Track Puzzle Pieces (3 pieces)",
+        "release": "1.0",
+        "submitted": "2015-03-30T10:10:40Z",
+        "updated": "2015-03-30T10:10:40Z",
+        "sizeTotal": "1.17 MB",
+        "files": [
+            {
+                "id": 153190,
+                "link": "http:\/\/goo.gl\/os94Ri",
+                "size": null
+            },
+            {
+                "id": 153191,
+                "link": "http:\/\/goo.gl\/6EkujE",
+                "size": null
+            },
+            {
+                "id": 153192,
+                "link": "http:\/\/goo.gl\/fZCwNa",
+                "size": null
+            },
+            {
+                "id": 153193,
+                "name": "RailPuzzlePieces.zip",
+                "size": "1.17 MB"
+            }
+        ],
+        "aliasEntry": "train-track-puzzle-pieces-3-pieces",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30358-train-track-puzzle-pieces-3-pieces\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30361,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "4-Way Train Intersection",
+        "release": "1.0",
+        "submitted": "2015-03-30T20:00:35Z",
+        "updated": "2015-03-30T20:00:35Z",
+        "sizeTotal": "398.91 kB",
+        "files": [
+            {
+                "id": 152117,
+                "link": "http:\/\/goo.gl\/ubojE0",
+                "size": null
+            },
+            {
+                "id": 152118,
+                "name": "TPB 4-way Train Intersection.zip",
+                "size": "398.91 kB"
+            }
+        ],
+        "aliasEntry": "4-way-train-intersection",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30361-4-way-train-intersection\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30364,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "4 Way Stack Intersection (Splitt)",
+        "release": "1.0",
+        "submitted": "2015-03-31T04:16:47Z",
+        "updated": "2015-03-31T04:16:47Z",
+        "sizeTotal": "688.17 kB",
+        "files": [
+            {
+                "id": 152230,
+                "name": "4WNJSI.rar",
+                "size": "688.17 kB"
+            }
+        ],
+        "aliasEntry": "4-way-stack-intersection-splitt",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30364-4-way-stack-intersection-splitt\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30366,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "3 Way Y Stack Intersection 120\u00ba",
+        "release": "1.0",
+        "submitted": "2015-03-31T04:25:58Z",
+        "updated": "2015-03-31T04:25:58Z",
+        "sizeTotal": "625.15 kB",
+        "files": [
+            {
+                "id": 152327,
+                "name": "3WSI.rar",
+                "size": "625.15 kB"
+            }
+        ],
+        "aliasEntry": "3-way-y-stack-intersection-120\u00ba",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30366-3-way-y-stack-intersection-120\u00ba\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30367,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "4 Way Stack Interchange (Vanilla Version)",
+        "release": "2.0.0",
+        "submitted": "2015-03-31T04:31:07Z",
+        "updated": "2015-03-31T04:31:07Z",
+        "sizeTotal": "635.89 kB",
+        "files": [
+            {
+                "id": 157793,
+                "name": "4_Way_Stack_Interchange.rar",
+                "size": "635.89 kB"
+            }
+        ],
+        "aliasEntry": "4-way-stack-interchange-vanilla-version",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30367-4-way-stack-interchange-vanilla-version\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30368,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "3 Way Trumpet Interchange",
+        "release": "2.0",
+        "submitted": "2015-03-31T06:38:34Z",
+        "updated": "2015-03-31T06:38:34Z",
+        "sizeTotal": "2.75 MB",
+        "files": [
+            {
+                "id": 152770,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=418621995",
+                "size": null
+            },
+            {
+                "id": 152771,
+                "name": "3WayTrumpetInterchange.rar",
+                "size": "2.75 MB"
+            }
+        ],
+        "aliasEntry": "3-way-trumpet-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30368-3-way-trumpet-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30370,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Full Freeway Cloverleaf with Footbridges",
+        "release": "1.0",
+        "submitted": "2015-03-31T18:49:17Z",
+        "updated": "2015-04-01T00:16:21Z",
+        "sizeTotal": "840.32 kB",
+        "files": [
+            {
+                "id": 152509,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=418065265",
+                "size": null
+            },
+            {
+                "id": 152510,
+                "name": "FullHighwayCloverleaf.rar",
+                "size": "840.32 kB"
+            }
+        ],
+        "aliasEntry": "full-freeway-cloverleaf-with-footbridges",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30370-full-freeway-cloverleaf-with-footbridges\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30374,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "3 Way Y Stack Interchange 120\u00ba",
+        "release": "2.0",
+        "submitted": "2015-04-01T01:17:12Z",
+        "updated": "2015-04-01T01:17:12Z",
+        "sizeTotal": "695.27 kB",
+        "files": [
+            {
+                "id": 152329,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=417451700",
+                "size": null
+            },
+            {
+                "id": 152330,
+                "name": "3WYSI120.rar",
+                "size": "695.27 kB"
+            }
+        ],
+        "aliasEntry": "3-way-y-stack-interchange-120\u00ba",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30374-3-way-y-stack-interchange-120\u00ba\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30375,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "4 Way Bi-Level Roundabout Intersection",
+        "release": "1.0",
+        "submitted": "2015-04-01T02:27:02Z",
+        "updated": "2015-04-01T02:27:02Z",
+        "sizeTotal": "757.00 kB",
+        "files": [
+            {
+                "id": 152332,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=417471442",
+                "size": null
+            },
+            {
+                "id": 152333,
+                "name": "4WBLRI.rar",
+                "size": "757.00 kB"
+            }
+        ],
+        "aliasEntry": "4-way-bi-level-roundabout-intersection",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30375-4-way-bi-level-roundabout-intersection\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30382,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Inverted SPUI - Freeway to 4 lane Avenue",
+        "release": "1.0",
+        "submitted": "2015-04-02T05:34:29Z",
+        "updated": "2015-04-02T05:34:29Z",
+        "sizeTotal": "2.49 MB",
+        "files": [
+            {
+                "id": 152600,
+                "name": "ISPUIFt4lA.rar",
+                "size": "2.49 MB"
+            }
+        ],
+        "aliasEntry": "inverted-spui-freeway-to-4-lane-avenue",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30382-inverted-spui-freeway-to-4-lane-avenue\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30383,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Inverted SPUI - Freeway to 6 lane Avenue",
+        "release": "1.0",
+        "submitted": "2015-04-02T05:43:38Z",
+        "updated": "2015-04-02T05:43:38Z",
+        "sizeTotal": "2.51 MB",
+        "files": [
+            {
+                "id": 152475,
+                "name": "ISPUIFt6lA.rar",
+                "size": "2.51 MB"
+            }
+        ],
+        "aliasEntry": "inverted-spui-freeway-to-6-lane-avenue",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30383-inverted-spui-freeway-to-6-lane-avenue\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30384,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "UFO Interchange",
+        "release": "1.0",
+        "submitted": "2015-04-02T06:18:17Z",
+        "updated": "2015-04-02T06:18:17Z",
+        "sizeTotal": "841.90 kB",
+        "files": [
+            {
+                "id": 152464,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=410052456",
+                "size": null
+            },
+            {
+                "id": 152466,
+                "name": "UFOI.rar",
+                "size": "841.90 kB"
+            }
+        ],
+        "aliasEntry": "ufo-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30384-ufo-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30385,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "PARCLO A4 (Partial Cloverleaf)",
+        "release": "2.0",
+        "submitted": "2015-04-02T10:41:26Z",
+        "updated": "2015-04-02T10:41:26Z",
+        "sizeTotal": "3.02 MB",
+        "files": [
+            {
+                "id": 152590,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=418115520",
+                "size": null
+            },
+            {
+                "id": 152591,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=418665720",
+                "size": null
+            },
+            {
+                "id": 152592,
+                "name": "PARCLOA4.rar",
+                "size": "1.95 MB"
+            },
+            {
+                "id": 152593,
+                "name": "PARCLOA4Terra.rar",
+                "size": "1.07 MB"
+            }
+        ],
+        "aliasEntry": "parclo-a4-partial-cloverleaf",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30385-parclo-a4-partial-cloverleaf\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30386,
+        "cid": 27,
+        "uid": 393188,
+        "author": "Sims firehouse",
+        "category": "CSL Roads & Traffic",
+        "title": "Three-level Semi-directional T Interchange 54x98",
+        "release": "1.4",
+        "submitted": "2015-04-03T06:16:36Z",
+        "updated": "2015-04-03T14:33:03Z",
+        "sizeTotal": "1.44 MB",
+        "files": [
+            {
+                "id": 156529,
+                "name": "Three-level Semi-directional T 54x98.zip",
+                "size": "1.44 MB"
+            }
+        ],
+        "aliasEntry": "three-level-semi-directional-t-interchange-54x98",
+        "aliasAuthor": "sims-firehouse",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30386-three-level-semi-directional-t-interchange-54x98\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30389,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Two Level Turbine Interchange (Whirlpool)",
+        "release": "1.0",
+        "submitted": "2015-04-03T17:32:20Z",
+        "updated": "2015-04-03T17:32:20Z",
+        "sizeTotal": "4.17 MB",
+        "files": [
+            {
+                "id": 152707,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=418854196",
+                "size": null
+            },
+            {
+                "id": 152708,
+                "name": "2levelturbine.rar",
+                "size": "4.17 MB"
+            }
+        ],
+        "aliasEntry": "two-level-turbine-interchange-whirlpool",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30389-two-level-turbine-interchange-whirlpool\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30398,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "Modular Avenue - UPDATED - Now with Menu Icons.",
+        "release": "2.0",
+        "submitted": "2015-04-05T09:35:29Z",
+        "updated": "2015-04-05T09:35:29Z",
+        "sizeTotal": "12.60 MB",
+        "files": [
+            {
+                "id": 153713,
+                "link": "http:\/\/goo.gl\/qR5K5w",
+                "size": null
+            },
+            {
+                "id": 153714,
+                "name": "TPB_MAv2.zip",
+                "size": "12.60 MB"
+            }
+        ],
+        "aliasEntry": "modular-avenue-updated-now-with-menu-icons",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30398-modular-avenue-updated-now-with-menu-icons\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30399,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "One Way Road System - Grid (Modular) - A guide to start a city succesfully.",
+        "release": "1.0",
+        "submitted": "2015-04-05T12:18:16Z",
+        "updated": "2015-04-05T12:18:16Z",
+        "sizeTotal": "1.51 MB",
+        "files": [
+            {
+                "id": 155687,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=420430134",
+                "size": null
+            },
+            {
+                "id": 155688,
+                "name": "One Way Road System V1 Modular.rar",
+                "size": "1.51 MB"
+            }
+        ],
+        "aliasEntry": "one-way-road-system-grid-modular-a-guide-to-start-a-city-succesfully",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30399-one-way-road-system-grid-modular-a-guide-to-start-a-city-succesfully\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30402,
+        "cid": 27,
+        "uid": 393188,
+        "author": "Sims firehouse",
+        "category": "CSL Roads & Traffic",
+        "title": "Girih Tiles",
+        "release": "1.0",
+        "submitted": "2015-04-05T21:48:23Z",
+        "updated": "2015-04-05T21:48:23Z",
+        "sizeTotal": "2.98 MB",
+        "files": [
+            {
+                "id": 153046,
+                "name": "Girih Tiles.zip",
+                "size": "2.98 MB"
+            }
+        ],
+        "aliasEntry": "girih-tiles",
+        "aliasAuthor": "sims-firehouse",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30402-girih-tiles\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30414,
+        "cid": 27,
+        "uid": 449970,
+        "author": "TPB",
+        "category": "CSL Roads & Traffic",
+        "title": "Highway to 6-Lane Road Roundabout Interchange (Request)",
+        "release": "1.1",
+        "submitted": "2015-04-07T01:07:37Z",
+        "updated": "2015-04-07T01:07:37Z",
+        "sizeTotal": "401.73 kB",
+        "files": [
+            {
+                "id": 153317,
+                "link": "http:\/\/goo.gl\/U2dj1n",
+                "size": null
+            },
+            {
+                "id": 153319,
+                "name": "TPB Highway to 6-Lane Roundabout.zip",
+                "size": "401.73 kB"
+            }
+        ],
+        "aliasEntry": "highway-to-6-lane-road-roundabout-interchange-request",
+        "aliasAuthor": "tpb",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30414-highway-to-6-lane-road-roundabout-interchange-request\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30417,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Magic Roundabout - Five Way Highway Interchange",
+        "release": "2.0",
+        "submitted": "2015-04-07T09:15:48Z",
+        "updated": "2015-04-07T09:15:48Z",
+        "sizeTotal": "5.64 MB",
+        "files": [
+            {
+                "id": 153497,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=422795693",
+                "size": null
+            },
+            {
+                "id": 153498,
+                "name": "Magic Roundabout (Swindon - UK).rar",
+                "size": "4.67 MB"
+            },
+            {
+                "id": 153499,
+                "name": "Magic Roundabout (UK).rar",
+                "size": "990.96 kB"
+            }
+        ],
+        "aliasEntry": "magic-roundabout-five-way-highway-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30417-magic-roundabout-five-way-highway-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30424,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Double Trumpet 4 Way Interchange",
+        "release": "2.0",
+        "submitted": "2015-04-08T11:57:01Z",
+        "updated": "2015-04-08T11:57:01Z",
+        "sizeTotal": "1.02 MB",
+        "files": [
+            {
+                "id": 153462,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=422311836",
+                "size": null
+            },
+            {
+                "id": 153463,
+                "name": "DoubleTrumpet4WayInterchange.rar",
+                "size": "1.02 MB"
+            }
+        ],
+        "aliasEntry": "double-trumpet-4-way-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30424-double-trumpet-4-way-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30429,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "The Exchanger",
+        "release": "2.0.0",
+        "submitted": "2015-04-09T20:50:04Z",
+        "updated": "2015-04-09T20:50:04Z",
+        "sizeTotal": "737.62 kB",
+        "files": [
+            {
+                "id": 157836,
+                "name": "The_Exchanger.rar",
+                "size": "737.62 kB"
+            }
+        ],
+        "aliasEntry": "the-exchanger",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30429-the-exchanger\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30432,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Two Level Semi-Directional T Interchange",
+        "release": "1.0",
+        "submitted": "2015-04-10T22:44:22Z",
+        "updated": "2015-04-10T22:44:22Z",
+        "sizeTotal": "6.84 MB",
+        "files": [
+            {
+                "id": 153506,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=422884203",
+                "size": null
+            },
+            {
+                "id": 153507,
+                "name": "SDTI.rar",
+                "size": "6.84 MB"
+            }
+        ],
+        "aliasEntry": "two-level-semi-directional-t-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30432-two-level-semi-directional-t-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30435,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Sunken Three Level Roundabout Interchange",
+        "release": "1.0",
+        "submitted": "2015-04-12T03:11:24Z",
+        "updated": "2015-04-12T03:11:24Z",
+        "sizeTotal": "1.64 MB",
+        "files": [
+            {
+                "id": 153741,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=423619311",
+                "size": null
+            },
+            {
+                "id": 153742,
+                "name": "S3LRI.rar",
+                "size": "1.64 MB"
+            }
+        ],
+        "aliasEntry": "sunken-three-level-roundabout-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30435-sunken-three-level-roundabout-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30444,
+        "cid": 27,
+        "uid": 529059,
+        "author": "ncommiss",
+        "category": "CSL Roads & Traffic",
+        "title": "Three level interchange",
+        "release": "1.0",
+        "submitted": "2015-04-13T17:12:05Z",
+        "updated": "2015-04-13T17:12:05Z",
+        "sizeTotal": "522.56 kB",
+        "files": [
+            {
+                "id": 153913,
+                "name": "Echangeur trois niveaux.zip",
+                "size": "522.56 kB"
+            }
+        ],
+        "aliasEntry": "three-level-interchange",
+        "aliasAuthor": "ncommiss",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30444-three-level-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30449,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Motorway with Rail Track",
+        "release": "1.0",
+        "submitted": "2015-04-14T19:47:52Z",
+        "updated": "2015-04-14T19:47:52Z",
+        "sizeTotal": "1.31 MB",
+        "files": [
+            {
+                "id": 153987,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=425099333",
+                "size": null
+            },
+            {
+                "id": 153988,
+                "name": "Motorway with Rail Track.rar",
+                "size": "1.31 MB"
+            }
+        ],
+        "aliasEntry": "motorway-with-rail-track",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30449-motorway-with-rail-track\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30453,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Transport Hub",
+        "release": "2.0",
+        "submitted": "2015-04-16T12:25:56Z",
+        "updated": "2015-04-16T12:25:56Z",
+        "sizeTotal": "3.99 MB",
+        "files": [
+            {
+                "id": 154176,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=425989358",
+                "size": null
+            },
+            {
+                "id": 154177,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=428843400",
+                "size": null
+            },
+            {
+                "id": 154178,
+                "name": "Transport Hub (Metro-bus).rar",
+                "size": "1.60 MB"
+            },
+            {
+                "id": 154179,
+                "name": "Transport Hub (Train-Metro-Bus).rar",
+                "size": "2.39 MB"
+            }
+        ],
+        "aliasEntry": "transport-hub",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30453-transport-hub\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30474,
+        "cid": 27,
+        "uid": 499439,
+        "author": "Trylk255",
+        "category": "CSL Roads & Traffic",
+        "title": "Transportation tracks - by Trylk255",
+        "release": "1.0a-r4",
+        "submitted": "2015-04-24T17:57:41Z",
+        "updated": "2015-04-24T19:44:05Z",
+        "sizeTotal": "11.93 MB",
+        "files": [
+            {
+                "id": 157144,
+                "name": "City streets tracks.zip",
+                "size": "4.51 MB"
+            },
+            {
+                "id": 157145,
+                "name": "Highway tracks.zip",
+                "size": "2.86 MB"
+            },
+            {
+                "id": 157146,
+                "name": "Parks.zip",
+                "size": "4.56 MB"
+            }
+        ],
+        "aliasEntry": "transportation-tracks-by-trylk255",
+        "aliasAuthor": "trylk255",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30474-transportation-tracks-by-trylk255\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30476,
+        "cid": 27,
+        "uid": 704496,
+        "author": "Nagito",
+        "category": "CSL Roads & Traffic",
+        "title": "4 highway interchange",
+        "release": "1.0",
+        "submitted": "2015-04-25T10:26:16Z",
+        "updated": "2015-04-25T10:26:16Z",
+        "sizeTotal": "3.68 kB",
+        "files": [
+            {
+                "id": 154550,
+                "name": "4 highway elevated intersection.rar",
+                "size": "3.68 kB"
+            }
+        ],
+        "aliasEntry": "4-highway-interchange",
+        "aliasAuthor": "nagito",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30476-4-highway-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30481,
+        "cid": 27,
+        "uid": 393188,
+        "author": "Sims firehouse",
+        "category": "CSL Roads & Traffic",
+        "title": "Low Pedestrian Overpass (Collection)",
+        "release": "2.0",
+        "submitted": "2015-04-26T05:09:20Z",
+        "updated": "2015-04-26T05:09:20Z",
+        "sizeTotal": "5.39 MB",
+        "files": [
+            {
+                "id": 155208,
+                "name": "Low Pedestrian Overpass ver 2.zip",
+                "size": "5.39 MB"
+            }
+        ],
+        "aliasEntry": "low-pedestrian-overpass-collection",
+        "aliasAuthor": "sims-firehouse",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30481-low-pedestrian-overpass-collection\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30484,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "The Flow Interchange",
+        "release": "1.0",
+        "submitted": "2015-04-26T19:07:20Z",
+        "updated": "2015-04-26T19:07:20Z",
+        "sizeTotal": "3.69 MB",
+        "files": [
+            {
+                "id": 154743,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=430256232",
+                "size": null
+            },
+            {
+                "id": 154744,
+                "name": "The Flow Interchange.rar",
+                "size": "3.69 MB"
+            }
+        ],
+        "aliasEntry": "the-flow-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30484-the-flow-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30485,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Hexagon Double Roundabout Interchange",
+        "release": "1.0",
+        "submitted": "2015-04-26T19:22:48Z",
+        "updated": "2015-04-26T19:22:48Z",
+        "sizeTotal": "1.39 MB",
+        "files": [
+            {
+                "id": 154748,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=432306184",
+                "size": null
+            },
+            {
+                "id": 154749,
+                "name": "Hexagon Double RA Interchange.rar",
+                "size": "1.39 MB"
+            }
+        ],
+        "aliasEntry": "hexagon-double-roundabout-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30485-hexagon-double-roundabout-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30505,
+        "cid": 27,
+        "uid": 703529,
+        "author": "Buizel10",
+        "category": "CSL Roads & Traffic",
+        "title": "4 Way Pretzel Interchange",
+        "release": "1.0",
+        "submitted": "2015-05-03T03:34:44Z",
+        "updated": "2015-05-03T03:34:44Z",
+        "sizeTotal": "2.73 kB",
+        "files": [
+            {
+                "id": 154928,
+                "name": "Pretzel Interchange Alpha 1.0.0.zip",
+                "size": "2.73 kB"
+            }
+        ],
+        "aliasEntry": "4-way-pretzel-interchange",
+        "aliasAuthor": "buizel10",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30505-4-way-pretzel-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30518,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Industrial Interchange",
+        "release": "2.0.0",
+        "submitted": "2015-05-06T12:09:27Z",
+        "updated": "2015-05-06T12:09:27Z",
+        "sizeTotal": "754.30 kB",
+        "files": [
+            {
+                "id": 157819,
+                "name": "Industrial_Interchange.rar",
+                "size": "754.30 kB"
+            }
+        ],
+        "aliasEntry": "industrial-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30518-industrial-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30519,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "4 Way Stack Double Trumpet Interchange",
+        "release": "1.0",
+        "submitted": "2015-05-06T12:19:17Z",
+        "updated": "2015-05-06T12:19:17Z",
+        "sizeTotal": "4.02 MB",
+        "files": [
+            {
+                "id": 155136,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=435619595",
+                "size": null
+            },
+            {
+                "id": 155137,
+                "name": "4 Way Stack Interchange 80x80 cells.rar",
+                "size": "4.02 MB"
+            }
+        ],
+        "aliasEntry": "4-way-stack-double-trumpet-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30519-4-way-stack-double-trumpet-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30529,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "\"Al Safa\" Interchange",
+        "release": "1.0",
+        "submitted": "2015-05-11T01:17:06Z",
+        "updated": "2015-05-11T01:17:06Z",
+        "sizeTotal": "539.68 kB",
+        "files": [
+            {
+                "id": 155529,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=440397751",
+                "size": null
+            },
+            {
+                "id": 155530,
+                "name": "Al Safa Interchange.rar",
+                "size": "539.68 kB"
+            }
+        ],
+        "aliasEntry": "al-safa-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30529-al-safa-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30531,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Free Style Interchange - 4 Way Elevated",
+        "release": "2.0.0",
+        "submitted": "2015-05-13T13:03:56Z",
+        "updated": "2015-05-13T13:03:56Z",
+        "sizeTotal": "701.31 kB",
+        "files": [
+            {
+                "id": 157748,
+                "name": "4_Way_Elevated_Interchange.rar",
+                "size": "701.31 kB"
+            }
+        ],
+        "aliasEntry": "free-style-interchange-4-way-elevated",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30531-free-style-interchange-4-way-elevated\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30532,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Free Style Interchange - 4 Way Sunken",
+        "release": "1.0",
+        "submitted": "2015-05-13T13:08:54Z",
+        "updated": "2015-05-13T13:08:54Z",
+        "sizeTotal": "684.50 kB",
+        "files": [
+            {
+                "id": 157797,
+                "name": "4_Way_Sunken_Interchange.rar",
+                "size": "684.50 kB"
+            }
+        ],
+        "aliasEntry": "free-style-interchange-4-way-sunken",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30532-free-style-interchange-4-way-sunken\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30535,
+        "cid": 27,
+        "uid": 705791,
+        "author": "FenX2015",
+        "category": "CSL Roads & Traffic",
+        "title": "Traffic Roundabout",
+        "release": "1.1",
+        "submitted": "2015-05-14T17:23:22Z",
+        "updated": "2015-05-14T17:23:22Z",
+        "sizeTotal": "461.22 kB",
+        "files": [
+            {
+                "id": 155683,
+                "name": "Circle.rar",
+                "size": "461.22 kB"
+            }
+        ],
+        "aliasEntry": "traffic-roundabout",
+        "aliasAuthor": "fenx2015",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30535-traffic-roundabout\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30547,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Double Crossover Merging Interchange (DCMI)",
+        "release": "2.0.0",
+        "submitted": "2015-05-18T10:07:25Z",
+        "updated": "2015-05-18T10:07:25Z",
+        "sizeTotal": "674.70 kB",
+        "files": [
+            {
+                "id": 157827,
+                "name": "DCMI_Interchange.rar",
+                "size": "674.70 kB"
+            }
+        ],
+        "aliasEntry": "double-crossover-merging-interchange-dcmi",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30547-double-crossover-merging-interchange-dcmi\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30565,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Turbine Interchange",
+        "release": "1.0",
+        "submitted": "2015-05-28T20:05:27Z",
+        "updated": "2015-05-28T20:05:27Z",
+        "sizeTotal": "742.23 kB",
+        "files": [
+            {
+                "id": 156657,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=450920022",
+                "size": null
+            },
+            {
+                "id": 156658,
+                "name": "Turbine Interchange.rar",
+                "size": "742.23 kB"
+            }
+        ],
+        "aliasEntry": "turbine-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30565-turbine-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30574,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Cloverstack Interchange",
+        "release": "1.0",
+        "submitted": "2015-06-03T17:08:55Z",
+        "updated": "2015-06-03T17:08:55Z",
+        "sizeTotal": "716.50 kB",
+        "files": [
+            {
+                "id": 157101,
+                "link": "http:\/\/steamcommunity.com\/sharedfiles\/filedetails\/?id=454275044",
+                "size": null
+            },
+            {
+                "id": 157102,
+                "name": "Cloverstack Interchange.rar",
+                "size": "716.50 kB"
+            }
+        ],
+        "aliasEntry": "cloverstack-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30574-cloverstack-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30580,
+        "cid": 27,
+        "uid": 707876,
+        "author": "Shadowxsx",
+        "category": "CSL Roads & Traffic",
+        "title": "Hybrid Grid",
+        "release": "1.0",
+        "submitted": "2015-06-08T04:10:56Z",
+        "updated": "2015-06-08T04:10:56Z",
+        "sizeTotal": "381.10 kB",
+        "files": [
+            {
+                "id": 157409,
+                "name": "Hybrid Grid.zip",
+                "size": "381.10 kB"
+            }
+        ],
+        "aliasEntry": "hybrid-grid",
+        "aliasAuthor": "shadowxsx",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30580-hybrid-grid\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30596,
+        "cid": 27,
+        "uid": 709020,
+        "author": "SHKSID",
+        "category": "CSL Roads & Traffic",
+        "title": "connector",
+        "release": "1.0",
+        "submitted": "2015-06-20T09:42:03Z",
+        "updated": "2015-06-20T09:42:03Z",
+        "sizeTotal": "357.56 kB",
+        "files": [
+            {
+                "id": 157616,
+                "name": "NewAsset.crp",
+                "size": "357.56 kB"
+            }
+        ],
+        "aliasEntry": "connector",
+        "aliasAuthor": "shksid",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30596-connector\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30600,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "6 Lane Road 3 Way Interchange",
+        "release": "1.0",
+        "submitted": "2015-06-20T12:06:00Z",
+        "updated": "2015-06-20T12:06:00Z",
+        "sizeTotal": "582.28 kB",
+        "files": [
+            {
+                "id": 157670,
+                "name": "6_Lane_Road_3_Way_Interchange.rar",
+                "size": "582.28 kB"
+            }
+        ],
+        "aliasEntry": "6-lane-road-3-way-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30600-6-lane-road-3-way-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30601,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Directional T Interchange",
+        "release": "1.0",
+        "submitted": "2015-06-20T12:16:29Z",
+        "updated": "2015-06-20T12:16:29Z",
+        "sizeTotal": "646.74 kB",
+        "files": [
+            {
+                "id": 157676,
+                "name": "Directional_T_Interchange.rar",
+                "size": "646.74 kB"
+            }
+        ],
+        "aliasEntry": "directional-t-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30601-directional-t-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30602,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Partial Cloverleaf",
+        "release": "1.0",
+        "submitted": "2015-06-20T12:27:38Z",
+        "updated": "2015-06-20T12:27:38Z",
+        "sizeTotal": "637.58 kB",
+        "files": [
+            {
+                "id": 157682,
+                "name": "Partial_Cloverleaf.rar",
+                "size": "637.58 kB"
+            }
+        ],
+        "aliasEntry": "partial-cloverleaf",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30602-partial-cloverleaf\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30603,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "4 Way Stack Interchange (Modded Version)",
+        "release": "1.0",
+        "submitted": "2015-06-20T12:41:29Z",
+        "updated": "2015-06-20T12:41:29Z",
+        "sizeTotal": "648.13 kB",
+        "files": [
+            {
+                "id": 157686,
+                "name": "4_Way_Stack_Interchange_(MV).rar",
+                "size": "648.13 kB"
+            }
+        ],
+        "aliasEntry": "4-way-stack-interchange-modded-version",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30603-4-way-stack-interchange-modded-version\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30604,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "McEwen Drive Interchange",
+        "release": "1.0",
+        "submitted": "2015-06-20T12:52:48Z",
+        "updated": "2015-06-20T12:54:23Z",
+        "sizeTotal": "657.07 kB",
+        "files": [
+            {
+                "id": 157700,
+                "name": "McEwen_Drive_Interchange.rar",
+                "size": "657.07 kB"
+            }
+        ],
+        "aliasEntry": "mcewen-drive-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30604-mcewen-drive-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30615,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "6 Lane Road to 6 Lane One Way Road Interchange",
+        "release": "1.0",
+        "submitted": "2015-06-22T07:59:51Z",
+        "updated": "2015-06-22T07:59:51Z",
+        "sizeTotal": "604.06 kB",
+        "files": [
+            {
+                "id": 157778,
+                "name": "6lrt6lowr.rar",
+                "size": "604.06 kB"
+            }
+        ],
+        "aliasEntry": "6-lane-road-to-6-lane-one-way-road-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30615-6-lane-road-to-6-lane-one-way-road-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30616,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "The Exchanger II",
+        "release": "1.0",
+        "submitted": "2015-06-22T08:39:11Z",
+        "updated": "2015-06-22T08:39:11Z",
+        "sizeTotal": "620.94 kB",
+        "files": [
+            {
+                "id": 157803,
+                "name": "The_Exchanger_II.rar",
+                "size": "620.94 kB"
+            }
+        ],
+        "aliasEntry": "the-exchanger-ii",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30616-the-exchanger-ii\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30617,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Tunneled 3 Level Roundabout Interchange",
+        "release": "1.0",
+        "submitted": "2015-06-22T08:45:20Z",
+        "updated": "2015-06-22T08:45:20Z",
+        "sizeTotal": "693.54 kB",
+        "files": [
+            {
+                "id": 157809,
+                "name": "Tunneled_3_Level_RA_Interchange.rar",
+                "size": "693.54 kB"
+            }
+        ],
+        "aliasEntry": "tunneled-3-level-roundabout-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30617-tunneled-3-level-roundabout-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30645,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Autobahn Yin-Yang Interchange",
+        "release": "1.0",
+        "submitted": "2015-07-05T12:45:07Z",
+        "updated": "2015-07-05T12:45:07Z",
+        "sizeTotal": "585.94 kB",
+        "files": [
+            {
+                "id": 158046,
+                "name": "Autobahn_Yin-Yang_Interchange.rar",
+                "size": "585.94 kB"
+            }
+        ],
+        "aliasEntry": "autobahn-yin-yang-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30645-autobahn-yin-yang-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30646,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Turbine Interchange II",
+        "release": "1.0",
+        "submitted": "2015-07-05T13:15:37Z",
+        "updated": "2015-07-05T13:15:37Z",
+        "sizeTotal": "592.18 kB",
+        "files": [
+            {
+                "id": 158055,
+                "name": "Turbine_Interchange_II.rar",
+                "size": "592.18 kB"
+            }
+        ],
+        "aliasEntry": "turbine-interchange-ii",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30646-turbine-interchange-ii\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30707,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Biggest Junction on Steam Workshop",
+        "release": "1.0",
+        "submitted": "2015-08-01T00:00:59Z",
+        "updated": "2015-08-01T00:00:59Z",
+        "sizeTotal": "530.48 kB",
+        "files": [
+            {
+                "id": 158554,
+                "name": "BJOSW.rar",
+                "size": "530.48 kB"
+            }
+        ],
+        "aliasEntry": "biggest-junction-on-steam-workshop",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30707-biggest-junction-on-steam-workshop\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30716,
+        "cid": 27,
+        "uid": 712327,
+        "author": "SkyTropolis",
+        "category": "CSL Roads & Traffic",
+        "title": "Route to start well (with grass) \/ Route pour bien d\u00e9buter (avec herbe)",
+        "release": "1.0",
+        "submitted": "2015-08-05T08:05:32Z",
+        "updated": "2015-08-05T08:05:32Z",
+        "sizeTotal": "530.30 kB",
+        "files": [
+            {
+                "id": 158594,
+                "name": "55c1c134a8cd1_Pour_bien_dbuter_(avec_herbe).crp",
+                "size": "530.30 kB"
+            }
+        ],
+        "aliasEntry": "route-to-start-well-with-grass-route-pour-bien-d\u00e9buter-avec-herbe",
+        "aliasAuthor": "skytropolis",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30716-route-to-start-well-with-grass-route-pour-bien-d\u00e9buter-avec-herbe\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30717,
+        "cid": 27,
+        "uid": 712327,
+        "author": "SkyTropolis",
+        "category": "CSL Roads & Traffic",
+        "title": "Route to start well (with grass and trees) \/ Route pour bien d\u00e9buter (avec herbe et arbres)",
+        "release": "1.0",
+        "submitted": "2015-08-05T08:05:33Z",
+        "updated": "2015-08-05T08:05:33Z",
+        "sizeTotal": "530.30 kB",
+        "files": [
+            {
+                "id": 158595,
+                "name": "55c1c13dc1b08_Pour_bien_dbuter_(avec_herbe)a.crp",
+                "size": "530.30 kB"
+            }
+        ],
+        "aliasEntry": "route-to-start-well-with-grass-and-trees-route-pour-bien-d\u00e9buter-avec-herbe-et-arbres",
+        "aliasAuthor": "skytropolis",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30717-route-to-start-well-with-grass-and-trees-route-pour-bien-d\u00e9buter-avec-herbe-et-arbres\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30718,
+        "cid": 27,
+        "uid": 712327,
+        "author": "SkyTropolis",
+        "category": "CSL Roads & Traffic",
+        "title": "Route to start well \/ Route de bien d\u00e9buter",
+        "release": "1.0",
+        "submitted": "2015-08-05T08:05:34Z",
+        "updated": "2015-08-05T08:05:34Z",
+        "sizeTotal": "528.70 kB",
+        "files": [
+            {
+                "id": 158596,
+                "name": "55c1c14190894_Pour_bien_dbuter.crp",
+                "size": "528.70 kB"
+            }
+        ],
+        "aliasEntry": "route-to-start-well-route-de-bien-d\u00e9buter",
+        "aliasAuthor": "skytropolis",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30718-route-to-start-well-route-de-bien-d\u00e9buter\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30740,
+        "cid": 27,
+        "uid": 723096,
+        "author": "hotpalms43",
+        "category": "CSL Roads & Traffic",
+        "title": "Modern_Highway_4-way_intersectio.crp",
+        "release": "1.0",
+        "submitted": "2015-08-19T23:50:38Z",
+        "updated": "2015-08-19T23:50:38Z",
+        "sizeTotal": "404.70 kB",
+        "files": [
+            {
+                "id": 158889,
+                "name": "Modern_Highway_4-way_intersectio.crp",
+                "size": "404.70 kB"
+            }
+        ],
+        "aliasEntry": "modern_highway_4-way_intersectiocrp",
+        "aliasAuthor": "hotpalms43",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30740-modern_highway_4-way_intersectiocrp\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30741,
+        "cid": 27,
+        "uid": 723096,
+        "author": "hotpalms43",
+        "category": "CSL Roads & Traffic",
+        "title": "Modern_Highway_ramp-6_lane.crp",
+        "release": "1.0",
+        "submitted": "2015-08-19T23:50:40Z",
+        "updated": "2015-08-19T23:50:40Z",
+        "sizeTotal": "388.59 kB",
+        "files": [
+            {
+                "id": 158890,
+                "name": "Modern_Highway_ramp-6_lane.crp",
+                "size": "388.59 kB"
+            }
+        ],
+        "aliasEntry": "modern_highway_ramp-6_lanecrp",
+        "aliasAuthor": "hotpalms43",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30741-modern_highway_ramp-6_lanecrp\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30830,
+        "cid": 27,
+        "uid": 11505,
+        "author": "Mr_Maison",
+        "category": "CSL Roads & Traffic",
+        "title": "NYC Elevated Pillar",
+        "release": "1.0",
+        "submitted": "2015-10-31T08:59:33Z",
+        "updated": "2015-10-31T08:59:33Z",
+        "sizeTotal": "385.55 kB",
+        "files": [
+            {
+                "id": 159678,
+                "name": "NYC_Elevated_Pillar.rar",
+                "size": "385.55 kB"
+            }
+        ],
+        "aliasEntry": "nyc-elevated-pillar",
+        "aliasAuthor": "mr_maison",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30830-nyc-elevated-pillar\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30831,
+        "cid": 27,
+        "uid": 728723,
+        "author": "fujikazu",
+        "category": "CSL Roads & Traffic",
+        "title": "All-Directional Interchange",
+        "release": "1.0",
+        "submitted": "2015-11-02T05:31:30Z",
+        "updated": "2015-11-02T05:31:30Z",
+        "sizeTotal": "566.83 kB",
+        "files": [
+            {
+                "id": 159693,
+                "name": "All-Directional_Interchange.crp",
+                "size": "566.83 kB"
+            }
+        ],
+        "aliasEntry": "all-directional-interchange",
+        "aliasAuthor": "fujikazu",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30831-all-directional-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30833,
+        "cid": 27,
+        "uid": 728723,
+        "author": "fujikazu",
+        "category": "CSL Roads & Traffic",
+        "title": "4-way Roundabout Interchange",
+        "release": "1.0",
+        "submitted": "2015-11-02T21:58:55Z",
+        "updated": "2015-11-02T21:58:55Z",
+        "sizeTotal": "1.62 MB",
+        "files": [
+            {
+                "id": 159702,
+                "name": "4-way_Interchange_(RA)_1.crp",
+                "size": "554.15 kB"
+            },
+            {
+                "id": 159703,
+                "name": "4-way_Interchange_(RA)_2.crp",
+                "size": "550.95 kB"
+            },
+            {
+                "id": 159704,
+                "name": "4-way_Interchange_(RA)_3.crp",
+                "size": "554.85 kB"
+            }
+        ],
+        "aliasEntry": "4-way-roundabout-interchange",
+        "aliasAuthor": "fujikazu",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30833-4-way-roundabout-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30915,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "4 Way Hybrid Interchange",
+        "release": "1.0",
+        "submitted": "2016-01-13T08:42:46Z",
+        "updated": "2016-01-13T08:42:46Z",
+        "sizeTotal": "736.93 kB",
+        "files": [
+            {
+                "id": 160303,
+                "name": "4WHYBRID.crp",
+                "size": "736.93 kB"
+            }
+        ],
+        "aliasEntry": "4-way-hybrid-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30915-4-way-hybrid-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30916,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "5 Way Spaghetti Interchange",
+        "release": "1.0",
+        "submitted": "2016-01-13T08:50:28Z",
+        "updated": "2016-01-13T08:50:28Z",
+        "sizeTotal": "775.68 kB",
+        "files": [
+            {
+                "id": 160314,
+                "name": "5 Way Interchange.crp",
+                "size": "775.68 kB"
+            }
+        ],
+        "aliasEntry": "5-way-spaghetti-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30916-5-way-spaghetti-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30917,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Pinavia Interchange",
+        "release": "1.0",
+        "submitted": "2016-01-13T23:31:51Z",
+        "updated": "2016-01-13T23:31:51Z",
+        "sizeTotal": "547.38 kB",
+        "files": [
+            {
+                "id": 160323,
+                "name": "Pinavia Interchange.crp",
+                "size": "547.38 kB"
+            }
+        ],
+        "aliasEntry": "pinavia-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30917-pinavia-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30918,
+        "cid": 27,
+        "uid": 673051,
+        "author": "agusingnavy",
+        "category": "CSL Roads & Traffic",
+        "title": "Pinavia Ellipse Interchange",
+        "release": "1.0",
+        "submitted": "2016-01-13T23:36:36Z",
+        "updated": "2016-01-13T23:36:36Z",
+        "sizeTotal": "623.91 kB",
+        "files": [
+            {
+                "id": 160329,
+                "name": "Pinavia Ellipse Interchange.crp",
+                "size": "623.91 kB"
+            }
+        ],
+        "aliasEntry": "pinavia-ellipse-interchange",
+        "aliasAuthor": "agusingnavy",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30918-pinavia-ellipse-interchange\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31450,
+        "cid": 27,
+        "uid": 748632,
+        "author": "theifixcz",
+        "category": "CSL Roads & Traffic",
+        "title": "Parking Zone 8x8 (by THEIFIXCZ)",
+        "release": "1.0",
+        "submitted": "2017-02-03T23:37:56Z",
+        "updated": "2017-02-03T23:37:56Z",
+        "sizeTotal": "696.45 kB",
+        "files": [
+            {
+                "id": 164509,
+                "name": "Parking zone.crp",
+                "size": "696.45 kB"
+            }
+        ],
+        "aliasEntry": "parking-zone-8x8-by-theifixcz",
+        "aliasAuthor": "theifixcz",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31450-parking-zone-8x8-by-theifixcz\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31532,
+        "cid": 27,
+        "uid": 749686,
+        "author": "DerAmberger",
+        "category": "CSL Roads & Traffic",
+        "title": "Messy junction",
+        "release": "1.0",
+        "submitted": "2017-03-20T15:59:07Z",
+        "updated": "2017-03-20T15:59:07Z",
+        "sizeTotal": "829.98 kB",
+        "files": [
+            {
+                "id": 165095,
+                "name": "Extreme Confusing Junction.crp",
+                "size": "829.98 kB"
+            }
+        ],
+        "aliasEntry": "messy-junction",
+        "aliasAuthor": "deramberger",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31532-messy-junction\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31761,
+        "cid": 27,
+        "uid": 728723,
+        "author": "fujikazu",
+        "category": "CSL Roads & Traffic",
+        "title": "All-Directional Interchange (4-lane version)",
+        "release": "1.0",
+        "submitted": "2017-06-14T07:41:57Z",
+        "updated": "2017-06-14T07:41:57Z",
+        "sizeTotal": "539.08 kB",
+        "files": [
+            {
+                "id": 166612,
+                "name": "All-Directional Interchange v2.crp",
+                "size": "539.08 kB"
+            }
+        ],
+        "aliasEntry": "all-directional-interchange-4-lane-version",
+        "aliasAuthor": "fujikazu",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31761-all-directional-interchange-4-lane-version\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 32510,
+        "cid": 27,
+        "uid": 748410,
+        "author": "AmiPolizeiFunk",
+        "category": "CSL Roads & Traffic",
+        "title": "Strasse 17 Juni export files",
+        "release": "1.0",
+        "submitted": "2018-09-18T02:32:52Z",
+        "updated": "2018-09-18T02:32:52Z",
+        "sizeTotal": "4.81 MB",
+        "files": [
+            {
+                "id": 172876,
+                "name": "strasse-17-juni-export.rar",
+                "size": "4.81 MB"
+            }
+        ],
+        "aliasEntry": "strasse-17-juni-export-files",
+        "aliasAuthor": "amipolizeifunk",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/32510-strasse-17-juni-export-files\/",
+        "===========": "=========================================="
+    }
+]

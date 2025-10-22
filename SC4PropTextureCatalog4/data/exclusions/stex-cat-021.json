@@ -1,0 +1,1621 @@
+[
+    {
+        "id": 28673,
+        "cid": 21,
+        "uid": 5713,
+        "author": "oppie",
+        "category": "SC13 Vehicles",
+        "title": "Red Double Decker Bus (Texture Replacement)",
+        "release": "1.0",
+        "submitted": "2013-05-01T20:49:11Z",
+        "updated": "2013-05-01T20:49:11Z",
+        "sizeTotal": "341.96 kB",
+        "files": [
+            {
+                "id": 133864,
+                "name": "Oppie_RouteMaster.zip",
+                "size": "341.96 kB"
+            }
+        ],
+        "aliasEntry": "red-double-decker-bus-texture-replacement",
+        "aliasAuthor": "oppie",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/28673-red-double-decker-bus-texture-replacement\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 28695,
+        "cid": 21,
+        "uid": 5713,
+        "author": "oppie",
+        "category": "SC13 Vehicles",
+        "title": "VIRM \"RegioRunner\" Custom Train",
+        "release": "3",
+        "submitted": "2013-05-10T21:14:42Z",
+        "updated": "2013-05-16T19:46:32Z",
+        "sizeTotal": "1.55 MB",
+        "files": [
+            {
+                "id": 133867,
+                "name": "Oppie_Train_VIRM_Regiorunner.zip",
+                "size": "1.55 MB"
+            }
+        ],
+        "aliasEntry": "virm-regiorunner-custom-train",
+        "aliasAuthor": "oppie",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/28695-virm-regiorunner-custom-train\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 28696,
+        "cid": 21,
+        "uid": 5713,
+        "author": "oppie",
+        "category": "SC13 Vehicles",
+        "title": "Mercedes Atego Fire Engine",
+        "release": "1.0",
+        "submitted": "2013-05-11T16:19:46Z",
+        "updated": "2013-05-11T16:19:46Z",
+        "sizeTotal": "1.84 MB",
+        "files": [
+            {
+                "id": 133872,
+                "name": "Oppie_Fireengine.zip",
+                "size": "1.84 MB"
+            }
+        ],
+        "aliasEntry": "mercedes-atego-fire-engine",
+        "aliasAuthor": "oppie",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/28696-mercedes-atego-fire-engine\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 28704,
+        "cid": 21,
+        "uid": 5713,
+        "author": "oppie",
+        "category": "SC13 Vehicles",
+        "title": "VDL \"Citea\" Bus",
+        "release": "2",
+        "submitted": "2013-05-13T20:27:06Z",
+        "updated": "2013-05-13T20:27:06Z",
+        "sizeTotal": "5.84 MB",
+        "files": [
+            {
+                "id": 133877,
+                "name": "Oppie_Bus_Citea.zip",
+                "size": "4.11 MB"
+            },
+            {
+                "id": 133878,
+                "name": "Oppie_Bus_Citea_NL.zip",
+                "size": "1.74 MB"
+            }
+        ],
+        "aliasEntry": "vdl-citea-bus",
+        "aliasAuthor": "oppie",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/28704-vdl-citea-bus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 28715,
+        "cid": 21,
+        "uid": 5713,
+        "author": "oppie",
+        "category": "SC13 Vehicles",
+        "title": "TGV Train",
+        "release": "1.0",
+        "submitted": "2013-05-17T19:35:58Z",
+        "updated": "2013-05-17T19:35:58Z",
+        "sizeTotal": "4.35 MB",
+        "files": [
+            {
+                "id": 133889,
+                "name": "Oppie_Train_TGV.zip",
+                "size": "4.35 MB"
+            }
+        ],
+        "aliasEntry": "tgv-train",
+        "aliasAuthor": "oppie",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/28715-tgv-train\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 28731,
+        "cid": 21,
+        "uid": 5713,
+        "author": "oppie",
+        "category": "SC13 Vehicles",
+        "title": "Bombardier Cityrunner Tram",
+        "release": "1.1",
+        "submitted": "2013-05-19T20:15:58Z",
+        "updated": "2013-05-19T22:29:48Z",
+        "sizeTotal": "1.59 MB",
+        "files": [
+            {
+                "id": 133894,
+                "name": "Oppie_Tram_Cityrunner.zip",
+                "size": "1.59 MB"
+            }
+        ],
+        "aliasEntry": "bombardier-cityrunner-tram",
+        "aliasAuthor": "oppie",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/28731-bombardier-cityrunner-tram\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 28740,
+        "cid": 21,
+        "uid": 5713,
+        "author": "oppie",
+        "category": "SC13 Vehicles",
+        "title": "Tour Coach",
+        "release": "1.0",
+        "submitted": "2013-05-22T19:55:23Z",
+        "updated": "2013-05-22T19:55:23Z",
+        "sizeTotal": "638.14 kB",
+        "files": [
+            {
+                "id": 133899,
+                "name": "Oppie_Bus_Tourist.zip",
+                "size": "638.14 kB"
+            }
+        ],
+        "aliasEntry": "tour-coach",
+        "aliasAuthor": "oppie",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/28740-tour-coach\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 28745,
+        "cid": 21,
+        "uid": 5713,
+        "author": "oppie",
+        "category": "SC13 Vehicles",
+        "title": "Dutch Emergency Vehicles",
+        "release": "1.0",
+        "submitted": "2013-05-26T18:22:12Z",
+        "updated": "2013-05-26T18:22:12Z",
+        "sizeTotal": "7.63 MB",
+        "files": [
+            {
+                "id": 133903,
+                "name": "Oppie_Emergency_NL.zip",
+                "size": "7.63 MB"
+            }
+        ],
+        "aliasEntry": "dutch-emergency-vehicles",
+        "aliasAuthor": "oppie",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/28745-dutch-emergency-vehicles\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29206,
+        "cid": 21,
+        "uid": 468621,
+        "author": "Tobse",
+        "category": "SC13 Vehicles",
+        "title": "Tobse_Bus3*FIX",
+        "release": "1.1",
+        "submitted": "2014-01-17T01:15:09Z",
+        "updated": "2014-01-17T01:17:33Z",
+        "sizeTotal": "526.59 kB",
+        "files": [
+            {
+                "id": 135706,
+                "name": "Tobse_Berlin_Bus3.zip",
+                "size": "526.59 kB"
+            }
+        ],
+        "aliasEntry": "tobse_bus3fix",
+        "aliasAuthor": "tobse",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29206-tobse_bus3fix\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29210,
+        "cid": 21,
+        "uid": 468621,
+        "author": "Tobse",
+        "category": "SC13 Vehicles",
+        "title": "Tobse_Bus2",
+        "release": "1.0",
+        "submitted": "2014-01-19T21:03:58Z",
+        "updated": "2014-01-19T21:03:58Z",
+        "sizeTotal": "450.64 kB",
+        "files": [
+            {
+                "id": 135704,
+                "name": "Tobse_Berlin_Bus2.zip",
+                "size": "450.64 kB"
+            }
+        ],
+        "aliasEntry": "tobse_bus2",
+        "aliasAuthor": "tobse",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29210-tobse_bus2\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29212,
+        "cid": 21,
+        "uid": 468621,
+        "author": "Tobse",
+        "category": "SC13 Vehicles",
+        "title": "Tobse_Bus2 changeable colors",
+        "release": "1.0",
+        "submitted": "2014-01-20T15:43:28Z",
+        "updated": "2014-01-20T15:43:28Z",
+        "sizeTotal": "475.36 kB",
+        "files": [
+            {
+                "id": 135702,
+                "name": "Tobse_Bus2.zip",
+                "size": "475.36 kB"
+            }
+        ],
+        "aliasEntry": "tobse_bus2-changeable-colors",
+        "aliasAuthor": "tobse",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29212-tobse_bus2-changeable-colors\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29225,
+        "cid": 21,
+        "uid": 468621,
+        "author": "Tobse",
+        "category": "SC13 Vehicles",
+        "title": "Tobse_PoliceCar Set",
+        "release": "1.0",
+        "submitted": "2014-01-26T18:53:52Z",
+        "updated": "2014-01-26T18:53:52Z",
+        "sizeTotal": "1,005.19 kB",
+        "files": [
+            {
+                "id": 135699,
+                "name": "Tobse_PoliceCar Set.zip",
+                "size": "1,005.19 kB"
+            }
+        ],
+        "aliasEntry": "tobse_policecar-set",
+        "aliasAuthor": "tobse",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29225-tobse_policecar-set\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29255,
+        "cid": 21,
+        "uid": 468621,
+        "author": "Tobse",
+        "category": "SC13 Vehicles",
+        "title": "**UPDATE**Tobse_Bus Set+NewCapacity",
+        "release": "2.0",
+        "submitted": "2014-02-05T20:55:27Z",
+        "updated": "2014-02-05T20:55:27Z",
+        "sizeTotal": "5.56 MB",
+        "files": [
+            {
+                "id": 141476,
+                "name": "new Bus Capacity 1.0.zip",
+                "size": "549.13 kB"
+            },
+            {
+                "id": 141477,
+                "name": "Tobse MinucipalBus 2.0.zip",
+                "size": "2.63 MB"
+            },
+            {
+                "id": 141478,
+                "name": "Tobse ShuttleBus 2.0.zip",
+                "size": "2.39 MB"
+            }
+        ],
+        "aliasEntry": "updatetobse_bus-setnewcapacity",
+        "aliasAuthor": "tobse",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29255-updatetobse_bus-setnewcapacity\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29265,
+        "cid": 21,
+        "uid": 645652,
+        "author": "parkerwyoung",
+        "category": "SC13 Vehicles",
+        "title": "UPDATED: Police Dodge Charger - Variety Set",
+        "release": "1.4",
+        "submitted": "2014-02-07T23:51:00Z",
+        "updated": "2014-02-07T23:51:00Z",
+        "sizeTotal": "6.61 MB",
+        "files": [
+            {
+                "id": 135529,
+                "name": "Mod-PoliceCharger-v1.4.zip",
+                "size": "6.61 MB"
+            }
+        ],
+        "aliasEntry": "updated-police-dodge-charger-variety-set",
+        "aliasAuthor": "parkerwyoung",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29265-updated-police-dodge-charger-variety-set\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29269,
+        "cid": 21,
+        "uid": 645652,
+        "author": "parkerwyoung",
+        "category": "SC13 Vehicles",
+        "title": "UPDATED: Police H2 Hummer - Variety Set",
+        "release": "1.4",
+        "submitted": "2014-02-09T21:25:40Z",
+        "updated": "2014-02-09T21:25:40Z",
+        "sizeTotal": "6.29 MB",
+        "files": [
+            {
+                "id": 135510,
+                "name": "Mod-PoliceHummer-v1.4.zip",
+                "size": "6.29 MB"
+            }
+        ],
+        "aliasEntry": "updated-police-h2-hummer-variety-set",
+        "aliasAuthor": "parkerwyoung",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29269-updated-police-h2-hummer-variety-set\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29277,
+        "cid": 21,
+        "uid": 645652,
+        "author": "parkerwyoung",
+        "category": "SC13 Vehicles",
+        "title": "Moving Trucks - Variety Set",
+        "release": "1.0",
+        "submitted": "2014-02-12T22:07:26Z",
+        "updated": "2014-02-12T22:07:26Z",
+        "sizeTotal": "421.95 kB",
+        "files": [
+            {
+                "id": 129552,
+                "name": "Mod-MovingTruck-v1.0.zip",
+                "size": "421.95 kB"
+            }
+        ],
+        "aliasEntry": "moving-trucks-variety-set",
+        "aliasAuthor": "parkerwyoung",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29277-moving-trucks-variety-set\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29282,
+        "cid": 21,
+        "uid": 645652,
+        "author": "parkerwyoung",
+        "category": "SC13 Vehicles",
+        "title": "UPDATED: Police Ford Crown Victoria - Variety Set",
+        "release": "1.4",
+        "submitted": "2014-02-14T22:49:51Z",
+        "updated": "2014-02-14T22:49:51Z",
+        "sizeTotal": "6.64 MB",
+        "files": [
+            {
+                "id": 129505,
+                "name": "Mod-PoliceCrownVic-v1.4.zip",
+                "size": "6.64 MB"
+            }
+        ],
+        "aliasEntry": "updated-police-ford-crown-victoria-variety-set",
+        "aliasAuthor": "parkerwyoung",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29282-updated-police-ford-crown-victoria-variety-set\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29285,
+        "cid": 21,
+        "uid": 645652,
+        "author": "parkerwyoung",
+        "category": "SC13 Vehicles",
+        "title": "UPDATED: Police Lamborghini Aventador - Variety Set",
+        "release": "1.4",
+        "submitted": "2014-02-17T00:37:12Z",
+        "updated": "2014-02-17T00:37:12Z",
+        "sizeTotal": "8.96 MB",
+        "files": [
+            {
+                "id": 135486,
+                "name": "Mod-PoliceLambo-v1.4.zip",
+                "size": "8.96 MB"
+            }
+        ],
+        "aliasEntry": "updated-police-lamborghini-aventador-variety-set",
+        "aliasAuthor": "parkerwyoung",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29285-updated-police-lamborghini-aventador-variety-set\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29287,
+        "cid": 21,
+        "uid": 645652,
+        "author": "parkerwyoung",
+        "category": "SC13 Vehicles",
+        "title": "UPDATED: Police Detective Vehicle - Collection",
+        "release": "1.4",
+        "submitted": "2014-02-17T16:38:50Z",
+        "updated": "2014-02-17T16:38:50Z",
+        "sizeTotal": "929.05 kB",
+        "files": [
+            {
+                "id": 135472,
+                "name": "Mod-PoliceDetective-v1.4.zip",
+                "size": "929.05 kB"
+            }
+        ],
+        "aliasEntry": "updated-police-detective-vehicle-collection",
+        "aliasAuthor": "parkerwyoung",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29287-updated-police-detective-vehicle-collection\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29288,
+        "cid": 21,
+        "uid": 645652,
+        "author": "parkerwyoung",
+        "category": "SC13 Vehicles",
+        "title": "Large School Bus - Grade School Upgrade",
+        "release": "1.0",
+        "submitted": "2014-02-17T22:29:28Z",
+        "updated": "2014-02-17T22:29:28Z",
+        "sizeTotal": "345.02 kB",
+        "files": [
+            {
+                "id": 135466,
+                "name": "Mod-LargeSchoolBus-Upgrade-v1.0.zip",
+                "size": "345.02 kB"
+            }
+        ],
+        "aliasEntry": "large-school-bus-grade-school-upgrade",
+        "aliasAuthor": "parkerwyoung",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29288-large-school-bus-grade-school-upgrade\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29289,
+        "cid": 21,
+        "uid": 468621,
+        "author": "Tobse",
+        "category": "SC13 Vehicles",
+        "title": "German Police Cars+PSD File",
+        "release": "1.0",
+        "submitted": "2014-02-18T14:58:12Z",
+        "updated": "2014-02-18T14:58:12Z",
+        "sizeTotal": "14.75 MB",
+        "files": [
+            {
+                "id": 135686,
+                "name": "German Police Cars.rar",
+                "size": "14.75 MB"
+            }
+        ],
+        "aliasEntry": "german-police-carspsd-file",
+        "aliasAuthor": "tobse",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29289-german-police-carspsd-file\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29295,
+        "cid": 21,
+        "uid": 645652,
+        "author": "parkerwyoung",
+        "category": "SC13 Vehicles",
+        "title": "UPDATED: Medical Ambulance - Variety Set",
+        "release": "1.6",
+        "submitted": "2014-02-22T00:35:46Z",
+        "updated": "2014-02-22T00:35:46Z",
+        "sizeTotal": "5.99 MB",
+        "files": [
+            {
+                "id": 135448,
+                "name": "Mod-MedAmbulance-v1.6.zip",
+                "size": "5.99 MB"
+            }
+        ],
+        "aliasEntry": "updated-medical-ambulance-variety-set",
+        "aliasAuthor": "parkerwyoung",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29295-updated-medical-ambulance-variety-set\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29321,
+        "cid": 21,
+        "uid": 645652,
+        "author": "parkerwyoung",
+        "category": "SC13 Vehicles",
+        "title": "UPDATED: Fire Engine - Variety Set",
+        "release": "1.1",
+        "submitted": "2014-03-09T23:52:53Z",
+        "updated": "2014-03-09T23:52:53Z",
+        "sizeTotal": "6.93 MB",
+        "files": [
+            {
+                "id": 135433,
+                "name": "Mod-FireEngine-v1.1.zip",
+                "size": "6.93 MB"
+            }
+        ],
+        "aliasEntry": "updated-fire-engine-variety-set",
+        "aliasAuthor": "parkerwyoung",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29321-updated-fire-engine-variety-set\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29345,
+        "cid": 21,
+        "uid": 645652,
+        "author": "parkerwyoung",
+        "category": "SC13 Vehicles",
+        "title": "Taxi Crown Victoria - Variety Set",
+        "release": "1.0",
+        "submitted": "2014-03-19T01:50:50Z",
+        "updated": "2014-03-19T01:50:50Z",
+        "sizeTotal": "2.02 MB",
+        "files": [
+            {
+                "id": 135424,
+                "name": "Mod-TaxiCrownVic-v1.0.zip",
+                "size": "2.02 MB"
+            }
+        ],
+        "aliasEntry": "taxi-crown-victoria-variety-set",
+        "aliasAuthor": "parkerwyoung",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29345-taxi-crown-victoria-variety-set\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29350,
+        "cid": 21,
+        "uid": 645652,
+        "author": "parkerwyoung",
+        "category": "SC13 Vehicles",
+        "title": "Medical Ambulance Van - Variety Set",
+        "release": "1.0",
+        "submitted": "2014-03-20T19:36:05Z",
+        "updated": "2014-03-20T19:36:05Z",
+        "sizeTotal": "5.19 MB",
+        "files": [
+            {
+                "id": 135411,
+                "name": "Mod-MedAmbulanceVan-v1.0.zip",
+                "size": "5.19 MB"
+            }
+        ],
+        "aliasEntry": "medical-ambulance-van-variety-set",
+        "aliasAuthor": "parkerwyoung",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29350-medical-ambulance-van-variety-set\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29401,
+        "cid": 21,
+        "uid": 645652,
+        "author": "parkerwyoung",
+        "category": "SC13 Vehicles",
+        "title": "Civilian Vehicles - Mixed Collection",
+        "release": "1.0",
+        "submitted": "2014-04-04T13:58:24Z",
+        "updated": "2014-04-04T13:58:24Z",
+        "sizeTotal": "7.92 MB",
+        "files": [
+            {
+                "id": 129693,
+                "name": "Mod-CivilianVehicles-MixedCollection-v1.0.zip",
+                "size": "7.92 MB"
+            }
+        ],
+        "aliasEntry": "civilian-vehicles-mixed-collection",
+        "aliasAuthor": "parkerwyoung",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29401-civilian-vehicles-mixed-collection\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29408,
+        "cid": 21,
+        "uid": 653526,
+        "author": "Takouma",
+        "category": "SC13 Vehicles",
+        "title": "Japanese Moving Truck MOD",
+        "release": "1.0",
+        "submitted": "2014-04-06T16:39:00Z",
+        "updated": "2014-04-06T16:39:00Z",
+        "sizeTotal": "203.26 kB",
+        "files": [
+            {
+                "id": 138058,
+                "name": "JP-MovingTruck_byTakouma.zip",
+                "size": "203.26 kB"
+            }
+        ],
+        "aliasEntry": "japanese-moving-truck-mod",
+        "aliasAuthor": "takouma",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29408-japanese-moving-truck-mod\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29410,
+        "cid": 21,
+        "uid": 653526,
+        "author": "Takouma",
+        "category": "SC13 Vehicles",
+        "title": "Japanese Emergency Car MOD Set",
+        "release": "1.0",
+        "submitted": "2014-04-06T17:11:57Z",
+        "updated": "2014-04-06T17:11:57Z",
+        "sizeTotal": "3.45 MB",
+        "files": [
+            {
+                "id": 129839,
+                "name": "JP-EmergencySet_byTakouma.zip",
+                "size": "3.45 MB"
+            }
+        ],
+        "aliasEntry": "japanese-emergency-car-mod-set",
+        "aliasAuthor": "takouma",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29410-japanese-emergency-car-mod-set\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29465,
+        "cid": 21,
+        "uid": 645652,
+        "author": "parkerwyoung",
+        "category": "SC13 Vehicles",
+        "title": "Wind Farm Service Truck - Power Plant Vehicle",
+        "release": "1.0",
+        "submitted": "2014-04-14T21:46:55Z",
+        "updated": "2014-04-14T21:46:55Z",
+        "sizeTotal": "1.47 MB",
+        "files": [
+            {
+                "id": 135391,
+                "name": "Mod-Parker-WindFarmServiceTruck-v1.0.zip",
+                "size": "1.47 MB"
+            }
+        ],
+        "aliasEntry": "wind-farm-service-truck-power-plant-vehicle",
+        "aliasAuthor": "parkerwyoung",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29465-wind-farm-service-truck-power-plant-vehicle\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29516,
+        "cid": 21,
+        "uid": 5713,
+        "author": "oppie",
+        "category": "SC13 Vehicles",
+        "title": "NS \"1600\" + \"ICR\" Train (Offline Only)",
+        "release": "1.0",
+        "submitted": "2014-04-25T15:58:54Z",
+        "updated": "2014-04-25T15:58:54Z",
+        "sizeTotal": "152.71 kB",
+        "files": [
+            {
+                "id": 133859,
+                "name": "Oppie_OFFLINE_Train_NS1600.rar",
+                "size": "152.71 kB"
+            }
+        ],
+        "aliasEntry": "ns-1600-icr-train-offline-only",
+        "aliasAuthor": "oppie",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29516-ns-1600-icr-train-offline-only\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29590,
+        "cid": 21,
+        "uid": 653526,
+        "author": "Takouma",
+        "category": "SC13 Vehicles",
+        "title": "Japanese Commuter Train E233 MOD SET",
+        "release": "1.0",
+        "submitted": "2014-05-18T17:55:00Z",
+        "updated": "2014-05-18T17:57:45Z",
+        "sizeTotal": "7.01 MB",
+        "files": [
+            {
+                "id": 138037,
+                "name": "JP-CommuterTrain-Set_byTakouma.zip",
+                "size": "7.01 MB"
+            }
+        ],
+        "aliasEntry": "japanese-commuter-train-e233-mod-set",
+        "aliasAuthor": "takouma",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29590-japanese-commuter-train-e233-mod-set\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29643,
+        "cid": 21,
+        "uid": 653526,
+        "author": "Takouma",
+        "category": "SC13 Vehicles",
+        "title": "Japanese Bus MOD Set",
+        "release": "1.0",
+        "submitted": "2014-06-15T11:31:17Z",
+        "updated": "2014-06-15T11:31:17Z",
+        "sizeTotal": "2.50 MB",
+        "files": [
+            {
+                "id": 138473,
+                "name": "JP-Nagoya-MetropolitanBus_byTakouma.zip",
+                "size": "500.44 kB"
+            },
+            {
+                "id": 138474,
+                "name": "JP-BusMOD-Set_byTakouma.zip",
+                "size": "2.01 MB"
+            }
+        ],
+        "aliasEntry": "japanese-bus-mod-set",
+        "aliasAuthor": "takouma",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29643-japanese-bus-mod-set\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29648,
+        "cid": 21,
+        "uid": 666260,
+        "author": "yanagizawa",
+        "category": "SC13 Vehicles",
+        "title": "Japanese Vehicle Mod - Taxi Repaint (Toukokyo)",
+        "release": "1.0",
+        "submitted": "2014-06-17T04:42:10Z",
+        "updated": "2014-06-17T04:42:10Z",
+        "sizeTotal": "126.06 kB",
+        "files": [
+            {
+                "id": 135785,
+                "name": "JP-TaxiCrownVic-Cab-TOUKOKYO.zip",
+                "size": "126.06 kB"
+            }
+        ],
+        "aliasEntry": "japanese-vehicle-mod-taxi-repaint-toukokyo",
+        "aliasAuthor": "yanagizawa",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29648-japanese-vehicle-mod-taxi-repaint-toukokyo\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29657,
+        "cid": 21,
+        "uid": 646323,
+        "author": "Danny50205",
+        "category": "SC13 Vehicles",
+        "title": "LHM-P-791 cargo plane mod",
+        "release": "1.0",
+        "submitted": "2014-06-18T22:27:12Z",
+        "updated": "2014-06-18T22:27:12Z",
+        "sizeTotal": "150.56 kB",
+        "files": [
+            {
+                "id": 135888,
+                "name": "CargoplaneP-791.rar",
+                "size": "150.56 kB"
+            }
+        ],
+        "aliasEntry": "lhm-p-791-cargo-plane-mod",
+        "aliasAuthor": "danny50205",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29657-lhm-p-791-cargo-plane-mod\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29689,
+        "cid": 21,
+        "uid": 672026,
+        "author": "Firsta",
+        "category": "SC13 Vehicles",
+        "title": "Trans Jakarta Shuttlebus",
+        "release": "1.0",
+        "submitted": "2014-06-29T03:55:23Z",
+        "updated": "2014-06-29T03:55:23Z",
+        "sizeTotal": "329.27 kB",
+        "files": [
+            {
+                "id": 136421,
+                "name": "Firsta_TransJakarta_Shuttlebus.rar",
+                "size": "329.27 kB"
+            }
+        ],
+        "aliasEntry": "trans-jakarta-shuttlebus",
+        "aliasAuthor": "firsta",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29689-trans-jakarta-shuttlebus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29692,
+        "cid": 21,
+        "uid": 672026,
+        "author": "Firsta",
+        "category": "SC13 Vehicles",
+        "title": "SBS Transit as Municipal Bus",
+        "release": "1.0",
+        "submitted": "2014-06-29T16:37:56Z",
+        "updated": "2014-06-29T16:37:56Z",
+        "sizeTotal": "400.36 kB",
+        "files": [
+            {
+                "id": 136488,
+                "name": "Firsta_SBSTransit_Municipalbus.rar",
+                "size": "400.36 kB"
+            }
+        ],
+        "aliasEntry": "sbs-transit-as-municipal-bus",
+        "aliasAuthor": "firsta",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29692-sbs-transit-as-municipal-bus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29693,
+        "cid": 21,
+        "uid": 491587,
+        "author": "bowserking123",
+        "category": "SC13 Vehicles",
+        "title": "SimBus",
+        "release": "1.0",
+        "submitted": "2014-06-30T13:05:24Z",
+        "updated": "2014-06-30T13:05:24Z",
+        "sizeTotal": "1.17 MB",
+        "files": [
+            {
+                "id": 136507,
+                "name": "SimBus.zip",
+                "size": "597.27 kB"
+            },
+            {
+                "id": 136508,
+                "name": "SimBus.zip",
+                "size": "597.27 kB"
+            }
+        ],
+        "aliasEntry": "simbus",
+        "aliasAuthor": "bowserking123",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29693-simbus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29694,
+        "cid": 21,
+        "uid": 491587,
+        "author": "bowserking123",
+        "category": "SC13 Vehicles",
+        "title": "Lama Transit",
+        "release": "1.0",
+        "submitted": "2014-06-30T14:33:03Z",
+        "updated": "2014-06-30T14:33:03Z",
+        "sizeTotal": "587.90 kB",
+        "files": [
+            {
+                "id": 136511,
+                "name": "LAMA.zip",
+                "size": "587.90 kB"
+            }
+        ],
+        "aliasEntry": "lama-transit",
+        "aliasAuthor": "bowserking123",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29694-lama-transit\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29695,
+        "cid": 21,
+        "uid": 491587,
+        "author": "bowserking123",
+        "category": "SC13 Vehicles",
+        "title": "French bus",
+        "release": "1.0",
+        "submitted": "2014-06-30T15:46:00Z",
+        "updated": "2014-06-30T15:46:00Z",
+        "sizeTotal": "376.76 kB",
+        "files": [
+            {
+                "id": 136515,
+                "name": "French Bus.zip",
+                "size": "376.76 kB"
+            }
+        ],
+        "aliasEntry": "french-bus",
+        "aliasAuthor": "bowserking123",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29695-french-bus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29698,
+        "cid": 21,
+        "uid": 491587,
+        "author": "bowserking123",
+        "category": "SC13 Vehicles",
+        "title": "MiWay",
+        "release": "1.0",
+        "submitted": "2014-06-30T19:40:24Z",
+        "updated": "2014-06-30T19:40:24Z",
+        "sizeTotal": "337.45 kB",
+        "files": [
+            {
+                "id": 136533,
+                "name": "MiWay.zip",
+                "size": "337.45 kB"
+            }
+        ],
+        "aliasEntry": "miway",
+        "aliasAuthor": "bowserking123",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29698-miway\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29699,
+        "cid": 21,
+        "uid": 491587,
+        "author": "bowserking123",
+        "category": "SC13 Vehicles",
+        "title": "Coach Bus (Credit to Oppie)",
+        "release": "1.0",
+        "submitted": "2014-07-01T01:28:36Z",
+        "updated": "2014-07-01T01:28:36Z",
+        "sizeTotal": "581.46 kB",
+        "files": [
+            {
+                "id": 136535,
+                "name": "BUS.zip",
+                "size": "581.46 kB"
+            }
+        ],
+        "aliasEntry": "coach-bus-credit-to-oppie",
+        "aliasAuthor": "bowserking123",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29699-coach-bus-credit-to-oppie\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29700,
+        "cid": 21,
+        "uid": 491587,
+        "author": "bowserking123",
+        "category": "SC13 Vehicles",
+        "title": "OCTA Bus",
+        "release": "1.0",
+        "submitted": "2014-07-01T02:53:14Z",
+        "updated": "2014-07-01T02:53:14Z",
+        "sizeTotal": "583.10 kB",
+        "files": [
+            {
+                "id": 136537,
+                "name": "COTA.zip",
+                "size": "583.10 kB"
+            }
+        ],
+        "aliasEntry": "octa-bus",
+        "aliasAuthor": "bowserking123",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29700-octa-bus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29701,
+        "cid": 21,
+        "uid": 491587,
+        "author": "bowserking123",
+        "category": "SC13 Vehicles",
+        "title": "CTA (Chicago Transit Authorty",
+        "release": "1.0",
+        "submitted": "2014-07-01T10:46:39Z",
+        "updated": "2014-07-01T10:46:39Z",
+        "sizeTotal": "577.08 kB",
+        "files": [
+            {
+                "id": 136589,
+                "name": "CTA.zip",
+                "size": "577.08 kB"
+            }
+        ],
+        "aliasEntry": "cta-chicago-transit-authorty",
+        "aliasAuthor": "bowserking123",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29701-cta-chicago-transit-authorty\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29706,
+        "cid": 21,
+        "uid": 649306,
+        "author": "SethySquirrel",
+        "category": "SC13 Vehicles",
+        "title": "a yellow and blue bus ^^",
+        "release": "1.0",
+        "submitted": "2014-07-03T04:32:00Z",
+        "updated": "2014-07-03T04:32:00Z",
+        "sizeTotal": "14.77 kB",
+        "files": [
+            {
+                "id": 136779,
+                "name": "blueandyellowbus.rar",
+                "size": "14.77 kB"
+            }
+        ],
+        "aliasEntry": "a-yellow-and-blue-bus",
+        "aliasAuthor": "sethysquirrel",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29706-a-yellow-and-blue-bus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29707,
+        "cid": 21,
+        "uid": 649306,
+        "author": "SethySquirrel",
+        "category": "SC13 Vehicles",
+        "title": "black hull for passenger ships",
+        "release": "1.0",
+        "submitted": "2014-07-03T05:59:21Z",
+        "updated": "2014-07-03T05:59:21Z",
+        "sizeTotal": "30.47 kB",
+        "files": [
+            {
+                "id": 136785,
+                "name": "ship hull-black.rar",
+                "size": "30.47 kB"
+            }
+        ],
+        "aliasEntry": "black-hull-for-passenger-ships",
+        "aliasAuthor": "sethysquirrel",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29707-black-hull-for-passenger-ships\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29708,
+        "cid": 21,
+        "uid": 649306,
+        "author": "SethySquirrel",
+        "category": "SC13 Vehicles",
+        "title": "different hull colors for ships",
+        "release": "1.2.5",
+        "submitted": "2014-07-03T14:50:51Z",
+        "updated": "2014-07-03T14:52:28Z",
+        "sizeTotal": "94.24 kB",
+        "files": [
+            {
+                "id": 136951,
+                "name": "ship hull colorsV2.rar",
+                "size": "94.24 kB"
+            }
+        ],
+        "aliasEntry": "different-hull-colors-for-ships",
+        "aliasAuthor": "sethysquirrel",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29708-different-hull-colors-for-ships\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29718,
+        "cid": 21,
+        "uid": 672026,
+        "author": "Firsta",
+        "category": "SC13 Vehicles",
+        "title": "CityTour Jakarta Double-Decker Tourist Bus",
+        "release": "1.0",
+        "submitted": "2014-07-06T14:36:00Z",
+        "updated": "2014-07-06T14:36:00Z",
+        "sizeTotal": "180.90 kB",
+        "files": [
+            {
+                "id": 137132,
+                "name": "Firsta_Jakarta-CityTour_TouristBus.rar",
+                "size": "180.90 kB"
+            }
+        ],
+        "aliasEntry": "citytour-jakarta-double-decker-tourist-bus",
+        "aliasAuthor": "firsta",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29718-citytour-jakarta-double-decker-tourist-bus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29737,
+        "cid": 21,
+        "uid": 468621,
+        "author": "Tobse",
+        "category": "SC13 Vehicles",
+        "title": "Delorean-1981+BttF",
+        "release": "1.0",
+        "submitted": "2014-07-11T20:55:00Z",
+        "updated": "2014-07-11T20:55:00Z",
+        "sizeTotal": "2.89 MB",
+        "files": [
+            {
+                "id": 142788,
+                "name": "Delorean 1981+BttF.zip",
+                "size": "2.89 MB"
+            }
+        ],
+        "aliasEntry": "delorean-1981bttf",
+        "aliasAuthor": "tobse",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29737-delorean-1981bttf\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29738,
+        "cid": 21,
+        "uid": 653526,
+        "author": "Takouma",
+        "category": "SC13 Vehicles",
+        "title": "Japanese GabarageTruck MOD",
+        "release": "1.0",
+        "submitted": "2014-07-12T00:07:24Z",
+        "updated": "2014-07-12T00:07:24Z",
+        "sizeTotal": "196.39 kB",
+        "files": [
+            {
+                "id": 138469,
+                "name": "JP-GarbageTruck_byTakouma.zip",
+                "size": "196.39 kB"
+            }
+        ],
+        "aliasEntry": "japanese-gabaragetruck-mod",
+        "aliasAuthor": "takouma",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29738-japanese-gabaragetruck-mod\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29769,
+        "cid": 21,
+        "uid": 653934,
+        "author": "Nico Robin",
+        "category": "SC13 Vehicles",
+        "title": "BusAngland",
+        "release": "1.1",
+        "submitted": "2014-07-24T15:02:06Z",
+        "updated": "2014-07-24T15:02:06Z",
+        "sizeTotal": "58.83 kB",
+        "files": [
+            {
+                "id": 138520,
+                "name": "BusAngland.zip",
+                "size": "58.83 kB"
+            }
+        ],
+        "aliasEntry": "busangland",
+        "aliasAuthor": "nico-robin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29769-busangland\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29803,
+        "cid": 21,
+        "uid": 491587,
+        "author": "bowserking123",
+        "category": "SC13 Vehicles",
+        "title": "MTA Bus",
+        "release": "1.0",
+        "submitted": "2014-08-13T14:56:54Z",
+        "updated": "2014-08-13T14:56:54Z",
+        "sizeTotal": "588.92 kB",
+        "files": [
+            {
+                "id": 139772,
+                "name": "MTA.zip",
+                "size": "588.92 kB"
+            }
+        ],
+        "aliasEntry": "mta-bus",
+        "aliasAuthor": "bowserking123",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29803-mta-bus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29804,
+        "cid": 21,
+        "uid": 491587,
+        "author": "bowserking123",
+        "category": "SC13 Vehicles",
+        "title": "THE MARTA PACK",
+        "release": "1.0.1",
+        "submitted": "2014-08-14T01:28:01Z",
+        "updated": "2014-08-14T01:28:01Z",
+        "sizeTotal": "2.09 MB",
+        "files": [
+            {
+                "id": 139844,
+                "name": "TheMartaPAK.zip",
+                "size": "2.09 MB"
+            }
+        ],
+        "aliasEntry": "the-marta-pack",
+        "aliasAuthor": "bowserking123",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29804-the-marta-pack\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29873,
+        "cid": 21,
+        "uid": 491587,
+        "author": "bowserking123",
+        "category": "SC13 Vehicles",
+        "title": "Flame Bus",
+        "release": "1.0",
+        "submitted": "2014-09-01T00:04:59Z",
+        "updated": "2014-09-01T00:04:59Z",
+        "sizeTotal": "583.35 kB",
+        "files": [
+            {
+                "id": 141447,
+                "name": "FB.zip",
+                "size": "583.35 kB"
+            }
+        ],
+        "aliasEntry": "flame-bus",
+        "aliasAuthor": "bowserking123",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29873-flame-bus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29927,
+        "cid": 21,
+        "uid": 653526,
+        "author": "Takouma",
+        "category": "SC13 Vehicles",
+        "title": "EURO Express MOD",
+        "release": "1.0",
+        "submitted": "2014-09-28T01:06:56Z",
+        "updated": "2014-09-28T01:06:56Z",
+        "sizeTotal": "1.40 MB",
+        "files": [
+            {
+                "id": 143306,
+                "name": "EUROSTAR-Class373_byTakouma.zip",
+                "size": "482.66 kB"
+            },
+            {
+                "id": 143307,
+                "name": "ICE1_byTakouma.zip",
+                "size": "952.50 kB"
+            }
+        ],
+        "aliasEntry": "euro-express-mod",
+        "aliasAuthor": "takouma",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29927-euro-express-mod\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29948,
+        "cid": 21,
+        "uid": 682699,
+        "author": "PiersNivans_21",
+        "category": "SC13 Vehicles",
+        "title": "Isuzu Cubic Tokyo Metro",
+        "release": "1.0",
+        "submitted": "2014-10-14T16:45:31Z",
+        "updated": "2014-10-14T16:45:31Z",
+        "sizeTotal": "6.66 kB",
+        "files": [
+            {
+                "id": 143984,
+                "name": "Tokyo Metropolitan Bus.rar",
+                "size": "6.66 kB"
+            }
+        ],
+        "aliasEntry": "isuzu-cubic-tokyo-metro",
+        "aliasAuthor": "piersnivans_21",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29948-isuzu-cubic-tokyo-metro\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29950,
+        "cid": 21,
+        "uid": 682699,
+        "author": "PiersNivans_21",
+        "category": "SC13 Vehicles",
+        "title": "Mitsubishi Aero Star Keio bus",
+        "release": "1.0",
+        "submitted": "2014-10-16T10:34:11Z",
+        "updated": "2014-10-16T10:34:11Z",
+        "sizeTotal": "76.38 kB",
+        "files": [
+            {
+                "id": 144013,
+                "name": "keio_bus_londense.rar",
+                "size": "76.38 kB"
+            }
+        ],
+        "aliasEntry": "mitsubishi-aero-star-keio-bus",
+        "aliasAuthor": "piersnivans_21",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29950-mitsubishi-aero-star-keio-bus\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29971,
+        "cid": 21,
+        "uid": 491587,
+        "author": "bowserking123",
+        "category": "SC13 Vehicles",
+        "title": "2009 New Flyer 41LFR",
+        "release": "0.1",
+        "submitted": "2014-10-30T15:50:51Z",
+        "updated": "2014-10-30T15:50:51Z",
+        "sizeTotal": "578.72 kB",
+        "files": [
+            {
+                "id": 144321,
+                "name": "BLAH.zip",
+                "size": "578.72 kB"
+            }
+        ],
+        "aliasEntry": "2009-new-flyer-41lfr",
+        "aliasAuthor": "bowserking123",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29971-2009-new-flyer-41lfr\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 29973,
+        "cid": 21,
+        "uid": 491587,
+        "author": "bowserking123",
+        "category": "SC13 Vehicles",
+        "title": "Brinks Van\/Truck",
+        "release": "1.0",
+        "submitted": "2014-11-02T00:28:55Z",
+        "updated": "2014-11-02T00:28:55Z",
+        "sizeTotal": "120.26 kB",
+        "files": [
+            {
+                "id": 144344,
+                "name": "Brinks.zip",
+                "size": "120.26 kB"
+            }
+        ],
+        "aliasEntry": "brinks-vantruck",
+        "aliasAuthor": "bowserking123",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/29973-brinks-vantruck\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30041,
+        "cid": 21,
+        "uid": 491587,
+        "author": "bowserking123",
+        "category": "SC13 Vehicles",
+        "title": "Smart Bus detroit",
+        "release": "1.0",
+        "submitted": "2014-12-13T17:08:45Z",
+        "updated": "2014-12-13T17:08:45Z",
+        "sizeTotal": "559.63 kB",
+        "files": [
+            {
+                "id": 145619,
+                "name": "Smartbus.zip",
+                "size": "559.63 kB"
+            }
+        ],
+        "aliasEntry": "smart-bus-detroit",
+        "aliasAuthor": "bowserking123",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30041-smart-bus-detroit\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30044,
+        "cid": 21,
+        "uid": 491587,
+        "author": "bowserking123",
+        "category": "SC13 Vehicles",
+        "title": "TTC ALRV(VERY BETA)",
+        "release": "0.1",
+        "submitted": "2014-12-15T01:05:28Z",
+        "updated": "2014-12-15T01:05:28Z",
+        "sizeTotal": "348.22 kB",
+        "files": [
+            {
+                "id": 145633,
+                "name": "TTC.zip",
+                "size": "174.11 kB"
+            },
+            {
+                "id": 145634,
+                "name": "TTC.zip",
+                "size": "174.11 kB"
+            }
+        ],
+        "aliasEntry": "ttc-alrvvery-beta",
+        "aliasAuthor": "bowserking123",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30044-ttc-alrvvery-beta\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30045,
+        "cid": 21,
+        "uid": 491587,
+        "author": "bowserking123",
+        "category": "SC13 Vehicles",
+        "title": "Oppie's Tram FIX",
+        "release": "1.0",
+        "submitted": "2014-12-15T18:58:46Z",
+        "updated": "2014-12-15T18:58:46Z",
+        "sizeTotal": "1.57 MB",
+        "files": [
+            {
+                "id": 145639,
+                "name": "Oppie-Tram-FIX.zip",
+                "size": "1.57 MB"
+            }
+        ],
+        "aliasEntry": "oppies-tram-fix",
+        "aliasAuthor": "bowserking123",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30045-oppies-tram-fix\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30158,
+        "cid": 21,
+        "uid": 653526,
+        "author": "Takouma",
+        "category": "SC13 Vehicles",
+        "title": "Shinkansen Series 300 MOD",
+        "release": "1.0",
+        "submitted": "2015-02-25T18:39:55Z",
+        "updated": "2015-02-25T18:39:55Z",
+        "sizeTotal": "1.06 MB",
+        "files": [
+            {
+                "id": 148292,
+                "name": "JP-Shinkansen300_byTakouma.zip",
+                "size": "1.06 MB"
+            }
+        ],
+        "aliasEntry": "shinkansen-series-300-mod",
+        "aliasAuthor": "takouma",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30158-shinkansen-series-300-mod\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 30747,
+        "cid": 21,
+        "uid": 569215,
+        "author": "JIYIN",
+        "category": "SC13 Vehicles",
+        "title": "No Futuristic Freight Train",
+        "release": "1.0",
+        "submitted": "2015-08-23T21:57:34Z",
+        "updated": "2015-08-23T21:57:34Z",
+        "sizeTotal": "2.87 kB",
+        "files": [
+            {
+                "id": 158984,
+                "name": "mod_NoFuturisticFreightTrain.package",
+                "size": "2.87 kB"
+            }
+        ],
+        "aliasEntry": "no-futuristic-freight-train",
+        "aliasAuthor": "jiyin",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/30747-no-futuristic-freight-train\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31233,
+        "cid": 21,
+        "uid": 743691,
+        "author": "Rivai",
+        "category": "SC13 Vehicles",
+        "title": "Japan Flying Machines Pack by Rivai",
+        "release": "1.0",
+        "submitted": "2016-08-09T21:37:12Z",
+        "updated": "2016-08-09T21:37:12Z",
+        "sizeTotal": "557.00 kB",
+        "files": [
+            {
+                "id": 162785,
+                "name": "JP-Airlines.package",
+                "size": "341.85 kB"
+            },
+            {
+                "id": 162786,
+                "name": "JP-FireHeli.package",
+                "size": "43.20 kB"
+            },
+            {
+                "id": 162787,
+                "name": "JP-Helicopter.package",
+                "size": "85.85 kB"
+            },
+            {
+                "id": 162788,
+                "name": "JP-TokyoTVHeli.package",
+                "size": "85.85 kB"
+            },
+            {
+                "id": 162789,
+                "name": "JumboJetMuncipal.package",
+                "size": "260 bytes"
+            }
+        ],
+        "aliasEntry": "japan-flying-machines-pack-by-rivai",
+        "aliasAuthor": "rivai",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31233-japan-flying-machines-pack-by-rivai\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31763,
+        "cid": 21,
+        "uid": 751143,
+        "author": "SimCity enthusiast",
+        "category": "SC13 Vehicles",
+        "title": "Simcity5 Police Stealth vehicles",
+        "release": "1.0",
+        "submitted": "2017-06-14T23:54:05Z",
+        "updated": "2017-06-14T23:54:05Z",
+        "sizeTotal": "2.89 MB",
+        "files": [
+            {
+                "id": 166627,
+                "name": "SC5 All Police Stealth Vehicles.zip",
+                "size": "2.89 MB"
+            }
+        ],
+        "aliasEntry": "simcity5-police-stealth-vehicles",
+        "aliasAuthor": "simcity-enthusiast",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31763-simcity5-police-stealth-vehicles\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31765,
+        "cid": 21,
+        "uid": 751143,
+        "author": "SimCity enthusiast",
+        "category": "SC13 Vehicles",
+        "title": "SimCity 5 Police Vehicles Blue",
+        "release": "1.0",
+        "submitted": "2017-06-15T00:52:25Z",
+        "updated": "2017-06-15T00:52:25Z",
+        "sizeTotal": "2.16 MB",
+        "files": [
+            {
+                "id": 166639,
+                "name": "SC5 All Police Blue Vehicles.zip",
+                "size": "2.16 MB"
+            }
+        ],
+        "aliasEntry": "simcity-5-police-vehicles-blue",
+        "aliasAuthor": "simcity-enthusiast",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31765-simcity-5-police-vehicles-blue\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 31766,
+        "cid": 21,
+        "uid": 751143,
+        "author": "SimCity enthusiast",
+        "category": "SC13 Vehicles",
+        "title": "SimCity 5 Police Vehicles LAPD",
+        "release": "1.0",
+        "submitted": "2017-06-15T05:55:59Z",
+        "updated": "2017-06-15T05:55:59Z",
+        "sizeTotal": "2.06 MB",
+        "files": [
+            {
+                "id": 166644,
+                "name": "SC5 All Police LAPD Vehicles.zip",
+                "size": "2.06 MB"
+            }
+        ],
+        "aliasEntry": "simcity-5-police-vehicles-lapd",
+        "aliasAuthor": "simcity-enthusiast",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/31766-simcity-5-police-vehicles-lapd\/",
+        "===========": "=========================================="
+    },
+    {
+        "id": 33546,
+        "cid": 21,
+        "uid": 786191,
+        "author": "twinzens",
+        "category": "SC13 Vehicles",
+        "title": "Oppie's tram speed fix (based on bowserking123)",
+        "release": "1.0.0",
+        "submitted": "2020-04-14T07:31:51Z",
+        "updated": "2020-04-14T07:31:51Z",
+        "sizeTotal": "1.57 MB",
+        "files": [
+            {
+                "id": 180627,
+                "name": "10_Oppie_Tram_CityRunner_fixed_n_faster.zip",
+                "size": "1.57 MB"
+            }
+        ],
+        "aliasEntry": "oppies-tram-speed-fix-based-on-bowserking123",
+        "aliasAuthor": "twinzens",
+        "fileURL": "https:\/\/community.simtropolis.com\/files\/file\/33546-oppies-tram-speed-fix-based-on-bowserking123\/",
+        "===========": "=========================================="
+    }
+]
