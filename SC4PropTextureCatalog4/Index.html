@@ -26,22 +26,6 @@
 
         <form method="get" role="search" id="SearchForm">
             <input id="SearchBox" type="search" placeholder="Search for Pack | TGI | Author | Exemplar Name ...">
-            <!-- <select id="TGITypeSelect" aria-label="Choose TGI Type" style="width:200px">
-                <option value="all" selected>All TGI Types</option>
-                <option value="0">Buildings</option>
-                <option value="1">Props</option>
-                <option value="2">Textures</option>
-                <option value="4">Flora</option>
-                <option value="10">Cohorts</option>
-            </select>
-            <select id="TGITypeSelect" aria-label="Choose TGI Type" style="width:200px">
-                <option value="all" selected>All TGI Types</option>
-                <option value="0">Buildings</option>
-                <option value="1">Props</option>
-                <option value="2">Textures</option>
-                <option value="4">Flora</option>
-                <option value="10">Cohorts</option>
-            </select> -->
             <input type="Submit" value="Search" />
         </form>
 
@@ -60,11 +44,22 @@
                 <option value="64" selected>64 px</option>
                 <option value="96">96 px</option>
             </select>
+
+            <details class="dropdown" id="Categories">
+                <summary>TGI Category</summary>
+                <ul>
+                    <li><label><input type="checkbox" checked/>Buildings</label></li>
+                    <li><label><input type="checkbox" checked/>Props</label></li>
+                    <li><label><input type="checkbox" checked/>Textures</label></li>
+                    <li><label><input type="checkbox" checked/>Flora</label></li>
+                    <li><label><input type="checkbox" />Others</label></li>
+                </ul>
+            </details>
         </fieldset>
 
 
 
-        <p id="QueryResultSummary">Query "<span id="QuerySearchText"></span>" returned <span id="QueryResultCount"></span> results.</p>
+        <p id="QueryResultSummary">Query "<span id="QuerySearchText"></span>" returned <span id="QueryResultCount"></span> results. <span id="QueryFilterCount"></span> results visible.</p>
         <hr />
 
         <table id="QueryResultTable">

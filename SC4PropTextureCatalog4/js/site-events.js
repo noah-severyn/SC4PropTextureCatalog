@@ -1,7 +1,18 @@
 document.getElementById('SearchForm').addEventListener('submit', () => {
 	event.preventDefault();
-	Search(document.getElementById('SearchBox').value);
+	SendQuery(document.getElementById('SearchBox').value);
 });
+
+const categories = document.getElementById('Categories').getElementsByTagName('input');
+Array.from(categories).forEach(chk => {
+	chk.addEventListener('change', () => {
+		const category = chk.parentElement.textContent;
+		const status = chk.checked;
+		let cnt = Filter(category, status);
+		document.getElementById('QueryFilterCount').textContent = cnt;
+	});
+});
+
 document.getElementById('ThumbnailToggle').addEventListener('click', () => {
 	ToggleThumbnailControlVisibility();
 });
