@@ -136,6 +136,24 @@ header li a {
 	}
 }
 
+@media (min-width: 1792px) {
+	.container {
+		max-width: 1700px;
+	}
+}
+
+@media (min-width: 2048px) {
+	.container {
+		max-width: 1950px;
+	}
+}
+
+@media (min-width: 2304px) {
+	.container {
+		max-width: 2200px;
+	}
+}
+
 h1,
 h2,
 h3,
