@@ -16,28 +16,3 @@ function ToggleThumbnailControlVisibility() {
 		sizeElem.style.display = "none";
 	}
 }
-
-function ToggleThumbnails() {
-
-}
-
-function ChangeThumbnailSize() {
-	const imgs = document.getElementsByTagName('img');
-	const height = document.getElementById('ThumbnailSize').value;
-	for (var elem of imgs) {
-		elem.style.height = height + 'px';
-	}
-}
-
-function ToggleDarkThumbnailBg() {
-	const imgs = document.getElementsByTagName("img");
-	if (document.getElementById("BackgroundToggle").checked) {
-		for (var elem of imgs) {
-			elem.classList.add("DarkThumbnail");
-		}
-	} else {
-		for (var elem of imgs) {
-			elem.classList.remove("DarkThumbnail");
-		}
-	}
-}

@@ -29,8 +29,19 @@
             <input type="Submit" value="Search" />
         </form>
 
-        <fieldset class="grid" style="width:60%">
-            <div>
+        <fieldset class="grid" style="width:200px; height:50px">
+            <details class="dropdown" id="Categories">
+                <summary>TGI Category</summary>
+                <ul>
+                    <li><label><input type="checkbox" checked />Buildings</label></li>
+                    <li><label><input type="checkbox" checked />Props</label></li>
+                    <li><label><input type="checkbox" checked />Textures</label></li>
+                    <li><label><input type="checkbox" checked />Flora</label></li>
+                    <li><label><input type="checkbox" />Others</label></li>
+                </ul>
+            </details>
+
+            <!--<div>
                 <input id="ThumbnailToggle" type="checkbox" role="switch" />
                 <label for="ThumbnailToggle">Show Thumbnails</label>
             </div>
@@ -39,22 +50,14 @@
                 <label id="BackgroundToggleLabel" for="BackgroundToggle">Dark Background</label>
             </div>
 
-            <select id="ThumbnailSize" aria-label="Thumbnail Size">
-                <option value="32">32 px</option>
-                <option value="64" selected>64 px</option>
-                <option value="96">96 px</option>
-            </select>
-
-            <details class="dropdown" id="Categories">
-                <summary>TGI Category</summary>
+            <details class="dropdown" id="ThumbnailSize">
+                <summary>Thumbnail Size</summary>
                 <ul>
-                    <li><label><input type="checkbox" checked/>Buildings</label></li>
-                    <li><label><input type="checkbox" checked/>Props</label></li>
-                    <li><label><input type="checkbox" checked/>Textures</label></li>
-                    <li><label><input type="checkbox" checked/>Flora</label></li>
-                    <li><label><input type="checkbox" />Others</label></li>
+                    <li><label><input type="radio" name="tsize" value="32px" />32 px</label></li>
+                    <li><label><input type="radio" name="tsize" value="64px" />64 px</label></li>
+                    <li><label><input type="radio" name="tsize" value="96px" />96 px</label></li>
                 </ul>
-            </details>
+            </details>-->
         </fieldset>
 
 
@@ -70,6 +73,7 @@
                     <th>TGI</th>
                     <th>Category</th>
                     <th>Author</th>
+                    <!--<th>Thumbnail</th>-->
                     <th>Exemplar Name</th>
                 </tr>
             </thead>

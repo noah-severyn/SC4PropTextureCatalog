@@ -16,9 +16,27 @@ Array.from(categories).forEach(chk => {
 document.getElementById('ThumbnailToggle').addEventListener('click', () => {
 	ToggleThumbnailControlVisibility();
 });
+
 document.getElementById('BackgroundToggle').addEventListener('click', () => {
-	ToggleDarkThumbnailBg();
+	const imgs = document.getElementsByTagName("img");
+	if (document.getElementById("BackgroundToggle").checked) {
+		for (var elem of imgs) {
+			elem.classList.add("DarkThumbnail");
+		}
+	} else {
+		for (var elem of imgs) {
+			elem.classList.remove("DarkThumbnail");
+		}
+	}
 });
-document.getElementById('ThumbnailSize').addEventListener('click', () => {
-	ChangeThumbnailSize();
+
+const sizes = document.getElementById('ThumbnailSize').getElementsByTagName('input');
+Array.from(sizes).forEach(radio => {
+	radio.addEventListener('change', () => {
+		const imgs = document.getElementsByTagName('img');
+		const height = radio.value;
+		for (var elem of imgs) {
+			elem.style.height = height;
+		}
+	});
 });

@@ -22,7 +22,6 @@ function QueryReturn(search_text, query_results) {
 	document.getElementById('QuerySearchText').textContent = search_text;
 	document.getElementById('QueryResultCount').textContent = query_results.length;
 	document.getElementById('QueryFilterCount').textContent = query_results.length;
-	console.log(query_results);
 
 	const body = document.getElementById('QueryResultBody');
 	query_results.forEach(item => {
@@ -42,6 +41,12 @@ function QueryReturn(search_text, query_results) {
 
 		const author = document.createElement("td");
 		author.textContent = "";
+
+		//const thumb = document.createElement('td');
+		//const img = document.createElement('img');
+		//img.src = "img/7AB50E44-0986135E-1DA4A000.png";
+		//img.style.height = document.getElementById('ThumbnailSize').value;
+		//thumb.appendChild(img);
 
 		const name = document.createElement("td");
 		name.textContent = item.name;
