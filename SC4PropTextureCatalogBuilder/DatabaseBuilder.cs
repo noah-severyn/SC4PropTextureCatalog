@@ -101,7 +101,7 @@ namespace SC4PropTextureCatalogBuilder {
 
 
     /// <summary>
-    /// Dimension/lookup table of TGI types (building, prop, texture, flora, cohort, etc.). These values are nominally based off Rep 0 of the LotConfigPropertyLotObject property, with a few extra values added in for the purposes of tracking in this database.
+    /// Dimension table of TGI types (building, prop, texture, flora, cohort, etc.). These values are nominally based off Rep 0 of the LotConfigPropertyLotObject property, with a few extra values added in for the purposes of tracking in this database.
     /// </summary>
     [Table("TGICategories")]
     public class TGICategory(int type, string name) {
@@ -114,6 +114,26 @@ namespace SC4PropTextureCatalogBuilder {
 
         public override string ToString() {
             return $"{Category}: {Name}";
+        }
+    }
+
+    /// <summary>
+    /// Dimension table with information about each exchange.
+    /// </summary>
+    [Table("Exchanges")]
+    public class Exchange(int id, string name, string url) {
+        [PrimaryKey]
+        [Column("ExchangeId")]
+        public int ExchangeId { get; set; } = id;
+
+        [Column("Name")]
+        public string Name { get; set; } = name;
+
+        [Column("Url")]
+        public string Url { get; set; } = name;
+
+        public override string ToString() {
+            return $"{ExchangeId}: {Name}";
         }
     }
 
@@ -145,6 +165,11 @@ namespace SC4PropTextureCatalogBuilder {
                 _db.Insert(new TGICategory(11, "LTEXT"));
                 _db.Insert(new TGICategory(12, "Lua"));
                 _db.Insert(new TGICategory(13, "UI"));
+                _db.CreateTable<Exchange>();
+                _db.Insert(new Exchange(1, "Simtropolis", "https\\community.simtropolis.com"));
+                _db.Insert(new Exchange(2, "SC4 Evermore", "https\\www.sc4evermore.com"));
+                _db.Insert(new Exchange(3, "ToutSimCities", "https\\www.toutsimcities.com"));
+                _db.Insert(new Exchange(4, "Hide-Inoki", "http\\hide-inoki.com"));
             }
         }
 
