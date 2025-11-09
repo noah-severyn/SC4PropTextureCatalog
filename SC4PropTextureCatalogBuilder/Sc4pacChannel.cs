@@ -51,6 +51,7 @@ namespace SC4PropTextureCatalogBuilder {
             }
         }
         private static void Build(string yamlPath, string outputPath) {
+            Console.WriteLine("building " + outputPath);
             FileMgt.ExecuteCommand("cmd.exe", $"/C sc4pac channel build --output \"{outputPath.Replace("\\", "/")}\" \"{yamlPath.Replace("\\", "/")}\"");
         }
 
@@ -76,12 +77,18 @@ namespace SC4PropTextureCatalogBuilder {
                 case ChannelOptions.All:
                     foreach (var key in channels.Keys) {
                         channelFolder = Path.Combine(channels[key].JsonPath, "metadata");
+                        if (!Directory.Exists(channelFolder)) {
+                            Directory.CreateDirectory(channelFolder);
+                        }
                         paths.AddRange(Directory.EnumerateFiles(channelFolder, "*", SearchOption.AllDirectories).Where(path => path.EndsWith("latest\\pkg.json")));
                     }
                     break;
                 default:
                     var name = options.ToString().ToLower();
                     channelFolder = Path.Combine(channels[name].JsonPath, "metadata");
+                    if (!Directory.Exists(channelFolder)) {
+                        Directory.CreateDirectory(channelFolder);
+                    }
                     paths.AddRange(Directory.EnumerateFiles(channelFolder, "*", SearchOption.AllDirectories).Where(path => path.EndsWith("latest\\pkg.json")));
                     break;
             }

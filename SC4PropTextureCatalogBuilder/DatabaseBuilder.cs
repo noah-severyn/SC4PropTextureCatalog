@@ -205,10 +205,10 @@ namespace SC4PropTextureCatalogBuilder {
                 int exchangeId = GetExchangeId(folder);
                 int assetId = GetAssetId(folder);
 
-                if (!AssetExists(exchangeId, assetId)) {
+                //if (!AssetExists(exchangeId, assetId)) {
                     Console.WriteLine(exchangeId + "-" + assetId);
                     errors = ParseFolder(folder, exchangeId, assetId, assets);
-                }
+                //}
             }
             return errors;
         }
