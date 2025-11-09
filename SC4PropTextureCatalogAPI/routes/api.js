@@ -3,20 +3,12 @@ const fs = require('fs');
 const sqlite3 = require('sqlite3').verbose();
 const router = express.Router();
 
-// SQLite endpoint
-// router.get('/sqlite', (req, res) => {
-//   const db = new sqlite3.Database('./data/Catalog.db', sqlite3.OPEN_READONLY);
-//   db.all('SELECT * FROM CatalogItems', [], (err, rows) => {
-//     if (err) return res.status(500).json({ error: 'Failed to query database' });
-//     res.json(rows);
-//   });
-//   db.close();
-// });
-
 // Utility function to run queries
 function runQuery(query, params = []) {
   return new Promise((resolve, reject) => {
-    const db = new sqlite3.Database('./data/Catalog.db', sqlite3.OPEN_READONLY);
+    const path = require('path');
+    const dbPath = path.join(__dirname, '../data/Catalog.db');
+    const db = new sqlite3.Database(dbPath, sqlite3.OPEN_READONLY);
     db.all(query, params, (err, rows) => {
       db.close();
       if (err) reject(err);
