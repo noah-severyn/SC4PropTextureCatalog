@@ -286,7 +286,6 @@ __pycache__/
 
 
 *.xlsm
-*.db
 *.csv
 *.xlsx
 
