@@ -1,5 +1,6 @@
 import { Router } from 'express';
-const sqlite3 = require('sqlite3').verbose();
+import sqlite3 from 'sqlite3';
+const sqlite = sqlite3.verbose();
 const router = Router();
 
 // Utility function to run queries
@@ -7,7 +8,7 @@ function runQuery(query, params = []) {
   return new Promise((resolve, reject) => {
     const path = require('path');
     const dbPath = path.join(__dirname, '../data/Catalog.db');
-    const db = new sqlite3.Database(dbPath, sqlite3.OPEN_READONLY);
+    const db = new sqlite.Database(dbPath, sqlite3.OPEN_READONLY);
     db.all(query, params, (err, rows) => {
       db.close();
       if (err) reject(err);
