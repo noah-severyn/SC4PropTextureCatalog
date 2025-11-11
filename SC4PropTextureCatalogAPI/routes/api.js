@@ -8,13 +8,6 @@ function runQuery(query, params = []) {
   return new Promise((resolve, reject) => {
     const path = require('path');
     const dbPath = path.join(__dirname, '../data/Catalog.db');
-
-    console.log('CWD:', process.cwd());
-    console.log('__dirname:', __dirname);
-    console.log('resolved DB path:', dbPath);
-    console.log('existsSync:', fs.existsSync(dbPath));
-    try { console.log('stat:', fs.statSync(dbPath)); } catch (e) { console.log('stat error:', e.message); }
-
     const db = new sqlite3.Database(dbPath, sqlite3.OPEN_READONLY);
     db.all(query, params, (err, rows) => {
       db.close();
