@@ -1,7 +1,7 @@
-import { Router } from 'express';
+import express from 'express';
 import sqlite3 from 'sqlite3';
 const sqlite = sqlite3.verbose();
-const router = Router();
+const router = express.Router();
 
 // Utility function to run queries
 function runQuery(query, params = []) {
