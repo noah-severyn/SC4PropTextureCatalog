@@ -1,7 +1,8 @@
 
 function SendQuery(searchText) {
 	let query_results = [];
-	fetch('test/sample-api-data.json')
+	fetch('https://sc4proptexturecatalog-production.up.railway.app/api/search?term=$' + encodeURIComponent(searchText))
+	//fetch('test/sample-api-data.json')
 		.then(response => {
 			if (!response.ok) {
 				throw new Error(`HTTP error! Status: ${response.status}`);
@@ -31,13 +32,13 @@ function QueryReturn(search_text, query_results) {
 		package.textContent = "";
 
 		const file = document.createElement("td");
-		file.textContent = item.file;
+		file.textContent = item.File;
 
 		const tgi = document.createElement("td");
-		tgi.textContent = item.tgi;
+		tgi.textContent = item.TGI;
 
 		const category = document.createElement("td");
-		category.textContent = item.category;
+		category.textContent = item.Category;
 
 		const author = document.createElement("td");
 		author.textContent = "";
@@ -49,7 +50,7 @@ function QueryReturn(search_text, query_results) {
 		//thumb.appendChild(img);
 
 		const name = document.createElement("td");
-		name.textContent = item.name;
+		name.textContent = item.Name;
 
 		tr.append(package, file, tgi, category, author, name);
 		body.appendChild(tr);

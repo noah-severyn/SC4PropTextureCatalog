@@ -8,11 +8,11 @@ ToggleThumbnailControlVisibility();
 function ToggleThumbnailControlVisibility() {
 	const bgGroup = document.getElementById("BackgroundGroup");
 	const sizeElem = document.getElementById('ThumbnailSize');
-	if (document.getElementById("ThumbnailToggle").checked) {
-		bgGroup.style.display = "block";
-		sizeElem.style.display = "block";
-	} else {
-		bgGroup.style.display = "none";
-		sizeElem.style.display = "none";
-	}
+	// if (document.getElementById("ThumbnailToggle").checked) {
+	// 	bgGroup.style.display = "block";
+	// 	sizeElem.style.display = "block";
+	// } else {
+	// 	bgGroup.style.display = "none";
+	// 	sizeElem.style.display = "none";
+	// }
 }
