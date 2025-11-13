@@ -130,7 +130,7 @@ namespace SC4PropTextureCatalogBuilder {
         public string Name { get; set; } = name;
 
         [Column("Url")]
-        public string Url { get; set; } = name;
+        public string Url { get; set; } = url;
 
         public override string ToString() {
             return $"{ExchangeId}: {Name}";
@@ -166,10 +166,11 @@ namespace SC4PropTextureCatalogBuilder {
                 _db.Insert(new TGICategory(12, "Lua"));
                 _db.Insert(new TGICategory(13, "UI"));
                 _db.CreateTable<Exchange>();
-                _db.Insert(new Exchange(1, "Simtropolis", "https\\community.simtropolis.com"));
-                _db.Insert(new Exchange(2, "SC4 Evermore", "https\\www.sc4evermore.com"));
-                _db.Insert(new Exchange(3, "ToutSimCities", "https\\www.toutsimcities.com"));
-                _db.Insert(new Exchange(4, "Hide-Inoki", "http\\hide-inoki.com"));
+                _db.Insert(new Exchange(1, "Simtropolis", "https:\\\\community.simtropolis.com"));
+                _db.Insert(new Exchange(2, "SC4 Evermore", "https:\\\\www.sc4evermore.com"));
+                _db.Insert(new Exchange(3, "ToutSimCities", "https:\\\\www.toutsimcities.com"));
+                _db.Insert(new Exchange(4, "Hide-Inoki", "http:\\\\hide-inoki.com"));
+                _db.CreateTable<PackageItem>();
             }
         }
 
@@ -193,21 +194,18 @@ namespace SC4PropTextureCatalogBuilder {
 
 
         /// <summary>
-        /// Build the TGI table from all extracted files, skipping any assets that already exist.
+        /// Parse all DBPF files in the extract directory and fills the <c>TGI</c> table from each file. Adds a new item in the <c>Assets</c> table if the TGI is part of an asset that does not yet exist in the table.
         /// </summary>
-        public List<DBPFError> BuildTGITable(string filesPath, List<JsonAsset> assets) {
+        /// <param name="filesPath">Folder path containing extracted cache files</param>
+        /// <returns>A list of any errors encountered</returns>
+        public List<DBPFError> FillTgiTable(string extractPath) {
             List<DBPFError> errors = [];
-            foreach (string folder in Directory.EnumerateDirectories(filesPath, "*", SearchOption.AllDirectories)) {
+            foreach (string folder in Directory.EnumerateDirectories(extractPath, "*", SearchOption.AllDirectories)) {
                 var files = Directory.EnumerateFiles(folder);
                 if (!files.Any(f => f.IsDBPF())) { continue; }
                     
-                
-                int exchangeId = GetExchangeId(folder);
-                int assetId = GetAssetId(folder);
-
                 //if (!AssetExists(exchangeId, assetId)) {
-                    Console.WriteLine(exchangeId + "-" + assetId);
-                    errors = ParseFolder(folder, exchangeId, assetId, assets);
+                    errors.AddRange(FillTgis(folder));
                 //}
             }
             return errors;
@@ -254,17 +252,14 @@ namespace SC4PropTextureCatalogBuilder {
             return 0;
         }
 
-        /// <summary>
-        /// Parse all DBPF files in a folder and add found TGIs to the database.
-        /// </summary>
-        /// <param name="folderPath">Folder path to scan</param>
-        /// <param name="exchangeId">Id of the exchange this item is found on</param>
-        /// <param name="assetId">Id of the asset</param>
-        /// <returns>A list of any errors encountered</returns>
-        private List<DBPFError> ParseFolder(string folderPath, int exchangeId, int assetId, List<JsonAsset> assets) {
+        private List<DBPFError> FillTgis(string folderPath) {
             var errors = new List<DBPFError>();
             var items = new List<CatalogItem>();
             var files = Directory.EnumerateFiles(folderPath, "*", SearchOption.AllDirectories);
+
+            int exchangeId = GetExchangeId(folderPath);
+            int assetId = GetAssetId(folderPath);
+            Console.WriteLine("writing " + exchangeId + "-" + assetId);
 
             var dbpfFiles = files.FilterDBPFFiles().GetUniqueFilenamesAcrossFolders();
             FileStream fs;
@@ -376,6 +371,10 @@ namespace SC4PropTextureCatalogBuilder {
             return errors;
         }
 
+        /// <summary>
+        /// Updates the <c>Assets</c> table with data parsed from sc4pac JSON assets. Adds a new item in the <c>Packages</c>
+        /// </summary>
+        /// <param name="assets">List of sc4pac JSON assets</param>
         public void FillAssetTable(List<JsonAsset> assets) {
             foreach (var asset in assets) {
                 int exchId = GetExchangeId(asset.Url);
@@ -387,11 +386,21 @@ namespace SC4PropTextureCatalogBuilder {
         }
 
 
+        public void FillPackageTable(List<JsonPackage> packages) {
+            foreach (var pkg in packages) {
+                //int exchId = GetExchangeId(asset.Url);
+                //int assetId = GetAssetId(asset.Url);
+                var result = _db.Query<(int, int)>("SELECT AssetId, PackageId FROM Packages WHERE Package = ?", pkg.Group + ":" + pkg.Name).FirstOrDefault();
+                
+                //string cleanedUrl = new Uri(asset.Url).GetLeftPart(UriPartial.Path); //Strip query params from the Url
+                //_db.Execute($"UPDATE Packages SET Version = \"{asset.Version}\", LastModified = \"{asset.LastModified}\", Url = \"{cleanedUrl}\" WHERE ExchangeId = {exchId} AND AssetId = {assetId}");
+            }
+        }
+
+
         /// <summary>
-        /// Return whether this asset exists in the Assets table
+        /// Return whether this asset exists in the <c>Assets</c> table
         /// </summary>
-        /// <param name="exchangeId">Id of the exchange</param>
-        /// <param name="assetId">Id of the asset</param>
         /// <returns>TRUE if the asset exists; FALSE otherwise</returns>
         public bool AssetExists(int exchangeId, int assetId) {
             int count = _db.ExecuteScalar<int>($"SELECT count(*) FROM Assets WHERE ExchangeId = '{exchangeId}' AND AssetId = '{assetId}'");
@@ -403,10 +412,9 @@ namespace SC4PropTextureCatalogBuilder {
         /// <summary>
         /// Return whether this package exists in the TGIs table
         /// </summary>
-        /// <param name="tgi">TGI to find</param>
         /// <returns>TRUE if the TGI exists; FALSE otherwise</returns>
         public bool TGIExists(string tgi) {
-            int count = _db.ExecuteScalar<int>($"SELECT count(*) FROM TGIs WHERE TGI = '{tgi}'");
+            int count = _db.ExecuteScalar<int>($"SELECT count(*) FROM CatalogItems WHERE TGI = '{tgi}'");
             return count != 0;
         }
 

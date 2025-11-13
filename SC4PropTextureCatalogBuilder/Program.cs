@@ -38,4 +38,5 @@ DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb);
 db.BuildTGITable(extractLocation, assets);
 db.FillAssetTable(assets);
 //db.BuildPackageTable(packages);
+db.FillPackageTable(packages);
 Console.WriteLine("");

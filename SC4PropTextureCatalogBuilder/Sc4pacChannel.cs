@@ -76,6 +76,7 @@ namespace SC4PropTextureCatalogBuilder {
                     return ([], []);
                 case ChannelOptions.All:
                     foreach (var key in channels.Keys) {
+                        Console.WriteLine("parsing " + channels[key].YamlPath);
                         channelFolder = Path.Combine(channels[key].JsonPath, "metadata");
                         if (!Directory.Exists(channelFolder)) {
                             Directory.CreateDirectory(channelFolder);
@@ -85,6 +86,7 @@ namespace SC4PropTextureCatalogBuilder {
                     break;
                 default:
                     var name = options.ToString().ToLower();
+                    Console.WriteLine("parsing " + channels[name].YamlPath);
                     channelFolder = Path.Combine(channels[name].JsonPath, "metadata");
                     if (!Directory.Exists(channelFolder)) {
                         Directory.CreateDirectory(channelFolder);
@@ -148,7 +150,7 @@ namespace SC4PropTextureCatalogBuilder {
             if (url.Contains("simtropolis")) {
                 try {
                     string name = url.Split("file/")[1].Replace("/", "");
-                    int.TryParse(name.Split('-')[0], out int id);
+                    _ = int.TryParse(name.Split('-')[0], out int id);
                     return new ChartData(id, name, url);
                 }
                 catch (IndexOutOfRangeException) {
@@ -169,6 +171,7 @@ namespace SC4PropTextureCatalogBuilder {
         public string Version { get; set; } = string.Empty;
         public string LastModified { get; set; } = string.Empty;
         public string Url { get; set; } = string.Empty;
+        public List<string> RequiredBy { get; set; } = [];
     }
 
     public class JsonPackage {
