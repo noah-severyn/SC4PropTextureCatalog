@@ -290,3 +290,4 @@ __pycache__/
 *.xlsx
 
 /SC4PropTextureCatalog4/test
+/SC4PropTextureCatalogBuilder/data
