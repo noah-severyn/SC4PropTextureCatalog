@@ -1,12 +1,15 @@
 import express from 'express';
 import sqlite3 from 'sqlite3';
+import path from 'path';
+import { fileURLToPath } from 'url';
 const sqlite = sqlite3.verbose();
 const router = express.Router();
 
 // Utility function to run queries
 function runQuery(query, params = []) {
   return new Promise((resolve, reject) => {
-    const path = require('path');
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
     const dbPath = path.join(__dirname, '../data/Catalog.db');
     const db = new sqlite.Database(dbPath, sqlite3.OPEN_READONLY);
     db.all(query, params, (err, rows) => {
