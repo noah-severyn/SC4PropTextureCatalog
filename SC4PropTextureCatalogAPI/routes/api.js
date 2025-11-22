@@ -42,10 +42,10 @@ router.get('/search', async (request, response) => {
     SELECT CatalogItems.AssetId, CatalogItems.File, CatalogItems.TGI, TGICategories.Name AS Category, CatalogItems.Name
     FROM CatalogItems
     LEFT JOIN TGICategories ON CatalogItems.Category = TGICategories.Category
-    WHERE CatalogItems.AssetId LIKE ? ESCAPE '\' OR
-          CatalogItems.File LIKE ? ESCAPE '\' OR
-          CatalogItems.TGI LIKE ? ESCAPE '\' OR
-          CatalogItems.Name LIKE ? ESCAPE '\'
+    WHERE CatalogItems.AssetId LIKE ? ESCAPE '\\' OR
+          CatalogItems.File LIKE ? ESCAPE '\\' OR
+          CatalogItems.TGI LIKE ? ESCAPE '\\' OR
+          CatalogItems.Name LIKE ? ESCAPE '\\'
     LIMIT 10000`;
   const like = `%${searchText}%`;
   try {
