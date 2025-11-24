@@ -5,7 +5,17 @@ import cors from 'cors';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors({Origin: 'http://127.0.0.1:3000' }));
+const allowedOrigins = [
+  'http://127.0.0.1:3000',
+  'http://localhost:3000',
+  'https://your-frontend-domain.onrailway.app'
+];
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type']
+}));
+
 app.use('/api', apiRoutes);
 
 app.listen(PORT, () => {
