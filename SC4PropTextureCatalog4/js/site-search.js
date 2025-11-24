@@ -1,8 +1,7 @@
 
 function SendQuery(searchText) {
 	let query_results = [];
-	fetch('https://sc4proptexturecatalog-production.up.railway.app/api/search?term=$' + encodeURIComponent(searchText))
-	//fetch('test/sample-api-data.json')
+	fetch('https://sc4proptexturecatalog-production.up.railway.app/api/search?term=' + encodeURIComponent(searchText))
 		.then(response => {
 			if (!response.ok) {
 				throw new Error(`HTTP error! Status: ${response.status}`);
