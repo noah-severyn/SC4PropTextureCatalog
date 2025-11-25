@@ -39,13 +39,14 @@ router.get('/search', async (request, response) => {
   }
 
   const query = `
-    SELECT CatalogItems.AssetId, CatalogItems.File, CatalogItems.TGI, TGICategories.Name AS Category, CatalogItems.Name
-    FROM CatalogItems
-    LEFT JOIN TGICategories ON CatalogItems.Category = TGICategories.Category
-    WHERE CatalogItems.AssetId LIKE ? ESCAPE '\\' OR
-          CatalogItems.File LIKE ? ESCAPE '\\' OR
-          CatalogItems.TGI LIKE ? ESCAPE '\\' OR
-          CatalogItems.Name LIKE ? ESCAPE '\\'
+    SELECT ci.ExchangeId, ci.AssetId, ci.File, ci.TGI, cat.Name AS Category, ci.Name, pkg.PackageId, pkg.Author
+    FROM CatalogItems ci
+    LEFT JOIN OIN TGICategories cat ON ci.Category = cat.Category
+    LEFT JOIN Packages pkg ON pkg.ExchangeId = ci.ExchangeId AND pkg.AssetId = ci.AssetId
+    WHERE ci.AssetId LIKE ? ESCAPE '\\' OR
+          ci.File LIKE ? ESCAPE '\\' OR
+          ci.TGI LIKE ? ESCAPE '\\' OR
+          ci.Name LIKE ? ESCAPE '\\'
     LIMIT 10000`;
   const like = `%${searchText}%`;
   try {

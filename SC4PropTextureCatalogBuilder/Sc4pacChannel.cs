@@ -81,7 +81,7 @@ namespace SC4PropTextureCatalogBuilder {
                         if (!Directory.Exists(channelFolder)) {
                             Directory.CreateDirectory(channelFolder);
                         }
-                        paths.AddRange(Directory.EnumerateFiles(channelFolder, "*", SearchOption.AllDirectories).Where(path => path.EndsWith("latest\\pkg.json")));
+                        paths.AddRange(Directory.EnumerateFiles(channelFolder, "*", SearchOption.AllDirectories).Where(path => path.EndsWith("latest\\pkg.json") && !path.Contains("_ext")));
                     }
                     break;
                 default:
@@ -91,7 +91,7 @@ namespace SC4PropTextureCatalogBuilder {
                     if (!Directory.Exists(channelFolder)) {
                         Directory.CreateDirectory(channelFolder);
                     }
-                    paths.AddRange(Directory.EnumerateFiles(channelFolder, "*", SearchOption.AllDirectories).Where(path => path.EndsWith("latest\\pkg.json")));
+                    paths.AddRange(Directory.EnumerateFiles(channelFolder, "*", SearchOption.AllDirectories).Where(path => path.EndsWith("latest\\pkg.json") && !path.Contains("_ext")));
                     break;
             }
 
@@ -101,7 +101,7 @@ namespace SC4PropTextureCatalogBuilder {
                 if (path.Contains("sc4pacAsset")) {
                     assets.Add(JsonSerializer.Deserialize<JsonAsset>(json, opt));
                 } else {
-                    packages.Add(JsonSerializer.Deserialize<JsonPackage>(json, opt));
+                   packages.Add(JsonSerializer.Deserialize<JsonPackage>(json, opt));
                 } 
             }
 

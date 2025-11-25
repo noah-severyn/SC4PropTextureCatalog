@@ -37,53 +37,54 @@ namespace SC4PropTextureCatalogBuilder {
         }
     }
 
-    ///// <summary>
-    ///// An item in the Asset table. An asset referrs to a download or file, and is akin to a sc4pac asset.
-    ///// </summary>
-    //[Table("Packages")]
-    //public class PackageItem(int exchId, int assetId, string? group = null, string? name = null, string? version = null, List<string>? websites = null, string? author = null, int? primaryCat = null, int? secondaryCat = null) {
-    //    [Column("ExchangeId")]
-    //    [NotNull]
-    //    public int ExchangeId { get; set; } = exchId;
-        
-    //    [Column("AssetId")]
-    //    [NotNull]
-    //    public int AssetId { get; set; } = assetId;
+    /// <summary>
+    /// An item in the Asset table. An asset referrs to a download or file, and is akin to a sc4pac asset.
+    /// </summary>
+    [Table("Packages")]
+    public class PackageItem(int exchId, int assetId, string packageId, string? version = null, List<string>? websites = null, string? author = null, int? primaryCat = null, int? secondaryCat = null) {
+        [Column("ExchangeId")]
+        [NotNull]
+        public int ExchangeId { get; set; } = exchId;
 
-    //    /// <summary>
-    //    /// sc4pac package identifier in the format <c>group:name</c>.
-    //    /// </summary>
-    //    [Column("Package")]
-    //    public string?  Package { get; set; } = $"{group}:{name}";
+        [Column("AssetId")]
+        [NotNull]
+        public int AssetId { get; set; } = assetId;
 
-    //    [Column("Version")]
-    //    public string? Version { get; set; } = version;
+        /// <summary>
+        /// sc4pac package identifier in the format <c>group:name</c>.
+        /// </summary>
+        [Column("PackageId")]
+        [NotNull]
+        public string? PackageId { get; set; } = packageId;
 
-    //    /// <summary>
-    //    /// Semicolon separated list of one or more urls
-    //    /// </summary>
-    //    [Column("Websites")]
-    //    public string Websites { get; set; } = string.Join(';', websites ?? []);
+        [Column("Version")]
+        public string? Version { get; set; } = version;
 
-    //    [Column("Author")]
-    //    public string? Author { get; set; } = author;
+        /// <summary>
+        /// Semicolon separated list of one or more urls
+        /// </summary>
+        [Column("Websites")]
+        public string Websites { get; set; } = string.Join(';', websites ?? []);
 
-    //    /// <summary>
-    //    /// Describes the contents of this asset as one or more of: Textures, Buildings, Flora, Fauna, People, Vehicles, Scenery, Helpers, Effects, Other, etc.
-    //    /// </summary>
-    //    [Column("PrimaryCat")]
-    //    public int? PrimaryCats { get; set; } = primaryCat;
+        [Column("Author")]
+        public string? Author { get; set; } = author;
 
-    //    /// <summary>
-    //    /// Further categorizes each of the primary categories into subcategories
-    //    /// </summary>
-    //    [Column("SecondaryCat")]
-    //    public int? SecondaryCats { get; set; } = secondaryCat;
+        ///// <summary>
+        ///// Describes the contents of this asset as one or more of: Textures, Buildings, Flora, Fauna, People, Vehicles, Scenery, Helpers, Effects, Other, etc.
+        ///// </summary>
+        //[Column("PrimaryCat")]
+        //public int? PrimaryCats { get; set; } = primaryCat;
 
-    //    public override string ToString() {
-    //        return $"Id:{ExchangeId}-{AssetId}, Package:{Package}, Version:{Version}, Author:{Author}, Primary:{PrimaryCats}, Secondary:{SecondaryCats}";
-    //    }
-    //}
+        ///// <summary>
+        ///// Further categorizes each of the primary categories into subcategories
+        ///// </summary>
+        //[Column("SecondaryCat")]
+        //public int? SecondaryCats { get; set; } = secondaryCat;
+
+        public override string ToString() {
+            return $"Id:{ExchangeId}-{AssetId}, PackageId:{PackageId}, Version:{Version}, Author:{Author}";
+        }
+    }
 
     /// <summary>
     /// An item in the Asset table. An asset referrs to a download or file, and is akin to a sc4pac asset.
@@ -175,21 +176,6 @@ namespace SC4PropTextureCatalogBuilder {
         }
 
 
-        //public void BuildPackageTable(List<JsonPackage> packages) {
-        //    List<PackageItem> items = [];
-        //    int exchangeId;
-        //    foreach (var pkg in packages) {
-        //        exchangeId = GetExchangeId(pkg.Info.Websites[0]);
-        //        items.Add(new PackageItem(exchangeId, 0, pkg.Group, pkg.Name, pkg.Version, pkg.Info.Websites, pkg.Info.Author));
-        //    }
-
-        //    if (items.Count == 0) {
-        //        return;
-        //    }
-        //    foreach (PackageItem item in items) {
-        //        _db.Insert(item);
-        //    }
-        //}
 
 
 
@@ -232,6 +218,10 @@ namespace SC4PropTextureCatalogBuilder {
                 }
             }
             catch (IndexOutOfRangeException) {
+                //Include special exceptions for assets with no id otherwise
+                if (pathOrUrl.Contains("Maxis_Buildings")) {
+                    id = "1";
+                }
                 id = "0";
             }
             
@@ -382,6 +372,12 @@ namespace SC4PropTextureCatalogBuilder {
 
                 string cleanedUrl = new Uri(asset.Url).GetLeftPart(UriPartial.Path); //Strip query params from the Url
                 _db.Execute($"UPDATE Assets SET Version = \"{asset.Version}\", LastModified = \"{asset.LastModified}\", Url = \"{cleanedUrl}\" WHERE ExchangeId = {exchId} AND AssetId = {assetId}");
+
+                foreach (var pkgId in asset.RequiredBy) {
+                    if (!PackageExists(pkgId)) {
+                        _db.Insert(new PackageItem(exchId, assetId, pkgId));
+                    }
+                }
             }
         }
 
@@ -390,10 +386,10 @@ namespace SC4PropTextureCatalogBuilder {
             foreach (var pkg in packages) {
                 //int exchId = GetExchangeId(asset.Url);
                 //int assetId = GetAssetId(asset.Url);
-                var result = _db.Query<(int, int)>("SELECT AssetId, PackageId FROM Packages WHERE Package = ?", pkg.Group + ":" + pkg.Name).FirstOrDefault();
+                (var exchId, var assetId) = _db.Query<(int, int)>("SELECT ExchangeId, AssetId FROM Packages WHERE PackageId = ?", pkg.Group + ":" + pkg.Name).FirstOrDefault();
                 
                 //string cleanedUrl = new Uri(asset.Url).GetLeftPart(UriPartial.Path); //Strip query params from the Url
-                //_db.Execute($"UPDATE Packages SET Version = \"{asset.Version}\", LastModified = \"{asset.LastModified}\", Url = \"{cleanedUrl}\" WHERE ExchangeId = {exchId} AND AssetId = {assetId}");
+                _db.Execute($"UPDATE Packages SET Version = \"{pkg.Version}\", Websites = \"{String.Join(";", pkg.Info.Websites)}\", Author = \"{pkg.Info.Author}\" WHERE ExchangeId = {exchId} AND AssetId = {assetId}");
             }
         }
 
@@ -406,11 +402,24 @@ namespace SC4PropTextureCatalogBuilder {
             int count = _db.ExecuteScalar<int>($"SELECT count(*) FROM Assets WHERE ExchangeId = '{exchangeId}' AND AssetId = '{assetId}'");
             return count != 0;
         }
-
-
-
         /// <summary>
-        /// Return whether this package exists in the TGIs table
+        /// Return whether this asset exists in the <c>Packages</c> table
+        /// </summary>
+        /// <returns>TRUE if the asset exists; FALSE otherwise</returns>
+        public bool PackageExists(int exchangeId, int assetId) {
+            int count = _db.ExecuteScalar<int>($"SELECT count(*) FROM Packages WHERE ExchangeId = '{exchangeId}' AND AssetId = '{assetId}'");
+            return count != 0;
+        }
+        /// <summary>
+        /// Return whether this package exists in the <c>Packages</c> table
+        /// </summary>
+        /// <returns>TRUE if the package exists; FALSE otherwise</returns>
+        public bool PackageExists(string package) {
+            int count = _db.ExecuteScalar<int>($"SELECT count(*) FROM Packages WHERE PackageId = '{package}'");
+            return count != 0;
+        }
+        /// <summary>
+        /// Return whether this package exists in the <c>CatalogItems</c> table
         /// </summary>
         /// <returns>TRUE if the TGI exists; FALSE otherwise</returns>
         public bool TGIExists(string tgi) {

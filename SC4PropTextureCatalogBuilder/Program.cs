@@ -8,6 +8,7 @@ ChannelOptions parseOpt = ChannelOptions.All; //Which channels to parse JSON →
 const string sc4pacCachePath = "C:\\Users\\Administrator\\AppData\\Local\\io.github.memo33\\sc4pac\\cache\\coursier";
 const string extractLocation = "P:\\sc4pac-cache";
 string dataPath = "C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalogBuilder\\data";
+string apiPath = "C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalogAPI\\data\\Catalog.db";
 string dbPath;
 if (createDb) {
     dbPath = Path.Combine(dataPath, $"Catalog-{DateTime.Now.ToString("MM-dd-HH-mm-ss")}.db");
@@ -39,4 +40,4 @@ db.BuildTGITable(extractLocation, assets);
 db.FillAssetTable(assets);
 //db.BuildPackageTable(packages);
 db.FillPackageTable(packages);
-Console.WriteLine("");
+File.Copy(dbPath, apiPath, true);
