@@ -41,7 +41,7 @@ router.get('/search', async (request, response) => {
   const query = `
     SELECT ci.ExchangeId, ci.AssetId, ci.File, ci.TGI, cat.Name AS Category, ci.Name, pkg.PackageId, pkg.Author
     FROM CatalogItems ci
-    LEFT JOIN OIN TGICategories cat ON ci.Category = cat.Category
+    LEFT JOIN TGICategories cat ON ci.Category = cat.Category
     LEFT JOIN Packages pkg ON pkg.ExchangeId = ci.ExchangeId AND pkg.AssetId = ci.AssetId
     WHERE ci.AssetId LIKE ? ESCAPE '\\' OR
           ci.File LIKE ? ESCAPE '\\' OR
