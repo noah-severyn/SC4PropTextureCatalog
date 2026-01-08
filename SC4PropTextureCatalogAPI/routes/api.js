@@ -96,4 +96,25 @@ router.get('/assetid', async (request, response) => {
   }
 });
 
+// GET /api/packages
+router.get('/package', async (request, response) => {
+  const searchText = CleanQueryText(request.query.term || '');
+
+  if (searchText.length > 50) {
+    return response.status(400).json({ error: 'search term too long' });
+  } else if (searchText.length < 3 && searchText !== '') {
+    return response.status(400).json({ error: 'search term must be 3 characters minimum' });
+  }
+
+  const query = (searchText !== '') ? `SELECT * FROM Packages WHERE PackageId LIKE ? ESCAPE '\\'` : `SELECT * FROM Packages`;
+  const params = (searchText !== '') ? [`%${searchText}%`] : []
+  try {
+    const results = await runQuery(query, params);
+    response.json(results);
+  } catch (err) {
+    response.status(500).json({ error: 'Database error', details: err.message });
+  }
+});
+
+
 export default router;

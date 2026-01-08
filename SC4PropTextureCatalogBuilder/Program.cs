@@ -38,6 +38,5 @@ Sc4pacChannel.BuildChannels(channels, buildOpt);
 DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb);
 db.BuildTGITable(extractLocation, assets);
 db.FillAssetTable(assets);
-//db.BuildPackageTable(packages);
 db.FillPackageTable(packages);
 File.Copy(dbPath, apiPath, true);

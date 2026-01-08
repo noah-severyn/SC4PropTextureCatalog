@@ -105,14 +105,13 @@ namespace SC4PropTextureCatalogBuilder {
                 } 
             }
 
-            DumpUrls(packages, assets, channels, options);
             return (packages, assets);
         }
 
         /// <summary>
         /// Dump the urls found in packages and assets for use in the Catalog progress tracker visual.
         /// </summary>
-        private static void DumpUrls(List<JsonPackage> packages, List<JsonAsset> assets, Dictionary<string, ChannelPaths> channels, ChannelOptions co) {
+        public static void DumpUrls(List<JsonPackage> packages, List<JsonAsset> assets, Dictionary<string, ChannelPaths> channels, ChannelOptions co) {
             List<ChartData> data = [];
 
             foreach (JsonPackage pkg in packages) {
