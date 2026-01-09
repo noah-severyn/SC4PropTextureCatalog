@@ -6,9 +6,9 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 const allowedOrigins = [
-  'http://127.0.0.1:4000',
-  'http://localhost:4000',
-  'https://your-frontend-domain.onrailway.app'
+  'http://127.0.0.1:3000',
+  'http://localhost:3000',
+  'https://sc4proptexturecatalog-production.up.railway.app'
 ];
 app.use(cors({
   origin: allowedOrigins,
@@ -21,3 +21,5 @@ app.use('/api', apiRoutes);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+// Use `npx nodemon app.js` to test the api locally
