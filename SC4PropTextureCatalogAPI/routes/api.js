@@ -6,7 +6,7 @@ const sqlite = sqlite3.verbose();
 const router = express.Router();
 
 // Utility function to run queries
-function runQuery(query, params = []) {
+function ExecuteQuery(query, params = []) {
   return new Promise((resolve, reject) => {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
@@ -28,14 +28,34 @@ function CleanQueryText(input) {
     .replace(/_/g, '\\_');
 }
 
+
 // GET /api/search?term=...
 router.get('/search', async (request, response) => {
   const searchText = CleanQueryText(request.query.term);
+  const field = (request.query.field || '').toLowerCase();
+  const validFields = ['assetid', 'filename', 'tgi', 'itemname'];
 
-  if (searchText.length > 50) {
-    return response.status(400).json({ error: 'search term too long' });
+  if (searchText.length > 40) {
+    return response.status(400).json({ error: 'Search term is too long' });
   } else if (searchText.length < 3) {
-    return response.status(400).json({ error: 'search term must be 3 characters minimum' });
+    return response.status(400).json({ error: 'Search term must be 3 characters minimum' });
+  } else if (!validFields.includes(field)) {
+    return response.status(400).json({ error: 'Invalid field option. Must be one of: ' + validFields.join(', ') });
+  }
+  
+  const like = `%${searchText}%`;
+  const fieldMap = { assetid: 'ci.AssetId', filename: 'ci.File', tgi: 'ci.TGI', itemname: 'ci.Name'};
+  let where = '';
+  let params = [];
+  if (field === '') {
+    where = `${fieldMap.assetid} LIKE ? ESCAPE '\\' 
+      OR ${fieldMap.file} LIKE ? ESCAPE '\\' 
+      OR ${fieldMap.tgi} LIKE ? ESCAPE '\\' 
+      OR ${fieldMap.name} LIKE ? ESCAPE '\\'`;
+    params = [like, like, like, like];
+  } else {
+    where = `${fieldMap[field]} LIKE ? ESCAPE '\\'`;
+    params = [like];
   }
 
   const query = `
@@ -43,19 +63,17 @@ router.get('/search', async (request, response) => {
     FROM CatalogItems ci
     LEFT JOIN TGICategories cat ON ci.Category = cat.Category
     LEFT JOIN Packages pkg ON pkg.ExchangeId = ci.ExchangeId AND pkg.AssetId = ci.AssetId
-    WHERE ci.AssetId LIKE ? ESCAPE '\\' OR
-          ci.File LIKE ? ESCAPE '\\' OR
-          ci.TGI LIKE ? ESCAPE '\\' OR
-          ci.Name LIKE ? ESCAPE '\\'
+    WHERE ${where}
     LIMIT 10000`;
-  const like = `%${searchText}%`;
+  console.log(query);
   try {
-    const results = await runQuery(query, [like, like, like, like]);
+    const results = await ExecuteQuery(query, params);
     response.json(results);
   } catch (err) {
     response.status(500).json({ error: 'Database error', details: err.message });
   }
 });
+
 
 // GET /api/iid?value=...
 router.get('/iid', async (request, response) => {
@@ -74,12 +92,13 @@ router.get('/iid', async (request, response) => {
     WHERE substr(CatalogItems.TGI, -8) LIKE ?`;
   const like = `%${iid}%`;
   try {
-    const results = await runQuery(query, [like]);
+    const results = await ExecuteQuery(query, [like]);
     response.json(results);
   } catch (err) {
     response.status(500).json({ error: 'Database error', details: err.message });
   }
 });
+
 
 // GET /api/assetid?value=...
 router.get('/assetid', async (request, response) => {
@@ -89,12 +108,13 @@ router.get('/assetid', async (request, response) => {
     FROM Assets
     WHERE AssetId = ?`;
   try {
-    const results = await runQuery(query, [assetId]);
+    const results = await ExecuteQuery(query, [assetId]);
     response.json(results);
   } catch (err) {
     response.status(500).json({ error: 'Database error', details: err.message });
   }
 });
+
 
 // GET /api/packages
 router.get('/package', async (request, response) => {
@@ -109,7 +129,7 @@ router.get('/package', async (request, response) => {
   const query = (searchText !== '') ? `SELECT * FROM Packages WHERE PackageId LIKE ? ESCAPE '\\'` : `SELECT * FROM Packages`;
   const params = (searchText !== '') ? [`%${searchText}%`] : []
   try {
-    const results = await runQuery(query, params);
+    const results = await ExecuteQuery(query, params);
     response.json(results);
   } catch (err) {
     response.status(500).json({ error: 'Database error', details: err.message });
