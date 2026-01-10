@@ -180,7 +180,7 @@ namespace SC4PropTextureCatalogBuilder {
 
 
         /// <summary>
-        /// Parse all DBPF files in the extract directory and fills the <c>TGI</c> table from each file. Adds a new item in the <c>Assets</c> table if the TGI is part of an asset that does not yet exist in the table.
+        /// Parse all DBPF files in the extract directory and fill the <c>TGI</c> table with the TGIs in each file. Adds a new item in the <c>Assets</c> table if the TGI is part of an asset that does not yet exist in the <c>Assets</c> table.
         /// </summary>
         /// <param name="filesPath">Folder path containing extracted cache files</param>
         /// <returns>A list of any errors encountered</returns>
@@ -221,8 +221,9 @@ namespace SC4PropTextureCatalogBuilder {
                 //Include special exceptions for assets with no id otherwise
                 if (pathOrUrl.Contains("Maxis_Buildings")) {
                     id = "1";
+                } else {
+                    id = "0";
                 }
-                id = "0";
             }
             
             _ = int.TryParse(id, out int assetId);
@@ -249,7 +250,7 @@ namespace SC4PropTextureCatalogBuilder {
 
             int exchangeId = GetExchangeId(folderPath);
             int assetId = GetAssetId(folderPath);
-            Console.WriteLine("writing " + exchangeId + "-" + assetId);
+            Console.WriteLine("writing " + exchangeId + "-" + assetId + " " + folderPath);
 
             var dbpfFiles = files.FilterDBPFFiles().GetUniqueFilenamesAcrossFolders();
             FileStream fs;
@@ -276,7 +277,14 @@ namespace SC4PropTextureCatalogBuilder {
                     //Add Exemplars
                     else if (entry.MatchesEntryType(DBPFTGI.EXEMPLAR)) {
                         DBPFEntryEXMP exmp = (DBPFEntryEXMP) entry;
-                        exmp.Decode();
+                        try {
+                            exmp.Decode();
+                        }
+                        catch (Exception ex) {
+                            errors.Add(new DBPFError(file, exmp.TGI, ex.Message));
+                            break;
+                        }
+                        
                         if (exmp.ListOfProperties.Count == 0) continue;
 
                         DBPFProperty.ExemplarType exmpType = exmp.GetExemplarType();
@@ -355,9 +363,12 @@ namespace SC4PropTextureCatalogBuilder {
                 _db.Insert(new AssetItem(items[0].ExchangeId, items[0].AssetId));
             }
 
-            foreach (CatalogItem item in items) {
-                _db.Insert(item);
-            }
+            //foreach (CatalogItem item in items) {
+            //    _db.Insert(item);
+            //}
+            _db.RunInTransaction(() => {
+                _db.InsertAll(items);
+            });
             return errors;
         }
 
