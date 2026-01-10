@@ -1,7 +1,10 @@
-﻿using SC4PropTextureCatalogBuilder;
+﻿using System.Text.Json;
+using csDBPF;
+using SC4PropTextureCatalogBuilder;
+
+bool createDb = PromptYesNo("Create new database?");
 
 // ===================================================================================================================================================
-bool createDb = false;
 ChannelOptions buildOpt = ChannelOptions.All; //Which channels to build YMAL → JSON
 ChannelOptions parseOpt = ChannelOptions.All; //Which channels to parse JSON → database
 // ===================================================================================================================================================
@@ -29,14 +32,35 @@ channels.Add("simtropolis", new ChannelPaths("C:\\source\\repos\\simtropolis-cha
 channels.Add("sc4evermore", new ChannelPaths("C:\\source\\repos\\sc4e-channel\\src\\yaml", Path.Combine(basefolder, "sc4evermore-channel\\json"), Path.Combine(dataPath, "sc4e-data.json")));
 // ===================================================================================================================================================
 
-
-FileMgt.ExtractAndMoveFiles(sc4pacCachePath, extractLocation);
-Sc4pacChannel.BuildChannels(channels, buildOpt);
+if (PromptYesNo("Extract and move files?")) {
+    FileMgt.ExtractAndMoveFiles(sc4pacCachePath, extractLocation);
+}
+if (PromptYesNo("Build channels?")) {
+    Sc4pacChannel.BuildChannels(channels, buildOpt);
+}
 (var packages, var assets) = Sc4pacChannel.ParseChannelJson(channels, parseOpt);
+//Sc4pacChannel.DumpUrls(packages, assets, channels, parseOpt);
 
-
+List<DBPFError> errors = [];
 DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb);
-db.BuildTGITable(extractLocation, assets);
-db.FillAssetTable(assets);
-db.FillPackageTable(packages);
-File.Copy(dbPath, apiPath, true);
+if (PromptYesNo("Fill TGI table?")) {
+    errors = db.FillTgiTable(extractLocation);
+    string json = JsonSerializer.Serialize(errors);
+    File.WriteAllText(Path.Combine(dataPath, $"Errors-{DateTime.Now:MM-dd-HH-mm-ss}.json"), json);
+}
+if (PromptYesNo("Fill asset table?")) {
+    db.FillAssetTable(assets);
+}
+if (PromptYesNo("Fill package table?")) {
+    db.FillPackageTable(packages);
+}
+if (PromptYesNo("Copy database to API path?")) {
+    File.Copy(dbPath, apiPath, true);
+}
+
+
+static bool PromptYesNo(string message) {
+    Console.Write($"{message} (y/n): ");
+    var response = Console.ReadLine()?.Trim().ToLower();
+    return response == "y" || response == "yes";
+}
