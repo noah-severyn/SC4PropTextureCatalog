@@ -7,41 +7,30 @@
     <title>SC4 Prop Texture Catalog</title>
     <link rel="stylesheet" href="css/pico.css" />
     <link rel="stylesheet" href="css/site.css" />
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.9/dist/css/autoComplete.min.css"> -->
     <link rel="stylesheet" href="css/autocomplete.css" />
 </head>
 
 <body>
-    <header>
-        <nav class="container">
+    <header class="container">
+        <nav>
             <ul>
                 <li class="logo">SC4PropTextureCatalog</li>
                 <li><a href="/SC4PropTextureCatalog4/Index.html">Home</a></li>
                 <li><a href="/SC4PropTextureCatalog4/ViewPack.html">View a Pack</a></li>
                 <li><a href="/SC4PropTextureCatalog4/CompletionStex.html">STEX Status</a></li>
                 <li><a href="/SC4PropTextureCatalog4/About.html">About</a></li>
-                <li><a href="#" data-theme-switcher="toggle" title="Toggle Theme" style="color: var(--pico-contrast); font-size: 1.5em;">☀</a></li>
-            </ul>
+                <li><a href="#" id="theme_switcher"></a></li>
         </nav>
     </header>
 
     <main role="main" class="container">
         <h3>Choose a prop or texture pack to inspect</h3>
-        <p style="color:darkblue">Currently only thumbnails for textures are supported. Props/Buildings/Flora to follow.</p>
-        <div>
-            <datalist id="packs">
-                @{
-                foreach (ViewPackModel.Record pack in Model.ListOfPacks) {
-                <option value="@pack.PackName"></option>
-                }
-                }
-            </datalist>
+        <p style="color:var(--pico-primary)">Currently only thumbnails for textures are supported. Props/Buildings/Flora to follow.</p>
+        <form role="search" id="PackageForm">
+            <input type="text" id="PackageSelection" />
+            <input type="Submit" value="View Pack" />
+        </form>
 
-            <form role="search" id="PackageForm">
-                <input type="text" id="PackageSelection" />
-                <input type="Submit" value="View Pack" />
-            </form>
-        </div>
 
         <div class="sticky">
             <table>
