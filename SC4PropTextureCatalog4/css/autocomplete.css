@@ -93,6 +93,7 @@
   padding: 0.3rem 0.5rem;
   text-align: left;
   font-size: 1rem;
+  color: var(--pico-contrast);
   border-radius: 0.35rem;
   background-color: var(--pico-background-color);
   white-space: nowrap;
@@ -112,11 +113,11 @@
 
 .autoComplete_wrapper > ul > li:hover {
   cursor: pointer;
-  background-color: var(--pico-primary);
+  background-color: var(--pico-dropdown-hover-background-color);
 }
 
 .autoComplete_wrapper > ul > li[aria-selected="true"] {
-  background-color: var(--pico-color-azure-100);
+  background-color: var(--pico-dropdown-hover-background-color);
 }
 
 /* @media only screen and (max-width: 600px) {

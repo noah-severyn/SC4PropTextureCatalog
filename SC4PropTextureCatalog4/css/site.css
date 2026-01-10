@@ -3,12 +3,12 @@
 }
 
 a {
-  color: #0077cc;
+  color: var(--pico-primary)
 }
 
 header {
   width: 100%;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--pico-muted-border-color);
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   line-height: 1em;
 }
@@ -21,74 +21,17 @@ header li {
 header li a {
 	font-size: 1.1rem;
 	font-weight: normal;
-	color: #595959;
+	color: var(--pico-secondary);
 	padding: 0px 10px;
 }
 
 header li a svg {
 	width: var(--pico-font-size);
 	height: 1rem;
-	color: var(pico-color);
 	margin-top: -0.2em;
 }
 
 
-/*
-	================================================
-	Styles for Index/Home Page
-	================================================
-*/
-#ContentTable {
-	border-collapse: collapse;
-	width: 100%;
-	border: 1px solid #ddd;
-	font-size: 12px;
-	text-align: left;
-}
-
-	#ContentTable th {
-		padding: 8px;
-		background-color: #e6e6e6;
-		font-size: 16px;
-		color: #000;
-		position: -webkit-sticky; /* Safari */
-		position: sticky;
-		top: 0;
-	}
-
-	#ContentTable tr, td {
-		padding: 6px;
-		color: #121a21;
-		border-bottom: 1px solid #ddd;
-	}
-
-		#ContentTable tr:hover {
-			background-color: #f8fad2;
-		}
-
-
-/*
-	================================================
-	Styles for ViewPack Page
-	================================================
-*/
-#InfoTable {
-	text-align: center;
-	margin: 10px 0px;
-	background-color: white;
-	width: 100%;
-}
-	#InfoTable th {
-		padding: 8px;
-		background-color: #e6e6e6;
-		font-size: 16px;
-		color: #000;
-	}
-
-	#InfoTable td {
-		padding: 08px;
-		background-color: white;
-	}
 
 
 /*
