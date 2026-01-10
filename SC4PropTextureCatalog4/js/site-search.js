@@ -1,7 +1,40 @@
+// Setup on page load
+document.getElementById('QueryResultSummary').style.display = 'none';
+document.getElementById('QueryResultTable').style.display = 'none';
+ToggleThumbnailControlVisibility();
+
+function ToggleThumbnailControlVisibility() {
+	const bgGroup = document.getElementById("BackgroundGroup");
+	const sizeElem = document.getElementById('ThumbnailSize');
+	// if (document.getElementById("ThumbnailToggle").checked) {
+	// 	bgGroup.style.display = "block";
+	// 	sizeElem.style.display = "block";
+	// } else {
+	// 	bgGroup.style.display = "none";
+	// 	sizeElem.style.display = "none";
+	// }
+}
+
+
+document.getElementById('SearchForm').addEventListener('submit', () => {
+	event.preventDefault();
+	SendQuery(document.getElementById('SearchBox').value);
+});
+
+const categories = document.getElementById('Categories').getElementsByTagName('input');
+Array.from(categories).forEach(chk => {
+	chk.addEventListener('change', () => {
+		const category = chk.parentElement.textContent;
+		const status = chk.checked;
+		let cnt = Filter(category, status);
+		document.getElementById('QueryFilterCount').textContent = cnt;
+	});
+});
+
 
 function SendQuery(searchText) {
 	let query_results = [];
-	fetch('https://sc4proptexturecatalog-production.up.railway.app/api/search?term=' + encodeURIComponent(searchText))
+	fetch(apiUrl + '/api/search?term=' + encodeURIComponent(searchText))
 		.then(response => {
 			if (!response.ok) {
 				throw new Error(`HTTP error! Status: ${response.status}`);
@@ -28,7 +61,7 @@ function QueryReturn(search_text, query_results) {
 		const tr = document.createElement("tr");
 
 		const package = document.createElement("td");
-		package.textContent = "";
+		package.textContent = item.PackageId;
 
 		const file = document.createElement("td");
 		file.textContent = item.File;

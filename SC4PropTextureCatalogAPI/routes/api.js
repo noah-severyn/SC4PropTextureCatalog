@@ -33,7 +33,7 @@ function CleanQueryText(input) {
 router.get('/search', async (request, response) => {
   const searchText = CleanQueryText(request.query.term);
   const field = (request.query.field || '').toLowerCase();
-  const validFields = ['assetid', 'filename', 'tgi', 'itemname'];
+  const validFields = ['assetid', 'filename', 'tgi', 'itemname', ''];
 
   if (searchText.length > 40) {
     return response.status(400).json({ error: 'Search term is too long' });
@@ -49,9 +49,9 @@ router.get('/search', async (request, response) => {
   let params = [];
   if (field === '') {
     where = `${fieldMap.assetid} LIKE ? ESCAPE '\\' 
-      OR ${fieldMap.file} LIKE ? ESCAPE '\\' 
+      OR ${fieldMap.filename} LIKE ? ESCAPE '\\' 
       OR ${fieldMap.tgi} LIKE ? ESCAPE '\\' 
-      OR ${fieldMap.name} LIKE ? ESCAPE '\\'`;
+      OR ${fieldMap.itemname} LIKE ? ESCAPE '\\'`;
     params = [like, like, like, like];
   } else {
     where = `${fieldMap[field]} LIKE ? ESCAPE '\\'`;

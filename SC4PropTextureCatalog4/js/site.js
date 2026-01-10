@@ -1,18 +1,11 @@
-﻿// Setup on page load
-document.getElementById('QueryResultSummary').style.display = 'none';
-document.getElementById('QueryResultTable').style.display = 'none';
-ToggleThumbnailControlVisibility();
-
-
-
-function ToggleThumbnailControlVisibility() {
-	const bgGroup = document.getElementById("BackgroundGroup");
-	const sizeElem = document.getElementById('ThumbnailSize');
-	// if (document.getElementById("ThumbnailToggle").checked) {
-	// 	bgGroup.style.display = "block";
-	// 	sizeElem.style.display = "block";
-	// } else {
-	// 	bgGroup.style.display = "none";
-	// 	sizeElem.style.display = "none";
-	// }
+﻿
+let apiUrl = '';
+const prod = false;
+if (prod) {
+	apiUrl = 'https://sc4proptexturecatalog-production.up.railway.app';
+} else {
+	apiUrl = 'http://localhost:4000';
 }
+
+
+

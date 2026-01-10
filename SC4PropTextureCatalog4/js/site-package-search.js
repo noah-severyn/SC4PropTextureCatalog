@@ -5,8 +5,6 @@ document.getElementById('PackageForm').addEventListener('submit', () => {
     FetchPackageTGIs(document.getElementById('PackageSelection').value);
 });
 
-// const baseUrl = 'https://sc4proptexturecatalog-production.up.railway.app';
-const baseUrl = 'http://localhost:4000';
 
 /**
  * List of all packages in the database matching the specified package query term, or all packages if the query term is blank.
@@ -49,7 +47,7 @@ async function Setup() {
 
 
 async function FetchPackages(searchText) {
-    await fetch(baseUrl + '/api/package?term=' + encodeURIComponent(searchText))
+    await fetch(apiUrl + '/api/package?term=' + encodeURIComponent(searchText))
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
@@ -65,7 +63,7 @@ async function FetchPackages(searchText) {
 
 function FetchPackageTGIs(searchText) {
     let query_results = [];
-    const query_text = baseUrl + '/api/package?term=' + encodeURIComponent(searchText);
+    const query_text = apiUrl + '/api/package?term=' + encodeURIComponent(searchText) + '?field=';
     fetch(query_text)
         .then(response => {
             if (!response.ok) {
