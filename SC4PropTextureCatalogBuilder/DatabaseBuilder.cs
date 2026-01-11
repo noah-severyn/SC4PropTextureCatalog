@@ -409,7 +409,13 @@ namespace SC4PropTextureCatalogBuilder {
                 int exchId = GetExchangeId(asset.Url);
                 int assetId = GetAssetId(asset.Url);
 
-                string cleanedUrl = new Uri(asset.Url).GetLeftPart(UriPartial.Path); //Strip query params from the Url
+                string cleanedUrl;
+                 //Strip query params from the Url, except from SC4E where the id is a critical parameter
+                if (asset.Url.Contains("sc4evermore")) {
+                    cleanedUrl = asset.Url.Replace("?task=download.send&id=", "/download/");
+                } else {
+                    cleanedUrl = new Uri(asset.Url).GetLeftPart(UriPartial.Path);
+                }
                 _db.Execute($"UPDATE Assets SET Version = \"{asset.Version}\", LastModified = \"{asset.LastModified}\", Url = \"{cleanedUrl}\" WHERE ExchangeId = {exchId} AND AssetId = {assetId}");
 
                 foreach (var pkgId in asset.RequiredBy) {
