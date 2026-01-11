@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Globalization;
+using System.Net;
 using csDBPF;
+using Force.Crc32;
 using SQLite;
 
 namespace SC4PropTextureCatalogBuilder {
@@ -171,10 +174,78 @@ namespace SC4PropTextureCatalogBuilder {
                 _db.Insert(new Exchange(2, "SC4 Evermore", "https:\\\\www.sc4evermore.com"));
                 _db.Insert(new Exchange(3, "ToutSimCities", "https:\\\\www.toutsimcities.com"));
                 _db.Insert(new Exchange(4, "Hide-Inoki", "http:\\\\hide-inoki.com"));
+                _db.Insert(new Exchange(5, "Github", "https:\\\\github.com"));
                 _db.CreateTable<PackageItem>();
             }
         }
 
+
+
+
+
+        private static int GetExchangeId(string pathOrUrl) {
+            if (pathOrUrl.Contains("simtropolis")) {
+                return 1;
+            } else if (pathOrUrl.Contains("sc4evermore.com")) {
+                return 2;
+            } else if (pathOrUrl.Contains("toutsimcities.com")) {
+                return 3;
+            } else if (pathOrUrl.Contains("hide-inoki.com")) {
+                return 4;
+            } else if (pathOrUrl.Contains("github.com")) {
+                return 5;
+            }
+            return 0;
+        }
+
+        private static int GetAssetId(string pathOrUrl) {
+            string id = string.Empty;
+            pathOrUrl = pathOrUrl.Replace("/", "\\").ToLower(); //So this works with web and file path urls
+            try {
+                if (pathOrUrl.Contains("simtropolis")) {
+                    //P:\sc4pac-cache\https\community.simtropolis.com\files\file\45-bigbus-station\%3Fdo%3Ddownload%26r%3D22305\
+                    //P:\sc4pac-cache\https\community.simtropolis.com\library\maxis\\sc4\buildings\Maxis_Buildings.zip\63 Building ← No available id
+                    id = pathOrUrl.Split("file\\")[1].Split("-")[0];
+                } else if (pathOrUrl.Contains("sc4evermore")) {
+                    //P:\sc4pac-cache\https\www.sc4evermore.com\index.php\downloads%3Ftask%3Ddownload.send%26id%3D1%3Asc4d-lex-legacy-hkabt-dependencies-pack
+                    //https://www.sc4evermore.com/index.php/downloads?task=download.send&id=404:gtg-bosch-building
+                    pathOrUrl = WebUtility.UrlDecode(pathOrUrl);
+                    id = pathOrUrl.Split("id=")[1].Split(":")[0];
+                } else if (pathOrUrl.Contains("toutsimcities")) {
+                    //P:\sc4pac-cache\https\www.toutsimcities.com\downloads\start\1780\TSC\Namspopof
+                    id = pathOrUrl.Split("start\\")[1].Split("\\")[0];
+                } else if (pathOrUrl.Contains("hide-inoki")) {
+                    //P:\sc4pac-cache\http\hide-inoki.com\bbs\archives\files\1391.zip\NekoPropSet03
+                    //P:\sc4pac-cache\http\hide-inoki.com\works\sc4\has_dependencies.zip ← No available id
+                    id = pathOrUrl.Split("files\\")[1].Split(".")[0];
+                } else if (pathOrUrl.Contains("github")) {
+                    //P:\sc4pac-cache\https\github.com\NAMTeam\Network-Addon-Mod\releases\download\49_rev1\NetworkAddonMod_Setup_Version49_rev1.zip
+                    id = Crc32Kinda(pathOrUrl.Split("github.com\\")[1].Split("\\releases")[0]);
+                }
+            }
+            catch (IndexOutOfRangeException) {
+                //Include special exceptions for known assets with no id otherwise
+                if (pathOrUrl.Contains("Maxis_Buildings")) {
+                    id = "1"; //Full Id 1-1
+                } else {
+                    id = Crc32Kinda(pathOrUrl);
+                }
+            }
+
+            _ = int.TryParse(id, out int assetId);
+            return assetId;
+        }
+
+        private static string Crc32Kinda(string input) {
+            // A quick, abbreviated way to turn a long string into a *somewhat* unique identifier. The *actual* checksum is irrelevant and not returned.
+            // The first 4 bytes of the hexadecimal checksum as a decimal number are returned.
+            // This is a fallback method of getting an identifier, so the risk of collisions is low based on the quantity of items that will be hashed.
+            var bytes = System.Text.Encoding.UTF8.GetBytes(input);
+            uint crc = Crc32Algorithm.Compute(bytes);
+            string crc_s = crc.ToString("x8");
+            _ = int.TryParse(crc_s.AsSpan(0, 4), NumberStyles.HexNumber, CultureInfo.InvariantCulture, out int result);
+            return result.ToString();
+        }
 
 
 
@@ -191,66 +262,20 @@ namespace SC4PropTextureCatalogBuilder {
                 if (!files.Any(f => f.IsDBPF())) { continue; }
                     
                 //if (!AssetExists(exchangeId, assetId)) {
-                    errors.AddRange(FillTgis(folder));
+                    errors.AddRange(ExtractTGIs(folder));
                 //}
             }
             return errors;
         }
 
-        private static int GetAssetId(string pathOrUrl) {
-            string id = string.Empty;
-            pathOrUrl = pathOrUrl.Replace("/", "\\"); //So this works with web and file path urls
-            try {
-                if (pathOrUrl.Contains("simtropolis")) {
-                    //P:\sc4pac-cache\https\community.simtropolis.com\files\file\45-bigbus-station\%3Fdo%3Ddownload%26r%3D22305\
-                    //P:\sc4pac-cache\https\community.simtropolis.com\library\maxis\\sc4\buildings\Maxis_Buildings.zip\63 Building ← No available id
-                    id = pathOrUrl.Split("file\\")[1].Split("-")[0];
-                } else if (pathOrUrl.Contains("sc4evermore")) {
-                    //P:\sc4pac-cache\https\www.sc4evermore.com\index.php\downloads%3Ftask%3Ddownload.send%26id%3D1%3Asc4d-lex-legacy-hkabt-dependencies-pack
-                    id = pathOrUrl.Split("id%3D")[1].Split("%3A")[0];
-                } else if (pathOrUrl.Contains("toutsimcities")) {
-                    //P:\sc4pac-cache\https\www.toutsimcities.com\downloads\start\1780\TSC\Namspopof
-                    id = pathOrUrl.Split("start\\")[1].Split("\\")[0];
-                } else if (pathOrUrl.Contains("hide-inoki")) {
-                    //P:\sc4pac-cache\http\hide-inoki.com\bbs\archives\files\1391.zip\NekoPropSet03
-                    //P:\sc4pac-cache\http\hide-inoki.com\works\sc4\has_dependencies.zip ← No available id
-                    id = pathOrUrl.Split("files\\")[1].Split(".")[0];
-                }
-            }
-            catch (IndexOutOfRangeException) {
-                //Include special exceptions for assets with no id otherwise
-                if (pathOrUrl.Contains("Maxis_Buildings")) {
-                    id = "1";
-                } else {
-                    id = "0";
-                }
-            }
-            
-            _ = int.TryParse(id, out int assetId);
-            return assetId;
-        }
-
-        private static int GetExchangeId(string pathOrUrl) {
-            if (pathOrUrl.Contains("simtropolis")) {
-                return 1;
-            } else if (pathOrUrl.Contains("sc4evermore")) {
-                return 2;
-            } else if (pathOrUrl.Contains("toutsimcities")) {
-                return 3;
-            } else if (pathOrUrl.Contains("hide-inoki")) {
-                return 4;
-            }
-            return 0;
-        }
-
-        private List<DBPFError> FillTgis(string folderPath) {
+        private List<DBPFError> ExtractTGIs(string folderPath) {
             var errors = new List<DBPFError>();
             var items = new List<CatalogItem>();
             var files = Directory.EnumerateFiles(folderPath, "*", SearchOption.AllDirectories);
 
             int exchangeId = GetExchangeId(folderPath);
             int assetId = GetAssetId(folderPath);
-            Console.WriteLine("writing " + exchangeId + "-" + assetId + " " + folderPath);
+            Console.WriteLine("  > writing " + exchangeId + "-" + assetId + " " + folderPath);
 
             var dbpfFiles = files.FilterDBPFFiles().GetUniqueFilenamesAcrossFolders();
             FileStream fs;
@@ -261,7 +286,7 @@ namespace SC4PropTextureCatalogBuilder {
                 catch (Exception) {
 
                     errors.Add(new DBPFError(Path.GetFileName(file), DBPFTGI.BLANKTGI, "Opening file failed"));
-                    Console.WriteLine("Could not open " + file);
+                    Console.WriteLine("  > could not open " + file);
                     continue;
                 }
                 DBPFFile dbpf = new DBPFFile(fs);
@@ -371,6 +396,9 @@ namespace SC4PropTextureCatalogBuilder {
             });
             return errors;
         }
+
+
+
 
         /// <summary>
         /// Updates the <c>Assets</c> table with data parsed from sc4pac JSON assets. Adds a new item in the <c>Packages</c>
