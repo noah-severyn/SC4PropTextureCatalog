@@ -4,8 +4,8 @@ using System.Text.Json.Serialization;
 
 namespace SC4PropTextureCatalogBuilder {
     public enum ChannelOptions {
-        None = -1,
-        All = 0,
+        None,
+        All,
         Default,
         Simtropolis,
         SC4Evermore
@@ -51,7 +51,7 @@ namespace SC4PropTextureCatalogBuilder {
             }
         }
         private static void Build(string yamlPath, string outputPath) {
-            Console.WriteLine("building " + outputPath);
+            Console.WriteLine("  > building " + outputPath);
             FileMgt.ExecuteCommand("cmd.exe", $"/C sc4pac channel build --output \"{outputPath.Replace("\\", "/")}\" \"{yamlPath.Replace("\\", "/")}\"");
         }
 
@@ -76,7 +76,7 @@ namespace SC4PropTextureCatalogBuilder {
                     return ([], []);
                 case ChannelOptions.All:
                     foreach (var key in channels.Keys) {
-                        Console.WriteLine("parsing " + channels[key].YamlPath);
+                        Console.WriteLine("  > parsing " + channels[key].YamlPath);
                         channelFolder = Path.Combine(channels[key].JsonPath, "metadata");
                         if (!Directory.Exists(channelFolder)) {
                             Directory.CreateDirectory(channelFolder);
@@ -86,7 +86,7 @@ namespace SC4PropTextureCatalogBuilder {
                     break;
                 default:
                     var name = options.ToString().ToLower();
-                    Console.WriteLine("parsing " + channels[name].YamlPath);
+                    Console.WriteLine("  > parsing " + channels[name].YamlPath);
                     channelFolder = Path.Combine(channels[name].JsonPath, "metadata");
                     if (!Directory.Exists(channelFolder)) {
                         Directory.CreateDirectory(channelFolder);
@@ -171,6 +171,10 @@ namespace SC4PropTextureCatalogBuilder {
         public string LastModified { get; set; } = string.Empty;
         public string Url { get; set; } = string.Empty;
         public List<string> RequiredBy { get; set; } = [];
+
+        public override string ToString() {
+            return $"{AssetId} ({Version})";
+        }
     }
 
     public class JsonPackage {
@@ -181,6 +185,10 @@ namespace SC4PropTextureCatalogBuilder {
         public string Version { get; set; } = string.Empty;
         public string Subfolder { get; set; } = string.Empty;
         public JsonPackageInfo Info { get; set; } = new JsonPackageInfo();
+
+        public override string ToString() {
+            return $"{Group}:{Name} ({Version}), {Subfolder}";
+        }
 
     }
 

@@ -5,9 +5,6 @@ using SC4PropTextureCatalogBuilder;
 bool createDb = PromptYesNo("Create new database?");
 
 // ===================================================================================================================================================
-ChannelOptions buildOpt = ChannelOptions.All; //Which channels to build YMAL → JSON
-ChannelOptions parseOpt = ChannelOptions.All; //Which channels to parse JSON → database
-// ===================================================================================================================================================
 const string sc4pacCachePath = "C:\\Users\\Administrator\\AppData\\Local\\io.github.memo33\\sc4pac\\cache\\coursier";
 const string extractLocation = "P:\\sc4pac-cache";
 string dataPath = "C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalogBuilder\\data";
@@ -18,12 +15,6 @@ if (createDb) {
 } else {
     dbPath = new DirectoryInfo(dataPath).GetFiles().OrderByDescending(f => f.LastWriteTime).First().FullName;
 }
-
-Dictionary<byte, string> exchanges = [];
-exchanges.Add(1, Path.Combine(sc4pacCachePath, "https\\community.simtropolis.com"));
-exchanges.Add(2, Path.Combine(sc4pacCachePath, "https\\www.sc4evermore.com"));
-exchanges.Add(3, Path.Combine(sc4pacCachePath, "https\\www.toutsimcities.com"));
-exchanges.Add(4, Path.Combine(sc4pacCachePath, "http\\hide-inoki.com"));
 
 string basefolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "sc4pac-channels");
 Dictionary<string, ChannelPaths> channels = [];
@@ -36,8 +27,10 @@ if (PromptYesNo("Extract and move files?")) {
     FileMgt.ExtractAndMoveFiles(sc4pacCachePath, extractLocation);
 }
 if (PromptYesNo("Build channels?")) {
+    ChannelOptions buildOpt = PromptChannelOption("Which channel(s) do you want to build? (YAML → JSON)");
     Sc4pacChannel.BuildChannels(channels, buildOpt);
 }
+ChannelOptions parseOpt = PromptChannelOption("Which channel(s) do you want to parse? (JSON → DB Objects");
 (var packages, var assets) = Sc4pacChannel.ParseChannelJson(channels, parseOpt);
 //Sc4pacChannel.DumpUrls(packages, assets, channels, parseOpt);
 
@@ -48,10 +41,10 @@ if (PromptYesNo("Fill TGI table?")) {
     string json = JsonSerializer.Serialize(errors);
     File.WriteAllText(Path.Combine(dataPath, $"Errors-{DateTime.Now:MM-dd-HH-mm-ss}.json"), json);
 }
-if (PromptYesNo("Fill asset table?")) {
+if (PromptYesNo("Fill Asset table?")) {
     db.FillAssetTable(assets);
 }
-if (PromptYesNo("Fill package table?")) {
+if (PromptYesNo("Fill Package table?")) {
     db.FillPackageTable(packages);
 }
 if (PromptYesNo("Copy database to API path?")) {
@@ -63,4 +56,10 @@ static bool PromptYesNo(string message) {
     Console.Write($"{message} (y/n): ");
     var response = Console.ReadLine()?.Trim().ToLower();
     return response == "y" || response == "yes";
+}
+static ChannelOptions PromptChannelOption(string message) {
+    Console.Write($"{message} (0=None, 1=All, 2=Default, 3=ST, 4=SC4E): ");
+    var response = Console.ReadLine()?.Trim().ToLower();
+    _ = int.TryParse(response, out int value);
+    return (ChannelOptions) value;
 }
