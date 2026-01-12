@@ -11,7 +11,7 @@ string dataPath = "C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatal
 string apiPath = "C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalogAPI\\data\\Catalog.db";
 string dbPath;
 if (createDb) {
-    dbPath = Path.Combine(dataPath, $"Catalog-{DateTime.Now.ToString("MM-dd-HH-mm-ss")}.db");
+    dbPath = Path.Combine(dataPath, $"Catalog-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.db");
 } else {
     dbPath = new DirectoryInfo(dataPath).GetFiles().OrderByDescending(f => f.LastWriteTime).First().FullName;
 }
@@ -39,7 +39,7 @@ DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb);
 if (PromptYesNo("Fill TGI table?")) {
     errors = db.FillTgiTable(extractLocation);
     string json = JsonSerializer.Serialize(errors);
-    File.WriteAllText(Path.Combine(dataPath, $"Errors-{DateTime.Now:MM-dd-HH-mm-ss}.json"), json);
+    File.WriteAllText(Path.Combine(dataPath, $"Errors-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.json"), json);
 }
 if (PromptYesNo("Fill Asset table?")) {
     db.FillAssetTable(assets);
