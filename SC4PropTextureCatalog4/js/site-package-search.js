@@ -77,11 +77,38 @@ function FetchPackageTGIs(searchText) {
         });
 }
 
-
+const exchanges = {
+  'simtropolis': 'STEX',
+  'sc4evermore': 'SC4E',
+  'toutsimcities': 'TSC',
+  'capitalsimcity': 'CSC',
+  'hide-inoki': 'HaS',
+  'github': 'GitHub'
+};
+function GetExchangeAbbreviation(url) {
+  for (const key in exchanges) {
+    if (url.includes(key)) {
+      return exchanges[key];
+    }
+  }
+  return 'Other';
+}
 
 function QueryReturn2(search_text, query_results) {
     let pkg = AllPackages.filter(p => p.PackageId === search_text)[0];
     document.getElementById('SelectedPackId').textContent = pkg.PackageId;
+
+    document.getElementById('SelectedPackUrls').innerHTML = '';
+    pkg.Websites.split(';').forEach(url => {
+        const tagDiv = document.createElement('div');
+        tagDiv.classList.add('tag');
+        const link = document.createElement('a');
+        link.href = url;
+        link.textContent = GetExchangeAbbreviation(url);
+        tagDiv.appendChild(link);
+        document.getElementById('SelectedPackUrls').appendChild(tagDiv);
+    });
+
     document.getElementById('SelectedPackVersion').textContent = pkg.Version;
     document.getElementById('SelectedPackAuthor').textContent = pkg.Author;
 
