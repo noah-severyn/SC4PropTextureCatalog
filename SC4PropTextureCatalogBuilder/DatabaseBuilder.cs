@@ -7,146 +7,9 @@ using SQLite;
 
 namespace SC4PropTextureCatalogBuilder {
     /// <summary>
-    /// An item in the TGI table, which tracks which TGIs are in which dependency pack. 
-    /// </summary>s
-    [Table("CatalogItems")]
-    public class CatalogItem(int exchId, int assetId, string file, string tgi, int type, string? exmpName) {
-        [Column("ExchangeId")]
-        public int ExchangeId { get; set; } = exchId;
-
-        [Column("AssetId")]
-        public int AssetId { get; set; } = assetId;
-
-        [Column("File")]
-        public string File { get; set; } = file;
-
-        [Column("TGI")]
-        public string TGI { get; set; } = tgi;
-
-        /// <summary>
-        /// One of the <see cref="TGICategory"/> enumerations.
-        /// </summary>
-        [Column("Category")]
-        public int? Category { get; set; } = type;
-
-        /// <summary>
-        /// Item name, if applicable. Typically an exemplar name.
-        /// </summary>
-        [Column("Name")]
-        public string? Name { get; set; } = exmpName;
-
-        public override string ToString() {
-            return $"{ExchangeId}-{AssetId} {TGI}: {AssetId}, {Category}, {Name}";
-        }
-    }
-
-    /// <summary>
-    /// An item in the Asset table. An asset referrs to a download or file, and is akin to a sc4pac asset.
-    /// </summary>
-    [Table("Packages")]
-    public class PackageItem(int exchId, int assetId, string packageId, string? version = null, List<string>? websites = null, string? author = null, int? primaryCat = null, int? secondaryCat = null) {
-        [Column("ExchangeId")]
-        [NotNull]
-        public int ExchangeId { get; set; } = exchId;
-
-        [Column("AssetId")]
-        [NotNull]
-        public int AssetId { get; set; } = assetId;
-
-        /// <summary>
-        /// sc4pac package identifier in the format <c>group:name</c>.
-        /// </summary>
-        [Column("PackageId")]
-        [NotNull]
-        public string? PackageId { get; set; } = packageId;
-
-        [Column("Version")]
-        public string? Version { get; set; } = version;
-
-        /// <summary>
-        /// Semicolon separated list of one or more urls
-        /// </summary>
-        [Column("Websites")]
-        public string Websites { get; set; } = string.Join(';', websites ?? []);
-
-        [Column("Author")]
-        public string? Author { get; set; } = author;
-
-        ///// <summary>
-        ///// Describes the contents of this asset as one or more of: Textures, Buildings, Flora, Fauna, People, Vehicles, Scenery, Helpers, Effects, Other, etc.
-        ///// </summary>
-        //[Column("PrimaryCat")]
-        //public int? PrimaryCats { get; set; } = primaryCat;
-
-        ///// <summary>
-        ///// Further categorizes each of the primary categories into subcategories
-        ///// </summary>
-        //[Column("SecondaryCat")]
-        //public int? SecondaryCats { get; set; } = secondaryCat;
-
-        public override string ToString() {
-            return $"Id:{ExchangeId}-{AssetId}, PackageId:{PackageId}, Version:{Version}, Author:{Author}";
-        }
-    }
-
-    /// <summary>
-    /// An item in the Asset table. An asset referrs to a download or file, and is akin to a sc4pac asset.
-    /// </summary>
-    [Table("Assets")]
-    public class AssetItem(int exchId, int assetId) {
-        [NotNull]
-        public int ExchangeId { get; set; } = exchId;
-        [NotNull]
-        public int AssetId { get; set; } = assetId;
-        public string Version { get; set; } = string.Empty;
-        public string LastModified { get; set; } = string.Empty;
-        public string Url { get; set; } = string.Empty;
-    }
-
-
-    /// <summary>
-    /// Dimension table of TGI types (building, prop, texture, flora, cohort, etc.). These values are nominally based off Rep 0 of the LotConfigPropertyLotObject property, with a few extra values added in for the purposes of tracking in this database.
-    /// </summary>
-    [Table("TGICategories")]
-    public class TGICategory(int type, string name) {
-        [PrimaryKey]
-        [Column("Category")]
-        public int Category { get; set; } = type;
-
-        [Column("Name")]
-        public string Name { get; set; } = name;
-
-        public override string ToString() {
-            return $"{Category}: {Name}";
-        }
-    }
-
-    /// <summary>
-    /// Dimension table with information about each exchange.
-    /// </summary>
-    [Table("Exchanges")]
-    public class Exchange(int id, string name, string url) {
-        [PrimaryKey]
-        [Column("ExchangeId")]
-        public int ExchangeId { get; set; } = id;
-
-        [Column("Name")]
-        public string Name { get; set; } = name;
-
-        [Column("Url")]
-        public string Url { get; set; } = url;
-
-        public override string ToString() {
-            return $"{ExchangeId}: {Name}";
-        }
-    }
-
-
-
-    /// <summary>
     /// Create and operate on the Prop Texture Catalog database.
     /// </summary>
-    public class DatabaseBuilder {
+    internal partial class DatabaseBuilder {
         private readonly SQLiteConnection _db;
 
         /// <summary>
@@ -157,7 +20,7 @@ namespace SC4PropTextureCatalogBuilder {
         public DatabaseBuilder(string dbPath, bool create) {
             _db = new SQLiteConnection(dbPath);
             if (create) {
-                _db.CreateTable<CatalogItem>();
+                _db.CreateTable<TGIItem>();
                 _db.CreateTable<AssetItem>();
                 _db.CreateTable<TGICategory>();
                 _db.Insert(new TGICategory(-1, "Unknown"));
@@ -270,7 +133,7 @@ namespace SC4PropTextureCatalogBuilder {
 
         private List<DBPFError> ExtractTGIs(string folderPath) {
             var errors = new List<DBPFError>();
-            var items = new List<CatalogItem>();
+            var items = new List<TGIItem>();
             var files = Directory.EnumerateFiles(folderPath, "*", SearchOption.AllDirectories);
 
             int exchangeId = GetExchangeId(folderPath);
@@ -296,7 +159,7 @@ namespace SC4PropTextureCatalogBuilder {
                 foreach (DBPFEntry entry in targetEntries) {
                     //Add Base/Overlay textures (look at the least significant 4 bits and only add if it is 0, 5, or A: AND the Instance by 0b1111 (0xF) and examine the modulus result)
                     if (entry.MatchesEntryType(DBPFTGI.FSH_BASE_OVERLAY) && ((entry.TGI.InstanceID & 0xF) % 5) == 0) {
-                        items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 2, null));
+                        items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 2, null));
                     }
 
                     //Add Exemplars
@@ -333,13 +196,13 @@ namespace SC4PropTextureCatalogBuilder {
 
                         switch (exmpType) {
                             case DBPFProperty.ExemplarType.Building:
-                                items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 0, exmpName));
+                                items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 0, exmpName));
                                 break;
                             case DBPFProperty.ExemplarType.Prop:
-                                items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 1, exmpName));
+                                items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 1, exmpName));
                                 break;
                             case DBPFProperty.ExemplarType.FloraFauna:
-                                items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 4, exmpName));
+                                items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 4, exmpName));
                                 break;
                         }
                     }
@@ -359,22 +222,22 @@ namespace SC4PropTextureCatalogBuilder {
                             exmpName = (string) prop.GetData();
                         }
 
-                        items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 10, exmpName));
+                        items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 10, exmpName));
                     }
 
                     //Add LTEXTs
                     else if (entry.MatchesEntryType(DBPFTGI.LTEXT)) {
-                        items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 11, null));
+                        items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 11, null));
                     }
 
                     //Add LUAs
                     else if (entry.MatchesAnyEntryType(DBPFTGI.LUA, DBPFTGI.LUA_GEN)) {
-                        items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 12, null));
+                        items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 12, null));
                     }
 
                     //Add UIs
                     else if (entry.MatchesEntryType(DBPFTGI.UI)) {
-                        items.Add(new CatalogItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 13, null));
+                        items.Add(new TGIItem(exchangeId, assetId, dbpf.File.Name, entry.TGI.ToString(), 13, null));
                     }
                 }
             }
@@ -404,7 +267,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// Updates the <c>Assets</c> table with data parsed from sc4pac JSON assets. Adds a new item in the <c>Packages</c>
         /// </summary>
         /// <param name="assets">List of sc4pac JSON assets</param>
-        public void FillAssetTable(List<JsonAsset> assets) {
+        public void FillAssetTable(List<SC4Pac.Asset> assets) {
             foreach (var asset in assets) {
                 int exchId = GetExchangeId(asset.Url);
                 int assetId = GetAssetId(asset.Url);
@@ -427,7 +290,7 @@ namespace SC4PropTextureCatalogBuilder {
         }
 
 
-        public void FillPackageTable(List<JsonPackage> packages) {
+        public void FillPackageTable(List<SC4Pac.Package> packages) {
             foreach (var pkg in packages) {
                 //int exchId = GetExchangeId(asset.Url);
                 //int assetId = GetAssetId(asset.Url);
