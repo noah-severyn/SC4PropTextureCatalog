@@ -28,10 +28,10 @@ if (PromptYesNo("Extract and move files?")) {
 }
 if (PromptYesNo("Build channels?")) {
     ChannelOptions buildOpt = PromptChannelOption("Which channel(s) do you want to build? (YAML → JSON)");
-    Sc4pacChannel.BuildChannels(channels, buildOpt);
+    SC4Pac.BuildChannels(channels, buildOpt);
 }
 ChannelOptions parseOpt = PromptChannelOption("Which channel(s) do you want to parse? (JSON → DB Objects");
-(var packages, var assets) = Sc4pacChannel.ParseChannelJson(channels, parseOpt);
+(var packages, var assets) = SC4Pac.ParseChannelJson(channels, parseOpt);
 //Sc4pacChannel.DumpUrls(packages, assets, channels, parseOpt);
 
 List<DBPFError> errors = [];

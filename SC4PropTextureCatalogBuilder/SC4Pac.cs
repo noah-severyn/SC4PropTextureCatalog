@@ -1,6 +1,4 @@
-﻿using System;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json;
 
 namespace SC4PropTextureCatalogBuilder {
     public enum ChannelOptions {
@@ -29,7 +27,7 @@ namespace SC4PropTextureCatalogBuilder {
     /// <summary>
     /// A representation of the metadata created for a sc4pac channel.
     /// </summary>
-    internal static class Sc4pacChannel {
+    internal static partial class SC4Pac {
 
 
         /// <summary>
@@ -59,11 +57,11 @@ namespace SC4PropTextureCatalogBuilder {
         /// <summary>
         /// Parse the channel JSON files to a list of packages and assets.
         /// </summary>
-        /// <returns>A list of <see cref="JsonPackage"/> and a list of <see cref="JsonAsset"/> found</returns>
-        internal static (List<JsonPackage>, List<JsonAsset>) ParseChannelJson(Dictionary<string, ChannelPaths> channels, ChannelOptions options) {
+        /// <returns>A list of <see cref="Package"/> and a list of <see cref="Asset"/> found</returns>
+        internal static (List<Package>, List<Asset>) ParseChannelJson(Dictionary<string, ChannelPaths> channels, ChannelOptions options) {
             string json;
-            List<JsonPackage> packages = [];
-            List<JsonAsset> assets = [];
+            List<Package> packages = [];
+            List<Asset> assets = [];
             var opt = new JsonSerializerOptions {
                 PropertyNameCaseInsensitive = true
             };
@@ -99,9 +97,9 @@ namespace SC4PropTextureCatalogBuilder {
             foreach (string path in paths) {
                 json = File.ReadAllText(path);
                 if (path.Contains("sc4pacAsset")) {
-                    assets.Add(JsonSerializer.Deserialize<JsonAsset>(json, opt));
+                    assets.Add(JsonSerializer.Deserialize<Asset>(json, opt));
                 } else {
-                   packages.Add(JsonSerializer.Deserialize<JsonPackage>(json, opt));
+                   packages.Add(JsonSerializer.Deserialize<Package>(json, opt));
                 } 
             }
 
@@ -111,10 +109,10 @@ namespace SC4PropTextureCatalogBuilder {
         /// <summary>
         /// Dump the urls found in packages and assets for use in the Catalog progress tracker visual.
         /// </summary>
-        public static void DumpUrls(List<JsonPackage> packages, List<JsonAsset> assets, Dictionary<string, ChannelPaths> channels, ChannelOptions co) {
+        public static void DumpUrls(List<Package> packages, List<Asset> assets, Dictionary<string, ChannelPaths> channels, ChannelOptions co) {
             List<ChartData> data = [];
 
-            foreach (JsonPackage pkg in packages) {
+            foreach (Package pkg in packages) {
                 if (pkg.Info.Websites.Count > 0) {
                     foreach (string url in pkg.Info.Websites) {
                         data.Add(ParseUrl(url));
@@ -124,7 +122,7 @@ namespace SC4PropTextureCatalogBuilder {
                 }
             }
 
-            foreach (JsonAsset ast in assets) {
+            foreach (Asset ast in assets) {
                 data.Add(ParseUrl(ast.Url));
             }
 
@@ -163,40 +161,4 @@ namespace SC4PropTextureCatalogBuilder {
         }
     }
 
-    public class JsonAsset {
-        [JsonPropertyName("$type")]
-        public string Type { get; set; } = string.Empty;
-        public string AssetId { get; set; } = string.Empty;
-        public string Version { get; set; } = string.Empty;
-        public string LastModified { get; set; } = string.Empty;
-        public string Url { get; set; } = string.Empty;
-        public List<string> RequiredBy { get; set; } = [];
-
-        public override string ToString() {
-            return $"{AssetId} ({Version})";
-        }
-    }
-
-    public class JsonPackage {
-        [JsonPropertyName("$type")]
-        public string Type { get; set; } = string.Empty;
-        public string Group { get; set; } = string.Empty;
-        public string Name { get; set; } = string.Empty;
-        public string Version { get; set; } = string.Empty;
-        public string Subfolder { get; set; } = string.Empty;
-        public JsonPackageInfo Info { get; set; } = new JsonPackageInfo();
-
-        public override string ToString() {
-            return $"{Group}:{Name} ({Version}), {Subfolder}";
-        }
-
-    }
-
-    public class JsonPackageInfo {
-        public string Summary { get; set; } = string.Empty;
-        public string Author { get; set; } = string.Empty;
-        public List<string> Images { get; set; } = [];
-        public string Website { get; set; } = string.Empty;
-        public List<string> Websites { get; set; } = [];
-    }
 }
