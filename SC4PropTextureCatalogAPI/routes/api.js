@@ -31,31 +31,56 @@ function CleanQueryText(input) {
 
 // GET /api/search?term=...
 router.get('/search', async (request, response) => {
-  const searchText = CleanQueryText(request.query.term);
-  const field = (request.query.field || '').toLowerCase();
-  const validFields = ['assetid', 'filename', 'tgi', 'itemname', ''];
-
-  if (searchText.length > 40) {
-    return response.status(400).json({ error: 'Search term is too long' });
-  } else if (searchText.length < 3) {
-    return response.status(400).json({ error: 'Search term must be 3 characters minimum' });
-  } else if (!validFields.includes(field)) {
-    return response.status(400).json({ error: 'Invalid field option. Must be one of: ' + validFields.join(', ') });
-  }
-  
-  const like = `%${searchText}%`;
-  const fieldMap = { assetid: 'ci.AssetId', filename: 'ci.File', tgi: 'ci.TGI', itemname: 'ci.Name'};
+  const params = [];
+  const wheres = [];
   let where = '';
-  let params = [];
-  if (field === '') {
+  const fieldMap = { 
+    assetid: 'ci.AssetId',
+    file: 'ci.File',
+    tgi: 'ci.TGI',
+    category: 'cat.Name',
+    name: 'ci.Name',
+    package: 'pkg.PackageId',
+    author: 'pkg.Author'
+  };
+
+  for (const [key, column] of Object.entries(fieldMap)) {
+    console.log(request.query[key]);
+    if (request.query[key]) {
+      const term = CleanQueryText(request.query[key]);
+      // console.log(`key:${key}, term:${term}`);
+      if (term.length > 40) {
+        return response.status(400).json({ error: 'Search term is too long' });
+      } else if (term.length < 3) {
+        return response.status(400).json({ error: 'Search term must be 3 characters minimum' });
+      } else if (!Object.keys(fieldMap).includes(key)) {
+        return response.status(400).json({ error: 'Invalid query term. Must be one of: ' + Object.keys(fieldMap).join(', ') });
+      }
+      wheres.push(`${column} LIKE ? ESCAPE '\\'`);
+      params.push(`%${term}%`);
+
+    }
+  }
+
+  // Handle if no fields are specified - search all columns
+  if (wheres.length === 0) {
+    const term = CleanQueryText(request.query.term || '');
+    if (term.length > 40) {
+      return response.status(400).json({ error: 'Search term is too long' });
+    } else if (term.length < 3) {
+      return response.status(400).json({ error: 'Search term must be 3 characters minimum' });
+    }
+    const like = `%${term}%`;
     where = `${fieldMap.assetid} LIKE ? ESCAPE '\\' 
-      OR ${fieldMap.filename} LIKE ? ESCAPE '\\' 
+      OR ${fieldMap.file} LIKE ? ESCAPE '\\' 
       OR ${fieldMap.tgi} LIKE ? ESCAPE '\\' 
-      OR ${fieldMap.itemname} LIKE ? ESCAPE '\\'`;
-    params = [like, like, like, like];
+      OR ${fieldMap.category} LIKE ? ESCAPE '\\' 
+      OR ${fieldMap.name} LIKE ? ESCAPE '\\'
+      OR ${fieldMap.package} LIKE ? ESCAPE '\\'
+      OR ${fieldMap.author} LIKE ? ESCAPE '\\'`;
+    params.push(like, like, like, like, like, like, like);
   } else {
-    where = `${fieldMap[field]} LIKE ? ESCAPE '\\'`;
-    params = [like];
+    where = wheres.join('\n    AND ');
   }
 
   const query = `
