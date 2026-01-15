@@ -18,9 +18,9 @@ if (createDb) {
 
 string basefolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "sc4pac-channels");
 Dictionary<string, ChannelPaths> channels = [];
-channels.Add("default", new ChannelPaths("C:\\source\\repos\\sc4pac\\src\\yaml", Path.Combine(basefolder, "default-channel\\json"), Path.Combine(dataPath, "default-data.json")));
-channels.Add("simtropolis", new ChannelPaths("C:\\source\\repos\\simtropolis-channel\\src\\yaml", Path.Combine(basefolder, "simtropolis-channel\\json"), Path.Combine(dataPath, "stex-data.json")));
-channels.Add("sc4evermore", new ChannelPaths("C:\\source\\repos\\sc4e-channel\\src\\yaml", Path.Combine(basefolder, "sc4evermore-channel\\json"), Path.Combine(dataPath, "sc4e-data.json")));
+channels.Add("default", new ChannelPaths("C:\\source\\repos\\sc4pac\\src\\yaml", Path.Combine(basefolder, "default-channel\\json")));
+channels.Add("simtropolis", new ChannelPaths("C:\\source\\repos\\simtropolis-channel\\src\\yaml", Path.Combine(basefolder, "simtropolis-channel\\json")));
+channels.Add("sc4evermore", new ChannelPaths("C:\\source\\repos\\sc4e-channel\\src\\yaml", Path.Combine(basefolder, "sc4evermore-channel\\json")));
 // ===================================================================================================================================================
 
 if (PromptYesNo("Extract and move files?")) {
@@ -32,7 +32,6 @@ if (PromptYesNo("Build channels?")) {
 }
 ChannelOptions parseOpt = PromptChannelOption("Which channel(s) do you want to parse? (JSON → DB Objects");
 (var packages, var assets) = SC4Pac.ParseChannelJson(channels, parseOpt);
-//Sc4pacChannel.DumpUrls(packages, assets, channels, parseOpt);
 
 List<DBPFError> errors = [];
 DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb);

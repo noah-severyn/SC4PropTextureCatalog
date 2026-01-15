@@ -10,18 +10,15 @@ namespace SC4PropTextureCatalogBuilder {
     }
 
     public struct ChannelPaths(string yamlPath, string jsonPath, string trackerPath) {
+    public struct ChannelPaths(string yamlPath, string jsonPath) {
         public string YamlPath = yamlPath;
         public string JsonPath = jsonPath;
-        /// <summary>
-        /// Local project path for the Catalog website tracker visual.
-        /// </summary>
-        public string TrackerPath = trackerPath;
     }
 
-    public struct ChartData(int id, string name, string url) {
-        public int Id { get; set; } = id;
-        public string Name { get; set; } = name;
-        public string Url { get; set; } = url;
+    public struct CacheAsset(string path) {
+        public int ExchangeId = FileMgt.GetExchangeId(path);
+        public int AssetId = FileMgt.GetAssetId(path);
+        public string FilePath = path;
     }
 
     /// <summary>
@@ -105,60 +102,9 @@ namespace SC4PropTextureCatalogBuilder {
 
             return (packages, assets);
         }
-
-        /// <summary>
-        /// Dump the urls found in packages and assets for use in the Catalog progress tracker visual.
-        /// </summary>
-        public static void DumpUrls(List<Package> packages, List<Asset> assets, Dictionary<string, ChannelPaths> channels, ChannelOptions co) {
-            List<ChartData> data = [];
-
-            foreach (Package pkg in packages) {
-                if (pkg.Info.Websites.Count > 0) {
-                    foreach (string url in pkg.Info.Websites) {
-                        data.Add(ParseUrl(url));
-                    }
-                } else {
-                    data.Add(ParseUrl(pkg.Info.Website));
-                }
-            }
-
-            foreach (Asset ast in assets) {
-                data.Add(ParseUrl(ast.Url));
-            }
-
-            var opts = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
-            var json = JsonSerializer.Serialize(data, opts);
-            switch (co) {
-                case ChannelOptions.None:
-                    return;
-                case ChannelOptions.All:
-                    foreach (var key in channels.Keys) {
-                        File.WriteAllText(channels[key].TrackerPath, json);
-                    }
-                    break;
-                default:
-                    var name = co.ToString().ToLower();
-                    File.WriteAllText(channels[name].TrackerPath, json);
-                    break;
             }
         }
 
-        private static ChartData ParseUrl(string url) {
-            if (url.Contains("simtropolis")) {
-                try {
-                    string name = url.Split("file/")[1].Replace("/", "");
-                    _ = int.TryParse(name.Split('-')[0], out int id);
-                    return new ChartData(id, name, url);
-                }
-                catch (IndexOutOfRangeException) {
-                    return new ChartData();
-                }
-            } else if (url.Contains("sc4evermore")) {
-                return new ChartData();
-            } else {
-                return new ChartData();
-            }
-        }
     }
 
 }
