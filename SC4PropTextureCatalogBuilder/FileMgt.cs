@@ -166,9 +166,8 @@ namespace SC4PropTextureCatalogBuilder {
             //To:   https\  www.sc4evermore.com\index.php\downloads%3Ftask%3Ddownload.send%26id%3D13%3Asfbt-essentials
             //From: https://community.simtropolis.com/files/file/600-majestic-drivein-theatre/?  do=  download&  r=  23019
             //To:   https  \community.simtropolis.com\files\file\600-majestic-drivein-theatre\%3Fdo%3Ddownload%26r%3D23019
-            string cleanedUrl = httpUrl.Replace("://", "%2F");
-            cleanedUrl = WebUtility.UrlEncode(cleanedUrl);
-            cleanedUrl = cleanedUrl.Replace("%2F", "\\");
+            string cleanedUrl = WebUtility.UrlEncode(httpUrl);
+            cleanedUrl = cleanedUrl.Replace("%3A%2F%2F", "\\").Replace("%2F", "\\");
             return cleanedUrl;
         }
     }

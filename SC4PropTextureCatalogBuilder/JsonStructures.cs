@@ -13,6 +13,10 @@ namespace SC4PropTextureCatalogBuilder {
             public string LastModified { get; set; } = string.Empty;
             public string Url { get; set; } = string.Empty;
             public List<string> RequiredBy { get; set; } = [];
+            /// <summary>
+            /// The list of all files this asset contains.
+            /// </summary>
+            public List<string> LocalFiles { get; set;} = [];
 
             public override string ToString() {
                 return $"{AssetId} ({Version})";
@@ -32,6 +36,10 @@ namespace SC4PropTextureCatalogBuilder {
             public PackageInfo Info { get; set; } = new PackageInfo();
             public List<PackageAsset>? Assets { get; set; }
             public List<Variant>? Variants { get; set; }
+            /// <summary>
+            /// The list of files this package contains. Generating after parsing each of this item's include and exclude rules.
+            /// </summary>
+            public List<string> LocalFiles { get; set; } = [];
 
             public override string ToString() {
                 return $"{Group}:{Name} ({Version}), {Subfolder}";
@@ -54,7 +62,11 @@ namespace SC4PropTextureCatalogBuilder {
         /// Matches the sc4pac JSON schema for a Variant within a <see cref="Package"/>.
         /// </summary>
         public class Variant {
-            public List<PackageAsset> Assets { get; set; }
+            public List<PackageAsset> Assets { get; set; } = [];
+
+            public override string ToString() {
+                return $"{Assets?.Count}: {String.Join(", ", Assets ?? [])}";
+            }
         }
 
         /// <summary>
@@ -65,6 +77,10 @@ namespace SC4PropTextureCatalogBuilder {
             public List<string>? Include { get; set; }
             public List<string>? Exclude { get; set; }
             public List<Condition>? WithConditions { get; set; }
+
+            public override string ToString() {
+                return $"{AssetId}, incl:{Include?.Count ?? 0}, excl:{Exclude?.Count ?? 0}";
+            }
         }
 
         /// <summary>

@@ -32,6 +32,7 @@ if (PromptYesNo("Build channels?")) {
 }
 ChannelOptions parseOpt = PromptChannelOption("Which channel(s) do you want to parse? (JSON → DB Objects");
 (var packages, var assets) = SC4Pac.ParseChannelJson(channels, parseOpt);
+SC4Pac.ExtractFilesFromJson(extractLocation, ref packages, assets);
 
 List<DBPFError> errors = [];
 DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb);
@@ -53,8 +54,8 @@ if (PromptYesNo("Copy database to API path?")) {
 
 static bool PromptYesNo(string message) {
     Console.Write($"{message} (y/n): ");
-    var response = Console.ReadLine()?.Trim().ToLower();
-    return response == "y" || response == "yes";
+    string response = Console.ReadLine()?.Trim().ToLower() ?? "n";
+    return response.Substring(0, 1) == "y" || response == "1";
 }
 static ChannelOptions PromptChannelOption(string message) {
     Console.Write($"{message} (0=None, 1=All, 2=Default, 3=ST, 4=SC4E): ");
