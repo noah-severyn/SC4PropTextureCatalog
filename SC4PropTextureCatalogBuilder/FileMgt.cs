@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Globalization;
+using System.Net;
+using Force.Crc32;
 
 namespace SC4PropTextureCatalogBuilder {
     /// <summary>
-    /// Helper class for moving and extracting sc4pac cache files
+    /// Helper class for moving and extracting sc4pac cache files.
     /// </summary>
     public static class FileMgt {
-        
         /// <summary>
         /// Execute and wait for a shell command to finish
         /// </summary>
@@ -85,5 +87,89 @@ namespace SC4PropTextureCatalogBuilder {
             }
         }
 
+
+
+        /// <summary>
+        /// Returns an id for a known exchange based on the specified path or URL.
+        /// </summary>
+        internal static int GetExchangeId(string pathOrUrl) {
+            if (pathOrUrl.Contains("simtropolis")) {
+                return 1;
+            } else if (pathOrUrl.Contains("sc4evermore.com")) {
+                return 2;
+            } else if (pathOrUrl.Contains("toutsimcities.com")) {
+                return 3;
+            } else if (pathOrUrl.Contains("hide-inoki.com")) {
+                return 4;
+            } else if (pathOrUrl.Contains("github.com")) {
+                return 5;
+            }
+            return 0;
+        }
+
+        /// <summary>
+        /// Extracts the upload id on the exchange from the specified path or URL.
+        /// </summary>
+        internal static int GetAssetId(string pathOrUrl) {
+            string id = string.Empty;
+            pathOrUrl = pathOrUrl.Replace("/", "\\").ToLower(); //So this works with web and file path urls
+            try {
+                if (pathOrUrl.Contains("simtropolis")) {
+                    //P:\sc4pac-cache\https\community.simtropolis.com\files\file\45-bigbus-station\%3Fdo%3Ddownload%26r%3D22305\
+                    //P:\sc4pac-cache\https\community.simtropolis.com\library\maxis\\sc4\buildings\Maxis_Buildings.zip\63 Building ← No available id
+                    id = pathOrUrl.Split("file\\")[1].Split("-")[0];
+                } else if (pathOrUrl.Contains("sc4evermore")) {
+                    //P:\sc4pac-cache\https\www.sc4evermore.com\index.php\downloads%3Ftask%3Ddownload.send%26id%3D1%3Asc4d-lex-legacy-hkabt-dependencies-pack
+                    //https://www.sc4evermore.com/index.php/downloads?task=download.send&id=404:gtg-bosch-building
+                    pathOrUrl = WebUtility.UrlDecode(pathOrUrl);
+                    id = pathOrUrl.Split("id=")[1].Split(":")[0];
+                } else if (pathOrUrl.Contains("toutsimcities")) {
+                    //P:\sc4pac-cache\https\www.toutsimcities.com\downloads\start\1780\TSC\Namspopof
+                    id = pathOrUrl.Split("start\\")[1].Split("\\")[0];
+                } else if (pathOrUrl.Contains("hide-inoki")) {
+                    //P:\sc4pac-cache\http\hide-inoki.com\bbs\archives\files\1391.zip\NekoPropSet03
+                    //P:\sc4pac-cache\http\hide-inoki.com\works\sc4\has_dependencies.zip ← No available id
+                    id = pathOrUrl.Split("files\\")[1].Split(".")[0];
+                } else if (pathOrUrl.Contains("github")) {
+                    //P:\sc4pac-cache\https\github.com\NAMTeam\Network-Addon-Mod\releases\download\49_rev1\NetworkAddonMod_Setup_Version49_rev1.zip
+                    id = Crc32Kinda(pathOrUrl.Split("github.com\\")[1].Split("\\releases")[0]);
+                }
+            }
+            catch (IndexOutOfRangeException) {
+                //Include special exceptions for known assets with no id otherwise
+                if (pathOrUrl.Contains("Maxis_Buildings")) {
+                    id = "1"; //Full id: 1-1
+                } else if (pathOrUrl.Contains("has_dependencies")) {
+                    id = "1"; //Full id: 4-1
+                } else {
+                    id = Crc32Kinda(pathOrUrl);
+                }
+            }
+
+            _ = int.TryParse(id, out int assetId);
+            return assetId;
+        }
+        private static string Crc32Kinda(string input) {
+            // A quick, abbreviated way to turn a long string into a *somewhat* unique identifier. The *actual* checksum is irrelevant and not returned.
+            // The first 4 bytes of the hexadecimal checksum as a decimal number are returned.
+            // This is a fallback method of getting an identifier, so the risk of collisions is low based on the quantity of items that will be hashed.
+            var bytes = System.Text.Encoding.UTF8.GetBytes(input);
+            uint crc = Crc32Algorithm.Compute(bytes);
+            string crc_s = crc.ToString("x8");
+            _ = int.TryParse(crc_s.AsSpan(0, 4), NumberStyles.HexNumber, CultureInfo.InvariantCulture, out int result);
+            return result.ToString();
+        }
+
+
+        internal static string HttpToCachePath(string httpUrl) {
+            //From: https://www.sc4evermore.com/index.php/downloads?  task=  download.send&id=13:sfbt-essentials
+            //To:   https\  www.sc4evermore.com\index.php\downloads%3Ftask%3Ddownload.send%26id%3D13%3Asfbt-essentials
+            //From: https://community.simtropolis.com/files/file/600-majestic-drivein-theatre/?  do=  download&  r=  23019
+            //To:   https  \community.simtropolis.com\files\file\600-majestic-drivein-theatre\%3Fdo%3Ddownload%26r%3D23019
+            string cleanedUrl = httpUrl.Replace("://", "%2F");
+            cleanedUrl = WebUtility.UrlEncode(cleanedUrl);
+            cleanedUrl = cleanedUrl.Replace("%2F", "\\");
+            return cleanedUrl;
+        }
     }
 }
