@@ -77,7 +77,7 @@ namespace SC4PropTextureCatalogBuilder {
                     if (!Directory.Exists(newFolder)) {
                         ExecuteCommand("C:\\Program Files\\7-Zip\\7z.exe", $"x \"{exchAsset}\" -o\"{newFolder}\" -y");
 
-                        Console.WriteLine("Extract " + relativePath);
+                        Console.WriteLine("Extract " + newFolder);
                         IEnumerable<string> installers = Directory.EnumerateFiles(newFolder).Where(f => Path.GetExtension(f) == ".exe" || Path.GetExtension(f) == ".jar");
                         foreach (string installer in installers) {
                             ExtractInstaller(installer);
@@ -162,7 +162,7 @@ namespace SC4PropTextureCatalogBuilder {
 
 
         internal static string HttpToCachePath(string httpUrl) {
-            //From: https://www.sc4evermore.com/index.php/downloads?  task=  download.send&id=13:sfbt-essentials
+            //From: https://www.sc4evermore.com/index.php/downloads?  task=  download.send&  id=  13:  sfbt-essentials
             //To:   https\  www.sc4evermore.com\index.php\downloads%3Ftask%3Ddownload.send%26id%3D13%3Asfbt-essentials
             //From: https://community.simtropolis.com/files/file/600-majestic-drivein-theatre/?  do=  download&  r=  23019
             //To:   https  \community.simtropolis.com\files\file\600-majestic-drivein-theatre\%3Fdo%3Ddownload%26r%3D23019

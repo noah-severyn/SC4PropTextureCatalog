@@ -35,14 +35,14 @@ ChannelOptions parseOpt = PromptChannelOption("Which channel(s) do you want to p
 SC4Pac.ExtractFilesFromJson(extractLocation, ref packages, assets);
 
 List<DBPFError> errors = [];
-DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb);
+DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb, extractLocation);
+if (PromptYesNo("Fill Asset table?")) {
+    db.FillAssetAndFileTable(assets);
+}
 if (PromptYesNo("Fill TGI table?")) {
-    errors = db.FillTgiTable(extractLocation);
+    errors = db.FillTgiTable();
     string json = JsonSerializer.Serialize(errors);
     File.WriteAllText(Path.Combine(dataPath, $"Errors-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.json"), json);
-}
-if (PromptYesNo("Fill Asset table?")) {
-    db.FillAssetTable(assets);
 }
 if (PromptYesNo("Fill Package table?")) {
     db.FillPackageTable(packages);

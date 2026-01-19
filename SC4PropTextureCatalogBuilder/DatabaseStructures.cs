@@ -6,33 +6,26 @@ namespace SC4PropTextureCatalogBuilder {
         /// An item in the TGI table, which tracks which TGIs are in which dependency pack. 
         /// </summary>s
         [Table("TGIs")]
-        public class TGIItem(int exchId, int assetId, string file, string tgi, int type, string? exmpName) {
-            [Column("ExchangeId")]
-            public int ExchangeId { get; set; } = exchId;
+        public class TGIItem(int fileId, string tgi, int category, string? exmpName) {
+            /// <summary>
+            /// Reference to the <see cref="FileItem.Id"/> that contains this item.
+            /// </summary>
+            public int FileId { get; set; } = fileId;
 
-            [Column("AssetId")]
-            public int AssetId { get; set; } = assetId;
-
-            [Column("File")]
-            public string File { get; set; } = file;
-
-            [Column("TGI")]
             public string TGI { get; set; } = tgi;
 
             /// <summary>
             /// One of the <see cref="TGICategory"/> enumerations.
             /// </summary>
-            [Column("Category")]
-            public int? Category { get; set; } = type;
+            public int Category { get; set; } = category;
 
             /// <summary>
             /// Item name, if applicable. Typically an exemplar name.
             /// </summary>
-            [Column("Name")]
             public string? Name { get; set; } = exmpName;
 
             public override string ToString() {
-                return $"{ExchangeId}-{AssetId} {TGI}: {AssetId}, {Category}, {Name}";
+                return $"{FileId}: {TGI}, {Category}, {Name}";
             }
         }
 
@@ -40,20 +33,25 @@ namespace SC4PropTextureCatalogBuilder {
         /// An item in the Asset table. An asset referrs to a download or file, and is akin to a sc4pac asset.
         /// </summary>
         [Table("Packages")]
-        public class PackageItem(int exchId, int assetId, string packageId, string? version = null, List<string>? websites = null, string? author = null, int? primaryCat = null, int? secondaryCat = null) {
-            [NotNull]
-            public int ExchangeId { get; set; } = exchId;
-
-            [NotNull]
-            public int AssetId { get; set; } = assetId;
+        public class PackageItem(string packageName, string version, string subfolder, List<string>? websites = null, string? author = null, List<string>? files = null, int? primaryCat = null, int? secondaryCat = null) {
+            [PrimaryKey]
+            [AutoIncrement]
+            public int Id { get; set; }
 
             /// <summary>
             /// sc4pac package identifier in the format <c>group:name</c>.
             /// </summary>
             [NotNull]
-            public string? PackageId { get; set; } = packageId;
+            public string Name { get; set; } = packageName;
 
-            public string? Version { get; set; } = version;
+            public string Version { get; set; } = version;
+
+            public string Subfolder { get; set; } = subfolder;
+
+            ///// <summary>
+            ///// List of files this package contains
+            ///// </summary>
+            //public List<string> Files { get; set; } = files ?? [];
 
             /// <summary>
             /// Semicolon separated list of one or more urls
@@ -61,13 +59,6 @@ namespace SC4PropTextureCatalogBuilder {
             public string Websites { get; set; } = string.Join(';', websites ?? []);
 
             public string? Author { get; set; } = author;
-
-
-            public int TextureCount { get; set; }
-            public int PropCount { get; set; }
-            public int FloraCount { get; set; }
-            public int BuildingCount { get; set; }
-
 
 
             ///// <summary>
@@ -83,23 +74,64 @@ namespace SC4PropTextureCatalogBuilder {
             //public int? SecondaryCats { get; set; } = secondaryCat;
 
             public override string ToString() {
-                return $"Id:{ExchangeId}-{AssetId}, PackageId:{PackageId}, Version:{Version}, Author:{Author}";
+                return $"Id:{Id}, PkgId:{Name}, Version:{Version}, Subfolder:{Subfolder}, Author:{Author}";
             }
+        }
+
+        /// <summary>
+        /// Represents a file included in an sc4pac asset, used to link Packages to TGIs
+        /// </summary>
+        [Table("Files")]
+        public class FileItem(int assetId, string fileName) {
+            /// <summary>
+            /// File primary key. Autoincremented.
+            /// </summary>
+            [PrimaryKey]
+            [AutoIncrement]
+            public int Id { get; set; }
+            /// <summary>
+            /// Reference to the <see cref="AssetItem.AssetId"/> that contains this item.
+            /// </summary>
+            [NotNull]
+            public int AssetId { get; set; } = assetId;
+            /// <summary>
+            /// Filename of this item.
+            /// </summary>
+            [NotNull]
+            public string Name { get; set; } = fileName;
+
+            public int TextureCount { get; set; }
+            public int PropCount { get; set; }
+            public int FloraCount { get; set; }
+            public int BuildingCount { get; set; }
         }
 
         /// <summary>
         /// An item in the Asset table. An asset referrs to a download or file, and is akin to a sc4pac asset.
         /// </summary>
         [Table("Assets")]
-        public class AssetItem(int exchId, int assetId) {
+        public class AssetItem(int exchangeId, string name, string version, string lastModified, string url) {
+            /// <summary>
+            /// Asset primary key. Autoincremented.
+            /// </summary>
+            [PrimaryKey]
+            [AutoIncrement]
+            public int Id { get; set; }
+
+            /// <summary>
+            /// Reference to the <see cref="ExchangeItem.Id"/> where this item is uploaded to.
+            /// </summary>
             [NotNull]
-            public int Exchange { get; set; } = exchId;
+            public int ExchangeId { get; set; } = exchangeId;
+
             [NotNull]
-            public int ExchangeId2 { get; set; } = assetId;
-            public string? AssetId { get; set; }
-            public string? Version { get; set; }
-            public string? LastModified { get; set; }
-            public string? Url { get; set; }
+            public string Name { get; set; } = name;
+
+            public string Version { get; set; } = version;
+
+            public string LastModified { get; set; } = lastModified;
+
+            public string Url { get; set; } = url;
         }
 
 
@@ -107,16 +139,15 @@ namespace SC4PropTextureCatalogBuilder {
         /// Dimension table of TGI types (building, prop, texture, flora, cohort, etc.). These values are nominally based off Rep 0 of the LotConfigPropertyLotObject property, with a few extra values added in for the purposes of tracking in this database.
         /// </summary>
         [Table("TGICategories")]
-        public class TGICategory(int type, string name) {
+        public class TGICategory(int id, string name) {
             [PrimaryKey]
-            [Column("Category")]
-            public int Category { get; set; } = type;
+            public int Id { get; set; } = id;
 
             [Column("Name")]
-            public string Name { get; set; } = name;
+            public string Category { get; set; } = name;
 
             public override string ToString() {
-                return $"{Category}: {Name}";
+                return $"{Id}: {Category}";
             }
         }
 
@@ -124,19 +155,16 @@ namespace SC4PropTextureCatalogBuilder {
         /// Dimension table with information about each exchange.
         /// </summary>
         [Table("Exchanges")]
-        public class Exchange(int id, string name, string url) {
+        public class ExchangeItem(int id, string name, string url) {
             [PrimaryKey]
-            [Column("ExchangeId")]
-            public int ExchangeId { get; set; } = id;
+            public int Id { get; set; } = id;
 
-            [Column("Name")]
             public string Name { get; set; } = name;
 
-            [Column("Url")]
             public string Url { get; set; } = url;
 
             public override string ToString() {
-                return $"{ExchangeId}: {Name}";
+                return $"{Id}: {Name}";
             }
         }
     }
