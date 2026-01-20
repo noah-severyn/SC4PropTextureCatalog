@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Net;
 using Force.Crc32;
+using static SC4PropTextureCatalogBuilder.SC4Pac;
 
 namespace SC4PropTextureCatalogBuilder {
     /// <summary>
@@ -169,6 +170,17 @@ namespace SC4PropTextureCatalogBuilder {
             string cleanedUrl = WebUtility.UrlEncode(httpUrl);
             cleanedUrl = cleanedUrl.Replace("%3A%2F%2F", "\\").Replace("%2F", "\\");
             return cleanedUrl;
+        }
+
+        /// <summary>
+        /// Strip query params from a http url, except for SC4E urls where the id param is a critical identifying part of the url.
+        /// </summary>
+        internal static string CleanUrl(string httpUrl) {
+            if (httpUrl.Contains("sc4evermore")) {
+                return httpUrl.Replace("?task=download.send&id=", "/download/");
+            } else {
+                return new Uri(httpUrl).GetLeftPart(UriPartial.Path);
+            }
         }
     }
 }

@@ -202,13 +202,7 @@ namespace SC4PropTextureCatalogBuilder {
             foreach (var asset in assets) {
                 int exchId = FileMgt.GetExchangeId(asset.Url);
 
-                string cleanedUrl;
-                //Strip query params from the Url, except from SC4E where the id is a critical parameter
-                if (asset.Url.Contains("sc4evermore")) {
-                    cleanedUrl = asset.Url.Replace("?task=download.send&id=", "/download/");
-                } else {
-                    cleanedUrl = new Uri(asset.Url).GetLeftPart(UriPartial.Path);
-                }
+                string cleanedUrl = FileMgt.CleanUrl(asset.Url);
 
                 //Fetch all files within this asset
                 var folder = Path.Combine(_extractPath, FileMgt.HttpToCachePath(asset.Url));
