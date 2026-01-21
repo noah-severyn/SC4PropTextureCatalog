@@ -75,16 +75,20 @@ namespace SC4PropTextureCatalogBuilder {
             }
             return errors;
         }
-        private static (List<TGIItem>, List<DBPFError>) ExtractTGIs(string file) {
+        private (List<TGIItem>, List<DBPFError>) ExtractTGIs(string file) {
             var errors = new List<DBPFError>();
             var items = new List<TGIItem>();
 
             //int exchangeId = FileMgt.GetExchangeId(file);
             //int assetId = FileMgt.GetAssetId(file);
 
-            string query = $"SELECT * FROM Assets"
-            var asset = _db.Table<AssetItem>();
-            Console.WriteLine("  > writing " + exchangeId + "-" + assetId + " " + file);
+            var fi = GetFile(Path.GetFileName(file));
+            if (fi is null) {
+                errors.Add(new DBPFError(file, DBPFTGI.BLANKTGI, "File not found in database"));
+                return (items, errors);
+            }
+            var ai = GetAsset(fi.AssetId);
+            Console.WriteLine("  > writing " + file);
 
             FileStream fs;
             try {
@@ -99,13 +103,16 @@ namespace SC4PropTextureCatalogBuilder {
             DBPFFile dbpf = new DBPFFile(fs);
 
             var targetEntries = dbpf.ListOfEntries.Where(e => e.MatchesAnyEntryType(DBPFTGI.FSH_BASE_OVERLAY, DBPFTGI.EXEMPLAR, DBPFTGI.COHORT, DBPFTGI.LTEXT, DBPFTGI.LUA, DBPFTGI.LUA_GEN, DBPFTGI.UI));
-            var results = _db.Table<FileItem>().Where(i => i.Name == Path.GetFileName(file)).ToList();
-            
+            int textureCnt = 0;
+            int propCnt = 0;
+            int buildingCnt = 0;
+            int floraCnt = 0;            
 
             foreach (DBPFEntry entry in targetEntries) {
                 //Add Base/Overlay textures (look at the least significant 4 bits and only add if it is 0, 5, or A: AND the Instance by 0b1111 (0xF) and examine the modulus result)
                 if (entry.MatchesEntryType(DBPFTGI.FSH_BASE_OVERLAY) && ((entry.TGI.InstanceID & 0xF) % 5) == 0) {
-                    items.Add(new TGIItem(-100, entry.TGI.ToString(), 2, null));
+                    items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 2, null));
+                    textureCnt++;
                 }
 
                 //Add Exemplars
@@ -142,13 +149,16 @@ namespace SC4PropTextureCatalogBuilder {
 
                     switch (exmpType) {
                         case DBPFProperty.ExemplarType.Building:
-                            items.Add(new TGIItem(-100, entry.TGI.ToString(), 0, exmpName));
+                            items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 0, exmpName));
+                            buildingCnt++;
                             break;
                         case DBPFProperty.ExemplarType.Prop:
-                            items.Add(new TGIItem(-100, entry.TGI.ToString(), 1, exmpName));
+                            items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 1, exmpName));
+                            propCnt++;
                             break;
                         case DBPFProperty.ExemplarType.FloraFauna:
-                            items.Add(new TGIItem(-100, entry.TGI.ToString(), 4, exmpName));
+                            items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 4, exmpName));
+                            floraCnt++;
                             break;
                     }
                 }
@@ -168,24 +178,26 @@ namespace SC4PropTextureCatalogBuilder {
                         exmpName = (string) prop.GetData();
                     }
 
-                    items.Add(new TGIItem(-100, entry.TGI.ToString(), 10, exmpName));
+                    items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 10, exmpName));
                 }
 
                 //Add LTEXTs
                 else if (entry.MatchesEntryType(DBPFTGI.LTEXT)) {
-                    items.Add(new TGIItem(-100, entry.TGI.ToString(), 11, null));
+                    items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 11, null));
                 }
 
                 //Add LUAs
                 else if (entry.MatchesAnyEntryType(DBPFTGI.LUA, DBPFTGI.LUA_GEN)) {
-                    items.Add(new TGIItem(-100, entry.TGI.ToString(), 12, null));
+                    items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 12, null));
                 }
 
                 //Add UIs
                 else if (entry.MatchesEntryType(DBPFTGI.UI)) {
-                    items.Add(new TGIItem(-100, entry.TGI.ToString(), 13, null));
+                    items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 13, null));
                 }
             }
+
+            _db.Execute($"UPDATE Files SET TextureCount = {textureCnt}, PropCount = {propCnt}, FloraCount = {floraCnt}, BuildingCount = {buildingCnt} WHERE Id = {fi.Id}");
             return (items, errors);
         }
 
@@ -249,6 +261,13 @@ namespace SC4PropTextureCatalogBuilder {
             int count = _db.ExecuteScalar<int>($"SELECT count(*) FROM Assets WHERE ExchangeId = '{exchangeId}' AND AssetId = '{assetId}'");
             return count != 0;
         }
+        public AssetItem? GetAsset(string? name = null, string? url = null) {
+            var where = name is null ? $"Name = \"{name}\"" : $"Url = \"{url}"; 
+            return _db.Query<AssetItem>($"SELECT * FROM Assets WHERE {where}").FirstOrDefault();
+        }
+        public AssetItem? GetAsset(int id) {
+            return _db.Query<AssetItem>($"SELECT * FROM Assets WHERE Id = {id}").FirstOrDefault();
+        }
         /// <summary>
         /// Return whether this asset exists in the <c>Packages</c> table
         /// </summary>
@@ -274,6 +293,12 @@ namespace SC4PropTextureCatalogBuilder {
             return count != 0;
         }
 
+        public FileItem? GetFile(string name) {
+            return _db.Query<FileItem>($"SELECT * FROM Files WHERE Name = \"{name}\"").FirstOrDefault();
+        }
+        public FileItem? GetFile(int id) {
+            return _db.Query<FileItem>($"SELECT * FROM Files WHERE Id = {id}").FirstOrDefault();
+        }
 
 
         /// <summary>

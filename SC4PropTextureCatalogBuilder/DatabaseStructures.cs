@@ -1,6 +1,9 @@
 ﻿using SQLite;
 
 namespace SC4PropTextureCatalogBuilder {
+    //
+    // In order to use the <c>_db.Query<T>()</c> syntax, each class of <c>T</c> requires a parameterless constructor
+    //
     internal partial class DatabaseBuilder {
         /// <summary>
         /// An item in the TGI table, which tracks which TGIs are in which dependency pack. 
@@ -82,56 +85,77 @@ namespace SC4PropTextureCatalogBuilder {
         /// Represents a file included in an sc4pac asset, used to link Packages to TGIs
         /// </summary>
         [Table("Files")]
-        public class FileItem(int assetId, string fileName) {
+        public class FileItem {
             /// <summary>
             /// File primary key. Autoincremented.
             /// </summary>
-            [PrimaryKey]
-            [AutoIncrement]
+            [PrimaryKey, AutoIncrement]
             public int Id { get; set; }
+
             /// <summary>
             /// Reference to the <see cref="AssetItem.AssetId"/> that contains this item.
             /// </summary>
             [NotNull]
-            public int AssetId { get; set; } = assetId;
+            public int AssetId { get; set; }
+
             /// <summary>
             /// Filename of this item.
             /// </summary>
             [NotNull]
-            public string Name { get; set; } = fileName;
+            public string Name { get; set; } = string.Empty;
 
             public int TextureCount { get; set; }
             public int PropCount { get; set; }
             public int FloraCount { get; set; }
             public int BuildingCount { get; set; }
+
+            public FileItem() {
+                
+            }
+
+            public FileItem(int assetId, string fileName) {
+                AssetId = assetId;
+                Name = fileName;
+            }
         }
 
         /// <summary>
         /// An item in the Asset table. An asset referrs to a download or file, and is akin to a sc4pac asset.
         /// </summary>
         [Table("Assets")]
-        public class AssetItem(int exchangeId, string name, string version, string lastModified, string url) {
+        public class AssetItem {
             /// <summary>
             /// Asset primary key. Autoincremented.
             /// </summary>
-            [PrimaryKey]
-            [AutoIncrement]
+            [PrimaryKey, AutoIncrement]
             public int Id { get; set; }
 
             /// <summary>
             /// Reference to the <see cref="ExchangeItem.Id"/> where this item is uploaded to.
             /// </summary>
             [NotNull]
-            public int ExchangeId { get; set; } = exchangeId;
+            public int ExchangeId { get; set; }
 
             [NotNull]
-            public string Name { get; set; } = name;
+            public string Name { get; set; } = string.Empty;
 
-            public string Version { get; set; } = version;
+            public string Version { get; set; } = string.Empty;
 
-            public string LastModified { get; set; } = lastModified;
+            public string LastModified { get; set; } = string.Empty;
 
-            public string Url { get; set; } = url;
+            public string Url { get; set; } = string.Empty;
+
+            public AssetItem() {
+                
+            }
+
+            public AssetItem(int exchangeId, string name, string version, string lastModified, string url) {
+                ExchangeId = exchangeId;
+                Name = name;
+                Version = version;
+                LastModified = lastModified;
+                Url = url;
+            }
         }
 
 
