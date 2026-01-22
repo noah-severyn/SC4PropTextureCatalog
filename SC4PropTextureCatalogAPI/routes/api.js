@@ -161,5 +161,21 @@ router.get('/package', async (request, response) => {
   }
 });
 
+// GET /api/dbstats
+router.get('/dbstats', async (request, response) => {
+  const query = `
+    SELECT
+      (SELECT COUNT(*) FROM Assets) AS Assets,
+      (SELECT COUNT(*) FROM Files) AS Files,
+      (SELECT COUNT(*) FROM TGIs) AS TGIs,
+      (SELECT COUNT(*) FROM Packages) AS Packages;`;
+  const params = [];
+  try {
+    const results = await ExecuteQuery(query, params);
+    response.json(results);
+  } catch (err) {
+    response.status(500).json({ error: 'Database error', details: err.message });
+  }
+});
 
 export default router;
