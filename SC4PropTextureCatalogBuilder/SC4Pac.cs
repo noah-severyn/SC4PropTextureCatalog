@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 using csDBPF;
 
@@ -17,20 +18,19 @@ namespace SC4PropTextureCatalogBuilder {
     }
 
     /// <summary>
-    /// Helps relate a collection of files on disk to a database item via the <see cref="ExchangeId"/> and <see cref="AssetId"/>.
+    /// Helps relate which files are included inside a package.
     /// </summary>
-    public struct CacheAsset(string path) {
-        public int ExchangeId = FileMgt.GetExchangeId(path);
-        public int AssetId = FileMgt.GetAssetId(path);
-        public string FilePath = path;
+    /// <remarks>We cannot assume any content is in the database at this point, so the package and asset Names are used instead of Ids.
+    public struct PkgFileItem(string pkgName, string assetName, string filePath) {
+        public string PackageName = pkgName;
+        public string AssetName = assetName;
+        public string FilePath = filePath;
     }
 
     /// <summary>
     /// A representation of the metadata created for a sc4pac channel.
     /// </summary>
     internal static partial class SC4Pac {
-
-
         /// <summary>
         /// Build sc4pac channel(s) with the sc4pac <c>channel build</c> command, converting the YAML metadata files to JSON for easier parsing.
         /// </summary> 
@@ -86,11 +86,11 @@ namespace SC4PropTextureCatalogBuilder {
             foreach (string path in paths) {
                 json = File.ReadAllText(path);
                 if (path.Contains("sc4pacAsset")) {
-                    var asset = JsonSerializer.Deserialize<Asset>(json, opt);
-                    //asset.LocalFilePath = path;
+                    var asset = JsonSerializer.Deserialize<Asset>(json, opt) ?? new Asset();
                     assets.Add(asset);
                 } else {
-                    packages.Add(JsonSerializer.Deserialize<Package>(json, opt));
+                    var pkg = JsonSerializer.Deserialize<Package>(json, opt) ?? new Package();
+                    packages.Add(pkg);
                 }
             }
 
@@ -105,19 +105,8 @@ namespace SC4PropTextureCatalogBuilder {
             return Directory.EnumerateFiles(channelFolder, "*", SearchOption.AllDirectories).Where(path => path.EndsWith("latest\\pkg.json") && !path.Contains("_ext"));
         }
 
-        public static void ExtractFilesFromJson(string extractFolder, ref List<Package> packages, List<Asset> assets) {
-            //var allPackageAssets =  packages
-            //    .SelectMany(pkg =>
-            //        //Extract the list of PackageAsset(s) out of the package
-            //        (pkg.Assets ?? Enumerable.Empty<PackageAsset>())
-            //        //Append to that list the PackageAsset(s) found nested inside a variant
-            //        .Concat(
-            //            (pkg.Variants ?? Enumerable.Empty<Variant>())
-            //                .SelectMany(v => v.Assets ?? Enumerable.Empty<PackageAsset>())
-            //        )
-            //    )
-            //    .ToList();
-
+        public static List<string> ExtractFilesFromJson(string extractFolder, ref List<Package> packages, List<Asset> assets) {
+            Console.WriteLine("  > extracting files from json ...");
             HashSet<string> missingAssets = new HashSet<string>();
             foreach (var pkg in packages) {
                 //Extract the list of PackageAsset(s) out of the package
@@ -129,22 +118,28 @@ namespace SC4PropTextureCatalogBuilder {
                             .SelectMany(v => v.Assets ?? Enumerable.Empty<PackageAsset>())
                     );
 
-                List<string> result = [];
-                foreach (var asset in pkgAssets) {
-                    var url = assets.Find(a => a.AssetId == asset.AssetId).Url;
-                    var folder = Path.Combine(extractFolder, FileMgt.HttpToCachePath(url));
-                    if (Directory.Exists(folder)) {
-                        result.AddRange(ResolveAssetFiles(folder, asset.Include ?? [], asset.Exclude ?? []));
+                List<PkgFileItem> result = [];
+                foreach (var pkgAsset in pkgAssets) {
+                    var asset = assets.Find(a => a.AssetId == pkgAsset.AssetId);
+                    
+                    if (asset is not null) {
+                        var files = ResolveAssetFiles(asset, extractFolder, pkgAsset.Include ?? [], pkgAsset.Exclude ?? []);
+                        List<PkgFileItem> pfis = files.Select(f => new PkgFileItem(pkg.Group + ":" + pkg.Name, asset.AssetId, Path.GetFileName(f))).ToList();
+                        result.AddRange(pfis);
                     } else {
-                        missingAssets.Add(folder);
+                        missingAssets.Add(asset.Url);
                     }
                 }
                 pkg.LocalFiles = result;
             }
-
+            return missingAssets.ToList();
         }
 
-        private static List<string> ResolveAssetFiles(string folder, List<string> includeRules, List<string> excludeRules) {
+        private static List<string> ResolveAssetFiles(Asset asset, string baseFolder, List<string> includeRules, List<string> excludeRules) {
+            var folder = FileMgt.HttpToCachePath(baseFolder, asset.Url);
+            if (!Directory.Exists(folder)) {
+                return [];
+            }
             var files = Directory.GetFiles(folder, "*", SearchOption.AllDirectories)
                 .Select(p => Path.GetRelativePath(folder, p))
                 .Where(p => p.IsDBPF())

@@ -32,7 +32,7 @@ if (PromptYesNo("Build channels?")) {
 }
 ChannelOptions parseOpt = PromptChannelOption("Which channel(s) do you want to parse? (JSON → DB Objects");
 (var packages, var assets) = SC4Pac.ParseChannelJson(channels, parseOpt);
-SC4Pac.ExtractFilesFromJson(extractLocation, ref packages, assets);
+var missingAssets = SC4Pac.ExtractFilesFromJson(extractLocation, ref packages, assets);
 
 List<DBPFError> errors = [];
 DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb, extractLocation);
@@ -41,8 +41,8 @@ if (PromptYesNo("Fill Asset table?")) {
 }
 if (PromptYesNo("Fill TGI table?")) {
     errors = db.FillTgiTable();
-    string json = JsonSerializer.Serialize(errors);
-    File.WriteAllText(Path.Combine(dataPath, $"Errors-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.json"), json);
+    //string json = JsonSerializer.Serialize(errors);
+    //File.WriteAllText(Path.Combine(dataPath, $"Errors-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.json"), json);
 }
 if (PromptYesNo("Fill Package table?")) {
     db.FillPackageTable(packages);

@@ -42,6 +42,7 @@ namespace SC4PropTextureCatalogBuilder {
                 _db.Insert(new ExchangeItem(4, "Hide-Inoki", "http:\\\\hide-inoki.com"));
                 _db.Insert(new ExchangeItem(5, "Github", "https:\\\\github.com"));
                 _db.CreateTable<PackageItem>();
+                _db.CreateTable<PackageFileItem>();
                 _db.CreateTable<FileItem>();
                 Console.WriteLine("  > database created");
             }
@@ -66,12 +67,15 @@ namespace SC4PropTextureCatalogBuilder {
         public List<DBPFError> FillTgiTable() {
             List<TGIItem> items = [];
             List<DBPFError> errors = [];
+            int idx = 0;
             foreach (string file in _sc4files) {
+                Console.WriteLine($"  > writing {idx}/{_sc4files.Count} " + file);
                 var (tgisOut, errorsOut) = ExtractTGIs(file);
                 errors.AddRange(errorsOut);
                 _db.RunInTransaction(() => {
                     _db.InsertAll(tgisOut);
                 });
+                idx++;
             }
             return errors;
         }
@@ -88,7 +92,6 @@ namespace SC4PropTextureCatalogBuilder {
                 return (items, errors);
             }
             var ai = GetAsset(fi.AssetId);
-            Console.WriteLine("  > writing " + file);
 
             FileStream fs;
             try {
@@ -217,7 +220,7 @@ namespace SC4PropTextureCatalogBuilder {
                 string cleanedUrl = FileMgt.CleanUrl(asset.Url);
 
                 //Fetch all files within this asset
-                var folder = Path.Combine(_extractPath, FileMgt.HttpToCachePath(asset.Url));
+                var folder = FileMgt.HttpToCachePath(_extractPath, asset.Url);
                 
                 if (!Directory.Exists(folder)) {
                     MissingAssets.Add(folder);

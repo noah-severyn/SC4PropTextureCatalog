@@ -36,7 +36,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// An item in the Asset table. An asset referrs to a download or file, and is akin to a sc4pac asset.
         /// </summary>
         [Table("Packages")]
-        public class PackageItem(string packageName, string version, string subfolder, List<string>? websites = null, string? author = null, List<string>? files = null, int? primaryCat = null, int? secondaryCat = null) {
+        public class PackageItem(string packageName, string version, string subfolder, List<string>? websites = null, string? author = null, int? primaryCat = null, int? secondaryCat = null) {
             [PrimaryKey]
             [AutoIncrement]
             public int Id { get; set; }
@@ -50,11 +50,6 @@ namespace SC4PropTextureCatalogBuilder {
             public string Version { get; set; } = version;
 
             public string Subfolder { get; set; } = subfolder;
-
-            ///// <summary>
-            ///// List of files this package contains
-            ///// </summary>
-            //public List<string> Files { get; set; } = files ?? [];
 
             /// <summary>
             /// Semicolon separated list of one or more urls
@@ -79,6 +74,21 @@ namespace SC4PropTextureCatalogBuilder {
             public override string ToString() {
                 return $"Id:{Id}, PkgId:{Name}, Version:{Version}, Subfolder:{Subfolder}, Author:{Author}";
             }
+        }
+
+        /// <summary>
+        /// A bridge table to link together packages to the files it contains.
+        /// </summary>
+        [Table("PackageFiles")]
+        public class PackageFileItem {
+            /// <summary>
+            /// Reference to a <see cref="PackageItem.Id"/>.
+            /// </summary>
+            public int PackageId { get; set; }
+            /// <summary>
+            /// Reference to a <see cref="FileItem.Id"/>.
+            /// </summary>
+            public int FileId { get; set; }
         }
 
         /// <summary>

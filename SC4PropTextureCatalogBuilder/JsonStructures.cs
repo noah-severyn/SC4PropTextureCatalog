@@ -16,7 +16,7 @@ namespace SC4PropTextureCatalogBuilder {
             /// <summary>
             /// The list of all files this asset contains.
             /// </summary>
-            public List<string> LocalFiles { get; set;} = [];
+            public List<string> LocalFiles { get; set;} = []; // TODO - utilize this better to save time scanning each files???
 
             public override string ToString() {
                 return $"{AssetId} ({Version})";
@@ -39,7 +39,7 @@ namespace SC4PropTextureCatalogBuilder {
             /// <summary>
             /// The list of files this package contains. Generating after parsing each of this item's include and exclude rules.
             /// </summary>
-            public List<string> LocalFiles { get; set; } = [];
+            public List<PkgFileItem> LocalFiles { get; set; } = [];
 
             public override string ToString() {
                 return $"{Group}:{Name} ({Version}), {Subfolder}";
@@ -73,7 +73,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// Matches the sc4pac JSON schema for an Asset directly included within a <see cref="Package"/>.
         /// </summary>
         public class PackageAsset {
-            public string AssetId { get; set; }
+            public string AssetId { get; set; } = string.Empty;
             public List<string>? Include { get; set; }
             public List<string>? Exclude { get; set; }
             public List<Condition>? WithConditions { get; set; }
