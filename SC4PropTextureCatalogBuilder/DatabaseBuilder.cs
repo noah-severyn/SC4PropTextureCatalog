@@ -11,7 +11,8 @@ namespace SC4PropTextureCatalogBuilder {
         /// <summary>
         /// Assets referenced in package metadata that are not found in the extract location.
         /// </summary>
-        public HashSet<string> MissingAssets { get; set; }
+        public HashSet<string> MissingAssets { get; set; } = [];
+        public List<DBPFError> Errors { get; set; } = [];
 
         /// <summary>
         /// Create a new SQLite database with the necessary tables and dimensional fields.
@@ -46,8 +47,7 @@ namespace SC4PropTextureCatalogBuilder {
                 Console.WriteLine("  > database created");
             }
 
-            var files = sc4Files;
-            MissingAssets = new HashSet<string>();
+            _sc4files = sc4Files;
         }
 
 
@@ -55,34 +55,25 @@ namespace SC4PropTextureCatalogBuilder {
         /// <summary>
         /// Fill the <c>TGIs</c> table.
         /// </summary>
-        /// <returns>A list of errors encountered while parsing the DBPF files</returns>
-        /// <remarks>The <c>Assets</c> and <c>Files</c> tables should be populated before executing this function.</remarks>
-        public List<DBPFError> FillTgiTable() {
+        /// <remarks>The <c>Assets</c> and <c>Files</c> tables should be populated before executing this function. Any errors encountered are added to <see cref="Errors"/>.</remarks>
+        public void FillTgiTable() {
             List<TGIItem> items = [];
-            List<DBPFError> errors = [];
             int idx = 0;
             foreach (string file in _sc4files) {
                 Console.WriteLine($"  > writing {idx}/{_sc4files.Count} " + file);
-                var (tgisOut, errorsOut) = ExtractTGIs(file);
-                errors.AddRange(errorsOut);
+                var tgisOut = ExtractTGIs(file);
                 _db.RunInTransaction(() => {
                     _db.InsertAll(tgisOut);
                 });
                 idx++;
             }
-            return errors;
         }
-        private (List<TGIItem>, List<DBPFError>) ExtractTGIs(string file) {
-            var errors = new List<DBPFError>();
+        private List<TGIItem> ExtractTGIs(string file) {
             var items = new List<TGIItem>();
-
-            //int exchangeId = FileMgt.GetExchangeId(file);
-            //int assetId = FileMgt.GetAssetId(file);
-
-            var fi = GetFile(Path.GetFileName(file));
+            var fi = GetFile(null, Path.GetFileName(file));
             if (fi is null) {
-                errors.Add(new DBPFError(file, DBPFTGI.BLANKTGI, "File not found in database"));
-                return (items, errors);
+                Errors.Add(new DBPFError(file, null, "File not found in database"));
+                return [];
             }
             var ai = GetAsset(fi.AssetId);
 
@@ -91,10 +82,9 @@ namespace SC4PropTextureCatalogBuilder {
                 fs = new FileStream(file, FileMode.Open);
             }
             catch (Exception) {
-
-                errors.Add(new DBPFError(Path.GetFileName(file), DBPFTGI.BLANKTGI, "Opening file failed"));
+                Errors.Add(new DBPFError(Path.GetFileName(file), null, "Opening file failed"));
                 Console.WriteLine("  > could not open " + file);
-                return (items, errors);
+                return [];
             }
             DBPFFile dbpf = new DBPFFile(fs);
 
@@ -118,7 +108,7 @@ namespace SC4PropTextureCatalogBuilder {
                         exmp.Decode();
                     }
                     catch (Exception ex) {
-                        errors.Add(new DBPFError(file, exmp.TGI, ex.Message));
+                        Errors.Add(new DBPFError(file, exmp.TGI, ex.Message));
                         break;
                     }
                         
@@ -128,7 +118,7 @@ namespace SC4PropTextureCatalogBuilder {
                     if (exmpType == DBPFProperty.ExemplarType.LotConfiguration) {
                         continue;
                     } else if (exmpType == DBPFProperty.ExemplarType.Error) {
-                        errors.Add(new DBPFError(file, exmp.TGI, "missing property: ExemplarType"));
+                        Errors.Add(new DBPFError(file, exmp.TGI, "missing property: ExemplarType"));
                         if (exmp.HasProperty("Demand Satisfied")) {
                             exmpType = DBPFProperty.ExemplarType.Building;
                         }
@@ -137,7 +127,7 @@ namespace SC4PropTextureCatalogBuilder {
                     DBPFProperty prop = exmp.GetProperty("ExemplarName");
                     string exmpName;
                     if (prop is null) {
-                        errors.Add(new DBPFError(file, exmp.TGI, "missing property: ExemplarName"));
+                        Errors.Add(new DBPFError(file, exmp.TGI, "missing property: ExemplarName"));
                         exmpName = "";
                     } else {
                         exmpName = exmpName = (string) prop.GetData();
@@ -194,7 +184,7 @@ namespace SC4PropTextureCatalogBuilder {
             }
 
             _db.Execute($"UPDATE Files SET TextureCount = {textureCnt}, PropCount = {propCnt}, FloraCount = {floraCnt}, BuildingCount = {buildingCnt} WHERE Id = {fi.Id}");
-            return (items, errors);
+            return items;
         }
 
 

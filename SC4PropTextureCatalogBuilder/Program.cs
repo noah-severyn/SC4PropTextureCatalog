@@ -35,15 +35,12 @@ ChannelOptions parseOpt = PromptChannelOption("Which channel(s) do you want to p
 var sc4Files = SC4Pac.ListCacheFiles(extractLocation);
 var missingAssets = SC4Pac.ExtractFilesFromJson(sc4Files, ref packages, assets);
 
-List<DBPFError> errors = [];
 DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb, sc4Files);
 if (PromptYesNo("Fill Asset table?")) {
     db.FillAssetAndFileTable(assets);
 }
 if (PromptYesNo("Fill TGI table?")) {
-    errors = db.FillTgiTable();
-    //string json = JsonSerializer.Serialize(errors);
-    //File.WriteAllText(Path.Combine(dataPath, $"Errors-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.json"), json);
+    db.FillTgiTable();
 }
 if (PromptYesNo("Fill Package table?")) {
     db.FillPackageTable(packages);
@@ -51,6 +48,8 @@ if (PromptYesNo("Fill Package table?")) {
 if (PromptYesNo("Copy database to API path?")) {
     File.Copy(dbPath, apiPath, true);
 }
+string json = JsonSerializer.Serialize(db.Errors);
+File.WriteAllText(Path.Combine(dataPath, $"Errors-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.json"), json);
 
 
 static bool PromptYesNo(string message) {
