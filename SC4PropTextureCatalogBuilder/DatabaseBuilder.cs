@@ -199,17 +199,14 @@ namespace SC4PropTextureCatalogBuilder {
             int assetKey = 1;
             foreach (var asset in assets) {
                 int exchId = FileMgt.GetExchangeId(asset.Url);
-
                 string cleanedUrl = FileMgt.CleanUrl(asset.Url);
-
-                //Fetch all files within this asset
-                var folder = FileMgt.HttpToCachePath(asset.Url);
+                string folder = FileMgt.HttpToCachePath(asset.Url);
                 
-                if (!Directory.Exists(folder)) {
-                    MissingAssets.Add(folder);
+                var files = _sc4files.Where(f => f.Contains(folder));
+                if (!files.Any()) {
+                    MissingAssets.Add(asset.AssetId); //TODO - how is this different from what is returned from `SC4Pac.ExtractFilesFromPackages`?
                     continue;
                 }
-                var files = _sc4files.Where(f => f.StartsWith(folder));
                 foreach (var file in files) {
                     fileItems.Add(new FileItem(assetKey, Path.GetFileName(file)));
                 }

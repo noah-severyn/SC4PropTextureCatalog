@@ -106,18 +106,21 @@ namespace SC4PropTextureCatalogBuilder {
 
 
         /// <summary>
-        /// List all SC4 files in the extract location to avoid repetitive <c>Directory.GetFiles</c> calls.
+        /// List all SC4 files in the extract location once to avoid repetitive expensive <c>Directory.GetFiles</c> calls.
         /// </summary>
         internal static HashSet<string> ListCacheFiles(string extractFolder) {
-            Console.WriteLine("  > listing SC4 files in extract location ...");
+            Console.WriteLine("  > fetching all SC4 files in extract location ...");
             return Directory.GetFiles(extractFolder, "*", SearchOption.AllDirectories)
                 .AsParallel()
                 .Where(p => p.IsDBPF())
                 .ToHashSet();
         }
 
-
-        public static List<string> ExtractFilesFromJson(HashSet<string> sc4Files, ref List<Package> packages, List<Asset> assets) {
+        /// <summary>
+        /// Iterate each <see cref="Package"/> and examine tne the <c>include</c> and <c>exclude</c> properties of each <see cref="Asset"/> to determine list of referenced cache files. Save this information to <see cref="Package.LocalFiles"/>.
+        /// </summary>
+        /// <returns>A list of <see cref="Asset.AssetId"/>s which are referenced in a package but missing from the cache.</returns>
+        public static List<string> ExtractFilesFromPackages(HashSet<string> sc4Files, ref List<Package> packages, List<Asset> assets) {
             Console.WriteLine("  > extracting files from json ...");
             var assetDict = new Dictionary<string, Asset>(); // Convert to dictionary for O(1) lookups instead of O(n) List.Find()
             foreach (var a in assets) {
@@ -154,21 +157,13 @@ namespace SC4PropTextureCatalogBuilder {
 
         private static List<string> ResolveAssetFiles(HashSet<string> sc4Files, Asset asset, List<string> includeRules, List<string> excludeRules) {
             var folderPart = FileMgt.HttpToCachePath(asset.Url);
-            var allFiles = sc4Files.Where(f => f.StartsWith(folderPart)).ToList();
-            int folderLength = folderPart.Length + 1; //+1 for the directory separator
-            var files = new List<string>(allFiles.Count);
-            foreach (var fullPath in allFiles) {
-                string relativePath = fullPath.Substring(folderLength);
-                if (relativePath.IsDBPF()) {
-                    files.Add(relativePath);
-                }
-            }
+            var assetFiles = sc4Files.Where(f => f.Contains(folderPart)).ToList();
             
             bool hasInclude = includeRules.Count > 0;
             bool hasExclude = excludeRules.Count > 0;
 
             if (!hasInclude && !hasExclude) {
-                return files.Select(f => Path.GetFileName(f)).ToList();
+                return assetFiles;
             }
 
             var includeRegexes = hasInclude ? includeRules.Select(rule => BuildRegex(rule)).ToList() : null;
@@ -179,7 +174,7 @@ namespace SC4PropTextureCatalogBuilder {
                 var includeMatches = new HashSet<string>();
                 var excludeMatches = new HashSet<string>();
                 
-                foreach (var file in files) {
+                foreach (var file in assetFiles) {
                     bool isIncluded = includeRegexes!.Any(rgx => rgx.IsMatch(file));
                     bool isExcluded = excludeRegexes!.Any(rgx => rgx.IsMatch(file));
                     
@@ -194,17 +189,14 @@ namespace SC4PropTextureCatalogBuilder {
                 //Remove excluded files, but only if they were not also included.
                 //If there are variants that include/exclude each other's files, they will appear in both lists. We want to include these files regardless, as they are included in the package in some capacity.
                 result = includeMatches.Where(file => !excludeMatches.Contains(file) || includeMatches.Contains(file))
-                    .Select(f => Path.GetFileName(f))
                     .ToList();
             } 
             else if (hasInclude) {
-                result = files.Where(file => includeRegexes!.Any(rgx => rgx.IsMatch(file)))
-                    .Select(f => Path.GetFileName(f))
+                result = assetFiles.Where(file => includeRegexes!.Any(rgx => rgx.IsMatch(file)))
                     .ToList();
             } 
             else {
-                result = files.Where(file => !excludeRegexes!.Any(rgx => rgx.IsMatch(file)))
-                    .Select(f => Path.GetFileName(f))
+                result = assetFiles.Where(file => !excludeRegexes!.Any(rgx => rgx.IsMatch(file)))
                     .ToList();
             }
             
