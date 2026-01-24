@@ -32,10 +32,11 @@ if (PromptYesNo("Build channels?")) {
 }
 ChannelOptions parseOpt = PromptChannelOption("Which channel(s) do you want to parse? (JSON → DB Objects");
 (var packages, var assets) = SC4Pac.ParseChannelJson(channels, parseOpt);
-var missingAssets = SC4Pac.ExtractFilesFromJson(extractLocation, ref packages, assets);
+var sc4Files = SC4Pac.ListCacheFiles(extractLocation);
+var missingAssets = SC4Pac.ExtractFilesFromJson(sc4Files, ref packages, assets);
 
 List<DBPFError> errors = [];
-DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb, extractLocation);
+DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb, sc4Files);
 if (PromptYesNo("Fill Asset table?")) {
     db.FillAssetAndFileTable(assets);
 }

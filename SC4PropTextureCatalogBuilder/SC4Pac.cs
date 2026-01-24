@@ -33,8 +33,7 @@ namespace SC4PropTextureCatalogBuilder {
     internal static partial class SC4Pac {
         /// <summary>
         /// Build sc4pac channel(s) with the sc4pac <c>channel build</c> command, converting the YAML metadata files to JSON for easier parsing.
-        /// </summary> 
-        /// .0 
+        /// </summary>
         internal static void BuildChannels(Dictionary<string, ChannelPaths> channels, ChannelOptions options) {
             switch (options) {
                 case ChannelOptions.None:
@@ -105,8 +104,26 @@ namespace SC4PropTextureCatalogBuilder {
             return Directory.EnumerateFiles(channelFolder, "*", SearchOption.AllDirectories).Where(path => path.EndsWith("latest\\pkg.json") && !path.Contains("_ext"));
         }
 
-        public static List<string> ExtractFilesFromJson(string extractFolder, ref List<Package> packages, List<Asset> assets) {
+
+        /// <summary>
+        /// List all SC4 files in the extract location to avoid repetitive <c>Directory.GetFiles</c> calls.
+        /// </summary>
+        internal static HashSet<string> ListCacheFiles(string extractFolder) {
+            Console.WriteLine("  > listing SC4 files in extract location ...");
+            return Directory.GetFiles(extractFolder, "*", SearchOption.AllDirectories)
+                .AsParallel()
+                .Where(p => p.IsDBPF())
+                .ToHashSet();
+        }
+
+
+        public static List<string> ExtractFilesFromJson(HashSet<string> sc4Files, ref List<Package> packages, List<Asset> assets) {
             Console.WriteLine("  > extracting files from json ...");
+            var assetDict = new Dictionary<string, Asset>(); // Convert to dictionary for O(1) lookups instead of O(n) List.Find()
+            foreach (var a in assets) {
+                assetDict.TryAdd(a.AssetId, a);
+            }
+            
             HashSet<string> missingAssets = new HashSet<string>();
             foreach (var pkg in packages) {
                 //Extract the list of PackageAsset(s) out of the package
@@ -119,15 +136,15 @@ namespace SC4PropTextureCatalogBuilder {
                     );
 
                 List<PkgFileItem> result = [];
+                string pkgName = pkg.Group + ":" + pkg.Name;
                 foreach (var pkgAsset in pkgAssets) {
-                    var asset = assets.Find(a => a.AssetId == pkgAsset.AssetId);
-                    
-                    if (asset is not null) {
-                        var files = ResolveAssetFiles(asset, extractFolder, pkgAsset.Include ?? [], pkgAsset.Exclude ?? []);
-                        List<PkgFileItem> pfis = files.Select(f => new PkgFileItem(pkg.Group + ":" + pkg.Name, asset.AssetId, Path.GetFileName(f))).ToList();
-                        result.AddRange(pfis);
+                    if (assetDict.TryGetValue(pkgAsset.AssetId, out var asset)) {
+                        var files = ResolveAssetFiles(sc4Files, asset, pkgAsset.Include ?? [], pkgAsset.Exclude ?? []);
+                        foreach (var file in files) {
+                            result.Add(new PkgFileItem(pkgName, asset.AssetId, file));
+                        }
                     } else {
-                        missingAssets.Add(asset.Url);
+                        missingAssets.Add(pkgAsset.AssetId);
                     }
                 }
                 pkg.LocalFiles = result;
@@ -135,37 +152,63 @@ namespace SC4PropTextureCatalogBuilder {
             return missingAssets.ToList();
         }
 
-        private static List<string> ResolveAssetFiles(Asset asset, string baseFolder, List<string> includeRules, List<string> excludeRules) {
-            var folder = FileMgt.HttpToCachePath(baseFolder, asset.Url);
-            if (!Directory.Exists(folder)) {
-                return [];
+        private static List<string> ResolveAssetFiles(HashSet<string> sc4Files, Asset asset, List<string> includeRules, List<string> excludeRules) {
+            var folderPart = FileMgt.HttpToCachePath(asset.Url);
+            var allFiles = sc4Files.Where(f => f.StartsWith(folderPart)).ToList();
+            int folderLength = folderPart.Length + 1; //+1 for the directory separator
+            var files = new List<string>(allFiles.Count);
+            foreach (var fullPath in allFiles) {
+                string relativePath = fullPath.Substring(folderLength);
+                if (relativePath.IsDBPF()) {
+                    files.Add(relativePath);
+                }
             }
-            var files = Directory.GetFiles(folder, "*", SearchOption.AllDirectories)
-                .Select(p => Path.GetRelativePath(folder, p))
-                .Where(p => p.IsDBPF())
-                .ToList();
+            
             bool hasInclude = includeRules.Count > 0;
             bool hasExclude = excludeRules.Count > 0;
 
-            var includeRegexes = hasInclude ? includeRules.Select(rule => BuildRegex(rule)).ToList() : [];
-            var includeMatches = hasInclude ? files.Where(file => includeRegexes.Any(rgx => rgx.IsMatch(file))).ToHashSet() : [];
-            var excludeRegexes = hasExclude ? excludeRules.Select(rule => BuildRegex(rule)).ToList() : [];
-            var excludeMatches = hasExclude ? files.Where(file => excludeRegexes.Any(rgx => rgx.IsMatch(file))).ToHashSet() : [];
-
-            IEnumerable<string> result;
-            if (hasInclude) {
-                result = includeMatches;
-                if (hasExclude) {
-                    //Remove excluded files, but only if they were not also included.
-                    //If there are variants that include/exclude each other's files, they will appear in both lists. We want to include these files regardless, as they are included in the package in some capacity.
-                    result = result.Where(file => !excludeMatches.Contains(file) || includeMatches.Contains(file));
-                }
-            } else if (hasExclude) {
-                result = files.Where(file => !excludeMatches.Contains(file));
-            } else {
-                result = files;
+            if (!hasInclude && !hasExclude) {
+                return files.Select(f => Path.GetFileName(f)).ToList();
             }
-            return result.ToList();
+
+            var includeRegexes = hasInclude ? includeRules.Select(rule => BuildRegex(rule)).ToList() : null;
+            var excludeRegexes = hasExclude ? excludeRules.Select(rule => BuildRegex(rule)).ToList() : null;
+
+            List<string> result;
+            if (hasInclude && hasExclude) {
+                var includeMatches = new HashSet<string>();
+                var excludeMatches = new HashSet<string>();
+                
+                foreach (var file in files) {
+                    bool isIncluded = includeRegexes!.Any(rgx => rgx.IsMatch(file));
+                    bool isExcluded = excludeRegexes!.Any(rgx => rgx.IsMatch(file));
+                    
+                    if (isIncluded) {
+                        includeMatches.Add(file);
+                    }
+                    if (isExcluded) {
+                        excludeMatches.Add(file);
+                    }
+                }
+
+                //Remove excluded files, but only if they were not also included.
+                //If there are variants that include/exclude each other's files, they will appear in both lists. We want to include these files regardless, as they are included in the package in some capacity.
+                result = includeMatches.Where(file => !excludeMatches.Contains(file) || includeMatches.Contains(file))
+                    .Select(f => Path.GetFileName(f))
+                    .ToList();
+            } 
+            else if (hasInclude) {
+                result = files.Where(file => includeRegexes!.Any(rgx => rgx.IsMatch(file)))
+                    .Select(f => Path.GetFileName(f))
+                    .ToList();
+            } 
+            else {
+                result = files.Where(file => !excludeRegexes!.Any(rgx => rgx.IsMatch(file)))
+                    .Select(f => Path.GetFileName(f))
+                    .ToList();
+            }
+            
+            return result;
         }
 
         private static Regex BuildRegex(string rule) {

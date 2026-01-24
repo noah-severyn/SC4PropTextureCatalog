@@ -8,7 +8,6 @@ namespace SC4PropTextureCatalogBuilder {
     internal partial class DatabaseBuilder {
         private readonly SQLiteConnection _db;
         private readonly HashSet<string> _sc4files;
-        private readonly string _extractPath;
         /// <summary>
         /// Assets referenced in package metadata that are not found in the extract location.
         /// </summary>
@@ -20,7 +19,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// <param name="dbPath">Path to save the database file to, including the file name.</param>
         /// <param name="create">Whether to create fresh db tables or reuse existing ones.</param>
         /// <param name="extractPath">Folder path to extracted sc4pac cache files.</param>
-        public DatabaseBuilder(string dbPath, bool create, string extractPath) {
+        public DatabaseBuilder(string dbPath, bool create, HashSet<string> sc4Files) {
             _db = new SQLiteConnection(dbPath);
             if (create) {
                 _db.CreateTable<TGIItem>();
@@ -47,13 +46,7 @@ namespace SC4PropTextureCatalogBuilder {
                 Console.WriteLine("  > database created");
             }
 
-            //Scan all files once, then continue to reference this same item throughout this class
-            Console.WriteLine("  > collecting SC4 files in extract location ...");
-            _sc4files = Directory.GetFiles(extractPath, "*", SearchOption.AllDirectories)
-                .AsParallel()
-                .Where(p => p.IsDBPF())
-                .ToHashSet();
-            _extractPath = extractPath;
+            var files = sc4Files;
             MissingAssets = new HashSet<string>();
         }
 
@@ -220,7 +213,7 @@ namespace SC4PropTextureCatalogBuilder {
                 string cleanedUrl = FileMgt.CleanUrl(asset.Url);
 
                 //Fetch all files within this asset
-                var folder = FileMgt.HttpToCachePath(_extractPath, asset.Url);
+                var folder = FileMgt.HttpToCachePath(asset.Url);
                 
                 if (!Directory.Exists(folder)) {
                     MissingAssets.Add(folder);
