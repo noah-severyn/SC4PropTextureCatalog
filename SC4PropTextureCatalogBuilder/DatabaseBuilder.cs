@@ -223,12 +223,51 @@ namespace SC4PropTextureCatalogBuilder {
             });
         }
 
-
+        /// <summary>
+        /// Fills the <c>Package</c> and <c>PackageFile</c> tables.
+        /// </summary>
+        /// <remarks>The <c>Assets</c> and <c>Files</c> tables should be populated before executing this function.</remarks>
         public void FillPackageTable(List<SC4Pac.Package> packages) {
             List<PackageItem> items = [];
             foreach (var pkg in packages) {
                 List<string> websites = pkg.Info.Websites ?? (pkg.Info.Website is not null ? new List<string> { pkg.Info.Website } : []);
                 items.Add(new PackageItem(pkg.Group + ":" + pkg.Name, pkg.Version, pkg.Subfolder, websites, pkg.Info.Author));
+            }
+            _db.RunInTransaction(() => {
+                _db.InsertAll(items);
+            });
+        }
+
+
+        /// <summary>
+        /// Fills the <c>PackageFile</c> table.
+        /// </summary>
+        /// <remarks>The <c>Assets</c>, <c>Files</c>, and <c>Packages</c> tables should be populated before executing this function. Any errors encountered are added to <see cref="Errors"/>.</remarks>
+        public void FillPackageFileTable(List<SC4Pac.Package> packages) {
+            List<PackageFileItem> items = [];
+            int? pkgId;
+            int? assetId;
+            int? fileId;
+            foreach (var pkg in packages) {
+                if (pkg.LocalFiles.Count == 0) {
+                    Errors.Add(new DBPFError(string.Empty, null, "Assets for package " + pkg.Group + ":" + pkg.Name + " were not found"));
+                    continue;
+                }
+                foreach (var pkgFile in pkg.LocalFiles) {
+                    assetId = GetAsset(name: pkgFile.AssetName)?.Id;
+                    fileId = GetFile(assetId, pkgFile.FilePath)?.Id;
+                    pkgId = GetPackage(pkgFile.PackageName)?.Id;
+
+                    if (assetId is null) {
+                        Errors.Add(new DBPFError(pkgFile.FilePath, null, "Could not find in db asset " + pkgFile.AssetName));
+                    } else if (fileId is null) {
+                        Errors.Add(new DBPFError(pkgFile.FilePath, null, "Could not find in db asset " + pkgFile.AssetName + " with file " + pkgFile.FilePath));
+                    } else if (pkgId is null) {
+                        Errors.Add(new DBPFError(pkgFile.FilePath, null, "Could not find in db package " + pkgFile.PackageName));
+                    } else {
+                        items.Add(new PackageFileItem((int) pkgId, (int) fileId));
+                    }
+                }
             }
             _db.RunInTransaction(() => {
                 _db.InsertAll(items);

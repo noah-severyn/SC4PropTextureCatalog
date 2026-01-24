@@ -36,7 +36,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// An item in the Asset table. An asset referrs to a download or file, and is akin to a sc4pac asset.
         /// </summary>
         [Table("Packages")]
-        public class PackageItem(string packageName, string version, string subfolder, List<string>? websites = null, string? author = null, int? primaryCat = null, int? secondaryCat = null) {
+        public class PackageItem {
             [PrimaryKey]
             [AutoIncrement]
             public int Id { get; set; }
@@ -45,18 +45,18 @@ namespace SC4PropTextureCatalogBuilder {
             /// sc4pac package identifier in the format <c>group:name</c>.
             /// </summary>
             [NotNull]
-            public string Name { get; set; } = packageName;
+            public string Name { get; set; }
 
-            public string Version { get; set; } = version;
+            public string Version { get; set; }
 
-            public string Subfolder { get; set; } = subfolder;
+            public string Subfolder { get; set; }
 
             /// <summary>
             /// Semicolon separated list of one or more urls
             /// </summary>
-            public string Websites { get; set; } = string.Join(';', websites ?? []);
+            public string? Websites { get; set; }
 
-            public string? Author { get; set; } = author;
+            public string? Author { get; set; }
 
 
             ///// <summary>
@@ -70,6 +70,20 @@ namespace SC4PropTextureCatalogBuilder {
             ///// </summary>
             //[Column("SecondaryCat")]
             //public int? SecondaryCats { get; set; } = secondaryCat;
+
+            public PackageItem() {
+                Name = string.Empty;
+                Version = string.Empty;
+                Subfolder = string.Empty;
+            }
+
+            public PackageItem(string name, string version, string subfolder, List<string>? websites = null, string? author = null, int? primaryCat = null, int? secondaryCat = null) {
+                Name = name;
+                Version = version;
+                Subfolder = subfolder;
+                Websites = string.Join(';', websites ?? []);
+                Author = author;
+            }
 
             public override string ToString() {
                 return $"Id:{Id}, PkgId:{Name}, Version:{Version}, Subfolder:{Subfolder}, Author:{Author}";
@@ -89,6 +103,15 @@ namespace SC4PropTextureCatalogBuilder {
             /// Reference to a <see cref="FileItem.Id"/>.
             /// </summary>
             public int FileId { get; set; }
+
+            public PackageFileItem() {
+                
+            }
+
+            public PackageFileItem(int packageId, int fileId) {
+                PackageId = packageId;
+                FileId = fileId;
+            }
         }
 
         /// <summary>

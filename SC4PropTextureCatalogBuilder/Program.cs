@@ -30,10 +30,10 @@ if (PromptYesNo("Build channels?")) {
     ChannelOptions buildOpt = PromptChannelOption("Which channel(s) do you want to build? (YAML → JSON)");
     SC4Pac.BuildChannels(channels, buildOpt);
 }
-ChannelOptions parseOpt = PromptChannelOption("Which channel(s) do you want to parse? (JSON → DB Objects");
+ChannelOptions parseOpt = PromptChannelOption("Which channel(s) do you want to parse? (JSON → DB Objects)");
 (var packages, var assets) = SC4Pac.ParseChannelJson(channels, parseOpt);
 var sc4Files = SC4Pac.ListCacheFiles(extractLocation);
-var missingAssets = SC4Pac.ExtractFilesFromJson(sc4Files, ref packages, assets);
+var missingAssets = SC4Pac.ExtractFilesFromPackages(sc4Files, ref packages, assets);
 
 DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb, sc4Files);
 if (PromptYesNo("Fill Asset table?")) {
@@ -44,6 +44,9 @@ if (PromptYesNo("Fill TGI table?")) {
 }
 if (PromptYesNo("Fill Package table?")) {
     db.FillPackageTable(packages);
+}
+if (PromptYesNo("Fill PackageFile table?")) {
+    db.FillPackageFileTable(packages);
 }
 if (PromptYesNo("Copy database to API path?")) {
     File.Copy(dbPath, apiPath, true);
