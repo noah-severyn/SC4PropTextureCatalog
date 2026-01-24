@@ -244,22 +244,31 @@ namespace SC4PropTextureCatalogBuilder {
         /// </summary>
         /// <returns>TRUE if the asset exists; FALSE otherwise</returns>
         public bool AssetExists(int exchangeId, int assetId) {
-            int count = _db.ExecuteScalar<int>($"SELECT count(*) FROM Assets WHERE ExchangeId = '{exchangeId}' AND AssetId = '{assetId}'");
+            int count = _db.ExecuteScalar<int>($"SELECT count(*) FROM Assets WHERE ExchangeId = ? AND AssetId = ?", exchangeId, assetId);
             return count != 0;
         }
         public AssetItem? GetAsset(string? name = null, string? url = null) {
-            var where = name is null ? $"Name = \"{name}\"" : $"Url = \"{url}"; 
-            return _db.Query<AssetItem>($"SELECT * FROM Assets WHERE {where}").FirstOrDefault();
+            if (name is null) {
+                return _db.Query<AssetItem>("SELECT * FROM Assets WHERE Url = ?", url).FirstOrDefault();
+            } else {
+                return _db.Query<AssetItem>("SELECT * FROM Assets WHERE Name = ?", name).FirstOrDefault();
+            }
         }
         public AssetItem? GetAsset(int id) {
-            return _db.Query<AssetItem>($"SELECT * FROM Assets WHERE Id = {id}").FirstOrDefault();
+            return _db.Query<AssetItem>($"SELECT * FROM Assets WHERE Id = ?", id).FirstOrDefault();
+        }
+        public PackageItem? GetPackage(string name) {
+            return _db.Query<PackageItem>($"SELECT * FROM Packages WHERE Name = ?", name).FirstOrDefault();
+        }
+        public PackageItem? GetPackage(int id) {
+            return _db.Query<PackageItem>("SELECT * FROM Packages WHERE Id = ?", id).FirstOrDefault();
         }
         /// <summary>
         /// Return whether this asset exists in the <c>Packages</c> table
         /// </summary>
         /// <returns>TRUE if the asset exists; FALSE otherwise</returns>
         public bool PackageExists(int exchangeId, int assetId) {
-            int count = _db.ExecuteScalar<int>($"SELECT count(*) FROM Packages WHERE ExchangeId = '{exchangeId}' AND AssetId = '{assetId}'");
+            int count = _db.ExecuteScalar<int>("SELECT count(*) FROM Packages WHERE ExchangeId = ? AND AssetId = ?", exchangeId, assetId);
             return count != 0;
         }
         /// <summary>
@@ -267,7 +276,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// </summary>
         /// <returns>TRUE if the package exists; FALSE otherwise</returns>
         public bool PackageExists(string package) {
-            int count = _db.ExecuteScalar<int>($"SELECT count(*) FROM Packages WHERE PackageId = '{package}'");
+            int count = _db.ExecuteScalar<int>("SELECT count(*) FROM Packages WHERE PackageId = ?", package);
             return count != 0;
         }
         /// <summary>
@@ -275,15 +284,19 @@ namespace SC4PropTextureCatalogBuilder {
         /// </summary>
         /// <returns>TRUE if the TGI exists; FALSE otherwise</returns>
         public bool TGIExists(string tgi) {
-            int count = _db.ExecuteScalar<int>($"SELECT count(*) FROM CatalogItems WHERE TGI = '{tgi}'");
+            int count = _db.ExecuteScalar<int>("SELECT count(*) FROM CatalogItems WHERE TGI = ?", tgi);
             return count != 0;
         }
 
-        public FileItem? GetFile(string name) {
-            return _db.Query<FileItem>($"SELECT * FROM Files WHERE Name = \"{name}\"").FirstOrDefault();
+        public FileItem? GetFile(int? assetId, string name) {
+            if (assetId is null) {
+                return _db.Query<FileItem>("SELECT * FROM Files WHERE Name = ?", Path.GetFileName(name)).FirstOrDefault();
+            } else {
+                return _db.Query<FileItem>("SELECT * FROM Files WHERE Name = ? AND AssetId = ?", Path.GetFileName(name), assetId).FirstOrDefault();
+            }
         }
         public FileItem? GetFile(int id) {
-            return _db.Query<FileItem>($"SELECT * FROM Files WHERE Id = {id}").FirstOrDefault();
+            return _db.Query<FileItem>("SELECT * FROM Files WHERE Id = ?", id).FirstOrDefault();
         }
 
 
