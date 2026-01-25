@@ -61,10 +61,13 @@ function QueryReturn(search_text, query_results) {
 		const tr = document.createElement("tr");
 
 		const package = document.createElement("td");
-		package.textContent = item.PackageId;
+		const packageLink = document.createElement("a");
+		packageLink.href = "sc4pac:///package?pkg=" + encodeURIComponent(item.Package);
+		packageLink.textContent = item.Package;
+		package.appendChild(packageLink);
 
 		const file = document.createElement("td");
-		file.textContent = item.File;
+		file.textContent = item.FileName;
 
 		const tgi = document.createElement("td");
 		tgi.textContent = item.TGI;
@@ -73,7 +76,7 @@ function QueryReturn(search_text, query_results) {
 		category.textContent = item.Category;
 
 		const author = document.createElement("td");
-		author.textContent = "";
+		author.textContent = item.Author;
 
 		//const thumb = document.createElement('td');
 		//const img = document.createElement('img');
@@ -82,7 +85,7 @@ function QueryReturn(search_text, query_results) {
 		//thumb.appendChild(img);
 
 		const name = document.createElement("td");
-		name.textContent = item.Name;
+		name.textContent = item.ExemplarName;
 
 		tr.append(package, file, tgi, category, author, name);
 		body.appendChild(tr);

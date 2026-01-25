@@ -27,7 +27,7 @@ async function Setup() {
             src: async () => {
                 return AllPackages;
             },
-            keys: ["PackageId"],
+            keys: ["Package"],
             cache: true,
         },
         resultItem: {
@@ -37,7 +37,7 @@ async function Setup() {
             input: {
                 selection: (event) => {
                     const selection = event.detail.selection.value;
-                    autoCompleteJS.input.value = selection.PackageId;
+                    autoCompleteJS.input.value = selection.Package;
                 }
             }
         }
@@ -95,8 +95,13 @@ function GetExchangeAbbreviation(url) {
 }
 
 function QueryReturn2(search_text, query_results) {
-    let pkg = AllPackages.filter(p => p.PackageId === search_text)[0];
-    document.getElementById('SelectedPackId').textContent = pkg.PackageId;
+    let pkg = AllPackages.filter(p => p.Package === search_text)[0];
+    console.log(pkg);
+    
+    const packageLink = document.createElement("a");
+    packageLink.href = "sc4pac:///package?pkg=" + encodeURIComponent(pkg.Package);
+    packageLink.textContent = pkg.Package;
+    document.getElementById('SelectedPackId').appendChild(packageLink);
 
     document.getElementById('SelectedPackUrls').innerHTML = '';
     pkg.Websites.split(';').forEach(url => {
@@ -111,6 +116,11 @@ function QueryReturn2(search_text, query_results) {
 
     document.getElementById('SelectedPackVersion').textContent = pkg.Version;
     document.getElementById('SelectedPackAuthor').textContent = pkg.Author;
+    document.getElementById('SelectedPackSubfolder').textContent = pkg.Subfolder;
+    document.getElementById('SelectedPackTextureCount').textContent = pkg.Textures;
+    document.getElementById('SelectedPackPropCount').textContent = pkg.Props;
+    document.getElementById('SelectedPackFloraCount').textContent = pkg.Flora;
+    document.getElementById('SelectedPackModelCount').textContent = pkg.Buildings;
 
     // const body = document.getElementById('QueryResultBody');
     // query_results.forEach(item => {
