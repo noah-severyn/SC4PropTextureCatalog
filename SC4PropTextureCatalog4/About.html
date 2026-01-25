@@ -23,38 +23,37 @@
     </header>
     
     <main role="main" class="container">
-        <h3>About</h3>
-        <p>This project was originally inspired by the original <a target="_blank" href="https://sc4devotion.com/forums/index.php?board=415.0">Prop & Texture Photo Catalog</a> started in 2011, and aims to index all known TGIs and plugin packs for SimCity 4, especially all known dependency packs. This project also builds upon the <a href="https://community.simtropolis.com/forums/topic/75264-plugin-pack-id-indexes/">Plugin Pack ID Index</a> list assembled by catty-cb in 2018. This iteration of the catalog is assembled and is maintained by <a href="https://community.simtropolis.com/profile/455740-nos17/">nos.17</a>. Assistance has additionally been provided from STEX Custodian (Tyberius06), Cyclone Boom, and CorinaMarie.</p>
-        <p>I hope this tool will prove invaluable for many content creators (especially lotters) who are looking for more and better content to incorporate into their work. Looking for a motorcycle to add to your lot? Filter only prop packs that contain vehicles and/or motorcycles. Looking for seasonal trees? Look through all packs that contain seasonal trees until you can find the right ones for you? Want to use all HD? Scour all packs that contain High Definition props to find the ones you want.</p>
-        <p>Found a bug? Am I missing a prop or texture pack? Have an idea for additional sorting/filtering categories? Is there a better way to make the Catalog more interactive or useful? I would very much like to hear from you! Drop me a message or visit the <a href="https://community.simtropolis.com/forums/topic/758501-simcity-4-prop-and-texture-catalogue-by-stex-custodian/">SimCity 4 Prop and Texture Catalog</a> thread or open an issue in Github.</p>
-        <p>The source code for this project is hosted in a Github repository <a href="https://github.com/noah-severyn/SC4PropTextureCatalog">here</a>. The legacy version can still be downloaded <a href="https://github.com/noah-severyn/SC4PropTextureCatalog/releases/tag/2.2.2">here</a>.</p>
-        <p>&copy; 2025 · SC4PropTextureCatalog · <a href="https://community.simtropolis.com/profile/455740-nos17/">nos.17</a> · <a href="Privacy.html">Privacy</a></p>
+        <h1>About</h1>
+        <p>This project was originally inspired by the original <a target="_blank" href="https://sc4devotion.com/forums/index.php?board=415.0">Prop & Texture Photo Catalog</a> started in 2011, and aims to index all known TGIs and plugin packs for SimCity 4, especially focusing all known dependencies. This project also builds upon the <a href="https://community.simtropolis.com/forums/topic/75264-plugin-pack-id-indexes/">Plugin Pack ID Index</a> list assembled by catty-cb in 2018. This iteration of the catalog is assembled and is maintained by <a href="https://community.simtropolis.com/profile/455740-nos17/">nos.17</a>. Assistance has additionally been provided from STEX Custodian (Tyberius06), Cyclone Boom, and CorinaMarie.</p>
+        <p>I aim for this tool to assist many content creators (especially lotters) who are looking for more and better content to incorporate into their work. Looking for a motorcycle to add to your lot? Filter only prop packs that contain vehicles and/or motorcycles. Looking for seasonal trees? Look through all packs that contain seasonal trees until you can find the right ones for you? Want to use all HD? Scour all packs that contain High Definition props to find the ones you want.</p>
+        <p>Found a bug? Am I missing a prop or texture pack? Have an idea for additional sorting/filtering categories? Is there a better way to make the Catalog more interactive or useful? I would very much like to hear from you! Visit the <a href="https://community.simtropolis.com/forums/topic/758501-simcity-4-prop-and-texture-catalogue-by-stex-custodian/">SimCity 4 Prop and Texture Catalog</a> thread or open an issue in Github. The source code for this project is hosted in the <a href="https://github.com/noah-severyn/SC4PropTextureCatalog">SC4PropTextureCatalog</a> Github repository.</p>
+        <p>&copy; 2021-2026 · SC4PropTextureCatalog · Noah Severyn · <a href="Privacy.html">Privacy</a></p>
 
-        <h3>How to use:</h3>
+        <h1>Stats</h1>
         <ul>
-            <li>Use the <b>Home</b> page to search for items by file name, TGI, exemplar name, author, package name, or a combination of these. Queries require 3 or more characters.</li>
-            <li>Use the <b>View a Pack</b> page to view the contents of a single package.
-        </ul>
-
-        <h3>Stats</h3>
-        <ul>
-            <li><span id="PackageCount">###</span> packages indexed, referencing <span id="AssetCount">###</span> unique assets and <span id="FileCount">###</span> files</li>
-            <li><span id="TgiCount">###</span> TGIs indexed</li>
-            <li>Thumbnail Coverage: <meter id="ThumbnailCoverage" max="1" low=".33" high=".7" optimum="1" style="width:200px"></meter> <span id="ThumbnailCoveragePct">##% (###/###)</span></li>
+            <li><span id="PackageCnt"></span> packages indexed, spanning <span id="AssetCnt"></span> unique assets and <span id="FileCnt"></span> files</li>
+            <li><span id="TgiCnt"></span> TGIs indexed</li>
+            <ul>
+                <li><span id="TextureCnt"></span> textures</li>
+                <li><span id="PropCnt"></span> props</li>
+                <li><span id="FloraCnt"></span> flora</li>
+                <li><span id="BuildingCnt"></span> buildings</li>
+            </ul>
+            <li>Thumbnail Coverage: <meter id="ThumbnailCoverage" max="1" low=".33" high=".7" optimum="1" style="width:200px"></meter> <span id="ThumbnailCoveragePct"></span></li>
         </ul>
 
 
         <hr>
         <details>
             <summary>
-                <h3>Changelog</h3>
+                <h1>Changelog (click to expand)</h1>
             </summary>
 
-            <h4>v4.0 (Oct 2025)</h4>
+            <h4>v4.0 (Jan 2026)</h4>
             <ul>
                 <li>Complete rewrite of the site backend to utilize packages, TGIs, and metadata from sc4pac.</li>
-                <li>Introduction of a public queryable API for use in other tools and applications.</li>
-                <li>Redesign of the website.</li>
+                <li>Introduction of a public queryable API for use in other tools and applications. Separated the site from the API and data backend.</li>
+                <li>Redesigned the website from scratch using Pico CSS.</li>
             </ul>
             <hr>
 

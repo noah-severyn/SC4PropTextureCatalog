@@ -167,8 +167,12 @@ router.get('/dbstats', async (request, response) => {
     SELECT
       (SELECT COUNT(*) FROM Assets) AS Assets,
       (SELECT COUNT(*) FROM Files) AS Files,
+      (SELECT COUNT(*) FROM Packages) AS Packages,
       (SELECT COUNT(*) FROM TGIs) AS TGIs,
-      (SELECT COUNT(*) FROM Packages) AS Packages;`;
+	    (SELECT SUM(TextureCount) FROM Files) As Textures,
+	    (SELECT SUM(PropCount) FROM Files) As Props,
+	    (SELECT SUM(FloraCount) FROM Files) As Flora,
+	    (SELECT SUM(BuildingCount) FROM Files) As Buildings`;
   const params = [];
   try {
     const results = await ExecuteQuery(query, params);
