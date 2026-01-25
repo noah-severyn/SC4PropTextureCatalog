@@ -22,64 +22,42 @@
             <input type="Submit" value="View Pack" />
         </form>
 
-
-        <div class="sticky">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Package Name</th>
-                        <th>Link(s)</th>
-                        <th>Version</th>
-                        <th>Author</th>
-                        <th>Subfolder</th>
-                        <th># Textures</th>
-                        <th># Props</th>
-                        <th># Flora</th>
-                        <th># Models</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="SelectedPackId"></td>
-                        <td id="SelectedPackUrls"></td>
-                        <td id="SelectedPackVersion"></td>
-                        <td id="SelectedPackAuthor"></td>
-                        <td id="SelectedPackSubfolder"></td>
-                        <td id="SelectedPackTextureCount"></td>
-                        <td id="SelectedPackPropCount"></td>
-                        <td id="SelectedPackFloraCount"></td>
-                        <td id="SelectedPackModelCount"></td>
-                        <td>
-                            <input id="BackgroundToggle" type="checkbox" onclick="ToggleDarkThumbnailBg()" />
-                            <label for="BackgroundToggle">Dark background</label>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <hr />
-
-        <table id="TextureTable">
-            <!-- <tbody>
-                @{
-                if (Model.TextureCount > 0) {
-                for (int row = 0; row < Math.Ceiling(((double) Model.TextureCount) / 10); row++) { <tr>
-                    @{
-                    for (int col = 0; col < 12; col++) { try { <td>
-                        <img src="~/img/thumbnails/@(Model.TextureRecords[row*10 + col].TGI.Replace(" 0x", "" ).Replace(", ", " -")).png" height="64px" loading="lazy" />
-                        <p>@(Model.TextureRecords[row * 10 + col].TGI.Substring(Model.TextureRecords[row * 10 + col].TGI.Length - 8))</p>
-                        </td>
-                        }
-                        catch (ArgumentOutOfRangeException) { } //Account for last row where there will be < 12 columns } } </tr>
-                            }
-                            }
-                            }
-            </tbody> -->
+        <table id="PackageHeader" class="sticky">
+            <thead>
+                <tr>
+                    <th>Package Name</th>
+                    <th>Link(s)</th>
+                    <th>Version</th>
+                    <th>Author</th>
+                    <th>Subfolder</th>
+                    <th># Textures</th>
+                    <th># Props</th>
+                    <th># Flora</th>
+                    <th># Models</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="SelectedPackId"></td>
+                    <td id="SelectedPackUrls"></td>
+                    <td id="SelectedPackVersion"></td>
+                    <td id="SelectedPackAuthor"></td>
+                    <td id="SelectedPackSubfolder"></td>
+                    <td id="SelectedPackTextureCount"></td>
+                    <td id="SelectedPackPropCount"></td>
+                    <td id="SelectedPackFloraCount"></td>
+                    <td id="SelectedPackModelCount"></td>
+                    <td>
+                        <input id="BackgroundToggle" type="checkbox" onclick="ToggleDarkThumbnailBg()" />
+                        <label for="BackgroundToggle">Dark background</label>
+                    </td>
+                </tr>
+            </tbody>
         </table>
+        <br>
 
-        <table id="PropTable">
-        </table>
+        <div id="PackageDetails"></div>
     </main>
 
 

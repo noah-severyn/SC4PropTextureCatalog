@@ -2,10 +2,6 @@
 	background-color: #202e39;
 }
 
-a {
-  color: var(--pico-primary)
-}
-
 header {
   width: 100%;
   border-bottom: 1px solid var(--pico-muted-border-color);
@@ -127,3 +123,17 @@ article {
 		border-radius: calc(var(--pico-border-radius) * 2);
 		/* Original: var(--pico-border-radius) */
 	}
+
+
+/* The Pico CSS dropdown also uses the details/summary architecture which we do *not* want to override here */
+details:not(.dropdown) summary {
+	text-decoration: solid underline;
+	font-size: 1.25rem;
+  	color: var(--pico-h4-color);
+  	font-weight: 700;
+  	line-height: 1.25;
+}
+details:not(.dropdown) summary:after {
+	vertical-align: middle;
+	display: inline-block;
+}

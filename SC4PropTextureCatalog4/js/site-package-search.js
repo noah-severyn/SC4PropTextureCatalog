@@ -61,9 +61,9 @@ async function FetchPackages(searchText) {
 
 
 
-function FetchPackageTGIs(searchText) {
+function FetchPackageTGIs(packageName) {
     let query_results = [];
-    const query_text = apiUrl + '/api/package?term=' + encodeURIComponent(searchText) + '?field=';
+    const query_text = apiUrl + '/api/search?term=' + encodeURIComponent(packageName) + '&field=package';
     fetch(query_text)
         .then(response => {
             if (!response.ok) {
@@ -73,86 +73,99 @@ function FetchPackageTGIs(searchText) {
         })
         .then(data => {
             query_results = data;
-            QueryReturn2(searchText, query_results);
+            FillPackageHeader(packageName, query_results);
+            document.getElementById('PackageDetails').replaceChildren();
+            AddTable('Texture', query_results);
+            AddTable('Prop', query_results);
+            AddTable('Flora', query_results);
         });
+
+    function FillPackageHeader(search_text) {
+        let pkg = AllPackages.filter(p => p.Package === search_text)[0];
+
+        const packageLink = document.createElement("a");
+        packageLink.href = "sc4pac:///package?pkg=" + encodeURIComponent(pkg.Package);
+        packageLink.textContent = pkg.Package;
+        document.getElementById('SelectedPackId').replaceChildren(packageLink);
+
+        document.getElementById('SelectedPackUrls').innerHTML = '';
+        pkg.Websites.split(';').forEach(url => {
+            const tagDiv = document.createElement('div');
+            tagDiv.classList.add('tag');
+            const link = document.createElement('a');
+            link.href = url;
+            link.textContent = GetExchangeAbbreviation(url);
+            tagDiv.appendChild(link);
+            document.getElementById('SelectedPackUrls').appendChild(tagDiv);
+        });
+
+        document.getElementById('SelectedPackVersion').textContent = pkg.Version;
+        document.getElementById('SelectedPackAuthor').textContent = pkg.Author;
+        document.getElementById('SelectedPackSubfolder').textContent = pkg.Subfolder;
+        document.getElementById('SelectedPackTextureCount').textContent = pkg.Textures;
+        document.getElementById('SelectedPackPropCount').textContent = pkg.Props;
+        document.getElementById('SelectedPackFloraCount').textContent = pkg.Flora;
+        document.getElementById('SelectedPackModelCount').textContent = pkg.Buildings;
+    }
+
+    function AddTable(category, allData) {
+        const detailsArea = document.getElementById('PackageDetails');
+        const data = allData.filter(item => item.Category === category);
+        if (data.length === 0) {
+            return;
+        }
+        const details = document.createElement('details');
+        const summary = document.createElement('summary');
+        //const h4 = document.createElement('h4');
+        summary.textContent = category + 's (' + data.length + ')';
+        //summary.appendChild(h4);
+        details.appendChild(summary);
+
+        const table = document.createElement('table');
+        data.forEach(item => {
+            const tr = document.createElement("tr");
+            const tgi = document.createElement("td");
+            tgi.textContent = item.TGI;
+            const name = document.createElement("td");
+            name.textContent = item.ExemplarName;
+            tr.appendChild(tgi);
+            tr.appendChild(name);
+            table.appendChild(tr);
+        });
+        details.appendChild(table);
+        detailsArea.appendChild(details);
+
+            // <!-- <tbody>
+            //     @{
+            //     if (Model.TextureCount > 0) {
+            //     for (int row = 0; row < Math.Ceiling(((double) Model.TextureCount) / 10); row++) { <tr>
+            //         @{
+            //         for (int col = 0; col < 12; col++) { try { <td>
+            //             <img src="~/img/thumbnails/@(Model.TextureRecords[row*10 + col].TGI.Replace(" 0x", "" ).Replace(", ", " -")).png" height="64px" loading="lazy" />
+            //             <p>@(Model.TextureRecords[row * 10 + col].TGI.Substring(Model.TextureRecords[row * 10 + col].TGI.Length - 8))</p>
+            //             </td>
+            //             }
+            //             catch (ArgumentOutOfRangeException) { } //Account for last row where there will be < 12 columns } } </tr>
+            //                 }
+            //                 }
+            //                 }
+            // </tbody> -->
+    }
 }
 
 const exchanges = {
-  'simtropolis': 'STEX',
-  'sc4evermore': 'SC4E',
-  'toutsimcities': 'TSC',
-  'capitalsimcity': 'CSC',
-  'hide-inoki': 'HaS',
-  'github': 'GitHub'
+    'simtropolis': 'STEX',
+    'sc4evermore': 'SC4E',
+    'toutsimcities': 'TSC',
+    'capitalsimcity': 'CSC',
+    'hide-inoki': 'HaS',
+    'github': 'GitHub'
 };
 function GetExchangeAbbreviation(url) {
-  for (const key in exchanges) {
-    if (url.includes(key)) {
-      return exchanges[key];
+    for (const key in exchanges) {
+        if (url.includes(key)) {
+            return exchanges[key];
+        }
     }
-  }
-  return 'Other';
-}
-
-function QueryReturn2(search_text, query_results) {
-    let pkg = AllPackages.filter(p => p.Package === search_text)[0];
-    console.log(pkg);
-    
-    const packageLink = document.createElement("a");
-    packageLink.href = "sc4pac:///package?pkg=" + encodeURIComponent(pkg.Package);
-    packageLink.textContent = pkg.Package;
-    document.getElementById('SelectedPackId').appendChild(packageLink);
-
-    document.getElementById('SelectedPackUrls').innerHTML = '';
-    pkg.Websites.split(';').forEach(url => {
-        const tagDiv = document.createElement('div');
-        tagDiv.classList.add('tag');
-        const link = document.createElement('a');
-        link.href = url;
-        link.textContent = GetExchangeAbbreviation(url);
-        tagDiv.appendChild(link);
-        document.getElementById('SelectedPackUrls').appendChild(tagDiv);
-    });
-
-    document.getElementById('SelectedPackVersion').textContent = pkg.Version;
-    document.getElementById('SelectedPackAuthor').textContent = pkg.Author;
-    document.getElementById('SelectedPackSubfolder').textContent = pkg.Subfolder;
-    document.getElementById('SelectedPackTextureCount').textContent = pkg.Textures;
-    document.getElementById('SelectedPackPropCount').textContent = pkg.Props;
-    document.getElementById('SelectedPackFloraCount').textContent = pkg.Flora;
-    document.getElementById('SelectedPackModelCount').textContent = pkg.Buildings;
-
-    // const body = document.getElementById('QueryResultBody');
-    // query_results.forEach(item => {
-    // 	const tr = document.createElement("tr");
-
-    // 	const package = document.createElement("td");
-    // 	package.textContent = "";
-
-    // 	const file = document.createElement("td");
-    // 	file.textContent = item.File;
-
-    // 	const tgi = document.createElement("td");
-    // 	tgi.textContent = item.TGI;
-
-    // 	const category = document.createElement("td");
-    // 	category.textContent = item.Category;
-
-    // 	const author = document.createElement("td");
-    // 	author.textContent = "";
-
-    // 	//const thumb = document.createElement('td');
-    // 	//const img = document.createElement('img');
-    // 	//img.src = "img/7AB50E44-0986135E-1DA4A000.png";
-    // 	//img.style.height = document.getElementById('ThumbnailSize').value;
-    // 	//thumb.appendChild(img);
-
-    // 	const name = document.createElement("td");
-    // 	name.textContent = item.Name;
-
-    // 	tr.append(package, file, tgi, category, author, name);
-    // 	body.appendChild(tr);
-    // });
-
-    // UpdateFilterStates();
+    return 'Other';
 }
