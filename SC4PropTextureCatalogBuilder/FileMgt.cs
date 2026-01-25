@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Net;
 using Force.Crc32;
-using static SC4PropTextureCatalogBuilder.SC4Pac;
 
 namespace SC4PropTextureCatalogBuilder {
     /// <summary>
@@ -36,8 +35,7 @@ namespace SC4PropTextureCatalogBuilder {
             string extension = Path.GetExtension(installerPath);
             if (extension == ".exe") {
                 ExecuteCommand("C:\\Program Files (x86)\\SC4 Utilities\\cicdec\\cicdec.exe", $"cicdec.exe \"{installerPath}\"");
-            } 
-            else if (extension == ".jar") {
+            } else if (extension == ".jar") {
                 var newFolder = installerPath.Replace(".jar", "");
                 ExecuteCommand("C:\\Program Files\\7-Zip\\7z.exe", $"x \"{installerPath}\" -o\"{newFolder}\" -y");
             }

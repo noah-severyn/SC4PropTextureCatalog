@@ -291,3 +291,4 @@ __pycache__/
 
 /SC4PropTextureCatalog4/test
 /SC4PropTextureCatalogBuilder/data
+SC4PropTextureCatalogBuilder/Credentials.cs
