@@ -137,3 +137,10 @@ details:not(.dropdown) summary:after {
 	vertical-align: middle;
 	display: inline-block;
 }
+
+/* Fix slightly mismatched element heights */
+#PackageForm input[type="submit"] {
+    height: auto;
+    padding: 0.5rem 2rem;
+    flex-grow: 0;
+}
