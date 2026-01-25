@@ -35,13 +35,13 @@ router.get('/search', async (request, response) => {
   const wheres = [];
   let where = '';
   const fieldMap = { 
-    assetid: 'ci.AssetId',
-    file: 'ci.File',
-    tgi: 'ci.TGI',
-    category: 'cat.Name',
-    name: 'ci.Name',
-    package: 'pkg.PackageId',
-    author: 'pkg.Author'
+    package: 'Packages.Name',
+    author: 'Packages.Author',
+    subfolder: 'Packages.Subfolder',
+    file: 'Files.Name',
+    tgi: 'TGIs.TGI',
+    category: 'TGICategories.Name',
+    name: 'TGIs.Name',
   };
 
   for (const [key, column] of Object.entries(fieldMap)) {
@@ -71,25 +71,26 @@ router.get('/search', async (request, response) => {
       return response.status(400).json({ error: 'Search term must be 3 characters minimum' });
     }
     const like = `%${term}%`;
-    where = `${fieldMap.assetid} LIKE ? ESCAPE '\\' 
+    where = `${fieldMap.package} LIKE ? ESCAPE '\\' 
+      OR ${fieldMap.author} LIKE ? ESCAPE '\\' 
       OR ${fieldMap.file} LIKE ? ESCAPE '\\' 
       OR ${fieldMap.tgi} LIKE ? ESCAPE '\\' 
-      OR ${fieldMap.category} LIKE ? ESCAPE '\\' 
-      OR ${fieldMap.name} LIKE ? ESCAPE '\\'
-      OR ${fieldMap.package} LIKE ? ESCAPE '\\'
-      OR ${fieldMap.author} LIKE ? ESCAPE '\\'`;
-    params.push(like, like, like, like, like, like, like);
+      OR ${fieldMap.category} LIKE ? ESCAPE '\\'
+      OR ${fieldMap.name} LIKE ? ESCAPE '\\'`;
+    params.push(like, like, like, like, like, like);
   } else {
     where = wheres.join('\n    AND ');
   }
 
   const query = `
-    SELECT ci.ExchangeId, ci.AssetId, ci.File, ci.TGI, cat.Name AS Category, ci.Name, pkg.PackageId, pkg.Author
-    FROM CatalogItems ci
-    LEFT JOIN TGICategories cat ON ci.Category = cat.Category
-    LEFT JOIN Packages pkg ON pkg.ExchangeId = ci.ExchangeId AND pkg.AssetId = ci.AssetId
+    SELECT Packages.Name Package, Packages.Subfolder, Packages.Websites, Packages.Author, Files.Name FileName, TGIs.TGI, TGICategories.Name Category, TGIs.Name ExemplarName
+    FROM Packages
+    LEFT JOIN PackageFiles ON PackageFiles.PackageId = Packages.Id
+    LEFT JOIN Files ON Files.Id = PackageFiles.FileId
+    LEFT JOIN TGIs ON TGIs.FileId = Files.Id
+    LEFT JOIN TGICategories on TGICategories.Id = TGIs.Category
     WHERE ${where}
-    LIMIT 10000`;
+    LIMIT 2000`;
   console.log(query);
   try {
     const results = await ExecuteQuery(query, params);
@@ -111,10 +112,13 @@ router.get('/iid', async (request, response) => {
   }
 
   const query = `
-    SELECT CatalogItems.AssetId, CatalogItems.File, substr(CatalogItems.TGI, -8) AS Instance, CatalogItems.TGI, TGICategories.Name AS Category, CatalogItems.Name
-    FROM CatalogItems
-    LEFT JOIN TGICategories ON CatalogItems.Category = TGICategories.Category
-    WHERE substr(CatalogItems.TGI, -8) LIKE ?`;
+    SELECT Packages.Name Package, TGIs.TGI, TGICategories.Name Category, TGIs.Name ExemplarName
+    FROM Packages
+    LEFT JOIN PackageFiles ON PackageFiles.PackageId = Packages.Id
+    LEFT JOIN Files ON Files.Id = PackageFiles.FileId
+    LEFT JOIN TGIs ON TGIs.FileId = Files.Id
+    LEFT JOIN TGICategories on TGICategories.Id = TGIs.Category
+    WHERE substr(TGIs.TGI, -8) LIKE ?`;
   const like = `%${iid}%`;
   try {
     const results = await ExecuteQuery(query, [like]);
@@ -125,23 +129,23 @@ router.get('/iid', async (request, response) => {
 });
 
 
-// GET /api/assetid?value=...
-router.get('/assetid', async (request, response) => {
-  const assetId = request.query.value || '';
-  const query = `
-    SELECT *
-    FROM Assets
-    WHERE AssetId = ?`;
-  try {
-    const results = await ExecuteQuery(query, [assetId]);
-    response.json(results);
-  } catch (err) {
-    response.status(500).json({ error: 'Database error', details: err.message });
-  }
-});
+// // GET /api/assetid?value=...
+// router.get('/assetid', async (request, response) => {
+//   const assetId = request.query.value || '';
+//   const query = `
+//     SELECT *
+//     FROM Assets
+//     WHERE AssetId = ?`;
+//   try {
+//     const results = await ExecuteQuery(query, [assetId]);
+//     response.json(results);
+//   } catch (err) {
+//     response.status(500).json({ error: 'Database error', details: err.message });
+//   }
+// });
 
 
-// GET /api/packages
+// GET /api/packages?term=...
 router.get('/package', async (request, response) => {
   const searchText = CleanQueryText(request.query.term || '');
 
@@ -151,7 +155,15 @@ router.get('/package', async (request, response) => {
     return response.status(400).json({ error: 'search term must be 3 characters minimum' });
   }
 
-  const query = (searchText !== '') ? `SELECT * FROM Packages WHERE PackageId LIKE ? ESCAPE '\\'` : `SELECT * FROM Packages`;
+  const query = `
+    SELECT Packages.Name Package, Packages.Version, Packages.Subfolder, Packages.Websites, Packages.Author, SUM(Files.TextureCount) Textures, SUM(Files.PropCount) Props, SUM(Files.FloraCount) Flora, SUM(Files.BuildingCount) Buildings
+    FROM Packages
+    LEFT JOIN PackageFiles ON PackageFiles.PackageId = Packages.Id
+    LEFT JOIN Files ON Files.Id = PackageFiles.FileId
+    ${searchText !== '' ? 'WHERE Packages.Name LIKE ?' : ''}
+    GROUP BY Packages.Name
+    `;
+  console.log(query);
   const params = (searchText !== '') ? [`%${searchText}%`] : []
   try {
     const results = await ExecuteQuery(query, params);
