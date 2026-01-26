@@ -31,6 +31,35 @@ function CleanQueryText(input) {
 
 // GET /api/search?term=...
 router.get('/search', async (request, response) => {
+  // #swagger.summary = 'Search for TGIs via multiple fields'
+  // #swagger.description = 'Primary search utility. Search across packages, files, TGIs, and exemplar names. Supports field-specific searches or a general search across all fields. Returns up to 2000 results.'
+  /* #swagger.parameters['term'] = {
+      description: 'General search term applied to all searchable fields (used when no specific field is provided)'
+  } */
+  /* #swagger.parameters['package'] = {
+      description: 'sc4pac package identifier in the format group:name'
+  } */
+  /* #swagger.parameters['author'] = {
+      description: 'Package author'
+  } */
+  /* #swagger.parameters['subfolder'] = {
+      description: 'Package subfolder'
+  } */
+  /* #swagger.parameters['file'] = {
+      description: 'File name within package'
+  } */
+  /* #swagger.parameters['tgi'] = {
+      description: 'TGI'
+  } */
+  /* #swagger.parameters['category'] = {
+      description: 'TGI category'
+  } */
+  /* #swagger.parameters['name'] = {
+      description: 'Exemplar or item name'
+  } */
+  /* #swagger.responses[400] = {
+      description: 'Bad request - search term too long or too short, or invalid field specified'
+  } */
   const params = [];
   const wheres = [];
   let where = '';
@@ -44,11 +73,9 @@ router.get('/search', async (request, response) => {
     name: 'TGIs.Name',
   };
 
-  for (const [key, column] of Object.entries(fieldMap)) {
-    console.log(request.query[key]);
+  for (const [key, column] of Object.entries(fieldMap)) {  
     if (request.query[key]) {
       const term = CleanQueryText(request.query[key]);
-      // console.log(`key:${key}, term:${term}`);
       if (term.length > 40) {
         return response.status(400).json({ error: 'Search term is too long' });
       } else if (term.length < 3) {
@@ -91,7 +118,6 @@ router.get('/search', async (request, response) => {
     LEFT JOIN TGICategories on TGICategories.Id = TGIs.Category
     WHERE ${where}
     LIMIT 2000`;
-  console.log(query);
   try {
     const results = await ExecuteQuery(query, params);
     response.json(results);
@@ -103,6 +129,14 @@ router.get('/search', async (request, response) => {
 
 // GET /api/iid?value=...
 router.get('/iid', async (request, response) => {
+  // #swagger.summary = 'Search for TGIs via IID'
+  // #swagger.description = 'Search for resources by Instance ID (IID). Searches the last 8 characters of TGI identifiers to find matching instance IDs.'
+  /* #swagger.parameters['value'] = {
+      description: 'IID to search for. Values with and without a preceding 0x are supported.'
+  } */
+  /* #swagger.responses[400] = {
+      description: 'Bad request - IID is blank or too long'
+  } */
   const iid = CleanQueryText(request.query.value);
 
   if (iid === '') {
@@ -147,6 +181,14 @@ router.get('/iid', async (request, response) => {
 
 // GET /api/packages?term=...
 router.get('/package', async (request, response) => {
+  // #swagger.summary = 'Search packages'
+  // #swagger.description = 'Search for packages and retrieve aggregate statistics. If no search term is provided, all packages are returned with their statistics.'
+  /* #swagger.parameters['term'] = {
+      description: 'sc4pac package id in the group:name format. If omitted, all packages are returned.'
+  } */
+  /* #swagger.responses[400] = {
+      description: 'Bad request - Search term too long or too short'
+  } */
   const searchText = CleanQueryText(request.query.term || '');
 
   if (searchText.length > 50) {
@@ -163,7 +205,6 @@ router.get('/package', async (request, response) => {
     ${searchText !== '' ? 'WHERE Packages.Name LIKE ?' : ''}
     GROUP BY Packages.Name
     `;
-  console.log(query);
   const params = (searchText !== '') ? [`%${searchText}%`] : []
   try {
     const results = await ExecuteQuery(query, params);
@@ -175,6 +216,8 @@ router.get('/package', async (request, response) => {
 
 // GET /api/dbstats
 router.get('/dbstats', async (request, response) => {
+  // #swagger.summary = 'Get database statistics'
+  // #swagger.description = 'Retrieve database statistics about the total count of items in each table.'
   const query = `
     SELECT
       (SELECT COUNT(*) FROM Assets) AS Assets,

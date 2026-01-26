@@ -1,0 +1,146 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "SC4 Prop Texture Catalog API",
+    "description": "An API for the <a href=\"https://community.simtropolis.com/forums/topic/758501-simcity-4-prop-and-texture-catalogue-by-stex-custodian\">SimCity4 Prop & Texture Catalog</a>. Github: https://github.com/noah-severyn/SC4PropTextureCatalog",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/api/search": {
+      "get": {
+        "summary": "Search for TGIs via multiple fields",
+        "description": "Primary search utility. Search across packages, files, TGIs, and exemplar names. Supports field-specific searches or a general search across all fields. Returns up to 2000 results.",
+        "parameters": [
+          {
+            "name": "term",
+            "description": "General search term applied to all searchable fields (used when no specific field is provided)",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "package",
+            "description": "sc4pac package identifier in the format group:name",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "author",
+            "description": "Package author",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "subfolder",
+            "description": "Package subfolder",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "file",
+            "description": "File name within package",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "tgi",
+            "description": "TGI",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "category",
+            "description": "TGI category",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "description": "Exemplar or item name",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad request - search term too long or too short, or invalid field specified"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/iid": {
+      "get": {
+        "summary": "Search for TGIs via IID",
+        "description": "Search for resources by Instance ID (IID). Searches the last 8 characters of TGI identifiers to find matching instance IDs.",
+        "parameters": [
+          {
+            "name": "value",
+            "description": "IID to search for. Values with and without a preceding 0x are supported.",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad request - IID is blank or too long"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/package": {
+      "get": {
+        "summary": "Search packages",
+        "description": "Search for packages and retrieve aggregate statistics. If no search term is provided, all packages are returned with their statistics.",
+        "parameters": [
+          {
+            "name": "term",
+            "description": "sc4pac package id in the group:name format. If omitted, all packages are returned.",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad request - Search term too long or too short"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/dbstats": {
+      "get": {
+        "summary": "Get database statistics",
+        "description": "Retrieve database statistics about the total count of items in each table.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}

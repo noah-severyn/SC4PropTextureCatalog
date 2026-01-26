@@ -26,6 +26,7 @@ function AddHeader() {
 		{ name: 'Home', link: '/SC4PropTextureCatalog4/Index.html' },
 		{ name: 'View a Pack', link: '/SC4PropTextureCatalog4/ViewPack.html' },
 		{ name: 'Plugin Pack Ids', link: '/SC4PropTextureCatalog4/PluginPackIds.html' },
+		{ name: 'API Docs 🔗', link: 'https://sc4proptexturecatalog-production.up.railway.app/docs/' },
 		{ name: 'About', link: '/SC4PropTextureCatalog4/About.html' }
 	];
 	pages.forEach(page => {
