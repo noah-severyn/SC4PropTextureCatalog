@@ -37,15 +37,17 @@ namespace SC4PropTextureCatalogBuilder {
         /// Uploads all files from the specified local folder to the remote storage, skipping files that already exist
         /// in the destination.
         /// </summary>
-        public async Task UploadFolderAsync(string thumbnailFolder) {
+        /// <param name="thumbnailFolder">File folder containing the thumbnail images to upload.</param>
+        /// <param name="filePrefix">Prefix to add to each file name, roughly equivalent to a folder name.</param>
+        public async Task UploadFolderAsync(string thumbnailFolder, string filePrefix) {
             ExistingThumbs = await LoadExistingKeysAsync();
             Console.WriteLine($"  > found {ExistingThumbs.Count} thumbnails in R2 already");
 
             var files = Directory.GetFiles(thumbnailFolder, "*", SearchOption.TopDirectoryOnly);
             foreach (var file in files) {
-                string fileName = Path.GetFileName(file);
+                string fileName = filePrefix + "/" + Path.GetFileName(file);
                 if (ExistingThumbs.Contains(fileName)) {
-                    Console.WriteLine($"  > skipped {fileName} (already exists)");
+                    Console.WriteLine($"  > skipping {fileName} (already exists)");
                     continue;
                 }
                 await UploadFileAsync(file, fileName);
@@ -55,11 +57,13 @@ namespace SC4PropTextureCatalogBuilder {
 
         private async Task UploadFileAsync(string localPath, string key) {
             Console.WriteLine($"  > uploading {key}");
+            await using var fileStream = File.OpenRead(localPath);
             var put = new PutObjectRequest {
                 BucketName = _bucket,
                 Key = key,
-                FilePath = localPath,
-                ContentType = "image/png"
+                InputStream = fileStream,
+                ContentType = "image/png",
+                DisablePayloadSigning = true
             };
             await _client.PutObjectAsync(put);
         }

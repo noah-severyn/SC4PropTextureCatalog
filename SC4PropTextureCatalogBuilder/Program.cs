@@ -53,9 +53,9 @@ if (PromptYesNo("Copy database to API path?")) {
 }
 if (PromptYesNo("Upload thumbnails to Cloudflare R2?")) {
     ThumbnailUploader r2 = new ThumbnailUploader();
-    await r2.UploadFolderAsync("C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalog\\wwwroot\\img\\thumbnails");
+    await r2.UploadFolderAsync("C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalog\\wwwroot\\img\\thumbnails", "textures");
 }
-if (PromptYesNo("Output errors to JSON") {
+if (PromptYesNo("Output errors to JSON")) {
     string json = JsonSerializer.Serialize(db.Errors);
     File.WriteAllText(Path.Combine(dataPath, $"Errors-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.json"), json);
 }
