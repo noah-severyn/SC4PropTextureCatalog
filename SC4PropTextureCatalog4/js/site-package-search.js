@@ -122,6 +122,12 @@ function FetchPackageTGIs(packageName) {
         summary.textContent = category + ' (' + data.length + ')';
         details.appendChild(summary);
 
+        if (category === 'Textures') {
+            const msg = document.createElement('p');
+            msg.textContent = "Tip: If a thumbnail is difficult to see, try toggling the site theme to light or dark mode.";
+            details.appendChild(msg);
+        }
+        
         const flexDiv = document.createElement('div');
         flexDiv.id = category;
         flexDiv.classList.add('thumbnail-grid');
