@@ -75,8 +75,8 @@ function FetchPackageTGIs(packageName) {
             query_results = data;
             FillPackageHeader(packageName, query_results);
             document.getElementById('PackageDetails').replaceChildren();
-            AddTable('Texture', query_results);
-            AddTable('Prop', query_results);
+            AddTable('Textures', query_results);
+            AddTable('Props', query_results);
             AddTable('Flora', query_results);
         });
 
@@ -109,47 +109,39 @@ function FetchPackageTGIs(packageName) {
     }
 
     function AddTable(category, allData) {
-        const detailsArea = document.getElementById('PackageDetails');
-        const data = allData.filter(item => item.Category === category);
+        const detailsContainer = document.getElementById('PackageDetails');
+        const bucketFolder = category.toLowerCase();
+        const dbCategory = category.replace(/s$/, '');
+
+        const data = allData.filter(item => item.Category === dbCategory);
         if (data.length === 0) {
             return;
         }
         const details = document.createElement('details');
         const summary = document.createElement('summary');
-        //const h4 = document.createElement('h4');
-        summary.textContent = category + 's (' + data.length + ')';
-        //summary.appendChild(h4);
+        summary.textContent = category + ' (' + data.length + ')';
         details.appendChild(summary);
 
-        const table = document.createElement('table');
-        data.forEach(item => {
-            const tr = document.createElement("tr");
-            const tgi = document.createElement("td");
-            tgi.textContent = item.TGI;
-            const name = document.createElement("td");
-            name.textContent = item.ExemplarName;
-            tr.appendChild(tgi);
-            tr.appendChild(name);
-            table.appendChild(tr);
-        });
-        details.appendChild(table);
-        detailsArea.appendChild(details);
+        const flexDiv = document.createElement('div');
+        flexDiv.id = category;
+        flexDiv.classList.add('thumbnail-grid');
 
-            // <!-- <tbody>
-            //     @{
-            //     if (Model.TextureCount > 0) {
-            //     for (int row = 0; row < Math.Ceiling(((double) Model.TextureCount) / 10); row++) { <tr>
-            //         @{
-            //         for (int col = 0; col < 12; col++) { try { <td>
-            //             <img src="~/img/thumbnails/@(Model.TextureRecords[row*10 + col].TGI.Replace(" 0x", "" ).Replace(", ", " -")).png" height="64px" loading="lazy" />
-            //             <p>@(Model.TextureRecords[row * 10 + col].TGI.Substring(Model.TextureRecords[row * 10 + col].TGI.Length - 8))</p>
-            //             </td>
-            //             }
-            //             catch (ArgumentOutOfRangeException) { } //Account for last row where there will be < 12 columns } } </tr>
-            //                 }
-            //                 }
-            //                 }
-            // </tbody> -->
+        data.forEach(item => {
+            //Pico tooltips only work with inline elements, so we have to wrap the img in a p. Dumb.
+            const p = document.createElement("p");
+            p.setAttribute('data-tooltip', item.TGI + '\n' + item.ExemplarName);
+
+            const img = document.createElement("img");
+            img.src = `https://sc4proptexturecatalog.net/${bucketFolder}/${item.TGI.replaceAll('0x', '').replaceAll(', ', '-').toUpperCase()}.png`;
+            img.height = 64;
+            img.loading = 'lazy';
+            img.classList.add('thumbnail');
+
+            p.appendChild(img);
+            flexDiv.appendChild(p);
+        });
+        details.appendChild(flexDiv);
+        detailsContainer.appendChild(details);
     }
 }
 

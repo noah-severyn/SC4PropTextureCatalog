@@ -124,6 +124,14 @@ article {
 		/* Original: var(--pico-border-radius) */
 	}
 
+.thumbnail-grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+.thumbnail-grid .thumbnail {
+	margin: 5px;
+}
+
 
 /* The Pico CSS dropdown also uses the details/summary architecture which we do *not* want to override here */
 details:not(.dropdown) summary {
@@ -143,4 +151,10 @@ details:not(.dropdown) summary:after {
     height: auto;
     padding: 0.5rem 2rem;
     flex-grow: 0;
+}
+
+/* Allow multiline tooltips split on '\n' */
+[data-tooltip]:before {
+  display: inline-block;
+	white-space: pre;
 }
