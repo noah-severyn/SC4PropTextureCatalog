@@ -19,6 +19,12 @@ It is possible to run the catalog offline with a little bit of know-how, though 
 1. Start the API server via NPM. Navigate to `..\SC4PropTextureCatalog\SC4PropTextureCatalogAPI\` in CMD or Powershell and run `npm start app.js`. If this is the first time starting the server, run `npm install` to install the required dependencies. 
 1. Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to shut down the server, and simply close the website tab to shut off the live preview.
 
+## Project Structure
+- **SC4PropTextureCatalog4** - This is the main website, made with HTML and JavaScript, using Pico CSS
+- **SC4PropTextureCatalogAPI** - This is the Express API and where the main SQLite database is stored. See `\data\Catalog.db`. Use this file directly if you'd like to run your own SQL queries against the dataset.
+- **SC4PropTextureCatalogBuilder** - This project houses the C# scripts and programs used to pase the sc4pac channels for package and asset metadata, parse the sc4pac cache for files and TGIs, and programmatically build the database with this information.
+- The thumbnails are hosted externally in a Cloudflare R2 bucket, made publicly accessible at `https://sc4proptexturecatalog.net`
+
 
 ## I found a problem! / I have a suggestion!
 Found a bug? Am I missing a prop or texture pack? Have an idea for additional sorting/filtering categories? Is there a better way to make the Catalog more interactive or useful? I would very much like to hear from you! Visit the [SimCity 4 Prop and Texture Catalog](https://community.simtropolis.com/forums/topic/758501-simcity-4-prop-and-texture-catalogue-by-stex-custodian/) thread or open an issue in Github.
