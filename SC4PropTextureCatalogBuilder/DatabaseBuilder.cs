@@ -245,6 +245,11 @@ namespace SC4PropTextureCatalogBuilder {
         /// <remarks>The <c>Assets</c>, <c>Files</c>, and <c>Packages</c> tables should be populated before executing this function. Any errors encountered are added to <see cref="Errors"/>.</remarks>
         public void FillPackageFileTable(List<SC4Pac.Package> packages) {
             List<PackageFileItem> items = [];
+            //Must use the items from the db instead of the package or asset dictionaries because we need to get the autoincremented table ids
+            var assetsByName = _db.Query<AssetItem>($"SELECT * FROM Assets").ToDictionary(a => a.Name, a => a.Id);
+            var fileItems = _db.Query<FileItem>($"SELECT * FROM Files").ToDictionary(f => f.AssetId + "|" + f.Name, f => f.Id);
+            var pkgsByName = _db.Query<PackageItem>($"SELECT * FROM Packages").ToDictionary(p => p.Name, p => p.Id);
+
             int? pkgId;
             int? assetId;
             int? fileId;

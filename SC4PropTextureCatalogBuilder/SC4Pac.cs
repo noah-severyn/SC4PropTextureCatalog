@@ -110,7 +110,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// </summary>
         internal static HashSet<string> ListCacheFiles(string extractFolder) {
             Console.WriteLine("  > fetching all SC4 files in extract location ...");
-            return Directory.GetFiles(extractFolder, "*", SearchOption.AllDirectories)
+            return Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories)
                 .AsParallel()
                 .Where(p => p.IsDBPF())
                 .ToHashSet();
