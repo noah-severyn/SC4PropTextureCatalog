@@ -58,11 +58,11 @@ namespace SC4PropTextureCatalogBuilder {
         /// <summary>
         /// Parse the channel JSON files to a list of packages and assets.
         /// </summary>
-        /// <returns>A list of <see cref="Package"/> and a list of <see cref="Asset"/> found</returns>
-        internal static (List<Package>, List<Asset>) ParseChannelJson(Dictionary<string, ChannelPaths> channels, ChannelOptions options) {
+        /// <returns>A dictionary of <see cref="Package"/>s keyed by the sc4pac package id, and a dictionary of <see cref="Asset"/>s, keyed by the sc4pac asset id.</returns>
+        internal static (Dictionary<string, Package>, Dictionary<string, Asset>) ParseChannelJson(Dictionary<string, ChannelPaths> channels, ChannelOptions options) {
             string json;
-            List<Package> packages = [];
-            List<Asset> assets = [];
+            Dictionary<string, Package> packages = [];
+            Dictionary<string, Asset> assets = [];
             var opt = new JsonSerializerOptions {
                 PropertyNameCaseInsensitive = true
             };
@@ -86,10 +86,10 @@ namespace SC4PropTextureCatalogBuilder {
                 json = File.ReadAllText(path);
                 if (path.Contains("sc4pacAsset")) {
                     var asset = JsonSerializer.Deserialize<Asset>(json, opt) ?? new Asset();
-                    assets.Add(asset);
+                    _ = assets.TryAdd(asset.AssetId, asset);
                 } else {
                     var pkg = JsonSerializer.Deserialize<Package>(json, opt) ?? new Package();
-                    packages.Add(pkg);
+                    _ = packages.TryAdd(pkg.Group + ":" + pkg.Name, pkg);
                 }
             }
 
@@ -120,15 +120,11 @@ namespace SC4PropTextureCatalogBuilder {
         /// Iterate each <see cref="Package"/> and examine tne the <c>include</c> and <c>exclude</c> properties of each <see cref="Asset"/> to determine list of referenced cache files. Save this information to <see cref="Package.LocalFiles"/>.
         /// </summary>
         /// <returns>A list of <see cref="Asset.AssetId"/>s which are referenced in a package but missing from the cache.</returns>
-        public static List<string> ExtractFilesFromPackages(HashSet<string> sc4Files, ref List<Package> packages, List<Asset> assets) {
-            Console.WriteLine("  > extracting files from json ...");
-            var assetDict = new Dictionary<string, Asset>(); // Convert to dictionary for O(1) lookups instead of O(n) List.Find()
-            foreach (var a in assets) {
-                assetDict.TryAdd(a.AssetId, a);
-            }
+        public static List<string> ExtractFilesFromPackages(HashSet<string> sc4Files, ref Dictionary<string, Package> packages, Dictionary<string, Asset> assets) {
+            Console.WriteLine("  > extracting referenced files from sc4pac packages ...");
             
             HashSet<string> missingAssets = new HashSet<string>();
-            foreach (var pkg in packages) {
+            foreach (var pkg in packages.Values) {
                 //Extract the list of PackageAsset(s) out of the package
                 var pkgAssets =
                     (pkg.Assets ?? Enumerable.Empty<PackageAsset>())
@@ -138,10 +134,10 @@ namespace SC4PropTextureCatalogBuilder {
                             .SelectMany(v => v.Assets ?? Enumerable.Empty<PackageAsset>())
                     );
 
-                List<PkgFileItem> result = [];
+                HashSet<PkgFileItem> result = []; //Use a Hashset to enforce unique files in case a duplicate files is added to an asset
                 string pkgName = pkg.Group + ":" + pkg.Name;
                 foreach (var pkgAsset in pkgAssets) {
-                    if (assetDict.TryGetValue(pkgAsset.AssetId, out var asset)) {
+                    if (assets.TryGetValue(pkgAsset.AssetId, out var asset)) {
                         var files = ResolveAssetFiles(sc4Files, asset, pkgAsset.Include ?? [], pkgAsset.Exclude ?? []);
                         foreach (var file in files) {
                             result.Add(new PkgFileItem(pkgName, asset.AssetId, file));
@@ -150,7 +146,7 @@ namespace SC4PropTextureCatalogBuilder {
                         missingAssets.Add(pkgAsset.AssetId);
                     }
                 }
-                pkg.LocalFiles = result;
+                pkg.LocalFiles = result.ToList();
             }
             return missingAssets.ToList();
         }

@@ -183,7 +183,7 @@ namespace SC4PropTextureCatalogBuilder {
                 }
             }
 
-            _db.Execute($"UPDATE Files SET TextureCount = {textureCnt}, PropCount = {propCnt}, FloraCount = {floraCnt}, BuildingCount = {buildingCnt} WHERE Id = {fi.Id}");
+            _db.Execute($"UPDATE Files SET TextureCount = ?, PropCount = ?, FloraCount = ?, BuildingCount = ? WHERE Id = ?", textureCnt, propCnt, floraCnt, buildingCnt, fi.Id);
             return items;
         }
 
@@ -193,11 +193,11 @@ namespace SC4PropTextureCatalogBuilder {
         /// Fills the <c>Assets</c> table with data parsed from sc4pac JSON assets. All files inside of this asset are then added to the <c>Files</c> table.
         /// </summary>
         /// <param name="assets">List of sc4pac JSON assets</param>
-        public void FillAssetAndFileTable(List<SC4Pac.Asset> assets) {
-            List<AssetItem> items = [];
-            List<FileItem> fileItems = [];
-            int assetKey = 1;
-            foreach (var asset in assets) {
+        public void FillAssetAndFileTable(Dictionary<string, SC4Pac.Asset> assets) {
+            Dictionary<string, AssetItem> items = [];
+            Dictionary<string, FileItem> fileItems = [];
+            int assetKey = 1; //SQLite auto indexes are 1-based
+            foreach (var asset in assets.Values) {
                 int exchId = FileMgt.GetExchangeId(asset.Url);
                 string cleanedUrl = FileMgt.CleanUrl(asset.Url);
                 string folder = FileMgt.HttpToCachePath(asset.Url) + "\\";
@@ -208,18 +208,19 @@ namespace SC4PropTextureCatalogBuilder {
                     continue;
                 }
                 foreach (var file in files) {
-                    fileItems.Add(new FileItem(assetKey, Path.GetFileName(file)));
+                    var fileName = Path.GetFileName(file);
+                    var itemKey = assetKey + "|" + fileName;
+                    fileItems.TryAdd(itemKey, new FileItem(assetKey, fileName));
                 }
-                _db.RunInTransaction(() => {
-                    _db.InsertAll(fileItems);
-                });
 
-                items.Add(new AssetItem(exchId, asset.AssetId, asset.Version, asset.LastModified, cleanedUrl));
+                items.TryAdd(asset.AssetId, new AssetItem(exchId, asset.AssetId, asset.Version, asset.LastModified, cleanedUrl));
                 assetKey++;
-                fileItems.Clear();
             }
             _db.RunInTransaction(() => {
-                _db.InsertAll(items);
+                _db.InsertAll(items.Values);
+            });
+            _db.RunInTransaction(() => {
+                _db.InsertAll(fileItems.Values);
             });
         }
 
@@ -227,9 +228,9 @@ namespace SC4PropTextureCatalogBuilder {
         /// Fills the <c>Package</c> and <c>PackageFile</c> tables.
         /// </summary>
         /// <remarks>The <c>Assets</c> and <c>Files</c> tables should be populated before executing this function.</remarks>
-        public void FillPackageTable(List<SC4Pac.Package> packages) {
+        public void FillPackageTable(Dictionary<string, SC4Pac.Package> packages) {
             List<PackageItem> items = [];
-            foreach (var pkg in packages) {
+            foreach (var pkg in packages.Values) {
                 List<string> websites = pkg.Info.Websites ?? (pkg.Info.Website is not null ? new List<string> { pkg.Info.Website } : []);
                 items.Add(new PackageItem(pkg.Group + ":" + pkg.Name, pkg.Version, pkg.Subfolder, websites, pkg.Info.Author));
             }
@@ -243,7 +244,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// Fills the <c>PackageFile</c> table.
         /// </summary>
         /// <remarks>The <c>Assets</c>, <c>Files</c>, and <c>Packages</c> tables should be populated before executing this function. Any errors encountered are added to <see cref="Errors"/>.</remarks>
-        public void FillPackageFileTable(List<SC4Pac.Package> packages) {
+        public void FillPackageFileTable(Dictionary<string, SC4Pac.Package> packages) {
             List<PackageFileItem> items = [];
             //Must use the items from the db instead of the package or asset dictionaries because we need to get the autoincremented table ids
             var assetsByName = _db.Query<AssetItem>($"SELECT * FROM Assets").ToDictionary(a => a.Name, a => a.Id);
@@ -253,15 +254,16 @@ namespace SC4PropTextureCatalogBuilder {
             int? pkgId;
             int? assetId;
             int? fileId;
-            foreach (var pkg in packages) {
+            foreach (var p in packages) {
+                var pkg = p.Value;
                 if (pkg.LocalFiles.Count == 0) {
-                    Errors.Add(new DBPFError(string.Empty, null, "Assets for package " + pkg.Group + ":" + pkg.Name + " were not found"));
+                    Errors.Add(new DBPFError(string.Empty, null, "Assets for package " + p.Key + " were not found"));
                     continue;
                 }
                 foreach (var pkgFile in pkg.LocalFiles) {
-                    assetId = GetAsset(name: pkgFile.AssetName)?.Id;
-                    fileId = GetFile(assetId, pkgFile.FilePath)?.Id;
-                    pkgId = GetPackage(pkgFile.PackageName)?.Id;
+                    assetId = assetsByName.GetValueOrDefault(pkgFile.AssetName);
+                    fileId = fileItems.GetValueOrDefault(assetId + "|" + pkgFile.FilePath);
+                    pkgId = pkgsByName.GetValueOrDefault(pkgFile.PackageName);
 
                     if (assetId is null) {
                         Errors.Add(new DBPFError(pkgFile.FilePath, null, "Could not find in db asset " + pkgFile.AssetName));

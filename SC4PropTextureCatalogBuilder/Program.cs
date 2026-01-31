@@ -36,7 +36,7 @@ var sc4Files = SC4Pac.ListCacheFiles(extractLocation);
 var missingAssets = SC4Pac.ExtractFilesFromPackages(sc4Files, ref packages, assets);
 
 DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb, sc4Files);
-if (PromptYesNo("Fill Asset table?")) {
+if (PromptYesNo("Fill Assets & Files table?")) {
     db.FillAssetAndFileTable(assets);
 }
 if (PromptYesNo("Fill TGI table?")) {

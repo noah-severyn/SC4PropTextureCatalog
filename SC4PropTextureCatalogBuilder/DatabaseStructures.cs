@@ -44,7 +44,7 @@ namespace SC4PropTextureCatalogBuilder {
             /// <summary>
             /// sc4pac package identifier in the format <c>group:name</c>.
             /// </summary>
-            [NotNull]
+            [NotNull, Unique]
             public string Name { get; set; }
 
             public string Version { get; set; }
@@ -169,7 +169,10 @@ namespace SC4PropTextureCatalogBuilder {
             [NotNull]
             public int ExchangeId { get; set; }
 
-            [NotNull]
+            /// <summary>
+            /// sc4pac asset identifier.
+            /// </summary>
+            [NotNull, Unique]
             public string Name { get; set; } = string.Empty;
 
             public string Version { get; set; } = string.Empty;
