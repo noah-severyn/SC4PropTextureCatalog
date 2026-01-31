@@ -200,7 +200,7 @@ namespace SC4PropTextureCatalogBuilder {
             foreach (var asset in assets) {
                 int exchId = FileMgt.GetExchangeId(asset.Url);
                 string cleanedUrl = FileMgt.CleanUrl(asset.Url);
-                string folder = FileMgt.HttpToCachePath(asset.Url);
+                string folder = FileMgt.HttpToCachePath(asset.Url) + "\\";
                 
                 var files = _sc4files.Where(f => f.Contains(folder));
                 if (!files.Any()) {
