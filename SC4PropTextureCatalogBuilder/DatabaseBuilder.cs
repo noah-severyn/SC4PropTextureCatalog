@@ -7,7 +7,6 @@ namespace SC4PropTextureCatalogBuilder {
     /// </summary>
     internal partial class DatabaseBuilder {
         private readonly SQLiteConnection _db;
-        private readonly HashSet<string> _sc4files;
         /// <summary>
         /// Assets referenced in package metadata that are not found in the extract location.
         /// </summary>
@@ -20,7 +19,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// <param name="dbPath">Path to save the database file to, including the file name.</param>
         /// <param name="create">Whether to create fresh db tables or reuse existing ones.</param>
         /// <param name="extractPath">Folder path to extracted sc4pac cache files.</param>
-        public DatabaseBuilder(string dbPath, bool create, HashSet<string> sc4Files) {
+        public DatabaseBuilder(string dbPath, bool create) {
             _db = new SQLiteConnection(dbPath);
             if (create) {
                 _db.CreateTable<TGIItem>();
@@ -46,36 +45,79 @@ namespace SC4PropTextureCatalogBuilder {
                 _db.CreateTable<FileItem>();
                 Console.WriteLine("  > database created");
             }
-
-            _sc4files = sc4Files;
         }
 
+
+        /// <summary>
+        /// Fills the <c>Assets</c> table with data parsed from sc4pac JSON assets. All files inside of this asset are then added to the <c>Files</c> table.
+        /// </summary>
+        /// <param name="assets">List of sc4pac JSON assets</param>
+        public void FillAssetAndFileTable(HashSet<string> sc4files, Dictionary<string, SC4Pac.Asset> assets) {
+            Dictionary<string, AssetItem> items = [];
+            Dictionary<string, FileItem> fileItems = [];
+            int assetKey = 1; //SQLite auto indexes are 1-based
+            foreach (var asset in assets.Values) {
+                int exchId = FileMgt.GetExchangeId(asset.Url);
+                string cleanedUrl = FileMgt.CleanUrl(asset.Url);
+                string folder = FileMgt.HttpToCachePath(asset.Url) + "\\";
+
+                var files = sc4files.Where(f => f.Contains(folder));
+                if (!files.Any()) {
+                    MissingAssets.Add(asset.AssetId); //TODO - how is this different from what is returned from `SC4Pac.ExtractFilesFromPackages`?
+                    continue;
+                }
+                foreach (var file in files) {
+                    var fileName = Path.GetFileName(file);
+                    var itemKey = assetKey + "|" + fileName;
+                    fileItems.TryAdd(itemKey, new FileItem(assetKey, fileName));
+                }
+
+                items.TryAdd(asset.AssetId, new AssetItem(exchId, asset.AssetId, asset.Version, asset.LastModified, cleanedUrl));
+                assetKey++;
+            }
+            _db.RunInTransaction(() => {
+                _db.InsertAll(items.Values);
+            });
+            _db.RunInTransaction(() => {
+                _db.InsertAll(fileItems.Values);
+            });
+        }
 
 
         /// <summary>
         /// Fill the <c>TGIs</c> table.
         /// </summary>
         /// <remarks>The <c>Assets</c> and <c>Files</c> tables should be populated before executing this function. Any errors encountered are added to <see cref="Errors"/>.</remarks>
-        public void FillTgiTable() {
+        public void FillTgiTable(Dictionary<string, SC4Pac.Package> packages) {
+            //We do NOT simply want to list out all the files in the cache and back-calculate their asset and file ids, because the cache may have multiple obsolete revisions, resulting in a double counting of files and TGIs, in addition to potentially including files removed from the current version.
+            //The TGIs table needs a FileId which we need to find. For each PkgFileItem in a package's LocalFiles, get the AssetId from the AssetName, and use the combination of the AssetId and FileName to get the FileId
+            var allAssets = _db.Query<AssetItem>("SELECT * FROM Assets").ToDictionary(a => a.Name, a => a.Id);
+            var allFiles = _db.Query<FileItem>("SELECT * FROM Files").ToDictionary(f => f.AssetId + "|" + f.Name, f => f.Id);
+
+
             List<TGIItem> items = [];
             int idx = 0;
-            foreach (string file in _sc4files) {
-                Console.WriteLine($"  > writing {idx}/{_sc4files.Count} " + file);
-                var tgisOut = ExtractTGIs(file);
-                _db.RunInTransaction(() => {
-                    _db.InsertAll(tgisOut);
-                });
+            foreach (var pkg in packages) {
+                Console.WriteLine($"  > writing {idx}/{packages.Count} packages : " + pkg.Key);
+                foreach (var file in pkg.Value.LocalFiles) {
+                    var fileName = Path.GetFileName(file.FilePath);
+                    allAssets.TryGetValue(file.AssetName, out var assetId);
+                    var fileFound = allFiles.TryGetValue(assetId + "|" + fileName, out var fileId);
+                    if (!fileFound) {
+                        Errors.Add(new DBPFError(file.FilePath, null, $"Key {assetId + "|" + fileName} not found in the 'Files' table"));
+                        continue;
+                    }
+                    items.AddRange(ExtractTGIs(file.FilePath, fileId));
+                }
                 idx++;
             }
+
+            _db.RunInTransaction(() => {
+                _db.InsertAll(items);
+            });
         }
-        private List<TGIItem> ExtractTGIs(string file) {
+        private List<TGIItem> ExtractTGIs(string file, int fileId) {
             var items = new List<TGIItem>();
-            var fi = GetFile(null, Path.GetFileName(file));
-            if (fi is null) {
-                Errors.Add(new DBPFError(file, null, "File not found in database"));
-                return [];
-            }
-            var ai = GetAsset(fi.AssetId);
 
             FileStream fs;
             try {
@@ -97,7 +139,7 @@ namespace SC4PropTextureCatalogBuilder {
             foreach (DBPFEntry entry in targetEntries) {
                 //Add Base/Overlay textures (look at the least significant 4 bits and only add if it is 0, 5, or A: AND the Instance by 0b1111 (0xF) and examine the modulus result)
                 if (entry.MatchesEntryType(DBPFTGI.FSH_BASE_OVERLAY) && ((entry.TGI.InstanceID & 0xF) % 5) == 0) {
-                    items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 2, null));
+                    items.Add(new TGIItem(fileId, entry.TGI.ToString(), 2, null));
                     textureCnt++;
                 }
 
@@ -109,7 +151,7 @@ namespace SC4PropTextureCatalogBuilder {
                     }
                     catch (Exception ex) {
                         Errors.Add(new DBPFError(file, exmp.TGI, ex.Message));
-                        break;
+                        continue;
                     }
                         
                     if (exmp.ListOfProperties.Count == 0) continue;
@@ -135,15 +177,15 @@ namespace SC4PropTextureCatalogBuilder {
 
                     switch (exmpType) {
                         case DBPFProperty.ExemplarType.Building:
-                            items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 0, exmpName));
+                            items.Add(new TGIItem(fileId, entry.TGI.ToString(), 0, exmpName));
                             buildingCnt++;
                             break;
                         case DBPFProperty.ExemplarType.Prop:
-                            items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 1, exmpName));
+                            items.Add(new TGIItem(fileId, entry.TGI.ToString(), 1, exmpName));
                             propCnt++;
                             break;
                         case DBPFProperty.ExemplarType.FloraFauna:
-                            items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 4, exmpName));
+                            items.Add(new TGIItem(fileId, entry.TGI.ToString(), 4, exmpName));
                             floraCnt++;
                             break;
                     }
@@ -164,68 +206,32 @@ namespace SC4PropTextureCatalogBuilder {
                         exmpName = (string) prop.GetData();
                     }
 
-                    items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 10, exmpName));
+                    items.Add(new TGIItem(fileId, entry.TGI.ToString(), 10, exmpName));
                 }
 
                 //Add LTEXTs
                 else if (entry.MatchesEntryType(DBPFTGI.LTEXT)) {
-                    items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 11, null));
+                    items.Add(new TGIItem(fileId, entry.TGI.ToString(), 11, null));
                 }
 
                 //Add LUAs
                 else if (entry.MatchesAnyEntryType(DBPFTGI.LUA, DBPFTGI.LUA_GEN)) {
-                    items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 12, null));
+                    items.Add(new TGIItem(fileId, entry.TGI.ToString(), 12, null));
                 }
 
                 //Add UIs
                 else if (entry.MatchesEntryType(DBPFTGI.UI)) {
-                    items.Add(new TGIItem(fi.Id, entry.TGI.ToString(), 13, null));
+                    items.Add(new TGIItem(fileId, entry.TGI.ToString(), 13, null));
                 }
             }
 
-            _db.Execute($"UPDATE Files SET TextureCount = ?, PropCount = ?, FloraCount = ?, BuildingCount = ? WHERE Id = ?", textureCnt, propCnt, floraCnt, buildingCnt, fi.Id);
+            _db.Execute($"UPDATE Files SET TextureCount = ?, PropCount = ?, FloraCount = ?, BuildingCount = ? WHERE Id = ?", textureCnt, propCnt, floraCnt, buildingCnt, fileId);
             return items;
         }
 
 
-
         /// <summary>
-        /// Fills the <c>Assets</c> table with data parsed from sc4pac JSON assets. All files inside of this asset are then added to the <c>Files</c> table.
-        /// </summary>
-        /// <param name="assets">List of sc4pac JSON assets</param>
-        public void FillAssetAndFileTable(Dictionary<string, SC4Pac.Asset> assets) {
-            Dictionary<string, AssetItem> items = [];
-            Dictionary<string, FileItem> fileItems = [];
-            int assetKey = 1; //SQLite auto indexes are 1-based
-            foreach (var asset in assets.Values) {
-                int exchId = FileMgt.GetExchangeId(asset.Url);
-                string cleanedUrl = FileMgt.CleanUrl(asset.Url);
-                string folder = FileMgt.HttpToCachePath(asset.Url) + "\\";
-                
-                var files = _sc4files.Where(f => f.Contains(folder));
-                if (!files.Any()) {
-                    MissingAssets.Add(asset.AssetId); //TODO - how is this different from what is returned from `SC4Pac.ExtractFilesFromPackages`?
-                    continue;
-                }
-                foreach (var file in files) {
-                    var fileName = Path.GetFileName(file);
-                    var itemKey = assetKey + "|" + fileName;
-                    fileItems.TryAdd(itemKey, new FileItem(assetKey, fileName));
-                }
-
-                items.TryAdd(asset.AssetId, new AssetItem(exchId, asset.AssetId, asset.Version, asset.LastModified, cleanedUrl));
-                assetKey++;
-            }
-            _db.RunInTransaction(() => {
-                _db.InsertAll(items.Values);
-            });
-            _db.RunInTransaction(() => {
-                _db.InsertAll(fileItems.Values);
-            });
-        }
-
-        /// <summary>
-        /// Fills the <c>Package</c> and <c>PackageFile</c> tables.
+        /// Fills the <c>Package</c> table.
         /// </summary>
         /// <remarks>The <c>Assets</c> and <c>Files</c> tables should be populated before executing this function.</remarks>
         public void FillPackageTable(Dictionary<string, SC4Pac.Package> packages) {
@@ -279,82 +285,6 @@ namespace SC4PropTextureCatalogBuilder {
             _db.RunInTransaction(() => {
                 _db.InsertAll(items);
             });
-        }
-
-
-        /// <summary>
-        /// Return whether this asset exists in the <c>Assets</c> table
-        /// </summary>
-        /// <returns>TRUE if the asset exists; FALSE otherwise</returns>
-        public bool AssetExists(int exchangeId, int assetId) {
-            int count = _db.ExecuteScalar<int>($"SELECT count(*) FROM Assets WHERE ExchangeId = ? AND AssetId = ?", exchangeId, assetId);
-            return count != 0;
-        }
-        public AssetItem? GetAsset(string? name = null, string? url = null) {
-            if (name is null) {
-                return _db.Query<AssetItem>("SELECT * FROM Assets WHERE Url = ?", url).FirstOrDefault();
-            } else {
-                return _db.Query<AssetItem>("SELECT * FROM Assets WHERE Name = ?", name).FirstOrDefault();
-            }
-        }
-        public AssetItem? GetAsset(int id) {
-            return _db.Query<AssetItem>($"SELECT * FROM Assets WHERE Id = ?", id).FirstOrDefault();
-        }
-        public PackageItem? GetPackage(string name) {
-            return _db.Query<PackageItem>($"SELECT * FROM Packages WHERE Name = ?", name).FirstOrDefault();
-        }
-        public PackageItem? GetPackage(int id) {
-            return _db.Query<PackageItem>("SELECT * FROM Packages WHERE Id = ?", id).FirstOrDefault();
-        }
-        /// <summary>
-        /// Return whether this asset exists in the <c>Packages</c> table
-        /// </summary>
-        /// <returns>TRUE if the asset exists; FALSE otherwise</returns>
-        public bool PackageExists(int exchangeId, int assetId) {
-            int count = _db.ExecuteScalar<int>("SELECT count(*) FROM Packages WHERE ExchangeId = ? AND AssetId = ?", exchangeId, assetId);
-            return count != 0;
-        }
-        /// <summary>
-        /// Return whether this package exists in the <c>Packages</c> table
-        /// </summary>
-        /// <returns>TRUE if the package exists; FALSE otherwise</returns>
-        public bool PackageExists(string package) {
-            int count = _db.ExecuteScalar<int>("SELECT count(*) FROM Packages WHERE PackageId = ?", package);
-            return count != 0;
-        }
-        /// <summary>
-        /// Return whether this package exists in the <c>CatalogItems</c> table
-        /// </summary>
-        /// <returns>TRUE if the TGI exists; FALSE otherwise</returns>
-        public bool TGIExists(string tgi) {
-            int count = _db.ExecuteScalar<int>("SELECT count(*) FROM CatalogItems WHERE TGI = ?", tgi);
-            return count != 0;
-        }
-
-        public FileItem? GetFile(int? assetId, string name) {
-            if (assetId is null) {
-                return _db.Query<FileItem>("SELECT * FROM Files WHERE Name = ?", Path.GetFileName(name)).FirstOrDefault();
-            } else {
-                return _db.Query<FileItem>("SELECT * FROM Files WHERE Name = ? AND AssetId = ?", Path.GetFileName(name), assetId).FirstOrDefault();
-            }
-        }
-        public FileItem? GetFile(int id) {
-            return _db.Query<FileItem>("SELECT * FROM Files WHERE Id = ?", id).FirstOrDefault();
-        }
-
-
-        /// <summary>
-        /// Fetches the PNG thumbnail image for this TGI.
-        /// </summary>
-        /// <param name="tgi">TGI to use</param>
-        /// <returns>A PNG image represented as bytes</returns>
-        private static byte[] GetThumbnail(string tgi) {
-            string fname = tgi.Replace("0x", "").Replace(", ", "-") + ".png";
-            try {
-                return File.ReadAllBytes("C:\\source\\repos\\SC4PropTextureCatalog\\wwwroot\\img\\thumbnails\\" + fname);
-            } catch {
-                return new byte[0];
-            }
         }
     }
 }

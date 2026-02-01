@@ -35,12 +35,12 @@ ChannelOptions parseOpt = PromptChannelOption("Which channel(s) do you want to p
 var sc4Files = SC4Pac.ListCacheFiles(extractLocation);
 var missingAssets = SC4Pac.ExtractFilesFromPackages(sc4Files, ref packages, assets);
 
-DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb, sc4Files);
+DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb);
 if (PromptYesNo("Fill Assets & Files table?")) {
-    db.FillAssetAndFileTable(assets);
+    db.FillAssetAndFileTable(sc4Files, assets);
 }
 if (PromptYesNo("Fill TGI table?")) {
-    db.FillTgiTable();
+    db.FillTgiTable(packages);
 }
 if (PromptYesNo("Fill Package table?")) {
     db.FillPackageTable(packages);
