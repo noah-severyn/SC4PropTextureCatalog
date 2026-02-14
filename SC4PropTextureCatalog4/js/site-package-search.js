@@ -124,7 +124,7 @@ function FetchPackageTGIs(packageName) {
 
         if (category === 'Textures') {
             const msg = document.createElement('p');
-            msg.textContent = "Tip: If a thumbnail is difficult to see, try toggling the site theme to light or dark mode.";
+            msg.textContent = "Tip: If a thumbnail is difficult to see, try switching the site theme to light or dark mode.";
             details.appendChild(msg);
         }
         
@@ -138,7 +138,7 @@ function FetchPackageTGIs(packageName) {
             p.setAttribute('data-tooltip', item.TGI + '\n' + item.ExemplarName);
 
             const img = document.createElement("img");
-            img.src = `https://sc4proptexturecatalog.net/${bucketFolder}/${item.TGI.replaceAll('0x', '').replaceAll(', ', '-').toUpperCase()}.png`;
+            img.src = `https://thumbs.sc4proptexturecatalog.net/${bucketFolder}/${item.TGI.replaceAll('0x', '').replaceAll(', ', '-').toUpperCase()}.png`;
             img.height = 64;
             img.loading = 'lazy';
             img.classList.add('thumbnail');

@@ -85,7 +85,11 @@ function QueryReturn(search_text, query_results) {
 		//thumb.appendChild(img);
 
 		const name = document.createElement("td");
-		name.textContent = item.ExemplarName;
+		name.textContent = item.ExemplarName ?? "null";
+		if (item.ExemplarName === null) {
+			name.style.fontStyle = "oblique";
+		}
+		
 
 		tr.append(package, file, tgi, category, author, name);
 		body.appendChild(tr);
