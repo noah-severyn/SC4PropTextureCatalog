@@ -268,7 +268,7 @@ namespace SC4PropTextureCatalogBuilder {
                 }
                 foreach (var pkgFile in pkg.LocalFiles) {
                     assetId = assetsByName.GetValueOrDefault(pkgFile.AssetName);
-                    fileId = fileItems.GetValueOrDefault(assetId + "|" + pkgFile.FilePath);
+                    fileId = fileItems.GetValueOrDefault(assetId + "|" + Path.GetFileName(pkgFile.FilePath));
                     pkgId = pkgsByName.GetValueOrDefault(pkgFile.PackageName);
 
                     if (assetId is null) {
