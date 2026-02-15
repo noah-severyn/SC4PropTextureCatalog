@@ -23,11 +23,11 @@ function AddHeader() {
 	ul.appendChild(title);
 	
 	const pages = [
-		{ name: 'Home', link: '/SC4PropTextureCatalog4/Index.html' },
-		{ name: 'View a Pack', link: '/SC4PropTextureCatalog4/ViewPack.html' },
-		{ name: 'Plugin Pack Ids', link: '/SC4PropTextureCatalog4/PluginPackIds.html' },
+		{ name: 'Home', link: '/SC4PropTextureCatalog4/index.html' },
+		{ name: 'View a Pack', link: '/SC4PropTextureCatalog4/view-pack.html' },
+		{ name: 'Plugin Pack Ids', link: '/SC4PropTextureCatalog4/plugin-pack-ids.html' },
 		{ name: 'API Docs ⮥', link: 'https://sc4proptexturecatalog-production.up.railway.app/docs/' },
-		{ name: 'About', link: '/SC4PropTextureCatalog4/About.html' }
+		{ name: 'About', link: '/SC4PropTextureCatalog4/about.html' }
 	];
 	pages.forEach(page => {
 		const li = document.createElement('li');
