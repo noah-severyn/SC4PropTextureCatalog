@@ -24,11 +24,11 @@ function AddHeader() {
 	ul.appendChild(title);
 	
 	const pages = [
-		{ name: 'Home', link: '/SC4PropTextureCatalog4/index.html' },
-		{ name: 'View a Pack', link: '/SC4PropTextureCatalog4/view-pack.html' },
-		{ name: 'Plugin Pack Ids', link: '/SC4PropTextureCatalog4/plugin-pack-ids.html' },
+		{ name: 'Home', link: '/index.html' },
+		{ name: 'View a Pack', link: '/view-pack.html' },
+		{ name: 'Plugin Pack Ids', link: '/plugin-pack-ids.html' },
 		{ name: 'API Docs ⮥', link: `${apiUrl}/docs/` },
-		{ name: 'About', link: '/SC4PropTextureCatalog4/about.html' }
+		{ name: 'About', link: '/about.html' }
 	];
 	pages.forEach(page => {
 		const li = document.createElement('li');
