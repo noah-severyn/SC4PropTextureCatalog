@@ -1,0 +1,160 @@
+.DarkThumbnail {
+	background-color: #202e39;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid var(--pico-muted-border-color);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  line-height: 1em;
+}
+
+header li {
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
+header li a {
+	font-size: 1.1rem;
+	font-weight: normal;
+	color: var(--pico-secondary);
+	padding: 0px 10px;
+}
+
+header li a svg {
+	width: var(--pico-font-size);
+	height: 1rem;
+	margin-top: -0.2em;
+}
+
+
+
+
+/*
+	================================================
+	Resize Pico CSS elements
+	================================================
+*/
+:root {
+	--pico-font-family-sans-serif: Inter, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--pico-font-family-emoji);
+	--pico-font-size: 100%;
+	/* Original: 100% */
+	--pico-line-height: 1.5;
+	/* Original: 1.5 */
+	--pico-form-element-spacing-vertical: 0.75rem;
+	/* Original: 1rem */
+	--pico-form-element-spacing-horizontal: 1.0rem;
+	/* Original: 1.25rem */
+	--pico-border-radius: 0.25rem;
+	/* Original: 0.25rem */
+}
+
+@media (min-width: 576px) {
+	:root {
+		--pico-font-size: 100%;
+		/* Original: 106.25% */
+	}
+}
+
+@media (min-width: 768px) {
+	:root {
+		--pico-font-size: 100%;
+		/* Original: 112.5% */
+	}
+}
+
+@media (min-width: 1024px) {
+	:root {
+		--pico-font-size: 100%;
+		/* Original: 118.75% */
+	}
+}
+
+@media (min-width: 1280px) {
+	:root {
+		--pico-font-size: 100%;
+		/* Original: 125% */
+	}
+}
+
+@media (min-width: 1536px) {
+	:root {
+		--pico-font-size: 100%;
+		/* Original: 131.25% */
+	}
+}
+
+@media (min-width: 1792px) {
+	.container {
+		max-width: 1700px;
+	}
+}
+
+@media (min-width: 2048px) {
+	.container {
+		max-width: 1950px;
+	}
+}
+
+@media (min-width: 2304px) {
+	.container {
+		max-width: 2200px;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	--pico-font-weight: 600;
+	/* Original: 700 */
+}
+
+article {
+	border: 1px solid var(--pico-muted-border-color);
+	/* Original doesn't have a border */
+	border-radius: calc(var(--pico-border-radius) * 2);
+	/* Original: var(--pico-border-radius) */
+}
+
+	article > footer {
+		border-radius: calc(var(--pico-border-radius) * 2);
+		/* Original: var(--pico-border-radius) */
+	}
+
+.thumbnail-grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+.thumbnail-grid .thumbnail {
+	margin: 5px;
+}
+
+
+/* The Pico CSS dropdown also uses the details/summary architecture which we do *not* want to override here */
+details:not(.dropdown) summary {
+	text-decoration: solid underline;
+	font-size: 1.25rem;
+  	color: var(--pico-h4-color);
+  	font-weight: 700;
+  	line-height: 1.25;
+}
+details:not(.dropdown) summary:after {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+/* Fix slightly mismatched element heights */
+#PackageForm input[type="submit"] {
+    height: auto;
+    padding: 0.5rem 2rem;
+    flex-grow: 0;
+}
+
+/* Allow multiline tooltips split on '\n' */
+[data-tooltip]:before {
+  display: inline-block;
+	white-space: pre;
+}

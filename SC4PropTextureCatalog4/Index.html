@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SC4 Prop Texture Catalog</title>
+    <link rel="stylesheet" href="css/pico.css" />
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <!-- Header automatically inserted. See site.js -->
+     
+    <main role="main" class="container">
+        <h3>Search for props, textures, buildings, or flora by Pack, TGI, Author, or Exemplar Name</h3>
+        <p style="color:var(--pico-primary)">Currently only thumbnails for textures are supported. Props/Buildings/Flora to follow.</p>
+
+        <form method="get" role="search" id="SearchForm">
+            <input id="SearchBox" type="search" placeholder="Search for Pack | TGI | Author | Exemplar Name ...">
+            <input type="Submit" value="Search" />
+        </form>
+
+        <fieldset class="grid" style="width:200px; height:50px">
+            <details class="dropdown" id="Categories">
+                <summary>TGI Category</summary>
+                <ul>
+                    <li><label><input type="checkbox" checked />Buildings</label></li>
+                    <li><label><input type="checkbox" checked />Props</label></li>
+                    <li><label><input type="checkbox" checked />Textures</label></li>
+                    <li><label><input type="checkbox" checked />Flora</label></li>
+                    <li><label><input type="checkbox" />Others</label></li>
+                </ul>
+            </details>
+
+            <!--<div>
+                <input id="ThumbnailToggle" type="checkbox" role="switch" />
+                <label for="ThumbnailToggle">Show Thumbnails</label>
+            </div>
+
+            <details class="dropdown" id="ThumbnailSize">
+                <summary>Thumbnail Size</summary>
+                <ul>
+                    <li><label><input type="radio" name="tsize" value="32px" />32 px</label></li>
+                    <li><label><input type="radio" name="tsize" value="64px" />64 px</label></li>
+                    <li><label><input type="radio" name="tsize" value="96px" />96 px</label></li>
+                </ul>
+            </details>-->
+        </fieldset>
+
+
+
+        <p id="QueryResultSummary">Query "<span id="QuerySearchText"></span>" returned <span id="QueryResultCount"></span> results. <span id="QueryFilterCount"></span> results visible.</p>
+        <hr />
+
+        <table id="QueryResultTable">
+            <thead>
+                <tr class="header">
+                    <th>Package Name</th>
+                    <th>File</th>
+                    <th>TGI</th>
+                    <th>Category</th>
+                    <th>Author</th>
+                    <!--<th>Thumbnail</th>-->
+                    <th>Exemplar Name</th>
+                </tr>
+            </thead>
+            <tbody id="QueryResultBody"></tbody>
+        </table>
+    </main>
+
+
+    <script src="js/site.js"></script>
+    <script src="js/site-search.js"></script>
+    <script src="js/theme-switcher.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SC4 Prop Texture Catalog</title>
+    <link rel="stylesheet" href="css/pico.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/autocomplete.css" />
+    <link rel="stylesheet" href="css/tags.css" />
+</head>
+
+<body>
+    <!-- Header automatically inserted. See site.js -->
+    
+    <main role="main" class="container">
+        <h3>Choose a prop or texture pack to inspect</h3>
+        <p style="color:var(--pico-primary)">Currently only thumbnails for textures are supported. Props/Buildings/Flora to follow.</p>
+        <form role="search" id="PackageForm">
+            <input type="search" id="PackageSelection" />
+            <input type="Submit" value="View Pack" />
+        </form>
+
+        <table id="PackageHeader" class="sticky">
+            <thead>
+                <tr>
+                    <th>Package Name</th>
+                    <th>Link(s)</th>
+                    <th>Version</th>
+                    <th>Author</th>
+                    <th>Subfolder</th>
+                    <th># Textures</th>
+                    <th># Props</th>
+                    <th># Flora</th>
+                    <th># Models</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="SelectedPackId"></td>
+                    <td id="SelectedPackUrls"></td>
+                    <td id="SelectedPackVersion"></td>
+                    <td id="SelectedPackAuthor"></td>
+                    <td id="SelectedPackSubfolder"></td>
+                    <td id="SelectedPackTextureCount"></td>
+                    <td id="SelectedPackPropCount"></td>
+                    <td id="SelectedPackFloraCount"></td>
+                    <td id="SelectedPackModelCount"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <div id="PackageDetails"></div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.9/dist/autoComplete.min.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/site-package-search.js"></script>
+    <script src="js/theme-switcher.js"></script>
+</body>
+</html>

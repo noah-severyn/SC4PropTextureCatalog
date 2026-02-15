@@ -1,31 +1,30 @@
-![Header](wwwroot/img/head.jpg)
+![Header](title.jpg)
 
-Now hosted online at https://sc4proptexturecatalog.azurewebsites.net/. The current version 3.x+ was rebuilt completely from the ground up using a SQLite database, which was a necessity with the ever-growing index of items.
+The 4.x versions have once again been built from the ground up, with notable improvements over the 3.x versions including an application and platform independent API, a completely new website, and a significantly expanded database.
 
-Building upon the original the original [Prop & Texture Photo Catalog](https://sc4devotion.com/forums/index.php?board=415.0) started in 2011, this work includes all known dependency packs to date. This catalog was assembled by [nos.17](https://community.simtropolis.com/profile/455740-nos17/) with assistance from STEX Custodian (Tyberius06) and Cyclone Boom, and CorinaMarie.
+This project was inspired by the original [Prop & Texture Photo Catalog](https://sc4devotion.com/forums/index.php?board=415.0) started in 2011, and aims to index all known TGIs and plugin packs for SimCity 4, especially focusing on all known dependencies. This project also builds upon [the Plugin Pack ID Index](https://community.simtropolis.com/forums/topic/75264-plugin-pack-id-indexes/) work includes all known dependency packs to date. This catalog was assembled by [nos.17](https://community.simtropolis.com/profile/455740-nos17/) with assistance from STEX Custodian (Tyberius06), Cyclone Boom, and CorinaMarie.
 
-![Example](wwwroot/img/preview.gif)
+I aim for this tool to assist many content creators (especially lotters) who are looking for more and better content to incorporate into their work. Looking for a motorcycle to add to your lot? Filter only prop packs that contain vehicles and/or motorcycles. Looking for seasonal trees? Look through all packs that contain seasonal trees until you can find the right ones for you? Want to use all HD? Scour all packs that contain High Definition props to find the ones you want.
 
-# Who is this for?
-I hope this tool will prove invaluable for many content creators (and especially lotters) who are looking for more and better content to incorporate into their work. Looking for a motorcycle to add to your lot? Filter only prop packs that contain vehicles and/or motorcycles. Looking for seasonal trees? Look through all packs that contain seasonal trees until you can find the right ones for you? Want to use all HD? Scour all packs that contain High Definition props to find the ones you want.
+## How do I use this?
+The easiest way is to use is to visit the website at https://sc4proptexturecatalog.net/.
 
-# How do I use this?
-The easiest way is to use is to visit the [website](https://sc4proptexturecatalog.azurewebsites.net/). An offline solution is in the works and will be posted as a release on this page when avilable.
+It can also be accessed directly from the 'ST Exchange' tab at Simtropolis.
 
-It can also be accessed directly from the ST Exchange banner at Simtropolis.
-![ST Banner](wwwroot/img/STbanner.png)
+![ST Banner](simtropolis-banner.png)
 
-- To search for items by TGI, Exemplar Name, or Author, or Pack Name, use the **Home** page and enter 3 or more characters in the search box.
-- To view a thumbnail listing of an entire pack, use the **View a Pack** page and select a pack from the drop down.
-- To search for a Plugin Pack ID, use the **Plugin Pack** page to search for the item. Hexacedimal and decimal numbers are supported for searching.
+It is possible to run the catalog offline with a little bit of know-how, though I do recommend using the web version. Note that at this time, the thumbnails do not work offline as they are all hosted online. 
+1. Download or clone this repository.
+1. Start up a localhost instance of the website. I use the VS Code extension `ms-vscode.live-server`. Depending on what folder level you open the repository, the site URL may look like `http://127.0.0.1:3000/SC4PropTextureCatalog4/Index.html`
+1. Start the API server via NPM. Navigate to `..\SC4PropTextureCatalog\SC4PropTextureCatalogAPI\` in CMD or Powershell and run `npm start app.js`. If this is the first time starting the server, run `npm install` to install the required dependencies. 
+1. Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to shut down the server, and simply close the website tab to shut off the live preview.
+
+## Project Structure
+- **SC4PropTextureCatalog4** - This is the main website, made with HTML and JavaScript, using Pico CSS
+- **SC4PropTextureCatalogAPI** - This is the Express API and where the main SQLite database is stored. See `\data\Catalog.db`. Use this file directly if you'd like to run your own SQL queries against the dataset.
+- **SC4PropTextureCatalogBuilder** - This project houses the C# scripts and programs used to pase the sc4pac channels for package and asset metadata, parse the sc4pac cache for files and TGIs, and programmatically build the database with this information.
+- The thumbnails are hosted externally in a Cloudflare R2 bucket, made publicly accessible at `https://sc4proptexturecatalog.net`
 
 
-You can download the legacy 2.x.x version with compiled photos of each pack [here](https://github.com/noah-severyn/SC4PropTextureCatalog/releases/tag/2.2.2). Due to the dramatic increase in TGIs and dependency packs tracked in this newer version, I have discontinued the images of each prop pack. Adding thumbnail photos of each TGI is on the roadmap, which will ultimately replace that functionality included in the legacy version.
-
-If you'd like to do your own analysis against the dataset, use the database directly. The DB is hosted in the [Data folder](https://github.com/noah-severyn/SC4PropTextureCatalog/tree/main/Data) in this repo . Use a database browser (I recommend [DB Browser for SQLite](https://sqlitebrowser.org/)) and run your own custom SQL queries.
-
-# I found a problem! / I have a suggestion!
-Found a bug? Am I missing a prop or texture pack? Have an idea for additional sorting/filtering categories? Is there a better way to make the Catalog more interactive or useful? I would very much like to hear from you! Drop me a message or visit the [SimCity 4 Prop and Texture Catalog](https://community.simtropolis.com/forums/topic/758501-simcity-4-prop-and-texture-catalogue-by-stex-custodian/). Alternatively if you are familiar with GitHub, open an issue here.
-
-# Stats
-Items indexed to date: 81k TGIs across 670+ packs.
+## I found a problem! / I have a suggestion!
+Found a bug? Am I missing a prop or texture pack? Have an idea for additional sorting/filtering categories? Is there a better way to make the Catalog more interactive or useful? I would very much like to hear from you! Visit the [SimCity 4 Prop and Texture Catalog](https://community.simtropolis.com/forums/topic/758501-simcity-4-prop-and-texture-catalogue-by-stex-custodian/) thread or open an issue in Github.

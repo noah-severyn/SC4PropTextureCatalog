@@ -1,0 +1,30 @@
+#activity-chart {
+    display: grid;
+    grid-template-columns: repeat(75, 15px);
+    grid-auto-rows: 1fr;
+    gap: 4px;
+    max-width: 100%;
+}
+
+@media (max-width: 1500px) {
+    #activity-chart {
+        grid-template-columns: repeat(auto-fit, 15px);
+    }
+}
+
+.square {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: none;
+    border-radius: 2px;
+    background-color: #e2e5e9;
+    padding: 0;
+}
+
+.square:hover {
+    outline: 2px solid #333;
+}
+    .square.nohover:hover {
+        border-radius: 0px;
+        outline: 0px;
+    }

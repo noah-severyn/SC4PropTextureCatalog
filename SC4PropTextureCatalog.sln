@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SC4PropTextureCatalog", "SC4PropTextureCatalog.csproj", "{C937A446-CD53-4C20-B513-16504C8CCE01}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SC4PropTextureCatalogBuilder", "SC4PropTextureCatalogBuilder\SC4PropTextureCatalogBuilder.csproj", "{A2EFF612-C53B-49A5-9009-B207E4F7EC85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +16,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C937A446-CD53-4C20-B513-16504C8CCE01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C937A446-CD53-4C20-B513-16504C8CCE01}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C937A446-CD53-4C20-B513-16504C8CCE01}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C937A446-CD53-4C20-B513-16504C8CCE01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2EFF612-C53B-49A5-9009-B207E4F7EC85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2EFF612-C53B-49A5-9009-B207E4F7EC85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2EFF612-C53B-49A5-9009-B207E4F7EC85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2EFF612-C53B-49A5-9009-B207E4F7EC85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
