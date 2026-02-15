@@ -1,6 +1,7 @@
 ﻿
 let apiUrl = '';
-const prod = false;
+// Automatically pull from the production API if this code is running from the deployed site.
+const prod = window.location.hostname.includes("github.io") || window.location.hostname.includes("sc4proptexturecatalog.net");
 if (prod) {
 	apiUrl = 'https://sc4proptexturecatalog-production.up.railway.app';
 } else {
@@ -26,7 +27,7 @@ function AddHeader() {
 		{ name: 'Home', link: '/SC4PropTextureCatalog4/index.html' },
 		{ name: 'View a Pack', link: '/SC4PropTextureCatalog4/view-pack.html' },
 		{ name: 'Plugin Pack Ids', link: '/SC4PropTextureCatalog4/plugin-pack-ids.html' },
-		{ name: 'API Docs ⮥', link: 'https://sc4proptexturecatalog-production.up.railway.app/docs/' },
+		{ name: 'API Docs ⮥', link: `${apiUrl}/docs/` },
 		{ name: 'About', link: '/SC4PropTextureCatalog4/about.html' }
 	];
 	pages.forEach(page => {
