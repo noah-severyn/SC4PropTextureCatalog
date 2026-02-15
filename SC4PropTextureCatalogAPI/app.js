@@ -12,11 +12,13 @@ const allowedOrigins = [
   'http://localhost:3000',
   'http://127.0.0.1:4000', //Local Swagger UI docs page 
   'http://localhost:4000',
-  'https://sc4proptexturecatalog-production.up.railway.app'
+  'https://sc4proptexturecatalog-production.up.railway.app',
+  'https://noah-severyn.github.io',
+  'https://sc4proptexturecatalog.net',
 ];
 app.use(cors({
   origin: allowedOrigins,
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET'],
   allowedHeaders: ['Content-Type']
 }));
 
