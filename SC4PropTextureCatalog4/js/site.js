@@ -1,11 +1,14 @@
 ﻿
 let apiUrl = '';
+let htmlPath = '';
 // Automatically pull from the production API if this code is running from the deployed site.
 const prod = window.location.hostname.includes("github.io") || window.location.hostname.includes("sc4proptexturecatalog.net");
 if (prod) {
 	apiUrl = 'https://sc4proptexturecatalog-production.up.railway.app';
+	htmlPath = '';
 } else {
 	apiUrl = 'http://localhost:4000';
+	htmlPath = '/SC4PropTextureCatalog4';
 }
 AddHeader();
 
@@ -24,11 +27,11 @@ function AddHeader() {
 	ul.appendChild(title);
 	
 	const pages = [
-		{ name: 'Home', link: '/index.html' },
-		{ name: 'View a Pack', link: '/view-pack.html' },
-		{ name: 'Plugin Pack Ids', link: '/plugin-pack-ids.html' },
+		{ name: 'Home', link: `${htmlPath}/index.html` },
+		{ name: 'View a Pack', link: `${htmlPath}/view-pack.html` },
+		{ name: 'Plugin Pack Ids', link: `${htmlPath}/plugin-pack-ids.html` },
 		{ name: 'API Docs ⮥', link: `${apiUrl}/docs/` },
-		{ name: 'About', link: '/about.html' }
+		{ name: 'About', link: `${htmlPath}/about.html` }
 	];
 	pages.forEach(page => {
 		const li = document.createElement('li');
