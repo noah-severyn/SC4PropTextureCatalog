@@ -7,13 +7,13 @@
     border-radius: 2em;
     padding: 2px 12px;
     margin-right: 4px;
-    color: #3a3a3a;
+    color: var(--pico-color);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     cursor: default;
 }
 
 .tag:not(.disabled):hover {
-    background-color: #eeeeee;
+    background-color: var(--pico-form-element-hover-background-color);
 }
 
 .tag .disabled {
