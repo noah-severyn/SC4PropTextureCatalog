@@ -139,7 +139,7 @@ function FetchPackageTGIs(packageName) {
 
             const img = document.createElement("img");
             img.src = `https://thumbs.sc4proptexturecatalog.net/${bucketFolder}/${item.TGI.replaceAll('0x', '').replaceAll(', ', '-').toUpperCase()}.png`;
-            img.height = 64;
+            img.style.height = '96px';
             img.loading = 'lazy';
             img.classList.add('thumbnail');
 

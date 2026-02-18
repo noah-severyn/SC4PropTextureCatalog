@@ -9,11 +9,12 @@ const string sc4pacCachePath = "C:\\Users\\Administrator\\AppData\\Local\\io.git
 const string extractLocation = "P:\\sc4pac-cache";
 string dataPath = "C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalogBuilder\\data";
 string apiPath = "C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalogAPI\\data\\Catalog.db";
+string thumbPath = "P:\\sc4prop-texture-catalog-thumbnails";
 string dbPath;
 if (createDb) {
     dbPath = Path.Combine(dataPath, $"Catalog-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.db");
 } else {
-    dbPath = new DirectoryInfo(dataPath).GetFiles().OrderByDescending(f => f.LastWriteTime).First().FullName;
+    dbPath = new DirectoryInfo(dataPath).GetFiles().Where(f => f.Extension == ".db").OrderByDescending(f => f.LastWriteTime).First().FullName;
 }
 
 string basefolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "sc4pac-channels");
@@ -35,7 +36,7 @@ ChannelOptions parseOpt = PromptChannelOption("Which channel(s) do you want to p
 var sc4Files = SC4Pac.ListCacheFiles(extractLocation);
 var missingAssets = SC4Pac.ExtractFilesFromPackages(sc4Files, ref packages, assets);
 
-DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb);
+DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb, thumbPath);
 if (PromptYesNo("Fill Assets & Files table?")) {
     db.FillAssetAndFileTable(sc4Files, assets);
 }
@@ -53,10 +54,10 @@ if (PromptYesNo("Copy database to API path?")) {
 }
 if (PromptYesNo("Upload thumbnails to Cloudflare R2?")) {
     ThumbnailUploader r2 = new ThumbnailUploader();
-    await r2.UploadFolderAsync("C:\\source\\repos\\SC4PropTextureCatalog\\SC4PropTextureCatalog\\wwwroot\\img\\thumbnails", "textures");
+    await r2.UploadFolderAsync(thumbPath, "textures");
 }
 if (PromptYesNo("Output errors to JSON")) {
-    string json = JsonSerializer.Serialize(db.Errors, new JsonSerializerOptions { IncludeFields = true } );
+    string json = JsonSerializer.Serialize(db.Errors, new JsonSerializerOptions { IncludeFields = true });
     File.WriteAllText(Path.Combine(dataPath, $"Errors-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.json"), json);
 }
 

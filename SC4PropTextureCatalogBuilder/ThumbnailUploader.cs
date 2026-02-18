@@ -40,23 +40,24 @@ namespace SC4PropTextureCatalogBuilder {
         /// <param name="thumbnailFolder">File folder containing the thumbnail images to upload.</param>
         /// <param name="filePrefix">Prefix to add to each file name, roughly equivalent to a folder name.</param>
         public async Task UploadFolderAsync(string thumbnailFolder, string filePrefix) {
+            int filesUploaded = 0;
             ExistingThumbs = await LoadExistingKeysAsync();
             Console.WriteLine($"  > found {ExistingThumbs.Count} thumbnails in R2 already");
 
-            var files = Directory.GetFiles(thumbnailFolder, "*", SearchOption.TopDirectoryOnly);
+            var files = Directory.GetFiles(Path.Combine(thumbnailFolder, filePrefix), "*", SearchOption.TopDirectoryOnly);
             foreach (var file in files) {
                 string fileName = filePrefix + "/" + Path.GetFileName(file);
                 if (ExistingThumbs.Contains(fileName)) {
-                    Console.WriteLine($"  > skipping {fileName} (already exists)");
                     continue;
                 }
+                filesUploaded++;
+                Console.WriteLine($"  > uploading {fileName} ({filesUploaded})");
                 await UploadFileAsync(file, fileName);
             }
         }
 
 
         private async Task UploadFileAsync(string localPath, string key) {
-            Console.WriteLine($"  > uploading {key}");
             await using var fileStream = File.OpenRead(localPath);
             var put = new PutObjectRequest {
                 BucketName = _bucket,
