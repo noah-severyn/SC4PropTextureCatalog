@@ -1,4 +1,5 @@
 ﻿using csDBPF;
+using SixLabors.ImageSharp;
 using SQLite;
 
 namespace SC4PropTextureCatalogBuilder {
@@ -6,20 +7,22 @@ namespace SC4PropTextureCatalogBuilder {
     /// Create and operate on the Prop Texture Catalog database.
     /// </summary>
     internal partial class DatabaseBuilder {
+        private readonly string _thumbBaseFolder;
         private readonly SQLiteConnection _db;
         /// <summary>
         /// Assets referenced in package metadata that are not found in the extract location.
         /// </summary>
-        public HashSet<string> MissingAssets { get; set; } = [];
-        public List<DBPFError> Errors { get; set; } = [];
+        public HashSet<string> MissingAssets { get; private set; } = [];
+        public List<DBPFError> Errors { get; private set; } = [];
+        public Dictionary<string, string> Thumbnails { get; private set; } = [];
 
         /// <summary>
         /// Create a new SQLite database with the necessary tables and dimensional fields.
         /// </summary>
         /// <param name="dbPath">Path to save the database file to, including the file name.</param>
         /// <param name="create">Whether to create fresh db tables or reuse existing ones.</param>
-        /// <param name="extractPath">Folder path to extracted sc4pac cache files.</param>
-        public DatabaseBuilder(string dbPath, bool create) {
+        /// <param name="thumbBasePath">Cache folder holding the thumbnail images. Set to <see cref="string.Empty"/> to skip exporting thumbnails.</param>
+        public DatabaseBuilder(string dbPath, bool create, string thumbBasePath) {
             _db = new SQLiteConnection(dbPath);
             if (create) {
                 _db.CreateTable<TGIItem>();
@@ -44,6 +47,14 @@ namespace SC4PropTextureCatalogBuilder {
                 _db.CreateTable<PackageFileItem>();
                 _db.CreateTable<FileItem>();
                 Console.WriteLine("  > database created");
+            }
+
+            _thumbBaseFolder = thumbBasePath;
+            if (_thumbBaseFolder != string.Empty) {
+                var allThumbs = Directory.EnumerateFiles(_thumbBaseFolder, "*", SearchOption.AllDirectories).AsParallel();
+                foreach (var filePath in allThumbs) {
+                    Thumbnails.Add(Path.GetFileName(filePath).Replace(".png", string.Empty), filePath);
+                }
             }
         }
 
@@ -94,7 +105,7 @@ namespace SC4PropTextureCatalogBuilder {
             var allAssets = _db.Query<AssetItem>("SELECT * FROM Assets").ToDictionary(a => a.Name, a => a.Id);
             var allFiles = _db.Query<FileItem>("SELECT * FROM Files").ToDictionary(f => f.AssetId + "|" + f.Name, f => f.Id);
 
-
+            
             List<TGIItem> items = [];
             int idx = 0;
             foreach (var pkg in packages) {
@@ -118,6 +129,11 @@ namespace SC4PropTextureCatalogBuilder {
         }
         private List<TGIItem> ExtractTGIs(string file, int fileId) {
             var items = new List<TGIItem>();
+            var tgiformat = new TGIFormatOptions {
+                Prefix = false,
+                Separator = "-",
+                Uppercase = true,
+            };
 
             FileStream fs;
             try {
@@ -140,6 +156,25 @@ namespace SC4PropTextureCatalogBuilder {
                 //Add Base/Overlay textures (look at the least significant 4 bits and only add if it is 0, 5, or A: AND the Instance by 0b1111 (0xF) and examine the modulus result)
                 if (entry.MatchesEntryType(DBPFTGI.FSH_BASE_OVERLAY) && ((entry.TGI.InstanceID & 0xF) % 5) == 0) {
                     items.Add(new TGIItem(fileId, entry.TGI.ToString(), 2, null));
+
+                    if (Thumbnails.Count > 0) {
+                        //The texture TGI is logged by it's smallest size, but we want to save the largest size photo which is this IID + 4
+                        var fileName = entry.TGI.ToString(tgiformat);
+                        var newTgi = new TGI(entry.TGI.TypeID, entry.TGI.GroupID, entry.TGI.InstanceID + 4);
+                        
+                        if (!Thumbnails.ContainsKey(fileName)) {
+                            var largestFsh = (DBPFEntryFSH) dbpf.GetEntry(newTgi);
+                            try {
+                                largestFsh.Decode();
+                                var img = largestFsh.Image;
+                                var path = Path.Combine(_thumbBaseFolder, "textures", fileName + ".png");
+                                img.SaveAsPng(path);
+                            }
+                            catch (Exception) {
+                                Errors.Add(new DBPFError(file, newTgi, "Failed to decode FSH"));
+                            }
+                        }
+                    }
                     textureCnt++;
                 }
 
