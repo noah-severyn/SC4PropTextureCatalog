@@ -30,6 +30,9 @@ async function Setup() {
             keys: ["Package"],
             cache: true,
         },
+        resultsList: {
+            maxResults: 10
+        },
         resultItem: {
             highlight: true
         },
