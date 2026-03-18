@@ -130,20 +130,35 @@ router.get('/search', async (request, response) => {
 // GET /api/iid?value=...
 router.get('/iid', async (request, response) => {
   // #swagger.summary = 'Search for TGIs via IID'
-  // #swagger.description = 'Search for resources by Instance ID (IID). Searches the last 8 characters of TGI identifiers to find matching instance IDs.'
+  // #swagger.description = 'Search for resources by Instance ID (IID). Searches the last 8 characters of TGI identifiers to find matching instance IDs. Supports a single IID or a comma-separated list of IIDs.'
   /* #swagger.parameters['value'] = {
-      description: 'IID to search for. Values with and without a preceding 0x are supported.'
+      description: 'IID(s) to search for. Values with and without a preceding 0x are supported. Multiple IIDs can be provided as a comma-separated list.'
   } */
   /* #swagger.responses[400] = {
-      description: 'Bad request - IID is blank or too long'
+      description: 'Bad request - IID is blank, too long, or too short'
   } */
-  const iid = CleanQueryText(request.query.value);
+  const inputIIDs = (request.query.value || '')
+    .split(',')
+    .map(v => v.trim())
+    .filter(v => v !== '');
 
-  if (iid === '') {
+  if (inputIIDs.length === 0) {
     return response.status(400).json({ error: 'instance id must not be blank' });
-  } else if (iid.length > 10) {
-    return response.status(400).json({ error: 'search term too long' });
   }
+
+  const iids = [];
+  for (const iid of inputIIDs) {
+    const value = CleanQueryText(iid);
+    if (value.length > 10) {
+      return response.status(400).json({ error: `search term too long: ${iid}` });
+    } else if (value.length < 8) {
+      return response.status(400).json({ error: `search term must be at least 8 characters: ${iid}` });
+    }
+    iids.push(value.replace(/^0x/, '').slice(-8));
+  }
+
+  const wheres = iids.map(() => `substr(TGIs.TGI, -8) LIKE ?`).join(' OR ');
+  const params = iids.map(iid => `%${iid}%`);
 
   const query = `
     SELECT Packages.Name Package, TGIs.TGI, TGICategories.Name Category, TGIs.Name ExemplarName
@@ -152,10 +167,9 @@ router.get('/iid', async (request, response) => {
     LEFT JOIN Files ON Files.Id = PackageFiles.FileId
     LEFT JOIN TGIs ON TGIs.FileId = Files.Id
     LEFT JOIN TGICategories on TGICategories.Id = TGIs.Category
-    WHERE substr(TGIs.TGI, -8) LIKE ?`;
-  const like = `%${iid}%`;
+    WHERE ${wheres}`;
   try {
-    const results = await ExecuteQuery(query, [like]);
+    const results = await ExecuteQuery(query, params);
     response.json(results);
   } catch (err) {
     response.status(500).json({ error: 'Database error', details: err.message });
