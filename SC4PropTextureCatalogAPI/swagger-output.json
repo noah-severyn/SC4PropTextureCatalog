@@ -3,7 +3,7 @@
   "info": {
     "title": "SC4 Prop Texture Catalog API",
     "description": "An API for the <a href=\"https://community.simtropolis.com/forums/topic/758501-simcity-4-prop-and-texture-catalogue-by-stex-custodian\">SimCity4 Prop & Texture Catalog</a>. Github: https://github.com/noah-severyn/SC4PropTextureCatalog",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "host": "localhost:3000",
   "basePath": "/",
@@ -81,11 +81,11 @@
     "/api/iid": {
       "get": {
         "summary": "Search for TGIs via IID",
-        "description": "Search for resources by Instance ID (IID). Searches the last 8 characters of TGI identifiers to find matching instance IDs.",
+        "description": "Search for resources by Instance ID (IID). Searches the last 8 characters of TGI identifiers to find matching instance IDs. Supports a single IID or a comma-separated list of IIDs.",
         "parameters": [
           {
             "name": "value",
-            "description": "IID to search for. Values with and without a preceding 0x are supported.",
+            "description": "IID(s) to search for. Values with and without a preceding 0x are supported. Multiple IIDs can be provided as a comma-separated list.",
             "in": "query",
             "type": "string"
           }
@@ -95,7 +95,7 @@
             "description": "OK"
           },
           "400": {
-            "description": "Bad request - IID is blank or too long"
+            "description": "Bad request - IID is blank, too long, or too short"
           },
           "500": {
             "description": "Internal Server Error"
