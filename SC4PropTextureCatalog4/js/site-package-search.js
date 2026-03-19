@@ -30,6 +30,9 @@ async function Setup() {
             keys: ["Package"],
             cache: true,
         },
+        resultsList: {
+            maxResults: 10
+        },
         resultItem: {
             highlight: true
         },
@@ -140,8 +143,16 @@ function FetchPackageTGIs(packageName) {
             const img = document.createElement("img");
             img.src = `https://thumbs.sc4proptexturecatalog.net/${bucketFolder}/${item.TGI.replaceAll('0x', '').replaceAll(', ', '-').toUpperCase()}.png`;
             img.style.height = '96px';
+            img.style.cursor = 'help';
             img.loading = 'lazy';
             img.classList.add('thumbnail');
+            img.addEventListener('click', () => {
+                navigator.clipboard.writeText(item.TGI).then(() => {
+                    const original = p.getAttribute('data-tooltip');
+                    p.setAttribute('data-tooltip', 'TGI copied!');
+                    setTimeout(() => p.setAttribute('data-tooltip', original), 1500);
+                });
+            });
 
             p.appendChild(img);
             flexDiv.appendChild(p);
