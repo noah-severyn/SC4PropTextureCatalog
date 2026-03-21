@@ -57,6 +57,7 @@ function QueryReturn(search_text, query_results) {
 	document.getElementById('QueryFilterCount').textContent = query_results.length;
 
 	const body = document.getElementById('QueryResultBody');
+	body.replaceChildren();
 	query_results.forEach(item => {
 		const tr = document.createElement("tr");
 
