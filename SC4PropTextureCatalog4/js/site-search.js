@@ -1,19 +1,26 @@
 // Setup on page load
 document.getElementById('QueryResultSummary').style.display = 'none';
 document.getElementById('QueryResultTable').style.display = 'none';
-ToggleThumbnailControlVisibility();
 
-function ToggleThumbnailControlVisibility() {
-	const bgGroup = document.getElementById("BackgroundGroup");
+
+document.getElementById('ThumbnailSize').addEventListener('input', () => {
 	const sizeElem = document.getElementById('ThumbnailSize');
-	// if (document.getElementById("ThumbnailToggle").checked) {
-	// 	bgGroup.style.display = "block";
-	// 	sizeElem.style.display = "block";
-	// } else {
-	// 	bgGroup.style.display = "none";
-	// 	sizeElem.style.display = "none";
-	// }
-}
+	const thumbCol = document.getElementById('QueryResultTable').getElementsByClassName('thumbnail-col');
+	if (sizeElem.value == "0") {
+		Array.from(thumbCol).forEach(cell => cell.style.display = 'none');
+	} else {
+		Array.from(thumbCol).forEach(cell => cell.style.display = '');
+	}
+	const images = document.getElementById('QueryResultBody').getElementsByTagName('img');
+	Array.from(images).forEach(img => {
+		if (sizeElem.value == "0") {
+			img.style.display = 'none';
+		} else {
+			img.style.display = '';
+			img.style.height = sizeElem.value + 'px';
+		}
+	});
+});
 
 
 document.getElementById('SearchForm').addEventListener('submit', () => {
@@ -79,11 +86,13 @@ function QueryReturn(search_text, query_results) {
 		const author = document.createElement("td");
 		author.textContent = item.Author;
 
-		//const thumb = document.createElement('td');
-		//const img = document.createElement('img');
-		//img.src = "img/7AB50E44-0986135E-1DA4A000.png";
-		//img.style.height = document.getElementById('ThumbnailSize').value;
-		//thumb.appendChild(img);
+		const thumb = document.createElement('td');
+		thumb.classList.add('thumbnail-col');
+		const img = document.createElement('img');
+		img.src = `https://thumbs.sc4proptexturecatalog.net/textures/${item.TGI.replaceAll(", ", "-").replaceAll("0x", "").toUpperCase()}.png`;
+		img.style.height = document.getElementById('ThumbnailSize').value + 'px';
+		img.style.border = "1px solid var(--pico-form-element-border-color)";
+		thumb.appendChild(img);
 
 		const name = document.createElement("td");
 		name.textContent = item.ExemplarName ?? "null";
@@ -91,8 +100,7 @@ function QueryReturn(search_text, query_results) {
 			name.style.fontStyle = "oblique";
 		}
 		
-
-		tr.append(package, file, tgi, category, author, name);
+		tr.append(package, file, tgi, category, author, thumb, name);
 		body.appendChild(tr);
 	});
 
