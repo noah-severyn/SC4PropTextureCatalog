@@ -22,10 +22,22 @@ document.getElementById('ThumbnailSize').addEventListener('input', () => {
 	});
 });
 
-
-document.getElementById('SearchForm').addEventListener('submit', () => {
+document.getElementById('SearchForm').addEventListener('submit', (event) => {
 	event.preventDefault();
-	SendQuery(document.getElementById('SearchBox').value);
+	const searchText = document.getElementById('SearchBox').value;
+	let query_results = [];
+	fetch(apiUrl + '/api/search?term=' + encodeURIComponent(searchText))
+		.then(response => {
+			if (!response.ok) {
+				throw new Error(`HTTP error! Status: ${response.status}`);
+			}
+			return response.json();
+		})
+		.then(data => {
+			query_results = data;
+			QueryReturn(searchText, query_results);
+		});
+	
 });
 
 const categories = document.getElementById('Categories').getElementsByTagName('input');
@@ -39,23 +51,11 @@ Array.from(categories).forEach(chk => {
 });
 
 
-function SendQuery(searchText) {
-	let query_results = [];
-	fetch(apiUrl + '/api/search?term=' + encodeURIComponent(searchText))
-		.then(response => {
-			if (!response.ok) {
-				throw new Error(`HTTP error! Status: ${response.status}`);
-			}
-			return response.json();
-		})
-		.then(data => {
-			query_results = data;
-			QueryReturn(searchText, query_results);
-		});
-}
-
-
-
+/**
+ * Update the main table with the query results.
+ * @param {string} search_text Query search text
+ * @param {Array} query_results Results of the query
+ */
 function QueryReturn(search_text, query_results) {
 	document.getElementById('QueryResultSummary').style.display = 'block';
 	document.getElementById('QueryResultTable').style.display = 'block';
