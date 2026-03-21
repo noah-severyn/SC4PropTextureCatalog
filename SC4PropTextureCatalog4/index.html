@@ -23,7 +23,7 @@
             <input type="Submit" value="Search" />
         </form>
 
-        <fieldset class="grid" style="width:200px; height:50px">
+        <fieldset class="grid">
             <details class="dropdown" id="Categories">
                 <summary>TGI Category</summary>
                 <ul>
@@ -35,19 +35,10 @@
                 </ul>
             </details>
 
-            <!--<div>
-                <input id="ThumbnailToggle" type="checkbox" role="switch" />
-                <label for="ThumbnailToggle">Show Thumbnails</label>
-            </div>
-
-            <details class="dropdown" id="ThumbnailSize">
-                <summary>Thumbnail Size</summary>
-                <ul>
-                    <li><label><input type="radio" name="tsize" value="32px" />32 px</label></li>
-                    <li><label><input type="radio" name="tsize" value="64px" />64 px</label></li>
-                    <li><label><input type="radio" name="tsize" value="96px" />96 px</label></li>
-                </ul>
-            </details>-->
+            <label>
+                Thumbnail Size
+                <input id="ThumbnailSize" type="range" min="0" max="128" step="16" value="80" />
+            </label>
         </fieldset>
 
 
@@ -63,7 +54,7 @@
                     <th>TGI</th>
                     <th>Category</th>
                     <th>Author</th>
-                    <!--<th>Thumbnail</th>-->
+                    <th class="thumbnail-col">Thumbnail</th>
                     <th>Exemplar Name</th>
                 </tr>
             </thead>
