@@ -113,7 +113,6 @@ function FetchPackageTGIs(packageName) {
 
     function AddTable(category, allData) {
         const detailsContainer = document.getElementById('PackageDetails');
-        const bucketFolder = category.toLowerCase();
         const dbCategory = category.replace(/s$/, '');
 
         const data = allData.filter(item => item.Category === dbCategory);
@@ -136,26 +135,7 @@ function FetchPackageTGIs(packageName) {
         flexDiv.classList.add('thumbnail-grid');
 
         data.forEach(item => {
-            //Pico tooltips only work with inline elements, so we have to wrap the img in a p. Dumb.
-            const p = document.createElement("p");
-            p.setAttribute('data-tooltip', item.TGI + '\n' + item.ExemplarName);
-
-            const img = document.createElement("img");
-            img.src = `https://thumbs.sc4proptexturecatalog.net/${bucketFolder}/${item.TGI.replaceAll('0x', '').replaceAll(', ', '-').toUpperCase()}.png`;
-            img.style.height = '96px';
-            img.style.cursor = 'help';
-            img.loading = 'lazy';
-            img.classList.add('thumbnail');
-            img.addEventListener('click', () => {
-                navigator.clipboard.writeText(item.TGI).then(() => {
-                    const original = p.getAttribute('data-tooltip');
-                    p.setAttribute('data-tooltip', 'TGI copied!');
-                    setTimeout(() => p.setAttribute('data-tooltip', original), 1500);
-                });
-            });
-
-            p.appendChild(img);
-            flexDiv.appendChild(p);
+            flexDiv.appendChild(CreateThumbnailImage(item.TGI, category, item.ExemplarName));
         });
         details.appendChild(flexDiv);
         detailsContainer.appendChild(details);

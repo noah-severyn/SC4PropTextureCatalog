@@ -53,3 +53,35 @@ function AddHeader() {
 	header.appendChild(nav);
 	document.body.insertBefore(header, document.body.firstChild);
 }
+
+/**
+ * Create a thumbnail image element for the specified TGI and category, with a tooltip showing the TGI and exemplar name.
+ * Clicking the thumbnail copies the TGI to the clipboard and shows a "TGI copied!" tooltip.
+ * Pico tooltips only work with inline elements, so the img element is wrapped in a p element. Dumb.
+ * @param {string} tgi - The TGI of the item.
+ * @param {string} category - The category of the item.
+ * @returns {HTMLElement} The thumbnail image element.
+ */
+function CreateThumbnailImage(tgi, category, itemName = null) {
+    const p = document.createElement("p");
+    p.setAttribute('data-tooltip', tgi + '\n' + (itemName || ''));
+
+    const img = document.createElement("img");
+    const bucketFolder = category.toLowerCase();
+    const extension = category === 'Textures' ? 'png' : 'jpg';
+    img.src = `https://thumbs.sc4proptexturecatalog.net/${bucketFolder}/${tgi.replaceAll('0x', '').replaceAll(', ', '-').toUpperCase()}.${extension}`;
+    img.style.height = '96px';
+    img.style.cursor = 'help';
+	img.style.border = "1px solid var(--pico-form-element-border-color)";
+    img.loading = 'lazy';
+    img.classList.add('thumbnail');
+    img.addEventListener('click', () => {
+        navigator.clipboard.writeText(tgi).then(() => {
+            const original = p.getAttribute('data-tooltip');
+            p.setAttribute('data-tooltip', 'TGI copied!');
+            setTimeout(() => p.setAttribute('data-tooltip', original), 1500);
+        });
+    });
+    p.appendChild(img);
+    return p;
+}

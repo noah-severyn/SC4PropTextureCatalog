@@ -88,11 +88,8 @@ function QueryReturn(search_text, query_results) {
 
 		const thumb = document.createElement('td');
 		thumb.classList.add('thumbnail-col');
-		const img = document.createElement('img');
-		img.src = `https://thumbs.sc4proptexturecatalog.net/textures/${item.TGI.replaceAll(", ", "-").replaceAll("0x", "").toUpperCase()}.png`;
-		img.style.height = document.getElementById('ThumbnailSize').value + 'px';
-		img.style.border = "1px solid var(--pico-form-element-border-color)";
-		thumb.appendChild(img);
+		const p = CreateThumbnailImage(item.TGI, item.Category + 's', item.ExemplarName);
+		thumb.appendChild(p);
 
 		const name = document.createElement("td");
 		name.textContent = item.ExemplarName ?? "null";
