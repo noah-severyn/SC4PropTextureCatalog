@@ -9,11 +9,19 @@ namespace SC4PropTextureCatalogBuilder {
     internal partial class DatabaseBuilder {
         private readonly string _thumbBaseFolder;
         private readonly SQLiteConnection _db;
+        private TGIFormatOptions _tgiFormat = new TGIFormatOptions {
+                Prefix = false,
+                Separator = "-",
+                Uppercase = true,
+            };
         /// <summary>
         /// Assets referenced in package metadata that are not found in the extract location.
         /// </summary>
         public HashSet<string> MissingAssets { get; private set; } = [];
         public List<DBPFError> Errors { get; private set; } = [];
+        /// <summary>
+        /// A listing of all image thumbnails collected so far, where key = TGI, value = file path.
+        /// </summary>
         public Dictionary<string, string> Thumbnails { get; private set; } = [];
 
         /// <summary>
@@ -96,7 +104,7 @@ namespace SC4PropTextureCatalogBuilder {
 
 
         /// <summary>
-        /// Fill the <c>TGIs</c> table.
+        /// Fill the <c>TGIs</c> table and extract image thumbnails.
         /// </summary>
         /// <remarks>The <c>Assets</c> and <c>Files</c> tables should be populated before executing this function. Any errors encountered are added to <see cref="Errors"/>.</remarks>
         public void FillTgiTable(Dictionary<string, SC4Pac.Package> packages) {
@@ -129,11 +137,6 @@ namespace SC4PropTextureCatalogBuilder {
         }
         private List<TGIItem> ExtractTGIs(string file, int fileId) {
             var items = new List<TGIItem>();
-            var tgiformat = new TGIFormatOptions {
-                Prefix = false,
-                Separator = "-",
-                Uppercase = true,
-            };
 
             FileStream fs;
             try {
@@ -159,7 +162,7 @@ namespace SC4PropTextureCatalogBuilder {
 
                     if (Thumbnails.Count > 0) {
                         //The texture TGI is logged by it's smallest size, but we want to save the largest size photo which is this IID + 4
-                        var fileName = entry.TGI.ToString(tgiformat);
+                        var fileName = entry.TGI.ToString(_tgiFormat);
                         var newTgi = new TGI(entry.TGI.TypeID, entry.TGI.GroupID, entry.TGI.InstanceID + 4);
                         
                         if (!Thumbnails.ContainsKey(fileName)) {
@@ -201,13 +204,13 @@ namespace SC4PropTextureCatalogBuilder {
                         }
                     }
 
-                    DBPFProperty prop = exmp.GetProperty("ExemplarName");
+                    DBPFProperty? prop = exmp.GetProperty("ExemplarName");
                     string exmpName;
                     if (prop is null) {
                         Errors.Add(new DBPFError(file, exmp.TGI, "missing property: ExemplarName"));
                         exmpName = "";
                     } else {
-                        exmpName = exmpName = (string) prop.GetData();
+                        exmpName = new string((char[]) prop.GetTypedData());
                     }
 
                     switch (exmpType) {
@@ -238,7 +241,7 @@ namespace SC4PropTextureCatalogBuilder {
                     if (prop == null) {
                         exmpName = "??";
                     } else {
-                        exmpName = (string) prop.GetData();
+                        exmpName = new string((char[]) prop.GetTypedData());
                     }
 
                     items.Add(new TGIItem(fileId, entry.TGI.ToString(), 10, exmpName));
