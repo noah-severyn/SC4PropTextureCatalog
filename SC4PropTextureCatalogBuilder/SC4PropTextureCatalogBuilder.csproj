@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <Reference Include="csDBPF">
-      <HintPath>..\..\csDBPF\csDBPF\csDBPF\bin\Debug\net8.0\csDBPF.dll</HintPath>
+      <HintPath>..\..\csDBPF\csDBPF\csDBPF\bin\Debug\net9.0\csDBPF.dll</HintPath>
     </Reference>
   </ItemGroup>
 

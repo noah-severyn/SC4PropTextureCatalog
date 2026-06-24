@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using csDBPF;
@@ -60,9 +61,8 @@ namespace SC4PropTextureCatalogBuilder {
         /// </summary>
         /// <returns>A dictionary of <see cref="Package"/>s keyed by the sc4pac package id, and a dictionary of <see cref="Asset"/>s, keyed by the sc4pac asset id.</returns>
         internal static (Dictionary<string, Package>, Dictionary<string, Asset>) ParseChannelJson(Dictionary<string, ChannelPaths> channels, ChannelOptions options) {
-            string json;
-            Dictionary<string, Package> packages = [];
-            Dictionary<string, Asset> assets = [];
+            ConcurrentDictionary<string, Package> packages = new();
+            ConcurrentDictionary<string, Asset> assets = new();
             var opt = new JsonSerializerOptions {
                 PropertyNameCaseInsensitive = true
             };
@@ -82,18 +82,19 @@ namespace SC4PropTextureCatalogBuilder {
                     break;
             }
 
-            foreach (string path in paths) {
-                json = File.ReadAllText(path);
+            Console.WriteLine("  > Parsing YAML files ...");
+            Parallel.ForEach(paths, path => {
+                using var stream = File.OpenRead(path);
                 if (path.Contains("sc4pacAsset")) {
-                    var asset = JsonSerializer.Deserialize<Asset>(json, opt) ?? new Asset();
+                    var asset = JsonSerializer.Deserialize<Asset>(stream, opt) ?? new Asset();
                     _ = assets.TryAdd(asset.AssetId, asset);
                 } else {
-                    var pkg = JsonSerializer.Deserialize<Package>(json, opt) ?? new Package();
+                    var pkg = JsonSerializer.Deserialize<Package>(stream, opt) ?? new Package();
                     _ = packages.TryAdd(pkg.Group + ":" + pkg.Name, pkg);
                 }
-            }
+            });
 
-            return (packages, assets);
+            return (new Dictionary<string, Package>(packages), new Dictionary<string, Asset>(assets));
         }
         private static IEnumerable<string> Parse(string yamlPath, string jsonPath) {
             Console.WriteLine("  > parsing " + yamlPath);
