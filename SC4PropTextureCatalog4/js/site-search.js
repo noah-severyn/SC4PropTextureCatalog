@@ -36,6 +36,9 @@ document.getElementById('SearchForm').addEventListener('submit', (event) => {
 		.then(data => {
 			query_results = data;
 			QueryReturn(searchText, query_results);
+			if(document.getElementById('ThumbnailSize').value == "0") {
+				document.querySelectorAll('.thumbnail-col').forEach(el => el.style.display = 'none');
+			};
 		});
 	
 });
@@ -88,7 +91,7 @@ function QueryReturn(search_text, query_results) {
 
 		const thumb = document.createElement('td');
 		thumb.classList.add('thumbnail-col');
-		const p = CreateThumbnailImage(item.TGI, item.Category + 's', item.ExemplarName);
+		const p = CreateThumbnailImage(item.TGI, document.getElementById('ThumbnailSize').value, item.Category + 's', item.ExemplarName);
 		thumb.appendChild(p);
 
 		const name = document.createElement("td");

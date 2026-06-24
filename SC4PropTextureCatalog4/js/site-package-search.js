@@ -135,7 +135,7 @@ function FetchPackageTGIs(packageName) {
         flexDiv.classList.add('thumbnail-grid');
 
         data.forEach(item => {
-            flexDiv.appendChild(CreateThumbnailImage(item.TGI, category, item.ExemplarName));
+            flexDiv.appendChild(CreateThumbnailImage(item.TGI, 96, category, item.ExemplarName));
         });
         details.appendChild(flexDiv);
         detailsContainer.appendChild(details);
