@@ -141,6 +141,7 @@ namespace SC4PropTextureCatalogBuilder {
             public int PropCount { get; set; }
             public int FloraCount { get; set; }
             public int BuildingCount { get; set; }
+            public int ModelCount { get; set; }
 
             public FileItem() {
                 
