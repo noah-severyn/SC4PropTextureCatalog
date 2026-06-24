@@ -69,7 +69,7 @@ function CreateThumbnailImage(tgi, category, itemName = null) {
     const img = document.createElement("img");
     const bucketFolder = category.toLowerCase();
     const extension = category === 'Textures' ? 'png' : 'jpg';
-    img.src = `https://thumbs.sc4proptexturecatalog.net/${bucketFolder}/${tgi.replaceAll('0x', '').replaceAll(', ', '-').toUpperCase()}.${extension}`;
+    img.src = `https://thumbs.sc4proptexturecatalog.net/${bucketFolder}/${tgi?.replaceAll('0x', '').replaceAll(', ', '-').toUpperCase()}.${extension}`;
     img.style.height = '96px';
     img.style.cursor = 'help';
 	img.style.border = "1px solid var(--pico-form-element-border-color)";
