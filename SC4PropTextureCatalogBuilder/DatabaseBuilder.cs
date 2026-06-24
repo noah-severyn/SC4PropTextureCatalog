@@ -1,4 +1,6 @@
-﻿using csDBPF;
+﻿using System.Collections.Concurrent;
+using System.Collections.Generic;
+using csDBPF;
 using SixLabors.ImageSharp;
 using SQLite;
 
@@ -9,11 +11,33 @@ namespace SC4PropTextureCatalogBuilder {
     internal partial class DatabaseBuilder {
         private readonly string _thumbBaseFolder;
         private readonly SQLiteConnection _db;
+        private readonly TGIFormatOptions _tgiFormat = new TGIFormatOptions {
+                Prefix = false,
+                Separator = "-",
+                Uppercase = true,
+            };
+        /// <summary>
+        /// The new PIMX creates preview thumbnails by the <i>model's</i> TGI.
+        /// </summary>
+        private readonly Dictionary<TGI, string> _pimxThumbs = [];
+
+        private readonly struct ItemCounts(int fileId, int textureCnt, int propCnt, int floraCnt, int buildingCnt, int modelCnt) {
+            public readonly int FileId = fileId;
+            public readonly int TextureCnt = textureCnt;
+            public readonly int PropCnt = propCnt;
+            public readonly int FloraCnt = floraCnt;
+            public readonly int BuildingCnt = buildingCnt;
+            public readonly int ModelCnt = modelCnt;
+        }
+
         /// <summary>
         /// Assets referenced in package metadata that are not found in the extract location.
         /// </summary>
         public HashSet<string> MissingAssets { get; private set; } = [];
-        public List<DBPFError> Errors { get; private set; } = [];
+        public ConcurrentBag<DBPFError> Errors { get; private set; } = [];
+        /// <summary>
+        /// A listing of all image thumbnails collected so far, where key = TGI, value = file path.
+        /// </summary>
         public Dictionary<string, string> Thumbnails { get; private set; } = [];
 
         /// <summary>
@@ -33,6 +57,7 @@ namespace SC4PropTextureCatalogBuilder {
                 _db.Insert(new TGICategory(1, "Prop"));
                 _db.Insert(new TGICategory(2, "Texture"));
                 _db.Insert(new TGICategory(4, "Flora"));
+                _db.Insert(new TGICategory(9, "Model"));
                 _db.Insert(new TGICategory(10, "Cohort"));
                 _db.Insert(new TGICategory(11, "LTEXT"));
                 _db.Insert(new TGICategory(12, "Lua"));
@@ -105,163 +130,177 @@ namespace SC4PropTextureCatalogBuilder {
             var allAssets = _db.Query<AssetItem>("SELECT * FROM Assets").ToDictionary(a => a.Name, a => a.Id);
             var allFiles = _db.Query<FileItem>("SELECT * FROM Files").ToDictionary(f => f.AssetId + "|" + f.Name, f => f.Id);
 
-            
-            List<TGIItem> items = [];
-            int idx = 0;
-            foreach (var pkg in packages) {
-                Console.WriteLine($"  > writing {idx}/{packages.Count} packages : " + pkg.Key);
-                foreach (var file in pkg.Value.LocalFiles) {
+            // Deduplicate: the same physical file can be referenced by multiple packages
+            var filesToProcess = new Dictionary<int, string>();
+            foreach (var pkg in packages.Values) {
+                foreach (var file in pkg.LocalFiles) {
                     var fileName = Path.GetFileName(file.FilePath);
                     allAssets.TryGetValue(file.AssetName, out var assetId);
-                    var fileFound = allFiles.TryGetValue(assetId + "|" + fileName, out var fileId);
-                    if (!fileFound) {
+                    if (!allFiles.TryGetValue(assetId + "|" + fileName, out var fileId)) {
                         Errors.Add(new DBPFError(file.FilePath, null, $"Key {assetId + "|" + fileName} not found in the 'Files' table"));
                         continue;
                     }
-                    items.AddRange(ExtractTGIs(file.FilePath, fileId));
+                    filesToProcess.TryAdd(fileId, file.FilePath);
                 }
-                idx++;
             }
 
+            Console.WriteLine($"  > processing {filesToProcess.Count} unique files across {packages.Count} packages ...");
+
+            var allItems = new ConcurrentBag<List<TGIItem>>();
+            var allCounts = new ConcurrentBag<ItemCounts>(); 
+            int processed = 0;
+
+            Parallel.ForEach(filesToProcess, kvp => {
+                var (items, counts) = ExtractTGIs(kvp.Value, kvp.Key);
+                allItems.Add(items);
+                allCounts.Add(new ItemCounts(kvp.Key, counts.TextureCnt, counts.PropCnt, counts.FloraCnt, counts.BuildingCnt, counts.ModelCnt));
+
+                int n = Interlocked.Increment(ref processed);
+                if (n % 100 == 0) Console.WriteLine($"  > processed {n}/{filesToProcess.Count} files");
+            });
+
+            // Flatten on a single thread after parallel work is done
+            var flatItems = allItems.SelectMany(x => x).ToList();
+
+            Console.WriteLine($"  > writing {allItems.Count} TGI records to database ...");
             _db.RunInTransaction(() => {
-                _db.InsertAll(items);
+                _db.InsertAll(flatItems);
+                foreach (ItemCounts counts in allCounts) {
+                    _db.Execute("UPDATE Files SET TextureCount = ?, PropCount = ?, FloraCount = ?, BuildingCount = ?, ModelCount = ? WHERE Id = ?",
+                        counts.TextureCnt, counts.PropCnt, counts.FloraCnt, counts.BuildingCnt, counts.FileId);
+                }
             });
         }
-        private List<TGIItem> ExtractTGIs(string file, int fileId) {
+
+        private (List<TGIItem> TGIs, ItemCounts) ExtractTGIs(string file, int fileId) {
             var items = new List<TGIItem>();
-            var tgiformat = new TGIFormatOptions {
-                Prefix = false,
-                Separator = "-",
-                Uppercase = true,
-            };
+            int textureCnt = 0, propCnt = 0, buildingCnt = 0, floraCnt = 0, modelCnt = 0;
 
             FileStream fs;
             try {
-                fs = new FileStream(file, FileMode.Open);
+                fs = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.Read);
             }
             catch (Exception) {
                 Errors.Add(new DBPFError(Path.GetFileName(file), null, "Opening file failed"));
                 Console.WriteLine("  > could not open " + file);
-                return [];
+                return ([], new ItemCounts());
             }
-            DBPFFile dbpf = new DBPFFile(fs);
 
-            var targetEntries = dbpf.ListOfEntries.Where(e => e.MatchesAnyEntryType(DBPFTGI.FSH_BASE_OVERLAY, DBPFTGI.EXEMPLAR, DBPFTGI.COHORT, DBPFTGI.LTEXT, DBPFTGI.LUA, DBPFTGI.LUA_GEN, DBPFTGI.UI));
-            int textureCnt = 0;
-            int propCnt = 0;
-            int buildingCnt = 0;
-            int floraCnt = 0;            
+            using (fs) {
+                DBPFFile dbpf = new DBPFFile(fs);
+                var targetEntries = dbpf.ListOfEntries.Where(e => e.MatchesAnyEntryType(DBPFTGI.FSH_BASE_OVERLAY, DBPFTGI.EXEMPLAR, DBPFTGI.COHORT, DBPFTGI.S3D, DBPFTGI.LTEXT, DBPFTGI.LUA, DBPFTGI.LUA_GEN, DBPFTGI.UI));
 
-            foreach (DBPFEntry entry in targetEntries) {
-                //Add Base/Overlay textures (look at the least significant 4 bits and only add if it is 0, 5, or A: AND the Instance by 0b1111 (0xF) and examine the modulus result)
-                if (entry.MatchesEntryType(DBPFTGI.FSH_BASE_OVERLAY) && ((entry.TGI.InstanceID & 0xF) % 5) == 0) {
-                    items.Add(new TGIItem(fileId, entry.TGI.ToString(), 2, null));
+                foreach (DBPFEntry entry in targetEntries) {
+                    //Add Base/Overlay textures (look at the least significant 4 bits and only add if it is 0, 5, or A: AND the Instance by 0b1111 (0xF) and examine the modulus result)
+                    if (entry.MatchesEntryType(DBPFTGI.FSH_BASE_OVERLAY) && ((entry.TGI.InstanceID & 0xF) % 5) == 0) {
+                        items.Add(new TGIItem(fileId, entry.TGI.ToString(), 2, null));
 
-                    if (Thumbnails.Count > 0) {
-                        //The texture TGI is logged by it's smallest size, but we want to save the largest size photo which is this IID + 4
-                        var fileName = entry.TGI.ToString(tgiformat);
-                        var newTgi = new TGI(entry.TGI.TypeID, entry.TGI.GroupID, entry.TGI.InstanceID + 4);
-                        
-                        if (!Thumbnails.ContainsKey(fileName)) {
-                            var largestFsh = (DBPFEntryFSH) dbpf.GetEntry(newTgi);
-                            try {
-                                largestFsh.Decode();
-                                var img = largestFsh.Image;
-                                var path = Path.Combine(_thumbBaseFolder, "textures", fileName + ".png");
-                                img.SaveAsPng(path);
-                            }
-                            catch (Exception) {
-                                Errors.Add(new DBPFError(file, newTgi, "Failed to decode FSH"));
+                        if (Thumbnails.Count > 0) {
+                            //The texture TGI is logged by it's smallest size, but we want to save the largest size photo which is this IID + 4
+                            var fileName = entry.TGI.ToString(_tgiFormat);
+                            var newTgi = new TGI(entry.TGI.TypeID, entry.TGI.GroupID, entry.TGI.InstanceID + 4);
+
+                            if (!Thumbnails.ContainsKey(fileName)) {
+                                var largestFsh = (DBPFEntryFSH) dbpf.GetEntry(newTgi);
+                                try {
+                                    largestFsh.Decode();
+                                    var img = largestFsh.Image;
+                                    var path = Path.Combine(_thumbBaseFolder, "textures", fileName + ".png");
+                                    img.SaveAsPng(path);
+                                }
+                                catch (Exception) {
+                                    Errors.Add(new DBPFError(file, newTgi, "Failed to decode FSH"));
+                                }
                             }
                         }
+                        textureCnt++;
                     }
-                    textureCnt++;
-                }
 
-                //Add Exemplars
-                else if (entry.MatchesEntryType(DBPFTGI.EXEMPLAR)) {
-                    DBPFEntryEXMP exmp = (DBPFEntryEXMP) entry;
-                    try {
+                    //Add Exemplars
+                    else if (entry.MatchesEntryType(DBPFTGI.EXEMPLAR)) {
+                        DBPFEntryEXMP exmp = (DBPFEntryEXMP) entry;
+                        try {
+                            exmp.Decode();
+                        }
+                        catch (Exception ex) {
+                            Errors.Add(new DBPFError(file, exmp.TGI, ex.Message));
+                            continue;
+                        }
+
+                        if (exmp.ListOfProperties.Count == 0) continue;
+
+                        DBPFProperty.ExemplarType exmpType = exmp.GetExemplarType();
+                        if (exmpType == DBPFProperty.ExemplarType.LotConfiguration) continue;
+
+                        if (exmpType == DBPFProperty.ExemplarType.Error) {
+                            Errors.Add(new DBPFError(file, exmp.TGI, "missing property: ExemplarType"));
+                            if (exmp.HasProperty("Demand Satisfied")) {
+                                exmpType = DBPFProperty.ExemplarType.Building;
+                            }
+                        }
+
+                        DBPFProperty? prop = exmp.GetProperty("ExemplarName");
+                        string exmpName;
+                        if (prop is null) {
+                            Errors.Add(new DBPFError(file, exmp.TGI, "missing property: ExemplarName"));
+                            exmpName = "";
+                        } else {
+                            exmpName = new string((char[]) prop.GetTypedData());
+                        }
+
+                        switch (exmpType) {
+                            case DBPFProperty.ExemplarType.Building:
+                                items.Add(new TGIItem(fileId, entry.TGI.ToString(), 0, exmpName));
+                                CopyPimxThumbnail(exmp, exmpType, file, exmpName);
+                                buildingCnt++;
+                                break;
+                            case DBPFProperty.ExemplarType.Prop:
+                                items.Add(new TGIItem(fileId, entry.TGI.ToString(), 1, exmpName));
+                                CopyPimxThumbnail(exmp, exmpType, file, exmpName);
+                                propCnt++;
+                                break;
+                            case DBPFProperty.ExemplarType.FloraFauna:
+                                items.Add(new TGIItem(fileId, entry.TGI.ToString(), 4, exmpName));
+                                CopyPimxThumbnail(exmp, exmpType, file, exmpName);
+                                floraCnt++;
+                                break;
+                        }
+                    }
+
+                    //Add Cohorts (note the building/prop family of the cohort is always 0x10000000 less than the Cohort's Index)
+                    else if (entry.MatchesEntryType(DBPFTGI.COHORT)) {
+                        DBPFEntryEXMP exmp = (DBPFEntryEXMP) entry;
                         exmp.Decode();
-                    }
-                    catch (Exception ex) {
-                        Errors.Add(new DBPFError(file, exmp.TGI, ex.Message));
-                        continue;
-                    }
-                        
-                    if (exmp.ListOfProperties.Count == 0) continue;
-
-                    DBPFProperty.ExemplarType exmpType = exmp.GetExemplarType();
-                    if (exmpType == DBPFProperty.ExemplarType.LotConfiguration) {
-                        continue;
-                    } else if (exmpType == DBPFProperty.ExemplarType.Error) {
-                        Errors.Add(new DBPFError(file, exmp.TGI, "missing property: ExemplarType"));
-                        if (exmp.HasProperty("Demand Satisfied")) {
-                            exmpType = DBPFProperty.ExemplarType.Building;
-                        }
+                        if (exmp.ListOfProperties.Count == 0) continue;
+                        var prop = exmp.GetProperty("ExemplarName");
+                        string exmpName = prop == null ? "??" : new string((char[]) prop.GetTypedData());
+                        items.Add(new TGIItem(fileId, entry.TGI.ToString(), 10, exmpName));
                     }
 
-                    DBPFProperty prop = exmp.GetProperty("ExemplarName");
-                    string exmpName;
-                    if (prop is null) {
-                        Errors.Add(new DBPFError(file, exmp.TGI, "missing property: ExemplarName"));
-                        exmpName = "";
-                    } else {
-                        exmpName = exmpName = (string) prop.GetData();
+                    //Add S3D models (log entries where the 6th + 7th IID digit is zero)
+                    else if (entry.MatchesEntryType(DBPFTGI.S3D) && (entry.TGI.InstanceID & 0x00000FF0) == 0) {
+                        items.Add(new TGIItem(fileId, entry.TGI.ToString(), 9, null));
+                        modelCnt++;
                     }
 
-                    switch (exmpType) {
-                        case DBPFProperty.ExemplarType.Building:
-                            items.Add(new TGIItem(fileId, entry.TGI.ToString(), 0, exmpName));
-                            buildingCnt++;
-                            break;
-                        case DBPFProperty.ExemplarType.Prop:
-                            items.Add(new TGIItem(fileId, entry.TGI.ToString(), 1, exmpName));
-                            propCnt++;
-                            break;
-                        case DBPFProperty.ExemplarType.FloraFauna:
-                            items.Add(new TGIItem(fileId, entry.TGI.ToString(), 4, exmpName));
-                            floraCnt++;
-                            break;
-                    }
-                }
-
-
-                //Add Cohorts (note the building/prop family of the cohort is always 0x10000000 less than the Cohort's Index)
-                else if (entry.MatchesEntryType(DBPFTGI.COHORT)) {
-                    DBPFEntryEXMP exmp = (DBPFEntryEXMP) entry;
-                    TGI family = new TGI(entry.TGI.TypeID, entry.TGI.GroupID, entry.TGI.InstanceID - 0x10000000);
-                    exmp.Decode();
-                    if (exmp.ListOfProperties.Count == 0) continue;
-                    string exmpName;
-                    var prop = exmp.GetProperty("ExemplarName");
-                    if (prop == null) {
-                        exmpName = "??";
-                    } else {
-                        exmpName = (string) prop.GetData();
+                    //Add LTEXTs
+                    else if (entry.MatchesEntryType(DBPFTGI.LTEXT)) {
+                        items.Add(new TGIItem(fileId, entry.TGI.ToString(), 11, null));
                     }
 
-                    items.Add(new TGIItem(fileId, entry.TGI.ToString(), 10, exmpName));
-                }
+                    //Add LUAs
+                    else if (entry.MatchesAnyEntryType(DBPFTGI.LUA, DBPFTGI.LUA_GEN)) {
+                        items.Add(new TGIItem(fileId, entry.TGI.ToString(), 12, null));
+                    }
 
-                //Add LTEXTs
-                else if (entry.MatchesEntryType(DBPFTGI.LTEXT)) {
-                    items.Add(new TGIItem(fileId, entry.TGI.ToString(), 11, null));
-                }
-
-                //Add LUAs
-                else if (entry.MatchesAnyEntryType(DBPFTGI.LUA, DBPFTGI.LUA_GEN)) {
-                    items.Add(new TGIItem(fileId, entry.TGI.ToString(), 12, null));
-                }
-
-                //Add UIs
-                else if (entry.MatchesEntryType(DBPFTGI.UI)) {
-                    items.Add(new TGIItem(fileId, entry.TGI.ToString(), 13, null));
+                    //Add UIs
+                    else if (entry.MatchesEntryType(DBPFTGI.UI)) {
+                        items.Add(new TGIItem(fileId, entry.TGI.ToString(), 13, null));
+                    }
                 }
             }
 
-            _db.Execute($"UPDATE Files SET TextureCount = ?, PropCount = ?, FloraCount = ?, BuildingCount = ? WHERE Id = ?", textureCnt, propCnt, floraCnt, buildingCnt, fileId);
-            return items;
+            return (items, new ItemCounts(-1, textureCnt, propCnt, floraCnt, buildingCnt, modelCnt));
         }
 
 
