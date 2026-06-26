@@ -1,5 +1,4 @@
 ﻿using System.Text.Json;
-using csDBPF;
 using SC4PropTextureCatalogBuilder;
 
 bool createDb = PromptYesNo("Create new database?");
@@ -24,39 +23,46 @@ channels.Add("simtropolis", new ChannelPaths("C:\\source\\repos\\simtropolis-cha
 channels.Add("sc4evermore", new ChannelPaths("C:\\source\\repos\\sc4e-channel\\src\\yaml", Path.Combine(basefolder, "sc4evermore-channel\\json")));
 // ===================================================================================================================================================
 
-if (PromptYesNo("Extract and move files?")) {
-    FileMgt.ExtractAndMoveFiles(sc4pacCachePath, extractLocation);
-}
 if (PromptYesNo("Build channels?")) {
     ChannelOptions buildOpt = PromptChannelOption("Which channel(s) do you want to build? (YAML → JSON)");
     SC4Pac.BuildChannels(channels, buildOpt);
 }
-ChannelOptions parseOpt = PromptChannelOption("Which channel(s) do you want to parse? (JSON → DB Objects)");
+
+bool yesToAll = PromptYesNo("Yes to all steps?");
+if (yesToAll || PromptYesNo("Extract and move files?")) {
+    FileMgt.ExtractAndMoveFiles(sc4pacCachePath, extractLocation);
+}
+ChannelOptions parseOpt;
+if (yesToAll) {
+    parseOpt = ChannelOptions.All;
+} else {
+    parseOpt = PromptChannelOption("Which channel(s) do you want to parse? (JSON → DB Objects)");
+}
 (var packages, var assets) = SC4Pac.ParseChannelJson(channels, parseOpt);
 var sc4Files = SC4Pac.ListCacheFiles(extractLocation);
 var missingAssets = SC4Pac.ExtractFilesFromPackages(sc4Files, ref packages, assets);
 
 DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb, thumbPath);
-if (PromptYesNo("Fill Assets & Files table?")) {
+if (yesToAll || PromptYesNo("Fill Assets & Files table?")) {
     db.FillAssetAndFileTable(sc4Files, assets);
 }
-if (PromptYesNo("Fill TGI table?")) {
+if (yesToAll || PromptYesNo("Fill TGI table?")) {
     db.FillTgiTable(packages);
 }
-if (PromptYesNo("Fill Package table?")) {
+if (yesToAll || PromptYesNo("Fill Package table?")) {
     db.FillPackageTable(packages);
 }
-if (PromptYesNo("Fill PackageFile table?")) {
+if (yesToAll || PromptYesNo("Fill PackageFile table?")) {
     db.FillPackageFileTable(packages);
 }
-if (PromptYesNo("Copy database to API path?")) {
+if (yesToAll || PromptYesNo("Copy database to API path?")) {
     File.Copy(dbPath, apiPath, true);
 }
-if (PromptYesNo("Upload thumbnails to Cloudflare R2?")) {
+if (yesToAll || PromptYesNo("Upload thumbnails to Cloudflare R2?")) {
     ThumbnailUploader r2 = new ThumbnailUploader();
     await r2.UploadFolderAsync(thumbPath, "textures");
 }
-if (PromptYesNo("Output errors to JSON")) {
+if (yesToAll || PromptYesNo("Output errors to JSON")) {
     string json = JsonSerializer.Serialize(db.Errors, new JsonSerializerOptions { IncludeFields = true });
     File.WriteAllText(Path.Combine(dataPath, $"Errors-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.json"), json);
 }
