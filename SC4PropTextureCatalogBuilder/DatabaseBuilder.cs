@@ -154,7 +154,7 @@ namespace SC4PropTextureCatalogBuilder {
             Console.WriteLine($"  > processing {filesToProcess.Count} unique files across {packages.Count} packages ...");
 
             var allItems = new ConcurrentBag<List<TGIItem>>();
-            var allCounts = new ConcurrentBag<ItemCounts>(); 
+            var allCounts = new ConcurrentBag<ItemCounts>();
             int processed = 0;
 
             Parallel.ForEach(filesToProcess, kvp => {
@@ -166,12 +166,15 @@ namespace SC4PropTextureCatalogBuilder {
                 if (n % 100 == 0) Console.WriteLine($"  > processed {n}/{filesToProcess.Count} files");
             });
 
-            Console.WriteLine($"  > writing {allItems.Count} TGI records to database ...");
+            // Flatten on a single thread after parallel work is done
+            var flatItems = allItems.SelectMany(x => x).ToList();
+
+            Console.WriteLine($"  > writing {flatItems.Count} TGI records to database ...");
             _db.RunInTransaction(() => {
-                _db.InsertAll(allItems);
-                foreach (var (fileId, textures, props, flora, buildings, models) in allCounts) {
+                _db.InsertAll(flatItems);
+                foreach (ItemCounts cnts in allCounts) {
                     _db.Execute("UPDATE Files SET TextureCount = ?, PropCount = ?, FloraCount = ?, BuildingCount = ?, ModelCount = ? WHERE Id = ?",
-                        textures, props, flora, buildings, fileId);
+                        cnts.TextureCnt, cnts.PropCnt, cnts.FloraCnt, cnts.BuildingCnt, cnts.ModelCnt, cnts.FileId);
                 }
             });
         }
@@ -255,20 +258,18 @@ namespace SC4PropTextureCatalogBuilder {
                         switch (exmpType) {
                             case DBPFProperty.ExemplarType.Building:
                                 items.Add(new TGIItem(fileId, entry.TGI.ToString(), 0, exmpName));
-                                CopyPimxThumbnail(exmp, exmpType, file, exmpName);
                                 buildingCnt++;
                                 break;
                             case DBPFProperty.ExemplarType.Prop:
                                 items.Add(new TGIItem(fileId, entry.TGI.ToString(), 1, exmpName));
-                                CopyPimxThumbnail(exmp, exmpType, file, exmpName);
                                 propCnt++;
                                 break;
                             case DBPFProperty.ExemplarType.FloraFauna:
                                 items.Add(new TGIItem(fileId, entry.TGI.ToString(), 4, exmpName));
-                                CopyPimxThumbnail(exmp, exmpType, file, exmpName);
                                 floraCnt++;
                                 break;
                         }
+                        CopyPimxThumbnail(exmp, exmpType, file, exmpName);
                     }
 
                     //Add Cohorts (note the building/prop family of the cohort is always 0x10000000 less than the Cohort's Index)
@@ -305,58 +306,6 @@ namespace SC4PropTextureCatalogBuilder {
             }
 
             return (items, new ItemCounts(-1, textureCnt, propCnt, floraCnt, buildingCnt, modelCnt));
-        }
-
-        /// <summary>
-        /// Extract the exemplar's model TGI via the RTK1/RTK4 property, and copy the matching thumbnail from the PIMX cache to the database cache with the exemplar's TGI. An error is logged if the thumbnail does not exist.
-        /// </summary>
-        /// <param name="entry">Exemplar entry to examine</param>
-        /// <param name="exmpType">Exemplar entry type. Saves a second call to <c>GetExempalrType()</c>.</param>
-        /// <param name="dbpfFilePath">Used for error logging</param>
-        /// <param name="exemplarName">Used for error logging</param>
-        internal void CopyPimxThumbnail(DBPFEntryEXMP entry, DBPFProperty.ExemplarType exmpType, string dbpfFilePath, string exemplarName) {
-            var thumbPath = _thumbBaseFolder;
-            switch (exmpType) {
-                case DBPFProperty.ExemplarType.Building:
-                    thumbPath += "\\buildings\\";
-                    break;
-                case DBPFProperty.ExemplarType.FloraFauna:
-                    thumbPath += "\\flora\\";
-                    break;
-                case DBPFProperty.ExemplarType.Prop:
-                    thumbPath += "\\props\\";
-                    break;
-                default:
-                    return;
-            }
-
-            if (entry.HasProperty(0x27812821)) { //RTK1
-                var rtk1 = entry.GetProperty(0x27812821);
-                var tgi = new TGI((uint) rtk1.GetTypedData(0), (uint) rtk1.GetTypedData(1), (uint) rtk1.GetTypedData(2));
-
-                if (_pimxThumbs.TryGetValue(tgi, out string? path)) {
-                    var newImg = Path.Combine(thumbPath, entry.TGI.ToString(_tgiFormat)) + ".jpg";
-                    if (!File.Exists(newImg)) {
-                        File.Copy(path, newImg);
-                    }
-                } else {
-                    Errors.Add(new DBPFError(dbpfFilePath, entry.TGI, "Missing thumbnail for " + exemplarName));
-                }
-            } 
-            
-            else if (entry.HasProperty(0x27812824)) { //RTK4
-                var rtk4 = entry.GetProperty(0x27812824);
-                var tgi = new TGI((uint) rtk4.GetTypedData(5), (uint) rtk4.GetTypedData(6), (uint) rtk4.GetTypedData(7));
-
-                if (_pimxThumbs.TryGetValue(tgi, out string? path)) {
-                    var newImg = Path.Combine(thumbPath, entry.TGI.ToString(_tgiFormat)) + ".jpg";
-                    if (!File.Exists(newImg)) {
-                        File.Copy(path, newImg);
-                    }
-                } else {
-                    Errors.Add(new DBPFError(dbpfFilePath, entry.TGI, "Missing thumbnail for " + exemplarName));
-                }
-            }
         }
 
         /// <summary>
