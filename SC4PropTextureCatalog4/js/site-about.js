@@ -28,6 +28,7 @@ async function FetchStats() {
             document.getElementById('PropCnt').textContent = propTgis;
             document.getElementById('FloraCnt').textContent = floraTgis;
             document.getElementById('BuildingCnt').textContent = buildingTgis;
+            document.getElementById('ModelCnt').textContent = data[0].Models;
         });
     
     await fetch(apiUrl + '/api/thumbnailstats')
@@ -44,13 +45,9 @@ async function FetchStats() {
             var buildings = data[0].BuildingCount;
             const total = textures + props + flora + buildings;
 
-            document.getElementById('TextureCnt').value = textures;
             document.getElementById('TextureProg').value = textures / textureTgis;
-            document.getElementById('PropCnt').value = props;
             document.getElementById('PropProg').value = props / propTgis;
-            document.getElementById('FloraCnt').value = flora;
             document.getElementById('FloraProg').value = flora / floraTgis;
-            document.getElementById('BuildingCnt').value = buildings;
             document.getElementById('BuildingProg').value = buildings / buildingTgis;
 
             document.getElementById('TexturePct').textContent = GeneratePctLabel(textures, textureTgis);
