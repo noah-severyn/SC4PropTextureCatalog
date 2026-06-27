@@ -24,22 +24,46 @@
         <p>&copy; 2021-2026 · SC4PropTextureCatalog · Noah Severyn</p>
 
         <h1>Stats</h1>
-        <ul>
-            <li><span id="PackageCnt"></span> packages indexed, spanning <span id="AssetCnt"></span> unique assets and <span id="FileCnt"></span> files</li>
-            <li><span id="TgiCnt"></span> TGIs indexed</li>
-            <ul>
-                <li><span id="TextureCnt"></span> textures</li>
-                <li><span id="PropCnt"></span> props</li>
-                <li><span id="FloraCnt"></span> flora</li>
-                <li><span id="BuildingCnt"></span> buildings</li>
-            </ul>
-            <li>Thumbnail Coverage: <meter id="ThumbnailCoverage" max="1" low=".33" high=".7" optimum="1" style="width:200px"></meter> <span id="ThumbnailCoveragePct"></span></li>
-        </ul>
+
+        <article>
+            <p><span id="PackageCnt"></span> packages indexed, spanning <span id="AssetCnt"></span> unique assets and <span id="FileCnt"></span> files</p>
+            <p><span id="TgiCnt"></span> TGIs indexed</p>
+        </article>
+        <div class="grid">
+            <article>
+                <p><span id="TextureCnt"></span> textures</p>
+                <progress id="TextureProg" max="1" style="width:80%"></progress>
+                <p><span id="TexturePct"></span></p>
+            </article>
+            <article>
+                <p><span id="PropCnt"></span> props</p>
+                <progress id="PropProg" max="1" style="width:80%"></progress>
+                <p><span id="PropPct"></span></p>
+            </article>
+            <article>
+                <p><span id="FloraCnt"></span> flora</p>
+                <progress id="FloraProg" max="1" style="width:80%"></progress>
+                <p><span id="FloraPct"></span></p>
+            </article>
+            <article>
+                <p><span id="BuildingCnt"></span> buildings</p>
+                <progress id="BuildingProg" max="1" style="width:80%"></progress>
+                <p><span id="BuildingPct"></span></p>
+            </article>
+        </div>
 
 
         <hr>
         <details>
             <summary>Changelog (click to expand)</summary>
+
+            <h4>v4.1 (Jun 2026)</h4>
+            <ul>
+                <li>Expand the catalog to include S3D/model TGIs</li>
+                <li>Added first batch of prop thumbnails.</li>
+                <li>Added new API endpoint for thumbnail counts.</li>
+            </ul>
+            <hr>
 
             <h4>v4.0 (Feb 2026)</h4>
             <ul>

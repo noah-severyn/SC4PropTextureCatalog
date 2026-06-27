@@ -71,6 +71,7 @@ namespace SC4PropTextureCatalogBuilder {
                 _db.CreateTable<PackageItem>();
                 _db.CreateTable<PackageFileItem>();
                 _db.CreateTable<FileItem>();
+                _db.CreateTable<ThumbnailCountItem>();
                 Console.WriteLine("  > database created");
             }
 
@@ -416,6 +417,13 @@ namespace SC4PropTextureCatalogBuilder {
             _db.RunInTransaction(() => {
                 _db.InsertAll(items);
             });
+        }
+
+        /// <summary>
+        /// Fills the current count of each thumbnail type in the storage bucket.
+        /// </summary>
+        public void FillThumbnailCountTable(ThumbnailCountItem counts) {
+            _db.Insert(counts);
         }
     }
 }

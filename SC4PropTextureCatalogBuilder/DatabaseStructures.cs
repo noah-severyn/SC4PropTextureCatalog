@@ -228,5 +228,16 @@ namespace SC4PropTextureCatalogBuilder {
                 return $"{Id}: {Name}";
             }
         }
+
+        /// <summary>
+        /// Store the count of thumbnails in the thumbnail bucket.
+        /// </summary>
+        [Table("ThumbnailCounts")]
+        public class ThumbnailCountItem(int textureCnt, int propCnt, int floraCnt, int buildingCnt) {
+            public int TextureCount { get; private set; } = textureCnt;
+            public int PropCount { get; private set; } = propCnt;
+            public int FloraCount { get; private set; } = floraCnt;
+            public int BuildingCount { get; private set; } = buildingCnt;
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Amazon.S3;
 using Amazon.S3.Model;
+using static SC4PropTextureCatalogBuilder.DatabaseBuilder;
 
 namespace SC4PropTextureCatalogBuilder {
     internal class ThumbnailUploader {
@@ -68,5 +69,18 @@ namespace SC4PropTextureCatalogBuilder {
             };
             await _client.PutObjectAsync(put);
         }
+
+        /// <summary>
+        /// Fills the current count of each thumbnail type in the storage bucket.
+        /// </summary>
+        /// <returns>A new <see cref="ThumbnailCountItem"/> with the counts of each thumbnail type.</returns>
+        public ThumbnailCountItem GetThumbnailCount() {
+            int textures = ExistingThumbs.Where(t => t.StartsWith("textures")).Count();
+            int props = ExistingThumbs.Where(t => t.StartsWith("props")).Count();
+            int flora = 0;
+            int buildings = 0;
+            return new ThumbnailCountItem(textures, props, flora, buildings);
+        }
+
     }
 }
