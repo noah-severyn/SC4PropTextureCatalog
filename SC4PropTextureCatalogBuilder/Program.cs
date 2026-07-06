@@ -1,4 +1,5 @@
-﻿using SC4PropTextureCatalogBuilder;
+﻿using System.Text.Json;
+using SC4PropTextureCatalogBuilder;
 
 bool createDb = PromptYesNo("Create new database?");
 
@@ -58,15 +59,18 @@ if (yesToAll || PromptYesNo("Copy database to API path?")) {
     File.Copy(dbPath, apiPath, true);
 }
 if (yesToAll || PromptYesNo("Upload thumbnails to Cloudflare R2?")) {
-    ThumbnailUploader r2 = new ThumbnailUploader();
-    await r2.UploadFolderAsync(thumbPath, "textures");
+    ThumbnailUploader r2 = new ThumbnailUploader(thumbPath);
+    await r2.UploadFolderAsync("textures");
+    await r2.UploadFolderAsync("buildings");
+    await r2.UploadFolderAsync("flora");
+    await r2.UploadFolderAsync("props");
     var counts = r2.GetThumbnailCount();
     db.FillThumbnailCountTable(counts);
 }
 if (yesToAll || PromptYesNo("Output errors to JSON")) {
     string json = JsonSerializer.Serialize(db.Errors, new JsonSerializerOptions { IncludeFields = true });
     File.WriteAllText(Path.Combine(dataPath, $"Errors-{DateTime.Now:yyyy-MM-dd-HH-mm-ss}.json"), json);
-}
+ }
 
 
 

@@ -141,6 +141,20 @@
           }
         }
       }
+    },
+    "/api/thumbnailstats": {
+      "get": {
+        "summary": "Get thumbnail statistics",
+        "description": "Retrieve statistics about the total count of thumbnails in each category.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
     }
   }
 }
