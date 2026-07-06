@@ -82,10 +82,13 @@ namespace SC4PropTextureCatalogBuilder {
                     Thumbnails.TryAdd(Path.GetFileNameWithoutExtension(filePath), filePath);
                 }
 
-                var pimxThumbs = Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\sc4pimx\\ImageDBLarge", "*", SearchOption.TopDirectoryOnly);
+                var pimxThumbs = Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\sc4pimx\\ImageDBLarge", "*", SearchOption.TopDirectoryOnly)
+                    // Sort so .gif comes before .jpg — 'g' < 'j' alphabetically
+                    // This ensures that when two files share a TGI, the .gif wins via TryAdd
+                    .OrderBy(f => Path.GetExtension(f), StringComparer.OrdinalIgnoreCase);
                 foreach (var file in pimxThumbs) {
                     var groupAndInstance = Path.GetFileNameWithoutExtension(file);
-                    _pimxThumbs.Add(new TGI("0x5ad0e817-" + groupAndInstance), file);
+                    _pimxThumbs.TryAdd(new TGI("0x5ad0e817-" + groupAndInstance), file);
                 }
                 Console.WriteLine("  > " + _pimxThumbs.Count + " PIMX thumbnails have been located");
             }
@@ -338,9 +341,7 @@ namespace SC4PropTextureCatalogBuilder {
 
                 if (_pimxThumbs.TryGetValue(tgi, out string? path)) {
                     var newImg = Path.Combine(thumbPath, entry.TGI.ToString(_tgiFormat)) + ".jpg";
-                    if (!File.Exists(newImg)) {
-                        File.Copy(path, newImg);
-                    }
+                    File.Copy(path, newImg, true);
                 } else {
                     Errors.Add(new DBPFError(dbpfFilePath, entry.TGI, "Missing thumbnail for " + exemplarName));
                 }
@@ -352,9 +353,7 @@ namespace SC4PropTextureCatalogBuilder {
 
                 if (_pimxThumbs.TryGetValue(tgi, out string? path)) {
                     var newImg = Path.Combine(thumbPath, entry.TGI.ToString(_tgiFormat)) + ".jpg";
-                    if (!File.Exists(newImg)) {
-                        File.Copy(path, newImg);
-                    }
+                    File.Copy(path, newImg, true);
                 } else {
                     Errors.Add(new DBPFError(dbpfFilePath, entry.TGI, "Missing thumbnail for " + exemplarName));
                 }
