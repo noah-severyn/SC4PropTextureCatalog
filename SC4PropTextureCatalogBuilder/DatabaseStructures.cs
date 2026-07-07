@@ -141,6 +141,7 @@ namespace SC4PropTextureCatalogBuilder {
             public int PropCount { get; set; }
             public int FloraCount { get; set; }
             public int BuildingCount { get; set; }
+            public int ModelCount { get; set; }
 
             public FileItem() {
                 
@@ -226,6 +227,17 @@ namespace SC4PropTextureCatalogBuilder {
             public override string ToString() {
                 return $"{Id}: {Name}";
             }
+        }
+
+        /// <summary>
+        /// Store the count of thumbnails in the thumbnail bucket.
+        /// </summary>
+        [Table("ThumbnailCounts")]
+        public class ThumbnailCountItem(int textureCnt, int propCnt, int floraCnt, int buildingCnt) {
+            public int TextureCount { get; set; } = textureCnt;
+            public int PropCount { get; set; } = propCnt;
+            public int FloraCount { get; set; } = floraCnt;
+            public int BuildingCount { get; set; } = buildingCnt;
         }
     }
 }

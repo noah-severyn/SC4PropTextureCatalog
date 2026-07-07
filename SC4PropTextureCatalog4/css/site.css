@@ -117,6 +117,7 @@ article {
 	/* Original doesn't have a border */
 	border-radius: calc(var(--pico-border-radius) * 2);
 	/* Original: var(--pico-border-radius) */
+	text-align: center;
 }
 
 	article > footer {

@@ -241,7 +241,23 @@ router.get('/dbstats', async (request, response) => {
 	    (SELECT SUM(TextureCount) FROM Files) As Textures,
 	    (SELECT SUM(PropCount) FROM Files) As Props,
 	    (SELECT SUM(FloraCount) FROM Files) As Flora,
-	    (SELECT SUM(BuildingCount) FROM Files) As Buildings`;
+	    (SELECT SUM(BuildingCount) FROM Files) As Buildings,
+      (SELECT SUM(ModelCount) FROM Files) As Models`;
+  const params = [];
+  try {
+    const results = await ExecuteQuery(query, params);
+    response.json(results);
+  } catch (err) {
+    response.status(500).json({ error: 'Database error', details: err.message });
+  }
+});
+
+// GET /api/thumbnailstats
+router.get('/thumbnailstats', async (request, response) => {
+  // #swagger.summary = 'Get thumbnail statistics'
+  // #swagger.description = 'Retrieve statistics about the total count of thumbnails in each category.'
+  const query = `
+    SELECT * FROM ThumbnailCounts LIMIT 1`;
   const params = [];
   try {
     const results = await ExecuteQuery(query, params);

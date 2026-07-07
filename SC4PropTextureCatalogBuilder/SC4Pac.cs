@@ -112,7 +112,6 @@ namespace SC4PropTextureCatalogBuilder {
         internal static HashSet<string> ListCacheFiles(string extractFolder) {
             Console.WriteLine("  > fetching all SC4 files in extract location ...");
             return Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories)
-                .AsParallel()
                 .Where(p => p.IsDBPF())
                 .ToHashSet();
         }
@@ -122,6 +121,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// </summary>
         /// <returns>A list of <see cref="Asset.AssetId"/>s which are referenced in a package but missing from the cache.</returns>
         public static List<string> ExtractFilesFromPackages(HashSet<string> sc4Files, ref Dictionary<string, Package> packages, Dictionary<string, Asset> assets) {
+            //TODO - this is my bottleneck now!!!
             Console.WriteLine("  > extracting referenced files from sc4pac packages ...");
             
             HashSet<string> missingAssets = new HashSet<string>();
