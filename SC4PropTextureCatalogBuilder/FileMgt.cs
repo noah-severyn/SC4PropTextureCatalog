@@ -74,7 +74,15 @@ namespace SC4PropTextureCatalogBuilder {
                 foreach (string exchAsset in exchAssets) {
                     string newFolder = Path.Combine(newPath, Path.GetFileName(exchAsset));
                     if (!Directory.Exists(newFolder)) {
-                        ExecuteCommand("C:\\Program Files\\7-Zip\\7z.exe", $"x \"{exchAsset}\" -o\"{newFolder}\" -y");
+                        try {
+                            ExecuteCommand("C:\\Program Files\\7-Zip\\7z.exe", $"x \"{exchAsset}\" -o\"{newFolder}\" -y");
+                        } catch (Exception ex) when (ex.Message.Contains("Cannot open the file as archive") && exchAsset.Contains("\\community.simtropolis.com\\applications\\core\\interface\\")) {
+                            //Attachments may or may not be in a zip file. If not, follow the same format: copy to a subfolder and give a .dat extension.
+                            Directory.CreateDirectory(newFolder);
+                            File.Copy(exchAsset, Path.Combine(newFolder, Path.GetFileName(exchAsset) + ".dat"), true);
+                            Console.WriteLine("Copied non-archive " + newFolder);
+                            continue;
+                        }
 
                         Console.WriteLine("Extract " + newFolder);
                         IEnumerable<string> installers = Directory.EnumerateFiles(newFolder).Where(f => Path.GetExtension(f) == ".exe" || Path.GetExtension(f) == ".jar");
