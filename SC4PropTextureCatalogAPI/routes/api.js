@@ -1,6 +1,7 @@
 import express from 'express';
 import sqlite3 from 'sqlite3';
 import path from 'path';
+import fs from 'fs/promises';
 import { fileURLToPath } from 'url';
 const sqlite = sqlite3.verbose();
 const router = express.Router();
@@ -231,7 +232,7 @@ router.get('/package', async (request, response) => {
 // GET /api/dbstats
 router.get('/dbstats', async (request, response) => {
   // #swagger.summary = 'Get database statistics'
-  // #swagger.description = 'Retrieve database statistics about the total count of items in each table.'
+  // #swagger.description = 'Retrieve database statistics including the total count of items in each table.'
   const query = `
     SELECT
       (SELECT COUNT(*) FROM Assets) AS Assets,
@@ -246,6 +247,9 @@ router.get('/dbstats', async (request, response) => {
   const params = [];
   try {
     const results = await ExecuteQuery(query, params);
+    const dbPath = path.join(path.dirname(fileURLToPath(import.meta.url)), '../data/Catalog.db');
+    const { mtime } = await fs.stat(dbPath);
+    results[0].UpdatedOn = mtime.toISOString();
     response.json(results);
   } catch (err) {
     response.status(500).json({ error: 'Database error', details: err.message });
