@@ -19,13 +19,28 @@ namespace SC4PropTextureCatalogBuilder {
                 FileName = executable,
                 Arguments = arguments,
                 RedirectStandardOutput = true,
+                RedirectStandardError = true,
                 UseShellExecute = false,
                 CreateNoWindow = true
             };
 
             using Process? process = Process.Start(psi);
-            process?.WaitForExit();
-            process?.Dispose();
+            if (process is null) {
+                throw new InvalidOperationException($"Failed to start process: {executable}");
+            }
+
+            Task<string> stdoutTask = process.StandardOutput.ReadToEndAsync();
+            Task<string> stderrTask = process.StandardError.ReadToEndAsync();
+
+            if (!process.WaitForExit(120000) && !arguments.Contains("Network-Addon-Mod")) {
+                process.Kill(entireProcessTree: true);
+                throw new TimeoutException($"Process timed out: {executable} {arguments}");
+            }
+
+            Task.WaitAll(stdoutTask, stderrTask);
+            if (process.ExitCode != 0) {
+                Console.WriteLine($"Command failed ({process.ExitCode}): {stderrTask.Result}");
+            }
         }
 
         /// <summary>
@@ -34,7 +49,7 @@ namespace SC4PropTextureCatalogBuilder {
         public static void ExtractInstaller(string installerPath) {
             string extension = Path.GetExtension(installerPath);
             if (extension == ".exe") {
-                ExecuteCommand("C:\\Program Files (x86)\\SC4 Utilities\\cicdec\\cicdec.exe", $"cicdec.exe \"{installerPath}\"");
+                ExecuteCommand("C:\\Program Files (x86)\\SC4 Utilities\\cicdec\\cicdec.exe", $"\"{installerPath}\"");
             } else if (extension == ".jar") {
                 var newFolder = installerPath.Replace(".jar", "");
                 ExecuteCommand("C:\\Program Files\\7-Zip\\7z.exe", $"x \"{installerPath}\" -o\"{newFolder}\" -y");
