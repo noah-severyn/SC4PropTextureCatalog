@@ -47,10 +47,27 @@ namespace SC4PropTextureCatalogBuilder {
         /// <summary>
         /// List all files in the extract location once to avoid repetitive expensive <c>Directory.GetFiles</c> calls.
         /// </summary>
-        public static HashSet<string> ListCacheFiles(string extractFolder) {
-            Console.WriteLine("  > fetching all SC4 files in extract location ...");
-            return Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories).ToHashSet();
+        public static IEnumerable<string> ListCacheFiles(string extractFolder) {
+            Console.WriteLine("  > fetching all files in extract location ...");
+            return Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories);
         }
+
+
+        /// <summary>
+        /// Filters out all SC4 files from the specified list of files.
+        /// </summary>
+        public static HashSet<string> GetSC4Files(IEnumerable<string> allFiles) {
+            return allFiles.Where(f => f.IsDBPF()).ToHashSet();
+        }
+
+
+        /// <summary>
+        /// Filters out all Cleanitol files from the specified list of files.
+        /// </summary>
+        public static HashSet<string> GetCleanitolFiles(IEnumerable<string> allFiles) {
+            return allFiles.Where(p => p.EndsWith(".txt", StringComparison.OrdinalIgnoreCase) && (p.Contains("cleanitol", StringComparison.OrdinalIgnoreCase) || p.Contains("remove", StringComparison.OrdinalIgnoreCase))).ToHashSet();
+        }
+
 
         /// <summary>
         /// Extract a Clickteam or Java-based installer

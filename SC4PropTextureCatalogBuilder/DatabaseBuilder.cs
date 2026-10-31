@@ -71,6 +71,7 @@ namespace SC4PropTextureCatalogBuilder {
                 _db.CreateTable<PackageItem>();
                 _db.CreateTable<PackageFileItem>();
                 _db.CreateTable<FileItem>();
+                _db.CreateTable<CleanitolItem>();
                 _db.CreateTable<ThumbnailCountItem>();
                 Console.WriteLine("  > database created");
             }
@@ -383,7 +384,7 @@ namespace SC4PropTextureCatalogBuilder {
         /// <remarks>The <c>Assets</c>, <c>Files</c>, and <c>Packages</c> tables should be populated before executing this function. Any errors encountered are added to <see cref="Errors"/>.</remarks>
         public void FillPackageFileTable(Dictionary<string, SC4Pac.Package> packages) {
             List<PackageFileItem> items = [];
-            //Must use the items from the db instead of the package or asset dictionaries because we need to get the autoincremented table ids
+            //Must use the items from the db instead of the package or asset dictionaries because we need to get the auto-incremented table ids
             var assetsByName = _db.Query<AssetItem>($"SELECT * FROM Assets").ToDictionary(a => a.Name, a => a.Id);
             var fileItems = _db.Query<FileItem>($"SELECT * FROM Files").ToDictionary(f => f.AssetId + "|" + f.Name, f => f.Id);
             var pkgsByName = _db.Query<PackageItem>($"SELECT * FROM Packages").ToDictionary(p => p.Name, p => p.Id);
@@ -411,6 +412,29 @@ namespace SC4PropTextureCatalogBuilder {
                     } else {
                         items.Add(new PackageFileItem((int) pkgId, (int) fileId));
                     }
+                }
+            }
+            _db.RunInTransaction(() => {
+                _db.InsertAll(items);
+            });
+        }
+
+        public void FillCleanitolTable(HashSet<string> cleanitols) {
+            Console.WriteLine("  > fetching all Cleanitol files in extract location ...");
+            List<CleanitolItem> items = [];
+            foreach (var cscript in cleanitols) {
+                var lines = File.ReadAllLines(cscript);
+                var scriptName = Path.GetFileName(cscript);
+                foreach (var line in lines) {
+                    if (line.StartsWith('>') || line.Trim() == string.Empty) continue;
+                    string removeFile;
+                    if (line.Contains(';')) {
+                        removeFile = line.Substring(0, line.IndexOf(';')).Trim();
+                    } else {
+                        removeFile = line.Trim();
+                    }
+
+                    items.Add(new CleanitolItem(scriptName, removeFile, string.Empty));
                 }
             }
             _db.RunInTransaction(() => {

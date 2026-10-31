@@ -1,5 +1,4 @@
 ﻿using System.Text.Json;
-using csDBPF;
 using SC4PropTextureCatalogBuilder;
 
 bool createDb = PromptYesNo("Create new database?");
@@ -42,7 +41,7 @@ if (yesToAll) {
 
 (var packages, var assets) = SC4Pac.ParseChannelJson(channels, parseOpt);
 var allFiles = FileMgt.ListCacheFiles(extractLocation);
-var sc4Files = allFiles.Where(f => f.IsDBPF()).ToHashSet();
+var sc4Files = FileMgt.GetSC4Files(allFiles);
 var missingAssets = SC4Pac.ExtractFilesFromPackages(sc4Files, ref packages, assets);
 
 DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb, thumbPath);
@@ -59,7 +58,7 @@ if (yesToAll || PromptYesNo("Fill PackageFile table?")) {
     db.FillPackageFileTable(packages);
 }
 if (yesToAll || PromptYesNo("Fill Cleanitol table?")) {
-    var cleanitols = allFiles.Where(p => p.EndsWith(".txt", StringComparison.OrdinalIgnoreCase) && (p.Contains("cleanitol", StringComparison.OrdinalIgnoreCase) || p.Contains("remove", StringComparison.OrdinalIgnoreCase))).ToHashSet();
+    var cleanitols = FileMgt.GetCleanitolFiles(allFiles);
     db.FillCleanitolTable(cleanitols);
 }
 if (yesToAll || PromptYesNo("Copy database to API path?")) {
