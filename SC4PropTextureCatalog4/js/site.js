@@ -29,7 +29,7 @@ function AddHeader() {
 	const pages = [
 		{ name: 'Home', link: `${htmlPath}/index.html` },
 		{ name: 'View a Pack', link: `${htmlPath}/view-pack.html` },
-		{ name: 'Plugin Pack Ids', link: `${htmlPath}/plugin-pack-ids.html` },
+		{ name: 'Find Cleanitol Items', link: `${htmlPath}/cleanitol.html` },
 		{ name: 'API Docs ⮥', link: `${apiUrl}/docs/` },
 		{ name: 'About', link: `${htmlPath}/about.html` }
 	];

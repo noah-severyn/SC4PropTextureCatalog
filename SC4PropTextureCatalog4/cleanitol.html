@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SC4 Prop Texture Catalog</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+    <link rel="manifest" href="ico/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <!-- Header automatically inserted. See site.js -->
+
+    <main role="main" class="container">
+        <h1>Has it been <i>Cleaned-at-all?</i></h1>
+ 
+        <p>Use this page to search for a file that may have been included in a Cleanitol script. If it has been repackaged into a new dependency package, this page will help you find it. If it is able to be determined, the sc4pac package containing this file will also be listed.</p>
+
+        <form method="get" role="search" id="SearchForm">
+            <input id="SearchBox" type="search" placeholder="Search for a file">
+            <input type="Submit" value="Search" />
+        </form>
+
+        <p id="QueryResultSummary">Query "<span id="QuerySearchText"></span>" returned <span id="QueryResultCount"></span> results. <span id="QueryFilterCount"></span> results visible.</p>
+        <hr />
+
+        <table id="QueryResultTable">
+            <thead>
+                <tr class="header">
+                    <th>File name</th>
+                    <th>Found in script</th>
+                    <th>Source package</th>
+                </tr>
+            </thead>
+            <tbody id="QueryResultBody"></tbody>
+        </table>
+    </main>
+
+    
+    <script src="js/site.js"></script>
+    <script src="js/cleanitol-search.js"></script>
+    <script src="js/theme-switcher.js"></script>
+</body>
+</html>
