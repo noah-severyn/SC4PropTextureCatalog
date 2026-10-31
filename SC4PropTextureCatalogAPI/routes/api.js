@@ -256,6 +256,33 @@ router.get('/dbstats', async (request, response) => {
   }
 });
 
+router.get('/cleanitol', async (request, response) => {
+  // #swagger.summary = 'Search for contents of Cleanitol scripts'
+  // #swagger.description = 'Search for files referenced in Cleanitol scripts by file name.'
+  /* #swagger.parameters['term'] = {
+      description: 'File name to search for.'
+  } */
+  /* #swagger.responses[400] = {
+      description: 'Bad request - Search term too long or too short'
+  } */
+  const searchText = request.query.term || '';
+  if (searchText.length > 0 && searchText.length < 3) {
+    return response.status(400).json({ error: 'search term must be 3 characters minimum' });
+  }
+  const query = `
+    SELECT *
+    FROM Cleanitols
+    ${searchText !== '' ? 'WHERE RemoveFileName LIKE ?' : ''}
+  `;
+  const params = (searchText !== '') ? [`%${searchText}%`] : [];
+  try {
+    const results = await ExecuteQuery(query, params);
+    response.json(results);
+  } catch (err) {
+    response.status(500).json({ error: 'Database error', details: err.message });
+  }
+});
+
 // GET /api/thumbnailstats
 router.get('/thumbnailstats', async (request, response) => {
   // #swagger.summary = 'Get thumbnail statistics'

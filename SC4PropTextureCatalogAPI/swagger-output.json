@@ -3,7 +3,7 @@
   "info": {
     "title": "SC4 Prop Texture Catalog API",
     "description": "An API for the <a href=\"https://community.simtropolis.com/forums/topic/758501-simcity-4-prop-and-texture-catalogue-by-stex-custodian\">SimCity4 Prop & Texture Catalog</a>. Github: https://github.com/noah-severyn/SC4PropTextureCatalog",
-    "version": "1.1.1"
+    "version": "1.2.0"
   },
   "host": "localhost:3000",
   "basePath": "/",
@@ -135,6 +135,31 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/cleanitol": {
+      "get": {
+        "summary": "Search for contents of Cleanitol scripts",
+        "description": "Search for files referenced in Cleanitol scripts by file name.",
+        "parameters": [
+          {
+            "name": "term",
+            "description": "File name to search for.",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad request - Search term too long or too short"
           },
           "500": {
             "description": "Internal Server Error"
