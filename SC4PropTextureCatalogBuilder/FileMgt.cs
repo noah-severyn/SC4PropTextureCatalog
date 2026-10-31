@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Globalization;
 using System.Net;
+using csDBPF;
 using Force.Crc32;
 
 namespace SC4PropTextureCatalogBuilder {
@@ -41,6 +42,14 @@ namespace SC4PropTextureCatalogBuilder {
             if (process.ExitCode != 0) {
                 Console.WriteLine($"Command failed ({process.ExitCode}): {stderrTask.Result}");
             }
+        }
+
+        /// <summary>
+        /// List all files in the extract location once to avoid repetitive expensive <c>Directory.GetFiles</c> calls.
+        /// </summary>
+        public static HashSet<string> ListCacheFiles(string extractFolder) {
+            Console.WriteLine("  > fetching all SC4 files in extract location ...");
+            return Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories).ToHashSet();
         }
 
         /// <summary>

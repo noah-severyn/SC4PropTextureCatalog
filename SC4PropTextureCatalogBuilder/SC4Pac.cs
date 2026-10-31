@@ -105,19 +105,8 @@ namespace SC4PropTextureCatalogBuilder {
             return Directory.EnumerateFiles(channelFolder, "*", SearchOption.AllDirectories).Where(path => path.EndsWith("latest\\pkg.json") && !path.Contains("_ext"));
         }
 
-
         /// <summary>
-        /// List all SC4 files in the extract location once to avoid repetitive expensive <c>Directory.GetFiles</c> calls.
-        /// </summary>
-        internal static HashSet<string> ListCacheFiles(string extractFolder) {
-            Console.WriteLine("  > fetching all SC4 files in extract location ...");
-            return Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories)
-                .Where(p => p.IsDBPF())
-                .ToHashSet();
-        }
-
-        /// <summary>
-        /// Iterate each <see cref="Package"/> and examine tne the <c>include</c> and <c>exclude</c> properties of each <see cref="Asset"/> to determine list of referenced cache files. Save this information to <see cref="Package.LocalFiles"/>.
+        /// Iterate each <see cref="Package"/> and examine the <c>include</c> and <c>exclude</c> properties of each <see cref="Asset"/> to determine list of referenced cache files. Save this information to <see cref="Package.LocalFiles"/>.
         /// </summary>
         /// <returns>A list of <see cref="Asset.AssetId"/>s which are referenced in a package but missing from the cache.</returns>
         public static List<string> ExtractFilesFromPackages(HashSet<string> sc4Files, ref Dictionary<string, Package> packages, Dictionary<string, Asset> assets) {
@@ -135,7 +124,7 @@ namespace SC4PropTextureCatalogBuilder {
                             .SelectMany(v => v.Assets ?? Enumerable.Empty<PackageAsset>())
                     );
 
-                HashSet<PkgFileItem> result = []; //Use a Hashset to enforce unique files in case a duplicate files is added to an asset
+                HashSet<PkgFileItem> result = []; //Use a HashSet to enforce unique files in case a duplicate files is added to an asset
                 string pkgName = pkg.Group + ":" + pkg.Name;
                 foreach (var pkgAsset in pkgAssets) {
                     if (assets.TryGetValue(pkgAsset.AssetId, out var asset)) {
