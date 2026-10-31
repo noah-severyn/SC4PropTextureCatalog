@@ -20,15 +20,15 @@ async function FetchStats() {
             floraTgis = data[0].Flora;
             buildingTgis = data[0].Buildings;
 
-            document.getElementById('PackageCnt').textContent = data[0].Packages;
-            document.getElementById('AssetCnt').textContent = data[0].Assets;
-            document.getElementById('FileCnt').textContent = data[0].Files;
-            document.getElementById('TgiCnt').textContent = data[0].TGIs;
-            document.getElementById('TextureCnt').textContent = textureTgis;
-            document.getElementById('PropCnt').textContent = propTgis;
-            document.getElementById('FloraCnt').textContent = floraTgis;
-            document.getElementById('BuildingCnt').textContent = buildingTgis;
-            document.getElementById('ModelCnt').textContent = data[0].Models;
+            document.getElementById('PackageCnt').textContent = data[0].Packages.toLocaleString();
+            document.getElementById('AssetCnt').textContent = data[0].Assets.toLocaleString();
+            document.getElementById('FileCnt').textContent = data[0].Files.toLocaleString();
+            document.getElementById('TgiCnt').textContent = data[0].TGIs.toLocaleString();
+            document.getElementById('TextureCnt').textContent = textureTgis.toLocaleString();
+            document.getElementById('PropCnt').textContent = propTgis.toLocaleString();
+            document.getElementById('FloraCnt').textContent = floraTgis.toLocaleString();
+            document.getElementById('BuildingCnt').textContent = buildingTgis.toLocaleString();
+            document.getElementById('ModelCnt').textContent = data[0].Models.toLocaleString();
         });
     
     await fetch(apiUrl + '/api/thumbnailstats')
@@ -61,5 +61,5 @@ function GeneratePctLabel(count, total)   {
     if (total === 0) {
         return "0% (0/0)";
     }
-    return `Thumbnails: ${(count / total * 100).toFixed(2)}% (${count}/${total})`;
+    return `Thumbnails: ${(count / total * 100).toFixed(2)}% (${count.toLocaleString()} / ${total.toLocaleString()})`;
 }
