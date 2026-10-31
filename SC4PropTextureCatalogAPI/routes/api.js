@@ -35,7 +35,7 @@ router.get('/search', async (request, response) => {
   // #swagger.summary = 'Search for TGIs via multiple fields'
   // #swagger.description = 'Primary search utility. Search across packages, files, TGIs, and exemplar names. Supports field-specific searches or a general search across all fields. Returns up to 2000 results.'
   /* #swagger.parameters['term'] = {
-      description: 'General search term applied to all searchable fields (used when no specific field is provided)'
+      description: 'General search term matched against all searchable fields. When combined with other parameters, results must match the term AND every other parameter'
   } */
   /* #swagger.parameters['package'] = {
       description: 'sc4pac package identifier in the format group:name'
@@ -63,7 +63,7 @@ router.get('/search', async (request, response) => {
   } */
   const params = [];
   const wheres = [];
-  let where = '';
+  let where;
   const fieldMap = { 
     package: 'Packages.Name',
     author: 'Packages.Author',
@@ -90,8 +90,8 @@ router.get('/search', async (request, response) => {
     }
   }
 
-  // Handle if no fields are specified - search all columns
-  if (wheres.length === 0) {
+  // General term: matches any column, and is ANDed with any field filters
+  if (request.query.term !== undefined || wheres.length === 0) {
     const term = CleanQueryText(request.query.term || '');
     if (term.length > 40) {
       return response.status(400).json({ error: 'Search term is too long' });
@@ -99,16 +99,15 @@ router.get('/search', async (request, response) => {
       return response.status(400).json({ error: 'Search term must be 3 characters minimum' });
     }
     const like = `%${term}%`;
-    where = `${fieldMap.package} LIKE ? ESCAPE '\\' 
+    wheres.push(`(${fieldMap.package} LIKE ? ESCAPE '\\' 
       OR ${fieldMap.author} LIKE ? ESCAPE '\\' 
       OR ${fieldMap.file} LIKE ? ESCAPE '\\' 
       OR ${fieldMap.tgi} LIKE ? ESCAPE '\\' 
       OR ${fieldMap.category} LIKE ? ESCAPE '\\'
-      OR ${fieldMap.name} LIKE ? ESCAPE '\\'`;
+      OR ${fieldMap.name} LIKE ? ESCAPE '\\')`);
     params.push(like, like, like, like, like, like);
-  } else {
-    where = wheres.join('\n    AND ');
   }
+  where = wheres.join('\n    AND ');
 
   const query = `
     SELECT Packages.Name Package, Packages.Subfolder, Packages.Websites, Packages.Author, Files.Name FileName, TGIs.TGI, TGICategories.Name Category, TGIs.Name ExemplarName
