@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Globalization;
 using System.Net;
+using csDBPF;
 using Force.Crc32;
 
 namespace SC4PropTextureCatalogBuilder {
@@ -19,14 +20,54 @@ namespace SC4PropTextureCatalogBuilder {
                 FileName = executable,
                 Arguments = arguments,
                 RedirectStandardOutput = true,
+                RedirectStandardError = true,
                 UseShellExecute = false,
                 CreateNoWindow = true
             };
 
             using Process? process = Process.Start(psi);
-            process?.WaitForExit();
-            process?.Dispose();
+            if (process is null) {
+                throw new InvalidOperationException($"Failed to start process: {executable}");
+            }
+
+            Task<string> stdoutTask = process.StandardOutput.ReadToEndAsync();
+            Task<string> stderrTask = process.StandardError.ReadToEndAsync();
+
+            if (!process.WaitForExit(120000) && !arguments.Contains("Network-Addon-Mod")) {
+                process.Kill(entireProcessTree: true);
+                throw new TimeoutException($"Process timed out: {executable} {arguments}");
+            }
+
+            Task.WaitAll(stdoutTask, stderrTask);
+            if (process.ExitCode != 0) {
+                Console.WriteLine($"Command failed ({process.ExitCode}): {stderrTask.Result}");
+            }
         }
+
+        /// <summary>
+        /// List all files in the extract location once to avoid repetitive expensive <c>Directory.GetFiles</c> calls.
+        /// </summary>
+        public static IEnumerable<string> ListCacheFiles(string extractFolder) {
+            Console.WriteLine("  > fetching all files in extract location ...");
+            return Directory.EnumerateFiles(extractFolder, "*", SearchOption.AllDirectories);
+        }
+
+
+        /// <summary>
+        /// Filters out all SC4 files from the specified list of files.
+        /// </summary>
+        public static HashSet<string> GetSC4Files(IEnumerable<string> allFiles) {
+            return allFiles.Where(f => f.IsDBPF()).ToHashSet();
+        }
+
+
+        /// <summary>
+        /// Filters out all Cleanitol files from the specified list of files.
+        /// </summary>
+        public static HashSet<string> GetCleanitolFiles(IEnumerable<string> allFiles) {
+            return allFiles.Where(p => p.EndsWith(".txt", StringComparison.OrdinalIgnoreCase) && (p.Contains("cleanitol", StringComparison.OrdinalIgnoreCase) || p.Contains("remove", StringComparison.OrdinalIgnoreCase))).ToHashSet();
+        }
+
 
         /// <summary>
         /// Extract a Clickteam or Java-based installer
@@ -34,7 +75,7 @@ namespace SC4PropTextureCatalogBuilder {
         public static void ExtractInstaller(string installerPath) {
             string extension = Path.GetExtension(installerPath);
             if (extension == ".exe") {
-                ExecuteCommand("C:\\Program Files (x86)\\SC4 Utilities\\cicdec\\cicdec.exe", $"cicdec.exe \"{installerPath}\"");
+                ExecuteCommand("C:\\Program Files (x86)\\SC4 Utilities\\cicdec\\cicdec.exe", $"\"{installerPath}\"");
             } else if (extension == ".jar") {
                 var newFolder = installerPath.Replace(".jar", "");
                 ExecuteCommand("C:\\Program Files\\7-Zip\\7z.exe", $"x \"{installerPath}\" -o\"{newFolder}\" -y");
@@ -74,7 +115,15 @@ namespace SC4PropTextureCatalogBuilder {
                 foreach (string exchAsset in exchAssets) {
                     string newFolder = Path.Combine(newPath, Path.GetFileName(exchAsset));
                     if (!Directory.Exists(newFolder)) {
-                        ExecuteCommand("C:\\Program Files\\7-Zip\\7z.exe", $"x \"{exchAsset}\" -o\"{newFolder}\" -y");
+                        try {
+                            ExecuteCommand("C:\\Program Files\\7-Zip\\7z.exe", $"x \"{exchAsset}\" -o\"{newFolder}\" -y");
+                        } catch (Exception ex) when (ex.Message.Contains("Cannot open the file as archive") && exchAsset.Contains("\\community.simtropolis.com\\applications\\core\\interface\\")) {
+                            //Attachments may or may not be in a zip file. If not, follow the same format: copy to a subfolder and give a .dat extension.
+                            Directory.CreateDirectory(newFolder);
+                            File.Copy(exchAsset, Path.Combine(newFolder, Path.GetFileName(exchAsset) + ".dat"), true);
+                            Console.WriteLine("Copied non-archive " + newFolder);
+                            continue;
+                        }
 
                         Console.WriteLine("Extract " + newFolder);
                         IEnumerable<string> installers = Directory.EnumerateFiles(newFolder).Where(f => Path.GetExtension(f) == ".exe" || Path.GetExtension(f) == ".jar");

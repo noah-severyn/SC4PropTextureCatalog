@@ -33,7 +33,7 @@ namespace SC4PropTextureCatalogBuilder {
         }
 
         /// <summary>
-        /// An item in the Asset table. An asset referrs to a download or file, and is akin to a sc4pac asset.
+        /// An item in the Asset table. An asset refers to a download or file, and is akin to a sc4pac asset.
         /// </summary>
         [Table("Packages")]
         public class PackageItem {
@@ -120,7 +120,7 @@ namespace SC4PropTextureCatalogBuilder {
         [Table("Files")]
         public class FileItem {
             /// <summary>
-            /// File primary key. Autoincremented.
+            /// File primary key. Auto-incremented.
             /// </summary>
             [PrimaryKey, AutoIncrement]
             public int Id { get; set; }
@@ -154,12 +154,12 @@ namespace SC4PropTextureCatalogBuilder {
         }
 
         /// <summary>
-        /// An item in the Asset table. An asset referrs to a download or file, and is akin to a sc4pac asset.
+        /// An item in the Asset table. An asset refers to a download or file, and is akin to a sc4pac asset.
         /// </summary>
         [Table("Assets")]
         public class AssetItem {
             /// <summary>
-            /// Asset primary key. Autoincremented.
+            /// Asset primary key. Auto-incremented.
             /// </summary>
             [PrimaryKey, AutoIncrement]
             public int Id { get; set; }
@@ -194,7 +194,6 @@ namespace SC4PropTextureCatalogBuilder {
                 Url = url;
             }
         }
-
 
         /// <summary>
         /// Dimension table of TGI types (building, prop, texture, flora, cohort, etc.). These values are nominally based off Rep 0 of the LotConfigPropertyLotObject property, with a few extra values added in for the purposes of tracking in this database.
@@ -238,6 +237,16 @@ namespace SC4PropTextureCatalogBuilder {
             public int PropCount { get; set; } = propCnt;
             public int FloraCount { get; set; } = floraCnt;
             public int BuildingCount { get; set; } = buildingCnt;
+        }
+
+        /// <summary>
+        /// A file that has been added to a Cleanitol script.
+        /// </summary>
+        [Table("Cleanitols")]
+        public class CleanitolItem(string scriptName, string removeFileName, string package) {
+            public string ScriptName { get; set; } = scriptName;
+            public string RemoveFileName { get; set; } = removeFileName;
+            public string Package { get; set; } = package;
         }
     }
 }

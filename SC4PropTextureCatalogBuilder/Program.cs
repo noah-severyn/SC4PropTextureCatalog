@@ -38,8 +38,10 @@ if (yesToAll) {
 } else {
     parseOpt = PromptChannelOption("Which channel(s) do you want to parse? (JSON → DB Objects)");
 }
+
 (var packages, var assets) = SC4Pac.ParseChannelJson(channels, parseOpt);
-var sc4Files = SC4Pac.ListCacheFiles(extractLocation);
+var allFiles = FileMgt.ListCacheFiles(extractLocation);
+var sc4Files = FileMgt.GetSC4Files(allFiles);
 var missingAssets = SC4Pac.ExtractFilesFromPackages(sc4Files, ref packages, assets);
 
 DatabaseBuilder db = new DatabaseBuilder(dbPath, createDb, thumbPath);
@@ -54,6 +56,12 @@ if (yesToAll || PromptYesNo("Fill Package table?")) {
 }
 if (yesToAll || PromptYesNo("Fill PackageFile table?")) {
     db.FillPackageFileTable(packages);
+}
+if (yesToAll || PromptYesNo("Fill Cleanitol table?")) {
+    Console.WriteLine("  > fetching all Cleanitol files in extract location ...");
+    var cleanitols = FileMgt.GetCleanitolFiles(allFiles);
+    _ = SC4Pac.ExtractFilesFromPackages(cleanitols, ref packages, assets);
+    db.FillCleanitolTable(cleanitols, packages);
 }
 if (yesToAll || PromptYesNo("Copy database to API path?")) {
     File.Copy(dbPath, apiPath, true);
