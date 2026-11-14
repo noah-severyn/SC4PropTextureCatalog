@@ -58,8 +58,10 @@ if (yesToAll || PromptYesNo("Fill PackageFile table?")) {
     db.FillPackageFileTable(packages);
 }
 if (yesToAll || PromptYesNo("Fill Cleanitol table?")) {
+    Console.WriteLine("  > fetching all Cleanitol files in extract location ...");
     var cleanitols = FileMgt.GetCleanitolFiles(allFiles);
-    db.FillCleanitolTable(cleanitols);
+    _ = SC4Pac.ExtractFilesFromPackages(cleanitols, ref packages, assets);
+    db.FillCleanitolTable(cleanitols, packages);
 }
 if (yesToAll || PromptYesNo("Copy database to API path?")) {
     File.Copy(dbPath, apiPath, true);

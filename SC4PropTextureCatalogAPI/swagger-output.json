@@ -18,7 +18,7 @@
         "parameters": [
           {
             "name": "term",
-            "description": "General search term applied to all searchable fields (used when no specific field is provided)",
+            "description": "General search term matched against all searchable fields. When combined with other parameters, results must match the term AND every other parameter",
             "in": "query",
             "type": "string"
           },

@@ -419,8 +419,7 @@ namespace SC4PropTextureCatalogBuilder {
             });
         }
 
-        public void FillCleanitolTable(HashSet<string> cleanitols) {
-            Console.WriteLine("  > fetching all Cleanitol files in extract location ...");
+        public void FillCleanitolTable(HashSet<string> cleanitols, Dictionary<string, SC4Pac.Package> packages) {
             List<CleanitolItem> items = [];
             foreach (var cscript in cleanitols) {
                 var lines = File.ReadAllLines(cscript);
