@@ -21,10 +21,95 @@ It is possible to run the catalog offline with a little bit of know-how, though 
 
 ## Project Structure
 - **SC4PropTextureCatalog4** - This is the main website, made with HTML and JavaScript, using Pico CSS
-- **SC4PropTextureCatalogAPI** - This is the Express API and where the main SQLite database is stored. See `\data\Catalog.db`. Use this file directly if you'd like to run your own SQL queries against the dataset.
+- **SC4PropTextureCatalogAPI** - This is the Express API and where the main SQLite database is stored. See `\data\Catalog.db` and the schema defined below. Use this file directly if you'd like to run your own SQL queries against the dataset. API documentation can be found at: https://sc4proptexturecatalog-production.up.railway.app/docs/.
 - **SC4PropTextureCatalogBuilder** - This project houses the C# scripts and programs used to pase the sc4pac channels for package and asset metadata, parse the sc4pac cache for files and TGIs, and programmatically build the database with this information.
 - The thumbnails are hosted externally in a Cloudflare R2 bucket, made publicly accessible at `https://sc4proptexturecatalog.net`
 
+
+### Database schema
+
+<details>
+<summary>Schema diagram</summary>
+
+``` mermaid
+erDiagram
+
+    Exchanges {
+        integer Id PK
+        varchar Name
+        varchar Url
+    }
+
+    Assets {
+        integer Id PK
+        integer ExchangeId FK
+        varchar Name UK
+        varchar Version
+        varchar LastModified
+        varchar Url
+    }
+
+    Files {
+        integer Id PK
+        integer AssetId FK
+        varchar Name
+        integer TextureCount
+        integer PropCount
+        integer FloraCount
+        integer BuildingCount
+        integer ModelCount
+    }
+
+    Packages {
+        integer Id PK
+        varchar Name UK
+        varchar Version
+        varchar Subfolder
+        varchar Websites
+        varchar Author
+    }
+
+    PackageFiles {
+        integer PackageId FK
+        integer FileId FK
+    }
+
+    TGICategories {
+        integer Id PK
+        varchar Name
+    }
+
+    TGIs {
+        integer FileId FK
+        varchar TGI
+        integer Category FK
+        varchar Name
+    }
+
+    Cleanitols {
+        varchar ScriptName
+        varchar RemoveFileName
+        varchar Package
+    }
+
+    ThumbnailCounts {
+        integer TextureCount
+        integer PropCount
+        integer FloraCount
+        integer BuildingCount
+    }
+
+    Exchanges ||--o{ Assets : contains
+    Assets ||--o{ Files : contains
+
+    Files ||--o{ TGIs : has
+    TGICategories ||--o{ TGIs : categorizes
+
+    Packages ||--o{ PackageFiles : contains
+    Files ||--o{ PackageFiles : included_in
+```
+
+</details>
 
 ## I found a problem! / I have a suggestion!
 Found a bug? Am I missing a prop or texture pack? Have an idea for additional sorting/filtering categories? Is there a better way to make the Catalog more interactive or useful? I would very much like to hear from you! Visit the [SimCity 4 Prop and Texture Catalog](https://community.simtropolis.com/forums/topic/758501-simcity-4-prop-and-texture-catalogue-by-stex-custodian/) thread or open an issue in Github.
